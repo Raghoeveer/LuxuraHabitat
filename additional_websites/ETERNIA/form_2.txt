@@ -1,0 +1,21 @@
+<form class="hero-form" action="https://api.web3forms.com/submit" method="POST" id="heroLeadForm">
+                    <input type="hidden" name="access_key" value="b3ea5464-ddde-4fdf-b9a5-ed31e81cbf9b">
+                    <input type="hidden" name="redirect" value="https://vajramvivera.projectdetail.net/thank-you.html">
+                    <input type="hidden" name="subject" value="New Enquiry from Vajram Vivera Website (Hero)">
+                    
+                    <input type="text" name="name" placeholder="Name" required aria-label="Full Name">
+                    <input type="email" name="email" placeholder="Email" required aria-label="Email Address">
+                    <input type="tel" name="phone" placeholder="Phone" required aria-label="Phone Number" pattern="[0-9]{10,12}">
+                    
+                    <select name="config" aria-label="BHK configuration" required>
+                        <option value="">Select BHK Type</option>
+                        <option>3 BHK - 1,573 Sq.Ft</option>
+                        <option>3 BHK - 1,680 Sq.Ft</option>
+                        <option>3 BHK - 1,863 Sq.Ft</option>
+                        <option>3 BHK - 2,069 Sq.Ft</option>
+                        <option>3 BHK - 2,406 Sq.Ft</option>
+                        <option>4 BHK</option>
+                    </select>
+
+                    <button type="submit" class="hero-form-submit">Get Best Price</button>
+                </form>

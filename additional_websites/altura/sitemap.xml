@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="
+          http://www.sitemaps.org/schemas/sitemap/0.9
+          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+          http://www.google.com/schemas/sitemap-image/1.1
+          http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+
+  <!-- ============================================================
+       SITEMAP FOR: TVS Emerald Altura
+       DOMAIN     : https://tvsemeraldaltura.projectinformation.in
+       GENERATED  : 2026-06-09
+       ============================================================ -->
+
+  <!-- ===== HOMEPAGE (Primary URL) ===== -->
+  <url>
+    <loc>https://tvsemeraldaltura.projectinformation.in/</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Hero Banner Image -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/altura-website-banner-may-14-1920-by-600.webp</image:loc>
+      <image:title>TVS Emerald Altura - Premium Apartments in North Bangalore</image:title>
+      <image:caption>TVS Emerald Altura luxury residential project on Bagalur Road, North Bangalore</image:caption>
+      <image:geo_location>Sathanur, Bagalur Road, North Bangalore, Karnataka, India</image:geo_location>
+      <image:license>https://tvsemeraldaltura.projectinformation.in/</image:license>
+    </image:image>
+
+    <!-- Mobile Banner -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/altura-mobile-banner-may-14-676-by-994.webp</image:loc>
+      <image:title>TVS Emerald Altura - Mobile Banner</image:title>
+      <image:caption>TVS Emerald Altura luxury apartments Bagalur Road Bangalore</image:caption>
+    </image:image>
+
+    <!-- Tower Images -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Tower-1.webp</image:loc>
+      <image:title>TVS Emerald Altura Tower 1 - Elevation View</image:title>
+      <image:caption>Tower 1 elevation view of TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Tower-2.webp</image:loc>
+      <image:title>TVS Emerald Altura Tower 2 - Elevation View</image:title>
+      <image:caption>Tower 2 elevation view of TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Tower-3.webp</image:loc>
+      <image:title>TVS Emerald Altura Tower 3 - Elevation View</image:title>
+      <image:caption>Tower 3 elevation view of TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Tower-5.webp</image:loc>
+      <image:title>TVS Emerald Altura Tower 5 - Elevation View</image:title>
+      <image:caption>Tower 5 elevation view of TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Tower-6.webp</image:loc>
+      <image:title>TVS Emerald Altura Tower 6 - Elevation View</image:title>
+      <image:caption>Tower 6 elevation view of TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+
+    <!-- Elevation / Landscape Images -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Elevation-Landscape-Cam-1024x819.webp</image:loc>
+      <image:title>TVS Emerald Altura - Landscape Elevation</image:title>
+      <image:caption>Landscape elevation view of TVS Emerald Altura, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Balcony-Closeup-Cam-1024x683.webp</image:loc>
+      <image:title>TVS Emerald Altura - Balcony View</image:title>
+      <image:caption>Premium balcony design at TVS Emerald Altura luxury apartments</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Terrace-Cam-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - Terrace View 1</image:title>
+      <image:caption>Terrace view from TVS Emerald Altura apartments, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Terrace-Cam-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - Terrace View 2</image:title>
+      <image:caption>Panoramic terrace view from TVS Emerald Altura residential towers</image:caption>
+    </image:image>
+
+    <!-- Master Layout Plan -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/MLP.webp</image:loc>
+      <image:title>TVS Emerald Altura - Master Layout Plan</image:title>
+      <image:caption>Master layout plan of TVS Emerald Altura 10.06-acre residential complex</image:caption>
+    </image:image>
+
+    <!-- Location Map -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/TVS-Altura-Sathanur-Location.png</image:loc>
+      <image:title>TVS Emerald Altura - Location Map Sathanur Bagalur Road</image:title>
+      <image:caption>Location map showing TVS Emerald Altura on Sathanur, Bagalur Road, North Bangalore</image:caption>
+      <image:geo_location>Sathanur, Bagalur Road, North Bangalore, Karnataka 562149, India</image:geo_location>
+    </image:image>
+
+    <!-- Amenity Images -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/swimming-pool.webp</image:loc>
+      <image:title>TVS Emerald Altura - Swimming Pool</image:title>
+      <image:caption>Olympic-size swimming pool at TVS Emerald Altura clubhouse</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/gymnasium.webp</image:loc>
+      <image:title>TVS Emerald Altura - Gymnasium</image:title>
+      <image:caption>State-of-the-art gymnasium at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/AV-Room-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - AV Room</image:title>
+      <image:caption>AV Room / Home Theatre amenity at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/Co-Working-Space-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - Co-Working Space</image:title>
+      <image:caption>Premium co-working space inside TVS Emerald Altura clubhouse</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/meeting-room.webp</image:loc>
+      <image:title>TVS Emerald Altura - Meeting Room</image:title>
+      <image:caption>Professional meeting room available for residents at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/badminton-court.webp</image:loc>
+      <image:title>TVS Emerald Altura - Badminton Court</image:title>
+      <image:caption>Indoor badminton court at TVS Emerald Altura sports complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/table-tennis.webp</image:loc>
+      <image:title>TVS Emerald Altura - Table Tennis Room</image:title>
+      <image:caption>Table tennis facility available at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/spa-and-salon.webp</image:loc>
+      <image:title>TVS Emerald Altura - Spa and Salon</image:title>
+      <image:caption>Luxury spa and salon at TVS Emerald Altura clubhouse, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/pilate-studio.webp</image:loc>
+      <image:title>TVS Emerald Altura - Pilates Studio</image:title>
+      <image:caption>Dedicated pilates studio at TVS Emerald Altura fitness centre</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/reading-space.webp</image:loc>
+      <image:title>TVS Emerald Altura - Reading Space / Library</image:title>
+      <image:caption>Quiet reading space and library at TVS Emerald Altura residential complex</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/multipurpose-hall-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - Multipurpose Hall</image:title>
+      <image:caption>Large multipurpose hall for events and gatherings at TVS Emerald Altura</image:caption>
+    </image:image>
+
+    <!-- Floor Plan Images -->
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/2-bhk-classic-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 2 BHK Classic Floor Plan Type 1</image:title>
+      <image:caption>2 BHK Classic apartment floor plan at TVS Emerald Altura, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/2-bhk-classic-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 2 BHK Classic Floor Plan Type 2</image:title>
+      <image:caption>2 BHK Classic apartment floor plan variant at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/2-bhk-premium-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 2 BHK Premium Floor Plan Type 1</image:title>
+      <image:caption>2 BHK Premium apartment floor plan at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/2-bhk-premium-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 2 BHK Premium Floor Plan Type 2</image:title>
+      <image:caption>2 BHK Premium apartment floor plan variant at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-classic-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Classic Floor Plan Type 1</image:title>
+      <image:caption>3 BHK Classic apartment floor plan at TVS Emerald Altura, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-classic-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Classic Floor Plan Type 2</image:title>
+      <image:caption>3 BHK Classic apartment floor plan variant at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-premium-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Premium Floor Plan Type 1</image:title>
+      <image:caption>3 BHK Premium apartment floor plan at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-premium-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Premium Floor Plan Type 2</image:title>
+      <image:caption>3 BHK Premium apartment floor plan variant at TVS Emerald Altura</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-luxe-1-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Luxe Floor Plan Type 1</image:title>
+      <image:caption>3 BHK Luxe apartment floor plan at TVS Emerald Altura, North Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvsemeraldaltura.projectinformation.in/3-bhk-luxe-2-1.webp</image:loc>
+      <image:title>TVS Emerald Altura - 3 BHK Luxe Floor Plan Type 2</image:title>
+      <image:caption>3 BHK Luxe apartment floor plan variant at TVS Emerald Altura</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

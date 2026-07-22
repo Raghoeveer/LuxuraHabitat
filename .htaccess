@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Consolidate legacy duplicate URL versions onto the canonical trailing-slash URLs.
+RewriteRule ^about\.html$ /about/ [R=301,L,NE]
+RewriteRule ^contact\.html$ /contact/ [R=301,L,NE]
+RewriteRule ^projects\.html$ /projects/ [R=301,L,NE]
+RewriteRule ^testimonials\.html$ /testimonials/ [R=301,L,NE]

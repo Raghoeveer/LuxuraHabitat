@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Insights &amp; Bangalore Property Market Blog | Luxura Habitat</title>
+  <meta name="description" content="Get expert insights on the Bangalore real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.">
+  <meta name="keywords" content="Bangalore real estate blog, Bangalore property market reviews, real estate investment guides Yelahanka, Luxura Habitat advisory blog">
+  <link rel="canonical" href="https://luxurahabitat.projectinformation.in/blog/">
+
+  <meta property="og:title" content="Real Estate Insights &amp; Market Blog — Luxura Habitat">
+  <meta property="og:description" content="Expert property advice, neighborhood appreciation updates, and unbiased project reviews in Bengaluru.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurahabitat.projectinformation.in/blog/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .blog-card__image-wrap {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blog-card__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-card__image-wrap img {
+      transform: scale(1.06);
+    }
+
+    .blog-card__category {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--accent-copper);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .blog-card__content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-card__meta {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 8px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .blog-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-text);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .blog-card__title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-card__excerpt {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .blog-card__link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent-copper);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s ease;
+      margin-top: auto;
+    }
+
+    .blog-card__link:hover {
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" id="blog-hero">
+      <div class="container">
+        <div class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span>Blog</span>
+        </div>
+        <h1>Market Insights &amp; Advice</h1>
+        <p>Unbiased reviews, neighborhood growth analyses, and professional guidelines for premium real estate buyers in Bangalore.</p>
+      </div>
+    </section>
+
+    <!-- BLOG POSTS SECTION -->
+    <section class="section" id="blog-listing">
+      <div class="container">
+        <div class="blog-grid">
+
+          <!-- Blog Card 1: Assetz Zen & Sato Review -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../zen&sato3/g-8.webp" alt="Assetz Zen & Sato Project Aerial View" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 14, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/assetz-zen-sato-yelahanka-review/">Assetz Zen &amp; Sato Review: Is This Yelahanka Project Worth the Hype?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                An in-depth review of Assetz's Kyoto-inspired luxury project in Yelahanka, Bangalore. We break down the configurations, pricing models, RERA compliance, and location value.
+              </p>
+              <a href="/blog/assetz-zen-sato-yelahanka-review/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 2: Bagalur Main Road Appreciation -->
+          <article class="blog-card animate-on-scroll animate-delay-1">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/bagalur_road.png" alt="Yelahanka North Bangalore Real Estate Map" loading="lazy">
+              <span class="blog-card__category">Market Report</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 14, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/why-invest-in-bagalur-main-road-real-estate/">Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Analyzing the massive infrastructure growth and property appreciation drivers on Bagalur Main Road, Yelahanka. Learn why early investors are targeting this corridor.
+              </p>
+              <a href="/blog/why-invest-in-bagalur-main-road-real-estate/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 3: Yelahanka vs Yelahanka New Town -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/yelahanka_vs_new_town.png" alt="Yelahanka New Town Lifestyle" loading="lazy">
+              <span class="blog-card__category">Investment Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 20, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/">Yelahanka vs. Yelahanka New Town: Which is Better for Real Estate Investment?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Deciding between Old Yelahanka and the planned New Town? We compare property prices, infrastructure, and investment potential for 2026.
+              </p>
+              <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 4: Top 3 Upcoming Luxury Apartments -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/luxury_apartments_yelahanka.png" alt="Luxury Apartments in Yelahanka" loading="lazy">
+              <span class="blog-card__category">Top Projects</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 22, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/">Top 3 Upcoming Luxury Apartments in Yelahanka (2026 Reviews)</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Looking for luxury apartments in Yelahanka? We review the top 3 projects for 2026: Assetz Zen & Sato, Brigade Eternia, and Concorde Mayfair.
+              </p>
+              <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 5: Metro Blue Line Impact -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/namma_metro_blue_line.png" alt="Namma Metro Blue Line Impact" loading="lazy">
+              <span class="blog-card__category">Infrastructure</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 25, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/yelahanka-namma-metro-blue-line-impact/">How the Namma Metro Blue Line is Driving Yelahanka Property Prices in 2026</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Discover how the Phase 2B Metro and BSRP are creating a second wave of property appreciation in Yelahanka. Is it the right time to invest?
+              </p>
+              <a href="/blog/yelahanka-namma-metro-blue-line-impact/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 6: Yelahanka Family Lifestyle -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/yelahanka_family_lifestyle.png" alt="Family Lifestyle in Yelahanka" loading="lazy">
+              <span class="blog-card__category">Lifestyle</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 28, 2026</span>
+                <span>•</span>
+                <span>5 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/yelahanka-family-guide-top-schools-lifestyle/">The Family Guide to Yelahanka: Top Schools and Residential Lifestyle</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Moving your family to Yelahanka? Explore the top international schools, residential lifestyle, and premium gated communities.
+              </p>
+              <a href="/blog/yelahanka-family-guide-top-schools-lifestyle/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- D-Blog 1: Market Trends -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/devanahalli_market_trends.png" alt="Devanahalli Real Estate Market Trends 2026" loading="lazy">
+              <span class="blog-card__category">Market Trends</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 21, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/devanahalli-real-estate-market-trends-2026/">Devanahalli Real Estate Market Trends 2026: Bangalore's Airport Corridor</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Price data, buyer profiles, infrastructure roadmap and investment outlook for the Devanahalli–IVC Road corridor. Why this airport-adjacent micro-market is outperforming every other zone in Bangalore.
+              </p>
+              <a href="/blog/devanahalli-real-estate-market-trends-2026/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- D-Blog 2: ROI -->
+          <article class="blog-card animate-on-scroll animate-delay-1">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/devanahalli_roi.png" alt="Devanahalli ROI Land vs Rental Yield" loading="lazy">
+              <span class="blog-card__category">Investment Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 23, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/">Devanahalli ROI Explained: Land Appreciation vs Rental Yield</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Plot or apartment? A detailed ROI comparison of plotted development (20–26% CAGR) vs luxury apartment rental yield (3–4%) in Devanahalli — with a buyer profile guide to help you decide.
+              </p>
+              <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- D-Blog 3: Metro & STRR -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/strr_metro_devanahalli.png" alt="Metro Blue Line and STRR Devanahalli impact" loading="lazy">
+              <span class="blog-card__category">Infrastructure</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 25, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/metro-blue-line-strr-impact-devanahalli/">How the Metro Blue Line &amp; STRR Are Reshaping Devanahalli</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                A data-driven analysis of how two major infrastructure projects — the Namma Metro and the Satellite Town Ring Road — are permanently elevating Devanahalli property valuations.
+              </p>
+              <a href="/blog/metro-blue-line-strr-impact-devanahalli/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- D-Blog 4: Project Comparison -->
+          <article class="blog-card animate-on-scroll animate-delay-1">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/palmscape_vs_aeropolis.png" alt="Assetz Palmscape vs Sattva Aeropolis Devanahalli comparison" loading="lazy">
+              <span class="blog-card__category">Project Comparison</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 27, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/">Assetz Palmscape vs Sattva Aeropolis: Which Devanahalli Project Fits You?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                A side-by-side comparison of Devanahalli's two most-discussed launches — villa plots vs luxury apartments. Which product fits your budget, horizon and lifestyle?
+              </p>
+              <a href="/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- D-Blog 5: Deep Dive -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../additional_websites/assetz palmscape/Assetz-Palmscape-grand-entrance-wide-angle-image.webp" alt="Assetz Palmscape Devanahalli full review" loading="lazy">
+              <span class="blog-card__category">Project Deep-Dive</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 29, 2026</span>
+                <span>•</span>
+                <span>9 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/assetz-palmscape-devanahalli-price-layout-rera/">Assetz Palmscape: Price, Layout, Possession &amp; RERA Details</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Complete independent review of Assetz Palmscape on IVC Road, Devanahalli. Plot sizes, pricing, legal verification, location analysis and our honest investment assessment.
+              </p>
+              <a href="/blog/assetz-palmscape-devanahalli-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- H-Blog 1: Hennur Market Trends -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/hennur_market.png" alt="Hennur Thanisandra Real Estate Market 2026" loading="lazy" onerror="this.src='../additional_websites/assetz palmscape/Assetz-Palmscape-grand-entrance-wide-angle-image.webp'">
+              <span class="blog-card__category">Market Trends</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 21, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/hennur-thanisandra-real-estate-market-2026/">Hennur–Thanisandra Real Estate Market 2026: North Bangalore's Manyata Belt</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Why the Manyata Tech Park anchor has kept Hennur–Thanisandra appreciating at 14–18% annually through three market cycles. Price data, buyer profiles and full investment outlook.
+              </p>
+              <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- H-Blog 2: Manyata Rental Yield -->
+          <article class="blog-card animate-on-scroll animate-delay-1">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/manyata_tech_park.png" alt="Manyata Tech Park rental yield Hennur Thanisandra" loading="lazy">
+              <span class="blog-card__category">Investment Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 23, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/manyata-tech-park-rental-yield-hennur-thanisandra/">Manyata Tech Park Effect: How Rental Yields Are Holding Strong in Hennur</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Detailed rental yield data by configuration, vacancy rate analysis, and how 80,000 Manyata professionals generate the most reliable corporate rental demand in North Bangalore.
+              </p>
+              <a href="/blog/manyata-tech-park-rental-yield-hennur-thanisandra/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- H-Blog 3: Connectivity -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/strr_metro_devanahalli.png" alt="ORR Hebbal flyover Nagavara Metro Hennur" loading="lazy">
+              <span class="blog-card__category">Infrastructure</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 25, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/hennur-connectivity-orr-hebbal-metro-nagavara/">How the ORR, Hebbal Flyover &amp; Nagavara Metro Are Shaping Hennur Real Estate</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                A connectivity analysis covering the Outer Ring Road, Hebbal flyover, and proposed Nagavara Metro — and the measurable impact on property prices in the Thanisandra belt.
+              </p>
+              <a href="/blog/hennur-connectivity-orr-hebbal-metro-nagavara/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- H-Blog 4: Project Comparison -->
+          <article class="blog-card animate-on-scroll animate-delay-1">
+            <div class="blog-card__image-wrap">
+              <img src="../images/blog/palmscape_vs_aeropolis.png" alt="Goyal Orchid Salisbury vs Sattva La Vita Hennur comparison" loading="lazy" onerror="this.src='../additional_websites/assetz palmscape/Assetz-Palmscape-Main-Elevation-image-1 (1).webp'">
+              <span class="blog-card__category">Project Comparison</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 27, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/">Goyal Orchid Salisbury vs Sattva La Vita: Which Hennur Project Fits You?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                High-rise apartments vs luxury row villas — a structured comparison of both Hennur projects covering ROI, buyer profiles and the key decision framework.
+              </p>
+              <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- H-Blog 5: Deep Dive -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="https://orchidsalisbury.projectinformation.in/sal.jpg" alt="Goyal Orchid Salisbury Thanisandra full review" loading="lazy" onerror="this.src='../additional_websites/assetz palmscape/Assetz-Palmscape-miyawaki-forest.webp'">
+              <span class="blog-card__category">Project Deep-Dive</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 29, 2026</span>
+                <span>•</span>
+                <span>9 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/goyal-orchid-salisbury-review-price-rera-thanisandra/">Goyal Orchid Salisbury: Price, Configuration, RERA &amp; Our Investment Verdict</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Complete independent review of Orchid Salisbury on Thanisandra Main Road — 660+ apartments, 7 towers, pricing, RERA verification, location analysis and our honest assessment.
+              </p>
+              <a href="/blog/goyal-orchid-salisbury-review-price-rera-thanisandra/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+            <img src="../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+          </a>
+          <p>Bengaluru's trusted independent real estate consultancy, connecting discerning buyers with verified tier-one developer properties across premium micro-markets.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="/">Home</a>
+          <a href="/about/">About Us</a>
+          <a href="/areas/">Areas We Serve</a>
+          <a href="/projects/">Projects</a>
+          <a href="/developers/">Developers</a>
+          <a href="/testimonials/">Testimonials</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="/contact/">Plot Consultation</a>
+          <a href="/contact/">Apartment Advisory</a>
+          <a href="/contact/">Legal Due Diligence</a>
+          <a href="/contact/">Investment Guidance</a>
+          <a href="/developers/">Developer Projects</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="nap-block">
+            <p class="nap-name">Narayanan Rajesh</p>
+            <p>Luxura Habitat Real Estate Consultancy</p>
+            <p>Bengaluru, Karnataka, India</p>
+            <p>
+              <a href="tel:+918438344093" class="nap-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.42 1.18 2 2 0 012.42 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                +91 84383 44093
+              </a>
+            </p>
+            <p>
+              <a href="mailto:projectinfoindia@gmail.com" class="nap-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                projectinfoindia@gmail.com
+              </a>
+            </p>
+            <span class="nap-rera">RERA: TN/Agent/0082/2024 | KA: PRM/KA/RERA/1251/310/AG/170823/000045</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p class="footer-disclaimer">
+          Luxura Habitat operates as an independent real estate facilitation consultancy. We are not developers or builders.
+          All project information is sourced directly from our developer partners across Bengaluru.
+          Buyers are advised to independently verify all claims before making purchase decisions.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!--
+    Image Sitemap: Goyal and Co Orchid Salisbury
+    URL: https://orchidsalisbury.projectinformation.in/
+    Last updated: 2026-06-09
+    Purpose: Helps Google Images index all property photos for rich search results.
+  -->
+
+  <url>
+    <loc>https://orchidsalisbury.projectinformation.in/</loc>
+
+    <!-- Hero / Exterior -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/sal.jpg</image:loc>
+      <image:title>Goyal Orchid Salisbury – Premium Apartments in Thanisandra, Bangalore</image:title>
+      <image:caption>Exterior view of Goyal and Co Orchid Salisbury – luxury high-rise residential community on Thanisandra Main Road, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Aerial / Drone Views -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104102_0330_1751528006863_photo.jpg</image:loc>
+      <image:title>Goyal Orchid Salisbury Aerial View – 7 Tower High-Rise Community</image:title>
+      <image:caption>Aerial drone view of Goyal Orchid Salisbury showing all 7 residential towers and surrounding landscape in Thanisandra, North Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104132_0331_1751528009907_photo.jpg</image:loc>
+      <image:title>Orchid Salisbury Bird's-Eye View – Thanisandra, Bangalore</image:title>
+      <image:caption>Bird's-eye drone photograph of Goyal Orchid Salisbury residential towers against the Thanisandra skyline.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104348_0335_1751528023552_photo.jpg</image:loc>
+      <image:title>Orchid Salisbury Drone View – Luxury High-Rise Complex</image:title>
+      <image:caption>Aerial photography of Goyal Orchid Salisbury luxury apartments on Thanisandra Main Road, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104504_0338_1751528032517_photo.jpg</image:loc>
+      <image:title>Goyal Orchid Salisbury Aerial Photography</image:title>
+      <image:caption>High-angle aerial view of Orchid Salisbury showcasing the 660+ apartment community in Thanisandra, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104648_0342_1751528044744_photo.jpg</image:loc>
+      <image:title>Orchid Salisbury Tower View from Above</image:title>
+      <image:caption>Drone view of the impressive tower cluster at Goyal Orchid Salisbury, Thanisandra, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_104952_0348_1751528061809_photo.jpg</image:loc>
+      <image:title>Orchid Salisbury Residential Community Aerial Shot</image:title>
+      <image:caption>Wide aerial drone shot of Orchid Salisbury residential towers and open spaces, Thanisandra, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/dji_fly_20250628_105158_0351_1751528071569_photo.jpg</image:loc>
+      <image:title>Goyal Orchid Salisbury Top View – Luxury Gated Community</image:title>
+      <image:caption>Top-down aerial view of Goyal Orchid Salisbury luxury gated community in Thanisandra, North Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Amenities -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Swimming-pool-4-3.jpg</image:loc>
+      <image:title>Orchid Salisbury Swimming Pool – Luxury Amenity</image:title>
+      <image:caption>Premium swimming pool at Goyal Orchid Salisbury offering a resort-style experience for residents.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Club-house-2-4.jpg</image:loc>
+      <image:title>Orchid Salisbury Clubhouse – Community Recreation Centre</image:title>
+      <image:caption>State-of-the-art clubhouse at Goyal Orchid Salisbury with indoor recreation facilities for all residents.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/BAdminton-court-1-3.jpg</image:loc>
+      <image:title>Orchid Salisbury Badminton Court – Sports Amenity</image:title>
+      <image:caption>Indoor badminton court at Goyal Orchid Salisbury for active residents.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Home-Theatre-3-4.jpg</image:loc>
+      <image:title>Orchid Salisbury Home Theatre – Entertainment Amenity</image:title>
+      <image:caption>Dedicated home theatre facility at Goyal Orchid Salisbury for movie screening and entertainment events.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Gallery -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Salisbury-website-Gallery-images-1-4.jpg</image:loc>
+      <image:title>Goyal Orchid Salisbury Gallery – Interior and Exterior</image:title>
+      <image:caption>Gallery image showcasing the premium interiors and lifestyle at Goyal Orchid Salisbury, Thanisandra.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Salisbury-website-Gallery-images-3-4.jpg</image:loc>
+      <image:title>Orchid Salisbury Interior Design – Premium Apartments</image:title>
+      <image:caption>Interior view of a premium apartment at Goyal Orchid Salisbury, Thanisandra, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/Salisbury-website-Gallery-images-4-4.jpg</image:loc>
+      <image:title>Orchid Salisbury Living Spaces – Luxury Apartments</image:title>
+      <image:caption>Elegant living space design in a 2 BHK or 3 BHK apartment at Goyal Orchid Salisbury.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Floor Plans -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-2BHK-COMPACT-2-5.jpg</image:loc>
+      <image:title>Orchid Salisbury 2 BHK Compact Floor Plan – Type 1</image:title>
+      <image:caption>2 BHK Compact floor plan layout at Goyal Orchid Salisbury with optimised space planning.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-2BHK-COMPACT-4.jpg</image:loc>
+      <image:title>Orchid Salisbury 2 BHK Compact Floor Plan – Type 2</image:title>
+      <image:caption>Second variant of 2 BHK Compact floor plan at Goyal Orchid Salisbury, Thanisandra.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-2BHK-TYPICAL-UNIT-2-5.jpg</image:loc>
+      <image:title>Orchid Salisbury 2 BHK Typical Unit Floor Plan</image:title>
+      <image:caption>Standard 2 BHK typical unit floor plan at Goyal Orchid Salisbury with spacious layout.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-3BHK-TYPICAL-UNIT-1-4.jpg</image:loc>
+      <image:title>Orchid Salisbury 3 BHK Typical Unit Floor Plan – Type 1</image:title>
+      <image:caption>3 BHK typical unit floor plan at Goyal Orchid Salisbury – premium spacious apartment layout.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-3BHK-TYPICAL-UNIT-2-4.jpg</image:loc>
+      <image:title>Orchid Salisbury 3 BHK Typical Unit Floor Plan – Type 2</image:title>
+      <image:caption>Second 3 BHK floor plan variant at Goyal Orchid Salisbury, Thanisandra, Bangalore.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-3BHK-2t-1.jpg</image:loc>
+      <image:title>Orchid Salisbury 3 BHK 2T Floor Plan – Option 1</image:title>
+      <image:caption>3 BHK 2-toilet apartment floor plan at Orchid Salisbury – efficient design with two bathrooms.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-FLOOR-PLANS-3BHK-2t-2.jpg</image:loc>
+      <image:title>Orchid Salisbury 3 BHK 2T Floor Plan – Option 2</image:title>
+      <image:caption>Alternate 3 BHK 2-toilet floor plan layout at Goyal Orchid Salisbury.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Master Plan & Location -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-WEBSITE-KEY-PLAN-28-NOVEMBER.jpg</image:loc>
+      <image:title>Orchid Salisbury Key Plan – Tower Block Layout</image:title>
+      <image:caption>Key plan of Goyal Orchid Salisbury showing the positions of all 7 towers across the site.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/SALISBURY-LOCATION-MAP.jpg</image:loc>
+      <image:title>Orchid Salisbury Location Map – Thanisandra, Bangalore</image:title>
+      <image:caption>Location map of Goyal Orchid Salisbury showing proximity to Hebbal, Manyata Tech Park, Metro, and Bangalore Airport.</image:caption>
+      <image:geo_location>Thanisandra, Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+
+    <!-- Logo -->
+    <image:image>
+      <image:loc>https://orchidsalisbury.projectinformation.in/GOYAL-LOGO-3.png</image:loc>
+      <image:title>Goyal and Co Logo – Developer of Orchid Salisbury</image:title>
+      <image:caption>Official logo of Goyal and Co, the developer behind Orchid Salisbury in Thanisandra, Bangalore.</image:caption>
+    </image:image>
+
+  </url>
+
+</urlset>

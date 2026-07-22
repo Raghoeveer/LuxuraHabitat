@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Projects | Luxura Habitat — Premium Real Estate Bengaluru</title>
+  <meta name="description" content="Explore 11 handpicked premium residential projects across Bengaluru — Assetz Zen &amp; Sato, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis, Sattva City &amp; more. Personally vetted by Narayanan Rajesh.">
+  <meta name="keywords" content="Luxura Habitat projects, Assetz Zen Sato Yelahanka, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis Devanahalli, Sattva Sanio, Sattva City, TVS Emerald Altura, Sattva Lumina, Assetz Palmscape, luxury apartments Bangalore, new launch projects North Bangalore">
+  <link rel="canonical" href="https://luxurahabitat.projectinformation.in/projects/">
+
+  <meta property="og:title" content="Current Projects — Luxura Habitat">
+  <meta property="og:description" content="Handpicked premium residential projects across Bengaluru. Personally vetted for quality, legal clarity, and investment value.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurahabitat.projectinformation.in/projects/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* ── Projects grid: single column, max width ── */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: var(--space-xl);
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Compact horizontal card ── */
+    .project-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 220px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.13);
+    }
+
+    /* Image column */
+    .project-card__image-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .project-card:hover .project-card__image-wrap img {
+      transform: scale(1.07);
+    }
+
+    .project-card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: linear-gradient(135deg, #b08d57, #d4a96a);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .project-card__status {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.93);
+      color: #2a7a3b;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .project-card__status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #2a7a3b;
+      border-radius: 50%;
+      animation: pulse-green 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.5); }
+    }
+
+    /* Body column */
+    .project-card__body {
+      padding: 22px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .project-card__top { display: flex; flex-direction: column; gap: 4px; }
+
+    .project-card__developer {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #b08d57;
+    }
+
+    .project-card__title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.15;
+    }
+
+    .project-card__location {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    .project-card__location svg { flex-shrink: 0; color: #b08d57; }
+
+    /* Inline spec pills */
+    .project-card__specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .spec-pill {
+      background: #f5f0e8;
+      border: 1px solid #e8dfc8;
+      border-radius: 6px;
+      padding: 4px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spec-pill__value {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.1;
+    }
+
+    .spec-pill__label {
+      font-size: 0.6rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Tags */
+    .project-card__highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .project-tag {
+      background: #f5f0e8;
+      color: #7a5c2a;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Actions */
+    .project-card__actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .project-card__actions .btn {
+      padding: 9px 18px;
+      font-size: 0.82rem;
+    }
+
+    /* Whole card is clickable via JS onclick */
+    .project-card { position: relative; cursor: pointer; }
+
+    /* Coming soon card stays vertical */
+    .project-card--coming-soon {
+      grid-template-columns: 1fr;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      min-height: unset;
+    }
+
+    .project-card--coming-soon .project-card__body {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 32px;
+      gap: 0;
+    }
+
+    .coming-soon-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(176,141,87,0.15);
+      border: 1px solid rgba(176,141,87,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .project-card--coming-soon .project-card__title {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .project-card--coming-soon p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.84rem;
+      line-height: 1.65;
+      max-width: 320px;
+      margin-top: 10px;
+    }
+
+    /* Intro strip */
+    .projects-intro {
+      background: linear-gradient(135deg, #faf9f6 0%, #f5f0e8 100%);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid #ede7d9;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .projects-intro__icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #b08d57, #d4a96a);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-primary);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .projects-intro p {
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .projects-intro strong { color: var(--color-text); }
+
+    @media (max-width: 768px) {
+      .projects-intro { flex-direction: column; text-align: center; padding: 18px; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/" class="active">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" id="projects-hero">
+      <div class="container">
+        <div class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span>Projects</span>
+        </div>
+        <h1>Handpicked Projects</h1>
+        <p>Every project we present has been vetted under the guidance of our Principal Advisor, Narayanan Rajesh — for design integrity, developer credibility, legal standing, and long-term investment merit.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS LISTING -->
+    <section class="section" id="projects-listing">
+      <div class="container">
+
+        <div class="projects-intro animate-on-scroll">
+          <div class="projects-intro__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <p><strong>Our curation promise:</strong> We only feature projects where we can stand behind the developer's track record, RERA compliance, construction quality, and location fundamentals. Every listing below comes with our direct advisory support — no cold handoffs, no hidden referral agendas.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Assetz Zen & Sato -->
+          <article class="project-card animate-on-scroll" id="project-zen-sato"
+            onclick="window.location.href='/projects/assetz-zen-sato/'"
+            role="link"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-zen-sato/'"
+          >
+            <div class="project-card__image-wrap">
+              <img src="/zen&sato3/g-8.webp" alt="Assetz Zen & Sato luxury apartments in Yelahanka North Bengaluru" loading="eager">
+              <span class="project-card__badge">New Launch</span>
+              <span class="project-card__status">Actively Selling</span>
+            </div>
+
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Assetz Property Group</p>
+                <h2 class="project-card__title">Assetz Zen &amp; Sato</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Yelahanka, North Bengaluru
+                </p>
+              </div>
+
+              <div class="project-card__specs-row">
+                <div class="spec-pill">
+                  <span class="spec-pill__value">3 &amp; 4 BHK</span>
+                  <span class="spec-pill__label">Config</span>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-pill__value">&#8377;2.70 Cr+</span>
+                  <span class="spec-pill__label">From</span>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-pill__value">&#8377;39,999</span>
+                  <span class="spec-pill__label">Pre-EMI/mo</span>
+                </div>
+              </div>
+
+              <div class="project-card__highlights">
+                <span class="project-tag">RERA Approved</span>
+                <span class="project-tag">Green Spaces</span>
+                <span class="project-tag">Club House</span>
+              </div>
+
+              <div class="project-card__actions">
+                <a href="/projects/assetz-zen-sato/" class="btn btn--primary" id="zen-sato-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Assetz%20Zen%20%26%20Sato.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="zen-sato-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 2: Concorde Mayfair -->
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-concorde-mayfair"
+            onclick="window.location.href='/projects/concorde-mayfair/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/concorde-mayfair/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Mayfair/10.jpg" alt="Concorde Mayfair 3 BHK apartments Yelahanka Bellary Road" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Concorde Group</p>
+                <h2 class="project-card__title">Concorde Mayfair</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Yelahanka, Bellary Road, Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">RERA</span><span class="spec-pill__label">Approved</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Premium</span>
+                <span class="project-tag">Airport Proximity</span>
+                <span class="project-tag">Club House</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/concorde-mayfair/" class="btn btn--primary" id="concorde-mayfair-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Concorde%20Mayfair.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="concorde-mayfair-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Orchid Salisbury -->
+          <article class="project-card animate-on-scroll" id="project-orchid-salisbury"
+            onclick="window.location.href='/projects/orchid-salisbury/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/orchid-salisbury/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Salisbury/1-2.png" alt="Orchid Salisbury luxury high-rise apartments Thanisandra Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Goyal &amp; Co</p>
+                <h2 class="project-card__title">Orchid Salisbury</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Thanisandra Main Road, Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">2 &amp; 3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;1.03 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">660+ Units</span>
+                <span class="project-tag">7 Towers</span>
+                <span class="project-tag">Manyata Proximity</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/orchid-salisbury/" class="btn btn--primary" id="orchid-salisbury-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Orchid%20Salisbury.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="orchid-salisbury-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Brigade Eternia -->
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-brigade-eternia"
+            onclick="window.location.href='/projects/brigade-eternia/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/brigade-eternia/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/ETERNIA/Brigade-Eternia-Photo.webp" alt="Brigade Eternia lakeside apartments Yelahanka North Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Brigade Group</p>
+                <h2 class="project-card__title">Brigade Eternia</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Yelahanka, North Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">3 &amp; 4 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;2.47 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Lakeside</span>
+                <span class="project-tag">50 Acres</span>
+                <span class="project-tag">1124 Units</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/brigade-eternia/" class="btn btn--primary" id="brigade-eternia-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Brigade%20Eternia.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="brigade-eternia-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: Sattva Aeropolis -->
+          <article class="project-card animate-on-scroll" id="project-sattva-aeropolis"
+            onclick="window.location.href='/projects/sattva-aeropolis/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-aeropolis/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Aeropolis/14.Aerial-Night-View_edited.webp" alt="Sattva Aeropolis studio 1BHK apartments Devanahalli Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva Aeropolis</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Devanahalli, North Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">Studio &amp; 1 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">RERA</span><span class="spec-pill__label">Approved</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Airport Corridor</span>
+                <span class="project-tag">Investment Grade</span>
+                <span class="project-tag">High Rental Yield</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-aeropolis/" class="btn btn--primary" id="sattva-aeropolis-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Aeropolis.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-aeropolis-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: Sattva Sanio -->
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-sattva-sanio"
+            onclick="window.location.href='/projects/sattva-sanio/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-sanio/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/SANIO/Sanio-Amenities-Club.png" alt="Sattva Sanio 3 4 BHK apartments Old Madras Road Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">Pre-Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva Sanio</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Old Madras Road (NH-4), Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">3 &amp; 4 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">10.3 Acres</span><span class="spec-pill__label">Land</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">7 Towers</span>
+                <span class="project-tag">1000+ Homes</span>
+                <span class="project-tag">Ultra-Luxury</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-sanio/" class="btn btn--primary" id="sattva-sanio-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Sanio.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-sanio-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 7: Sattva City -->
+          <article class="project-card animate-on-scroll" id="project-sattva-city"
+            onclick="window.location.href='/projects/sattva-city/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-city/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Sattva City/Cafe-lounge.webp" alt="Sattva City Doddajala 2 3 4 BHK apartments near Bangalore airport" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva City</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Doddajala, North Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">2, 3 &amp; 4 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">50 Acres</span><span class="spec-pill__label">Land</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">3,460 Homes</span>
+                <span class="project-tag">84% Open Space</span>
+                <span class="project-tag">4 Clubhouses</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-city/" class="btn btn--primary" id="sattva-city-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20City%20Doddajala.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-city-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 8: TVS Emerald Altura -->
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-tvs-altura"
+            onclick="window.location.href='/projects/tvs-emerald-altura/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/tvs-emerald-altura/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/altura/3-bhk-classic-1-1.webp" alt="TVS Emerald Altura 2 3 BHK apartments Sathanur Bagalur Road Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">TVS Emerald</p>
+                <h2 class="project-card__title">TVS Emerald Altura</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Sathanur, Bagalur Main Road, Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">2 &amp; 3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;1.4 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">975 Homes</span>
+                <span class="project-tag">70%+ Open Space</span>
+                <span class="project-tag">RERA Approved</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/tvs-emerald-altura/" class="btn btn--primary" id="tvs-altura-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20TVS%20Emerald%20Altura.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="tvs-altura-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 9: Sattva Lumina -->
+          <article class="project-card animate-on-scroll" id="project-sattva-lumina"
+            onclick="window.location.href='/projects/sattva-lumina/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-lumina/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Lumina/Lumina 1 bhk 1.webp" alt="Sattva Lumina 1 2 3 BHK apartments Rajankunte Yelahanka Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva Lumina</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Rajankunte, Yelahanka, Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">1, 2 &amp; 3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">RERA</span><span class="spec-pill__label">Approved</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Affordable Luxury</span>
+                <span class="project-tag">North Bangalore</span>
+                <span class="project-tag">Club House</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-lumina/" class="btn btn--primary" id="sattva-lumina-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Lumina.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-lumina-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 10: Sattva Kaveri Siri -->
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-kaveri-siri"
+            onclick="window.location.href='/projects/sattva-kaveri-siri/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-kaveri-siri/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/Kaveri Siri/Aerial-View-Kaveri-Siri.jpg" alt="Sattva Kaveri Siri residential plots Mandya Karnataka" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva Kaveri Siri</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Mandya, Karnataka
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">Residential Plots</span><span class="spec-pill__label">Type</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">RERA</span><span class="spec-pill__label">Approved</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Gated Community</span>
+                <span class="project-tag">Riverside</span>
+                <span class="project-tag">Investment Grade</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-kaveri-siri/" class="btn btn--primary" id="kaveri-siri-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Kaveri%20Siri.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="kaveri-siri-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 11: Assetz Palmscape -->
+          <article class="project-card animate-on-scroll" id="project-assetz-palmscape"
+            onclick="window.location.href='/projects/assetz-palmscape/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-palmscape/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/assetz palmscape/Assetz-Palmscape-Image-1 (1).webp" alt="Assetz Palmscape villa plots Devanahalli North Bangalore IVC Road" loading="lazy">
+              <span class="project-card__status project-card__status--new">Pre-Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Assetz Property Group</p>
+                <h2 class="project-card__title">Assetz Palmscape</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Devanahalli, IVC Road, North Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">Villa Plots</span><span class="spec-pill__label">Type</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">450 Units</span><span class="spec-pill__label">Total</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">60%+ Open Space</span>
+                <span class="project-tag">Miyawaki Forest</span>
+                <span class="project-tag">Pre-Launch EOI</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/assetz-palmscape/" class="btn btn--primary" id="palmscape-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Assetz%20Palmscape.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="palmscape-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 12: Sattva La Vita -->
+          <article class="project-card animate-on-scroll animate-delay-2" id="project-sattva-la-vita"
+            onclick="window.location.href='/projects/sattva-la-vita/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-la-vita/'">
+            <div class="project-card__image-wrap">
+              <img src="/additional_websites/La Vita/Lavita-001.webp" alt="Sattva La Vita 4 BHK row house villas Hennur Road Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">Ready to Move</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Sattva Group</p>
+                <h2 class="project-card__title">Sattva La Vita</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hennur Road, North Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">4 BHK</span><span class="spec-pill__label">Villas</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">Row Houses</span><span class="spec-pill__label">Type</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">Private Gardens</span>
+                <span class="project-tag">Luxury Amenities</span>
+                <span class="project-tag">Gated Community</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/sattva-la-vita/" class="btn btn--primary" id="la-vita-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20La%20Vita%20Hennur.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="la-vita-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="section" id="projects-cta-strip" style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);padding:var(--space-xl) 0;">
+      <div class="container" style="text-align:center;">
+        <h2 style="font-family:var(--font-display);color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;">Looking for Something Specific?</h2>
+        <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:540px;margin:0 auto 32px;">Tell Narayanan your requirements — budget, location, configuration — and get a personally curated shortlist within hours.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I%20have%20specific%20requirements%20for%20a%20property.%20Can%20you%20help%3F" class="btn btn--whatsapp btn--lg" id="projects-whatsapp-cta" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Narayanan
+          </a>
+          <a href="/contact/" class="btn btn--outline btn--lg" id="projects-contact-cta" style="border-color:rgba(255,255,255,0.35);color:#fff;">
+            Schedule a Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+          <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+        </a>
+        <p>Bengaluru's trusted independent real estate consultancy, connecting discerning buyers with verified tier-one developer properties across premium micro-markets.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/areas/">Areas We Serve</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/contact/">Plot Consultation</a>
+        <a href="/contact/">Apartment Advisory</a>
+        <a href="/contact/">Legal Due Diligence</a>
+        <a href="/contact/">Investment Guidance</a>
+        <a href="/developers/">Developer Projects</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="nap-block">
+          <p class="nap-name">Narayanan Rajesh</p>
+          <p>Luxura Habitat Real Estate Consultancy</p>
+          <p>Bengaluru, Karnataka, India</p>
+          <p>
+            <a href="tel:+918438344093" class="nap-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.42 1.18 2 2 0 012.42 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              +91 84383 44093
+            </a>
+          </p>
+          <p>
+            <a href="mailto:projectinfoindia@gmail.com" class="nap-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              projectinfoindia@gmail.com
+            </a>
+          </p>
+          <span class="nap-rera">RERA: TN/Agent/0082/2024 | KA: PRM/KA/RERA/1251/310/AG/170823/000045</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+      <p class="footer-disclaimer">
+        Luxura Habitat operates as an independent real estate facilitation consultancy. We are not developers or builders.
+        All project information is sourced directly from our developer partners across Bengaluru.
+        Buyers are advised to independently verify all claims before making purchase decisions.
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

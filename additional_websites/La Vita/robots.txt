@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sattvalavita.projectdetail.net/sitemap.xml

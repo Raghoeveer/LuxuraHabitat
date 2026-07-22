@@ -1,0 +1,36 @@
+<form id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b3ea5464-ddde-4fdf-b9a5-ed31e81cbf9b">
+                    <input type="hidden" name="redirect" value="https://vajramvivera.projectdetail.net/thank-you.html">
+                    <input type="hidden" name="subject" value="New Lead – Vajram Vivera Contact Form">
+                    <input type="hidden" name="redirect" value="https://vajramvivera.projectdetail.net/thank-you.html">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>BHK Preference</label>
+                        <select name="bhk">
+                            <option value="">Select Configuration</option>
+                            <option>2 BHK - 1,316 to 1,352 Sq.ft</option>
+                            <option>3 BHK - 1,520 to 1,820 Sq.ft</option>
+                            <option>4 BHK - 2,100 to 2,623 Sq.ft</option>
+                            <option>Not Decided Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Query / Message</label>
+                        <textarea name="query"
+                            placeholder="Tell us about your requirements, preferred date for site visit, or any specific questions..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit" id="mainSubmitBtn">Submit Enquiry</button>
+                    <div id="formMessage"
+                        style="text-align:center;margin-top:1rem;padding:0.8rem;border-radius:4px;display:none;"></div>
+                </form>

@@ -1,0 +1,19 @@
+﻿# robots.txt â€” Sattva Kaveri Siri
+# https://sattvakaverisiri.projectdetail.net/
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Block access to any future admin or private paths (precautionary)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://sattvakaverisiri.projectdetail.net/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 10
+

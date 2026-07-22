@@ -1,0 +1,51 @@
+Act as a principal front-end engineer, expert Local SEO strategist and E-E-A-T optimization specialist. We are building the structural core framework for an elite real estate portal called "Luxura Habitat" (domain: luxurahabitat.projectinformation.in). The portal markets tier-one projects (Sobha, Godrej, AssetzProperties etc.) and highlights individual consultant Narayanan Rajesh as the local market expert.
+
+Please scaffold a highly optimized, fully responsive static workspace directory containing the default core pages with the global header/footer navigation template intact.
+
+Feel free to ask any queries regarding the website and any additional information you would need to build the website 
+please use placeholder images for now, i will fetch u whatever images u need later, just tell me in which folders do you need the 
+
+
+--- GLOBAL DESIGN & COLOR SYSTEM ---
+Implement these global CSS variables and use a clean typography layout across all pages:
+- --primary-forest: #013220 (Deep Forest Green - Main headers, navigation accents, primary buttons)
+- --accent-copper: #B87333 (Burnished Metallic Copper - Icons, borders, hover states, active paths)
+- --text-charcoal: #2B2B2B (Matte Charcoal - Highly readable body copy)
+- --bg-canvas: #F9F9F6 (Premium Off-White - Main page background canvas)
+
+--- THE COMPLIANT NAVIGATION TEMPLATE ---
+Every page built below must feature:
+1. Header: A premium semantic navigation bar containing the Luxura Habitat logo mark, links to Home, About Narayanan, Areas We Serve, and a prominent call-to-action button linking to the contact page.
+2. Footer: A robust Local Business SEO footer containing consistent Name, Address, and Phone (NAP) text blocks, an explicit mention of individual Agent RERA Registration Number [YOUR-DAD'S-RERA], a copyright notice, and a legal disclaimer stating independent facilitation status for tier-one developers.
+
+--- CORE WORKSPACE FILE REQUIREMENTS ---
+
+1. FILE: /index.html (The Main Authority Homepage)
+- Structure a clean hero section with optimized semantic H1 tags: "Curated Luxury Living & Premium Layouts in Bengaluru".
+- Include a 3-card layout section highlighting why buyers source through Luxura Habitat (Legal Vetting, Tier-1 Developer Access, Direct Transparent Consultations).
+- Include a placeholder section for "Active Premium Undertakings" that will link out to future property subdirectories.
+- Features a prominent primary button for a direct WhatsApp consultation path.
+
+2. FILE: /about.html (The E-E-A-T and Credentials Anchor)
+- Focus heavily on establishing trust and individual authority.
+- Section 1: "The Luxura Habitat Standard: Curated by Narayanan Rajesh". A text-heavy narrative detailing his years of local market insight, his focus on zero-litigation properties, and his philosophy of guiding families through asset verification.
+- Section 2: A clean visual block highlighting his individual agent credentials, licensing compliance framework, and a showcase of past client testimonials emphasizing seamless verification.
+        
+3. FILE: /areas/index.html (The Hyperlocal Micro-Market Hub)
+- This is our primary engine for organic search traffic.
+- Section 1: H2 Heading: "Navigating Bengaluru’s Premium Micro-Markets". 
+- Section 2: Grid array layout representing his target geographical farm zones (e.g., "Kanakapura Road Corridor", "South Bengaluru Hub"). 
+- Each zone component should contain text sections for: Lifestyle & Connectivity, Proximity to Major Tech Hubs/Schools, and Upcoming Infrastructure Trends. Each card must feature a text link designed to guide high-intent neighborhood search queries deeper into specific project pages.
+
+4. FILE: /contact.html (The High-Conversion Routing Endpoint)
+- A highly scannable grid layout. Left column contains a tap-to-call telephone link, direct WhatsApp routing button, and his service area office address.
+- Right column contains a streamlined, clean lead capture form capturing Name, Phone, Email, and a dropdown menu choice for: "Interested in Plots", "Interested in Apartments", or "Schedule a Legal Consultation".
+
+5. FILE: /testimonials.html (Case Studies & Success Stories)
+- Build a responsive layout showcasing client success stories.
+- Structure each review as a detailed narrative card featuring placeholders for: Client Profile Image, Property Type (e.g., "Sobha Premium Plot Buyer"), The Challenge, and The Outcome managed by Narayanan Rajesh.
+
+6. FILE: /developers/index.html (Tier-1 Developer Hub)
+- Design a premium grid interface profiling tier-one builders (Sobha, Godrej, Assetz Property).
+- Each developer element must feature a clean descriptive text block highlighting their building standards, sustainable initiatives, and a link path to view active projects associated with that developer.
+Ensure all generated code contains complete metadata structures, utilizes semantic semantic HTML5 structural elements (header, nav, main, section, footer), remains ultra-lightweight to protect our Netlify build credits, and scores perfectly for mobile-responsive viewports.

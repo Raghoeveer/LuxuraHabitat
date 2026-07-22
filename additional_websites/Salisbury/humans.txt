@@ -1,0 +1,21 @@
+/* HUMANS.TXT – Goyal and Co Orchid Salisbury
+   https://orchidsalisbury.projectinformation.in/
+   humanstxt.org
+*/
+
+/* TEAM */
+  Project: Goyal Orchid Salisbury – Official Microsite
+  Developer: Web Design Team
+  Contact: admin [at] projectinformation [dot] in
+  Location: Bengaluru, Karnataka, India
+
+/* SITE */
+  Last update: 2026-06-09
+  Language: English
+  Standards: HTML5, CSS3, Vanilla JS
+  Components: Structured Data (Schema.org), Open Graph, Twitter Card, Image Sitemap
+
+/* THANKS */
+  Goyal and Co – Developer of Orchid Salisbury
+  Google Fonts – Playfair Display & Poppins
+  Schema.org – structured data vocabulary

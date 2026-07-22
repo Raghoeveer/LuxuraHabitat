@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luxurahabitat.projectinformation.in/sitemap.xml

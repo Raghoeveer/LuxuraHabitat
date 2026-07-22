@@ -1,0 +1,32 @@
+# ==============================================================
+# robots.txt for TVS Emerald Altura
+# Site: https://tvsemeraldaltura.projectinformation.in
+# ==============================================================
+
+# ---- Google and all major search engines: full access ----
+User-agent: *
+Allow: /
+
+# Block access to any admin or private paths (add more as needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.php$
+
+# ---- Google Image Bot: allow all images ----
+User-agent: Googlebot-Image
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+
+# ---- Crawl-delay hint for less aggressive bots ----
+User-agent: Bingbot
+Crawl-delay: 10
+
+User-agent: Slurp
+Crawl-delay: 10
+
+# ---- Sitemap Location ----
+Sitemap: https://tvsemeraldaltura.projectinformation.in/sitemap.xml

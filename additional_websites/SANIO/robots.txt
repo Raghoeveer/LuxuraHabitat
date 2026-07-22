@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sattvasanio.projectdetail.net/sitemap.xml

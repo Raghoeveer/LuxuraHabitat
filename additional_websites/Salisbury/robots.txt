@@ -1,0 +1,45 @@
+# robots.txt – Goyal and Co Orchid Salisbury
+# Website: https://orchidsalisbury.projectinformation.in/
+# Last updated: 2026-06-09
+
+# ─── Allow All Crawlers (Default) ────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ─── Google Bot ───────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# ─── Bing / Microsoft Bot ─────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+# ─── AI / LLM Crawlers ────────────────────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ─── Unwanted / Spam Bots ─────────────────────────────────────────────────────
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ─── Sitemaps ─────────────────────────────────────────────────────────────────
+Sitemap: https://orchidsalisbury.projectinformation.in/sitemap.xml
+Sitemap: https://orchidsalisbury.projectinformation.in/sitemap-images.xml
