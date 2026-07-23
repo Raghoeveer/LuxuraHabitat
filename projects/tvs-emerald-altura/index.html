@@ -13,16 +13,16 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- ===== CANONICAL URL ===== -->
-    <link rel="canonical" href="https://luxurahabitat.projectinformation.in/projects/tvs-emerald-altura/">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/tvs-emerald-altura/">
 
     <!-- ===== OPEN GRAPH TAGS ===== -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TVS Emerald Altura">
     <meta property="og:locale" content="en_IN">
-    <meta property="og:url" content="https://luxurahabitat.projectinformation.in/projects/tvs-emerald-altura/">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/tvs-emerald-altura/">
     <meta property="og:title" content="TVS Emerald Altura | Premium 2 &amp; 3 BHK Apartments in Sathanur, North Bangalore">
     <meta property="og:description" content="Premium 2 &amp; 3 BHK homes by TVS Emerald across 10.06 acres with 975 residences, 12 towers, 70%+ open space, curated lifestyle amenities &amp; excellent North Bangalore connectivity. RERA: PRM/KA/RERA/1251/309/PR/040426/008572.">
-    <meta property="og:image" content="https://tvsemeraldaltura.projectinformation.in/altura-website-banner-may-14-1920-by-600.webp">
+    <meta property="og:image" content="https://luxurahabitat.com/projects/tvs-emerald-altura/altura-website-banner-may-14-1920-by-600.webp">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="600">
     <meta property="og:image:alt" content="TVS Emerald Altura - Premium Apartments in North Bangalore">
@@ -34,7 +34,7 @@
     <meta name="twitter:creator" content="@TVSEmerald">
     <meta name="twitter:title" content="TVS Emerald Altura | Premium 2 &amp; 3 BHK Apartments in North Bangalore">
     <meta name="twitter:description" content="Premium 2 &amp; 3 BHK homes in Sathanur with 70%+ open spaces, dual clubhouses, lifestyle amenities &amp; airport corridor connectivity. Prices from ₹1.4 Cr.">
-    <meta name="twitter:image" content="https://tvsemeraldaltura.projectinformation.in/altura-website-banner-may-14-1920-by-600.webp">
+    <meta name="twitter:image" content="https://luxurahabitat.com/projects/tvs-emerald-altura/altura-website-banner-may-14-1920-by-600.webp">
     <meta name="twitter:image:alt" content="TVS Emerald Altura Apartment Complex in North Bangalore">
 
     <!-- ===== GEO &amp; REGIONAL TAGS ===== -->
@@ -61,7 +61,7 @@
     <meta name="country" content="India">
 
     <!-- ===== SITEMAP AUTO-DISCOVERY ===== -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://tvsemeraldaltura.projectinformation.in/sitemap.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://luxurahabitat.com/projects/tvs-emerald-altura/sitemap.xml">
 
     <!-- ===== BROWSER / PWA HINTS ===== -->
     <meta name="theme-color" content="#2d7a3e">
@@ -2347,7 +2347,38 @@
                 display: none !important;
             }
         }
-</style>
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a574; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Similar projects grid */
+    .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+    .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(30,58,47,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a2f; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
+    .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    </style>
 
     <!-- Schema.org Structured Data for SEO -->
     <script type="application/ld+json">
@@ -2356,7 +2387,7 @@
       "@type": "RealEstateListing",
       "name": "TVS Emerald Altura Sathanur",
       "description": "Premium 2 & 3 BHK Japandi-inspired luxury apartments by TVS Emerald, located on Bagalur Main Road, Sathanur, North Bangalore. Featuring 71% open spaces and world-class amenities.",
-      "url": "https://tvsemeraldaltura.projectinformation.in/",
+      "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/",
       "about": {
         "@type": "HousingProject",
         "name": "TVS Emerald Altura",
@@ -3079,35 +3110,87 @@
     </section>
 
     <!-- Footer -->
-    
-    <!-- Related Market Insights Yelahanka -->
-    <section style="background:#faf8f5;padding:64px 24px;">
-      <div style="max-width:1100px;margin:0 auto;">
-        <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#c4a574;margin-bottom:10px;">Research &amp; Insights</p>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:#1e3a2f;margin-bottom:12px;">Understand the Yelahanka Corridor</h2>
-        <p style="font-size:1rem;color:#666;line-height:1.7;max-width:680px;margin-bottom:36px;">TVS Emerald Altura sits in the <a href="/areas/yelahanka/" style="color:#c4a574;font-weight:600;">Yelahanka–Bagalur Main Road corridor</a> — North Bangalore's fastest-growing luxury residential address.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;">
-          <a href="/blog/why-invest-in-bagalur-main-road-real-estate/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Market Report</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Why Bagalur Main Road is North Bangalore's Next Hotspot</p>
-            <p style="font-size:.8rem;color:#888;">Infrastructure and appreciation drivers on this corridor. 6 min read.</p>
-          </a>
-          <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Investment Guide</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Yelahanka Rental Yield Analysis 2026</p>
-            <p style="font-size:.8rem;color:#888;">Corporate tenant demand and rental income potential. 7 min read.</p>
-          </a>
-          <a href="/blog/yelahanka-namma-metro-blue-line-impact/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Infrastructure</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Yelahanka Metro &amp; Connectivity Guide</p>
-            <p style="font-size:.8rem;color:#888;">Airport road, Hebbal flyover and metro expansion impact. 5 min read.</p>
-          </a>
+
+
+    <!-- ===== SIMILAR PROJECTS + MARKET INSIGHTS ===== -->
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+
+        <span class="pfs-label">Also in Hennur-Thanisandra</span>
+        <h2 class="pfs-title">Similar Projects to Consider</h2>
+        <p class="pfs-intro">Explore comparable properties in the <a href="/areas/hennur/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Hennur-Thanisandra corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
+        <div class="proj-compare-grid">
+      <a href="/projects/orchid-salisbury/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/Salisbury/Salisbury-website-Gallery-images-1-4.jpg" alt="Goyal Orchid Salisbury" loading="lazy">
+          <span class="proj-compare-badge">Thanisandra</span>
         </div>
-        <p style="margin-top:28px;font-size:.9rem;color:#666;">&larr; <a href="/areas/yelahanka/" style="color:#c4a574;font-weight:600;">Back to the Yelahanka Area Guide</a></p>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Goyal Orchid Salisbury</p>
+          <p class="proj-compare-detail">2 & 3 BHK · Thanisandra Main Road</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+      <a href="/projects/sattva-la-vita/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/La Vita/Lavita-001.webp" alt="Sattva La Vita" loading="lazy">
+          <span class="proj-compare-badge">Hennur</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva La Vita</p>
+          <p class="proj-compare-detail">2 & 3 BHK · Premium Residences · Hennur</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+      <a href="/projects/sattva-kaveri-siri/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/Kaveri Siri/Aerial-View-Kaveri-Siri.jpg" alt="Sattva Kaveri Siri" loading="lazy">
+          <span class="proj-compare-badge">Hennur</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva Kaveri Siri</p>
+          <p class="proj-compare-detail">Plots & Villas · Hennur</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Research & Guides</span>
+        <h2 class="pfs-title">Related Market Insights</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on the Hennur-Thanisandra market.</p>
+        <div class="insight-grid">
+      <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="insight-card">
+        <img src="../../additional_websites/Salisbury/Salisbury-website-Gallery-images-1-4.jpg" alt="Hennur-Thanisandra Market 2026: Complete Investment Guide" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Market Analysis · 8 Min</span>
+          <h4 class="insight-card-title">Hennur-Thanisandra Market 2026: Complete Investment Guide</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/manyata-tech-park-rental-yield-hennur-thanisandra/" class="insight-card">
+        <img src="../../additional_websites/Salisbury/Salisbury-website-Gallery-images-1-4.jpg" alt="Manyata Tech Park: How It Drives Rental Yields Here" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Investment Guide · 7 Min</span>
+          <h4 class="insight-card-title">Manyata Tech Park: How It Drives Rental Yields Here</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/" class="insight-card">
+        <img src="../../additional_websites/La Vita/Lavita-001.webp" alt="Orchid Salisbury vs Sattva La Vita: Which to Buy?" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Comparison · 9 Min</span>
+          <h4 class="insight-card-title">Orchid Salisbury vs Sattva La Vita: Which to Buy?</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+        </div>
+
       </div>
     </section>
 
-<footer>
+    <footer>
         <div class="footer-grid">
             <div class="footer-section">
                 <h5>About TVS Emerald Altura</h5>
@@ -3152,7 +3235,7 @@
                 <strong>Marketed by Rera Registered Individual, Authorised Marketing Partner of TVS Emerald.</strong><br><br>
                 This Project Registered under Real Estate RERA Act 2016<br>
                 Rera Authorised Advertiser: Narayanan Rajesh, Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045<br><br>
-                <strong>Disclaimer:</strong> We are an authorised marketing partner for TVS Emerald. Provided content is given by respective owners and this website and content is for information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.<br><br>
+                <strong>Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders. We are an authorised marketing partner for TVS Emerald. Provided content is given by respective owners and this website and content is for information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.<br><br>
                 Copyright 2026 TVS Emerald. All rights reserved. | <a href="#" style="color: #666;">Privacy Policy</a> | <a href="#" style="color: #666;">Terms & Conditions</a>
             </p>
         </div>
@@ -3405,11 +3488,11 @@
       "@graph": [
         {
           "@type": "ApartmentComplex",
-          "@id": "https://tvsemeraldaltura.projectinformation.in/#apartmentcomplex",
+          "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#apartmentcomplex",
           "name": "TVS Emerald Altura",
           "description": "TVS Emerald Altura is a premium residential apartment complex in Sathanur, North Bangalore offering 2 BHK and 3 BHK apartments across 12 towers on 10.06 acres with 975 residences, 70%+ open space, dual clubhouse, and world-class lifestyle amenities.",
-          "url": "https://tvsemeraldaltura.projectinformation.in/",
-          "image": "https://tvsemeraldaltura.projectinformation.in/altura-website-banner-may-14-1920-by-600.webp",
+          "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/",
+          "image": "https://luxurahabitat.com/projects/tvs-emerald-altura/altura-website-banner-may-14-1920-by-600.webp",
           "numberOfRooms": "975",
           "petsAllowed": false,
           "address": {
@@ -3481,7 +3564,7 @@
               "description": "Starting from ₹1.4 Crore"
             },
             "availability": "https://schema.org/PreOrder",
-            "url": "https://tvsemeraldaltura.projectinformation.in/"
+            "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/"
           },
           "additionalProperty": [
             {
@@ -3513,13 +3596,13 @@
         },
         {
           "@type": "Organization",
-          "@id": "https://tvsemeraldaltura.projectinformation.in/#organization",
+          "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#organization",
           "name": "TVS Emerald Housing & Estates Pvt. Ltd.",
           "alternateName": "TVS Emerald",
-          "url": "https://tvsemeraldaltura.projectinformation.in/",
+          "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://tvsemeraldaltura.projectinformation.in/logo.png"
+            "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/logo.png"
           },
           "contactPoint": {
             "@type": "ContactPoint",
@@ -3539,44 +3622,44 @@
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://tvsemeraldaltura.projectinformation.in/#breadcrumb",
+          "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://tvsemeraldaltura.projectinformation.in/"
+              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Real Estate",
-              "item": "https://tvsemeraldaltura.projectinformation.in/#about"
+              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/#about"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Residential Apartments",
-              "item": "https://tvsemeraldaltura.projectinformation.in/#floor-plans"
+              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/#floor-plans"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "TVS Emerald Altura",
-              "item": "https://tvsemeraldaltura.projectinformation.in/"
+              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/"
             }
           ]
         },
         {
           "@type": "WebPage",
-          "@id": "https://tvsemeraldaltura.projectinformation.in/#webpage",
-          "url": "https://tvsemeraldaltura.projectinformation.in/",
+          "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#webpage",
+          "url": "https://luxurahabitat.com/projects/tvs-emerald-altura/",
           "name": "TVS Emerald Altura | Premium 2 & 3 BHK Apartments in North Bangalore",
           "description": "TVS Emerald Altura offers premium 2 & 3 BHK apartments in Sathanur, North Bangalore. 975 residences across 12 towers on 10.06 acres with 70%+ open space and world-class amenities.",
           "inLanguage": "en-IN",
-          "isPartOf": { "@id": "https://tvsemeraldaltura.projectinformation.in/#organization" },
-          "about": { "@id": "https://tvsemeraldaltura.projectinformation.in/#apartmentcomplex" },
-          "breadcrumb": { "@id": "https://tvsemeraldaltura.projectinformation.in/#breadcrumb" }
+          "isPartOf": { "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#organization" },
+          "about": { "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#apartmentcomplex" },
+          "breadcrumb": { "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#breadcrumb" }
         }
       ]
     }

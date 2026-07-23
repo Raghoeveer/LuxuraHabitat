@@ -6,12 +6,12 @@
   <title>Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot | Luxura Habitat</title>
   <meta name="description" content="Analyzing the massive real estate appreciation on Bagalur Main Road, North Bangalore. Learn why connectivity, aerospace parks, and luxury projects drive this growth.">
   <meta name="keywords" content="Bagalur Main Road real estate appreciation, why invest in Bagalur Road Bangalore, North Bangalore real estate hotspot, Bangalore property appreciation">
-  <link rel="canonical" href="https://luxurahabitat.projectinformation.in/blog/why-invest-in-bagalur-main-road-real-estate/">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/why-invest-in-bagalur-main-road-real-estate/">
 
   <meta property="og:title" content="Bagalur Main Road: North Bangalore's Real Estate Hotspot">
   <meta property="og:description" content="Why early-stage property investors are flocking to the Yelahanka-Bagalur corridor. Infrastructure & appreciation drivers analyzed.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://luxurahabitat.projectinformation.in/blog/why-invest-in-bagalur-main-road-real-estate/">
+  <meta property="og:url" content="https://luxurahabitat.com/blog/why-invest-in-bagalur-main-road-real-estate/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,6 @@
   <link rel="stylesheet" href="../../css/styles.css">
 
   <style>
-    .article-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: var(--space-lg) var(--space-sm);
-    }
 
     .article-header {
       margin-bottom: var(--space-lg);
@@ -140,7 +135,89 @@
       margin-bottom: 0;
       line-height: 1.5;
     }
+
+    /* ===== TWO-COLUMN BLOG LAYOUT ===== */
+    .blog-page-wrapper {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: start;
+    }
+    .article-main { min-width: 0; }
+    /* ===== RELATED CARDS ===== */
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s ease, box-shadow 0.25s ease; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    /* ===== SIDEBAR ===== */
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--primary-forest); margin-bottom: 12px; line-height: 1.25; }
+    .sidebar-specs { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .sidebar-specs li { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 6px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--primary-forest); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .sidebar-cta { display: block; background: var(--primary-forest); color: #fff; text-align: center; padding: 12px 16px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.2s ease; }
+    .sidebar-cta:hover { background: var(--primary-forest-dark, #1a3d2b); }
+    .sidebar-consult { background: #faf8f5; border: 1px solid var(--border-light); border-radius: 12px; padding: 18px; text-align: center; }
+    .sidebar-consult p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+    .sidebar-consult a { display: inline-block; background: var(--accent-copper); color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: background 0.2s ease; }
+    .sidebar-consult a:hover { background: var(--accent-copper-dark); }
+    @media (max-width: 900px) { .blog-page-wrapper { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/why-invest-in-bagalur-main-road-real-estate/"
+        },
+        "headline": "Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot",
+        "description": "Analyzing the massive real estate appreciation on Bagalur Main Road, North Bangalore. Learn why connectivity, aerospace parks, and luxury projects drive this growth.",
+        "image": "https://luxurahabitat.com/images/blog/bagalur_road.png",
+        "datePublished": "2026-07-14",
+        "dateModified": "2026-07-14",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/why-invest-in-bagalur-main-road-real-estate/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Yelahanka Real Estate Guide", "item": "https://luxurahabitat.com/areas/yelahanka/"},
+          {"@type": "ListItem", "position": 4, "name": "Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot", "item": "https://luxurahabitat.com/blog/why-invest-in-bagalur-main-road-real-estate/"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -167,17 +244,18 @@
   </header>
 
   <main>
-    <article class="article-container">
-      <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
-        <a href="/">Home</a>
-        <span>/</span>
-        <a href="/blog/">Blog</a>
-        <span>/</span>
-        <span>Bagalur Main Road Investment Hotspot</span>
-      </div>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">Blog</a>
+          <span>/</span>
+          <span>Bagalur Main Road Investment Hotspot</span>
+        </div>
 
-      <header class="article-header">
-        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; color: var(--primary-forest); margin-bottom: 12px;">
+        <header class="article-header">
+          <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; color: var(--primary-forest); margin-bottom: 12px;">
           Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot
         </h1>
         <div class="article-meta">
@@ -193,7 +271,7 @@
         <img src="../../images/blog/bagalur_road.png" alt="Why Invest In Bagalur Main Road Real Estate" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
         <p>
-          For over a decade, Bangalore property buyers focused heavily on the East (Whitefield) and the South (Sarjapur, Kanakapura Road). However, the narrative has shifted rapidly. Today, <strong>North Bangalore</strong> is the primary driver of real estate investment in the city. 
+          For over a decade, Bangalore property buyers focused heavily on the East (Whitefield) and the South (Sarjapur, Kanakapura Road). However, the narrative has shifted rapidly. Today, <strong><a href="/areas/yelahanka/" class="money-link">North Bangalore</a></strong> is the primary driver of real estate investment in the city. 
         </p>
         <p>
           Within the North, the Yelahanka-Bagalur corridor, specifically along <strong>Bagalur Main Road</strong>, is registering the highest rate of infrastructure expansion and land value appreciation. Let's analyze why early-stage property investors are focusing on this area.
@@ -258,7 +336,37 @@
         </div>
       </div>
 
-      <footer class="article-footer">
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/assetz-zen-sato/" class="related-card">
+              <img src="../../zen&sato3/g-8.webp" alt="Assetz Zen &amp; Sato" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Assetz Zen &amp; Sato</p>
+                <p class="related-card-detail">3 &amp; 4 BHK · from &#8377;2.70 Cr · Bagalur Main Road</p>
+              </div>
+            </a>
+            <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" class="related-card">
+              <img src="../../additional_websites/Lumina/imgi_7_Top-Cam.webp" alt="Yelahanka Investment Guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Yelahanka vs Yelahanka New Town: Where to Invest?</p>
+                <p class="related-card-detail">8 Min Read · Investment Guide</p>
+              </div>
+            </a>
+            <a href="/blog/yelahanka-namma-metro-blue-line-impact/" class="related-card">
+              <img src="../../additional_websites/ETERNIA/Brigade-Eternia-Photo.webp" alt="Namma Metro Blue Line" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Namma Metro Blue Line Impact on Yelahanka</p>
+                <p class="related-card-detail">6 Min Read · Infrastructure</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer class="article-footer">
         <div class="author-card">
           <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
           <div class="author-info">
@@ -269,7 +377,30 @@
           </div>
         </div>
       </footer>
-    </article>
+      </article>
+
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../zen&sato3/g-8.webp" alt="Assetz Zen &amp; Sato" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured Project</p>
+            <p class="sidebar-property-name">Assetz Zen &amp; Sato</p>
+            <ul class="sidebar-specs">
+              <li>3 &amp; 4 BHK luxury apartments</li>
+              <li>Starting from &#8377;2.70 Crore</li>
+              <li>On Bagalur Main Road, Yelahanka</li>
+              <li>RERA Approved</li>
+            </ul>
+            <a href="/projects/assetz-zen-sato/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+
+    </div>
   </main>
 
   <!-- ===== FOOTER ===== -->
@@ -330,7 +461,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
         <p class="footer-disclaimer">
-          Luxura Habitat operates as an independent real estate facilitation consultancy. We are not developers or builders.
+          Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
           All project information is sourced directly from our developer partners across Bengaluru.
           Buyers are advised to independently verify all claims before making purchase decisions.
         </p>

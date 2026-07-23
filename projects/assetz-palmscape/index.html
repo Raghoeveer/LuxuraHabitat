@@ -24,7 +24,7 @@
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Assetz Palmscape">
     <meta name="google-site-verification" content="">
-    <link rel="canonical" href="https://luxurahabitat.projectinformation.in/projects/assetz-palmscape/">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/assetz-palmscape/">
     
     <!-- Additional SEO for Real Estate -->
     <meta name="geo.position" content="13.2157;77.9064">
@@ -2096,7 +2096,38 @@
                 display: none !important;
             }
         }
-</style>
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a574; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Similar projects grid */
+    .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+    .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(30,58,47,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a2f; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
+    .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    </style>
 
     <!-- Schema.org Structured Data for SEO -->
     <script type="application/ld+json">
@@ -2953,40 +2984,75 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    
+    <!-- ===== SIMILAR PROJECTS + MARKET INSIGHTS ===== -->
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
 
-    <!-- Related Market Insights — Devanahalli Hub & Spokes -->
-    <section style="background:#faf8f5;padding:64px 24px;">
-      <div style="max-width:1100px;margin:0 auto;">
-        <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#c4a574;margin-bottom:10px;">Research &amp; Insights</p>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:#1e3a2f;margin-bottom:12px;">Understand the Devanahalli Market</h2>
-        <p style="font-size:1rem;color:#666;line-height:1.7;max-width:680px;margin-bottom:36px;">This project is part of the <a href="/areas/devanahalli/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Devanahalli real estate corridor</a> — Bangalore's airport-adjacent growth market. Our research team has published five in-depth guides to help you make an informed decision.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;">
-          <a href="/blog/devanahalli-real-estate-market-trends-2026/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.09)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Market Trends</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Devanahalli Market Trends 2026</p>
-            <p style="font-size:.8rem;color:#888;">Price data, buyer profiles and investment outlook for the airport corridor. 8 min read.</p>
-          </a>
-          <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.09)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Investment Guide</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Land Appreciation vs Rental Yield</p>
-            <p style="font-size:.8rem;color:#888;">Plot or apartment? A detailed ROI comparison for Devanahalli buyers. 7 min read.</p>
-          </a>
-          <a href="/blog/metro-blue-line-strr-impact-devanahalli/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.09)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Infrastructure</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Metro &amp; STRR Impact on Devanahalli</p>
-            <p style="font-size:.8rem;color:#888;">How two infrastructure projects are permanently reshaping property values. 6 min read.</p>
-          </a>
-          <a href="/blog/assetz-palmscape-devanahalli-price-layout-rera/" style="background:#fff;border-radius:10px;padding:20px;border:1px solid rgba(0,0,0,0.07);text-decoration:none;display:block;color:inherit;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.09)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <p style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#c4a574;margin-bottom:6px;">Project Deep-Dive</p>
-            <p style="font-family:'Playfair Display',serif;font-size:.98rem;color:#1e3a2f;font-weight:700;line-height:1.35;margin-bottom:8px;">Assetz Palmscape: Full Review</p>
-            <p style="font-size:.8rem;color:#888;">Price, layout, RERA and independent assessment of Assetz Palmscape. 9 min read.</p>
-          </a>
+        <span class="pfs-label">Also in Devanahalli</span>
+        <h2 class="pfs-title">Similar Projects to Consider</h2>
+        <p class="pfs-intro">Explore comparable properties in the <a href="/areas/devanahalli/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Devanahalli corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
+        <div class="proj-compare-grid">
+      <a href="/projects/sattva-aeropolis/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/Aeropolis/Aerial.webp" alt="Sattva Aeropolis" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
         </div>
-        <p style="margin-top:28px;font-size:.9rem;color:#666;">← <a href="/areas/devanahalli/" style="color:#c4a574;font-weight:600;">Back to the Devanahalli Area Guide</a></p>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva Aeropolis</p>
+          <p class="proj-compare-detail">2 & 3 BHK Apartments · Near Airport</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+      <a href="/projects/sattva-city/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/Aeropolis/Aerial.webp" alt="Sattva City" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva City</p>
+          <p class="proj-compare-detail">Integrated Township · Devanahalli</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Research & Guides</span>
+        <h2 class="pfs-title">Related Market Insights</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on the Devanahalli market.</p>
+        <div class="insight-grid">
+      <a href="/blog/assetz-palmscape-devanahalli-price-layout-rera/" class="insight-card">
+        <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-Image-1 (1).webp" alt="Assetz Palmscape: Price, Layout & RERA Deep-Dive" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Project Review · 9 Min</span>
+          <h4 class="insight-card-title">Assetz Palmscape: Price, Layout & RERA Deep-Dive</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/" class="insight-card">
+        <img src="../../additional_websites/Aeropolis/Aerial.webp" alt="Assetz Palmscape vs Sattva Aeropolis: Which Fits You?" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Comparison · 6 Min</span>
+          <h4 class="insight-card-title">Assetz Palmscape vs Sattva Aeropolis: Which Fits You?</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/devanahalli-real-estate-market-trends-2026/" class="insight-card">
+        <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-Image-1 (1).webp" alt="Devanahalli Market Trends 2026: The Airport Corridor" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Market Analysis · 8 Min</span>
+          <h4 class="insight-card-title">Devanahalli Market Trends 2026: The Airport Corridor</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+        </div>
+
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
@@ -3030,7 +3096,7 @@
 
         <div class="footer-bottom">
             <p>© Copyright 2026 Assetz Property Group. All Rights Reserved. | <a href="#" style="color: var(--accent-green);">Privacy Policy</a> | <a href="#" style="color: var(--accent-green);">Terms & Conditions</a></p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Assetz Palmscape is a registered real estate project. For current RERA registration details and project approvals, please contact our sales office. This website is for informational purposes. Prices and availability subject to change.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Disclaimer: Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders. Assetz Palmscape is a registered real estate project. For current RERA registration details and project approvals, please contact our sales office. This website is for informational purposes. Prices and availability subject to change.</p>
             
             <!-- SEO-Friendly Footer Descriptions -->
             <div style="font-size: 0.75rem; margin-top: 1rem; line-height: 1.5; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 1rem; display: none;">

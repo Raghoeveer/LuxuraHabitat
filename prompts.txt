@@ -1,4 +1,4 @@
-Act as a principal front-end engineer, expert Local SEO strategist and E-E-A-T optimization specialist. We are building the structural core framework for an elite real estate portal called "Luxura Habitat" (domain: luxurahabitat.projectinformation.in). The portal markets tier-one projects (Sobha, Godrej, AssetzProperties etc.) and highlights individual consultant Narayanan Rajesh as the local market expert.
+Act as a principal front-end engineer, expert Local SEO strategist and E-E-A-T optimization specialist. We are building the structural core framework for an elite real estate portal called "Luxura Habitat" (domain: luxurahabitat.com). The portal markets tier-one projects (Sobha, Godrej, AssetzProperties etc.) and highlights individual consultant Narayanan Rajesh as the local market expert.
 
 Please scaffold a highly optimized, fully responsive static workspace directory containing the default core pages with the global header/footer navigation template intact.
 

@@ -1,6 +1,6 @@
 /* Page-specific SEO metadata and internal-link clusters for Luxura Habitat. */
 (() => {
-  const origin = 'https://luxurahabitat.projectinformation.in';
+  const origin = 'https://luxurahabitat.com';
   const path = window.location.pathname.replace(/index\.html$/, '').replace(/\/+/g, '/');
   const canonical = `${origin}${path.endsWith('/') ? path : `${path}/`}`;
   const hubByPath = path.includes('hennur') || path.includes('thanisandra') || path.includes('orchid-salisbury')
@@ -47,18 +47,7 @@
   if (path.startsWith('/blog/') && path !== '/blog/') {
     addJsonLd({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: h1, mainEntityOfPage: { '@type': 'WebPage', '@id': canonical }, image: [image], datePublished: '2026-07-22', dateModified: '2026-07-22', author: { '@type': 'Person', name: 'Narayanan Rajesh', url: `${origin}/about/` }, publisher: { '@type': 'Organization', name: 'Luxura Habitat', url: `${origin}/`, logo: { '@type': 'ImageObject', url: `${origin}/images/logos/company_logo.png` } } });
   }
-  const makeLink = ([label, href]) => `<a href="${href}">${label}</a>`;
-  const injectCluster = () => {
-    if (!cluster || document.getElementById('seo-cluster-links')) return;
-    const related = cluster.articles.filter(([, href]) => href !== path).slice(0, 4);
-    const projects = cluster.projects.filter(([, href]) => href !== path).slice(0, 3);
-    const section = document.createElement('section');
-    section.id = 'seo-cluster-links'; section.className = 'section section--cream';
-    section.innerHTML = `<div class="container"><h2>Explore ${cluster.name}</h2><p><a href="${cluster.hub}">Read the ${cluster.name} area guide</a> or explore related research and homes.</p><div class="footer-grid"><div class="footer-col"><h3>Area guide</h3><a href="${cluster.hub}">${cluster.name} hub</a><a href="/projects/">All Bengaluru projects</a></div><div class="footer-col"><h3>Related research</h3>${related.map(makeLink).join('')}</div><div class="footer-col"><h3>Relevant projects</h3>${projects.map(makeLink).join('')}</div></div></div>`;
-    const cta = document.querySelector('.cta-band');
-    (cta?.parentNode || document.querySelector('main') || document.body).insertBefore(section, cta || null);
-  };
-  if (path.startsWith('/blog/') && path !== '/blog/') injectCluster();
-  if (path.startsWith('/projects/') && path !== '/projects/') injectCluster();
-  if (path.startsWith('/areas/') && path !== '/areas/') injectCluster();
+  // Dynamic HTML cluster injection removed: 
+  // We now use hardcoded, fully-styled HTML cards (project-footer-strip & explore-cluster)
+  // in the actual index.html files instead of relying on this unstyled JS injection.
 })();

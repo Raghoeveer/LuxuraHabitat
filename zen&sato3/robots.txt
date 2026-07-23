@@ -1,4 +1,4 @@
 user-agent: Googlebot
 Disallow:
 
-sitemap:http://zenandsato.projectinformation.in/sitemap.xml
+sitemap:https://luxurahabitat.com/projects/assetz-zen-sato/sitemap.xml

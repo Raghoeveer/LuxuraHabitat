@@ -23,17 +23,17 @@
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Concorde Mayfair - Premium 3 BHK Apartments in Yelahanka">
     <meta property="og:description" content="Premium 3 BHK luxury apartments on Bellary Road with world-class amenities. Check prices, floor plans, and location advantages.">
-    <meta property="og:image" content="https://concordemayfairyelahanka.projectdetail.net/Concorde-Mayfair-elevation.jpg">
-    <meta property="og:url" content="https://luxurahabitat.projectinformation.in/projects/concorde-mayfair/">
+    <meta property="og:image" content="https://luxurahabitat.com/Concorde-Mayfair-elevation.jpg">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/concorde-mayfair/">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Concorde Mayfair Yelahanka">
     <meta name="twitter:description" content="Premium 3 BHK luxury apartments on Bellary Road with world-class amenities.">
-    <meta name="twitter:image" content="https://concordemayfairyelahanka.projectdetail.net/Concorde-Mayfair-elevation.jpg">
+    <meta name="twitter:image" content="https://luxurahabitat.com/Concorde-Mayfair-elevation.jpg">
     
-    <link rel="canonical" href="https://luxurahabitat.projectinformation.in/projects/concorde-mayfair/">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/concorde-mayfair/">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -399,7 +399,38 @@
                 display: none !important;
             }
         }
-</style>
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a574; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Similar projects grid */
+    .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+    .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(30,58,47,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a2f; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
+    .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    </style>
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -436,8 +467,8 @@
       "@type": "RealEstateListing",
       "name": "Concorde Mayfair Yelahanka",
       "description": "Premium 3 BHK residential apartments located at Bellary Road, North Bangalore.",
-      "image": "https://concordemayfairyelahanka.projectdetail.net/Concorde-Mayfair-elevation.jpg",
-      "url": "https://concordemayfairyelahanka.projectdetail.net/",
+      "image": "https://luxurahabitat.com/Concorde-Mayfair-elevation.jpg",
+      "url": "https://luxurahabitat.com/",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Yelahanka",
@@ -536,7 +567,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="386dec76-6d23-495d-b515-9e183de1283d">
                     <input type="hidden" name="subject" value="New Lead: Concorde Mayfair">
-                    <input type="hidden" name="redirect" value="https://concordemayfairyelahanka.projectdetail.net/">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/">
                     
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -907,7 +938,7 @@
                     <form action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="386dec76-6d23-495d-b515-9e183de1283d">
                         <input type="hidden" name="subject" value="New Inquiry: Concorde Mayfair Contact Section">
-                        <input type="hidden" name="redirect" value="https://concordemayfairyelahanka.projectdetail.net/">
+                        <input type="hidden" name="redirect" value="https://luxurahabitat.com/">
                         
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -926,55 +957,87 @@
     </section>
 
     <!-- Footer -->
-    <section class="related-insights" style="padding: 60px 20px; background: #faf8f5;">
-      <div style="max-width: 1140px; margin: 0 auto;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #2c3e50; text-align: center; margin-bottom: 40px;">Related Market Insights</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px;">
-          <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-Image-2.webp" style="width: 100%; height: 200px; object-fit: cover;" alt="Yelahanka vs. Yelahanka New Town">
-            <div style="padding: 24px;">
-              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c4a574; margin-bottom: 8px; display: block;">Investment Guide</span>
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; line-height: 1.3;">Yelahanka vs. Yelahanka New Town</h3>
-              <span style="font-weight: 600; color: #c4a574; font-size: 0.9rem;">Read Article &rarr;</span>
-            </div>
-          </a>
-          <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-grand-clubhouse.webp" style="width: 100%; height: 200px; object-fit: cover;" alt="Top 3 Upcoming Luxury Apartments (2026)">
-            <div style="padding: 24px;">
-              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c4a574; margin-bottom: 8px; display: block;">Top Projects</span>
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; line-height: 1.3;">Top 3 Upcoming Luxury Apartments (2026)</h3>
-              <span style="font-weight: 600; color: #c4a574; font-size: 0.9rem;">Read Article &rarr;</span>
-            </div>
-          </a>
+
+
+    <!-- ===== SIMILAR PROJECTS + MARKET INSIGHTS ===== -->
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+
+        <span class="pfs-label">Also in Yelahanka</span>
+        <h2 class="pfs-title">Similar Projects to Consider</h2>
+        <p class="pfs-intro">Explore comparable properties in the <a href="/areas/yelahanka/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Yelahanka corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
+        <div class="proj-compare-grid">
+      <a href="/projects/assetz-zen-sato/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../zen&sato3/g-8.webp" alt="Assetz Zen & Sato" loading="lazy">
+          <span class="proj-compare-badge">Yelahanka</span>
         </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Assetz Zen & Sato</p>
+          <p class="proj-compare-detail">3 & 4 BHK · from ₹2.70 Cr · Bagalur Main Road</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+      <a href="/projects/brigade-eternia/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/ETERNIA/Brigade-Eternia-Photo.webp" alt="Brigade Eternia" loading="lazy">
+          <span class="proj-compare-badge">Yelahanka</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Brigade Eternia</p>
+          <p class="proj-compare-detail">3 & 4 BHK · Luxury Apartments · Yelahanka</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+      <a href="/projects/sattva-lumina/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="../../additional_websites/Lumina/imgi_7_Top-Cam.webp" alt="Sattva Lumina" loading="lazy">
+          <span class="proj-compare-badge">Yelahanka</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva Lumina</p>
+          <p class="proj-compare-detail">3 BHK · Premium Apts · Yelahanka New Town</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Research & Guides</span>
+        <h2 class="pfs-title">Related Market Insights</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on the Yelahanka market.</p>
+        <div class="insight-grid">
+      <a href="/blog/yelahanka-family-guide-top-schools-lifestyle/" class="insight-card">
+        <img src="../../zen&sato3/g-8.webp" alt="The Complete Family Guide to Living in Yelahanka" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Lifestyle · 5 Min</span>
+          <h4 class="insight-card-title">The Complete Family Guide to Living in Yelahanka</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/" class="insight-card">
+        <img src="../../additional_websites/Mayfair/Concorde-Mayfair-overview.jpg" alt="Top 3 Luxury Apartments in Yelahanka (2026 Reviews)" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Top Picks · 7 Min</span>
+          <h4 class="insight-card-title">Top 3 Luxury Apartments in Yelahanka (2026 Reviews)</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+      <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" class="insight-card">
+        <img src="../../additional_websites/Lumina/imgi_7_Top-Cam.webp" alt="Yelahanka vs Yelahanka New Town: Where to Invest?" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Comparison · 8 Min</span>
+          <h4 class="insight-card-title">Yelahanka vs Yelahanka New Town: Where to Invest?</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
+        </div>
+
       </div>
     </section>
 
-        <section class="related-insights" style="padding: 60px 20px; background: #faf8f5;">
-      <div style="max-width: 1140px; margin: 0 auto;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #2c3e50; text-align: center; margin-bottom: 40px;">Related Market Insights</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px;">
-          <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-Image-2.webp" style="width: 100%; height: 200px; object-fit: cover;" alt="Yelahanka vs. Yelahanka New Town">
-            <div style="padding: 24px;">
-              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c4a574; margin-bottom: 8px; display: block;">Investment Guide</span>
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; line-height: 1.3;">Yelahanka vs. Yelahanka New Town</h3>
-              <span style="font-weight: 600; color: #c4a574; font-size: 0.9rem;">Read Article &rarr;</span>
-            </div>
-          </a>
-          <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-grand-clubhouse.webp" style="width: 100%; height: 200px; object-fit: cover;" alt="Top 3 Upcoming Luxury Apartments (2026)">
-            <div style="padding: 24px;">
-              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #c4a574; margin-bottom: 8px; display: block;">Top Projects</span>
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; line-height: 1.3;">Top 3 Upcoming Luxury Apartments (2026)</h3>
-              <span style="font-weight: 600; color: #c4a574; font-size: 0.9rem;">Read Article &rarr;</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-<footer>
+    <footer>
         <div class="container">
             <img src="Concorde-Mayfair-logo.png" alt="Concorde Mayfair" class="logo" style="height: 60px; filter: brightness(0) invert(1); margin: 0 auto 20px;">
             <div class="footer-links">
@@ -990,7 +1053,7 @@
             </div>
             
             <div class="disclaimer">
-                <p><strong>Disclaimer:</strong> This website is for informational purposes only and belongs to an authorized channel partner. It does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. The images shown are artist's impressions and are for representation purposes only.</p>
+                <p><strong>Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders. This website is for informational purposes only and belongs to an authorized channel partner. It does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. The images shown are artist's impressions and are for representation purposes only.</p>
                 
                 <p style="margin-top: 15px; color: #fff;">
                     This Project Registered under Real Estate RERA Act 2016<br>
