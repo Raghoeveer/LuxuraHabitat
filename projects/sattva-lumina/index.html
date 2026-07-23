@@ -259,8 +259,8 @@
 
         .hero-media {
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: calc(-1 * clamp(1rem, 2.2vw, 2rem));
+            bottom: calc(-1 * clamp(1rem, 2.2vw, 2rem));
             left: 50%;
             width: 100vw;
             transform: translateX(-50%);
@@ -499,7 +499,7 @@
             position: fixed;
             right: -420px;
             top: 0;
-            width: 400px;
+            width: min(400px, 100vw);
             height: 100vh;
             background: #fff;
             box-shadow: -4px 0 20px rgba(0,0,0,0.2);
@@ -1449,20 +1449,6 @@
                 &copy; Copyright 2026 Sattva Lumina Team. All Rights Reserved.
             </div>
 
-<!-- SEO / Google-friendly meta tags (hidden) -->
-<div style="display:none;">
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta name="google-site-verification" content="" />
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
-    <meta name="description" content="Sattva Lumina - premium residences with amenities, master plan, gallery and unit plans. Enquire for availability and offers." />
-    <meta property="og:site_name" content="Sattva Lumina" />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sattva Lumina - Premium Residences & Amenities" />
-    <meta property="og:description" content="Discover Sattva Lumina with premium residences, planned amenities, and a modern lifestyle experience. Enquire for availability and offers." />
-    <meta property="og:url" content="" />
-</div>
         </div>
     </footer>
 
@@ -1640,9 +1626,6 @@
 <script src="/js/seo.js"></script>
 </body>
 </html>
-
-
-
 
 
 

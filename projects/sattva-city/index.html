@@ -477,7 +477,11 @@
 
         .hero-media {
             position: absolute;
-            inset: 0;
+            top: calc(-1 * clamp(1rem, 2.2vw, 2rem));
+            bottom: calc(-1 * clamp(1rem, 2.2vw, 2rem));
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
             z-index: 0;
         }
 

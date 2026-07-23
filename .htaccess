@@ -5,3 +5,8 @@ RewriteRule ^about\.html$ /about/ [R=301,L,NE]
 RewriteRule ^contact\.html$ /contact/ [R=301,L,NE]
 RewriteRule ^projects\.html$ /projects/ [R=301,L,NE]
 RewriteRule ^testimonials\.html$ /testimonials/ [R=301,L,NE]
+
+# Do not expose obsolete staging copies to crawlers or visitors.
+RewriteRule ^additional_websites/Sattva\ City/live_index\.html$ - [G,L,NE]
+RewriteRule ^additional_websites/La\ Vita/backup_dir/ - [G,L,NE]
+RewriteRule ^additional_websites/Lumina/target\.html$ - [G,L,NE]
