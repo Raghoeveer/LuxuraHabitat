@@ -298,7 +298,36 @@
 
     @media (max-width: 768px) {
       .projects-intro { flex-direction: column; text-align: center; padding: 18px; }
-      .projects-grid { grid-template-columns: 1fr; }
+
+      .project-card {
+        grid-template-columns: 1fr;
+        min-height: unset;
+      }
+
+      .project-card__image-wrap {
+        height: 200px;
+      }
+
+      .project-card__body {
+        padding: 18px;
+      }
+
+      .project-card__title {
+        font-size: 1.2rem;
+      }
+
+      .project-card__specs-row {
+        gap: 6px;
+      }
+
+      .project-card__actions {
+        flex-direction: column;
+      }
+
+      .project-card__actions .btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
