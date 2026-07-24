@@ -296,9 +296,96 @@
 
     .projects-intro strong { color: var(--color-text); }
 
+    /* ── Area filter ── */
+    .area-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 780px;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .area-filter__btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      background: #fff;
+      border: 1px solid #e0dacb;
+      border-radius: 50px;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .area-filter__btn:hover {
+      border-color: #b08d57;
+      color: #7a5c2a;
+    }
+
+    .area-filter__btn.is-active {
+      background: linear-gradient(135deg, #b08d57, #d4a96a);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .area-filter__count {
+      opacity: 0.75;
+      font-weight: 500;
+    }
+
+    .area-filter__empty {
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 0.94rem;
+      max-width: 780px;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .area-filter__empty a { color: #b08d57; font-weight: 600; }
+
+    .project-card--filtered-out {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .area-filter { gap: 8px; }
+      .area-filter__btn { font-size: 0.78rem; padding: 7px 14px; }
+    }
+
     @media (max-width: 768px) {
       .projects-intro { flex-direction: column; text-align: center; padding: 18px; }
-      .projects-grid { grid-template-columns: 1fr; }
+
+      .project-card {
+        grid-template-columns: 1fr;
+        min-height: unset;
+      }
+
+      .project-card__image-wrap {
+        height: 200px;
+      }
+
+      .project-card__body {
+        padding: 18px;
+      }
+
+      .project-card__title {
+        font-size: 1.2rem;
+      }
+
+      .project-card__specs-row {
+        gap: 6px;
+      }
+
+      .project-card__actions {
+        flex-direction: column;
+      }
+
+      .project-card__actions .btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   
         /* Nav Contact Buttons Added via AI */
@@ -420,17 +507,28 @@
           <p><strong>Our curation promise:</strong> We only feature projects where we can stand behind the developer's track record, RERA compliance, construction quality, and location fundamentals. Every listing below comes with our direct advisory support — no cold handoffs, no hidden referral agendas.</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="area-filter" id="area-filter" role="group" aria-label="Filter projects by area">
+          <button type="button" class="area-filter__btn is-active" data-area="all">All Areas <span class="area-filter__count"></span></button>
+          <button type="button" class="area-filter__btn" data-area="yelahanka">Yelahanka</button>
+          <button type="button" class="area-filter__btn" data-area="devanahalli">Devanahalli</button>
+          <button type="button" class="area-filter__btn" data-area="hennur">Hennur – Thanisandra</button>
+          <button type="button" class="area-filter__btn" data-area="whitefield">Whitefield</button>
+          <button type="button" class="area-filter__btn" data-area="other">Other Locations</button>
+        </div>
+
+        <p class="area-filter__empty" id="area-filter-empty" hidden>No projects found in this area yet — <a href="https://wa.me/918438344093?text=Hi%20Narayanan%2C%20I'm%20looking%20for%20projects%20in%20a%20specific%20area." target="_blank" rel="noopener noreferrer">ask Narayanan directly</a>.</p>
+
+        <div class="projects-grid" id="projects-grid">
 
           <!-- PROJECT 1: Assetz Zen & Sato -->
-          <article class="project-card animate-on-scroll" id="project-zen-sato"
+          <article class="project-card animate-on-scroll" id="project-zen-sato" data-area="yelahanka"
             onclick="window.location.href='/projects/assetz-zen-sato/'"
             role="link"
             tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-zen-sato/'"
           >
             <div class="project-card__image-wrap">
-              <img src="/zen&sato3/g-8.webp" alt="Assetz Zen & Sato luxury apartments in Yelahanka North Bengaluru" loading="eager">
+              <img src="/images/projects-thumbs/zen-sato-thumb.webp" alt="Assetz Zen & Sato luxury apartments in Yelahanka North Bengaluru" loading="eager">
               <span class="project-card__badge">New Launch</span>
               <span class="project-card__status">Actively Selling</span>
             </div>
@@ -478,12 +576,12 @@
 
 
           <!-- PROJECT 2: Concorde Mayfair -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-concorde-mayfair"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-concorde-mayfair" data-area="yelahanka"
             onclick="window.location.href='/projects/concorde-mayfair/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/concorde-mayfair/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Mayfair/10.jpg" alt="Concorde Mayfair 3 BHK apartments Yelahanka Bellary Road" loading="lazy">
+              <img src="/images/projects-thumbs/concorde-mayfair-thumb.webp" alt="Concorde Mayfair 3 BHK apartments Yelahanka Bellary Road" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -515,12 +613,12 @@
           </article>
 
           <!-- PROJECT 3: Orchid Salisbury -->
-          <article class="project-card animate-on-scroll" id="project-orchid-salisbury"
+          <article class="project-card animate-on-scroll" id="project-orchid-salisbury" data-area="hennur"
             onclick="window.location.href='/projects/orchid-salisbury/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/orchid-salisbury/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Salisbury/1-2.png" alt="Orchid Salisbury luxury high-rise apartments Thanisandra Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/orchid-salisbury-thumb.webp" alt="Orchid Salisbury luxury high-rise apartments Thanisandra Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -552,12 +650,12 @@
           </article>
 
           <!-- PROJECT 4: Brigade Eternia -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-brigade-eternia"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-brigade-eternia" data-area="yelahanka"
             onclick="window.location.href='/projects/brigade-eternia/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/brigade-eternia/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/ETERNIA/Brigade-Eternia-Photo.webp" alt="Brigade Eternia lakeside apartments Yelahanka North Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/brigade-eternia-thumb.webp" alt="Brigade Eternia lakeside apartments Yelahanka North Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -589,12 +687,12 @@
           </article>
 
           <!-- PROJECT 5: Sattva Aeropolis -->
-          <article class="project-card animate-on-scroll" id="project-sattva-aeropolis"
+          <article class="project-card animate-on-scroll" id="project-sattva-aeropolis" data-area="devanahalli"
             onclick="window.location.href='/projects/sattva-aeropolis/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-aeropolis/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Aeropolis/14.Aerial-Night-View_edited.webp" alt="Sattva Aeropolis studio 1BHK apartments Devanahalli Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-aeropolis-thumb.webp" alt="Sattva Aeropolis studio 1BHK apartments Devanahalli Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -626,12 +724,12 @@
           </article>
 
           <!-- PROJECT 6: Sattva Sanio -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-sattva-sanio"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-sattva-sanio" data-area="whitefield"
             onclick="window.location.href='/projects/sattva-sanio/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-sanio/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/SANIO/Sanio-Amenities-Club.png" alt="Sattva Sanio 3 4 BHK apartments Old Madras Road Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-sanio-thumb.webp" alt="Sattva Sanio 3 4 BHK apartments Old Madras Road Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">Pre-Launch</span>
             </div>
             <div class="project-card__body">
@@ -663,12 +761,12 @@
           </article>
 
           <!-- PROJECT 7: Sattva City -->
-          <article class="project-card animate-on-scroll" id="project-sattva-city"
+          <article class="project-card animate-on-scroll" id="project-sattva-city" data-area="devanahalli"
             onclick="window.location.href='/projects/sattva-city/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-city/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Sattva City/Cafe-lounge.webp" alt="Sattva City Doddajala 2 3 4 BHK apartments near Bangalore airport" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-city-thumb.webp" alt="Sattva City Doddajala 2 3 4 BHK apartments near Bangalore airport" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -700,12 +798,12 @@
           </article>
 
           <!-- PROJECT 8: TVS Emerald Altura -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-tvs-altura"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-tvs-altura" data-area="devanahalli"
             onclick="window.location.href='/projects/tvs-emerald-altura/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/tvs-emerald-altura/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/altura/3-bhk-classic-1-1.webp" alt="TVS Emerald Altura 2 3 BHK apartments Sathanur Bagalur Road Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/tvs-altura-thumb.webp" alt="TVS Emerald Altura 2 3 BHK apartments Sathanur Bagalur Road Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -737,12 +835,12 @@
           </article>
 
           <!-- PROJECT 9: Sattva Lumina -->
-          <article class="project-card animate-on-scroll" id="project-sattva-lumina"
+          <article class="project-card animate-on-scroll" id="project-sattva-lumina" data-area="yelahanka"
             onclick="window.location.href='/projects/sattva-lumina/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-lumina/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Lumina/Lumina 1 bhk 1.webp" alt="Sattva Lumina 1 2 3 BHK apartments Rajankunte Yelahanka Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-lumina-thumb.webp" alt="Sattva Lumina 1 2 3 BHK apartments Rajankunte Yelahanka Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -774,12 +872,12 @@
           </article>
 
           <!-- PROJECT 10: Sattva Kaveri Siri -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-kaveri-siri"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-kaveri-siri" data-area="other"
             onclick="window.location.href='/projects/sattva-kaveri-siri/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-kaveri-siri/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/Kaveri Siri/Aerial-View-Kaveri-Siri.jpg" alt="Sattva Kaveri Siri residential plots Mandya Karnataka" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-kaveri-siri-thumb.webp" alt="Sattva Kaveri Siri residential plots Mandya Karnataka" loading="lazy">
               <span class="project-card__status project-card__status--new">New Launch</span>
             </div>
             <div class="project-card__body">
@@ -811,12 +909,12 @@
           </article>
 
           <!-- PROJECT 11: Assetz Palmscape -->
-          <article class="project-card animate-on-scroll" id="project-assetz-palmscape"
+          <article class="project-card animate-on-scroll" id="project-assetz-palmscape" data-area="devanahalli"
             onclick="window.location.href='/projects/assetz-palmscape/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-palmscape/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/assetz palmscape/Assetz-Palmscape-Image-1 (1).webp" alt="Assetz Palmscape villa plots Devanahalli North Bangalore IVC Road" loading="lazy">
+              <img src="/images/projects-thumbs/assetz-palmscape-thumb.webp" alt="Assetz Palmscape villa plots Devanahalli North Bangalore IVC Road" loading="lazy">
               <span class="project-card__status project-card__status--new">Pre-Launch</span>
             </div>
             <div class="project-card__body">
@@ -848,12 +946,12 @@
           </article>
 
           <!-- PROJECT 12: Sattva La Vita -->
-          <article class="project-card animate-on-scroll animate-delay-2" id="project-sattva-la-vita"
+          <article class="project-card animate-on-scroll animate-delay-2" id="project-sattva-la-vita" data-area="hennur"
             onclick="window.location.href='/projects/sattva-la-vita/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-la-vita/'">
             <div class="project-card__image-wrap">
-              <img src="/additional_websites/La Vita/Lavita-001.webp" alt="Sattva La Vita 4 BHK row house villas Hennur Road Bangalore" loading="lazy">
+              <img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita 4 BHK row house villas Hennur Road Bangalore" loading="lazy">
               <span class="project-card__status project-card__status--new">Ready to Move</span>
             </div>
             <div class="project-card__body">
@@ -909,6 +1007,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
+    <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
@@ -969,8 +1068,43 @@
         Buyers are advised to independently verify all claims before making purchase decisions.
       </p>
     </div>
+    </div>
   </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    (function () {
+      var filterBar = document.getElementById('area-filter');
+      if (!filterBar) return;
+
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#projects-grid .project-card'));
+      var buttons = Array.prototype.slice.call(filterBar.querySelectorAll('.area-filter__btn'));
+      var emptyMsg = document.getElementById('area-filter-empty');
+      var allCountEl = filterBar.querySelector('[data-area="all"] .area-filter__count');
+
+      if (allCountEl) allCountEl.textContent = '(' + cards.length + ')';
+
+      function applyFilter(area) {
+        var visibleCount = 0;
+        cards.forEach(function (card) {
+          var match = area === 'all' || card.getAttribute('data-area') === area;
+          card.classList.toggle('project-card--filtered-out', !match);
+          if (match) {
+            visibleCount++;
+            card.classList.add('visible');
+          }
+        });
+        if (emptyMsg) emptyMsg.hidden = visibleCount !== 0;
+      }
+
+      filterBar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.area-filter__btn');
+        if (!btn) return;
+        buttons.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        applyFilter(btn.getAttribute('data-area'));
+      });
+    })();
+  </script>
 </body>
 </html>
