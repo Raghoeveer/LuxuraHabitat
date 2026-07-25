@@ -3441,7 +3441,14 @@
                 if (href !== '#') {
                     e.preventDefault();
                     var target = document.querySelector(href);
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    if (target) {
+                        // Offset by the sticky nav's live height so section headings
+                        // aren't scrolled underneath it.
+                        var nav = document.querySelector('nav');
+                        var navHeight = nav ? nav.offsetHeight : 0;
+                        var targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                    }
                 }
             });
         });

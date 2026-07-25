@@ -1895,6 +1895,26 @@
         el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(el);
       });
+
+      // Smooth scrolling for nav menu links (accounts for fixed header height
+      // and updates the URL hash without letting the page's <base href> tag
+      // hijack the navigation into a full page load).
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const header = document.querySelector('.site-header');
+              const headerHeight = header ? header.offsetHeight : 0;
+              const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+              window.scrollTo({ top: targetTop, behavior: 'smooth' });
+              history.pushState(null, '', window.location.pathname + href);
+            }
+          }
+        });
+      });
     </script>
 
     <!-- Start of Zendesk Widget script -->

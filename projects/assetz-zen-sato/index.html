@@ -3608,29 +3608,6 @@
             // Form submits directly to Web3Forms
         }
 
-            const subject = `New Inquiry - ${formData.name} - Zen & Sato`;
-            const body = `
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Query: ${formData.query}
-Submitted: ${formData.timestamp}
-Source: Sidebar Widget
-            `.trim();
-
-            window.location.href = `mailto:projectinfoindia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            const messageDiv = document.getElementById('panelFormMessage');
-            messageDiv.textContent = '✓ Thank you! We will contact you shortly.';
-            messageDiv.className = 'form-message success';
-
-            document.getElementById('panelLeadForm').reset();
-
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
-
         // Close panel when clicking overlay
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
@@ -3648,15 +3625,6 @@ Source: Sidebar Widget
             // Form submits directly to Web3Forms
         }
 
-            // Reset form
-            document.getElementById('leadForm').reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
-
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -3665,7 +3633,15 @@ Source: Sidebar Widget
                     e.preventDefault();
                     const target = document.querySelector(href);
                     if (target) {
-                        target.scrollIntoView({behavior: 'smooth'});
+                        // Offset by the sticky nav's live height so section headings
+                        // aren't scrolled underneath it.
+                        const nav = document.querySelector('nav.core-project-nav') || document.querySelector('nav');
+                        const navHeight = nav ? nav.offsetHeight : 0;
+                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                        // Build an absolute path so the page's <base href> tag can't
+                        // hijack relative URL resolution here.
+                        history.pushState(null, '', window.location.pathname + href);
                     }
                 }
             });
@@ -3693,8 +3669,8 @@ Source: Sidebar Widget
             revealTargets.forEach(element => element.classList.add('visible'));
         }
 
-        const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-        const navSections = navLinks
+        const navAnchorLinks = [...document.querySelectorAll('.project-anchor-nav a[href^="#"]')];
+        const navSections = navAnchorLinks
             .map(link => document.querySelector(link.getAttribute('href')))
             .filter(Boolean);
 
@@ -3703,7 +3679,7 @@ Source: Sidebar Widget
                 .filter(section => section.getBoundingClientRect().top <= 130)
                 .pop();
 
-            navLinks.forEach(link => {
+            navAnchorLinks.forEach(link => {
                 link.classList.toggle('active', current && link.getAttribute('href') === `#${current.id}`);
             });
         }

@@ -1600,6 +1600,24 @@
         window.addEventListener('scroll', updateActiveNav);
         updateActiveNav();
 
+        // Smooth scrolling for nav menu links (accounts for fixed nav height
+        // and updates the URL hash without letting the page's <base href>
+        // tag hijack the navigation into a full page load).
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const nav = document.querySelector('nav');
+                    const navHeight = nav ? nav.offsetHeight : 0;
+                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                    history.pushState(null, '', window.location.pathname + href);
+                }
+            });
+        });
+
         // Zendesk Settings
         window.zESettings = {
             webWidget: {

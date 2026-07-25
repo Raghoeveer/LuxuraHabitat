@@ -1104,6 +1104,28 @@
         }
     </script>
 
+    <!-- Smooth scrolling for nav menu links (accounts for fixed header height
+         and updates the URL hash without letting the page's <base href> tag
+         hijack the navigation into a full page load). -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const header = document.querySelector('header');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                        history.pushState(null, '', window.location.pathname + href);
+                    }
+                }
+            });
+        });
+    </script>
+
     <!-- Start of Zendesk Widget script -->
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9"> </script>
     <script>
