@@ -343,6 +343,12 @@
             .msb-enquire { background: var(--secondary); color: #121212 !important;}
             
             body { padding-bottom: 60px; /* Space for bottom bar */}
+
+            /* Push the Zendesk chat launcher above the sticky bottom bar
+               so it doesn't cover the Call/WhatsApp buttons. */
+            iframe#launcher, .zEWidget-launcher {
+                margin-bottom: 60px !important;
+            }
         }
     
         /* Luxura Habitat Branding Styles */

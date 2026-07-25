@@ -1710,6 +1710,12 @@
                 backdrop-filter: none;
             }
 
+            /* Push the Zendesk chat launcher above the fixed bottom action bar
+               so its "Chat with us" prompt doesn't cover the Call/WhatsApp buttons. */
+            iframe#launcher, .zEWidget-launcher {
+                margin-bottom: 60px !important;
+            }
+
             .hamburger-menu {
                 display: flex;
                 order: 3;

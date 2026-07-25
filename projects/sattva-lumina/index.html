@@ -574,6 +574,10 @@
             .hero-media { display: none; }
         }
 
+        /* Hidden by default (desktop); the @media (max-width: 768px) block below
+           switches it back to a visible fixed bottom bar on mobile. */
+        .mobile-sticky-bar { display: none; }
+
         @media (max-width: 768px) {
             nav { padding-bottom: 0.5rem; }
 
@@ -642,7 +646,6 @@
                 margin-bottom: 60px !important;
             }
         }
-        .mobile-sticky-bar { display: none; }
 
         @media (max-width: 480px) {
             .features-list { grid-template-columns: 1fr; }

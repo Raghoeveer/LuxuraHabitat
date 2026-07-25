@@ -1936,6 +1936,17 @@
                 padding: 0.75rem 1rem;
                 gap: 0.75rem;
                 padding-bottom: 0.5rem;
+                /* backdrop-filter creates a new containing block, which traps
+                   position:fixed descendants (like #navButtons) inside nav's own
+                   box instead of the viewport. Disable it on mobile so the fixed
+                   bottom action bar positions correctly. */
+                backdrop-filter: none;
+            }
+
+            /* Push the Zendesk chat launcher above the fixed bottom action bar
+               so its "Chat with us" prompt doesn't cover the Call/WhatsApp buttons. */
+            iframe#launcher, .zEWidget-launcher {
+                margin-bottom: 60px !important;
             }
 
             .hamburger-menu {

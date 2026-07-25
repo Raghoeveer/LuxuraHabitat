@@ -1734,6 +1734,12 @@
                 align-items: center;
             }
 
+            /* Push the Zendesk chat launcher above the fixed bottom widget bar
+               so it doesn't cover the Request Brochure/WhatsApp buttons. */
+            iframe#launcher, .zEWidget-launcher {
+                margin-bottom: 60px !important;
+            }
+
             .details-button {
                 writing-mode: initial;
                 text-orientation: initial;
@@ -2198,6 +2204,12 @@
                 justify-content: space-around;
                 display: flex;
                 align-items: center;
+            }
+
+            /* Push the Zendesk chat launcher above the fixed bottom widget bar
+               so it doesn't cover the Request Brochure/WhatsApp buttons. */
+            iframe#launcher, .zEWidget-launcher {
+                margin-bottom: 60px !important;
             }
 
             .details-button {
