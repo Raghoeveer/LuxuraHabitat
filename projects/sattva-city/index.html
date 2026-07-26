@@ -3483,7 +3483,7 @@
             navLinkEls.forEach(function (link) {
                 link.classList.toggle('active', !!(current && link.getAttribute('href') === '#' + current.id));
             });
-            if (current) {
+            if (current && window.scrollY > 0) {
                 var hash = '#' + current.id;
                 if (history.replaceState && window.location.hash !== hash) {
                     var cleanUrl = window.location.pathname.replace(/\/index\.html$/i, '') + window.location.search + hash;

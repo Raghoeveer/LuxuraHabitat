@@ -516,6 +516,9 @@
             height: auto;
         }
 
+        .hero-logo { display: block; width: fit-content; max-width: 100%; margin: 0 0 0.6rem; text-decoration: none; }
+        .hero-logo img { display: block; height: 64px; width: auto; }
+
         .hero-badge {
             color: #fff;
             background: var(--accent-green);
@@ -2317,6 +2320,9 @@
         <div class="hero-container">
 
             <div class="hero-content">
+                <a href="#" class="hero-logo" aria-label="Sattva Sanio home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="Sattva Logo.png" alt="Sattva Group" style="height: 64px; width: auto;">
+                </a>
                 <div class="hero-badge">New Pre-Launch Opportunity | Old Madras Road</div>
                 <h1 style="font-size: clamp(2rem, 3.5vw, 4rem);">Sattva Sanio</h1>
                 <p class="hero-tagline">"Elevated Living on Old Madras Road"</p>
@@ -3371,7 +3377,7 @@
             navLinkEls.forEach(function (link) {
                 link.classList.toggle('active', !!(current && link.getAttribute('href') === '#' + current.id));
             });
-            if (current) {
+            if (current && window.scrollY > 0) {
                 var hash = '#' + current.id;
                 if (history.replaceState && window.location.hash !== hash) {
                     var cleanUrl = window.location.pathname.replace(/\/index\.html$/i, '') + window.location.search + hash;
