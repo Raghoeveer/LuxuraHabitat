@@ -21,6 +21,25 @@ caused a real, shipped bug once.
   before being fixed.
 - Add the builder's logo in a `.hero-logo` wrapper, top-left of the hero
   content, above the badge/headline — matching every other project page.
+- The nav bar's own logo (top-left of the page, not the hero) must be
+  Luxura Habitat's branding (`/images/logos/company_logo.png`, linking to
+  `/`) — never the builder's logo. Every project page is Luxura Habitat's
+  own site advertising the project, not a mirror of the builder's site.
+  If you're building from a source file supplied by someone else (an
+  external template, a builder's own microsite export), check this
+  explicitly — Sattva Forest Ridge's source file had the builder's logo
+  in the nav instead, and it shipped that way before being caught.
+- The Luxura Habitat nav logo needs an "Authorized Channel Partner"
+  caption next to it (divider + caption span, hidden below ~1024px width)
+  — matching every other project page. Copy the exact markup/CSS from an
+  existing page rather than just the bare logo image.
+- Any heading/accent color pulled from an external source file (a
+  builder's own microsite export, an external template) needs to be
+  swapped to this project's own color variables before shipping — don't
+  assume the source file's palette is intentional. Sattva Forest Ridge's
+  source file had section headings and a table header in a generic blue
+  (`#2563eb`) that matched nothing else on the page; it should have used
+  the page's own accent color from the start.
 - Use the FAQ pattern from `_TEMPLATE.html` (button + schema.org
   microdata) if this project has FAQs. Keep the visible questions and
   the separate `FAQPage` JSON-LD block in exact sync — several pages
@@ -29,6 +48,21 @@ caused a real, shipped bug once.
 - Add the RERA disclaimer paragraph and NAP (Name/Address/Phone) footer
   block verbatim from an existing page. These are legally load-bearing —
   don't reword them per project.
+- The GA4 tag + tel/mailto click tracking is already in `_TEMPLATE.html`
+  — don't strip it out or swap the Measurement ID per project. Every
+  page shares one GA4 property (`G-4VD9RSVKTV`); WhatsApp clicks and
+  form submits are picked up automatically once the page has any Web3Forms
+  form and any `wa.me` link (no extra code needed for those two). The
+  Zendesk `chat:start` tracking lives in `/js/project-page.js`, so it
+  works automatically too as long as the Zendesk snippet and
+  `project-page.js` are both on the page.
+- Any Web3Forms lead form needs a `redirect` hidden field pointing at
+  `https://luxurahabitat.com/thank-you/` (exact value, trailing slash,
+  no `.html`). Forms with no `redirect` field submit natively straight to
+  Web3Forms and dump the visitor off-domain with an unbranded page and
+  no way to track the lead — this was a live bug on 5 pages, fixed once,
+  don't reintroduce it. If a form submits via JS `fetch()` instead
+  (AJAX, in-page success message), it doesn't need this field.
 
 ## 2. Images
 

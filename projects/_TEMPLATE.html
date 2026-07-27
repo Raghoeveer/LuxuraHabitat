@@ -16,6 +16,25 @@
 -->
 <html lang="en-IN">
 <head>
+    <!-- Google tag (gtag.js) — same Measurement ID as every other page,
+         do not swap this out per project. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <!-- Images for this project should live in a clean, dedicated path —
          e.g. /images/projects/<slug>/ — not a copy of the
          additional_websites/<Folder>/ convention older pages use. That
@@ -85,7 +104,24 @@
              wrapping a <nav>), /js/project-page.js's getProjectPageNavEl()
              will find it automatically as long as it's a <nav>, a
              <header>, or has class="site-header" — don't invent a fourth
-             pattern without also updating that helper. -->
+             pattern without also updating that helper.
+
+             The logo on the LEFT of this nav must be Luxura Habitat's own
+             branding (/images/logos/company_logo.png, linking to "/"), not
+             the builder's logo — this is Luxura Habitat's site advertising
+             the project, not the builder's own site. The builder's logo
+             belongs in the .hero-logo wrapper inside the hero section
+             below, not here. This exact mistake shipped on Sattva Forest
+             Ridge (source file had it backwards) and was caught after the
+             page was already live — check it explicitly, don't assume a
+             copied nav has it right.
+
+             The Luxura Habitat logo must be accompanied by an "Authorized
+             Channel Partner" caption next to it (divider + small caption
+             span), matching every other project page — see any existing
+             page's nav for the exact .partner-divider/.partner-caption
+             markup and CSS to copy (hidden below ~1024px width to save
+             space, same as elsewhere). Don't ship the logo alone. -->
         <ul class="nav-links">
             <li><a href="#hero">Overview</a></li>
             <li><a href="#about">About</a></li>
