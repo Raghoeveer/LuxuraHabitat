@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/altura/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +27,7 @@
     <title>TVS Emerald Altura Sathanur — 2 &amp; 3 BHK on Bagalur Road from ₹1.4 Cr | Luxura Habitat</title>
     <meta name="description" content="Explore TVS Emerald Altura in Sathanur, North Bangalore. Premium 2 &amp; 3 BHK flats on Bagalur Main Road starting from ₹1.4 Cr*. Download master plan &amp; floor plans.">
     <meta name="keywords" content="TVS Emerald Altura, TVS Emerald Sathanur, 2 BHK 3 BHK apartments North Bangalore, luxury flats Sathanur, Bagalur Main Road apartments, Thanisandra flats, new apartments near airport Bangalore, RERA approved apartments Bangalore">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- ===== CANONICAL URL ===== -->
@@ -3264,6 +3282,7 @@
         </div>
     </div>
 
+    <script src="/js/project-page.js"></script>
     <script>
         // Mobile Menu Toggle
         function toggleMobileMenu() {
@@ -3476,37 +3495,8 @@
             });
         }
 
-        // Reveal animation on scroll
-        const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        revealElements.forEach(element => observer.observe(element));
-
-        // Smooth scrolling for nav menu links (accounts for sticky nav height
-        // and updates the URL hash without letting the page's <base href>
-        // tag hijack the navigation into a full page load).
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const nav = document.querySelector('nav');
-                        const navHeight = nav ? nav.offsetHeight : 0;
-                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                        history.pushState(null, '', window.location.pathname + href);
-                    }
-                }
-            });
-        });
+        initProjectPageScrollReveal('.reveal');
+        initProjectPageSmoothScroll();
     </script>
 
     <!-- Start of Zendesk Widget script -->
@@ -3650,36 +3640,6 @@
           },
           "sameAs": [
             "https://www.tvsemerald.com"
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://luxurahabitat.com/projects/tvs-emerald-altura/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Real Estate",
-              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/#about"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Residential Apartments",
-              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/#floor-plans"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "TVS Emerald Altura",
-              "item": "https://luxurahabitat.com/projects/tvs-emerald-altura/"
-            }
           ]
         },
         {

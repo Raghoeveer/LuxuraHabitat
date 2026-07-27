@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Namma Metro Blue Line is Driving Yelahanka Property Prices (2026) | Luxura Habitat</title>
@@ -184,7 +202,7 @@
             How the Namma Metro Blue Line is Driving Yelahanka Property Prices in 2026
           </h1>
           <div class="article-meta">
-            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 25, 2026</span><span>&bull;</span><span>6 Min Read</span>
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 25, 2026</span><span>&bull;</span><span>6 Min Read</span>
           </div>
         </header>
 
@@ -245,7 +263,7 @@
           The window to invest in Yelahanka at current prices (₹8,500 - ₹12,000 per sq.ft.) is closing as the Blue Line nears completion. By 2027, when the trains are running and commute times to the airport and ORR are slashed in half, we expect rental yields to spike, dragging capital values up with them.
         </p>
         <p>
-          If you are considering an investment in North Bangalore, this is the time to secure your asset. For a detailed discussion on which specific projects align with your financial goals, visit our <a href="/contact/" class="money-link">Contact Page</a> to schedule a consultation with Narayanan Rajesh.
+          If you are considering an investment in North Bangalore, this is the time to secure your asset. For a detailed discussion on which specific projects align with your financial goals, visit our <a href="/contact/" class="money-link">Contact Page</a> to schedule a consultation with our team.
         </p>
         </div>
 
@@ -283,7 +301,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by Narayanan Rajesh</h5>
+              <h5>Written by the Luxura Habitat Team</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience helping families navigate Bangalore's premium corridors with absolute legal clarity.</p>
             </div>
           </div>

@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Current Projects | Luxura Habitat — Premium Real Estate Bengaluru</title>
-  <meta name="description" content="Explore 11 handpicked premium residential projects across Bengaluru — Assetz Zen &amp; Sato, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis, Sattva City &amp; more. Personally vetted by Narayanan Rajesh.">
+  <meta name="description" content="Explore 11 handpicked premium residential projects across Bengaluru — Assetz Zen &amp; Sato, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis, Sattva City &amp; more. Personally vetted by our team.">
   <meta name="keywords" content="Luxura Habitat projects, Assetz Zen Sato Yelahanka, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis Devanahalli, Sattva Sanio, Sattva City, TVS Emerald Altura, Sattva Lumina, Assetz Palmscape, luxury apartments Bangalore, new launch projects North Bangalore">
   <link rel="canonical" href="https://luxurahabitat.com/projects/">
 
@@ -489,7 +507,7 @@
           <span>Projects</span>
         </div>
         <h1>Handpicked Projects</h1>
-        <p>Every project we present has been vetted under the guidance of our Principal Advisor, Narayanan Rajesh — for design integrity, developer credibility, legal standing, and long-term investment merit.</p>
+        <p>Every project we present has been vetted under the guidance of our advisory team — for design integrity, developer credibility, legal standing, and long-term investment merit.</p>
       </div>
     </section>
 
@@ -516,7 +534,7 @@
           <button type="button" class="area-filter__btn" data-area="other">Other Locations</button>
         </div>
 
-        <p class="area-filter__empty" id="area-filter-empty" hidden>No projects found in this area yet — <a href="https://wa.me/918438344093?text=Hi%20Narayanan%2C%20I'm%20looking%20for%20projects%20in%20a%20specific%20area." target="_blank" rel="noopener noreferrer">ask Narayanan directly</a>.</p>
+        <p class="area-filter__empty" id="area-filter-empty" hidden>No projects found in this area yet — <a href="https://wa.me/918438344093?text=Hi%2C%20I'm%20looking%20for%20projects%20in%20a%20specific%20area." target="_blank" rel="noopener noreferrer">ask us directly</a>.</p>
 
         <div class="projects-grid" id="projects-grid">
 
@@ -566,7 +584,7 @@
 
               <div class="project-card__actions">
                 <a href="/projects/assetz-zen-sato/" class="btn btn--primary" id="zen-sato-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Assetz%20Zen%20%26%20Sato.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="zen-sato-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Assetz%20Zen%20%26%20Sato.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="zen-sato-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -604,7 +622,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/concorde-mayfair/" class="btn btn--primary" id="concorde-mayfair-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Concorde%20Mayfair.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="concorde-mayfair-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Concorde%20Mayfair.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="concorde-mayfair-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -641,7 +659,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/orchid-salisbury/" class="btn btn--primary" id="orchid-salisbury-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Orchid%20Salisbury.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="orchid-salisbury-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Orchid%20Salisbury.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="orchid-salisbury-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -678,7 +696,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/brigade-eternia/" class="btn btn--primary" id="brigade-eternia-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Brigade%20Eternia.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="brigade-eternia-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Brigade%20Eternia.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="brigade-eternia-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -715,7 +733,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-aeropolis/" class="btn btn--primary" id="sattva-aeropolis-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Aeropolis.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-aeropolis-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20Aeropolis.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-aeropolis-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -752,7 +770,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-sanio/" class="btn btn--primary" id="sattva-sanio-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Sanio.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-sanio-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20Sanio.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-sanio-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -789,7 +807,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-city/" class="btn btn--primary" id="sattva-city-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20City%20Doddajala.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-city-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20City%20Doddajala.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-city-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -826,7 +844,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/tvs-emerald-altura/" class="btn btn--primary" id="tvs-altura-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20TVS%20Emerald%20Altura.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="tvs-altura-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20TVS%20Emerald%20Altura.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="tvs-altura-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -863,7 +881,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-lumina/" class="btn btn--primary" id="sattva-lumina-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Lumina.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-lumina-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20Lumina.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="sattva-lumina-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -900,7 +918,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-kaveri-siri/" class="btn btn--primary" id="kaveri-siri-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20Kaveri%20Siri.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="kaveri-siri-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20Kaveri%20Siri.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="kaveri-siri-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -937,7 +955,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/assetz-palmscape/" class="btn btn--primary" id="palmscape-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Assetz%20Palmscape.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="palmscape-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Assetz%20Palmscape.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="palmscape-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -974,7 +992,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="/projects/sattva-la-vita/" class="btn btn--primary" id="la-vita-explore-btn">View Details</a>
-                <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I'm%20interested%20in%20Sattva%20La%20Vita%20Hennur.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="la-vita-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Sattva%20La%20Vita%20Hennur.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="la-vita-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -991,11 +1009,11 @@
     <section class="section" id="projects-cta-strip" style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);padding:var(--space-xl) 0;">
       <div class="container" style="text-align:center;">
         <h2 style="font-family:var(--font-display);color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;">Looking for Something Specific?</h2>
-        <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:540px;margin:0 auto 32px;">Tell Narayanan your requirements — budget, location, configuration — and get a personally curated shortlist within hours.</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:540px;margin:0 auto 32px;">Tell us your requirements — budget, location, configuration — and get a personally curated shortlist within hours.</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I%20have%20specific%20requirements%20for%20a%20property.%20Can%20you%20help%3F" class="btn btn--whatsapp btn--lg" id="projects-whatsapp-cta" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/918438344093?text=Hello%2C%20I%20have%20specific%20requirements%20for%20a%20property.%20Can%20you%20help%3F" class="btn btn--whatsapp btn--lg" id="projects-whatsapp-cta" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Narayanan
+            WhatsApp Us
           </a>
           <a href="/contact/" class="btn btn--outline btn--lg" id="projects-contact-cta" style="border-color:rgba(255,255,255,0.35);color:#fff;">
             Schedule a Consultation

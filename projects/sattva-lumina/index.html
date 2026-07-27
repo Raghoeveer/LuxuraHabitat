@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/Lumina/">
     <link rel="canonical" href="https://luxurahabitat.com/projects/sattva-lumina/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Sattva Lumina Rajankunte, a premium lakefront apartment project near Yelahanka, Bangalore. Check price, floor plans, amenities, location and latest offers.">
     <meta name="keywords" content="sattva lumina, sattva lumina yelahanka, sattva lumina rajankunte, apartments for sale in yelahanka, sattva group doddaballapura road">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
 
     <meta property="og:title" content="Sattva Lumina - Premium Residences & Amenities">
     <meta property="og:description" content="Discover Sattva Lumina with premium residences, planned amenities, and a modern lifestyle experience. Enquire for availability and offers.">
@@ -427,9 +445,37 @@
 
         .faq-section { background: var(--bg-white); padding: 4.5rem 2rem; }
         .faq-grid { max-width: 980px; margin: 0 auto; display: grid; gap: 1rem; }
-        .faq-item { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; padding: 1.1rem 1.2rem; box-shadow: 0 8px 22px rgba(2,6,23,0.05); }
-        .faq-item h3 { color: var(--primary-dark); font-size: 1rem; line-height: 1.35; margin-bottom: 0.45rem; }
-        .faq-item p { color: var(--text-light); font-size: 0.94rem; line-height: 1.75; }
+        .faq-item { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.05); }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: inherit;
+            padding: 1.1rem 1.2rem;
+            color: var(--primary-dark);
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.35;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .faq-question.open { color: var(--accent-green); }
+        .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-question.open .faq-arrow { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 1.2rem;
+            color: var(--text-light);
+            font-size: 0.94rem;
+            line-height: 1.75;
+        }
+        .faq-answer.open { max-height: 400px; padding: 0 1.2rem 1.1rem; }
         .footer { background: var(--primary-dark); color: var(--bg-white); padding: 3rem 2rem 2rem; }
 
         /* Project Highlights table */
@@ -743,38 +789,83 @@
     </style>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the starting price of Sattva Lumina?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The starting price for Sattva Lumina varies based on unit configuration, floor rise, and current offers. Please enquire to receive the latest price details."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where is Sattva Lumina located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Lumina is strategically located in Rajankunte, North Bangalore, offering excellent connectivity to Kempegowda International Airport and major tech parks via Bellary Road and Doddaballapura Road."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is Sattva Lumina RERA approved?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Sattva Lumina is a RERA-approved project. The RERA registration number is PRM/KA/RERA/1251/472/PR/060924/007009."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What apartment configurations are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Lumina offers premium 1 BHK, 2 BHK, and 3 BHK lakefront apartments, meticulously designed for modern living and Vastu compliance."
-        }
-      }]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the exact starting price for Sattva Lumina Yelahanka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The starting price for Sattva Lumina Yelahanka can change with unit availability, floor rise, and current offers. Please use the WhatsApp enquiry link or submit the form to receive the latest price details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sattva Lumina suitable for buyers looking for apartments for sale in Bangalore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Sattva Lumina is positioned for homebuyers searching for apartments for sale in Bangalore, especially around Rajankunte, Yelahanka, and North Bengaluru."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What amenities are planned at Sattva Lumina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The amenities at Sattva Lumina include lifestyle, wellness, leisure, fitness, and community-focused spaces. The gallery and amenities section show relevant visuals from the project folder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I see the Sattva Lumina master plan and unit plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can view the Sattva Lumina master plan and unit plans on this page under the Unit Plans section. The floor plans include available 1 BHK, 2 BHK, and 3 BHK layout references."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the RERA number for Sattva Lumina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The RERA registration number shown for Sattva Lumina is PRM/KA/RERA/1251/472/PR/060924/007009. Buyers should verify RERA details before booking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I send an enquiry for Sattva Lumina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can send an enquiry through the contact form, call button, or WhatsApp button on this website. Phone number is mandatory in the form so the team can share updated availability and offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are home loans available for Sattva Lumina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Sattva Lumina is a RERA-approved project, meaning major banks and financial institutions (such as SBI, HDFC, ICICI, and Axis Bank) offer hassle-free home loan approvals. Our team assists buyers with documentation and processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the distinct advantages of living in North Bangalore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "North Bangalore offers excellent connectivity via Bellary Road, rapid transit to the airport, and proximity to massive tech parks like Manyata and KIADB. This infrastructure translates to less commute time, higher standard of living, and excellent property value appreciation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the possession timeline for Sattva Lumina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The project follows a phased delivery approach strictly aligned with RERA guidelines. Handover is projected to begin from late 2028 onwards. We recommend submitting an inquiry to receive the official phase-wise possession schedule."
+      }
     }
+  ]
+}
     </script>
 </head>
 <body>
@@ -790,6 +881,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
             <input type="hidden" name="access_key" value="3faa65bd-b289-41d9-857a-0b5feec9ec3d">
             <input type="hidden" name="subject" value="New Inquiry - Sattva Lumina">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
             <input type="text" name="name" required placeholder="Full Name" />
                     <input type="email" name="email" required placeholder="Email Address" />
@@ -900,6 +992,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST" class="hero-form">
                     <input type="hidden" name="access_key" value="3faa65bd-b289-41d9-857a-0b5feec9ec3d">
                     <input type="hidden" name="subject" value="New Inquiry - Sattva Lumina">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
                     <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
                     <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
@@ -1238,6 +1331,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="3faa65bd-b289-41d9-857a-0b5feec9ec3d">
                     <input type="hidden" name="subject" value="New Inquiry - Sattva Lumina (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
                     <input type="text" name="name" required placeholder="Enter your full name" />
                     <input type="email" name="email" required placeholder="your.email@example.com" />
@@ -1280,45 +1374,89 @@
             <h2 class="section-title">FAQs</h2>
             <p class="section-subtitle">Helpful answers for buyers comparing Sattva Lumina, location, plans, pricing, and enquiry details.</p>
 
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What is the exact starting price for Sattva Lumina Yelahanka?</h3>
-                    <p>The starting price for Sattva Lumina Yelahanka can change with unit availability, floor rise, and current offers. Please use the WhatsApp enquiry link or submit the form to receive the latest price details.</p>
+            <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is the exact starting price for Sattva Lumina Yelahanka?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The starting price for Sattva Lumina Yelahanka can change with unit availability, floor rise, and current offers. Please use the WhatsApp enquiry link or submit the form to receive the latest price details.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>Is Sattva Lumina suitable for buyers looking for apartments for sale in Bangalore?</h3>
-                    <p>Yes, Sattva Lumina is positioned for homebuyers searching for apartments for sale in Bangalore, especially around Rajankunte, Yelahanka, and North Bengaluru.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Is Sattva Lumina suitable for buyers looking for apartments for sale in Bangalore?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Sattva Lumina is positioned for homebuyers searching for apartments for sale in Bangalore, especially around Rajankunte, Yelahanka, and North Bengaluru.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>What amenities are planned at Sattva Lumina?</h3>
-                    <p>The amenities at Sattva Lumina include lifestyle, wellness, leisure, fitness, and community-focused spaces. The gallery and amenities section show relevant visuals from the project folder.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What amenities are planned at Sattva Lumina?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The amenities at Sattva Lumina include lifestyle, wellness, leisure, fitness, and community-focused spaces. The gallery and amenities section show relevant visuals from the project folder.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>Where can I see the Sattva Lumina master plan and unit plans?</h3>
-                    <p>You can view the Sattva Lumina master plan and unit plans on this page under the Unit Plans section. The floor plans include available 1 BHK, 2 BHK, and 3 BHK layout references.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">Where can I see the Sattva Lumina master plan and unit plans?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can view the Sattva Lumina master plan and unit plans on this page under the Unit Plans section. The floor plans include available 1 BHK, 2 BHK, and 3 BHK layout references.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>What is the RERA number for Sattva Lumina?</h3>
-                    <p>The RERA registration number shown for Sattva Lumina is PRM/KA/RERA/1251/472/PR/060924/007009. Buyers should verify RERA details before booking.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">What is the RERA number for Sattva Lumina?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The RERA registration number shown for Sattva Lumina is PRM/KA/RERA/1251/472/PR/060924/007009. Buyers should verify RERA details before booking.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>How can I send an enquiry for Sattva Lumina?</h3>
-                    <p>You can send an enquiry through the contact form, call button, or WhatsApp button on this website. Phone number is mandatory in the form so the team can share updated availability and offers.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">How can I send an enquiry for Sattva Lumina?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can send an enquiry through the contact form, call button, or WhatsApp button on this website. Phone number is mandatory in the form so the team can share updated availability and offers.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>Are home loans available for Sattva Lumina?</h3>
-                    <p>Yes, Sattva Lumina is a RERA-approved project, meaning major banks and financial institutions (such as SBI, HDFC, ICICI, and Axis Bank) offer hassle-free home loan approvals. Our team assists buyers with documentation and processing.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">Are home loans available for Sattva Lumina?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Sattva Lumina is a RERA-approved project, meaning major banks and financial institutions (such as SBI, HDFC, ICICI, and Axis Bank) offer hassle-free home loan approvals. Our team assists buyers with documentation and processing.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>What are the distinct advantages of living in North Bangalore?</h3>
-                    <p>North Bangalore offers excellent connectivity via Bellary Road, rapid transit to the airport, and proximity to massive tech parks like Manyata and KIADB. This infrastructure translates to less commute time, higher standard of living, and excellent property value appreciation.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">What are the distinct advantages of living in North Bangalore?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">North Bangalore offers excellent connectivity via Bellary Road, rapid transit to the airport, and proximity to massive tech parks like Manyata and KIADB. This infrastructure translates to less commute time, higher standard of living, and excellent property value appreciation.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>When is the possession timeline for Sattva Lumina?</h3>
-                    <p>The project follows a phased delivery approach strictly aligned with RERA guidelines. Handover is projected to begin from late 2028 onwards. We recommend submitting an inquiry to receive the official phase-wise possession schedule.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">When is the possession timeline for Sattva Lumina?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project follows a phased delivery approach strictly aligned with RERA guidelines. Handover is projected to begin from late 2028 onwards. We recommend submitting an inquiry to receive the official phase-wise possession schedule.</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     
     <!-- ===== SIMILAR PROJECTS + MARKET INSIGHTS ===== -->
@@ -1465,6 +1603,7 @@
         </div>
     </div>
 
+    <script src="/js/project-page.js"></script>
     <script>
         function toggleDetailsPanel() {
             const panel = document.getElementById('detailsPanel');
@@ -1563,60 +1702,14 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             collectAllImages();
-
-            const revealTargets = document.querySelectorAll('section .reveal');
-            revealTargets.forEach((el, i) => {
-                el.classList.add('reveal');
-                el.style.transitionDelay = (Math.min(i % 6, 4) * 45) + 'ms';
-            });
-
-            if ('IntersectionObserver' in window) {
-                const obs = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.12 });
-                revealTargets.forEach(el => obs.observe(el));
-            }
+            initProjectPageScrollReveal('section .reveal');
         });
 
         // Forms
         // Forms are submitted directly to Web3Forms (no custom submit handlers required).
 
-
-        // Active nav highlight
-        const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-        const navSections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
-        function updateActiveNav() {
-            const current = navSections.filter(section => section.getBoundingClientRect().top <= 140).pop();
-            navLinks.forEach(a => {
-                a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
-            });
-        }
-        window.addEventListener('scroll', updateActiveNav);
-        updateActiveNav();
-
-        // Smooth scrolling for nav menu links (accounts for fixed nav height
-        // and updates the URL hash without letting the page's <base href>
-        // tag hijack the navigation into a full page load).
-        navLinks.forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const nav = document.querySelector('nav');
-                    const navHeight = nav ? nav.offsetHeight : 0;
-                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                    history.pushState(null, '', window.location.pathname + href);
-                }
-            });
-        });
+        initProjectPageActiveNav();
+        initProjectPageSmoothScroll();
 
         // Zendesk Settings
         window.zESettings = {

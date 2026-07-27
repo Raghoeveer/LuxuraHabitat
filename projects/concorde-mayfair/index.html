@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/Mayfair/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +27,7 @@
     <!-- SEO Meta Tags & Terms -->
     <meta name="description" content="Discover Concorde Mayfair in Yelahanka, North Bangalore. Premium 3 BHK apartments on Bellary Road with a skate park, glamping tents and lifestyle amenities. Prices from ₹1.99 Cr.">
     <meta name="keywords" content="Concorde Mayfair, Concorde Mayfair Yelahanka, Concorde Mayfair Bellary Road, Concorde Mayfair Airport Road, Concorde Mayfair Bangalore, Concorde Mayfair Price, Concorde Mayfair Floor Plan, Concorde Mayfair Amenities, Concorde Mayfair Location, Concorde Mayfair 3 BHK, Apartments Near Airport Road Bangalore, Luxury Apartments in Yelahanka, Apartments Near Phoenix Mall of Asia, North Bangalore Apartments">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Location Meta Tags (Local SEO) -->
@@ -578,7 +596,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="386dec76-6d23-495d-b515-9e183de1283d">
                     <input type="hidden" name="subject" value="New Lead: Concorde Mayfair">
-                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -949,7 +967,7 @@
                     <form action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="386dec76-6d23-495d-b515-9e183de1283d">
                         <input type="hidden" name="subject" value="New Inquiry: Concorde Mayfair Contact Section">
-                        <input type="hidden" name="redirect" value="https://luxurahabitat.com/">
+                        <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                         
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -1109,26 +1127,9 @@
         }
     </script>
 
-    <!-- Smooth scrolling for nav menu links (accounts for fixed header height
-         and updates the URL hash without letting the page's <base href> tag
-         hijack the navigation into a full page load). -->
+    <script src="/js/project-page.js"></script>
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const header = document.querySelector('header');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
-                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                        history.pushState(null, '', window.location.pathname + href);
-                    }
-                }
-            });
-        });
+        initProjectPageSmoothScroll();
     </script>
 
     <!-- Start of Zendesk Widget script -->

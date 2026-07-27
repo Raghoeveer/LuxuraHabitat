@@ -1,6 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/Kaveri Siri/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -547,36 +565,50 @@
 
       /* FAQ */
       .faq-list { max-width: 800px; margin-inline: auto; display: flex; flex-direction: column; gap: 12px; }
-      details {
+      .faq-item {
         background: var(--clr-card-bg);
         border-radius: var(--radius-sm);
         border: 1px solid var(--clr-border);
         overflow: hidden;
         transition: box-shadow var(--transition);
       }
-      details[open] { box-shadow: var(--shadow); }
-      summary {
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
         padding: 20px 24px;
+        font-family: inherit;
         font-weight: 600;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: var(--clr-primary);
-        list-style: none;
         font-size: 1rem;
+        transition: background var(--transition);
       }
-      summary::-webkit-details-marker { display: none; }
-      summary::after {
-        content: '+';
-        font-size: 1.4rem;
-        font-weight: 300;
+      .faq-question.open { color: var(--clr-gold); }
+      .faq-arrow {
+        font-size: 1.1rem;
         color: var(--clr-gold);
         transition: transform var(--transition);
         flex-shrink: 0;
       }
-      details[open] summary::after { transform: rotate(45deg); }
-      details p { padding: 0 24px 20px; color: var(--clr-muted); line-height: 1.65; }
+      .faq-question.open .faq-arrow { transform: rotate(180deg); }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s;
+        padding: 0 24px;
+        color: var(--clr-muted);
+        line-height: 1.65;
+      }
+      .faq-answer.open {
+        max-height: 400px;
+        padding: 0 24px 20px;
+        box-shadow: var(--shadow);
+      }
 
       /* Contact */
       .contact-card {
@@ -1440,35 +1472,70 @@
             <h2>Frequently Asked Questions</h2>
             <p>Quick answers for early enquiries about Sattva Kaveri Siri.</p>
           </div>
-          <div class="faq-list">
-            <details>
-              <summary>Where is Sattva Kaveri Siri located?</summary>
-              <p>Sattva Kaveri Siri is located in Mandya, Karnataka, on Mysore Road Main Road, near Mysore. It enjoys excellent connectivity via the Bengaluru–Mysuru Expressway and is situated approximately 30 km from Mysore city centre.</p>
-            </details>
-            <details>
-              <summary>What are the plot sizes available?</summary>
-              <p>Indicative plot sizes range from 1,200 sq ft (compact) to 3,600 sq ft (villa-grade). Specific availability and exact dimensions are shared on enquiry.</p>
-            </details>
-            <details>
-              <summary>Is the project RERA registered?</summary>
-              <p>Yes, Sattva Kaveri Siri is RERA registered. Please submit an enquiry to receive the complete RERA registration number and verify on the Karnataka RERA portal (K-RERA).</p>
-            </details>
-            <details>
-              <summary>How can I get the master plan, floor plans, and pricing?</summary>
-              <p>The master plan, plot configurations, detailed pricing, and payment plan are shared after you submit the brochure request form. You can also call or WhatsApp us directly.</p>
-            </details>
-            <details>
-              <summary>What amenities are available at Kaveri Siri?</summary>
-              <p>Kaveri Siri offers 30+ amenities including a swimming pool, basketball court, badminton courts, fitness centre, gathering plaza, watch tower, landscaped gardens, children's play area, 24/7 security, and more.</p>
-            </details>
-            <details>
-              <summary>Can I get a bank loan for this plot?</summary>
-              <p>Yes, leading banks and HFCs offer plot loans for Sattva Kaveri Siri. Composite plot-plus-construction loans may also be available. Our sales team will assist you with the best financing options.</p>
-            </details>
-            <details>
-              <summary>How do I book a site visit?</summary>
-              <p>Fill out the contact form, call us at +91 8438344093, or WhatsApp us to schedule a guided site visit at your convenience. Our team is available 7 days a week.</p>
-            </details>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Where is Sattva Kaveri Siri located?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva Kaveri Siri is located in Mandya, Karnataka, on Mysore Road Main Road, near Mysore. It enjoys excellent connectivity via the Bengaluru–Mysuru Expressway and is situated approximately 30 km from Mysore city centre.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What are the plot sizes available?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Indicative plot sizes range from 1,200 sq ft (compact) to 3,600 sq ft (villa-grade). Specific availability and exact dimensions are shared on enquiry.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Is the project RERA registered?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, Sattva Kaveri Siri is RERA registered. Please submit an enquiry to receive the complete RERA registration number and verify on the Karnataka RERA portal (K-RERA).</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">How can I get the master plan, floor plans, and pricing?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The master plan, plot configurations, detailed pricing, and payment plan are shared after you submit the brochure request form. You can also call or WhatsApp us directly.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">What amenities are available at Kaveri Siri?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Kaveri Siri offers 30+ amenities including a swimming pool, basketball court, badminton courts, fitness centre, gathering plaza, watch tower, landscaped gardens, children's play area, 24/7 security, and more.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">Can I get a bank loan for this plot?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, leading banks and HFCs offer plot loans for Sattva Kaveri Siri. Composite plot-plus-construction loans may also be available. Our sales team will assist you with the best financing options.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                <span itemprop="name">How do I book a site visit?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Fill out the contact form, call us at +91 8438344093, or WhatsApp us to schedule a guided site visit at your convenience. Our team is available 7 days a week.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1749,47 +1816,72 @@
             ]
           },
           {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Where is Sattva Kaveri Siri located?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sattva Kaveri Siri is located in Mandya, Karnataka, on Mysore Road Main Road, near Mysore."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What plot sizes are available at Kaveri Siri?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Indicative plot sizes range from 1,200 sq ft to 3,600 sq ft across compact, mid-size, and villa-grade configurations."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is Sattva Kaveri Siri RERA registered?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, Sattva Kaveri Siri is RERA registered under Karnataka RERA. Please enquire for the official RERA number."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What amenities does Kaveri Siri offer?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Kaveri Siri offers 30+ amenities including a swimming pool, basketball court, badminton courts, fitness centre, gathering plaza, watch tower, landscaped gardens, children's play area, and 24/7 security."
-                }
-              }
-            ]
-          }
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is Sattva Kaveri Siri located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sattva Kaveri Siri is located in Mandya, Karnataka, on Mysore Road Main Road, near Mysore. It enjoys excellent connectivity via the Bengaluru\u2013Mysuru Expressway and is situated approximately 30 km from Mysore city centre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the plot sizes available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indicative plot sizes range from 1,200 sq ft (compact) to 3,600 sq ft (villa-grade). Specific availability and exact dimensions are shared on enquiry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the project RERA registered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Sattva Kaveri Siri is RERA registered. Please submit an enquiry to receive the complete RERA registration number and verify on the Karnataka RERA portal (K-RERA)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I get the master plan, floor plans, and pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The master plan, plot configurations, detailed pricing, and payment plan are shared after you submit the brochure request form. You can also call or WhatsApp us directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What amenities are available at Kaveri Siri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kaveri Siri offers 30+ amenities including a swimming pool, basketball court, badminton courts, fitness centre, gathering plaza, watch tower, landscaped gardens, children's play area, 24/7 security, and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a bank loan for this plot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, leading banks and HFCs offer plot loans for Sattva Kaveri Siri. Composite plot-plus-construction loans may also be available. Our sales team will assist you with the best financing options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a site visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fill out the contact form, call us at +91 8438344093, or WhatsApp us to schedule a guided site visit at your convenience. Our team is available 7 days a week."
+      }
+    }
+  ]
+}
         ]
       }
     </script>
 
     <!-- JAVASCRIPT -->
+    <script src="/js/project-page.js"></script>
     <script>
       // ======= HAMBURGER MENU =======
       const menuToggle = document.getElementById('menuToggle');
@@ -1908,25 +2000,7 @@
         observer.observe(el);
       });
 
-      // Smooth scrolling for nav menu links (accounts for fixed header height
-      // and updates the URL hash without letting the page's <base href> tag
-      // hijack the navigation into a full page load).
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-              const header = document.querySelector('.site-header');
-              const headerHeight = header ? header.offsetHeight : 0;
-              const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
-              window.scrollTo({ top: targetTop, behavior: 'smooth' });
-              history.pushState(null, '', window.location.pathname + href);
-            }
-          }
-        });
-      });
+      initProjectPageSmoothScroll();
     </script>
 
     <!-- Start of Zendesk Widget script -->

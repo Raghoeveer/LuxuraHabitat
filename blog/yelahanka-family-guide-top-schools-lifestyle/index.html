@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Family Guide to Yelahanka: Top Schools & Lifestyle | Luxura Habitat</title>
@@ -184,7 +202,7 @@
             The Family Guide to Yelahanka: Top Schools and Residential Lifestyle
           </h1>
           <div class="article-meta">
-            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 28, 2026</span><span>&bull;</span><span>5 Min Read</span>
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 28, 2026</span><span>&bull;</span><span>5 Min Read</span>
           </div>
         </header>
 
@@ -283,7 +301,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by Narayanan Rajesh</h5>
+              <h5>Written by the Luxura Habitat Team</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience helping families navigate Bangalore's premium corridors with absolute legal clarity.</p>
             </div>
           </div>

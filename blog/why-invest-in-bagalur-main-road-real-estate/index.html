@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot | Luxura Habitat</title>
@@ -280,7 +298,7 @@
           Why Bagalur Main Road is North Bangalore's Next Real Estate Hotspot
         </h1>
         <div class="article-meta">
-          <span>By Narayanan Rajesh</span>
+          <span>By the Luxura Habitat Team</span>
           <span>•</span>
           <span>July 14, 2026</span>
           <span>•</span>
@@ -352,7 +370,7 @@
         <div class="highlight-box" style="border-left-color: var(--primary-forest);">
           <h4>Organize a guided walkthrough</h4>
           <p>
-            Do you want to compare different layouts on Bagalur Main Road, verify RERA compliance, or organize a guided site visit? Leave a message on our <a href="/contact/" class="money-link">Contact Page</a> or message Narayanan Rajesh directly on WhatsApp for an honest, broker-free consultation.
+            Do you want to compare different layouts on Bagalur Main Road, verify RERA compliance, or organize a guided site visit? Leave a message on our <a href="/contact/" class="money-link">Contact Page</a> or message us directly on WhatsApp for an honest, broker-free consultation.
           </p>
         </div>
       </div>
@@ -391,7 +409,7 @@
         <div class="author-card">
           <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
           <div class="author-info">
-            <h5>Written by Narayanan Rajesh</h5>
+            <h5>Written by the Luxura Habitat Team</h5>
             <p>
               Principal Advisor at Luxura Habitat with 12+ years of experience helping families navigate Bangalore's premium corridors with absolute legal clarity.
             </p>

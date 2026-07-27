@@ -10,3 +10,19 @@ RewriteRule ^testimonials\.html$ /testimonials/ [R=301,L,NE]
 RewriteRule ^additional_websites/Sattva\ City/live_index\.html$ - [G,L,NE]
 RewriteRule ^additional_websites/La\ Vita/backup_dir/ - [G,L,NE]
 RewriteRule ^additional_websites/Lumina/target\.html$ - [G,L,NE]
+
+# Orphaned duplicate copies of live project pages (kept only for their image
+# assets, which these rules do not affect) — redirect to the canonical URL
+# instead of leaving duplicate content crawlable.
+RewriteRule ^additional_websites/Aeropolis/index\.html$ /projects/sattva-aeropolis/ [R=301,L,NE]
+RewriteRule ^additional_websites/altura/index\.html$ /projects/tvs-emerald-altura/ [R=301,L,NE]
+RewriteRule ^additional_websites/assetz\ palmscape/index\.html$ /projects/assetz-palmscape/ [R=301,L,NE]
+RewriteRule ^additional_websites/ETERNIA/index\.html$ /projects/brigade-eternia/ [R=301,L,NE]
+RewriteRule ^additional_websites/Kaveri\ Siri/index\.html$ /projects/sattva-kaveri-siri/ [R=301,L,NE]
+RewriteRule ^additional_websites/La\ Vita/index\.html$ /projects/sattva-la-vita/ [R=301,L,NE]
+RewriteRule ^additional_websites/Lumina/index\.html$ /projects/sattva-lumina/ [R=301,L,NE]
+RewriteRule ^additional_websites/Mayfair/index\.html$ /projects/concorde-mayfair/ [R=301,L,NE]
+RewriteRule ^additional_websites/Salisbury/index\.html$ /projects/orchid-salisbury/ [R=301,L,NE]
+RewriteRule ^additional_websites/SANIO/index\.html$ /projects/sattva-sanio/ [R=301,L,NE]
+RewriteRule ^additional_websites/Sattva\ City/index\.html$ /projects/sattva-city/ [R=301,L,NE]
+RewriteRule ^zen&sato3/index\.html$ /projects/assetz-zen-sato/ [R=301,L,NE]

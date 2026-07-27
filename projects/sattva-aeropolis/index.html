@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/Aeropolis/">
     <link rel="canonical" href="https://luxurahabitat.com/projects/sattva-aeropolis/">
     <meta charset="UTF-8">
@@ -8,7 +26,7 @@
     <!-- High-Intent Meta Structure -->
     <title>Sattva Aeropolis Devanahalli — Studio, 1 BHK Price &amp; Floor Plans | Luxura Habitat</title>
     <meta name="description" content="Explore Sattva Aeropolis Devanahalli near Bangalore Airport. Check latest price, floor plans, amenities, location advantages and exclusive offers.">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
 
     <!-- Open Graph Social Protocol -->
     <meta property="og:type" content="website">
@@ -367,6 +385,73 @@
         .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
 
         .gallery { background: var(--bg-white); }
+
+        .faq { background: var(--bg-white); }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.1rem 1.3rem;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(11, 107, 60, 0.05);
+        }
+
+        .faq-question.open {
+            color: var(--accent-green);
+        }
+
+        .faq-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-question.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 1.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer.open {
+            max-height: 400px;
+            padding: 0 1.3rem 1.1rem;
+        }
         .gallery-grid {
             display: flex;
             overflow-x: auto;
@@ -928,6 +1013,20 @@
           "@type": "Answer",
           "text": "You can easily book a site visit or request more details by filling out the enquiry form or contacting us directly via phone or WhatsApp."
         }
+      }, {
+        "@type": "Question",
+        "name": "Are there Studio Apartments Devanahalli available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Sattva Aeropolis features premium Studio Apartments Devanahalli ideal for investment and comfortable living."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the total land area of Phase 2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Phase 2 covers approximately 1.72 to 2.4 acres within the larger 10.32-acre township."
+        }
       }]
     }
     </script>
@@ -945,6 +1044,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
             <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
             <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
             <input type="text" name="name" required placeholder="Full Name" />
                     <input type="email" name="email" required placeholder="Email Address" />
@@ -1064,6 +1164,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
                     <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
                     <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
                     <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
                     <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
@@ -1457,164 +1558,166 @@
         </div>
     </section>
 
-    <section class="gallery" id="faq" style="background: var(--bg-light);">
+    <section class="faq" id="faq" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-subtitle">Common questions about Sattva Aeropolis Devanahalli.</p>
             
-            <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;" class="reveal">
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        1. What is Sattva Aeropolis Devanahalli?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Sattva Aeropolis is a premium high-rise residential project located in Devanahalli, near the Kempegowda International Airport.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        2. Where is the project located?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">It is strategically located on the Main NH-44 (International Airport Road) in Devanahalli, Bengaluru.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        3. What types of apartments are available?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">The project offers a variety of configurations, including <strong>Studio Apartments Devanahalli</strong>, 1 BHK, 2 BHK, and 3 BHK units.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        4. Is it a good investment?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Yes, investing in <strong>Apartments Near Bangalore Airport</strong> offers excellent capital appreciation and high rental yields due to rapid infrastructure development.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        5. Who is the developer of this project?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">The project is developed by the renowned Sattva Group, known for its high-quality residential and commercial developments.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        6. Are there 1 BHK Apartments Devanahalli available in this project?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Yes, there are well-designed <strong>1 BHK Apartments Devanahalli</strong> perfect for young professionals and small families.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        7. How can I check the Sattva Aeropolis Floor Plan?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">You can view the detailed floor plans, including the <strong>Sattva Aeropolis Floor Plan</strong> for Studio and 1 BHK layouts, in the "Unit Plans" section of this website.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        8. What is the starting Sattva Aeropolis Price?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">The indicative starting <strong>Sattva Aeropolis Price</strong> for Studio apartments is ~₹45.77 Lakhs*. Please enquire for exact and updated pricing.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        9. Are there New Launch Apartments Devanahalli in Phase 2?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Yes, Phase 2 features <strong>New Launch Apartments Devanahalli</strong> with modern amenities and lifestyle-focused design.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        10. What amenities are provided?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Residents can enjoy a range of amenities including a swimming pool, gymnasium, kids' play area, multipurpose hall, and lush green landscaped gardens.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        11. Is the project RERA approved?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Yes, Phase 2 is RERA approved with Registration No: PRM/KA/RERA/1250/303/PR/250925/008119.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        12. When is the expected possession date?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">The expected possession date for Phase 2 is October 2028, as per RERA guidelines.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        13. Why should I buy Apartments Near Airport Road?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Living in <strong>Apartments Near Airport Road</strong> offers excellent connectivity to the rest of the city, proximity to employment hubs, and potential for high returns on investment.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        14. Does the project have good connectivity?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Absolutely. Being on NH-44 ensures seamless connectivity to the airport, IT parks, and major parts of Bangalore.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        15. How do I book a site visit?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">You can easily book a site visit or request more details by filling out the enquiry form or contacting us directly via phone or WhatsApp.</p>
-                </details>
-                
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        16. Are there Studio Apartments Devanahalli available?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Yes, Sattva Aeropolis features premium <strong>Studio Apartments Devanahalli</strong> ideal for investment and comfortable living.</p>
-                </details>
-
-                <details style="background: var(--bg-white); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-light); cursor: pointer;">
-                    <summary style="font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        17. What is the total land area of Phase 2?
-                        <span style="color: var(--accent-green); font-size: 1.5rem; line-height: 1;">+</span>
-                    </summary>
-                    <p style="margin-top: 0.8rem; color: var(--text-light); line-height: 1.6;">Phase 2 covers approximately 1.72 to 2.4 acres within the larger 10.32-acre township.</p>
-                </details>
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Sattva Aeropolis Devanahalli?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sattva Aeropolis is a premium high-rise residential project located in Devanahalli, near the Kempegowda International Airport.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where is the project located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">It is strategically located on the Main NH-44 (International Airport Road) in Devanahalli, Bengaluru.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What types of apartments are available?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project offers a variety of configurations, including <strong>Studio Apartments Devanahalli</strong>, 1 BHK, 2 BHK, and 3 BHK units.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">Is it a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, investing in <strong>Apartments Near Bangalore Airport</strong> offers excellent capital appreciation and high rental yields due to rapid infrastructure development.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Who is the developer of this project?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is developed by the renowned Sattva Group, known for its high-quality residential and commercial developments.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">Are there 1 BHK Apartments Devanahalli available in this project?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, there are well-designed <strong>1 BHK Apartments Devanahalli</strong> perfect for young professionals and small families.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">How can I check the Sattva Aeropolis Floor Plan?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can view the detailed floor plans, including the <strong>Sattva Aeropolis Floor Plan</strong> for Studio and 1 BHK layouts, in the "Unit Plans" section of this website.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">What is the starting Sattva Aeropolis Price?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The indicative starting <strong>Sattva Aeropolis Price</strong> for Studio apartments is ~₹45.77 Lakhs*. Please enquire for exact and updated pricing.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">Are there New Launch Apartments Devanahalli in Phase 2?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Phase 2 features <strong>New Launch Apartments Devanahalli</strong> with modern amenities and lifestyle-focused design.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">What amenities are provided?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Residents can enjoy a range of amenities including a swimming pool, gymnasium, kids' play area, multipurpose hall, and lush green landscaped gardens.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">Is the project RERA approved?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Phase 2 is RERA approved with Registration No: PRM/KA/RERA/1250/303/PR/250925/008119.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">When is the expected possession date?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The expected possession date for Phase 2 is October 2028, as per RERA guidelines.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">Why should I buy Apartments Near Airport Road?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Living in <strong>Apartments Near Airport Road</strong> offers excellent connectivity to the rest of the city, proximity to employment hubs, and potential for high returns on investment.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">Does the project have good connectivity?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Absolutely. Being on NH-44 ensures seamless connectivity to the airport, IT parks, and major parts of Bangalore.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">How do I book a site visit?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can easily book a site visit or request more details by filling out the enquiry form or contacting us directly via phone or WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">Are there Studio Apartments Devanahalli available?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Sattva Aeropolis features premium <strong>Studio Apartments Devanahalli</strong> ideal for investment and comfortable living.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">What is the total land area of Phase 2?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Phase 2 covers approximately 1.72 to 2.4 acres within the larger 10.32-acre township.</p>
+                    </div>
+                </div>
             </div>
-            
-            <style>
-                details > summary::-webkit-details-marker {
-                    display: none;
-                }
-                details[open] summary span {
-                    transform: rotate(45deg);
-                    display: inline-block;
-                    transition: transform 0.2s ease;
-                }
-                details:not([open]) summary span {
-                    transform: rotate(0deg);
-                    display: inline-block;
-                    transition: transform 0.2s ease;
-                }
-            </style>
         </div>
     </section>
 
@@ -1634,6 +1737,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
                     <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2 (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
                     <input type="text" name="name" required placeholder="Enter your full name" />
                     <input type="email" name="email" required placeholder="your.email@example.com" />
@@ -1804,6 +1908,7 @@
         </div>
     </div>
 
+    <script src="/js/project-page.js"></script>
     <script>
         function toggleDetailsPanel() {
             const panel = document.getElementById('detailsPanel');
@@ -1902,60 +2007,15 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             collectAllImages();
-
-            const revealTargets = document.querySelectorAll('section .reveal');
-            revealTargets.forEach((el, i) => {
-                el.classList.add('reveal');
-                el.style.transitionDelay = (Math.min(i % 6, 4) * 45) + 'ms';
-            });
-
-            if ('IntersectionObserver' in window) {
-                const obs = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.12 });
-                revealTargets.forEach(el => obs.observe(el));
-            }
+            initProjectPageScrollReveal('section .reveal');
         });
 
         // Forms
         // Forms are submitted directly to Web3Forms (no custom submit handlers required).
 
 
-        // Active nav highlight
-        const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-        const navSections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
-        function updateActiveNav() {
-            const current = navSections.filter(section => section.getBoundingClientRect().top <= 140).pop();
-            navLinks.forEach(a => {
-                a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
-            });
-        }
-        window.addEventListener('scroll', updateActiveNav);
-        updateActiveNav();
-
-        // Smooth scrolling for nav menu links (accounts for sticky nav height
-        // and updates the URL hash without letting the page's <base href>
-        // tag hijack the navigation into a full page load).
-        navLinks.forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const nav = document.querySelector('nav');
-                    const navHeight = nav ? nav.offsetHeight : 0;
-                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                    history.pushState(null, '', window.location.pathname + href);
-                }
-            });
-        });
+        initProjectPageSmoothScroll();
+        initProjectPageActiveNav();
 
         // Zendesk
         (function(){

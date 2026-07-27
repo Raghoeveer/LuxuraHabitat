@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assetz Palmscape Devanahalli: Price, Layout, Possession & RERA Details | Luxura Habitat</title>
@@ -167,7 +185,7 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Assetz Palmscape: Price, Layout, Possession &amp; RERA Details</h1>
           <div class="article-meta">
-            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 29, 2026</span><span>&bull;</span><span>9 Min Read</span>
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 29, 2026</span><span>&bull;</span><span>9 Min Read</span>
           </div>
         </header>
         <div class="article-content">
@@ -213,7 +231,7 @@
               <tr><td>Villa Plot</td><td>3,000+ sq.ft.</td><td>₹1.80 Cr+</td></tr>
             </tbody>
           </table>
-          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Prices are indicative and subject to change. Contact Narayanan for verified current pricing and availability.</p>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Prices are indicative and subject to change. Contact us for verified current pricing and availability.</p>
 
           <h2>5. Legal and RERA Verification</h2>
           <p>At Luxura Habitat, no project recommendation is made before legal verification. For Assetz Palmscape:</p>
@@ -260,7 +278,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by Narayanan Rajesh</h5>
+              <h5>Written by the Luxura Habitat Team</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
             </div>
           </div>

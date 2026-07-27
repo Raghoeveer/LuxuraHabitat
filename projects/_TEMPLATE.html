@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+  LUXURA HABITAT — new project page starting template.
+
+  This is NOT a full page — it's a lean skeleton of the parts that are
+  genuinely shared/structural across all project pages, already wired to
+  the consolidated pattern (see docs/adding-a-project.md for the full
+  checklist). Copy an existing project page for the actual visual design
+  (hero photography, amenity grid, pricing table, etc.) — each project's
+  look is intentionally its own, tied to that developer's branding — but
+  build the pieces below from THIS file, not from copy-pasting whatever
+  page happens to be open, since that's exactly how the drift this
+  template exists to prevent got introduced in the first place.
+
+  Do not add this file to sitemap.xml — it is a template, not a real page.
+-->
+<html lang="en-IN">
+<head>
+    <!-- Images for this project should live in a clean, dedicated path —
+         e.g. /images/projects/<slug>/ — not a copy of the
+         additional_websites/<Folder>/ convention older pages use. That
+         convention is a known architectural debt (see Phase 7 of the
+         soft-toasting-chipmunk consistency plan) and should not be
+         extended to new pages. If you must match it short-term, at least
+         do not point any <meta> tag or <link rel="preload"> at a
+         DIFFERENT project's folder — that exact bug was found and fixed
+         on Sattva La Vita. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Project Name] [Locality] — [1-2 line value prop] | Luxura Habitat</title>
+
+    <meta name="description" content="[150-160 char description: project name, locality, configuration, price range, RERA status]">
+    <meta name="keywords" content="[project name], [project name] [locality], [project name] price, [project name] floor plan">
+    <meta name="author" content="Luxura Habitat">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta name="geo.region" content="IN-KA">
+    <meta name="geo.placename" content="[Locality], Bengaluru">
+
+    <link rel="canonical" href="https://luxurahabitat.com/projects/[slug]/">
+
+    <!-- Open Graph / Twitter — always use a real property PHOTO for these,
+         never a developer logo, and always the ABSOLUTE, correctly-encoded
+         URL of an image that belongs to THIS project. -->
+    <meta property="og:title" content="[Project Name] — [value prop]">
+    <meta property="og:description" content="[same as meta description or a punchier variant]">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/[slug]/[hero-photo].webp">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/[slug]/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/[slug]/[hero-photo].webp">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD: RealEstateListing / Organization stubs. Do NOT add a
+         BreadcrumbList block here — /js/seo.js already generates a
+         correct one automatically from the URL path and <h1> on every
+         page that loads it. A hand-written one will create a DUPLICATE,
+         which is the exact bug fixed across 6 pages in this consistency
+         pass. Do not add author/employee Person schema without checking
+         current guidance — leave that to whoever owns compliance. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateListing",
+        "name": "[Project Name]",
+        "description": "[project description]",
+        "url": "https://luxurahabitat.com/projects/[slug]/"
+    }
+    </script>
+
+    <style>
+        /* Copy the design-system variables + component styles from a
+           recent project page (e.g. sattva-city or sattva-sanio are the
+           most structurally up to date) rather than starting from
+           scratch. Keep this project's own accent colors — do not reuse
+           another project's --primary/--accent values verbatim. */
+    </style>
+</head>
+<body>
+
+    <nav>
+        <!-- Copy nav markup from a recent page. Whatever the nav element
+             actually is on this page (<nav>, or <header class="site-header">
+             wrapping a <nav>), /js/project-page.js's getProjectPageNavEl()
+             will find it automatically as long as it's a <nav>, a
+             <header>, or has class="site-header" — don't invent a fourth
+             pattern without also updating that helper. -->
+        <ul class="nav-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#form">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <!-- Builder logo goes here, in a .hero-logo wrapper — see the
+             "hero logo" fix done across all 12 pages for the expected
+             markup/placement (top-left of the hero content, above the
+             badge/headline). -->
+    </section>
+
+    <section id="about"><!-- About the project --></section>
+    <section id="amenities"><!-- Amenities grid --></section>
+    <section id="pricing"><!-- Pricing / floor plans --></section>
+    <section id="gallery"><!-- Image gallery --></section>
+
+    <!-- FAQ — this is the ONE canonical pattern now used on all 7 pages
+         that have an FAQ (button + schema.org microdata, Pattern A).
+         Do not use <details>/<summary> or a static non-interactive grid
+         for a new page — those were both migrated away from in this
+         consistency pass specifically so there'd be one pattern left.
+         Keep the visible questions and the JSON-LD below in sync —
+         several pages were found with the two silently drifting apart. -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">[Question 1]</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">[Answer 1]</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- .faq / .faq-list / .faq-item / .faq-question / .faq-answer /
+         .faq-arrow CSS: copy from sattva-city (or any migrated page) and
+         swap in this project's own color variables. Don't copy the
+         colors verbatim. -->
+
+    <!-- Matching FAQPage JSON-LD — must have the exact same questions,
+         in the same order, as the visible markup above. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "[Question 1]",
+                "acceptedAnswer": { "@type": "Answer", "text": "[Answer 1]" }
+            }
+        ]
+    }
+    </script>
+
+    <section id="form"><!-- Lead form (Web3Forms) --></section>
+
+    <!-- Similar Projects / Related Market Insights — hand-authored per
+         page, NOT auto-generated (js/seo.js's `clusters` object looks
+         like it should drive this but its own code comment confirms
+         that dynamic injection was already replaced by these hardcoded
+         cards — editing `clusters` alone will not create any visible
+         link). When this project goes live, also add a card for it into
+         the SAME grid on its sibling pages in this corridor, not just
+         build this one — link equity should flow both ways. -->
+    <section class="project-footer-strip">
+        <!-- .proj-compare-grid cards linking to sibling projects,
+             .insight-grid cards linking to relevant blog posts. -->
+    </section>
+
+    <footer>
+        <!-- Copy the NAP (Name/Address/Phone) block and RERA disclaimer
+             paragraph verbatim from any existing page — these are legally
+             load-bearing (RERA advertising rules require identifying the
+             registered agent) and must stay word-for-word consistent
+             site-wide, not reworded per project. -->
+    </footer>
+
+    <!-- Shared behavior — must load BEFORE the inline script below that
+         calls these functions. See js/project-page.js for what each does
+         and why each is a parameterized function rather than one-size-
+         fits-all (different pages have genuinely different reveal
+         selectors / active-nav configs, and a truly generic version would
+         have silently changed pages that didn't ask for the change). -->
+    <script src="/js/project-page.js"></script>
+    <script>
+        initProjectPageSmoothScroll();
+        initProjectPageScrollReveal('section, .amenity-card, .gallery-item, .faq-item');
+        initProjectPageActiveNav();
+        // initProjectPageNavShadow(); // only if this page wants a shadow-on-scroll nav
+    </script>
+
+    <!-- seo.js auto-generates this page's BreadcrumbList JSON-LD from the
+         URL + <h1> — no manual breadcrumb code needed. -->
+    <script src="/js/seo.js"></script>
+
+    <!-- Zendesk widget — copy the snippet from any existing page. If this
+         page has a fixed bottom CTA bar, also add the
+         `iframe#launcher, .zEWidget-launcher { margin-bottom: ...; }`
+         fix (see assetz-palmscape or orchid-salisbury) so the chat
+         launcher doesn't cover it. -->
+
+</body>
+</html>

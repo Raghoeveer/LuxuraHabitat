@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/Salisbury/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Goyal and Co Orchid Salisbury - Premium high-rise residential community in Thanisandra, Bangalore. 660+ luxury apartments with 7 independent towers, modern amenities, and excellent connectivity. RERA approved.">
     <meta name="keywords" content="Goyal Orchid Salisbury, premium apartments Bangalore, luxury flats Thanisandra, high-rise residential, 2BHK 3BHK apartments, Agrahara Layout">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
     <meta property="og:title" content="Goyal and Co Orchid Salisbury | Premium High-Rise Apartments in Thanisandra, Bangalore">
     <meta property="og:description" content="Luxury residential community with 660+ premium apartments across 7 high-rise towers. Located on Thanisandra Main Road with world-class amenities and strategic connectivity to Manyata Tech Park & Airport.">
     <meta property="og:image" content="https://luxurahabitat.com/projects/orchid-salisbury/sal.jpg">
@@ -124,28 +142,6 @@
         "highPrice": "17000000",
         "availability": "https://schema.org/InStock"
       }
-    }
-    </script>
-
-    <!-- Structured Data / JSON-LD – BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://luxurahabitat.com/projects/orchid-salisbury/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Goyal Orchid Salisbury",
-          "item": "https://luxurahabitat.com/projects/orchid-salisbury/"
-        }
-      ]
     }
     </script>
 
@@ -3300,6 +3296,7 @@
         </div>
     </div>
 
+    <script src="/js/project-page.js"></script>
     <script>
         // Mobile Menu Toggle
         function toggleMobileMenu() {
@@ -3479,37 +3476,8 @@
             if (event.target.id === 'lightbox') closeLightbox();
         });
 
-        // Reveal animation on scroll
-        const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        revealElements.forEach(element => observer.observe(element));
-
-        // Smooth scrolling for nav menu links (accounts for sticky nav height
-        // and updates the URL hash without letting the page's <base href>
-        // tag hijack the navigation into a full page load).
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const nav = document.querySelector('nav');
-                        const navHeight = nav ? nav.offsetHeight : 0;
-                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                        history.pushState(null, '', window.location.pathname + href);
-                    }
-                }
-            });
-        });
+        initProjectPageScrollReveal('.reveal');
+        initProjectPageSmoothScroll();
     </script>
 
     <!-- Start of  Zendesk Widget script -->

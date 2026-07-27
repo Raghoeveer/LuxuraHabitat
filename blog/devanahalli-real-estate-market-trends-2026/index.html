@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devanahalli Real Estate Market Trends 2026: Bangalore's Airport Corridor | Luxura Habitat</title>
-  <meta name="description" content="Comprehensive analysis of Devanahalli property market trends 2026. Covers infrastructure drivers, price appreciation data, buyer profiles and investment outlook from Narayanan Rajesh.">
+  <meta name="description" content="Comprehensive analysis of Devanahalli property market trends 2026. Covers infrastructure drivers, price appreciation data, buyer profiles and investment outlook from our team.">
   <link rel="canonical" href="https://luxurahabitat.com/blog/devanahalli-real-estate-market-trends-2026/">
   <meta property="og:title" content="Devanahalli Real Estate Market Trends 2026: Bangalore's Airport Corridor | Luxura Habitat">
-  <meta property="og:description" content="Comprehensive analysis of Devanahalli property market trends 2026. Covers infrastructure drivers, price appreciation data, buyer profiles and investment outlook from Narayanan Rajesh.">
+  <meta property="og:description" content="Comprehensive analysis of Devanahalli property market trends 2026. Covers infrastructure drivers, price appreciation data, buyer profiles and investment outlook from our team.">
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,7 +185,7 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Devanahalli Real Estate Market Trends 2026: Bangalore's Airport Corridor</h1>
           <div class="article-meta">
-            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 21, 2026</span><span>&bull;</span><span>8 Min Read</span>
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 21, 2026</span><span>&bull;</span><span>8 Min Read</span>
           </div>
         </header>
         <div class="article-content">
@@ -253,7 +271,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by Narayanan Rajesh</h5>
+              <h5>Written by the Luxura Habitat Team</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
             </div>
           </div>

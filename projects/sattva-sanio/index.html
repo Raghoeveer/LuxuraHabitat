@@ -2,6 +2,24 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/SANIO/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +28,7 @@
         content="Sattva Sanio offers ultra-luxury 3, 4 BHK & Duplex residences on Old Madras Road (NH-4), Bangalore. 10.3 Acres | 7 Iconic Towers | 1000+ Premium Homes. Register for Pre-Launch Offers.">
     <meta name="keywords"
         content="Sattva Sanio, Sattva Saniyo, Sattva Sanio Old Madras Road, apartments on Old Madras Road, luxury flats in Bangalore, 3 BHK flats OMR Bangalore, 4 BHK flats Bangalore, Sattva group new launch, premium residences KR Puram, real estate Whitefield">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://luxurahabitat.com/projects/sattva-sanio/">
 
@@ -106,28 +124,6 @@
         "priceCurrency": "INR",
         "availability": "https://schema.org/PreOrder"
       }
-    }
-    </script>
-
-    <!-- Structured Data / JSON-LD  BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://luxurahabitat.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Sattva Sanio",
-          "item": "https://luxurahabitat.com/"
-        }
-      ]
     }
     </script>
 
@@ -2204,6 +2200,7 @@
             style="display:flex;flex-direction:column;gap:0.8rem;">
             <input type="hidden" name="access_key" value="50a82aad-4d8f-489f-a7f3-0740334db877">
             <input type="hidden" name="subject" value="New Inquiry  Sattva Sanio">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
             <div class="form-group" style="margin-bottom:0.8rem;">
                 <label
                     style="color:var(--primary-dark);display:block;margin-bottom:0.35rem;font-weight:600;font-size:0.88rem;">Full
@@ -2380,6 +2377,7 @@
                 <form class="hero-form" action="https://api.web3forms.com/submit" method="POST" id="heroLeadForm">
                     <input type="hidden" name="access_key" value="50a82aad-4d8f-489f-a7f3-0740334db877">
                     <input type="hidden" name="subject" value="New Lead - Sattva Sanio Hero Form">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <input type="text" name="name" autocomplete="name" required placeholder="Your full name" aria-label="Full name">
                     <input type="tel" name="phone" autocomplete="tel" required placeholder="Mobile number *" aria-label="Phone number">
                     <input type="email" name="email" autocomplete="email" placeholder="Email address (optional)" aria-label="Email address">
@@ -3028,6 +3026,7 @@
                 <form id="leadForm" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="50a82aad-4d8f-489f-a7f3-0740334db877">
                     <input type="hidden" name="subject" value="New Lead  Sattva Sanio Contact Form">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <div class="form-group">
                         <label>Full Name <span class="required">*</span></label>
                         <input type="text" name="name" required placeholder="Your full name">
@@ -3234,6 +3233,7 @@
         <span>Call Us Now</span>
     </a>
 
+    <script src="/js/project-page.js"></script>
     <script>
         // ===== LIGHTBOX =====
         var currentImageIndex = 0;
@@ -3314,89 +3314,14 @@
             document.getElementById('panelOverlay').classList.toggle('active');
         }
 
-        // ===== FAQ TOGGLE =====
-        function toggleFAQ(btn) {
-            var answer = btn.nextElementSibling;
-            var isOpen = answer.classList.contains('open');
-            // Close all
-            document.querySelectorAll('.faq-answer.open').forEach(function (a) { a.classList.remove('open'); });
-            document.querySelectorAll('.faq-question.open').forEach(function (b) { b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
-            if (!isOpen) {
-                answer.classList.add('open');
-                btn.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        // ===== SMOOTH SCROLL =====
-        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-            anchor.addEventListener('click', function (e) {
-                var href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    var target = document.querySelector(href);
-                    if (target) {
-                        // Offset by the sticky nav's live height so section headings
-                        // aren't scrolled underneath it.
-                        var nav = document.querySelector('nav');
-                        var navHeight = nav ? nav.offsetHeight : 0;
-                        var targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-
-        // ===== SCROLL REVEAL =====
-        var revealEls = document.querySelectorAll('section, .floor-card, .amenity-card, .usp-card, .gallery-item, .spec-card, .plan-note, .stat-item, .pricing-card, .faq-item, .proximity-section');
-        revealEls.forEach(function (el, i) {
-            el.classList.add('reveal');
-            el.style.transitionDelay = Math.min(i % 6, 4) * 45 + 'ms';
-        });
-
-        if ('IntersectionObserver' in window) {
-            var revealObserver = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            revealEls.forEach(function (el) { revealObserver.observe(el); });
-        } else {
-            revealEls.forEach(function (el) { el.classList.add('visible'); });
-        }
-
-        // ===== ACTIVE NAV =====
-        var navLinkEls = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-        var navSections = navLinkEls.map(function (link) { return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
-
-        function updateActiveNav() {
-            var current = navSections.filter(function (sec) { return sec.getBoundingClientRect().top <= 140; }).pop();
-            navLinkEls.forEach(function (link) {
-                link.classList.toggle('active', !!(current && link.getAttribute('href') === '#' + current.id));
-            });
-            if (current && window.scrollY > 0) {
-                var hash = '#' + current.id;
-                if (history.replaceState && window.location.hash !== hash) {
-                    var cleanUrl = window.location.pathname.replace(/\/index\.html$/i, '') + window.location.search + hash;
-                    history.replaceState(null, null, cleanUrl);
-                }
-            }
-        }
-
-        window.addEventListener('scroll', function () {
-            var nav = document.querySelector('nav');
-            nav.style.boxShadow = window.scrollY > 50 ? '0 4px 14px rgba(0,0,0,0.12)' : '0 2px 8px rgba(0,0,0,0.08)';
-            updateActiveNav();
-        });
-        updateActiveNav();
-
         // ===== INIT =====
         document.addEventListener('DOMContentLoaded', function () {
             initializeLightbox();
         });
+        initProjectPageSmoothScroll();
+        initProjectPageScrollReveal('section, .floor-card, .amenity-card, .usp-card, .gallery-item, .spec-card, .plan-note, .stat-item, .pricing-card, .faq-item, .proximity-section');
+        initProjectPageActiveNav({ useReplaceState: true });
+        initProjectPageNavShadow();
     </script>
 <script src="/js/seo.js"></script>
 </body>

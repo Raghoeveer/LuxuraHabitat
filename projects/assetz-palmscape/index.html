@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
     <base href="/additional_websites/assetz palmscape/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Assetz Palmscape - Premium gated community villa plotted development in Devanahalli, North Bangalore. 450 luxury plots with 60%+ open spaces, Miyawaki forest, and world-class amenities. Pre-launch EOI with ₹3 Lakhs token.">
     <meta name="keywords" content="luxury villa plots Bangalore, Devanahalli, premium plotted development, villa plots North Bangalore, gated community, Assetz Palmscape, IVC Road">
-    <meta name="author" content="Narayanan Rajesh — Luxura Habitat">
+    <meta name="author" content="Luxura Habitat">
     <meta property="og:title" content="Assetz Palmscape - Premium Villa Plotted Development in Devanahalli">
     <meta property="og:description" content="Luxury villa plots in Devanahalli, North Bangalore. 450 premium units with 60%+ open spaces, eco-friendly features, and strategic connectivity. Pre-launch pricing available.">
     <meta property="og:image" content="Assetz-Palmscape-grand-entrance-wide-angle-image.webp">
@@ -2284,57 +2302,6 @@
     }
     </script>
 
-    <!-- BreadcrumbList Schema for Navigation -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": ""
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "About Project",
-                "item": "#about"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Plot Sizes",
-                "item": "#floorplans"
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Master Plan",
-                "item": "#masterplan"
-            },
-            {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Amenities",
-                "item": "#amenities"
-            },
-            {
-                "@type": "ListItem",
-                "position": 6,
-                "name": "Gallery",
-                "item": "#gallery"
-            },
-            {
-                "@type": "ListItem",
-                "position": 7,
-                "name": "Contact",
-                "item": "#form"
-            }
-        ]
-    }
-    </script>
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
@@ -3146,6 +3113,7 @@
         </div>
     </div>
 
+    <script src="/js/project-page.js"></script>
     <script>
         // Hero Form submission
         function handleHeroFormSubmit(event) {
@@ -3360,64 +3328,9 @@
             }, 4000);
         }
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        // Offset by the sticky nav's live height so section headings
-                        // aren't scrolled underneath it.
-                        const nav = document.querySelector('nav');
-                        const navHeight = nav ? nav.offsetHeight : 0;
-                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-                        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                        // Build an absolute path so the page's <base href> tag can't
-                        // hijack relative URL resolution here.
-                        history.pushState(null, '', window.location.pathname + href);
-                    }
-                }
-            });
-        });
-
-        // Scroll animations
-        const revealTargets = document.querySelectorAll('section, .floor-card, .amenity-card, .usp-card, .gallery-item, .spec-card, .plan-note');
-        revealTargets.forEach((element, index) => {
-            element.classList.add('reveal');
-            element.style.transitionDelay = `${Math.min(index % 6, 4) * 45}ms`;
-        });
-
-        if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.12 });
-
-            revealTargets.forEach(element => revealObserver.observe(element));
-        }
-
-        // Active navigation
-        const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-        const navSections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-
-        function updateActiveNav() {
-            const current = navSections.filter(section => section.getBoundingClientRect().top <= 130).pop();
-            navLinks.forEach(link => {
-                link.classList.toggle('active', current && link.getAttribute('href') === `#${current.id}`);
-            });
-        }
-
-        window.addEventListener('scroll', function() {
-            updateActiveNav();
-        });
-
-        updateActiveNav();
+        initProjectPageSmoothScroll();
+        initProjectPageScrollReveal('section, .floor-card, .amenity-card, .usp-card, .gallery-item, .spec-card, .plan-note');
+        initProjectPageActiveNav();
 
         // Escape key for panel
         document.addEventListener('keydown', function(event) {

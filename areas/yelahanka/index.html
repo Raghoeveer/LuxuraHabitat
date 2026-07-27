@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
+      // only covers outbound http(s) links, not these schemes.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      }, true);
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yelahanka Real Estate Guide 2026: Projects, Prices, Metro &amp; Market Trends | Luxura Habitat</title>
-  <meta name="description" content="The complete guide to buying property in Yelahanka, North Bangalore. Explore luxury projects, upcoming metro impact, school rankings, rental yields, and expert market insights from Narayanan Rajesh, Luxura Habitat.">
+  <meta name="description" content="The complete guide to buying property in Yelahanka, North Bangalore. Explore luxury projects, upcoming metro impact, school rankings, rental yields, and expert market insights from the Luxura Habitat team.">
   <meta name="keywords" content="Yelahanka real estate 2026, buy property Yelahanka, luxury apartments Yelahanka, Yelahanka property prices, Sattva Lumina, Brigade Eternia, Concorde Mayfair, Assetz Zen Sato, Yelahanka metro Blue Line, North Bangalore real estate">
   <link rel="canonical" href="https://luxurahabitat.com/areas/yelahanka/">
 
@@ -698,7 +716,7 @@
                 </tr>
               </tbody>
             </table>
-            <p style="font-size: 0.78rem; color: #888; margin-top: 12px;">* Prices are indicative. For verified current pricing, contact Narayanan Rajesh directly.</p>
+            <p style="font-size: 0.78rem; color: #888; margin-top: 12px;">* Prices are indicative. For verified current pricing, contact us directly.</p>
           </div>
         </div>
       </div>
@@ -788,7 +806,7 @@
       <div class="hub-container">
         <p class="hub-section-label">Active Listings</p>
         <h2 class="hub-section-title">Premium Projects in Yelahanka Right Now</h2>
-        <p class="hub-section-intro">These five Tier-1 developer launches represent the best of what Yelahanka's luxury residential market has to offer. Each has been personally vetted by Narayanan Rajesh for RERA compliance, developer track record, and investment merit.</p>
+        <p class="hub-section-intro">These five Tier-1 developer launches represent the best of what Yelahanka's luxury residential market has to offer. Each has been personally vetted by our team for RERA compliance, developer track record, and investment merit.</p>
         <div class="projects-grid">
 
           <a href="/projects/sattva-lumina/" class="project-hub-card">
@@ -988,7 +1006,7 @@
           </div>
           <div class="faq-item">
             <h3>What is the average price per sq.ft in Yelahanka in 2026?</h3>
-            <p>In the luxury new-launch segment (projects like Assetz Zen & Sato, Brigade Eternia), prices currently range from ₹8,500 to ₹11,500 per sq.ft. The integrated township segment (Sattva Lumina) offers a slightly more accessible entry between ₹7,500 and ₹9,200 psf. Resale apartments in established parts of Yelahanka are available between ₹4,500 and ₹6,500 psf. All figures are indicative; contact Narayanan for verified current pricing.</p>
+            <p>In the luxury new-launch segment (projects like Assetz Zen & Sato, Brigade Eternia), prices currently range from ₹8,500 to ₹11,500 per sq.ft. The integrated township segment (Sattva Lumina) offers a slightly more accessible entry between ₹7,500 and ₹9,200 psf. Resale apartments in established parts of Yelahanka are available between ₹4,500 and ₹6,500 psf. All figures are indicative; contact us for verified current pricing.</p>
           </div>
           <div class="faq-item">
             <h3>How far is Yelahanka from the airport?</h3>
@@ -1110,9 +1128,9 @@
     <!-- ===== CTA BANNER ===== -->
     <section class="cta-banner">
       <h2>Ready to Buy in Yelahanka?</h2>
-      <p>Get independent, conflict-free guidance from Narayanan Rajesh. We are not tied to any one developer — our advice is based entirely on your requirements.</p>
+      <p>Get independent, conflict-free guidance from our team. We are not tied to any one developer — our advice is based entirely on your requirements.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/918438344093?text=Hello%20Narayanan%2C%20I%20am%20interested%20in%20buying%20property%20in%20Yelahanka." class="btn-copper">Chat on WhatsApp</a>
+        <a href="https://wa.me/918438344093?text=Hello%2C%20I%20am%20interested%20in%20buying%20property%20in%20Yelahanka." class="btn-copper">Chat on WhatsApp</a>
         <a href="/contact/" class="btn-outline-white">Schedule a Consultation</a>
       </div>
     </section>
