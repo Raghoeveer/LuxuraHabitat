@@ -674,7 +674,8 @@
                 position: fixed !important;
                 bottom: calc(15px + env(safe-area-inset-bottom, 0px)) !important;
                 left: 15px !important;
-                width: calc(100% - 30px) !important;
+                right: 15px !important;
+                width: auto !important;
                 background: #fff;
                 border-radius: 12px;
                 overflow: hidden;
@@ -1825,6 +1826,14 @@
                 launcher: {
                     chatLabel: {
                         '*': 'Chat now'
+                    }
+                },
+                // Keeps the chat bubble clear of the mobile Call/WhatsApp/Enquire bar,
+                // which otherwise sits underneath it (fixed to the bottom of the screen).
+                offset: {
+                    mobile: {
+                        horizontal: '15px',
+                        vertical: '90px'
                     }
                 }
             }
