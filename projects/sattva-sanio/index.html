@@ -233,6 +233,7 @@
             --hero-overlay: rgba(10, 18, 30, 0.68);
         }
 
+        html { overflow-x: hidden; }
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -448,7 +449,7 @@
             width: 100%;
             min-height: calc(100vh - 110px);
             display: grid;
-            grid-template-columns: minmax(340px, 0.82fr) minmax(280px, 0.52fr);
+            grid-template-columns: minmax(0, 0.82fr) minmax(0, 0.52fr);
             align-items: center;
             gap: clamp(1.5rem, 4vw, 4.5rem);
             max-width: 1440px;

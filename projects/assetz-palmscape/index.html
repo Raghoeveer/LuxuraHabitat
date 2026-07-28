@@ -75,6 +75,7 @@
             --success: #4caf50;
         }
 
+        html { overflow-x: hidden; }
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -290,7 +291,7 @@
             width: 100%;
             min-height: calc(100vh - 108px);
             display: grid;
-            grid-template-columns: minmax(360px, 0.82fr) minmax(280px, 0.5fr);
+            grid-template-columns: minmax(0, 0.82fr) minmax(0, 0.5fr);
             align-items: center;
             gap: clamp(1.5rem, 4vw, 4.5rem);
             max-width: 1440px;
@@ -1843,6 +1844,10 @@
 
             .hero-media {
                 display: none;
+                width: 100%;
+                left: 0;
+                right: 0;
+                transform: none;
             }
 
             .hero {

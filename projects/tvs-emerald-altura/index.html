@@ -118,6 +118,7 @@
             --success: #4caf50;
         }
 
+        html { overflow-x: hidden; }
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -349,7 +350,7 @@
             width: 100%;
             min-height: calc(100vh - 108px);
             display: grid;
-            grid-template-columns: minmax(340px, 1fr) minmax(280px, 0.55fr);
+            grid-template-columns: minmax(0, 1fr) minmax(0, 0.55fr);
             grid-template-rows: auto;
             align-items: center;
             gap: clamp(1.5rem, 4vw, 4rem);
