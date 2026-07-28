@@ -20,7 +20,7 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Book Sattva Forest Ridge Apartments at JP Nagar 9th Phase, Bangalore. Premium 1, 2 & 3 BHK Homes Near Kanakapura Road. Get Floor Plans, Price, Brochure & Offers.">
     <meta name="keywords" content="Sattva Forest Ridge, Sattva Forest Ridge Anjanapura, Premium 1, 2 & 3 BHK Apartments Bangalore, premium apartments Anjanapura, Sattva Group Bangalore">
     <meta name="author" content="Sattva Forest Ridge Team">
@@ -672,7 +672,7 @@
             .mobile-sticky-bar {
                 display: flex !important;
                 position: fixed !important;
-                bottom: 15px !important;
+                bottom: calc(15px + env(safe-area-inset-bottom, 0px)) !important;
                 left: 15px !important;
                 width: calc(100% - 30px) !important;
                 background: #fff;
@@ -696,9 +696,9 @@
             .sticky-wa { background: #25D366; }
             .sticky-contact { background: var(--accent-warm); }
 
-            body { padding-bottom: 55px; }
+            body { padding-bottom: calc(55px + env(safe-area-inset-bottom, 0px)); }
             iframe#launcher, .zEWidget-launcher {
-                margin-bottom: 60px !important;
+                margin-bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
             }
         }
         .mobile-sticky-bar { display: none; }
@@ -1845,6 +1845,25 @@
         <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Forest%20Ridge%20Phase%202%20and%20available%20offers" class="sticky-wa" target="_blank" rel="noopener">WhatsApp</a>
         <a href="#form" class="sticky-contact">Enquire</a>
     </div>
+    <script>
+        // Some Android browsers position `position: fixed` elements against the
+        // layout viewport rather than the visual viewport, so the sticky bar can
+        // render below what's actually on screen once a dynamic address/gesture
+        // bar is factored in. iOS Safari doesn't have this gap, so this is a
+        // no-op there; on affected browsers it nudges the bar back into view.
+        (function () {
+            var bar = document.querySelector('.mobile-sticky-bar');
+            if (!bar || !window.visualViewport) return;
+            function reposition() {
+                var vv = window.visualViewport;
+                var gap = window.innerHeight - (vv.height + vv.offsetTop);
+                bar.style.bottom = 'calc(15px + env(safe-area-inset-bottom, 0px) + ' + Math.max(Math.round(gap), 0) + 'px)';
+            }
+            window.visualViewport.addEventListener('resize', reposition);
+            window.visualViewport.addEventListener('scroll', reposition);
+            reposition();
+        })();
+    </script>
 
     <!-- seo.js auto-generates this page's BreadcrumbList JSON-LD from the
          URL + <h1> — no manual breadcrumb code needed. -->
