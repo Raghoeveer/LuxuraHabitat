@@ -1752,13 +1752,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             collectAllImages();
             initProjectPageScrollReveal('section .reveal');
+            initProjectPageActiveNav();
+            initProjectPageSmoothScroll();
         });
 
         // Forms
         // Forms are submitted directly to Web3Forms (no custom submit handlers required).
-
-        initProjectPageActiveNav();
-        initProjectPageSmoothScroll();
 
         // Zendesk Settings
         window.zESettings = {
