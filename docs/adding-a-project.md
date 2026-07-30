@@ -86,10 +86,19 @@ caused a real, shipped bug once.
   fine until there's enough inventory to justify a full hub page (see
   `why-invest-in-bagalur-main-road-real-estate` for the existing
   precedent).
-- Publish a dedicated `[project]-price-layout-rera`-style review post at
-  launch.
-- Publish a `[project]-vs-[closest-sibling]` comparison post within 1-2
-  weeks.
+- Don't default to the same two blog templates (review post + vs-sibling
+  comparison) for every project — that's a habit, not a strategy. Do
+  genuine keyword research specific to this project first: check Google
+  autocomplete and "People also ask" for the project name + locality +
+  builder, see what competing/aggregator sites already rank for on this
+  project, and identify real search intent (price/RERA/floor-plan,
+  locality comparisons, investment/ROI, commute/connectivity, school or
+  employer proximity, etc.) rather than assuming.
+- Publish 2 blog posts at launch based on what that research actually
+  turns up. A `[project]-price-layout-rera` review post and/or a
+  `[project]-vs-[closest-sibling]` comparison are fine outcomes if the
+  research supports them — but pick the 2 topics because the keywords
+  justify them, not because they're the default pattern.
 
 ## 4. Interlink — in both directions
 
