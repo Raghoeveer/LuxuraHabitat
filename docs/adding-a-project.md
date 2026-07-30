@@ -19,6 +19,11 @@ caused a real, shipped bug once.
   generates a correct one automatically from the URL and `<h1>`. A
   hand-written one creates a duplicate — this was a live bug on 6 pages
   before being fixed.
+- Keep `<meta name="description">` to ~150-160 characters. Google
+  truncates the SERP snippet past that, mid-sentence. Century Kindle
+  (183 chars) and Vajram Vivera's first draft (176 chars) both shipped
+  over the limit — check the actual rendered character count (not the
+  HTML-entity-escaped source string) before shipping a new page.
 - Add the builder's logo in a `.hero-logo` wrapper, top-left of the hero
   content, above the badge/headline — matching every other project page.
 - The nav bar's own logo (top-left of the page, not the hero) must be
