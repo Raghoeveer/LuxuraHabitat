@@ -9,13 +9,17 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
-      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-      // only covers outbound http(s) links, not these schemes.
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
         var href = link.getAttribute('href');
-        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
       }, true);
     </script>
 
@@ -1577,10 +1581,21 @@
     <section class="project-footer-strip">
       <div class="pfs-inner">
 
-        <span class="pfs-label">Sattva Group</span>
-        <h2 class="pfs-title">Other Sattva Group Projects in Bangalore</h2>
-        <p class="pfs-intro">Sattva Forest Ridge is currently our only listing on Kanakapura Road — explore other verified Sattva Group projects elsewhere in Bangalore. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
+        <span class="pfs-label">Sattva Group &amp; Kanakapura Road</span>
+        <h2 class="pfs-title">Other Verified Projects to Consider</h2>
+        <p class="pfs-intro">Explore other verified Sattva Group projects, plus Aparna Wonder Woods — the corridor's other Kanakapura Road flagship. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
         <div class="proj-compare-grid">
+      <a href="/projects/wonder-woods/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/wonder-woods-thumb.webp" alt="Aparna Wonder Woods">
+          <span class="proj-compare-badge">Kanakapura Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Aparna Wonder Woods</p>
+          <p class="proj-compare-detail">2, 2.5 &amp; 3 BHK · Mallasandra, Off Kanakapura Road</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
       <a href="/projects/sattva-city/" class="proj-compare-card">
         <div class="proj-compare-img-wrap">
           <img src="/images/projects-thumbs/sattva-city-thumb.webp" alt="Sattva City">
@@ -1622,6 +1637,14 @@
         <h2 class="pfs-title">Research &amp; Guides</h2>
         <p class="pfs-intro">Before you decide, read our independent research on the <a href="/areas/kanakapura-road/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Kanakapura Road corridor</a>. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
         <div class="insight-grid">
+      <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/" class="insight-card">
+        <img src="/images/projects/wonder-woods/wonder-woods-hero.jpg" alt="Aparna Wonder Woods vs Sattva Forest Ridge" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Comparison · 7 Min</span>
+          <h4 class="insight-card-title">Aparna Wonder Woods vs Sattva Forest Ridge: Which Fits You?</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
       <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="insight-card">
         <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-Gallery-1.webp" alt="Kanakapura Road Market Trends 2026" loading="lazy">
         <div class="insight-card-body">

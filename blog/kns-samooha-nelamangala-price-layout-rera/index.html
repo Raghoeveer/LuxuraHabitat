@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>KNS Samooha: Price, Plot Sizes &amp; RERA Review | Luxura Habitat</title>
+  <meta name="description" content="Independent review of KNS Samooha, Nelamangala — plot sizes, pricing by dimension, layout plan and RERA verification across all 3 phases.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/kns-samooha-nelamangala-price-layout-rera/">
+  <meta property="og:title" content="KNS Samooha: Price, Plot Sizes & RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of KNS Samooha, Nelamangala — plot sizes, pricing, layout plan and RERA verification across all 3 phases.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/kns-samooha-nelamangala-price-layout-rera/"
+        },
+        "headline": "KNS Samooha: Price, Plot Sizes & RERA Review",
+        "description": "Independent review of KNS Samooha, Nelamangala — plot sizes, pricing by dimension, layout plan and RERA verification across all 3 phases.",
+        "image": "https://luxurahabitat.com/images/projects/kns-samooha/kns-samooha-banner.webp",
+        "datePublished": "2026-08-01",
+        "dateModified": "2026-08-01",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/kns-samooha-nelamangala-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "KNS Samooha: Price, Plot Sizes & RERA Review", "item": "https://luxurahabitat.com/blog/kns-samooha-nelamangala-price-layout-rera/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>KNS Samooha Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">KNS Samooha: Price, Plot Sizes &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 1, 2026</span><span>&bull;</span><span>8 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/kns-samooha/kns-samooha-banner.webp" alt="KNS Samooha Price Layout RERA Review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Off Tumkur Road, roughly 2 minutes from the Bengaluru-Mysuru Expressway at Nelamangala, KNS Samooha is one of the largest plotted launches this corridor has seen — a 150-170 acre layout with around 2,500 plots, rolled out across three separate phases. This is a deep-dive review covering plot sizes, pricing, layout infrastructure, and RERA status for all three phases, plus our honest assessment of its investment merit.</p>
+
+          <h2>1. The Developer: KNS Group</h2>
+          <p>KNS Group (KNS Infra) is a Bengaluru-based developer with 18+ years of experience and 35+ completed projects. As with its Mysore Road launch KNS Sampada, Samooha isn't KNS Group's first project in this belt — sister developments KNS Alora, KNS Amora and KNS Ananta are already established nearby in the Kanegowdanhalli micro-market, giving buyers a visible local track record to check rather than taking a first-time launch on faith.</p>
+
+          <h2>2. Location: Nelamangala, Tumkur Road</h2>
+          <p>KNS Samooha sits in Kanegowdanhalli, off Tumkur Road, West/North-West Bengaluru. Key proximity points:</p>
+          <ul>
+            <li><strong>Bengaluru-Mysuru Expressway (Nelamangala):</strong> ~2 minutes</li>
+            <li><strong>Kanegowdanhalli State Forest:</strong> ~2 minutes</li>
+            <li><strong>Challaghatta Metro Station:</strong> ~15 minutes</li>
+            <li><strong>Kengeri Metro Station &amp; Bus Terminal:</strong> nearby</li>
+            <li><strong>CHRIST University (Kanegowdanhalli Campus), Tattva School, Don Bosco Institute of Technology, ACS College of Engineering:</strong> in the immediate vicinity</li>
+            <li><strong>Rajarajeshwari Hospital, Trust Med Multispecialty Hospital &amp; Diagnostics:</strong> nearby for healthcare access</li>
+            <li><strong>Wipro Kawasaki Precision Machinery, Bosch Rexroth, Featherlite Office Systems:</strong> established employers on the same corridor</li>
+          </ul>
+
+          <h2>3. The Layout: What You Actually Get</h2>
+          <p>The project spans 150-170 acres with approximately 2,500 exclusive plots ranging from 600 to 2,400 Sq.Ft, released across three phases. The layout plan reserves two Civic Amenity sites (CA-1 &amp; CA-2) and a dedicated green zone with a clubhouse, multi-sport court and children's play area, connected by 9M and 12M wide internal roads — with an existing 15M boundary road being widened to an 18M master-plan road. Every plot is covered by 24/7 gated security with CCTV, and the layout includes its own Sewage Treatment Plant (STP) and overhead water tank (OHT).</p>
+
+          <h3>Plot Sizes</h3>
+          <p>KNS Samooha's core inventory is four plot dimensions: 30x40 (1,200 Sq.Ft), 30x45 (1,350 Sq.Ft), 30x50 (1,500 Sq.Ft) and 40x60 (2,400 Sq.Ft), with the 30x40 size further split into Premium, Super Premium, Ultra Premium and Exclusive tiers — likely reflecting differences in road frontage, corner positioning, or proximity to the clubhouse and green zone. A smaller number of entry-tier and odd-dimension plots (as compact as 600 Sq.Ft) are also part of the wider layout, which is what the advertised "from ₹46 Lakhs" headline price refers to.</p>
+
+          <h2>4. Pricing</h2>
+          <table>
+            <thead><tr><th>Plot Dimension</th><th>Size (Sq.Ft)</th><th>Approx. Price Range</th></tr></thead>
+            <tbody>
+              <tr><td>20 x 30</td><td>600 Sq.Ft</td><td>₹46 Lakhs – ₹50 Lakhs</td></tr>
+              <tr><td>30 x 30</td><td>900 Sq.Ft</td><td>₹67 Lakhs – ₹71 Lakhs</td></tr>
+              <tr><td>30 x 40</td><td>1,200 Sq.Ft</td><td>₹84 Lakhs – ₹94 Lakhs</td></tr>
+              <tr><td>30 x 45</td><td>1,350 Sq.Ft</td><td>₹1.05 Crore</td></tr>
+              <tr><td>30 x 50</td><td>1,500 Sq.Ft</td><td>₹1.04 Cr – ₹1.16 Crore</td></tr>
+              <tr><td>40 x 60</td><td>2,400 Sq.Ft</td><td>₹1.64 Cr – ₹1.83 Crore</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Base selling price of ₹5,750 per Sq.Ft before plot-specific premiums (facing, corner plots, phase). Select entry-tier and odd-dimension plots are available from approximately ₹46 Lakhs onwards. Contact us for the full plot list, current pricing and availability.</p>
+          <p>At a base rate of ₹5,750 per Sq.Ft before premiums, KNS Samooha prices in a similar band to other BMRDA-approved layouts on this stretch of Tumkur Road. Worth noting: the widely advertised "from ₹46 Lakhs" headline price applies to the smallest, entry-tier 600 Sq.Ft plots — the bulk of the 1,200 Sq.Ft inventory prices closer to ₹84-94 Lakhs, so don't anchor your budget to the headline figure alone.</p>
+
+          <h2>5. Project Status: Three Phases</h2>
+          <p>KNS Samooha is being registered and released in three phases rather than as a single layout — each with its own separate RERA registration (see below). As with any multi-phase plotted launch, ask the developer directly which phase a specific plot belongs to, its current on-ground development status (road-laying, landscaping, utility connections) and the registration/khata timeline, rather than assuming completion from marketing renders alone.</p>
+
+          <h2>6. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. KNS Samooha's three phases each carry a distinct RERA number — don't conflate them when checking a specific plot:</p>
+          <ul>
+            <li><strong>Phase 1 RERA:</strong> PRM/KA/RERA/1250/307/PR/060325/007551</li>
+            <li><strong>Phase 2 RERA:</strong> PRM/KA/RERA/1250/307/PR/210825/008014</li>
+            <li><strong>Phase 3 RERA:</strong> PRM/KA/RERA/1250/307/PR/290825/008039</li>
+            <li><strong>Approval:</strong> BMRDA-approved layout plan</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Channel Partner / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <p>We encourage all prospective buyers to independently verify the relevant phase's registration number on the official Karnataka RERA website (rera.karnataka.gov.in) before finalising a booking — and to confirm in writing which of the three phases your specific plot falls under, since the phases carry separate approvals and, potentially, separate completion timelines.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>KNS Samooha's clearest strengths are scale and location — at ~2,500 plots across 150-170 acres it's a genuinely large, master-planned layout, sitting 2 minutes from the Bengaluru-Mysuru Expressway and 2 minutes from Kanegowdanhalli's forest cover, with KNS Group's visible local track record from three sister projects already delivered nearby. The trade-off of that scale is the three-phase rollout: verify which phase your plot sits in and its specific RERA number before booking, rather than treating the project as a single monolithic approval. As with any plot purchase, appreciation depends more on your own build timeline and the corridor's continued infrastructure delivery than on the developer alone. If you want a BMRDA-approved plot on a genuinely improving expressway corridor and are comfortable with the plot-ownership tradeoffs (see our <a href="/blog/plots-vs-apartments-investment-bangalore/" class="money-link">plots vs apartments guide</a>), Samooha is worth shortlisting — just confirm the phase-specific RERA number independently and current site development status before booking.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/kns-samooha/" class="related-card">
+              <img src="../../images/projects/kns-samooha/kns-samooha-master-plan.webp" alt="KNS Samooha" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">KNS Samooha</p>
+                <p class="related-card-detail">~2,500 Plots &middot; Nelamangala, Tumkur Road</p>
+              </div>
+            </a>
+            <a href="/blog/why-invest-in-nelamangala-tumkur-road-real-estate/" class="related-card">
+              <img src="../../images/projects/kns-samooha/kns-samooha-location-map.png" alt="Why Invest in Nelamangala Tumkur Road Real Estate" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Why Invest in Nelamangala / Tumkur Road</p>
+                <p class="related-card-detail">6 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+            <a href="/blog/plots-vs-apartments-investment-bangalore/" class="related-card">
+              <img src="../../images/projects/kns-sampada/kns-sampada-gallery-2.webp" alt="Plots vs Apartments Investment Bangalore" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Plots vs Apartments: Smarter Investment?</p>
+                <p class="related-card-detail">8 Min Read &middot; Investment Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/kns-samooha/kns-samooha-master-plan.webp" alt="KNS Samooha" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">KNS Samooha</p>
+            <ul class="sidebar-specs">
+              <li>~2,500 Plots &middot; 150-170 Acres &middot; 600-2,400 Sq.Ft</li>
+              <li>BMRDA &amp; RERA Approved</li>
+              <li>From ₹46 Lakhs* onwards</li>
+              <li>Nelamangala, Tumkur Road</li>
+            </ul>
+            <a href="/projects/kns-samooha/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Plotted Developments</h4>
+          <a href="/projects/kns-samooha/">KNS Samooha</a>
+          <a href="/projects/kns-sampada/">KNS Sampada</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "health_score": 63,
+    "business_type": "Real Estate Advisory (Hybrid/Service-Area Business) - Bengaluru, India",
+    "top_findings": [
+      "Self-contradictory RERA number on assetz-palmscape blog post (sidebar vs. body text)",
+      "3 project pages (sattva-la-vita, sattva-lumina, sattva-aeropolis) have zero real listing schema, only defunct FAQPage",
+      "Invalid non-numeric Product price format on orchid-salisbury breaks Rich Results eligibility",
+      "No verifiable Google Business Profile signals anywhere on-site",
+      "Catastrophic LCP (13-15s) on blog and area templates from unoptimized images",
+      "GSC/GA4 access blocked by missing service-account permissions and a disabled API"
+    ],
+    "quick_wins": [
+      "Add FAQPage schema to the 4 area hub pages (visible FAQ content already exists)",
+      "Fix mobile sidebar-widget overflow bug on 11 remaining project pages (1-line CSS, proven fix on 5 pages)",
+      "Trim meta descriptions sitewide (161-262 chars vs ~155-160 budget)",
+      "Fix the Assetz Palmscape RERA sidebar contradiction once correct value confirmed",
+      "Grant GSC/GA4 service account access (3 console actions, ~10 minutes)"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 78,
+      "what_works": [
+        "Valid, complete sitemap; correct canonicals everywhere",
+        "No accidental noindex; unique titles/descriptions across all 62 pages",
+        "Rich varied JSON-LD across content types",
+        "Clean single-hop redirects, no chains",
+        "Fully static/pre-rendered HTML, no JS-rendering risk",
+        "HSTS present via Netlify"
+      ],
+      "findings": [
+        {"title": ".htaccess is dead code on Netlify", "severity": "Medium", "description": "Redirect/block rules don't actually execute on Netlify hosting; currently harmless by luck but fragile for future changes.", "recommendation": "Delete the inert .htaccess; use a real _redirects file or netlify.toml if explicit control is needed."},
+        {"title": "Missing baseline security headers beyond HSTS", "severity": "Medium", "description": "No X-Content-Type-Options, X-Frame-Options, CSP, Referrer-Policy, or Permissions-Policy on any tested page.", "recommendation": "Add a Netlify _headers file applying baseline security headers to /*."},
+        {"title": "Meta descriptions systematically too long", "severity": "Medium", "description": "161-262 characters across nearly every area/project/blog page, versus Google's ~155-160 char display budget.", "recommendation": "Trim to ~120-155 characters, front-loading the strongest differentiator."},
+        {"title": "Unbacked AggregateRating schema on 2 project pages", "severity": "Low", "description": "assetz-palmscape and orchid-salisbury declare ratings with no matching visible on-page reviews.", "recommendation": "Remove or add a genuine visible review summary matching the JSON-LD values."},
+        {"title": "No IndexNow integration", "severity": "Low", "description": "No IndexNow key file; site publishes new pages frequently.", "recommendation": "Add an IndexNow key and a post-deploy ping hook."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 58,
+      "what_works": [
+        "Consistent NAP/RERA disclaimers in every footer sampled",
+        "Solid Person schema with hasCredential for the named advisor",
+        "Area guides and project pages comfortably clear word-count floors",
+        "Best comparison post is genuinely differentiated, not filler"
+      ],
+      "findings": [
+        {"title": "Self-contradictory RERA claim on a live page", "severity": "Critical", "description": "assetz-palmscape-devanahalli-price-layout-rera states body text is pre-launch/TBD RERA, but sidebar shows a specific number matching a different project's prefix.", "recommendation": "Confirm correct status with the business, do not guess; add a build-time check comparing sidebar RERA to canonical project RERA."},
+        {"title": "Blog posts thin and bulk-published", "severity": "High", "description": "All ~30 posts run 650-1,220 words vs a 1,500-word floor, published in a 17-day burst with dateModified frozen at datePublished.", "recommendation": "Expand unique analysis per post or reclassify as a lighter content type; update dateModified as facts change."},
+        {"title": "Byline/schema authorship mismatch", "severity": "Medium", "description": "Visible byline says 'Luxura Habitat Team' while JSON-LD names a single author, Narayanan Rajesh.", "recommendation": "Standardize on one authorship model across visible copy and schema."},
+        {"title": "No FAQ schema on blog posts", "severity": "Medium", "description": "0 of 30 blog posts have FAQ/QA schema despite question-shaped content, vs 15/18 project pages that do.", "recommendation": "Add 3-5 FAQ Q&A pairs per blog post template."},
+        {"title": "Dense readability for a consumer audience", "severity": "Low", "description": "Flesch Reading Ease ~38-40 (difficult/college level) for content aimed at first-time buyers and NRIs.", "recommendation": "Add plain-language glosses for acronyms (RERA, BDA, IGBC, DC conversion, EOI)."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 65,
+      "what_works": [
+        "Unique titles/meta descriptions across all pages",
+        "Solid H2/H3 heading structure",
+        "Coherent internal-linking topical cluster (area hub to comparison post to price/RERA post to project page)"
+      ],
+      "findings": [
+        {"title": "Meta descriptions too long sitewide", "severity": "Medium", "description": "Same as Technical SEO finding.", "recommendation": "Trim to ~120-155 characters."},
+        {"title": "RERA/NAP footer inconsistent across templates", "severity": "High", "description": "Yelahanka drops the Tamil Nadu registration; 3 area pages have no NAP footer block at all.", "recommendation": "Confirm correct RERA lines with the business, propagate identically everywhere."},
+        {"title": "Very few question-format headings in blog content", "severity": "Medium", "description": "Only 5.4% of blog H2/H3 headings are phrased as questions.", "recommendation": "Reframe headings as questions where natural."},
+        {"title": "Two marketed micro-markets lack dedicated area pages", "severity": "Low", "description": "Sarjapur Road and Whitefield appear in hero/schema but have no /areas/ page.", "recommendation": "Build dedicated pages or scale back the marketing claim."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 60,
+      "what_works": [
+        "Blog template (30/30 posts) is a consistent, correct BlogPosting + BreadcrumbList implementation",
+        "tvs-emerald-altura is the best-built project page and should be the reference template",
+        "Homepage LocalBusiness is structurally valid",
+        "No deprecated schema types found anywhere"
+      ],
+      "findings": [
+        {"title": "3 project pages have zero listing/business schema", "severity": "Critical", "description": "sattva-la-vita, sattva-lumina, sattva-aeropolis carry only FAQPage schema, which produces no Google rich result.", "recommendation": "Add RealEstateListing/Offer schema matching the tvs-emerald-altura pattern."},
+        {"title": "Invalid non-numeric price in Product schema", "severity": "Critical", "description": "orchid-salisbury uses price values like '1.03 Crore' (string) instead of a plain number.", "recommendation": "Convert to numeric price with separate priceCurrency."},
+        {"title": "Placeholder empty strings and relative URLs in project schema", "severity": "High", "description": "4 project pages have empty url/logo fields or relative (non-absolute) image paths.", "recommendation": "Fill with real values or omit; use absolute URLs everywhere."},
+        {"title": "BreadcrumbList missing on 12 of 18 project pages and all hub pages", "severity": "High", "description": "Only 6 of 18 project pages have BreadcrumbList; /projects/, /blog/, /contact/, /testimonials/ have zero JSON-LD.", "recommendation": "Add BreadcrumbList consistently; add CollectionPage to hub pages."},
+        {"title": "Area pages lack LocalBusiness/Place schema", "severity": "Medium", "description": "Area pages only carry generic WebPage + BreadcrumbList + Organization schema.", "recommendation": "Add Place entity with GeoCoordinates per area page."},
+        {"title": "About page Person schema URL mismatch", "severity": "Medium", "description": "Person @id/url uses the old flat about.html URL instead of the canonical /about/.", "recommendation": "Update @id and url to match canonical."}
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 58,
+      "what_works": [
+        "Excellent TTFB (2-33ms) everywhere via Netlify edge CDN",
+        "CLS Good on homepage, area page, and blog post",
+        "Best Practices and SEO Lighthouse categories score 100 on every page",
+        "Site's own JS execution is light; third-party scripts are the real bottleneck"
+      ],
+      "findings": [
+        {"title": "LCP catastrophically poor on blog and area templates", "severity": "Critical", "description": "13.87s and 15.33s LCP respectively, driven by unoptimized hero/content images with 83-99.8% waste.", "recommendation": "Convert to WebP/AVIF, resize to actual render dimensions, preload the LCP element."},
+        {"title": "GTM and Zendesk widget consume significant main-thread time", "severity": "High", "description": "Up to 572ms + 210ms main-thread time on project pages.", "recommendation": "Defer Zendesk until interaction; move GTM off the critical path."},
+        {"title": "Render-blocking Google Fonts stylesheet", "severity": "High", "description": "~750ms wasted identically on every page.", "recommendation": "Self-host fonts with font-display: swap and preload critical weights."},
+        {"title": "Oversized logo images bloat every page", "severity": "Medium", "description": "Builder/partner logos and header logo run 70-155KB rendering at ~100x48px.", "recommendation": "Re-export at proper size, target <10KB each."},
+        {"title": "CLS Needs Improvement on project templates", "severity": "Medium", "description": "Unsized gallery/plan images cause layout shift.", "recommendation": "Add explicit width/height or aspect-ratio to gallery images."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 35,
+      "what_works": [
+        "Alt text present on all 241 images sampled in the blog section"
+      ],
+      "findings": [
+        {"title": "Hero/content images severely oversized", "severity": "Critical", "description": "1.0-1.26MB images with 83-99.8% waste, no WebP/AVIF format.", "recommendation": "Compress and convert to modern formats, resize to display dimensions."},
+        {"title": "Logo images oversized relative to display size", "severity": "Medium", "description": "Builder/partner logos and header logo far larger than needed.", "recommendation": "Re-export at proper resolution."},
+        {"title": "Unsized images causing layout shift", "severity": "Medium", "description": "Project template gallery/plan images lack explicit dimensions.", "recommendation": "Add width/height attributes."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 61,
+      "what_works": [
+        "robots.txt maximally permissive for all AI crawlers",
+        "Fully static/SSR HTML across all 62 pages",
+        "Rich schema.org coverage, 140 Q&A pairs via project-page FAQPage schema",
+        "Named credentialed author entity with verifiable RERA registrations",
+        "23 pages use real data tables, good for citation extraction"
+      ],
+      "findings": [
+        {"title": "Area pages have visible FAQ content but zero FAQPage schema", "severity": "High", "description": "3 of 4 area pages have hand-written FAQ content unmarked as structured data.", "recommendation": "Apply the FAQPage pattern already proven on project pages."},
+        {"title": "Blog posts have no Q&A blocks or question-format headings", "severity": "High", "description": "0% Q&A blocks, only 5.4% question-phrased H2/H3s across 30 posts.", "recommendation": "Reframe headings as questions, add FAQ blocks with schema."},
+        {"title": "Yelahanka has no FAQ section at all", "severity": "Medium", "description": "Only area page without any Q&A content.", "recommendation": "Author FAQs matching the other 3 area pages' format."},
+        {"title": "Answer passages shorter than optimal citation length", "severity": "Medium", "description": "16-90 words per paragraph vs the 134-167 word range that performs best for AI citation.", "recommendation": "Consolidate short paragraphs into self-contained answer blocks."},
+        {"title": "Authorship signal internally contradictory", "severity": "Medium", "description": "Same issue as Content Quality finding #3.", "recommendation": "Standardize authorship across byline, footer, and schema."}
+      ]
+    }
+  ],
+  "supplementary_categories": [
+    {"name": "Sitemap", "score": 90, "note": "Near-flawless: valid XML, perfect coverage, correct lastmod discipline."},
+    {"name": "Visual / Mobile Rendering", "score": 64, "note": "Known mobile sidebar-overflow bug still unfixed on 11 of 16 project pages."},
+    {"name": "SXO (Search Experience)", "score": 58, "note": "Diagnostic metric, not part of Health Score. Weakest persona: NRI Investor (61/100), driven by the RERA trust gap."},
+    {"name": "Local SEO", "score": 40, "note": "Critical for this SAB business type: no detectable Google Business Profile signals."},
+    {"name": "Maps Intelligence", "score": 32, "note": "Confirms the GBP gap independently from geo-data side; Tier 0 (free APIs only)."},
+    {"name": "Google API (GSC/GA4)", "score": 45, "note": "Blocked by permissions, not a quality signal. 3 console actions needed to unblock."},
+    {"name": "Backlinks", "score": null, "note": "Unscored - insufficient data. New site not yet in Common Crawl; no Moz/Bing/DataForSEO access."},
+    {"name": "DataForSEO Enrichment", "score": null, "note": "Unscored - MCP tools unavailable this session, needs Claude Code restart to load."}
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Resolve the Assetz Palmscape RERA contradiction (needs user confirmation of correct value)",
+          "Fix RERA/NAP footer inconsistency across area pages (needs user confirmation)",
+          "Add real listing schema to 3 project pages with only defunct FAQPage schema",
+          "Fix invalid Product price format on orchid-salisbury",
+          "Grant Google API service account access (GSC Owner, enable Search Console API, GA4 Viewer)",
+          "Compress the worst-offending images (about_us_advisor.png, devanahalli_market_trends.png, devanahalli-hero.jpg)"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Add FAQPage schema to the 4 area hub pages",
+          "Fix mobile sidebar-widget overflow bug on 11 remaining project pages",
+          "Trim meta descriptions sitewide",
+          "Self-host Google Fonts",
+          "Defer Zendesk widget, move GTM off critical path",
+          "Add BreadcrumbList to remaining project and hub pages",
+          "Fix empty placeholder schema fields and relative image paths",
+          "Add baseline security headers, delete inert .htaccess",
+          "Wrap blog data tables in scrollable containers",
+          "Standardize authorship byline/schema mismatch"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Expand thin blog posts toward genuine depth or reclassify content type",
+          "Reframe headings as questions, add FAQ blocks with schema to blog posts",
+          "Broaden area-hub content to cite the wider corridor market",
+          "Add floor-plan/brochure CTA to price+RERA posts",
+          "Confirm/claim Google Business Profile as a Service Area Business",
+          "Build NAP-identical directory listings (99acres, MagicBricks, JustDial, Sulekha)",
+          "Upgrade LocalBusiness to RealEstateAgent schema type with typed Place/GeoCircle areaServed",
+          "Build dedicated area pages for Sarjapur Road and Whitefield"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Re-run GSC/GA4 checks monthly once access is granted",
+          "Restart Claude Code and re-run DataForSEO enrichment",
+          "Re-check CrUX field data monthly",
+          "Sign up for free Moz API key and Bing Webmaster Tools",
+          "Re-audit sitemap as area-page count grows toward 25-30",
+          "Track review acquisition once GBP is confirmed"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

@@ -212,6 +212,17 @@ silently reinherit by copy-pasting the template):
   This is what `js/project-page.js`'s automatic `chat:start` GA4 tracking (see
   `docs/adding-a-project.md` §1) actually hooks into — without this snippet on the
   page, that tracking silently has nothing to attach to.
+- **WhatsApp click tracking is not reliably automatic — don't assume GA4 catches it
+  for free.** `_TEMPLATE.html`'s inline tracking script fires `phone_click`,
+  `email_click` and `whatsapp_click` explicitly in the *capture* phase, which is
+  deliberate: GA4's own automatic outbound-click detection listens in the *bubble*
+  phase, so any WhatsApp button with `onclick="event.stopPropagation()"` (needed on
+  card-grid layouts like `projects/index.html`, where the whole card is itself
+  clickable and the WhatsApp button must stop that click from also navigating the
+  page) silently prevents GA4 from ever seeing the click — this was a real, live gap
+  found in production analytics before being fixed. If you copy this inline script
+  from `_TEMPLATE.html` verbatim (don't hand-roll a shorter version), WhatsApp clicks
+  stay tracked regardless of any `stopPropagation()` elsewhere on the page.
 
 ## Phase 4 — SEO: meta tags, headings, structured data, on-page optimization
 
@@ -330,7 +341,15 @@ For each post:
 
 - Add the card to `projects/index.html` (copy an existing card's exact shape:
   thumbnail from `/images/projects-thumbs/<slug>-thumb.webp`, `data-area` attribute,
-  WhatsApp CTA).
+  WhatsApp CTA). If the project doesn't fit any existing `data-area` filter
+  (Yelahanka/Devanahalli/Hennur/Whitefield/Kanakapura), use `data-area="other"`
+  rather than forcing it into the wrong filter bucket.
+- Add a card for each new blog post to **`blog/index.html`'s `.blog-grid`**, at the
+  top (newest-first), matching the existing `.blog-card` markup exactly. This is a
+  separate, hand-maintained listing page — it is not auto-generated from
+  `sitemap.xml` or from the posts' own front matter, so a post can be fully live and
+  linked everywhere else and still be invisible here if this step is skipped. This
+  step was missed for two prior projects' posts before being caught — don't skip it.
 - Add every new URL (project page + each blog post) to `sitemap.xml` with today's date
   as `<lastmod>`.
 
@@ -345,6 +364,9 @@ For each post:
 - Every image `src` referenced actually resolves to a file on disk.
 - Re-run the RERA grep from Phase 1 to confirm no stale/incorrect number survived
   anywhere in the repo.
+- Confirm every new blog post URL appears both in `sitemap.xml` **and** as a card in
+  `blog/index.html`'s grid — these are two separate lists that don't derive from
+  each other, so passing one check doesn't confirm the other.
 - Re-check the Phase 4 SEO list per page: title length, meta description length,
   canonical present/correct/absolute, `og:image`/`twitter:image` point at this
   project's own folder, robots meta isn't accidentally `noindex`, exactly one `<h1>`,

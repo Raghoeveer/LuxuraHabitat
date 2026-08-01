@@ -9,13 +9,17 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
-      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-      // only covers outbound http(s) links, not these schemes.
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
         var href = link.getAttribute('href');
-        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
       }, true);
     </script>
 
@@ -1418,6 +1422,17 @@
         <h2 class="pfs-title">Other Verified Projects to Consider</h2>
         <p class="pfs-intro">Compare KNS Sampada against other verified plotted developments. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
         <div class="proj-compare-grid">
+          <a href="/projects/kns-samooha/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/kns-samooha-thumb.webp" alt="KNS Samooha">
+              <span class="proj-compare-badge">Nelamangala</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">KNS Samooha</p>
+              <p class="proj-compare-detail">~2,500 BMRDA Approved Plots &middot; Nelamangala, Tumkur Road</p>
+              <span class="proj-compare-link">View Project &rarr;</span>
+            </div>
+          </a>
           <a href="/projects/assetz-palmscape/" class="proj-compare-card">
             <div class="proj-compare-img-wrap">
               <img src="/images/projects-thumbs/assetz-palmscape-thumb.webp" alt="Assetz Palmscape">
@@ -1459,6 +1474,14 @@
               <span class="insight-card-tag">Locality Guide &middot; 6 Min</span>
               <h4 class="insight-card-title">Why Invest in Mysore Road / Hejjala Real Estate (2026)</h4>
               <span class="insight-card-link">Read Guide &rarr;</span>
+            </div>
+          </a>
+          <a href="/blog/kns-samooha-nelamangala-price-layout-rera/" class="insight-card">
+            <img src="/images/projects/kns-samooha/kns-samooha-banner.webp" alt="KNS Samooha Price, Layout &amp; RERA Review" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Project Review &middot; 8 Min</span>
+              <h4 class="insight-card-title">KNS Samooha: Price, Plot Sizes &amp; RERA Review</h4>
+              <span class="insight-card-link">Read Review &rarr;</span>
             </div>
           </a>
         </div>

@@ -53,14 +53,22 @@ caused a real, shipped bug once.
 - Add the RERA disclaimer paragraph and NAP (Name/Address/Phone) footer
   block verbatim from an existing page. These are legally load-bearing —
   don't reword them per project.
-- The GA4 tag + tel/mailto click tracking is already in `_TEMPLATE.html`
-  — don't strip it out or swap the Measurement ID per project. Every
-  page shares one GA4 property (`G-4VD9RSVKTV`); WhatsApp clicks and
-  form submits are picked up automatically once the page has any Web3Forms
-  form and any `wa.me` link (no extra code needed for those two). The
-  Zendesk `chat:start` tracking lives in `/js/project-page.js`, so it
-  works automatically too as long as the Zendesk snippet and
-  `project-page.js` are both on the page.
+- The GA4 tag + tel/mailto/WhatsApp click tracking is already in
+  `_TEMPLATE.html` — don't strip it out or swap the Measurement ID per
+  project. Every page shares one GA4 property (`G-4VD9RSVKTV`). Form
+  submits are picked up automatically by any Web3Forms form (no extra code
+  needed). WhatsApp clicks are **not** reliably automatic — GA4's own
+  outbound-click detection listens in the bubble phase, so any button with
+  `onclick="event.stopPropagation()"` (used on card-grid WhatsApp buttons,
+  e.g. `projects/index.html`, to stop the click from also triggering the
+  parent card's own navigate-away handler) silently prevents GA4 from ever
+  seeing that click. `_TEMPLATE.html`'s tracking script fires an explicit
+  `whatsapp_click` event in the capture phase instead — immune to any
+  `stopPropagation()` on the target — so don't rely on "automatic" WhatsApp
+  tracking on a new card-grid-style page; make sure this capture-phase
+  script is present. The Zendesk `chat:start` tracking lives in
+  `/js/project-page.js`, so it works automatically too as long as the
+  Zendesk snippet and `project-page.js` are both on the page.
 - Any Web3Forms lead form needs a `redirect` hidden field pointing at
   `https://luxurahabitat.com/thank-you/` (exact value, trailing slash,
   no `.html`). Forms with no `redirect` field submit natively straight to

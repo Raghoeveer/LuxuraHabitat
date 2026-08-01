@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Aparna Wonder Woods vs Sattva Forest Ridge | Luxura Habitat</title>
+  <meta name="description" content="Aparna Wonder Woods vs Sattva Forest Ridge — comparing the Kanakapura Road corridor's two flagship launches on scale, price, density and possession.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/aparna-wonder-woods-vs-sattva-forest-ridge/">
+  <meta property="og:title" content="Aparna Wonder Woods vs Sattva Forest Ridge | Luxura Habitat">
+  <meta property="og:description" content="Comparing the Kanakapura Road corridor's two flagship launches on scale, price, density and possession.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/aparna-wonder-woods-vs-sattva-forest-ridge/"
+        },
+        "headline": "Aparna Wonder Woods vs Sattva Forest Ridge: Which Fits You?",
+        "description": "Aparna Wonder Woods vs Sattva Forest Ridge — comparing the Kanakapura Road corridor's two flagship launches on scale, price, density and possession.",
+        "image": "https://luxurahabitat.com/images/projects/wonder-woods/wonder-woods-hero.jpg",
+        "datePublished": "2026-08-01",
+        "dateModified": "2026-08-01",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/aparna-wonder-woods-vs-sattva-forest-ridge/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Areas We Serve", "item": "https://luxurahabitat.com/areas/"},
+          {"@type": "ListItem", "position": 3, "name": "Kanakapura Road", "item": "https://luxurahabitat.com/areas/kanakapura-road/"},
+          {"@type": "ListItem", "position": 4, "name": "Aparna Wonder Woods vs Sattva Forest Ridge", "item": "https://luxurahabitat.com/blog/aparna-wonder-woods-vs-sattva-forest-ridge/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/kanakapura-road/">Kanakapura Road Hub</a><span>/</span><span>Wonder Woods vs Forest Ridge</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Aparna Wonder Woods vs Sattva Forest Ridge: Which Fits You?</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 1, 2026</span><span>&bull;</span><span>7 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Aparna Wonder Woods vs Sattva Forest Ridge" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>The <a href="/areas/kanakapura-road/" class="money-link">Kanakapura Road corridor</a> now has two genuine flagship launches: <a href="/projects/sattva-forest-ridge/" class="money-link">Sattva Forest Ridge</a> in Anjanapura, and <a href="/projects/wonder-woods/" class="money-link">Aparna Wonder Woods</a> at Mallasandra. They sit on the same broader growth belt but represent very different bets — a compact 3-tower development versus a large-format 6-tower township. This comparison covers where they actually differ, so you're not choosing blind between the corridor's two biggest names.</p>
+
+          <h2>Quick Comparison</h2>
+          <table>
+            <thead><tr><th>Attribute</th><th>Aparna Wonder Woods</th><th>Sattva Forest Ridge</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Location</strong></td><td>Mallasandra, Off Kanakapura Road</td><td>Anjanapura, JP Nagar 9th Phase</td></tr>
+              <tr><td><strong>Land Area</strong></td><td>14.9 Acres</td><td>~4.1 Acres</td></tr>
+              <tr><td><strong>Total Units</strong></td><td>1,261 Apartments &middot; 6 Towers</td><td>407 Apartments &middot; 3 Towers</td></tr>
+              <tr><td><strong>Approx. Density</strong></td><td>~85 Units/Acre</td><td>~99 Units/Acre</td></tr>
+              <tr><td><strong>Configurations</strong></td><td>2, 2.5 &amp; 3 BHK (+Study options)</td><td>1, 2 &amp; 3 BHK</td></tr>
+              <tr><td><strong>Unit Sizes</strong></td><td>1,292 &ndash; 2,092 Sq.Ft</td><td>732 &ndash; 1,864 Sq.Ft</td></tr>
+              <tr><td><strong>Construction Technology</strong></td><td>Shear Wall / Mivan</td><td>Conventional RCC</td></tr>
+              <tr><td><strong>Clubhouse</strong></td><td>49,663 Sq.Ft, 40+ Amenities</td><td>Standard Clubhouse, Pool &amp; Gym</td></tr>
+              <tr><td><strong>Starting Price</strong></td><td>&#8377;1.25 Cr onwards (2 BHK)</td><td>&#8377;78.7 Lacs onwards (1 BHK)</td></tr>
+              <tr><td><strong>Possession</strong></td><td>February 2031</td><td>December 2029</td></tr>
+              <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1251/310/PR/080626/008706</td><td>PRM/KA/RERA/1251/310/PR/241224/007315</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Density figures are calculated from each project's stated unit count and land area, for indicative comparison only.</p>
+
+          <h2>Where They Actually Differ</h2>
+          <h3>1. Scale: A Township vs a Boutique Tower Cluster</h3>
+          <p>Wonder Woods is more than 3x the land size and 3x the unit count of Forest Ridge, spread across 6 towers instead of 3. That scale brings a much larger clubhouse (49,663 Sq.Ft vs a standard clubhouse) and a wider amenity list, but also means a bigger, busier community once fully occupied. Forest Ridge's smaller footprint keeps the development more contained, even though its units-per-acre density is actually slightly higher on paper.</p>
+
+          <h3>2. Entry Price: Forest Ridge Is the More Accessible Option</h3>
+          <p>Forest Ridge's 1 BHK starts around &#8377;78.7 Lacs, well below Wonder Woods' entry point of roughly &#8377;1.25 Cr for a 2 BHK — but that's partly because Wonder Woods doesn't offer a 1 BHK at all. If your budget caps out below &#8377;1 Cr, Forest Ridge is the only one of the two in range; above that, Wonder Woods' 2 BHK and larger configurations become directly comparable to Forest Ridge's 2 and 3 BHK options.</p>
+
+          <h3>3. Construction Technology and Design Philosophy</h3>
+          <p>Wonder Woods uses Shear Wall / Mivan construction and is built around 100% Vaastu compliance with no common walls between units — a specific design commitment that Forest Ridge's listing does not make. If Vaastu compliance and construction technology are decision factors for you, Wonder Woods has the more explicit positioning on both.</p>
+
+          <h3>4. Possession Timeline: Forest Ridge Delivers Sooner</h3>
+          <p>Forest Ridge targets full completion by December 2029, while Wonder Woods' possession date is February 2031 — over a year later, reflecting its considerably larger scale. Buyers prioritising a nearer-term move-in should weight this difference heavily.</p>
+
+          <h2>Who Should Choose Which?</h2>
+          <ul>
+            <li><strong>Choose Aparna Wonder Woods if:</strong> you want a large-scale, amenity-rich township from a Tier-1 developer, value Vaastu compliance and no-common-wall design, and are comfortable with a longer, 2031 possession horizon.</li>
+            <li><strong>Choose Sattva Forest Ridge if:</strong> you want a lower entry price (including an actual 1 BHK option), a more contained 3-tower community, and an earlier, late-2029 possession timeline.</li>
+          </ul>
+
+          <h2>Legal Verification for Both</h2>
+          <p>These are two distinct projects with two distinct RERA registrations, sharing only the same promoter registration prefix. Wonder Woods is registered under PRM/KA/RERA/1251/310/PR/080626/008706; Forest Ridge under PRM/KA/RERA/1251/310/PR/241224/007315. Verify whichever you're considering directly on the Karnataka RERA portal (rera.karnataka.gov.in) before booking.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Both projects are strong, verified additions to the Kanakapura Road corridor, but they suit different buyers. Wonder Woods is the scale play — a bigger community, bigger clubhouse, and a builder betting big on the area's long-term growth, at the cost of a longer wait. Forest Ridge is the nearer-term, lower-entry-price option for buyers who want to move in sooner or need a 1 BHK. Read our full independent reviews of <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" class="money-link">Aparna Wonder Woods</a> and <a href="/blog/sattva-forest-ridge-price-layout-rera/" class="money-link">Sattva Forest Ridge</a> before deciding, and independently verify whichever RERA number applies to your shortlisted project.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/wonder-woods/" class="related-card">
+              <img src="../../images/projects-thumbs/wonder-woods-thumb.webp" alt="Aparna Wonder Woods" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Aparna Wonder Woods</p>
+                <p class="related-card-detail">1,261 Units &middot; Mallasandra, Kanakapura Road</p>
+              </div>
+            </a>
+            <a href="/projects/sattva-forest-ridge/" class="related-card">
+              <img src="../../images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Sattva Forest Ridge" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Sattva Forest Ridge</p>
+                <p class="related-card-detail">1, 2 &amp; 3 BHK &middot; Anjanapura</p>
+              </div>
+            </a>
+            <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" class="related-card">
+              <img src="../../images/projects/wonder-woods/wonder-woods-hero.jpg" alt="Aparna Wonder Woods Review" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Aparna Wonder Woods: Price, Layout &amp; RERA Review</p>
+                <p class="related-card-detail">7 Min Read &middot; Project Review</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/wonder-woods/wonder-woods-birdseye-view.jpeg" alt="Aparna Wonder Woods" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Aparna Wonder Woods</p>
+            <ul class="sidebar-specs">
+              <li>1,261 Apartments &middot; 14.9 Acres &middot; 6 Towers</li>
+              <li>100% Vaastu &middot; No Common Walls</li>
+              <li>From &#8377;1.25 Cr* onwards</li>
+              <li>Mallasandra, Off Kanakapura Road</li>
+            </ul>
+            <a href="/projects/wonder-woods/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Not sure which one fits you? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Kanakapura Road</h4>
+          <a href="/projects/wonder-woods/">Aparna Wonder Woods</a>
+          <a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a>
+          <a href="/areas/kanakapura-road/">Kanakapura Road Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

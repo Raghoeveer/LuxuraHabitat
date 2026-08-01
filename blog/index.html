@@ -9,18 +9,29 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
-      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-      // only covers outbound http(s) links, not these schemes.
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
         var href = link.getAttribute('href');
-        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
       }, true);
     </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Real Estate Insights &amp; Bangalore Property Market Blog | Luxura Habitat</title>
   <meta name="description" content="Get expert insights on the Bangalore real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.">
   <meta name="keywords" content="Bangalore real estate blog, Bangalore property market reviews, real estate investment guides Yelahanka, Luxura Habitat advisory blog">
@@ -215,6 +226,181 @@
     <section class="section" id="blog-listing">
       <div class="container">
         <div class="blog-grid">
+
+          <!-- Blog Card: KNS Samooha Review -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/kns-samooha/kns-samooha-banner.webp" alt="KNS Samooha Nelamangala" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>August 1, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/kns-samooha-nelamangala-price-layout-rera/">KNS Samooha: Price, Plot Sizes &amp; RERA Review</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Independent review of KNS Samooha, Nelamangala — plot sizes, pricing by dimension, layout plan and RERA verification across all 3 phases.
+              </p>
+              <a href="/blog/kns-samooha-nelamangala-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Why Invest in Nelamangala / Tumkur Road -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/kns-samooha/kns-samooha-location-map.png" alt="Why Invest in Nelamangala Tumkur Road Real Estate" loading="lazy">
+              <span class="blog-card__category">Locality Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>August 1, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/why-invest-in-nelamangala-tumkur-road-real-estate/">Why Invest in Nelamangala / Tumkur Road Real Estate (2026)</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Nelamangala &amp; Tumkur Road, West Bangalore — connectivity, infrastructure and why this Bengaluru-Mysuru Expressway corridor is drawing plot buyers in 2026.
+              </p>
+              <a href="/blog/why-invest-in-nelamangala-tumkur-road-real-estate/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Aparna Wonder Woods Review -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/wonder-woods/wonder-woods-hero.jpg" alt="Aparna Wonder Woods Mallasandra" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>August 1, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/">Aparna Wonder Woods: Price, Layout &amp; RERA Review</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Independent review of Aparna Wonder Woods, Mallasandra — configurations, pricing, clubhouse and RERA verification.
+              </p>
+              <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Wonder Woods vs Forest Ridge -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/wonder-woods/wonder-woods-birdseye-view.jpeg" alt="Aparna Wonder Woods vs Sattva Forest Ridge" loading="lazy">
+              <span class="blog-card__category">Comparison</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>August 1, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/">Aparna Wonder Woods vs Sattva Forest Ridge: Which Fits You?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Comparing the Kanakapura Road corridor's two flagship launches on scale, price, density and possession.
+              </p>
+              <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: KNS Sampada Review -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/kns-sampada/kns-sampada-banner.jpeg" alt="KNS Sampada Mysore Road" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 31, 2026</span>
+                <span>•</span>
+                <span>7 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/kns-sampada-mysore-road-price-layout-rera/">KNS Sampada: Price, Plot Sizes &amp; RERA Review</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Independent review of KNS Sampada, Hejjala Toll, Mysore Road — plot sizes, pricing by tier, layout plan and RERA verification.
+              </p>
+              <a href="/blog/kns-sampada-mysore-road-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Plots vs Apartments -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/kns-sampada/kns-sampada-layout.png" alt="Plots vs Apartments Investment Bangalore" loading="lazy">
+              <span class="blog-card__category">Investment Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 31, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/plots-vs-apartments-investment-bangalore/">Plots vs Apartments: Which Is the Smarter Investment in Bangalore?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                BDA-approved plots or a RERA apartment — which is the smarter Bangalore investment in 2026? Appreciation, liquidity, ownership and risk, compared honestly.
+              </p>
+              <a href="/blog/plots-vs-apartments-investment-bangalore/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Why Invest in Mysore Road / Hejjala -->
+          <article class="blog-card animate-on-scroll">
+            <div class="blog-card__image-wrap">
+              <img src="../images/projects/kns-sampada/kns-sampada-location-map.webp" alt="Why Invest in Mysore Road Hejjala Real Estate" loading="lazy">
+              <span class="blog-card__category">Locality Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>July 31, 2026</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/why-invest-mysore-road-hejjala-real-estate/">Why Invest in Mysore Road / Hejjala Real Estate (2026)</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Mysore Road &amp; Hejjala, South-West Bangalore — connectivity, infrastructure and why this Bengaluru-Mysuru Expressway corridor is drawing plot buyers in 2026.
+              </p>
+              <a href="/blog/why-invest-mysore-road-hejjala-real-estate/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
 
           <!-- Blog Card: Century Kindle Review -->
           <article class="blog-card animate-on-scroll">

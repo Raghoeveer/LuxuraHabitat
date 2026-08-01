@@ -9,22 +9,29 @@
     gtag('js', new Date());
     gtag('config', 'G-4VD9RSVKTV');
 
-    // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-    // only covers outbound http(s) links, not these schemes.
+    // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+    // any per-button onclick can call stopPropagation and hide the click from
+    // GA4's own automatic outbound-click detection — this happened on the
+    // /projects/ card grid, where each WhatsApp button stops propagation so
+    // it doesn't also trigger the parent card's own navigate-away handler).
     document.addEventListener('click', function (e) {
-      var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+      var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
       if (!link) return;
       var href = link.getAttribute('href');
-      gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+      var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
     }, true);
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
   <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
   <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Kanakapura Road Real Estate Guide 2026: South Bangalore's NICE Road Corridor | Luxura Habitat</title>
   <meta name="description" content="The complete guide to buying property on Kanakapura Road, South Bangalore. Explore NICE Road connectivity, Namma Metro Green Line access, premium apartments like Sattva Forest Ridge, and market trends.">
   <meta name="keywords" content="Kanakapura Road real estate 2026, buy property Kanakapura Road, Anjanapura apartments, JP Nagar 9th Phase, Sattva Forest Ridge, NICE Road Bangalore, South Bangalore real estate">
@@ -202,7 +209,7 @@
         <p>Anchored by NICE Peripheral Ring Road access, a direct Namma Metro Green Line connection, and a fast-improving social infrastructure base, the Kanakapura Road corridor — running through Anjanapura and JP Nagar 9th Phase — is South Bangalore's most accessible growth extension.</p>
         <div class="hero-stats">
           <div class="hero-stat"><strong>₹78.7L+</strong><span>Entry price for premium apartments</span></div>
-          <div class="hero-stat"><strong>1 Project</strong><span>Active Luxura listing (growing)</span></div>
+          <div class="hero-stat"><strong>2 Projects</strong><span>Active Luxura listings (growing)</span></div>
           <div class="hero-stat"><strong>12–18%</strong><span>Indicative annual appreciation</span></div>
           <div class="hero-stat"><strong>1.6 km</strong><span>To NICE Peripheral Ring Road</span></div>
         </div>
@@ -234,10 +241,11 @@
         <p class="hub-section-intro">As an established-but-improving corridor rather than a speculative frontier, Kanakapura Road's appreciation curve has been steadier than airport- or SEZ-driven corridors — but consistent, and increasingly backed by real infrastructure delivery rather than announcements alone.</p>
         <div class="prose-two-col">
           <div class="prose-block">
-            <h3>A Corridor Anchored by One Flagship Launch</h3>
-            <p><strong>Premium Apartments</strong> — <a href="/projects/sattva-forest-ridge/" style="color:var(--hub-copper);font-weight:600;">Sattva Forest Ridge</a>, off Anjanapura 80 Feet Road, is currently the corridor's flagship listing: 407 units of 1, 2 &amp; 3 BHK apartments across 3 towers on ~4.1 acres, with 75% open space. Pricing starts around ₹78.7 Lacs for a 1 BHK.</p>
+            <h3>Two Flagship Launches, Two Different Bets</h3>
+            <p><strong>Premium Apartments</strong> — <a href="/projects/sattva-forest-ridge/" style="color:var(--hub-copper);font-weight:600;">Sattva Forest Ridge</a>, off Anjanapura 80 Feet Road, was the corridor's first flagship listing: 407 units of 1, 2 &amp; 3 BHK apartments across 3 towers on ~4.1 acres, with 75% open space. Pricing starts around ₹78.7 Lacs for a 1 BHK.</p>
+            <p><strong>Large-Format Township</strong> — <a href="/projects/wonder-woods/" style="color:var(--hub-copper);font-weight:600;">Aparna Wonder Woods</a>, at Mallasandra off Kanakapura Road, is the corridor's newest and largest launch: 1,261 Vaastu-compliant apartments across 6 towers on 14.9 acres, anchored by a 49,663 Sq.Ft clubhouse. Pricing starts around ₹1.25 Cr for a 2 BHK.</p>
             <p>Unlike Devanahalli's plotted-development story, Kanakapura Road's near-term demand is driven by end-users — families and professionals seeking an established, well-connected corridor rather than pure land speculation.</p>
-            <p>For the full pricing breakdown and RERA verification, see our <a href="/blog/sattva-forest-ridge-price-layout-rera/" style="color:var(--hub-copper);font-weight:600;">Sattva Forest Ridge review →</a></p>
+            <p>For the full pricing breakdown and RERA verification, see our <a href="/blog/sattva-forest-ridge-price-layout-rera/" style="color:var(--hub-copper);font-weight:600;">Sattva Forest Ridge review →</a> or our <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" style="color:var(--hub-copper);font-weight:600;">Aparna Wonder Woods review →</a></p>
           </div>
           <div>
             <table class="data-table" aria-label="Kanakapura Road property price trends 2022-2026">
@@ -311,7 +319,7 @@
       <div class="hub-container">
         <p class="hub-section-label">Active Projects</p>
         <h2 class="hub-section-title" id="projects-kanakapura">Luxury Projects on Kanakapura Road</h2>
-        <p class="hub-section-intro">We exclusively represent verified Tier-1 developer projects. This is a corridor we're actively growing our listings in — Sattva Forest Ridge is our first, with more to follow as we verify additional launches.</p>
+        <p class="hub-section-intro">We exclusively represent verified Tier-1 developer projects. This is a corridor we're actively growing our listings in — Sattva Forest Ridge and Aparna Wonder Woods are our first two, with more to follow as we verify additional launches.</p>
         <div class="projects-grid">
           <a href="/projects/sattva-forest-ridge/" class="project-hub-card" aria-label="Sattva Forest Ridge">
             <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Sattva Forest Ridge Anjanapura apartments">
@@ -323,6 +331,20 @@
                 <span class="project-spec-item">1, 2 &amp; 3 BHK</span>
                 <span class="project-spec-item">407 Homes</span>
                 <span class="project-spec-item">75% Open Space</span>
+              </div>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+          <a href="/projects/wonder-woods/" class="project-hub-card" aria-label="Aparna Wonder Woods">
+            <img src="/images/projects-thumbs/wonder-woods-thumb.webp" alt="Aparna Wonder Woods Mallasandra apartments">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Premium Township</span>
+              <h3>Aparna Wonder Woods</h3>
+              <p class="project-sub">Mallasandra, Off Kanakapura Road · Aparna Constructions</p>
+              <div class="project-specs">
+                <span class="project-spec-item">2, 2.5 &amp; 3 BHK</span>
+                <span class="project-spec-item">1,261 Homes</span>
+                <span class="project-spec-item">14.9 Acres</span>
               </div>
               <span class="card-cta">View Project →</span>
             </div>
@@ -343,6 +365,22 @@
         <h2 class="hub-section-title" id="research-blogs">Deep-Dive Research on Kanakapura Road</h2>
         <p class="hub-section-intro">In-depth guides covering the Kanakapura Road investment decision — from market trends to connectivity, schools, and our independent review of the corridor's flagship launch.</p>
         <div class="blogs-grid">
+          <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review · 7 Min Read</p>
+              <h4>Aparna Wonder Woods: Price, Layout &amp; RERA Review</h4>
+              <p>Configurations, pricing, clubhouse and RERA verification for the corridor's largest new launch.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison · 7 Min Read</p>
+              <h4>Aparna Wonder Woods vs Sattva Forest Ridge</h4>
+              <p>Comparing the corridor's two flagship launches on scale, price, density and possession.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
           <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="blog-hub-card">
             <div class="blog-hub-card-body">
               <p class="blog-hub-card-cat">Market Trends · 7 Min Read</p>
@@ -408,7 +446,7 @@
           </div>
           <div class="faq-item">
             <p class="faq-question">What is the best project to buy on Kanakapura Road in 2026?</p>
-            <p class="faq-answer">Based on our independent verification: <a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a> is currently our sole verified listing in the corridor — 1, 2 &amp; 3 BHK apartments across 3 towers with 75% open space. See our <a href="/blog/sattva-forest-ridge-price-layout-rera/">full project review</a>. We're actively verifying additional launches as the corridor grows.</p>
+            <p class="faq-answer">Based on our independent verification, we currently represent two projects on the corridor: <a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a> — 1, 2 &amp; 3 BHK apartments across 3 towers with 75% open space — and <a href="/projects/wonder-woods/">Aparna Wonder Woods</a> — a larger 1,261-unit township across 6 towers on 14.9 acres. See our <a href="/blog/sattva-forest-ridge-price-layout-rera/">Forest Ridge review</a>, our <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/">Wonder Woods review</a>, or our <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/">head-to-head comparison</a>. We're actively verifying additional launches as the corridor grows.</p>
           </div>
           <div class="faq-item">
             <p class="faq-question">Is the metro actually operational near Kanakapura Road, or is it still planned?</p>
@@ -435,6 +473,20 @@
           <div>
             <p class="explore-col-title">📖 Research &amp; Guides</p>
             <div class="explore-article-list">
+        <a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/" class="explore-article-item">
+          <img src="/images/projects/wonder-woods/wonder-woods-hero.jpg" alt="Aparna Wonder Woods: Price, Layout & RERA Review" class="explore-article-icon" loading="lazy">
+          <div class="explore-article-text">
+            <span class="explore-article-tag">Project Review · 7 Min</span>
+            <p class="explore-article-title">Aparna Wonder Woods: Price, Layout &amp; RERA Review</p>
+          </div>
+        </a>
+        <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/" class="explore-article-item">
+          <img src="/images/projects/wonder-woods/wonder-woods-birdseye-view.jpeg" alt="Aparna Wonder Woods vs Sattva Forest Ridge" class="explore-article-icon" loading="lazy">
+          <div class="explore-article-text">
+            <span class="explore-article-tag">Comparison · 7 Min</span>
+            <p class="explore-article-title">Aparna Wonder Woods vs Sattva Forest Ridge</p>
+          </div>
+        </a>
         <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="explore-article-item">
           <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Kanakapura Road Market Trends 2026" class="explore-article-icon" loading="lazy">
           <div class="explore-article-text">
@@ -476,6 +528,14 @@
             <p class="explore-project-detail">1, 2 &amp; 3 BHK Apts · Anjanapura</p>
           </div>
         </a>
+        <a href="/projects/wonder-woods/" class="explore-project-card">
+          <img src="/images/projects-thumbs/wonder-woods-thumb.webp" alt="Aparna Wonder Woods" class="explore-project-thumb" loading="lazy">
+          <div class="explore-project-body">
+            <span class="explore-project-label">Featured Project</span>
+            <p class="explore-project-name">Aparna Wonder Woods</p>
+            <p class="explore-project-detail">2, 2.5 &amp; 3 BHK Apts · Mallasandra</p>
+          </div>
+        </a>
             </div>
           </div>
         </div>
@@ -502,8 +562,8 @@
           <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
         </div>
         <div class="footer-col"><h4>Quick Links</h4><a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a><a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
-        <div class="footer-col"><h4>Kanakapura Road Projects</h4><a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a></div>
-        <div class="footer-col"><h4>Kanakapura Road Research</h4><a href="/blog/kanakapura-road-real-estate-market-trends-2026/">Market Trends 2026</a><a href="/blog/kanakapura-road-connectivity-nice-road-metro/">Connectivity Guide</a><a href="/blog/sattva-forest-ridge-price-layout-rera/">Forest Ridge Review</a><a href="/blog/kanakapura-road-schools-family-lifestyle-guide/">Family Lifestyle Guide</a></div>
+        <div class="footer-col"><h4>Kanakapura Road Projects</h4><a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a><a href="/projects/wonder-woods/">Aparna Wonder Woods</a></div>
+        <div class="footer-col"><h4>Kanakapura Road Research</h4><a href="/blog/kanakapura-road-real-estate-market-trends-2026/">Market Trends 2026</a><a href="/blog/kanakapura-road-connectivity-nice-road-metro/">Connectivity Guide</a><a href="/blog/sattva-forest-ridge-price-layout-rera/">Forest Ridge Review</a><a href="/blog/aparna-wonder-woods-mallasandra-price-layout-rera/">Wonder Woods Review</a><a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/">Wonder Woods vs Forest Ridge</a><a href="/blog/kanakapura-road-schools-family-lifestyle-guide/">Family Lifestyle Guide</a></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p></div>
     </div>

@@ -9,22 +9,29 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
-      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-      // only covers outbound http(s) links, not these schemes.
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
         var href = link.getAttribute('href');
-        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
       }, true);
     </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
   <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
   <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Vajram Chrysanthemum: Price, Layout &amp; RERA Review | Luxura Habitat</title>
   <meta name="description" content="Independent review of Vajram Chrysanthemum, Avalahalli Yelahanka — pricing by configuration, low-density layout, possession and RERA verification.">
   <link rel="canonical" href="https://luxurahabitat.com/blog/vajram-chrysanthemum-avalahalli-yelahanka-price-layout-rera/">

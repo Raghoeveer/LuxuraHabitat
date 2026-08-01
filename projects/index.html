@@ -9,22 +9,29 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
-      // Track tel:/mailto: clicks — GA4's automatic Enhanced Measurement
-      // only covers outbound http(s) links, not these schemes.
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
         var href = link.getAttribute('href');
-        gtag('event', href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_url: href });
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
       }, true);
     </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
   <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
   <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Current Projects | Luxura Habitat — Premium Real Estate Bengaluru</title>
   <meta name="description" content="Explore 11 handpicked premium residential projects across Bengaluru — Assetz Zen &amp; Sato, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis, Sattva City &amp; more. Personally vetted by our team.">
   <meta name="keywords" content="Luxura Habitat projects, Assetz Zen Sato Yelahanka, Concorde Mayfair, Brigade Eternia, Orchid Salisbury, Sattva Aeropolis Devanahalli, Sattva Sanio, Sattva City, TVS Emerald Altura, Sattva Lumina, Assetz Palmscape, luxury apartments Bangalore, new launch projects North Bangalore">
@@ -1042,6 +1049,42 @@
             </div>
           </article>
 
+          <article class="project-card animate-on-scroll" id="project-wonder-woods" data-area="kanakapura"
+            onclick="window.location.href='/projects/wonder-woods/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/wonder-woods/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/wonder-woods-thumb.webp" alt="Aparna Wonder Woods 2 2.5 3 BHK apartments Mallasandra Kanakapura Road" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Aparna Constructions</p>
+                <h2 class="project-card__title">Aparna Wonder Woods</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Mallasandra, Off Kanakapura Road
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">2, 2.5 &amp; 3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;1.25 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">1,261 Homes</span>
+                <span class="project-tag">14.9 Acres</span>
+                <span class="project-tag">100% Vaastu</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/wonder-woods/" class="btn btn--primary" id="wonder-woods-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Aparna%20Wonder%20Woods.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="wonder-woods-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
           <!-- PROJECT 14: Century Kindle -->
           <article class="project-card animate-on-scroll" id="project-century-kindle" data-area="yelahanka"
             onclick="window.location.href='/projects/century-kindle/'"
@@ -1216,6 +1259,42 @@
               <div class="project-card__actions">
                 <a href="/projects/kns-sampada/" class="btn btn--primary" id="kns-sampada-explore-btn">View Details</a>
                 <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20KNS%20Sampada.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="kns-sampada-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" id="project-kns-samooha" data-area="other"
+            onclick="window.location.href='/projects/kns-samooha/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/kns-samooha/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/kns-samooha-thumb.webp" alt="KNS Samooha premium plots Nelamangala Tumkur Road" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">KNS Group</p>
+                <h2 class="project-card__title">KNS Samooha</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nelamangala, Tumkur Road
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">600-2,400 Sq.Ft</span><span class="spec-pill__label">Plots</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;46 L+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">150-170 Acres</span>
+                <span class="project-tag">~2,500 Plots</span>
+                <span class="project-tag">BMRDA Approved</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/kns-samooha/" class="btn btn--primary" id="kns-samooha-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20KNS%20Samooha.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="kns-samooha-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
