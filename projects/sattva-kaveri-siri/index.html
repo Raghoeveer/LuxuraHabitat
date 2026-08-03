@@ -401,7 +401,7 @@
         transition: transform var(--transition);
       }
       .icon-card:hover { transform: translateY(-3px); }
-      .icon-card h4 { font-family: var(--ff-serif); font-size: 1.15rem; color: var(--clr-primary); margin-bottom: 8px; }
+      .icon-card h3 { font-family: var(--ff-serif); font-size: 1.15rem; color: var(--clr-primary); margin-bottom: 8px; }
       .icon-card p { font-size: 0.9rem; color: var(--clr-muted); }
 
       /* Plan Cards */
@@ -924,8 +924,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -938,25 +939,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -1014,7 +1015,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
           <span></span>
@@ -1198,62 +1199,62 @@
           <div class="grid four">
             <div class="icon-card">
               <span class="amenity-icon">🏊</span>
-              <h4>Swimming Pool</h4>
+              <h3>Swimming Pool</h3>
               <p>Resort-style swimming pool with dedicated kids' pool and sun deck for leisure and relaxation.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🏀</span>
-              <h4>Basketball Court</h4>
+              <h3>Basketball Court</h3>
               <p>Full-size outdoor basketball court with floodlights for evening play sessions.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🏸</span>
-              <h4>Badminton Courts</h4>
+              <h3>Badminton Courts</h3>
               <p>Covered and open badminton courts for recreational and competitive play.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🛡️</span>
-              <h4>Gated Security</h4>
+              <h3>Gated Security</h3>
               <p>24/7 manned security, controlled entry, boundary wall, and CCTV surveillance throughout.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🌳</span>
-              <h4>Landscape Gardens</h4>
+              <h3>Landscape Gardens</h3>
               <p>Curated themed gardens, walking paths, and open green spaces for relaxation and community bonding.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🏋️</span>
-              <h4>Fitness Centre</h4>
+              <h3>Fitness Centre</h3>
               <p>State-of-the-art gymnasium with modern equipment and dedicated yoga/aerobics studio.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🌅</span>
-              <h4>Watch Tower</h4>
+              <h3>Watch Tower</h3>
               <p>Scenic watchtower offering panoramic views of the lush surrounding landscape.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🏛️</span>
-              <h4>Gathering Plaza</h4>
+              <h3>Gathering Plaza</h3>
               <p>Open-air gathering plaza for community events, celebrations, and social get-togethers.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">🛣️</span>
-              <h4>Wide Internal Roads</h4>
+              <h3>Wide Internal Roads</h3>
               <p>Well-paved internal roads with street lighting and pedestrian-friendly walkways.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">👶</span>
-              <h4>Children's Play Area</h4>
+              <h3>Children's Play Area</h3>
               <p>Dedicated, safe play zones for kids with age-appropriate equipment and soft landscaping.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">♻️</span>
-              <h4>Sustainable Features</h4>
+              <h3>Sustainable Features</h3>
               <p>Rainwater harvesting, solid waste management, and solar-powered common area lighting.</p>
             </div>
             <div class="icon-card">
               <span class="amenity-icon">⚡</span>
-              <h4>Underground Utilities</h4>
+              <h3>Underground Utilities</h3>
               <p>Concealed electrical, water supply, and drainage network for a clean, modern streetscape.</p>
             </div>
           </div>
@@ -1365,6 +1366,8 @@
               Strategically located in Mandya, Karnataka on Mysore Road Main Road — near Mysore, with excellent connectivity to key landmarks, healthcare, schools, and social infrastructure.
             </p>
           </div>
+
+
           <div class="grid two">
             <div class="list-card">
               <h3>Key Connectivity</h3>

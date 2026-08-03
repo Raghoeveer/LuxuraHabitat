@@ -124,14 +124,11 @@
         .hamburger-menu.active span:nth-child(2) { opacity: 0; }
         .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
-        .logo { display: flex; align-items: center; gap: 0.65rem; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; gap: 0.32rem; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
         .logo:hover { transform: scale(1.05); }
         .logo img { height: 28px; width: auto; object-fit: contain; }
-        .partner-divider { width: 1px; height: 24px; background: rgba(15, 23, 42, 0.16); flex-shrink: 0; }
-        .partner-caption { color: var(--text-light); font-size: 0.68rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.03em; white-space: nowrap; }
-        @media (max-width: 1024px) {
-            .partner-caption { display: none; }
-        }
+        .partner-divider { display: none; }
+        .partner-caption { display: block; width: 105px; color: var(--text-light); font-size: 0.56rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.09em; text-transform: uppercase; text-align: justify; text-align-last: justify; text-justify: inter-character; white-space: nowrap; }
         @media (max-width: 768px) {
             .partner-divider, .partner-caption { display: none; }
         }
@@ -353,7 +350,7 @@
         .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
         .feature-item { display: flex; gap: 1rem; }
         .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
-        .feature-item h4 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
         .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
 
         .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
@@ -504,7 +501,7 @@
         .close-button:hover { color: var(--accent-warm); }
 
         .panel-section { margin-bottom: 2rem; }
-        .panel-section h4 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
         .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
         .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
         .quick-contact a:hover { color: var(--accent-warm); }
@@ -784,7 +781,7 @@
         </form>
 
         <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
-            <h4>Direct Contact</h4>
+            <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:+918438344093">Call: +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Brigade%20Jeevan%20Sandhya%20and%20available%20offers">WhatsApp Chat</a>
@@ -801,7 +798,7 @@
         <a href="/" class="logo" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
 
         <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
@@ -904,28 +901,28 @@
                         <div class="feature-item">
                             <div class="feature-icon">&#127954;</div>
                             <div>
-                                <h4>Near Vajarahalli Metro</h4>
+                                <h3>Near Vajarahalli Metro</h3>
                                 <p>On the Green Line, Kanakapura Road.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&#127968;</div>
                             <div>
-                                <h4>Boutique Scale</h4>
+                                <h3>Boutique Scale</h3>
                                 <p>Just 135 homes across 20 floors.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&#128737;</div>
                             <div>
-                                <h4>24/7 Gated Security</h4>
+                                <h3>24/7 Gated Security</h3>
                                 <p>Gated community, CCTV surveillance.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&#9989;</div>
                             <div>
-                                <h4>Tier-1 Developer</h4>
+                                <h3>Tier-1 Developer</h3>
                                 <p>Brigade Group, founded 1986.</p>
                             </div>
                         </div>
@@ -1025,6 +1022,8 @@
         <div class="container">
             <h2 class="section-title">Location &amp; Connectivity</h2>
             <p class="section-subtitle">Kanakapura Road at Vajarahalli, on the same corridor as JP Nagar and Banashankari.</p>
+
+
             <div class="plan-grid">
                 <div class="plan-image reveal">
                     <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-location-map.png" alt="Brigade Jeevan Sandhya Location Map" onclick="openLightbox(this.src)">

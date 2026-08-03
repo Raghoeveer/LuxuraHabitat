@@ -358,9 +358,9 @@
         .hero h1 {
             color: #5b5b34;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2.2rem, 4.5vw, 5rem);
+            font-size: clamp(1.4rem, 2.8vw, 2.3rem);
             font-weight: 800;
-            line-height: 0.98;
+            line-height: 1.15;
             letter-spacing: 0;
             text-align: left;
             text-transform: uppercase;
@@ -669,7 +669,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
@@ -994,7 +994,7 @@
             transform: translateY(-2px);
         }
 
-        .proximity-section h4 {
+        .proximity-section h3 {
             color: var(--accent-green);
             font-size: 1rem;
             margin-bottom: 1rem;
@@ -1055,7 +1055,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .spec-card h4 {
+        .spec-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
             font-size: 1.2rem;
@@ -1289,7 +1289,7 @@
             border-left: 4px solid var(--accent-green);
         }
 
-        .usp-card h4 {
+        .usp-card h3 {
             color: var(--primary-dark);
             margin-bottom: 0.8rem;
             font-size: 1.1rem;
@@ -1330,7 +1330,7 @@
             transform: scale(1.05);
         }
 
-        .pricing-card h4 {
+        .pricing-card h3 {
             font-size: 1.3rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
@@ -1517,7 +1517,7 @@
             margin-bottom: 2rem;
         }
 
-        .panel-section h4 {
+        .panel-section h3 {
             color: var(--accent-green);
             font-size: 0.95rem;
             margin-bottom: 0.8rem;
@@ -1833,7 +1833,8 @@
             }
 
             .hero h1 {
-                font-size: clamp(1.8rem, 5vw, 2.5rem);
+                font-size: clamp(1.4rem, 4vw, 1.9rem);
+                line-height: 1.2;
             }
 
             .hero-intro {
@@ -1971,8 +1972,8 @@
             }
 
             .hero h1 {
-                font-size: clamp(1.5rem, 6vw, 2rem);
-                max-width: 10ch;
+                font-size: clamp(1.25rem, 5.5vw, 1.7rem);
+                max-width: 100%;
             }
 
             .hero-intro {
@@ -2093,8 +2094,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2107,25 +2109,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2174,6 +2176,74 @@
     .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    .faq { background: var(--bg-white); }
+
+    .faq-list {
+        max-width: 900px;
+        margin: 2.5rem auto 0;
+        display: grid;
+        gap: 0.8rem;
+    }
+
+    .faq-item {
+        background: var(--bg-light);
+        border-radius: 8px;
+        border: 1px solid var(--border-light);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 1.1rem 1.3rem;
+        font-family: inherit;
+        font-size: 0.97rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        transition: background 0.2s;
+    }
+
+    .faq-question:hover {
+        background: rgba(11, 107, 60, 0.05);
+    }
+
+    .faq-question.open {
+        color: var(--accent-green);
+    }
+
+    .faq-arrow {
+        font-size: 1.1rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .faq-question.open .faq-arrow {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s;
+        padding: 0 1.3rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .faq-answer.open {
+        max-height: 400px;
+        padding: 0 1.3rem 1.1rem;
+    }
+
 
     </style>
 
@@ -2372,7 +2442,7 @@
         </form>
 
         <div class="panel-section" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
-            <h4>📞 Direct Contact</h4>
+            <h3>📞 Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:8438344093">📱 +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20details%20on%20Assetz%20Palmscape">💬 WhatsApp Chat</a>
@@ -2390,7 +2460,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger-menu" id="hamburgerMenu" onclick="toggleMobileMenu()">
             <span></span>
@@ -2432,7 +2502,7 @@
                 </a>
 
                 <div class="hero-badge">Pre-Launch</div>
-                <h1>Premium Villa Plots</h1>
+                <h1>Assetz Palmscape, Devanahalli — Premium Villa Plots in North Bangalore</h1>
                 <p class="hero-intro">Discover 450 luxury villa plots in Devanahalli with 60%+ open spaces, world-class amenities, and strategic connectivity to North Bangalore's thriving corridors.</p>
                 
                 <div class="hero-info-boxes">
@@ -2500,28 +2570,28 @@
                         <div class="feature-item">
                             <div class="feature-icon">🏗️</div>
                             <div>
-                                <h4>Premium Infrastructure</h4>
+                                <h3>Premium Infrastructure</h3>
                                 <p>Underground utilities and meticulously planned internal roads</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🌿</div>
                             <div>
-                                <h4>Eco-Conscious Design</h4>
+                                <h3>Eco-Conscious Design</h3>
                                 <p>60%+ green spaces with Miyawaki forest integration</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">⚡</div>
                             <div>
-                                <h4>Smart Community</h4>
+                                <h3>Smart Community</h3>
                                 <p>24/7 security and advanced surveillance systems</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">💧</div>
                             <div>
-                                <h4>Sustainability</h4>
+                                <h3>Sustainability</h3>
                                 <p>Advanced water harvesting and waste management</p>
                             </div>
                         </div>
@@ -2675,27 +2745,27 @@
             
             <div class="usp-grid">
                 <div class="usp-card">
-                    <h4>🌳 Miyawaki Forest</h4>
+                    <h3>🌳 Miyawaki Forest</h3>
                     <p>Specialized rapid-growing native microforests integrated throughout the property, creating dense green pockets that enhance air quality and biodiversity.</p>
                 </div>
                 <div class="usp-card">
-                    <h4>💧 Water Conservation</h4>
+                    <h3>💧 Water Conservation</h3>
                     <p>Advanced rainwater harvesting systems and specialized conservation techniques ensure responsible groundwater recharge and 100% water efficiency.</p>
                 </div>
                 <div class="usp-card">
-                    <h4>🚛 Underground Utilities</h4>
+                    <h3>🚛 Underground Utilities</h3>
                     <p>Complete concealment of electricity and water infrastructure underground, eliminating visual clutter and creating a premium living aesthetic.</p>
                 </div>
                 <div class="usp-card">
-                    <h4>♻️ Waste Management</h4>
+                    <h3>♻️ Waste Management</h3>
                     <p>Modern Sewage Treatment Plant (STP) and advanced underground drainage network ensure hygienic and sustainable waste handling.</p>
                 </div>
                 <div class="usp-card">
-                    <h4>🏢 Assetz Legacy</h4>
+                    <h3>🏢 Assetz Legacy</h3>
                     <p>Backed by Assetz Property Group (Est. 2006), known for robust engineering standards, transparent practices, and lifestyle-focused developments.</p>
                 </div>
                 <div class="usp-card">
-                    <h4>🔒 Premium Security</h4>
+                    <h3>🔒 Premium Security</h3>
                     <p>24/7 advanced security infrastructure with full CCTV surveillance, manned entry/exit points, and smart access control for complete peace of mind.</p>
                 </div>
             </div>
@@ -2758,7 +2828,8 @@
         <div class="container">
             <h2 class="section-title">Strategic Location & Connectivity</h2>
             <p class="section-subtitle">IVC Road, Devanahalli - The epicenter of North Bangalore's growth corridor</p>
-            
+
+
             <div class="location-grid">
                 <div class="location-map">
                     <img src="Assetz-Palmscape-key-amenities.webp" alt="Location Map - Devanahalli, Bangalore">
@@ -2769,7 +2840,7 @@
                     
                     <div class="proximity-wrapper">
                         <div class="proximity-section">
-                            <h4>🚗 Highway Connectivity</h4>
+                            <h3>🚗 Highway Connectivity</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Satellite Town Ring Road (STRR)</span>
@@ -2791,7 +2862,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>💼 Business Hubs</h4>
+                            <h3>💼 Business Hubs</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Upcoming Tech Parks</span>
@@ -2813,7 +2884,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>🎓 Education & Healthcare</h4>
+                            <h3>🎓 Education & Healthcare</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Schools & Colleges</span>
@@ -2879,7 +2950,7 @@
             
             <div class="specs-grid">
                 <div class="spec-card">
-                    <h4>📍 Location & Planning</h4>
+                    <h3>📍 Location & Planning</h3>
                     <ul class="spec-list">
                         <li>IVC Road, Devanahalli, North Bangalore</li>
                         <li>Premium gated community development</li>
@@ -2890,7 +2961,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>🔧 Infrastructure & Utilities</h4>
+                    <h3>🔧 Infrastructure & Utilities</h3>
                     <ul class="spec-list">
                         <li>Underground electricity and water supply</li>
                         <li>12-meter and 9-meter wide internal roads</li>
@@ -2901,7 +2972,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>🌱 Sustainability Features</h4>
+                    <h3>🌱 Sustainability Features</h3>
                     <ul class="spec-list">
                         <li>Miyawaki rapid-growing forests</li>
                         <li>Rainwater harvesting systems</li>
@@ -2912,7 +2983,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>🔒 Security & Safety</h4>
+                    <h3>🔒 Security & Safety</h3>
                     <ul class="spec-list">
                         <li>24/7 CCTV surveillance</li>
                         <li>Manned entry/exit points</li>
@@ -2923,7 +2994,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>🏛️ Community Amenities</h4>
+                    <h3>🏛️ Community Amenities</h3>
                     <ul class="spec-list">
                         <li>Grand clubhouse with facilities</li>
                         <li>Swimming pool and deck</li>
@@ -2934,7 +3005,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>📋 Plot Configurations</h4>
+                    <h3>📋 Plot Configurations</h3>
                     <ul class="spec-list">
                         <li>30 × 40 (1,200 sq ft)</li>
                         <li>30 × 50 (1,500 sq ft)</li>
@@ -2979,6 +3050,106 @@
                     <button type="submit" class="form-submit">Submit Inquiry</button>
                     <div class="form-message" id="formMessage"></div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about Assetz Palmscape, Devanahalli.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Assetz Palmscape?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Palmscape is a premium gated-community villa plot development by Assetz Property Group on IVC Road, Devanahalli, North Bangalore, offering 450+ plots with 60%+ open spaces and a Miyawaki forest.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where exactly is Assetz Palmscape located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project sits on IVC Road in Devanahalli, with direct access to the Satellite Town Ring Road (STRR), Peripheral Ring Road (PRR) and NH-44, and is around 15 minutes from Kempegowda International Airport.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">Is Assetz Palmscape apartments or plots?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">It is a plotted villa development, not apartments. You buy a serviced plot within the gated community and build your own villa, choosing a layout and BHK configuration that fits your chosen plot size.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">What plot sizes are available?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Plots are available in multiple sizes, including 1,200 sq ft, 1,500 sq ft and 2,400 sq ft options, so you can pick a footprint that matches the villa you plan to build.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">What is the price of a plot at Assetz Palmscape?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Pricing is currently available on request as the project is in pre-launch, with an EOI (Expression of Interest) token of ₹3 Lakhs to register early interest. Contact us for the latest price list.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">What amenities does the community offer?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Residents get a grand clubhouse with a swimming pool and banquet hall, jogging and cycling tracks, outdoor sports courts, a fitness zone, landscaped gardens, a yoga and meditation deck, and a dedicated senior-citizen relaxation zone.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">How much open space does Assetz Palmscape have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The layout dedicates 60%+ of the community to open spaces, including a Miyawaki forest, wide asphalted internal roads, manicured lawns and children's play areas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">Is Assetz Palmscape RERA registered?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Palmscape is a registered real estate project. For the current RERA registration number and project approvals, please contact our sales team directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">Is this a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Devanahalli is one of North Bangalore's fastest-growing corridors thanks to the airport, upcoming tech parks and highway upgrades, which makes gated-community plots here attractive for both long-term land appreciation and self-build flexibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">How do I register my EOI or book a site visit?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can register your Expression of Interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

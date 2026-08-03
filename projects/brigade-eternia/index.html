@@ -548,9 +548,9 @@
         .hero h1 {
             color: #1a2639;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2rem, 4vw, 4.8rem);
+            font-size: clamp(1.3rem, 2.6vw, 2.1rem);
             font-weight: 800;
-            line-height: 0.98;
+            line-height: 1.15;
             text-transform: uppercase;
             margin: 0.15rem 0;
         }
@@ -833,7 +833,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.9rem;
             margin-bottom: 0.2rem;
             color: var(--primary-dark);
@@ -1586,7 +1586,7 @@
             margin: 0 auto 2rem;
         }
 
-        .footer-section h4 {
+        .footer-section h3 {
             margin-bottom: 1rem;
             font-size: 1rem;
             color: var(--accent-gold);
@@ -2121,7 +2121,8 @@
             }
 
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 1.5rem;
+                line-height: 1.2;
             }
         }
         
@@ -2138,7 +2139,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-top: 4px solid var(--accent-brown);
         }
-        .point-category h4 {
+        .point-category h3 {
             color: var(--accent-brown);
             margin-bottom: 1rem;
             font-size: 1.1rem;
@@ -2192,8 +2193,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2206,25 +2208,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2364,7 +2366,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -2434,7 +2436,7 @@
                     <img src="logo_4.png" alt="Brigade Group" style="height: 64px; width: auto;">
                 </a>
                 <div class="hero-badge">A Legacy of Luxury</div>
-                <h1>Brigade Eternia Yelahanka, North Bengaluru</h1>
+                <h1>Brigade Eternia, Yelahanka — Premium 3 &amp; 4 BHK Apartments in North Bengaluru</h1>
                 <p class="hero-tagline">Boutique Luxury Living in North Bengaluru</p>
                 <p class="hero-intro">
                     Experience exclusive 3 & 4 BHK luxury apartments on Yelahanka. Spread across 14 Acres with an astonishing Premium Open Spaces and Lush Landscapes, Brigade Eternia offers low-density living with thoughtfully planned spaces.
@@ -2529,14 +2531,14 @@
                         <div class="feature-item" style="display: flex; gap: 1rem; align-items: flex-start;">
                             <div class="feature-icon" style="background: var(--accent-brown); color: #fff; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.9rem; flex-shrink: 0;">&#10022;</div>
                             <div>
-                                <h4 style="color: var(--accent-brown); font-size: 1rem; margin-bottom: 0.2rem;">Architectural Brilliance</h4>
+                                <h3 style="color: var(--accent-brown); font-size: 1rem; margin-bottom: 0.2rem;">Architectural Brilliance</h3>
                                 <p style="font-size: 0.85rem;">12 iconic towers with extremely spacious 3 & 4 BHK layouts.</p>
                             </div>
                         </div>
                         <div class="feature-item" style="display: flex; gap: 1rem; align-items: flex-start;">
                             <div class="feature-icon" style="background: var(--accent-brown); color: #fff; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.9rem; flex-shrink: 0;">&#10022;</div>
                             <div>
-                                <h4 style="color: var(--accent-brown); font-size: 1rem; margin-bottom: 0.2rem;">Eco-Conscious</h4>
+                                <h3 style="color: var(--accent-brown); font-size: 1rem; margin-bottom: 0.2rem;">Eco-Conscious</h3>
                                 <p style="font-size: 0.85rem;">Designed with expansive green spaces.</p>
                             </div>
                         </div>
@@ -2792,7 +2794,7 @@
                 
                 <div class="location-points">
                     <div class="point-category">
-                        <h4>&#10022; Tech Parks & Offices</h4>
+                        <h3>&#10022; Tech Parks & Offices</h3>
                         <ul>
                             <li>RMZ Galleria Office <span>3.5 km</span></li>
                             <li>Sattva Horizon <span>4.0 km</span></li>
@@ -2801,7 +2803,7 @@
                     </div>
                     
                     <div class="point-category">
-                        <h4>&#10022; Educational Institutions</h4>
+                        <h3>&#10022; Educational Institutions</h3>
                         <ul>
                             <li>National Public School (NPS) <span>0.6 km</span></li>
                             <li>REVA University <span>4.3 km</span></li>
@@ -2809,7 +2811,7 @@
                     </div>
                     
                     <div class="point-category">
-                        <h4>&#10022; Shopping & Entertainment</h4>
+                        <h3>&#10022; Shopping & Entertainment</h3>
                         <ul>
                             <li>Galleria Mall <span>3.5 km</span></li>
                             <li>Mall of Asia <span>5.5 km</span></li>
@@ -2817,7 +2819,7 @@
                     </div>
                     
                     <div class="point-category">
-                        <h4>&#10022; Healthcare</h4>
+                        <h3>&#10022; Healthcare</h3>
                         <ul>
                             <li>Sparsh Hospital <span>2.8 km</span></li>
                             <li>Regal Hospital <span>4.7 km</span></li>
@@ -2933,19 +2935,19 @@
 
             <div class="specs-grid">
                 <div class="spec-card">
-                    <h4>Smart Home Features</h4>
+                    <h3>Smart Home Features</h3>
                     <p>Energy-efficient automated lighting, advanced security systems, and high-tech access controls integrated into every residence.</p>
                 </div>
                 <div class="spec-card">
-                    <h4>Eco-Friendly Utilities</h4>
+                    <h3>Eco-Friendly Utilities</h3>
                     <p>Rainwater harvesting and solar-powered common area lighting conforming to the highest sustainability standards.</p>
                 </div>
                 <div class="spec-card">
-                    <h4>Premium Flooring</h4>
+                    <h3>Premium Flooring</h3>
                     <p>High-grade vitrified tiles in living areas and anti-skid premium ceramics in bathrooms and balconies for elegance and safety.</p>
                 </div>
                 <div class="spec-card">
-                    <h4>Designer Kitchen & Baths</h4>
+                    <h3>Designer Kitchen & Baths</h3>
                     <p>Provisions for modular kitchens, piped gas connection, and top-of-the-line CP & sanitary fittings from renowned international brands.</p>
                 </div>
             </div>
@@ -3186,14 +3188,14 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h4>About Brigade Eternia</h4>
+                <h3>About Brigade Eternia</h3>
                 <p>An 50-acre integrated township by Brigade Group (formerly Brigade Group) in Yelahanka, North
                     Bengaluru. Premium 3 & 4 BHK apartments near Kempegowda International Airport with Premium Open Spaces
                     and Premium Lifestyle Amenities.</p>
             </div>
 
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h3>Quick Links</h3>
                 <a href="#about">About Project</a><br>
                 <a href="#floorplans">Floor Plans</a><br>
                 <a href="#masterplan">Master Plan</a><br>
@@ -3206,7 +3208,7 @@
             </div>
 
             <div class="footer-section">
-                <h4>Contact Information</h4>
+                <h3>Contact Information</h3>
                 <div class="footer-contact">
                     <strong>Phone / WhatsApp:</strong>
                     <a href="tel:+918438344093">+91 84383 44093</a>
@@ -3219,7 +3221,7 @@
             </div>
 
             <div class="footer-section">
-                <h4>RERA Information</h4>
+                <h3>RERA Information</h3>
                 <p>Project Registration:<br>PRM/KA/RERA/1251/309/PR/070325/007559</p>
                 <p style="margin-top:0.7rem; font-size:0.8rem; opacity: 0.9;"><strong>RERA Authorised Advertiser:</strong><br>Narayanan Rajesh<br>TN: TN/Agent/0082/2024<br>KA: PRM/KA/RERA/1251/310/AG/170823/000045</p>
             </div>

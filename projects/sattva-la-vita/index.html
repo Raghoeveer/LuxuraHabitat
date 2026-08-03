@@ -236,7 +236,7 @@
         .hero h1 {
             color: var(--accent-green);
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.6rem, 3.2vw, 3.2rem);
+            font-size: clamp(1.4rem, 2.6vw, 2.3rem);
             font-weight: 900;
             line-height: 1.15;
             letter-spacing: 0;
@@ -379,7 +379,7 @@
         .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
         .feature-item { display: flex; gap: 1rem; }
         .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
-        .feature-item h4 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
         .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
 
         .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
@@ -571,7 +571,7 @@
         .close-button:hover { color: var(--accent-green); }
 
         .panel-section { margin-bottom: 2rem; }
-        .panel-section h4 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
         .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
         .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
         .quick-contact a:hover { color: var(--accent-warm); }
@@ -741,13 +741,14 @@
         .floor-card { background: #fff; border: 1px solid rgba(11,107,60,0.15); border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.05); transition: transform 0.3s; }
         .floor-card:hover { transform: translateY(-5px); border-color: var(--accent-green); }
         .floor-card img { width: 100%; aspect-ratio: 1/1; object-fit: contain; margin-bottom: 1rem; cursor: pointer; }
-        .floor-card h4 { color: var(--text-dark); font-weight: 800; font-size: 1.1rem; }
+        .floor-card h3 { color: var(--text-dark); font-weight: 800; font-size: 1.1rem; }
 
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -760,23 +761,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(255, 255, 255, 0.35) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: rgba(255, 255, 255, 0.85) !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: rgba(255, 255, 255, 0.78) !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption { display: none !important; }
             .project-brand { min-width: auto !important; }
         }
 
@@ -930,7 +933,7 @@
 
 
         <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
-            <h4>Direct Contact</h4>
+            <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:+918438344093">Call: +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20La Vita%20Phase%202%20and%20available%20offers">WhatsApp Chat</a>
@@ -947,7 +950,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
 
         <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
@@ -986,7 +989,7 @@
 <img src="Sattva Logo.png" alt="Sattva Group" style="height: 64px; width: auto;">
                 </a>
 
-                <h1>Sattva La Vita Hennur</h1>
+                <h1>Sattva La Vita, Hennur Road — Luxury 4 BHK Row House Villas</h1>
                 <p class="hero-intro">
                     Sattva La Vita redefines luxury living with exclusive 4 BHK row house villas. Nestled off Hennur Road, Bangalore, it features private gardens, world-class amenities, and a serene lifestyle. Enquire now for brochure and offers.
                 </p>
@@ -1070,14 +1073,14 @@
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Prime Location</h4>
+                                <h3>Prime Location</h3>
                                 <p>Off Hennur Road, Bangalore</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Premium Villas</h4>
+                                <h3>Premium Villas</h3>
                                 <p>Exclusive 4 BHK Row Houses</p>
                             </div>
                         </div>
@@ -1165,11 +1168,11 @@
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-002.webp" alt="Aerial night view"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-003.webp" alt="Living Area"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-004.webp" alt="Tower Approach"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-005.webp" alt="Landscape"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-005.webp" alt="Sattva La Vita row house villas courtyard exterior"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-006.webp" alt="Bedroom View"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="Lavita-slide-007.webp" alt="Master Bedroom"></div>
-                <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-SwimmingPool-001.webp')"><img src="lavita-amenities-SwimmingPool-001.webp" alt="Swimming Pool"></div>
-                <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-KidsPlayArea-001.webp')"><img src="lavita-amenities-KidsPlayArea-001.webp" alt="Kids Play Area"></div>
+                <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-SwimmingPool-001.webp')"><img src="lavita-amenities-SwimmingPool-001.webp" alt="Sattva La Vita rooftop swimming pool amenity"></div>
+                <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-KidsPlayArea-001.webp')"><img src="lavita-amenities-KidsPlayArea-001.webp" alt="Sattva La Vita children's play area amenity"></div>
                 <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-IndoorPartyArea-001.webp')"><img src="lavita-amenities-IndoorPartyArea-001.webp" alt="Indoor Party Area"></div>
                 <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-OutdoorGym-001.webp')"><img src="lavita-amenities-OutdoorGym-001.webp" alt="Outdoor Gym"></div>
                 <div class="gallery-item" onclick="openLightboxFromSrc('lavita-amenities-ReadingLounge-001.webp')"><img src="lavita-amenities-ReadingLounge-001.webp" alt="Reading Lounge"></div>
@@ -1220,19 +1223,19 @@
                     <div class="floor-grid">
                         <div class="floor-card">
                             <img src="Basement-Floor-East.webp" alt="Basement East" onclick="openLightboxFromSrc('Basement-Floor-East.webp')">
-                            <h4>Basement</h4>
+                            <h3>Basement</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Ground-Floor-East.webp" alt="Ground Floor East" onclick="openLightboxFromSrc('Ground-Floor-East.webp')">
-                            <h4>Ground Floor</h4>
+                            <h3>Ground Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="First-Floor-East.webp" alt="First Floor East" onclick="openLightboxFromSrc('First-Floor-East.webp')">
-                            <h4>First Floor</h4>
+                            <h3>First Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Second-Floor-East.webp" alt="Second Floor East" onclick="openLightboxFromSrc('Second-Floor-East.webp')">
-                            <h4>Second Floor</h4>
+                            <h3>Second Floor</h3>
                         </div>
                     </div>
                 </div>
@@ -1243,19 +1246,19 @@
                     <div class="floor-grid">
                         <div class="floor-card">
                             <img src="Basement-Floor-Nort.webp" alt="Basement North" onclick="openLightboxFromSrc('Basement-Floor-Nort.webp')">
-                            <h4>Basement</h4>
+                            <h3>Basement</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Ground-Floor-North.webp" alt="Ground Floor North" onclick="openLightboxFromSrc('Ground-Floor-North.webp')">
-                            <h4>Ground Floor</h4>
+                            <h3>Ground Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Firast-Floor-North.webp" alt="First Floor North" onclick="openLightboxFromSrc('Firast-Floor-North.webp')">
-                            <h4>First Floor</h4>
+                            <h3>First Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Second-Floor-North.webp" alt="Second Floor North" onclick="openLightboxFromSrc('Second-Floor-North.webp')">
-                            <h4>Second Floor</h4>
+                            <h3>Second Floor</h3>
                         </div>
                     </div>
                 </div>
@@ -1266,19 +1269,19 @@
                     <div class="floor-grid">
                         <div class="floor-card">
                             <img src="Basement-Floor-West.webp" alt="Basement West" onclick="openLightboxFromSrc('Basement-Floor-West.webp')">
-                            <h4>Basement</h4>
+                            <h3>Basement</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Ground-Floor-West.webp" alt="Ground Floor West" onclick="openLightboxFromSrc('Ground-Floor-West.webp')">
-                            <h4>Ground Floor</h4>
+                            <h3>Ground Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Firast-Floor-West.webp" alt="First Floor West" onclick="openLightboxFromSrc('Firast-Floor-West.webp')">
-                            <h4>First Floor</h4>
+                            <h3>First Floor</h3>
                         </div>
                         <div class="floor-card">
                             <img src="Second-Floor-West.webp" alt="Second Floor West" onclick="openLightboxFromSrc('Second-Floor-West.webp')">
-                            <h4>Second Floor</h4>
+                            <h3>Second Floor</h3>
                         </div>
                     </div>
                 </div>
@@ -1318,6 +1321,7 @@
         <div class="container">
             <h2 class="section-title">Location</h2>
             <p class="section-subtitle">Sattva La Vita offers convenient connectivity and an urban-friendly lifestyle.</p>
+
 
             <div class="masterplan-grid reveal">
                 <div class="masterplan-image">

@@ -276,7 +276,14 @@ ranking, so don't let page copy drift from how the project is actually advertise
 - **Image alt text**: every meaningful image gets descriptive alt text that
   naturally includes what's depicted and, where genuine, the project name/locality
   (e.g. "Vajram Chrysanthemum 3 BHK living room interior") — not a generic filename,
-  and not keyword-stuffed either.
+  and not keyword-stuffed either. A recurring failure mode in shipped pages: single-
+  or two-word alts like `alt="Elevation"`, `alt="Interiors"`, `alt="Amenities View"`
+  that carry zero project/locality context. Every gallery, hero, and floor-plan image
+  needs project name + what's depicted (+ config/sqft for unit plans), e.g.:
+  - `alt="Elevation"` → `alt="Concorde Mayfair Yelahanka elevation exterior view"`
+  - `alt="Interiors"` → `alt="Concorde Mayfair 3 BHK luxury interior design"`
+  - `alt="3 BHK Floor Plan 1452 Sq Ft"` → `alt="Concorde Mayfair 3 BHK 1452 sq ft
+    floor plan layout"`
 - **Favicon**: see Phase 2 — every project page gets the developer's own mark, not
   the site-wide default.
 - **URL/slug**: lowercase-hyphenated, matches the project/topic name, consistent
@@ -362,6 +369,10 @@ For each post:
   against the FAQPage `name`/`acceptedAnswer.text` — must match exactly, count for
   count.
 - Every image `src` referenced actually resolves to a file on disk.
+- Grep every `alt="..."` on the page for generic one/two-word values (Elevation,
+  Interiors, Amenities, Gallery, Exterior, View, Photo, Image, etc.) with no project
+  name or locality in them — rewrite each to be descriptive per the Phase 4 alt-text
+  rule before shipping.
 - Re-run the RERA grep from Phase 1 to confirm no stale/incorrect number survived
   anywhere in the repo.
 - Confirm every new blog post URL appears both in `sitemap.xml` **and** as a card in

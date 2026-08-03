@@ -554,9 +554,9 @@
         .hero h1 {
             color: #1a2639;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2rem, 4vw, 4.8rem);
+            font-size: clamp(1.3rem, 2.6vw, 2.1rem);
             font-weight: 800;
-            line-height: 0.98;
+            line-height: 1.15;
             text-transform: uppercase;
             margin: 0.15rem 0;
         }
@@ -839,7 +839,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.9rem;
             margin-bottom: 0.2rem;
             color: var(--primary-dark);
@@ -1581,7 +1581,7 @@
             margin: 0 auto 2rem;
         }
 
-        .footer-section h4 {
+        .footer-section h3 {
             margin-bottom: 1rem;
             font-size: 1rem;
             color: var(--accent-gold);
@@ -2122,15 +2122,17 @@
             }
 
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 1.5rem;
+                line-height: 1.2;
             }
         }
     
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2143,25 +2145,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2282,7 +2284,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -2350,7 +2352,7 @@
                     <img src="sattva-city-logo.svg" alt="Sattva City" onerror="this.style.display='none'">
                 </a>
                 <div class="hero-badge">New Launch &nbsp;|&nbsp; Under Construction</div>
-                <h1>Sattva City</h1>
+                <h1>Sattva City, Doddajala — 2, 3 &amp; 4 BHK Apartments Near Bangalore Airport</h1>
                 <p class="hero-tagline">"Minutes From The World, Miles From The Stress"</p>
                 <p class="hero-intro">An 50-acre integrated township by Sattva Group in Doddajala, North Bengaluru —
                     just minutes from Kempegowda International Airport. 3,460 thoughtfully designed apartments with 84%
@@ -2482,28 +2484,28 @@
                         <div class="feature-item">
                             <div class="feature-icon">âœˆï¸</div>
                             <div>
-                                <h4>Airport Proximity</h4>
+                                <h3>Airport Proximity</h3>
                                 <p>Minutes from Kempegowda International Airport, Doddajala</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">ðŸŒ³</div>
                             <div>
-                                <h4>Open Greenery</h4>
+                                <h3>Open Greenery</h3>
                                 <p>~84% open green spaces with 4 large central parks</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">ðŸ™ï¸</div>
                             <div>
-                                <h4>Integrated Township</h4>
+                                <h3>Integrated Township</h3>
                                 <p>Upcoming retail mall with multiplex within the community</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">ðŸ†</div>
                             <div>
-                                <h4>Trusted Developer</h4>
+                                <h3>Trusted Developer</h3>
                                 <p>Sattva Group – one of Bengaluru's most respected real estate brands</p>
                             </div>
                         </div>
@@ -2771,6 +2773,7 @@
             <h2 class="section-title">Prime Location – Doddajala, North Bengaluru</h2>
             <p class="section-subtitle">Strategically located on Airport Road, Doddajala — the most rapidly developing
                 zone of North Bengaluru</p>
+
 
             <div class="location-grid">
                 <div class="location-map">
@@ -3284,14 +3287,14 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h4>About Sattva City</h4>
+                <h3>About Sattva City</h3>
                 <p>An 50-acre integrated township by Sattva Group (formerly Salarpuria Sattva Group) in Doddajala, North
                     Bengaluru. Premium 2, 3 & 4 BHK apartments near Kempegowda International Airport with 84% open space
                     and 200+ lifestyle amenities.</p>
             </div>
 
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h3>Quick Links</h3>
                 <a href="#about">About Project</a><br>
                 <a href="#floorplans">Floor Plans</a><br>
                 <a href="#masterplan">Master Plan</a><br>
@@ -3304,7 +3307,7 @@
             </div>
 
             <div class="footer-section">
-                <h4>Contact Information</h4>
+                <h3>Contact Information</h3>
                 <div class="footer-contact">
                     <strong>Phone / WhatsApp:</strong>
                     <a href="tel:+918438344093">+91 84383 44093</a>
@@ -3317,7 +3320,7 @@
             </div>
 
             <div class="footer-section">
-                <h4>RERA Information</h4>
+                <h3>RERA Information</h3>
                 <p>Project Registration:<br>PRM/KA/RERA/1251/472/PR/270226/008494</p>
                 <p style="margin-top:0.7rem; font-size:0.8rem; opacity: 0.9;"><strong>RERA Authorised Advertiser:</strong><br>Narayanan Rajesh<br>TN: TN/Agent/0082/2024<br>KA: PRM/KA/RERA/1251/310/AG/170823/000045</p>
             </div>

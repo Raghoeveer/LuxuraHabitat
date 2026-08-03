@@ -694,7 +694,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
@@ -1019,7 +1019,7 @@
             transform: translateY(-2px);
         }
 
-        .proximity-section h4 {
+        .proximity-section h3 {
             color: var(--accent-green);
             font-size: 1rem;
             margin-bottom: 1rem;
@@ -1080,7 +1080,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .spec-card h4 {
+        .spec-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
             font-size: 1.2rem;
@@ -1314,7 +1314,7 @@
             border-left: 4px solid var(--accent-green);
         }
 
-        .usp-card h4 {
+        .usp-card h3 {
             color: var(--primary-dark);
             margin-bottom: 0.8rem;
             font-size: 1.1rem;
@@ -1355,7 +1355,7 @@
             transform: scale(1.05);
         }
 
-        .pricing-card h4 {
+        .pricing-card h3 {
             font-size: 1.3rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
@@ -1546,7 +1546,7 @@
             margin-bottom: 2rem;
         }
 
-        .panel-section h4 {
+        .panel-section h3 {
             color: var(--accent-green);
             font-size: 0.95rem;
             margin-bottom: 0.8rem;
@@ -2332,8 +2332,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2346,25 +2347,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2413,6 +2414,74 @@
     .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    .faq { background: var(--bg-white); }
+
+    .faq-list {
+        max-width: 900px;
+        margin: 2.5rem auto 0;
+        display: grid;
+        gap: 0.8rem;
+    }
+
+    .faq-item {
+        background: var(--bg-light);
+        border-radius: 8px;
+        border: 1px solid var(--border-light);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 1.1rem 1.3rem;
+        font-family: inherit;
+        font-size: 0.97rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        transition: background 0.2s;
+    }
+
+    .faq-question:hover {
+        background: rgba(11, 107, 60, 0.05);
+    }
+
+    .faq-question.open {
+        color: var(--accent-green);
+    }
+
+    .faq-arrow {
+        font-size: 1.1rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .faq-question.open .faq-arrow {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s;
+        padding: 0 1.3rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .faq-answer.open {
+        max-height: 400px;
+        padding: 0 1.3rem 1.1rem;
+    }
+
 
     </style>
 
@@ -2531,7 +2600,7 @@
         </form>
 
         <div class="panel-section" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
-            <h4>Direct Contact</h4>
+            <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:8438344093">Call: +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20details%20on%20TVS%20Emerald%20Altura">WhatsApp Chat</a>
@@ -2553,7 +2622,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger-menu" id="hamburgerMenu" onclick="toggleMobileMenu()">
             <span></span>
@@ -2664,28 +2733,28 @@
                         <div class="feature-item">
                             <div class="feature-icon">01</div>
                             <div>
-                                <h4>Premium Infrastructure</h4>
+                                <h3>Premium Infrastructure</h3>
                                 <p>12 high-rise towers with robust structural design</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">02</div>
                             <div>
-                                <h4>Power Backup</h4>
+                                <h3>Power Backup</h3>
                                 <p>100% DG power backup for uninterrupted supply</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">03</div>
                             <div>
-                                <h4>Green Spaces</h4>
+                                <h3>Green Spaces</h3>
                                 <p>More than 70% open space with landscaped gardens</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">04</div>
                             <div>
-                                <h4>Security</h4>
+                                <h3>Security</h3>
                                 <p>24/7 professional security and gated community</p>
                             </div>
                         </div>
@@ -2776,42 +2845,42 @@
             
             <div class="usp-grid">
                 <div class="usp-card">
-                    <h4>10.06-Acre Residential Community</h4>
+                    <h3>10.06-Acre Residential Community</h3>
                     <p>Planned as a premium high-rise development in Sathanur, North Bangalore with 975 residences across 12 towers.</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>2 & 3 BHK Apartment Choices</h4>
+                    <h3>2 & 3 BHK Apartment Choices</h3>
                     <p>Efficient 2 BHK Classic, 2 BHK Premium, 3 BHK, and 3 BHK Luxe layouts with sizes extending up to approximately 2,123 sq ft.</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>70%+ Open Space</h4>
+                    <h3>70%+ Open Space</h3>
                     <p>Landscaped open areas, terrace experiences, outdoor recreation pockets, and community zones designed around light, air, and movement.</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>Smart Infrastructure</h4>
+                    <h3>Smart Infrastructure</h3>
                     <p>100% DG power backup, advanced water management systems, 24/7 security, high-speed internet, parking with EV charging facilities, and smart metering</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>North Bangalore Connectivity</h4>
+                    <h3>North Bangalore Connectivity</h3>
                     <p>Strategic access to Thanisandra, Bagalur Main Road, Hebbal, Manyata Tech Park, and the Kempegowda International Airport corridor</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>Workplace Proximity</h4>
+                    <h3>Workplace Proximity</h3>
                     <p>Well placed for North Bangalore business districts, technology parks, aerospace corridor growth, and airport-linked employment hubs.</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>Social Infrastructure</h4>
+                    <h3>Social Infrastructure</h3>
                     <p>North Bangalore social infrastructure with schools, colleges, healthcare, retail, and daily conveniences within practical driving distance</p>
                 </div>
 
                 <div class="usp-card">
-                    <h4>Airport Corridor Advantage</h4>
+                    <h3>Airport Corridor Advantage</h3>
                     <p>Positioned in an active growth corridor supported by airport connectivity, tech parks, and planned urban infrastructure</p>
                 </div>
             </div>
@@ -2946,7 +3015,8 @@
         <div class="container">
             <h2 class="section-title">Strategic Location</h2>
             <p class="section-subtitle">Perfectly positioned in Sathanur, North Bangalore with strong connectivity to workplaces, airport access, and everyday social infrastructure</p>
-            
+
+
             <div class="location-grid">
                 <div class="location-map">
                     <img src="TVS-Altura-Sathanur-Location.png" alt="TVS Emerald Altura Sathanur location map" onclick="openLightbox(this)">
@@ -2959,7 +3029,7 @@
                     </p>
                     <div class="proximity-wrapper">
                         <div class="proximity-section">
-                            <h4>Strategic Connectivity</h4>
+                            <h3>Strategic Connectivity</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Thanisandra Main Road and Bagalur Main Road corridor</span>
@@ -2981,7 +3051,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>Employment Hubs & Growth Corridors</h4>
+                            <h3>Employment Hubs & Growth Corridors</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Manyata Tech Park and Hebbal business districts</span>
@@ -3003,7 +3073,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>Social Infrastructure</h4>
+                            <h3>Social Infrastructure</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Schools, colleges, and learning centers in the North Bangalore belt</span>
@@ -3060,7 +3130,7 @@
             
             <div class="specs-grid">
                 <div class="spec-card">
-                    <h4>Construction</h4>
+                    <h3>Construction</h3>
                     <ul class="spec-list">
                         <li>RCC Frame Structure</li>
                         <li>Seismic Design Compliant</li>
@@ -3071,7 +3141,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Possession Timeline</h4>
+                    <h3>Possession Timeline</h3>
                     <ul class="spec-list">
                         <li>RERA-linked delivery schedule</li>
                         <li>Phase-wise progress updates</li>
@@ -3082,7 +3152,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Legal & RERA</h4>
+                    <h3>Legal & RERA</h3>
                     <ul class="spec-list">
                         <li>RERA ID: PRM/KA/RERA/1251/309/PR/040426/008572</li>
                         <li>Clear Title</li>
@@ -3093,7 +3163,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Utilities</h4>
+                    <h3>Utilities</h3>
                     <ul class="spec-list">
                         <li>100% DG Backup</li>
                         <li>Rainwater Harvesting</li>
@@ -3142,6 +3212,115 @@
 
                 <div class="rera-notice">
                     <strong>Disclaimer:</strong> All information provided is subject to RERA regulations. Entry prices mentioned are starting prices; final pricing may vary based on location, configuration, and applicable taxes. For detailed information, please refer to the RERA-registered project details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about TVS Emerald Altura, Sathanur.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is TVS Emerald Altura?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">TVS Emerald Altura is a Japandi-inspired high-rise residential community by TVS Emerald Housing & Estates Pvt. Ltd., spread across 10.06 acres in Sathanur, North Bangalore, with 975 residences across 12 towers.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where is the project located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is located on Bagalur Main Road in Sathanur, at the intersection of the Thanisandra Main Road and Bagalur Main Road corridor, with access to Hebbal and the Outer Ring Road.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What configurations are available?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">TVS Emerald Altura offers 2 BHK and 3 BHK apartments, with 3 BHK options going up to 2,123 sq ft.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">What is the starting price?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Prices start from ₹1.4 Cr* onwards for a 2 BHK. Please enquire for the latest tower-wise and configuration-wise price list.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Is TVS Emerald Altura RERA approved?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, the project is registered under Karnataka RERA with registration number PRM/KA/RERA/1251/309/PR/040426/008572.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">How much open space does the project have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The 10.06-acre layout dedicates over 70% to open spaces, giving residents generous green cover, walkways and landscaped areas between the 12 towers.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">Does the project have good connectivity to IT hubs and the airport?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, the location offers strong access to Manyata Tech Park and the Hebbal business district, the KIADB Aerospace Park and airport-linked employment corridor, and the Thanisandra-Nagawara commercial catchment.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">What amenities are included?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is planned around Recreation & Wellness, Sports & Fitness, Community Spaces, and core Infrastructure amenity zones across the 12-tower campus.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">Who is the developer of TVS Emerald Altura?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is developed by TVS Emerald Housing & Estates Pvt. Ltd., part of the TVS Group.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">What schools and hospitals are near TVS Emerald Altura?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The North Bangalore belt around Thanisandra, Hebbal and the airport road catchment has an established network of schools, colleges, hospitals and clinics, along with retail and dining options nearby.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">How do I book a site visit or download the master plan?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can download the master plan and floor plans, or book a site visit, using the enquiry form, WhatsApp button or call button on this page.</p>
+                    </div>
                 </div>
             </div>
         </div>

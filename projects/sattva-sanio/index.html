@@ -537,9 +537,9 @@
         .hero h1 {
             color: #1a2639;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2rem, 4vw, 4.8rem);
+            font-size: clamp(1.3rem, 2.6vw, 2.1rem);
             font-weight: 800;
-            line-height: 0.98;
+            line-height: 1.15;
             text-transform: uppercase;
             margin: 0.15rem 0;
         }
@@ -822,7 +822,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.9rem;
             margin-bottom: 0.2rem;
             color: var(--primary-dark);
@@ -1564,7 +1564,7 @@
             margin: 0 auto 2rem;
         }
 
-        .footer-section h4 {
+        .footer-section h3 {
             margin-bottom: 1rem;
             font-size: 1rem;
             color: var(--accent-gold);
@@ -2098,15 +2098,17 @@
             }
 
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 1.5rem;
+                line-height: 1.2;
             }
         }
     
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2119,25 +2121,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2258,7 +2260,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -2326,7 +2328,7 @@
                     <img src="Sattva Logo.png" alt="Sattva Group" style="height: 64px; width: auto;">
                 </a>
                 <div class="hero-badge">New Pre-Launch Opportunity | Old Madras Road</div>
-                <h1 style="font-size: clamp(2rem, 3.5vw, 4rem);">Sattva Sanio</h1>
+                <h1>Sattva Sanio, Old Madras Road — Premium 3 &amp; 4 BHK Apartments</h1>
                 <p class="hero-tagline">"Elevated Living on Old Madras Road"</p>
                 <p class="hero-intro">Step into a landmark residential community by Sattva Group, offering spacious 3 & 4 BHK residences designed for modern, elevated living. Spread across 10.3 acres with 7 iconic towers, this Vastu-compliant haven features 1000+ premium homes and world-class amenities.</p>
 
@@ -2446,28 +2448,28 @@
                         <div class="feature-item">
                             <div class="feature-icon"></div>
                             <div>
-                                <h4>Iconic Architecture</h4>
+                                <h3>Iconic Architecture</h3>
                                 <p>7 towering structures reaching up to 41 floors with stunning views.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"></div>
                             <div>
-                                <h4>Vastu-Compliant</h4>
+                                <h3>Vastu-Compliant</h3>
                                 <p>Thoughtfully oriented homes to ensure prosperity and well-being.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"></div>
                             <div>
-                                <h4>Expansive Grounds</h4>
+                                <h3>Expansive Grounds</h3>
                                 <p>Set on 10.3 acres featuring beautifully manicured landscapes.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"></div>
                             <div>
-                                <h4>Exclusive Duplexes</h4>
+                                <h3>Exclusive Duplexes</h3>
                                 <p>Limited edition 4 BHK duplexes offering unparalleled opulence.</p>
                             </div>
                         </div>
@@ -2755,6 +2757,7 @@
         <div class="container">
             <h2 class="section-title">Prime Location - Old Madras Road (NH-4)</h2>
             <p class="section-subtitle">Strategically positioned for seamless connectivity to Bangalore's major IT hubs and essential infrastructure.</p>
+
 
             <div class="location-grid">
                 <div class="location-map">
@@ -3151,12 +3154,12 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <img src="Footer-logo-colored.png" alt="Sattva Sanio" style="max-height: 50px; margin-bottom: 1.5rem;">
-                <h4>About Sattva Sanio</h4>
+                <h3>About Sattva Sanio</h3>
                 <p>A 10.3-acre premium residential community by Sattva Group on Old Madras Road, Bangalore. Featuring luxurious 3 & 4 BHK apartments with 7 iconic towers and world-class lifestyle amenities.</p>
             </div>
 
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h3>Quick Links</h3>
                 <a href="#about">About Project</a><br>
                 <a href="#floorplans">Floor Plans</a><br>
                 <a href="#masterplan">Master Plan</a><br>
@@ -3168,7 +3171,7 @@
             </div>
 
             <div class="footer-section">
-                <h4>Contact Information</h4>
+                <h3>Contact Information</h3>
                 <div class="footer-contact">
                     <strong>Phone / WhatsApp:</strong>
                     <a href="tel:+918438344093">+91 84383 44093</a>
@@ -3180,7 +3183,7 @@
                 </div>
             </div>
 
-            <div class="footer-section"><h4>RERA Information</h4><p>RERA Number: TBA<br>Registration in Progress.</p></div>
+            <div class="footer-section"><h3>RERA Information</h3><p>RERA Number: TBA<br>Registration in Progress.</p></div>
         </div>
 
         <div class="footer-bottom">

@@ -27,12 +27,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/images/projects/orchid-salisbury/favicon.png" type="image/png">
-    <meta name="description" content="Goyal and Co Orchid Salisbury - Premium high-rise residential community in Thanisandra, Bangalore. 660+ luxury apartments with 7 independent towers, modern amenities, and excellent connectivity. RERA approved.">
+    <meta name="description" content="Goyal Orchid Salisbury, Thanisandra — 660+ 2 &amp; 3 BHK apartments across 7 towers from &#8377;1.03 Cr. RERA approved. Floor plans, amenities &amp; connectivity.">
     <meta name="keywords" content="Goyal Orchid Salisbury, premium apartments Bangalore, luxury flats Thanisandra, high-rise residential, 2BHK 3BHK apartments, Agrahara Layout">
     <meta name="author" content="Luxura Habitat">
     <meta property="og:title" content="Goyal and Co Orchid Salisbury | Premium High-Rise Apartments in Thanisandra, Bangalore">
     <meta property="og:description" content="Luxury residential community with 660+ premium apartments across 7 high-rise towers. Located on Thanisandra Main Road with world-class amenities and strategic connectivity to Manyata Tech Park & Airport.">
-    <meta property="og:image" content="https://luxurahabitat.com/additional_websites/Salisbury/dji_fly_20250628_104102_0330_1751528006863_photo.jpg">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Goyal Orchid Salisbury – Premium Apartments in Thanisandra, Bangalore">
@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Goyal and Co Orchid Salisbury – Premium Apartments in Thanisandra">
     <meta name="twitter:description" content="660+ luxury apartments across 7 towers in Thanisandra. 2 & 3 BHK from ₹1.03 Cr. Excellent connectivity to Manyata, Hebbal & Airport.">
-    <meta name="twitter:image" content="https://luxurahabitat.com/additional_websites/Salisbury/dji_fly_20250628_104102_0330_1751528006863_photo.jpg">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg">
     <meta name="twitter:image:alt" content="Goyal Orchid Salisbury – Luxury High-Rise Apartments in Bangalore">
     
     <!-- SEO Meta Tags -->
@@ -99,8 +99,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="dji_fly_20250628_104102_0330_1751528006863_photo.jpg" fetchpriority="high">
-    <title>Orchid Salisbury Thanisandra — 2 &amp; 3 BHK from ₹1.03 Cr | Luxura Habitat</title>
+    <link rel="preload" as="image" href="/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg" fetchpriority="high">
+    <title>Orchid Salisbury, Thanisandra — 2 &amp; 3 BHK | Price &amp; RERA</title>
 
     <!-- Structured Data / JSON-LD – RealEstateListing -->
     <script type="application/ld+json">
@@ -111,7 +111,7 @@
       "description": "Premium 2 & 3 BHK high-rise apartments by Goyal and Co in Thanisandra, Bangalore. 660+ homes across 7 towers. World-class amenities. Excellent connectivity to Manyata Tech Park, Hebbal and Bangalore Airport.",
       "url": "https://luxurahabitat.com/projects/orchid-salisbury/",
       "image": [
-        "https://luxurahabitat.com/additional_websites/Salisbury/dji_fly_20250628_104102_0330_1751528006863_photo.jpg",
+        "https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg",
         "https://luxurahabitat.com/additional_websites/Salisbury/dji_fly_20250628_104132_0331_1751528009907_photo.jpg",
         "https://luxurahabitat.com/additional_websites/Salisbury/Club-house-2-4.jpg"
       ],
@@ -460,7 +460,7 @@
 
         /* Hero Section */
         .hero {
-            background: #11140f;
+            background-color: #11140f;
             color: #222222;
             min-height: calc(100vh - 68px);
             padding: clamp(1rem, 2.2vw, 2rem);
@@ -536,14 +536,14 @@
         .hero h1 {
             color: #2d7a3e;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2.2rem, 4.5vw, 5rem);
+            font-size: clamp(1.7rem, 2.6vw, 2.5rem);
             font-weight: 800;
-            line-height: 0.98;
+            line-height: 1.15;
             letter-spacing: 0;
             text-align: left;
             text-transform: uppercase;
             margin: 0.2rem 0;
-            max-width: 8ch;
+            max-width: 100%;
             overflow-wrap: break-word;
             word-break: break-word;
         }
@@ -655,6 +655,17 @@
             min-height: 100%;
             background: #20231f;
             z-index: 0;
+        }
+
+        .hero-mobile-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
         .hero-media img {
@@ -849,7 +860,7 @@
             flex-shrink: 0;
         }
 
-        .feature-item h4 {
+        .feature-item h3 {
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
@@ -1174,7 +1185,7 @@
             transform: translateY(-2px);
         }
 
-        .proximity-section h4 {
+        .proximity-section h3 {
             color: var(--accent-green);
             font-size: 1rem;
             margin-bottom: 1rem;
@@ -1235,7 +1246,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .spec-card h4 {
+        .spec-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
             font-size: 1.2rem;
@@ -1469,7 +1480,7 @@
             border-left: 4px solid var(--accent-green);
         }
 
-        .usp-card h4 {
+        .usp-card h3 {
             color: var(--primary-dark);
             margin-bottom: 0.8rem;
             font-size: 1.1rem;
@@ -1510,7 +1521,7 @@
             transform: scale(1.05);
         }
 
-        .pricing-card h4 {
+        .pricing-card h3 {
             font-size: 1.3rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
@@ -1697,7 +1708,7 @@
             margin-bottom: 2rem;
         }
 
-        .panel-section h4 {
+        .panel-section h3 {
             color: var(--accent-green);
             font-size: 0.95rem;
             margin-bottom: 0.8rem;
@@ -2112,8 +2123,8 @@
                 transform: none;
             }
 
-            .hero {
-                background: rgba(255, 255, 255, 0.95);
+            .hero-mobile-overlay {
+                display: block;
             }
 
             .floor-grid {
@@ -2228,8 +2239,8 @@
             }
 
             .hero h1 {
-                font-size: clamp(1.5rem, 6vw, 2rem);
-                max-width: 10ch;
+                font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+                max-width: 100%;
             }
 
             .hero-intro {
@@ -2383,8 +2394,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -2397,25 +2409,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -2465,6 +2477,74 @@
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
+    .faq { background: var(--bg-white); }
+
+    .faq-list {
+        max-width: 900px;
+        margin: 2.5rem auto 0;
+        display: grid;
+        gap: 0.8rem;
+    }
+
+    .faq-item {
+        background: var(--bg-light);
+        border-radius: 8px;
+        border: 1px solid var(--border-light);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 1.1rem 1.3rem;
+        font-family: inherit;
+        font-size: 0.97rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        transition: background 0.2s;
+    }
+
+    .faq-question:hover {
+        background: rgba(11, 107, 60, 0.05);
+    }
+
+    .faq-question.open {
+        color: var(--accent-green);
+    }
+
+    .faq-arrow {
+        font-size: 1.1rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .faq-question.open .faq-arrow {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s;
+        padding: 0 1.3rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .faq-answer.open {
+        max-height: 400px;
+        padding: 0 1.3rem 1.1rem;
+    }
+
+
     </style>
 
     <!-- Schema.org Structured Data for SEO -->
@@ -2474,8 +2554,8 @@
         "@type": "RealEstateAgent",
         "name": "Goyal and Co Orchid Salisbury",
         "description": "Premium high-rise residential community in Thanisandra, North Bangalore",
-        "url": "",
-        "telephone": "+91-XXXXXXXXXX",
+        "url": "https://luxurahabitat.com/projects/orchid-salisbury/",
+        "telephone": "+91-8438344093",
         "email": "projectinfoindia@gmail.com",
         "areaServed": {
             "@type": "Place",
@@ -2494,7 +2574,7 @@
             "postalCode": "560068",
             "addressCountry": "IN"
         },
-        "image": "sal.jpg",
+        "image": "https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg",
         "priceRange": "₹88 Lakhs - ₹1.67 Cr+"
     }
     </script>
@@ -2505,7 +2585,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Goyal and Co Orchid Salisbury - Apartments",
-        "image": "sal.jpg",
+        "image": "https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg",
         "description": "Premium high-rise residential community with 660+ luxury apartments across 7 towers featuring world-class amenities and excellent connectivity.",
         "address": {
             "@type": "PostalAddress",
@@ -2515,8 +2595,8 @@
             "postalCode": "560068",
             "addressCountry": "IN"
         },
-        "telephone": "+91-XXXXXXXXXX",
-        "url": "",
+        "telephone": "+91-8438344093",
+        "url": "https://luxurahabitat.com/projects/orchid-salisbury/",
         "email": "projectinfoindia@gmail.com",
         "priceRange": "₹88L - ₹1.67Cr+"
     }
@@ -2529,7 +2609,7 @@
         "@type": "Product",
         "name": "Orchid Salisbury - Luxury Apartments",
         "description": "Premium high-rise residential community with 2BHK and 3BHK luxury apartments in North Bangalore",
-        "image": "sal.jpg",
+        "image": "https://luxurahabitat.com/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg",
         "brand": {
             "@type": "Brand",
             "name": "Goyal and Co"
@@ -2567,14 +2647,7 @@
                 "availability": "https://schema.org/PreOrder",
                 "description": "1,650-1,675 sq ft, Starting from ₹1.7 Crore"
             }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "100"
-        }
+        ]
     }
     </script>
 
@@ -2585,8 +2658,8 @@
         "@type": "Organization",
         "name": "Goyal and Co",
         "description": "Premium real estate developer specializing in luxury residential projects",
-        "url": "",
-        "logo": "GOYAL-LOGO-3.png",
+        "url": "https://www.goyalandco.com/",
+        "logo": "https://luxurahabitat.com/additional_websites/Salisbury/GOYAL-LOGO-3.png",
         "sameAs": [
             "https://www.facebook.com/goyalandco",
             "https://www.instagram.com/goyalandco",
@@ -2622,7 +2695,7 @@
         </form>
 
         <div class="panel-section" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
-            <h4>📞 Direct Contact</h4>
+            <h3>📞 Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:8438344093">📱 +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20details%20on%20Orchid%20Salisbury">💬 WhatsApp Chat</a>
@@ -2640,7 +2713,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
         <button class="hamburger-menu" id="hamburgerMenu" onclick="toggleMobileMenu()">
             <span></span>
@@ -2671,9 +2744,9 @@
     </nav>
 
     <!-- Hero Section with Form -->
-    <section class="hero" id="hero" style="background-image: url('sal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <!-- Dark overlay for text readability on mobile -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
+    <section class="hero" id="hero" style="background-image: url('/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <!-- Dark overlay for text readability on mobile only; desktop uses .hero-media's own gradient -->
+        <div class="hero-mobile-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <a href="#" class="hero-logo" aria-label="Orchid Salisbury home" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
@@ -2683,7 +2756,7 @@
                 <div class="hero-badge" style="background: none; color: var(--text-dark); font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.5rem;">
                     ORCHID SALISBURY
                 </div>
-                <h1>Premium Apartments</h1>
+                <h1>Goyal Orchid Salisbury, Thanisandra &mdash; Premium 2 &amp; 3 BHK Apartments</h1>
                 <p class="hero-intro">Discover 660+ luxury apartments across 7 independent high-rise towers in Thanisandra. State-of-the-art amenities, strategic location near Manyata Tech Park and Bhartiya Mall, and unparalleled quality of life.</p>
                 
                 <div class="hero-info-boxes">
@@ -2715,7 +2788,7 @@
             </div>
 
             <div class="hero-media">
-                <img src="sal.jpg" alt="Orchid Salisbury project exterior" fetchpriority="high">
+                <img src="/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg" alt="Orchid Salisbury project exterior" fetchpriority="high">
                 <span class="artist-note">Project Visualization</span>
             </div>
 
@@ -2751,35 +2824,35 @@
                         <div class="feature-item">
                             <div class="feature-icon">🏗️</div>
                             <div>
-                                <h4>Premium Infrastructure</h4>
+                                <h3>Premium Infrastructure</h3>
                                 <p>7 independent towers with robust structural design</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">⚡</div>
                             <div>
-                                <h4>Power Backup</h4>
+                                <h3>Power Backup</h3>
                                 <p>100% DG power backup for uninterrupted supply</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🌿</div>
                             <div>
-                                <h4>Green Spaces</h4>
+                                <h3>Green Spaces</h3>
                                 <p>Landscaped gardens and sensory gardens</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🔒</div>
                             <div>
-                                <h4>Security</h4>
+                                <h3>Security</h3>
                                 <p>24/7 professional security and gated community</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="sal.jpg" alt="Orchid Salisbury Project" class="about-visual">
+                    <img src="/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg" alt="Orchid Salisbury Project" class="about-visual">
                 </div>
             </div>
         </div>
@@ -2793,7 +2866,7 @@
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h4>2 BHK Compact</h4>
+                    <h3>2 BHK Compact</h3>
                     <div class="pricing-amount">₹1.03 Cr</div>
                     <ul class="pricing-details">
                         <li>Area: 930 sq ft</li>
@@ -2806,7 +2879,7 @@
                 </div>
 
                 <div class="pricing-card featured">
-                    <h4>2 BHK Regular</h4>
+                    <h3>2 BHK Regular</h3>
                     <div class="pricing-amount">₹1.07 Cr</div>
                     <ul class="pricing-details">
                         <li>Area: 1,180 - 1,200 sq ft</li>
@@ -2819,7 +2892,7 @@
                 </div>
 
                 <div class="pricing-card">
-                    <h4>3 BHK + 2 Terraces</h4>
+                    <h3>3 BHK + 2 Terraces</h3>
                     <div class="pricing-amount">₹1.29 Cr</div>
                     <ul class="pricing-details">
                         <li>Area: 1,420 - 1,430 sq ft</li>
@@ -2832,7 +2905,7 @@
                 </div>
 
                 <div class="pricing-card">
-                    <h4>3 BHK + 3 Terraces</h4>
+                    <h3>3 BHK + 3 Terraces</h3>
                     <div class="pricing-amount">₹1.7 Cr</div>
                     <ul class="pricing-details">
                         <li>Area: 1,650 - 1,675 sq ft</li>
@@ -2976,7 +3049,8 @@
         <div class="container">
             <h2 class="section-title">Strategic Location</h2>
             <p class="section-subtitle">Perfectly positioned on Thanisandra Main Road with excellent connectivity</p>
-            
+
+
             <div class="location-grid">
                 <div class="location-map">
                     <img src="SALISBURY-WEBSITE-KEY-PLAN-28-NOVEMBER.jpg" alt="Orchid Salisbury Location Map" onclick="openLightbox(this)">
@@ -2986,7 +3060,7 @@
                     <h3>Location Highlights</h3>
                     <div class="proximity-wrapper">
                         <div class="proximity-section">
-                            <h4>Shopping & Entertainment</h4>
+                            <h3>Shopping & Entertainment</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Bhartiya Mall of Bangalore</span>
@@ -3000,7 +3074,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>Employment Centers</h4>
+                            <h3>Employment Centers</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Manyata Tech Park</span>
@@ -3014,7 +3088,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>Airport & Travel</h4>
+                            <h3>Airport & Travel</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Bagalur KIA Airport Corridor</span>
@@ -3028,7 +3102,7 @@
                         </div>
 
                         <div class="proximity-section">
-                            <h4>Education & Healthcare</h4>
+                            <h3>Education & Healthcare</h3>
                             <div class="proximity-list">
                                 <div class="proximity-item">
                                     <span class="proximity-place">Schools & Colleges</span>
@@ -3054,28 +3128,28 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="sal.jpg" alt="Project Exterior">
+                    <img src="/images/projects/orchid-salisbury/orchid-salisbury-hero.jpg" alt="Orchid Salisbury Thanisandra tower exterior view">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Salisbury-website-Gallery-images-1-4.jpg" alt="Community Spaces">
+                    <img src="Salisbury-website-Gallery-images-1-4.jpg" alt="Orchid Salisbury clubhouse banquet hall interior">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Salisbury-website-Gallery-images-3-4.jpg" alt="Amenities">
+                    <img src="Salisbury-website-Gallery-images-3-4.jpg" alt="Orchid Salisbury outdoor lounge seating deck">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Salisbury-website-Gallery-images-4-4.jpg" alt="Landscaping">
+                    <img src="Salisbury-website-Gallery-images-4-4.jpg" alt="Orchid Salisbury swimming pool deck at dusk">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Swimming-pool-4-3.jpg" alt="Swimming Pool">
+                    <img src="Swimming-pool-4-3.jpg" alt="Orchid Salisbury swimming pool amenity">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Club-house-2-4.jpg" alt="Clubhouse">
+                    <img src="Club-house-2-4.jpg" alt="Orchid Salisbury clubhouse building exterior">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="BAdminton-court-1-3.jpg" alt="Sports Court">
+                    <img src="BAdminton-court-1-3.jpg" alt="Orchid Salisbury indoor badminton court">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="Home-Theatre-3-4.jpg" alt="Theatre">
+                    <img src="Home-Theatre-3-4.jpg" alt="Orchid Salisbury private home theatre amenity">
                 </div>
             </div>
         </div>
@@ -3089,7 +3163,7 @@
             
             <div class="specs-grid">
                 <div class="spec-card">
-                    <h4>Construction</h4>
+                    <h3>Construction</h3>
                     <ul class="spec-list">
                         <li>RCC Frame Structure</li>
                         <li>Seismic Design Compliant</li>
@@ -3100,7 +3174,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Possession Timeline</h4>
+                    <h3>Possession Timeline</h3>
                     <ul class="spec-list">
                         <li>Mid-2027 (Early Units)</li>
                         <li>Phase-wise Handover</li>
@@ -3111,7 +3185,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Legal & RERA</h4>
+                    <h3>Legal & RERA</h3>
                     <ul class="spec-list">
                         <li>RERA ID: PRM/KA/RERA/1251/309/PR/271123/006440</li>
                         <li>Clear Title</li>
@@ -3122,7 +3196,7 @@
                 </div>
 
                 <div class="spec-card">
-                    <h4>Utilities</h4>
+                    <h3>Utilities</h3>
                     <ul class="spec-list">
                         <li>100% DG Backup</li>
                         <li>Rainwater Harvesting</li>
@@ -3169,6 +3243,106 @@
 
                 <div class="rera-notice">
                     <strong>⚖️ Disclaimer:</strong> This is a pre-launch project. All information provided is subject to RERA regulations. Entry prices mentioned are starting prices; final pricing may vary based on location, configuration, and applicable taxes. For detailed information, please refer to the RERA-registered project details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about Goyal Orchid Salisbury, Thanisandra.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Orchid Salisbury?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Orchid Salisbury is a premium high-rise residential community by Goyal and Co in Thanisandra, North Bangalore, offering 660+ apartments across 7 independent towers.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where is the project located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">It is located on Thanisandra Main Road, Agrahara Layout, close to Bhartiya Mall of Bangalore (1.8 km) and Manyata Tech Park (2 km), with connected access to the Bagalur-KIA airport corridor.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What configurations are available at Orchid Salisbury?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project offers 2 BHK and 3 BHK apartments across its 7 towers, with sizes ranging from approximately 1,100 to 1,600 sq ft.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">What is the starting price of Orchid Salisbury?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Prices start from ₹1.03 Cr onwards for a compact 2 BHK, going up to around ₹1.7 Cr for larger 3 BHK homes. Please enquire for the latest tower-wise price list.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Is Orchid Salisbury RERA approved?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, the project is registered under RERA ID PRM/KA/RERA/1251/309/PR/271123/006440.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">When is possession expected?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Possession is planned in phases, with early units expected around Mid-2027 and final handover by December 2028, as per the RERA-registered schedule.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">Who is the developer of Orchid Salisbury?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is developed by Goyal and Co, a real estate developer with a presence across North Bangalore's residential corridors.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">Does Orchid Salisbury have good connectivity to IT hubs?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Manyata Tech Park is just around 2 km away, and the location offers seamless expressway access toward the airport corridor, making it convenient for IT professionals and frequent flyers alike.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">What amenities does the project offer?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Orchid Salisbury includes dedicated recreation, sports & fitness, wellness, and community infrastructure zones designed for residents of all ages across its 7-tower campus.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">How do I book a site visit or get the brochure?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can request the brochure, latest price list, and book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                    </div>
                 </div>
             </div>
         </div>

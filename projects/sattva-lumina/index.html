@@ -236,7 +236,7 @@
         .hero h1 {
             color: var(--accent-green);
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.6rem, 3.2vw, 3.2rem);
+            font-size: clamp(1.3rem, 2.4vw, 2.1rem);
             font-weight: 900;
             line-height: 1.15;
             letter-spacing: 0;
@@ -379,7 +379,7 @@
         .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
         .feature-item { display: flex; gap: 1rem; }
         .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
-        .feature-item h4 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
         .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
 
         .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
@@ -571,7 +571,7 @@
         .close-button:hover { color: var(--accent-green); }
 
         .panel-section { margin-bottom: 2rem; }
-        .panel-section h4 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
         .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
         .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
         .quick-contact a:hover { color: var(--accent-warm); }
@@ -711,8 +711,9 @@
         /* Luxura Habitat Branding Styles */
         .project-brand {
             display: flex !important;
-            align-items: center !important;
-            gap: 0.65rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
             min-width: 205px !important;
             text-decoration: none !important;
             flex-shrink: 0 !important;
@@ -725,25 +726,25 @@
         }
 
         .partner-divider {
-            width: 1px !important;
-            height: 28px !important;
-            background: rgba(44, 62, 80, 0.18) !important;
-            flex-shrink: 0 !important;
+            display: none !important;
         }
 
         .partner-caption {
-            color: #777b74 !important;
-            font-size: 0.72rem !important;
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
             font-weight: 600 !important;
             line-height: 1.2 !important;
-            letter-spacing: 0.03em !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
             white-space: nowrap !important;
         }
 
         @media (max-width: 1180px) {
-            .partner-caption {
-                display: none !important;
-            }
             .project-brand {
                 min-width: auto !important;
             }
@@ -901,7 +902,7 @@
 
 
         <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
-            <h4>Direct Contact</h4>
+            <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:+918438344093">Call: +91 8438 344 093</a>
                 <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Lumina%20Phase%202%20and%20available%20offers">WhatsApp Chat</a>
@@ -918,7 +919,7 @@
         <a href="/" class="project-brand" aria-label="Go to Luxura Habitat core website">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
-            <span class="partner-caption">Authorized Channel Partner</span>
+            <span class="partner-caption">Real Estate Advisory</span>
         </a>
 
         <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
@@ -957,7 +958,7 @@
 <img src="Sattva Logo.png" alt="Sattva Group" style="height: 64px; width: auto;">
                 </a>
 
-                <h1>Sattva Lumina Rajankunte</h1>
+                <h1>Sattva Lumina, Rajankunte Yelahanka — 1, 2 &amp; 3 BHK Lakefront Apartments</h1>
                 <p class="hero-intro">
                     Premium residences with a lifestyle-first design&mdash;explore the master plan, amenities, unit plans and gallery.
                     Enquire for availability and special offers.
@@ -1035,28 +1036,28 @@
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Premium Residences</h4>
+                                <h3>Premium Residences</h3>
                                 <p>Lumina living with lifestyle-first design.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Green & Wellness</h4>
+                                <h3>Green & Wellness</h3>
                                 <p>Spaces for calm, fitness, and recreation.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Sports & Fun</h4>
+                                <h3>Sports & Fun</h3>
                                 <p>Indoor & outdoor activity zones.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&check;</div>
                             <div>
-                                <h4>Community Living</h4>
+                                <h3>Community Living</h3>
                                 <p>Planned amenities and community comfort.</p>
                             </div>
                         </div>
@@ -1179,7 +1180,7 @@
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="imgi_74_lib-1024x576.webp" alt="Sattva Lumina Amenities"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="imgi_19_Table-Tennis-Billiards_Cam_WM.webp" alt="Sattva Lumina Amenities"></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="imgi_120_Gym_Cam_edited-768x583.webp" alt="Sattva Lumina Amenities"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="imgi_3_club.webp" alt="Building"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="imgi_3_club.webp" alt="Sattva Lumina clubhouse building exterior with rooftop pool"></div>
             </div>
 
         </div>
@@ -1286,6 +1287,7 @@
         <div class="container">
             <h2 class="section-title">Location</h2>
             <p class="section-subtitle">Sattva Lumina offers convenient connectivity and an urban-friendly lifestyle.</p>
+
 
             <div class="plan-grid">
                 <div class="plan-image reveal">
