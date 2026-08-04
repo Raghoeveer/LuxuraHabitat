@@ -209,7 +209,19 @@ silently reinherit by copy-pasting the template):
   there loses nothing.
 - Any heading/accent color from the source export gets swapped to this project's own
   brand palette before shipping — don't inherit a generic blue or the wrong project's
-  colors just because the source file had them.
+  colors just because the source file had them. This includes `.section-title`: every
+  page copied from `sattva-aeropolis` inherits `color: #2563eb` (a generic blue with no
+  connection to this site's green/gold branding) in that rule's base declaration —
+  replace it, don't leave it. Pick the replacement from the project's **type**, and
+  make sibling projects of different types visibly distinct rather than converging on
+  the same green: villas/plotted developments get a warm terracotta/bronze tone (e.g.
+  `#9a5b28`, playing off `--accent-warm`), apartments/high-rises use the standard brand
+  green (`var(--accent-green)`, `#0b6b3c`), and plots/land parcels should get their own
+  third tone (e.g. an earthy clay `#a0522d`-family color) rather than reusing whichever
+  of the two above is closest. Two sibling pages of the *same* type on the same hub can
+  still share a color; a villa page and an apartment page shipped around the same time
+  should not (Surya Valencia — villas — and Concorde Sienna — apartments — were caught
+  both still on the inherited `#2563eb` blue and split into bronze/green respectively).
 - Every Web3Forms form (there are usually 2-3: hero panel, main lead-form section,
   possibly a sticky-bar mini form) needs the hidden `redirect` field set to exactly
   `https://luxurahabitat.com/thank-you/`.
