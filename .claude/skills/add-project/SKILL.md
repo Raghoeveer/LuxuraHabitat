@@ -62,19 +62,44 @@ footer, visible FAQ text, FAQPage JSON-LD) and re-verify it, not just the new pa
 ## Phase 2 — Images
 
 Follow `docs/adding-a-project.md` §2 (clean per-project path, never point og:image /
-twitter:image / preload at another project's folder). Concretely:
+twitter:image / preload at another project's folder). The site's convention is WebP
+everywhere (129 webp vs. single digits of jpg/png/jpeg left, all legacy) — no
+`<picture>`/fallback pattern is used anywhere on the site, pages reference `.webp`
+directly. Builder source exports are almost always JPEG/PNG, so **every** source
+image gets converted to `.webp` as part of bringing it into the project, not left as
+a follow-up:
 
 ```bash
 mkdir -p images/projects/<slug>
-# copy/rename source images into it with descriptive names:
-#   <slug>-banner.webp, <slug>-about.webp, <slug>-amenities-N.webp,
-#   <slug>-interior-N.webp, <slug>-master-plan.webp, <slug>-location-map.webp,
-#   <slug>-<config>-<sqft>.webp (unit plans), <slug>-logo.<ext>
+
+# convert + rename in one step (cwebp is already installed via homebrew) — quality
+# 82 is the sitewide sweet spot, drop to 78-80 for very large hero/banner sources if
+# file size still matters after resizing:
+cwebp -q 82 <source>/banner.jpg   -o images/projects/<slug>/<slug>-banner.webp
+cwebp -q 82 <source>/about.jpg    -o images/projects/<slug>/<slug>-about.webp
+cwebp -q 82 <source>/amenity1.jpg -o images/projects/<slug>/<slug>-amenities-1.webp
+# ...repeat per source image; also covers -interior-N, -master-plan, -location-map,
+# -<config>-<sqft> (unit plans). If the logo itself is a photo-style asset rather
+# than a flat-color mark, convert it too — otherwise keep it in its original format
+# for the favicon-cropping step below, which expects to read pixels directly.
 
 # thumbnail for projects/index.html and hub cards:
 cwebp -resize 1100 0 -q 82 <source-banner> \
   -o images/projects-thumbs/<slug>-thumb.webp
 ```
+
+Then wire the `.webp` path into **every** reference on the page in the same pass —
+converting the file and updating the markup are one step, not two:
+`<img src>`, any inline `style="background-image: url(...)"`, `<link rel="preload"
+as="image">`, `og:image`/`twitter:image` meta tags, and every `"image"` field inside
+the JSON-LD blocks. Grep the finished page for the old extension
+(`grep -n '\.jpe\?g\|\.png' projects/<slug>/index.html`, filtering out the favicon
+`<link>` and any logo that's intentionally staying PNG) to confirm nothing still
+points at a source file — a converted-but-unwired image is a real bug that shipped
+before: Orchid Salisbury had both `orchid-salisbury-hero.jpg` and
+`orchid-salisbury-hero.webp` sitting on disk, but every reference on the page (hero
+background, `og:image`, JSON-LD, gallery) still pointed at the 2.2×-heavier `.jpg` —
+the `.webp` conversion existed but was never actually integrated.
 
 ### Favicon (every project page needs its own, developer-branded one)
 
