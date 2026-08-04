@@ -260,6 +260,13 @@ silently reinherit by copy-pasting the template):
   found in production analytics before being fixed. If you copy this inline script
   from `_TEMPLATE.html` verbatim (don't hand-roll a shorter version), WhatsApp clicks
   stay tracked regardless of any `stopPropagation()` elsewhere on the page.
+- **`<script src="/js/seo.js"></script>` must actually be on the page**, right before
+  `</body>` alongside `project-page.js` — it's what generates the `BreadcrumbList`
+  JSON-LD at runtime (see Phase 4). It's easy to copy the Zendesk snippet and the
+  closing `<script>` block from a sibling page and stop there, silently dropping this
+  tag: Sattva Songbird shipped without it and had zero breadcrumb structured data
+  until an SEO audit caught the gap against its own sibling pages. Grep the finished
+  page for `seo.js` in Phase 8 to confirm it's there.
 
 ## Phase 4 — SEO: meta tags, headings, structured data, on-page optimization
 
@@ -285,6 +292,14 @@ ranking, so don't let page copy drift from how the project is actually advertise
   `docs/adding-a-project.md` — Century Kindle and Vajram Vivera's first drafts both
   shipped over this and got truncated). Check the rendered character count, not the
   HTML-entity-escaped source string.
+- **Title/description/`og:title`/`twitter:title` must match the *final* verified
+  configuration range, not whatever was drafted first.** If Phase 0/1 research (or a
+  mid-build AskUserQuestion) changes what configs the page actually advertises —
+  e.g. a marketing microsite claimed "2 & 3 BHK" but the verified floor plans turned
+  out to also include Studio/1 BHK/2.5 BHK, as happened on Sattva Songbird — go back
+  and update every meta tag that names a config range, not just the visible hero/body
+  copy. A meta description that undersells what the page covers loses clicks from the
+  exact searches (e.g. "1 BHK Budigere Cross") the page should be winning.
 - **`<meta name="keywords">`**: this site still sets one on every page (see
   `index.html`) — keep the convention, populate it with the same real-intent terms
   the research above surfaced, not a generic list.
@@ -364,7 +379,15 @@ For each post:
    project page + its 2-3 blog posts, not all crammed into one): link out to the area
    hub, to 1-2 genuinely relevant sibling project pages, and to 1-2 existing blog posts
    whose topic actually overlaps (not a random link for link's sake — each one should
-   read as something a reader on that sentence would plausibly want to click).
+   read as something a reader on that sentence would plausibly want to click). Each
+   `.proj-compare-card` you build on the *new* page must use the **linked sibling's
+   own thumbnail** (`/images/projects-thumbs/<sibling-slug>-thumb.webp` or its actual
+   image folder) — not a leftover reference to the new project's own images. This is
+   the same cross-project-image mistake as the `og:image` bug in Phase 2, just inside
+   a comparison card instead of a meta tag: Sattva Songbird's own "Similar Projects"
+   grid shipped with the Sattva City card showing a Sattva Songbird photo, caught only
+   by an SEO audit. Grep the new page for every sibling slug's `proj-compare-card` and
+   confirm the `<img src>` actually lives in *that* sibling's own image path.
 3. **Insert reciprocal links FROM 2-3 existing relevant pages TO the new page(s).**
    This is the step that's easy to skip because it means editing files that aren't the
    new page:
@@ -420,6 +443,16 @@ For each post:
   project's own folder, robots meta isn't accidentally `noindex`, exactly one `<h1>`,
   no skipped heading levels, and the favicon link is the developer's own mark (not
   the site-wide default).
+- `grep -c "seo.js" projects/<slug>/index.html` — confirm the `/js/seo.js` script tag
+  is actually present (see Phase 3); its absence produces no error, just silently
+  missing `BreadcrumbList` schema.
+- Confirm title/description/`og:title`/`twitter:title` state the same configuration
+  range as the page's own hero/highlights/pricing content — a mismatch here usually
+  means the meta tags were drafted before Phase 0/1 facts were fully resolved and
+  never updated (see Phase 4).
+- Grep every `.proj-compare-card` on the new page for its sibling slug and confirm
+  the `<img src>` actually points into *that sibling's* image folder, not the new
+  project's own (see Phase 6).
 - Live check with a local server + Playwright: desktop click-through every nav item
   (scrolls to just below the sticky nav, URL hash updates, zero console errors), FAQ
   accordion (only one open at a time, text matches JSON-LD), and a mobile viewport

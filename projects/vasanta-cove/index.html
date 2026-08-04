@@ -9,6 +9,9 @@
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
 
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection).
       document.addEventListener('click', function (e) {
         var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
         if (!link) return;
@@ -18,53 +21,57 @@
       }, true);
     </script>
 
-    <link rel="canonical" href="https://luxurahabitat.com/projects/surya-valencia/">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/vasanta-cove/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surya Valencia, Rajankunte Yelahanka — 4 &amp; 5 BHK Villas</title>
-    <meta name="description" content="Surya Valencia, Rajankunte, Yelahanka — Spanish-themed 4 &amp; 5 BHK villas from &#8377;3.54 Cr. 40,000 sq ft clubhouse, private pools &amp; triple-height ceilings.">
-    <meta name="keywords" content="Surya Valencia, Surya Valencia Rajankunte, Surya Valencia Yelahanka, Surya Valencia price, Surya Valencia villas, Spanish villas Bangalore, 4 BHK villas Yelahanka, 5 BHK villas Rajankunte, luxury villas North Bengaluru">
+    <!-- High-Intent Meta Structure -->
+    <title>Sattva Vasanta Cove, Devanahalli — Studio &amp; 1 BHK | RERA</title>
+    <meta name="description" content="Sattva Vasanta Cove, Devanahalli — Studio &amp; 1 BHK homes from &#8377;59 Lakhs, 5-10 mins from Bangalore Airport. RERA approved. Price, floor plans &amp; amenities inside.">
+    <meta name="keywords" content="Sattva Vasanta Cove, Sattva Vasanta Cove Devanahalli, Sattva Vasanta Cove price, Sattva Vasanta Cove RERA, Studio apartments Devanahalli, 1 BHK Devanahalli, apartments near KIADB Aerospace Park, flats near Bangalore Airport, Sattva Group Devanahalli, Sattva Vasanta Cove floor plan">
     <meta name="author" content="Luxura Habitat">
 
+    <!-- Open Graph Social Protocol -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://luxurahabitat.com/projects/surya-valencia/">
-    <meta property="og:title" content="Surya Valencia, Rajankunte Yelahanka — Spanish-Themed Villas">
-    <meta property="og:description" content="Spanish-themed 4 &amp; 5 BHK villas in Rajankunte, Yelahanka with a 40,000 sq ft clubhouse, private pools and triple-height ceilings. From &#8377;3.54 Cr.">
-    <meta property="og:image" content="https://luxurahabitat.com/images/projects/surya-valencia/surya-valencia-banner.webp">
-    <meta property="og:image:width" content="700">
-    <meta property="og:image:height" content="700">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/vasanta-cove/">
+    <meta property="og:title" content="Sattva Vasanta Cove, Devanahalli — Studio &amp; 1 BHK Homes Near the Airport">
+    <meta property="og:description" content="A 1.3-acre Sattva Group development off Bellary Road, Devanahalli — 200 Studio &amp; 1 BHK homes, 5-10 mins from Bangalore Airport. RERA approved.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Surya Valencia, Rajankunte Yelahanka — 4 &amp; 5 BHK Villas">
-    <meta name="twitter:description" content="Spanish-themed villas with a 40,000 sq ft clubhouse, private pools and triple-height ceilings. From &#8377;3.54 Cr.">
-    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/surya-valencia/surya-valencia-banner.webp">
+    <meta name="twitter:title" content="Sattva Vasanta Cove, Devanahalli — Studio &amp; 1 BHK Homes">
+    <meta name="twitter:description" content="200 Studio &amp; 1 BHK homes by Sattva Group off Bellary Road, Devanahalli. 5-10 mins from Bangalore Airport. RERA approved.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp">
 
-    <meta name="robots" content="index, follow">
+    <!-- Robots Instructions -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <meta name="geo.position" content="13.1462;77.5807">
-    <meta name="ICBM" content="13.1462, 77.5807">
+    <!-- Location Meta Tags (Local SEO) -->
+    <meta name="geo.position" content="13.2437;77.7081">
+    <meta name="ICBM" content="13.2437, 77.7081">
     <meta name="geo.region" content="IN-KA">
-    <meta name="geo.placename" content="Rajankunte, Yelahanka, Bengaluru, Karnataka">
+    <meta name="geo.placename" content="Devanahalli, Bengaluru, Karnataka">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/images/projects/surya-valencia/surya-valencia-banner.webp" fetchpriority="high">
-    <link rel="icon" href="/images/projects/surya-valencia/favicon.png" type="image/png">
+    <link rel="preload" as="image" href="/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp" fetchpriority="high">
+    <link rel="icon" href="/images/projects/vasanta-cove/favicon.png" type="image/png">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary-dark: #5c3a21;
-            --secondary-dark: #3d2716;
+            --primary-dark: #16233f;
+            --secondary-dark: #111827;
             --accent-green: #0b6b3c;
             --accent-warm: #d4a574;
-            --bg-light: #f7f2ea;
+            --bg-light: #f5f3f0;
             --bg-white: #ffffff;
-            --text-dark: #3d2716;
-            --text-light: #6b5c4d;
-            --border-light: #e8ddd0;
+            --text-dark: #16233f;
+            --text-light: #556070;
+            --border-light: #e6e2dc;
             --success: #22c55e;
         }
 
@@ -204,16 +211,8 @@
             max-width: 680px;
         }
 
-        .hero-logo-text {
-            font-family: 'Playfair Display', serif;
-            font-weight: 800;
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--primary-dark);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin: 0 0 0.35rem;
-        }
-        .hero-logo-text span { display: block; font-size: 0.55em; font-weight: 500; letter-spacing: 0.2em; color: var(--accent-warm); margin-top: 0.15rem; }
+        .hero-logo { display: block; width: min(220px, 60%); margin: 0 0 0.35rem; }
+        .hero-logo img { display: block; width: 100%; height: auto; }
 
         .hero-badge {
             color: #ffffff;
@@ -234,7 +233,7 @@
         .hero h1 {
             color: var(--accent-green);
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.15rem, 3.2vw, 2rem);
+            font-size: clamp(1.2rem, 3.5vw, 2.2rem);
             font-weight: 900;
             line-height: 1.25;
             letter-spacing: 0;
@@ -251,7 +250,7 @@
             border: 1px solid rgba(11, 107, 60, 0.16);
             border-radius: 10px;
             padding: clamp(0.9rem, 2vh, 1.2rem);
-            background: rgba(247, 242, 234, 0.78);
+            background: rgba(245, 243, 240, 0.78);
         }
 
         .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
@@ -349,7 +348,7 @@
         .hero-form-submit:hover { background: #075b31; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(11, 107, 60, 0.25); }
 
         section { padding: 5rem 2rem; }
-        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: #9a5b28; margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
 
         .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
         .container { max-width: 1200px; margin: 0 auto; }
@@ -444,7 +443,7 @@
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
             border-radius: 16px;
-            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(247, 242, 234, 0.8) 100%);
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
             border: 2px solid rgba(11,107,60,0.35);
             box-shadow: 0 10px 30px rgba(2,6,23,0.08);
             max-height: 420px;
@@ -487,8 +486,9 @@
         .form-submit { width: 100%; padding: 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
         .form-submit:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11,107,60,0.25); }
 
-        .footer { background: #241608; color: #fff; padding: 3rem 2rem 2.2rem; }
+        .footer { background: #0b1220; color: #fff; padding: 3rem 2rem 2.2rem; }
 
+        /* Project Highlights table */
         .highlights { background: var(--bg-light); }
         .highlights-table-wrap {
             overflow-x: auto;
@@ -536,12 +536,13 @@
         .pricing-footnote { padding: 1rem; font-size: 0.82rem; color: var(--text-light); text-align: center; }
 
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
-        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: #f0d9be; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: #a7f3d0; }
         .footer-section p, .footer-section a { font-size: 0.92rem; color: rgba(255,255,255,0.75); text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
-        .footer-section a:hover { color: #f0d9be; }
+        .footer-section a:hover { color: #4ade80; }
         .footer-contact strong { display: block; color: #fff; margin-bottom: 0.25rem; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
 
+        /* Sidebar widget */
         .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
         .details-button {
             background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
@@ -594,6 +595,7 @@
         .panel-cta { background: var(--accent-green); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
         .panel-cta:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(11,107,60,0.25); }
 
+        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -670,6 +672,7 @@
             .gallery-item { min-width: 240px; width: 240px; height: 240px; }
         }
 
+        /* Trust Bar */
         .trust-bar {
             background: var(--bg-white);
             border-bottom: 1px solid var(--border-light);
@@ -805,10 +808,10 @@
         }
 
     /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
-    .project-footer-strip { padding: 64px 24px; background: #faf6f0; }
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
     .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
     .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a574; margin-bottom: 10px; display: block; }
-    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #5c3a21; margin-bottom: 8px; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
     .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
     .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
 
@@ -817,9 +820,9 @@
     .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
     .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
     .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(92,58,33,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(30,58,47,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
     .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
-    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #5c3a21; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a2f; margin-bottom: 4px; line-height: 1.3; }
     .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
     .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
@@ -829,10 +832,20 @@
     .insight-card img { width: 100%; height: 160px; object-fit: cover; }
     .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
     .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
-    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #5c3a21; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
     </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateListing",
+        "name": "Sattva Vasanta Cove",
+        "description": "Sattva Vasanta Cove is a 1.3-acre Studio and 1 BHK residential development by Sattva Group off Bellary Road, Devanahalli, North Bengaluru, near the KIADB Aerospace Park and Kempegowda International Airport.",
+        "url": "https://luxurahabitat.com/projects/vasanta-cove/"
+    }
+    </script>
 
     <script type="application/ld+json">
     {
@@ -840,94 +853,80 @@
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "What is Surya Valencia?",
+        "name": "What is Sattva Vasanta Cove and who is the developer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Surya Valencia is a Spanish-themed villa community near Rajankunte, Yelahanka, North Bengaluru, offering 4 BHK Estate Villas and 5 BHK Regal Edition Villas across a layout of 122 homes, with a 40,000 sq ft clubhouse managed by Illesium Clubs."
+          "text": "Sattva Vasanta Cove is a new-launch residential development by Sattva Group, located off Bellary Road in Devanahalli, North Bengaluru. The project is spread across 1.3 acres and offers 200 Studio and 1 BHK apartments across 2 towers."
         }
       }, {
         "@type": "Question",
-        "name": "Where exactly is Surya Valencia located?",
+        "name": "Where exactly is Sattva Vasanta Cove located?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The project is located near Rajankunte, Yelahanka, in North Bengaluru, close to Taj Urban Resort and Angsana Oasis, with easy access to the airport, STRR and PRR."
+          "text": "Sattva Vasanta Cove is located off Bellary Road (NH-44), Devanahalli, North Bengaluru — close to the KIADB Aerospace Park, Foxconn's upcoming facility and Prestige Tech Cloud, with Kempegowda International Airport approximately 5-10 minutes away by road."
         }
       }, {
         "@type": "Question",
-        "name": "What villa configurations are available?",
+        "name": "What apartment configurations and sizes are available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Two configurations: 4 BHK Estate Villas at 3,345 sq ft starting from ₹3.54 Cr, and 5 BHK Regal Edition Villas at 3,893 sq ft starting from ₹4.59 Cr."
+          "text": "Sattva Vasanta Cove offers 163 Studio apartments (533-625 sq ft) and 37 1 BHK apartments (887-952 sq ft), based on the developer's configuration table. Final pricing depends on floor rise, view preferences and developer updates."
         }
       }, {
         "@type": "Question",
-        "name": "What makes the 5 BHK Regal Edition different from the 4 BHK villa?",
+        "name": "What is the price of Sattva Vasanta Cove apartments?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The 5 BHK Regal Edition adds a private swimming pool, a pre-fit lift, home automation, a sky pergola and a twin terrace on top of the shared features both villa types get, like the triple-height sky ceiling and private backyard."
+          "text": "Studio apartments (533-625 sq ft) start from approximately &#8377;59 Lakhs to &#8377;69 Lakhs, and 1 BHK apartments (887-952 sq ft) start from approximately &#8377;1.00 Cr to &#8377;1.05 Cr, all-inclusive. Prices are indicative and subject to change — please enquire for the latest offer."
         }
       }, {
         "@type": "Question",
-        "name": "Is Surya Valencia RERA registered?",
+        "name": "Is Sattva Vasanta Cove RERA registered?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Surya Valencia is developed in two phases, each separately RERA registered. Phase I covers 44 villas across 3.64 acres under RERA number PRM/KA/RERA/1251/472/PR/171224/007305. Phase II covers 78 villas across 5.32 acres under RERA number PRM/KA/RERA/1251/472/PR/020125/007343. Always verify current status directly on the Karnataka RERA portal before making a purchase decision."
+          "text": "Yes. Sattva Vasanta Cove is registered under RERA number PRM/KA/RERA/1250/303/PR/041225/008310."
         }
       }, {
         "@type": "Question",
-        "name": "What amenities does the clubhouse offer?",
+        "name": "When is the possession date for Sattva Vasanta Cove?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The 40,000 sq ft clubhouse is managed by Illesium Clubs and anchors a master-planned layout that includes an azure pool, party lawn with amphitheatre, yoga and meditation corner, outdoor fitness area, putting green, reflexology walk, and multiple landscaped gardens and trellised walkways."
+          "text": "Target possession for Sattva Vasanta Cove is December 2030, as per the project's RERA registration."
         }
       }, {
         "@type": "Question",
-        "name": "How big is the private backyard?",
+        "name": "What amenities does Sattva Vasanta Cove offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Private backyards range from approximately 300 to 700 sq ft depending on the villa's plot position within the layout."
+          "text": "Sattva Vasanta Cove features a ~12,000 sq ft clubhouse (G+2) with co-working spaces, an influencer/creative zone and indoor game lounges, alongside a podium swimming pool, outdoor gym, yoga and meditation deck, jogging tracks, an amphitheatre, party lawn, bar lounge, tree decks and a summer lounge. Safety features include 100% power backup, 24/7 CCTV surveillance and covered parking."
         }
       }, {
         "@type": "Question",
-        "name": "Does every villa have a lift?",
+        "name": "How far is Sattva Vasanta Cove from Kempegowda International Airport?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Every villa is built with dedicated space for a lift across its floors; the 5 BHK Regal Edition comes with the lift pre-fit, while other villas can have one installed in the reserved space."
+          "text": "Sattva Vasanta Cove is approximately 5-10 minutes by road from Kempegowda International Airport (KIAL), and sits directly off NH-44 / Bellary Road with upcoming access to Metro Phase 2B."
         }
       }, {
         "@type": "Question",
-        "name": "How many floors does each villa have?",
+        "name": "How many towers and units does the project have?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Both the 4 BHK and 5 BHK villas are laid out across a ground floor, first floor, second floor and a terrace/third floor, with bedrooms, family lounges and balconies distributed across the upper levels."
+          "text": "Sattva Vasanta Cove comprises 2 towers with 2 basements + ground + 12/13 floors, totalling 200 units — 163 Studio apartments and 37 1 BHK apartments."
         }
       }, {
         "@type": "Question",
-        "name": "Is Surya Valencia a good investment?",
+        "name": "Who is Sattva Group?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rajankunte sits on Bengaluru's fast-growing northern corridor near the airport, STRR and PRR, and Spanish-themed private-pool villas are a relatively rare product in this belt, which supports both lifestyle appeal and long-term demand."
+          "text": "Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most established real estate developers, with a growing portfolio in the Devanahalli airport corridor that includes Sattva Aeropolis and Sattva City."
         }
       }, {
         "@type": "Question",
-        "name": "Who is the developer of Surya Valencia?",
+        "name": "How do I book a site visit or request the brochure?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Surya Valencia is developed by Surya Developers, a real estate firm based in Yelahanka, Bengaluru."
-        }
-      }, {
-        "@type": "Question",
-        "name": "When is possession for Surya Valencia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Possession is scheduled by phase: Phase I (44 villas across 3.64 acres) is scheduled for December 2028, and Phase II (78 villas across 5.32 acres) is scheduled for December 2030."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I book a site visit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can request the brochure, latest price list and book a site visit using the enquiry form, WhatsApp button or call button on this page."
+          "text": "You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page."
         }
       }]
     }
@@ -943,8 +942,8 @@
         </div>
 
         <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
-            <input type="hidden" name="access_key" value="b745b3a2-d7ea-48e6-b6b5-a3646e09e13c">
-            <input type="hidden" name="subject" value="New Inquiry - Surya Valencia">
+            <input type="hidden" name="access_key" value="79c68ad5-36dd-4431-908b-2bfb6b88d1b8">
+            <input type="hidden" name="subject" value="New Inquiry - Sattva Vasanta Cove">
             <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
             <input type="text" name="name" required placeholder="Full Name" />
@@ -959,7 +958,7 @@
             <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:+918438344093"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> +91 8438 344 093</a>
-                <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Surya%20Valencia"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
+                <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Sattva%20Vasanta%20Cove"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
                 <a href="mailto:projectinfoindia@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</a>
             </div>
         </div>
@@ -986,7 +985,7 @@
             <li><a href="#highlights">Highlights</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#units">Floor Plans</a></li>
+            <li><a href="#units">Unit Plans</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#form">Enquire</a></li>
@@ -997,22 +996,24 @@
                 <div class="phone-number" style="font-size: 1rem;">Call: 8438344093</div>
             </a>
 
-            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Surya%20Valencia" class="whatsapp-btn" target="_blank" rel="noopener">
+            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Sattva%20Vasanta%20Cove" class="whatsapp-btn" target="_blank" rel="noopener">
                 <span>Get Details in WhatsApp</span>
             </a>
         </div>
     </nav>
 
-    <section class="hero" id="hero" style="background-image: url('/images/projects/surya-valencia/surya-valencia-banner.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <section class="hero" id="hero" style="background-image: url('/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
         <div class="hero-mobile-overlay"></div>
         <div class="hero-container" style="position: relative; z-index: 2;">
             <div class="hero-content reveal">
-                <div class="hero-logo-text">Surya Valencia<span>Spanish Villas · Rajankunte</span></div>
+                <a href="#" class="hero-logo" aria-label="Sattva Vasanta Cove home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="/images/projects/vasanta-cove/vasanta-cove-logo.webp" alt="Sattva Vasanta Cove">
+                </a>
 
-                <div class="hero-badge">New Launch &middot; RERA Registered</div>
-                <h1>Surya Valencia, Rajankunte Yelahanka — Spanish-Themed 4 &amp; 5 BHK Villas</h1>
+                <div class="hero-badge">New Launch · Under Construction</div>
+                <h1>Sattva Vasanta Cove, Devanahalli — Studio &amp; 1 BHK Homes Near the Airport</h1>
                 <p class="hero-intro">
-                    Own a piece of Spain in North Bengaluru — timeless Spanish architecture, spacious 4 &amp; 5 BHK villas, private backyards, triple-height sky ceilings and a 40,000 sq ft clubhouse managed by Illesium Clubs.
+                    A 1.3-acre residential development by Sattva Group off Bellary Road, Devanahalli — 200 Studio and 1 BHK homes across 2 towers, minutes from the KIADB Aerospace Park and 5-10 minutes from Kempegowda International Airport.
                 </p>
 
                 <div class="hero-info-boxes">
@@ -1020,101 +1021,104 @@
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
-                                <div class="info-box-title">4 &amp; 5 BHK Villas</div>
-                                <div class="info-box-subtitle">122 Homes</div>
+                                <div class="info-box-title">Studio &amp; 1 BHK</div>
+                                <div class="info-box-subtitle">200 Apartments</div>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                             <div>
-                                <div class="info-box-title">Rajankunte</div>
-                                <div class="info-box-subtitle">Yelahanka, Bengaluru</div>
+                                <div class="info-box-title">Devanahalli</div>
+                                <div class="info-box-subtitle">North Bengaluru</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="info-box price-box">
                         <span class="price-copy">Starting From</span>
-                        <span class="price-line"><span class="new-price">₹3.54 Cr</span></span>
-                        <span class="offer-note">4 BHK Estate Villa onwards</span>
+                        <span class="price-line"><span class="new-price">₹59 Lakhs</span></span>
+                        <span class="offer-note">Studio apartments · under construction</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-form-section reveal" style="transition-delay:120ms;">
-                <h3 class="hero-form-title">Express Your Interest</h3>
-                <span class="hero-form-subtitle">Register now for exclusive launch offers &amp; floor plans.</span>
+                <h3 class="hero-form-title">Get Exclusive Details</h3>
+                <span class="hero-form-subtitle">Pricing, floor plans &amp; site visit — all in one click.</span>
 
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <input type="hidden" name="access_key" value="b745b3a2-d7ea-48e6-b6b5-a3646e09e13c">
-                    <input type="hidden" name="subject" value="New Inquiry - Surya Valencia">
+                    <input type="hidden" name="access_key" value="79c68ad5-36dd-4431-908b-2bfb6b88d1b8">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Vasanta Cove">
                     <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
                     <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
                     <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
                     <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
-                    <button type="submit" class="hero-form-submit">Get Details Now</button>
+                    <button type="submit" class="hero-form-submit">Request Details Now</button>
                 </form>
             </div>
         </div>
     </section>
 
     <div class="trust-bar">
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Spanish-Themed Villas</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 40,000 Sq.Ft. Clubhouse</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Managed by Illesium Clubs</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Private Backyards</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 5-10 Mins to Bangalore Airport</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Studio &amp; 1 BHK Homes</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Sattva Group</div>
     </div>
 
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">Surya Valencia Overview</h2>
-            <p class="section-subtitle">Luxury inspired by Spain, designed for a life meant to be well lived.</p>
+            <h2 class="section-title">Sattva Vasanta Cove Overview</h2>
+            <p class="section-subtitle">A compact, investment-focused residential development by Sattva Group on Devanahalli's aerospace growth corridor.</p>
 
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <h3>Own a piece of Spain in North Bengaluru</h3>
+                    <h3>Smart-Sized Homes on the Aerospace Growth Corridor</h3>
                     <p>
-                        Surya Valencia is an exclusive villa community by Surya Developers near Rajankunte, Yelahanka, designed around timeless Spanish architecture — arched facades, terracotta-toned exteriors and courtyard-style layouts — spread across a master-planned community of 122 villas developed in two RERA-registered phases.
+                        Sattva Vasanta Cove is a new-launch residential development by Sattva Group, located off Bellary Road (NH-44) in Devanahalli, North Bengaluru — within close range of the KIADB Aerospace Park, Foxconn's upcoming facility and Prestige Tech Cloud. Kempegowda International Airport is approximately 5-10 minutes away by road.
                     </p>
                     <p>
-                        Every villa comes with a signature triple-height sky ceiling above the living room and a private backyard of 300–700 sq ft. The 5 BHK Regal Edition takes it further with its own private swimming pool, a pre-fit lift, home automation, a sky pergola and a twin terrace — a genuinely rare combination in this price band on the North Bengaluru growth corridor.
+                        Spread across 1.3 acres, the project comprises 2 towers rising 2 basements + ground + 12/13 floors, with 200 units split between 163 Studio apartments and 37 1 BHK apartments. Based on the developer's own configuration table, Studio homes range from 533-625 sq ft and 1 BHK homes from 887-952 sq ft — a compact, efficiently planned format aimed at young professionals, first-time buyers and rental-yield investors.
+                    </p>
+                    <p>
+                        The project is currently at its early launch stage, with possession targeted for December 2030 as per its RERA registration.
                     </p>
 
                     <div class="features-list">
                         <div class="feature-item">
-                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                             <div>
-                                <h3>Spanish Architecture</h3>
-                                <p>Arched facades &amp; terracotta-toned exteriors.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
-                            <div>
-                                <h3>Triple-Height Sky Ceiling</h3>
-                                <p>A signature double-volume living room in every villa.</p>
+                                <h3>Prime Aerospace Location</h3>
+                                <p>Minutes from KIADB Aerospace Park, Foxconn and the airport.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
                             <div>
-                                <h3>Private Backyards</h3>
-                                <p>300–700 sq ft of your own outdoor space.</p>
+                                <h3>~12,000 Sq Ft Clubhouse</h3>
+                                <p>G+2 clubhouse with co-working &amp; creative zones.</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path></svg></div>
                             <div>
-                                <h3>40,000 Sq.Ft. Clubhouse</h3>
-                                <p>Managed by Illesium Clubs.</p>
+                                <h3>Compact, Efficient Homes</h3>
+                                <p>Studio &amp; 1 BHK layouts built for smart urban living.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+                            <div>
+                                <h3>Direct Highway Access</h3>
+                                <p>Off NH-44 / Bellary Road, near upcoming Metro Phase 2B.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal" style="transition-delay:160ms;">
-                    <img class="about-visual" src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia 4 BHK Estate Villa night exterior view">
+                    <img class="about-visual" src="/images/projects/vasanta-cove/vasanta-cove-about.webp" alt="Sattva Vasanta Cove Devanahalli project architecture overview">
                 </div>
             </div>
         </div>
@@ -1123,10 +1127,10 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Project Highlights</h2>
-            <p class="section-subtitle">Key details for Surya Valencia — ready for quick comparison and easy discovery.</p>
+            <p class="section-subtitle">Key details for Sattva Vasanta Cove — ready for quick comparison and easy discovery.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
-                <table class="highlights-table" aria-label="Surya Valencia project highlights">
+                <table class="highlights-table" aria-label="Sattva Vasanta Cove project highlights">
                     <thead>
                         <tr>
                             <th>Attribute</th>
@@ -1134,19 +1138,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Location</strong></td><td>Near Rajankunte, Yelahanka, North Bengaluru</td></tr>
-                        <tr><td><strong>Developer</strong></td><td>Surya Developers, Yelahanka, Bengaluru</td></tr>
-                        <tr><td><strong>Total Villas</strong></td><td>122 Spanish-themed villas (Phase I: 44, Phase II: 78)</td></tr>
-                        <tr><td><strong>Total Land Area</strong></td><td>8.96 acres (Phase I: 3.64 acres, Phase II: 5.32 acres)</td></tr>
-                        <tr><td><strong>Configurations</strong></td><td>4 BHK Estate Villa &amp; 5 BHK Regal Edition Villa</td></tr>
-                        <tr><td><strong>4 BHK Size</strong></td><td>3,345 Sq.Ft.</td></tr>
-                        <tr><td><strong>5 BHK Regal Edition Size</strong></td><td>3,893 Sq.Ft.</td></tr>
-                        <tr><td><strong>Private Backyard</strong></td><td>300–700 Sq.Ft. per villa</td></tr>
-                        <tr><td><strong>Clubhouse</strong></td><td>40,000 Sq.Ft., managed by Illesium Clubs</td></tr>
-                        <tr><td><strong>Possession</strong></td><td>Phase I: Dec 2028 &nbsp;|&nbsp; Phase II: Dec 2030</td></tr>
-                        <tr><td><strong>Project Status</strong></td><td>RERA Registered — Phase I &amp; Phase II</td></tr>
-                        <tr><td><strong>RERA (Phase I)</strong></td><td>PRM/KA/RERA/1251/472/PR/171224/007305</td></tr>
-                        <tr><td><strong>RERA (Phase II)</strong></td><td>PRM/KA/RERA/1251/472/PR/020125/007343</td></tr>
+                        <tr><td><strong>Developer</strong></td><td>Sattva Group</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Off Bellary Road, Devanahalli, North Bengaluru (near KIADB Aerospace Park &amp; Airport)</td></tr>
+                        <tr><td><strong>Land Area</strong></td><td>1.3 Acres</td></tr>
+                        <tr><td><strong>Structure</strong></td><td>2 Basement + Ground + 12/13 Floors (2 Towers)</td></tr>
+                        <tr><td><strong>Total Units</strong></td><td>200 Units (163 Studio &amp; 37 1 BHK)</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>Studio (533-625 Sq.Ft) &amp; 1 BHK (887-952 Sq.Ft)</td></tr>
+                        <tr><td><strong>Project Status</strong></td><td>New Launch / Under Construction</td></tr>
+                        <tr><td><strong>Target Possession</strong></td><td>December 2030</td></tr>
+                        <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1250/303/PR/041225/008310</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1155,57 +1155,59 @@
 
     <section class="amenities" id="amenities">
         <div class="container">
-            <h2 class="section-title">Amenities &amp; The 40,000 Sq.Ft. Clubhouse</h2>
-            <p class="section-subtitle">Designed for a life meant to be well lived — 40+ curated facilities across the master-planned layout.</p>
+            <h2 class="section-title">Amenities &amp; Specifications</h2>
+            <p class="section-subtitle">A ~12,000 sq ft clubhouse and a curated set of lifestyle amenities designed around compact, efficient living.</p>
 
             <div class="amenity-grid">
                 <div class="amenity-card reveal">
-                    <h3>Clubhouse &amp; Pool</h3>
+                    <h3>Work &amp; Leisure</h3>
                     <ul class="amenity-list">
-                        <li>The Clubhouse Retreat (managed by Illesium Clubs)</li>
-                        <li>Azure Pool</li>
-                        <li>Poolside Lawn with Pavilion</li>
-                        <li>Club Front Fountain Vista Drive</li>
+                        <li>~12,000 sq ft clubhouse (G+2)</li>
+                        <li>Co-working spaces</li>
+                        <li>Influencer / creative zone</li>
+                        <li>Indoor game lounges</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:120ms;">
-                    <h3>Fitness &amp; Wellness</h3>
+                    <h3>Lifestyle &amp; Fitness</h3>
                     <ul class="amenity-list">
-                        <li>Outdoor Fitness Area</li>
-                        <li>Yoga &amp; Meditation Corner</li>
-                        <li>Active Trail Path</li>
-                        <li>Tranquil Reflexology Walk</li>
+                        <li>Podium swimming pool</li>
+                        <li>Outdoor gym</li>
+                        <li>Yoga / meditation deck</li>
+                        <li>Jogging tracks</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:180ms;">
-                    <h3>Recreation &amp; Community</h3>
+                    <h3>Social &amp; Community</h3>
                     <ul class="amenity-list">
-                        <li>Party Lawn with Amphitheatre</li>
-                        <li>Sizzle &amp; Grill Area</li>
-                        <li>Green Thumb Putting Green</li>
-                        <li>Picnic Grove</li>
+                        <li>Amphitheatre</li>
+                        <li>Party lawn</li>
+                        <li>Bar lounge</li>
+                        <li>Tree decks &amp; summer lounge</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:240ms;">
-                    <h3>Gardens &amp; Landscaping</h3>
+                    <h3>Convenience &amp; Safety</h3>
                     <ul class="amenity-list">
-                        <li>Mystic Maze Garden</li>
-                        <li>Botanical Steps &amp; Sunken Meadow</li>
-                        <li>Community Garden</li>
-                        <li>Floral Walk &amp; Sunken Oasis</li>
+                        <li>100% power backup</li>
+                        <li>24/7 CCTV surveillance</li>
+                        <li>Passenger &amp; service lifts</li>
+                        <li>Covered parking</li>
                     </ul>
                 </div>
             </div>
 
             <div style="margin-top:3rem;" class="gallery-grid-wrapper">
                 <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('surya-valencia-clubhouse-exterior.webp')"><img src="/images/projects/surya-valencia/surya-valencia-clubhouse-exterior.webp" alt="Surya Valencia clubhouse exterior Spanish architecture"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('surya-valencia-clubhouse-lobby.webp')"><img src="/images/projects/surya-valencia/surya-valencia-clubhouse-lobby.webp" alt="Surya Valencia clubhouse double-height lobby interior"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('surya-valencia-triple-height-ceiling.webp')"><img src="/images/projects/surya-valencia/surya-valencia-triple-height-ceiling.webp" alt="Surya Valencia villa triple-height sky ceiling living room"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('surya-valencia-private-pool.webp')"><img src="/images/projects/surya-valencia/surya-valencia-private-pool.webp" alt="Surya Valencia 5 BHK Regal Edition private swimming pool villa"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-coworking.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-coworking.webp" alt="Sattva Vasanta Cove clubhouse co-working space"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-swimming-pool.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-swimming-pool.webp" alt="Sattva Vasanta Cove podium swimming pool amenity"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-tennis.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-tennis.webp" alt="Sattva Vasanta Cove sports court amenity"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-pickleball.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-pickleball.webp" alt="Sattva Vasanta Cove pickleball court amenity"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-terrace-seating.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-terrace-seating.webp" alt="Sattva Vasanta Cove terrace seating pocket lounge"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-cove-amenities-temple.webp')"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities-temple.webp" alt="Sattva Vasanta Cove community meditation corner"></div>
                 </div>
             </div>
         </div>
@@ -1213,94 +1215,99 @@
 
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">Surya Valencia Image Gallery</h2>
-            <p class="section-subtitle">Experience the visual brilliance of Surya Valencia's Spanish-themed villas.</p>
+            <h2 class="section-title">Sattva Vasanta Cove Image Gallery</h2>
+            <p class="section-subtitle">Explore renders of Sattva Vasanta Cove's towers, interiors and amenities.</p>
 
             <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia 4 BHK Estate Villa night exterior view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-5bhk-elevation-night.webp" alt="Surya Valencia 5 BHK Regal Edition Villa night exterior view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-villa-cluster.webp" alt="Surya Valencia row of 4 BHK Estate Villas streetscape"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-clubhouse-exterior.webp" alt="Surya Valencia clubhouse exterior Spanish architecture"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-clubhouse-lobby.webp" alt="Surya Valencia clubhouse double-height lobby interior"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-triple-height-ceiling.webp" alt="Surya Valencia villa triple-height sky ceiling living room"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-private-pool.webp" alt="Surya Valencia 5 BHK Regal Edition private swimming pool villa"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/surya-valencia/surya-valencia-banner.webp" alt="Surya Valencia villa exterior with private pool"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-aerial-view.webp" alt="Sattva Vasanta Cove Devanahalli aerial view of towers"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-tower-exterior.webp" alt="Sattva Vasanta Cove tower exterior elevation view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-gallery-1.webp" alt="Sattva Vasanta Cove Devanahalli project render"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-interior-1.webp" alt="Sattva Vasanta Cove Studio apartment interior view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-interior-2.webp" alt="Sattva Vasanta Cove Studio apartment living space interior"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-gallery-2.webp" alt="Sattva Vasanta Cove Devanahalli amenity view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-gallery-3.webp" alt="Sattva Vasanta Cove Devanahalli lifestyle render"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-gallery-4.webp" alt="Sattva Vasanta Cove Devanahalli clubhouse render"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-cove/vasanta-cove-amenities.webp" alt="Sattva Vasanta Cove amenities overview render"></div>
             </div>
         </div>
     </section>
 
     <section class="plan" id="units">
         <div class="container">
-            <h2 class="section-title">Floor Plans &amp; Master Plan</h2>
-            <p class="section-subtitle">Explore Surya Valencia's 4 BHK Estate and 5 BHK Regal Edition floor plans.</p>
+            <h2 class="section-title">Unit Plans &amp; Master Plan</h2>
+            <p class="section-subtitle">Explore Sattva Vasanta Cove's master plan and Studio / 1 BHK floor plan layouts.</p>
 
             <div class="plan-grid" style="margin-top: 1.5rem;">
-                <div class="plan-image reveal" style="max-width: 620px; margin: 0 auto;">
-                    <img src="/images/projects/surya-valencia/surya-valencia-master-plan.webp" alt="Surya Valencia Spanish Villa master layout plan with 40 facilities" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+                <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto;">
+                    <img src="/images/projects/vasanta-cove/vasanta-cove-master-plan.webp" alt="Sattva Vasanta Cove master plan layout showing 2 towers and clubhouse" style="cursor:pointer;" onclick="toggleDetailsPanel()">
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
-                        <strong>122 Spanish Villas</strong>
-                        <span>A master-planned community of 4 BHK and 5 BHK villas arranged around a central clubhouse and landscaped spine.</span>
+                        <strong>200 Homes Across 2 Towers</strong>
+                        <span>A compact 1.3-acre parcel arranged around a central ~12,000 sq ft clubhouse.</span>
                     </div>
                     <div class="plan-note">
-                        <strong>Clubhouse-Anchored Layout</strong>
-                        <span>The Clubhouse Retreat, Azure Pool and party lawn sit at the heart of the community, with gardens and trails threading through every cluster.</span>
+                        <strong>Studio &amp; 1 BHK Only</strong>
+                        <span>163 Studio homes (533-625 sq ft) and 37 1 BHK homes (887-952 sq ft) — a focused, efficient unit mix.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Part of Sattva's Devanahalli Portfolio</strong>
+                        <span>Joins Sattva Aeropolis and Sattva City in the developer's airport-corridor footprint.</span>
                     </div>
                     <div class="plan-note">
                         <strong>Enquire for Details</strong>
-                        <span>Get brochure, availability and latest offer information instantly.</span>
+                        <span>Get brochure, availability and the latest offer information instantly.</span>
                     </div>
                 </div>
             </div>
 
-            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">4 BHK Estate Villa — Ground to Terrace Floor</p>
+            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">Verified Floor Plans by Configuration</p>
             <div class="gallery-grid" style="max-height: 420px;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-4bhk-ground-floor-plan.webp" alt="Surya Valencia 4 BHK ground floor plan with car parking and backyard deck"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-4bhk-first-floor-plan.webp" alt="Surya Valencia 4 BHK first floor plan with two bedrooms"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-4bhk-second-floor-plan.webp" alt="Surya Valencia 4 BHK second floor plan with family lounge"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-4bhk-terrace-floor-plan.webp" alt="Surya Valencia 4 BHK terrace floor plan with multi-purpose room"></div>
-            </div>
-
-            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">5 BHK Regal Edition Villa — Ground to Terrace Floor</p>
-            <div class="gallery-grid" style="max-height: 420px;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-5bhk-ground-floor-plan.webp" alt="Surya Valencia 5 BHK Regal Edition ground floor plan with private swimming pool"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-5bhk-first-floor-plan.webp" alt="Surya Valencia 5 BHK Regal Edition first floor plan"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-5bhk-second-floor-plan.webp" alt="Surya Valencia 5 BHK Regal Edition second floor plan with pre-fit lift"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/surya-valencia/surya-valencia-5bhk-terrace-floor-plan.webp" alt="Surya Valencia 5 BHK Regal Edition terrace floor plan"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-1.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 1, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-2.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 2, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-3.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 3, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-4.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 4, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-5.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 5, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-6.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 6, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-7.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 7, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-studio-plan-8.webp" alt="Sattva Vasanta Cove Studio floor plan layout option 8, 533-625 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-1bhk-plan-1.webp" alt="Sattva Vasanta Cove 1 BHK floor plan layout option 1, 887-952 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-1bhk-plan-2.webp" alt="Sattva Vasanta Cove 1 BHK floor plan layout option 2, 887-952 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-1bhk-plan-3.webp" alt="Sattva Vasanta Cove 1 BHK floor plan layout option 3, 887-952 sq ft"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-cove/vasanta-cove-1bhk-plan-4.webp" alt="Sattva Vasanta Cove 1 BHK floor plan layout option 4, 887-952 sq ft"></div>
             </div>
         </div>
     </section>
 
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Surya Valencia Price &amp; Configuration</h2>
-            <p class="section-subtitle">Transparent launch pricing for your Spanish villa.</p>
+            <h2 class="section-title">Sattva Vasanta Cove Price &amp; Configuration</h2>
+            <p class="section-subtitle">Approximate all-inclusive starting pricing based on the developer's configuration table.</p>
 
             <div class="pricing-table-wrap">
                 <table class="pricing-table">
                     <thead>
                         <tr>
-                            <th>Villa Type</th>
-                            <th>Area</th>
+                            <th>Apartment Type</th>
+                            <th>Area Range</th>
                             <th>Starting Price</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>4 BHK Estate Villa</td>
-                            <td>3,345 sq. ft.</td>
-                            <td>₹3.54 Cr*</td>
+                            <td>Studio Apartment</td>
+                            <td>533 – 625 sq. ft.</td>
+                            <td>₹59 Lakhs – ₹69 Lakhs*</td>
                         </tr>
                         <tr>
-                            <td>5 BHK Regal Edition Villa</td>
-                            <td>3,893 sq. ft.</td>
-                            <td>₹4.59 Cr*</td>
+                            <td>1 BHK Apartment</td>
+                            <td>887 – 952 sq. ft.</td>
+                            <td>₹1.00 Cr – ₹1.05 Cr*</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="pricing-footnote">*Indicative launch pricing. Please enquire for the latest offer and availability. Regal Edition includes private swimming pool, pre-fit lift, home automation, sky pergola and twin terrace.</div>
+                <div class="pricing-footnote">*Approximate all-inclusive starting price. Final pricing depends on floor rise, view preferences and developer updates. Please enquire for the latest offer and availability.</div>
             </div>
         </div>
     </section>
@@ -1308,24 +1315,26 @@
     <section class="plan" id="location">
         <div class="container">
             <h2 class="section-title">Location Advantages &amp; Connectivity</h2>
-            <p class="section-subtitle">Prime location near Rajankunte, Yelahanka — North Bengaluru's fast-growing corridor.</p>
+            <p class="section-subtitle">Off Bellary Road, Devanahalli — minutes from the airport and North Bengaluru's aerospace-industrial belt.</p>
 
-            <div class="plan-notes reveal" style="max-width: 900px; margin: 2rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
-                <div class="plan-note">
-                    <strong>Prime Rajankunte Address</strong>
-                    <span>Located near Rajankunte, Yelahanka, in North Bengaluru's fast-growing residential and hospitality corridor.</span>
+            <div class="plan-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/vasanta-cove/vasanta-cove-location-map.webp" alt="Sattva Vasanta Cove Devanahalli location map showing Bellary Road and Kempegowda Airport" onclick="openLightboxFromSrc('vasanta-cove-location-map.webp')">
                 </div>
-                <div class="plan-note">
-                    <strong>Resort Neighbours</strong>
-                    <span>Close to Taj Urban Resort &amp; Angsana Oasis — an indicator of the surrounding area's premium positioning.</span>
-                </div>
-                <div class="plan-note">
-                    <strong>Highway &amp; Airport Access</strong>
-                    <span>Easy access to Kempegowda International Airport, the Satellite Town Ring Road (STRR) and Peripheral Ring Road (PRR).</span>
-                </div>
-                <div class="plan-note">
-                    <strong>View on Map</strong>
-                    <span>See the exact site location: <a href="https://maps.app.goo.gl/e7NA8Qfka3rjXxXY7" target="_blank" rel="noopener" style="color: var(--accent-green); font-weight: 800;">Open in Google Maps →</a></span>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>Distance to Key Hubs</strong>
+                        <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
+                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~5-10 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">KIADB Aerospace Park:</strong> Nearby</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Foxconn (upcoming facility):</strong> Nearby</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Prestige Tech Cloud:</strong> Nearby</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">NH-44 / Bellary Road:</strong> Direct Access</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Metro Phase 2B:</strong> Upcoming Access</li>
+                        </ul>
+                    </div>
+                    <div class="plan-note"><strong>Connected Living</strong><span>Direct access to NH-44 keeps the airport, aerospace park and North Bengaluru's growing industrial belt within easy reach.</span></div>
+                    <div class="plan-note"><strong>Enquire for Details</strong><span>Get brochure + exact location details on request.</span></div>
                 </div>
             </div>
         </div>
@@ -1334,29 +1343,44 @@
     <section class="amenities" id="investment" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">The Investment Advantage</h2>
-            <p class="section-subtitle">Why Surya Valencia is a compelling choice for villa buyers and investors alike.</p>
+            <p class="section-subtitle">Why Sattva Vasanta Cove is a compelling choice for first-time buyers and rental-yield investors.</p>
 
             <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">A Rare Product on the Yelahanka Corridor</strong>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Why Invest in Devanahalli's Aerospace Corridor</strong>
                     <span>
-                        Private-pool, Spanish-themed villas with triple-height sky ceilings are a genuinely uncommon product in North Bengaluru's Yelahanka-Rajankunte belt, which is otherwise dominated by high-rise apartment supply. <strong>Surya Valencia</strong> targets buyers who specifically want an independent villa lifestyle — private backyard, private pool on the Regal Edition, and a large 40,000 sq ft clubhouse — without leaving the well-connected northern growth corridor.
+                        Devanahalli's growth story has moved beyond the airport itself — the KIADB Aerospace Park, an upcoming Foxconn facility and Prestige Tech Cloud are drawing a large manufacturing and technology workforce to the immediate vicinity of <strong>Sattva Vasanta Cove</strong>. That workforce needs housing close to the workplace, and a Studio/1 BHK-only project sitting directly off Bellary Road is well positioned to capture that demand.
                     </span>
                 </div>
 
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Proximity to Premium Hospitality &amp; the Airport</strong>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Small-Ticket Entry Advantage</strong>
                     <span>
-                        Being close to Taj Urban Resort and Angsana Oasis signals the calibre of development already committed to this stretch of Rajankunte, while easy access to Kempegowda International Airport, the STRR and PRR keeps the location practical for frequent flyers and professionals who need reliable connectivity across North Bengaluru.
+                        With Studio homes starting around ₹59 Lakhs, <strong>Sattva Vasanta Cove</strong> offers one of the more accessible entry points into Sattva Group's Devanahalli portfolio, which also includes the larger-format Sattva Aeropolis and Sattva City. That makes it a realistic first purchase for young professionals as well as a lower-ticket-size option for investors diversifying across the airport corridor.
                     </span>
                 </div>
 
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">New Launch Entry Advantage</strong>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Rental Demand from the Aerospace Workforce</strong>
                     <span>
-                        As a newly launched, RERA-registered project across both phases, Surya Valencia offers early buyers access to its most competitive pricing before subsequent construction-linked price revisions. Villa buyers on this corridor typically hold for the long term, and a rare combination of private pools, large backyards and a resort-style clubhouse supports strong end-user demand alongside capital appreciation potential.
+                        Studio and 1 BHK formats are typically the first to lease out to single professionals and dual-income couples working nearby. As KIADB Aerospace Park and Foxconn ramp up hiring, <strong>Sattva Vasanta Cove</strong>'s proximity — combined with direct NH-44 access and a full lifestyle clubhouse — positions it to see steady rental interest from this workforce.
                     </span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="developer" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">About Sattva Group</h2>
+            <p class="section-subtitle">One of Bengaluru's most established developers, with a growing Devanahalli portfolio.</p>
+            <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
+                <p style="margin-bottom: 1rem;">
+                    Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most trusted and established real estate developers, with a large portfolio of residential and commercial projects across the city. <strong>Sattva Vasanta Cove</strong> extends the developer's presence in the Devanahalli airport corridor, joining <strong>Sattva Aeropolis</strong> and <strong>Sattva City</strong> as part of the group's growing footprint in North Bengaluru.
+                </p>
+                <p>
+                    With Vasanta Cove, the developer has focused on a compact, efficient Studio and 1 BHK format — a departure from the larger multi-configuration launches typical of the corridor — built around a ~12,000 sq ft clubhouse with co-working and creative zones. The positioning reflects the area's fast-growing base of aerospace and technology professionals looking for a self-contained, well-connected home close to work.
+                </p>
             </div>
         </div>
     </section>
@@ -1364,124 +1388,106 @@
     <section class="faq" id="faq" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about Surya Valencia, Rajankunte.</p>
+            <p class="section-subtitle">Common questions about Sattva Vasanta Cove, Devanahalli.</p>
 
             <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
-                        <span itemprop="name">What is Surya Valencia?</span>
+                        <span itemprop="name">What is Sattva Vasanta Cove and who is the developer?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Surya Valencia is a Spanish-themed villa community near Rajankunte, Yelahanka, North Bengaluru, offering 4 BHK Estate Villas and 5 BHK Regal Edition Villas across a layout of 122 homes, with a 40,000 sq ft clubhouse managed by Illesium Clubs.</p>
+                        <p itemprop="text">Sattva Vasanta Cove is a new-launch residential development by Sattva Group, located off Bellary Road in Devanahalli, North Bengaluru. The project is spread across 1.3 acres and offers 200 Studio and 1 BHK apartments across 2 towers.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
-                        <span itemprop="name">Where exactly is Surya Valencia located?</span>
+                        <span itemprop="name">Where exactly is Sattva Vasanta Cove located?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project is located near Rajankunte, Yelahanka, in North Bengaluru, close to Taj Urban Resort and Angsana Oasis, with easy access to the airport, STRR and PRR.</p>
+                        <p itemprop="text">Sattva Vasanta Cove is located off Bellary Road (NH-44), Devanahalli, North Bengaluru — close to the KIADB Aerospace Park, Foxconn's upcoming facility and Prestige Tech Cloud, with Kempegowda International Airport approximately 5-10 minutes away by road.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
-                        <span itemprop="name">What villa configurations are available?</span>
+                        <span itemprop="name">What apartment configurations and sizes are available?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Two configurations: 4 BHK Estate Villas at 3,345 sq ft starting from ₹3.54 Cr, and 5 BHK Regal Edition Villas at 3,893 sq ft starting from ₹4.59 Cr.</p>
+                        <p itemprop="text">Sattva Vasanta Cove offers 163 Studio apartments (533-625 sq ft) and 37 1 BHK apartments (887-952 sq ft), based on the developer's configuration table. Final pricing depends on floor rise, view preferences and developer updates.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
-                        <span itemprop="name">What makes the 5 BHK Regal Edition different from the 4 BHK villa?</span>
+                        <span itemprop="name">What is the price of Sattva Vasanta Cove apartments?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The 5 BHK Regal Edition adds a private swimming pool, a pre-fit lift, home automation, a sky pergola and a twin terrace on top of the shared features both villa types get, like the triple-height sky ceiling and private backyard.</p>
+                        <p itemprop="text">Studio apartments (533-625 sq ft) start from approximately ₹59 Lakhs to ₹69 Lakhs, and 1 BHK apartments (887-952 sq ft) start from approximately ₹1.00 Cr to ₹1.05 Cr, all-inclusive. Prices are indicative and subject to change — please enquire for the latest offer.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
-                        <span itemprop="name">Is Surya Valencia RERA registered?</span>
+                        <span itemprop="name">Is Sattva Vasanta Cove RERA registered?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes. Surya Valencia is developed in two phases, each separately RERA registered. Phase I covers 44 villas across 3.64 acres under RERA number PRM/KA/RERA/1251/472/PR/171224/007305. Phase II covers 78 villas across 5.32 acres under RERA number PRM/KA/RERA/1251/472/PR/020125/007343. Always verify current status directly on the Karnataka RERA portal before making a purchase decision.</p>
+                        <p itemprop="text">Yes. Sattva Vasanta Cove is registered under RERA number PRM/KA/RERA/1250/303/PR/041225/008310.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
-                        <span itemprop="name">What amenities does the clubhouse offer?</span>
+                        <span itemprop="name">When is the possession date for Sattva Vasanta Cove?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The 40,000 sq ft clubhouse is managed by Illesium Clubs and anchors a master-planned layout that includes an azure pool, party lawn with amphitheatre, yoga and meditation corner, outdoor fitness area, putting green, reflexology walk, and multiple landscaped gardens and trellised walkways.</p>
+                        <p itemprop="text">Target possession for Sattva Vasanta Cove is December 2030, as per the project's RERA registration.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
-                        <span itemprop="name">How big is the private backyard?</span>
+                        <span itemprop="name">What amenities does Sattva Vasanta Cove offer?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Private backyards range from approximately 300 to 700 sq ft depending on the villa's plot position within the layout.</p>
+                        <p itemprop="text">Sattva Vasanta Cove features a ~12,000 sq ft clubhouse (G+2) with co-working spaces, an influencer/creative zone and indoor game lounges, alongside a podium swimming pool, outdoor gym, yoga and meditation deck, jogging tracks, an amphitheatre, party lawn, bar lounge, tree decks and a summer lounge. Safety features include 100% power backup, 24/7 CCTV surveillance and covered parking.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
-                        <span itemprop="name">Does every villa have a lift?</span>
+                        <span itemprop="name">How far is Sattva Vasanta Cove from Kempegowda International Airport?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Every villa is built with dedicated space for a lift across its floors; the 5 BHK Regal Edition comes with the lift pre-fit, while other villas can have one installed in the reserved space.</p>
+                        <p itemprop="text">Sattva Vasanta Cove is approximately 5-10 minutes by road from Kempegowda International Airport (KIAL), and sits directly off NH-44 / Bellary Road with upcoming access to Metro Phase 2B.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
-                        <span itemprop="name">How many floors does each villa have?</span>
+                        <span itemprop="name">How many towers and units does the project have?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Both the 4 BHK and 5 BHK villas are laid out across a ground floor, first floor, second floor and a terrace/third floor, with bedrooms, family lounges and balconies distributed across the upper levels.</p>
+                        <p itemprop="text">Sattva Vasanta Cove comprises 2 towers with 2 basements + ground + 12/13 floors, totalling 200 units — 163 Studio apartments and 37 1 BHK apartments.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
-                        <span itemprop="name">Is Surya Valencia a good investment?</span>
+                        <span itemprop="name">Who is Sattva Group?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Rajankunte sits on Bengaluru's fast-growing northern corridor near the airport, STRR and PRR, and Spanish-themed private-pool villas are a relatively rare product in this belt, which supports both lifestyle appeal and long-term demand.</p>
+                        <p itemprop="text">Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most established real estate developers, with a growing portfolio in the Devanahalli airport corridor that includes Sattva Aeropolis and Sattva City.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
-                        <span itemprop="name">Who is the developer of Surya Valencia?</span>
+                        <span itemprop="name">How do I book a site visit or request the brochure?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Surya Valencia is developed by Surya Developers, a real estate firm based in Yelahanka, Bengaluru.</p>
-                    </div>
-                </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
-                        <span itemprop="name">When is possession for Surya Valencia?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Possession is scheduled by phase: Phase I (44 villas across 3.64 acres) is scheduled for December 2028, and Phase II (78 villas across 5.32 acres) is scheduled for December 2030.</p>
-                    </div>
-                </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
-                        <span itemprop="name">How do I book a site visit?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">You can request the brochure, latest price list and book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                        <p itemprop="text">You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
                     </div>
                 </div>
             </div>
@@ -1491,19 +1497,19 @@
     <section class="lead-form-section" id="form">
         <div class="container">
             <h2 class="section-title">Enquire for Launch Offers &amp; Availability</h2>
-            <p class="section-subtitle">Schedule a call or request the brochure for Surya Valencia.</p>
+            <p class="section-subtitle">Schedule a call or request the brochure for Sattva Vasanta Cove.</p>
 
             <div class="form-container">
                 <div class="urgency-block">
                     <div class="urgency-title">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        New Launch — Limited Villas Available
+                        New Launch — Limited Inventory
                     </div>
                     <div class="urgency-text">Get Best Launch Pricing &middot; Book Site Visit Today</div>
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="b745b3a2-d7ea-48e6-b6b5-a3646e09e13c">
-                    <input type="hidden" name="subject" value="New Inquiry - Surya Valencia (Main Form)">
+                    <input type="hidden" name="access_key" value="79c68ad5-36dd-4431-908b-2bfb6b88d1b8">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Vasanta Cove (Main Form)">
                     <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
                     <input type="text" name="name" required placeholder="Enter your full name" />
@@ -1515,7 +1521,7 @@
                 </form>
 
                 <div class="rera-notice" style="margin-top:1.8rem;background: rgba(212, 165, 116, 0.12); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-warm); border-radius: 14px; color:#fefce8;">
-                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders. Surya Valencia is developed by Surya Developers. RERA No. Phase I: <strong>PRM/KA/RERA/1251/472/PR/171224/007305</strong>, Phase II: <strong>PRM/KA/RERA/1251/472/PR/020125/007343.</strong>
+                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
                     Images and information are for representation purpose. Pricing and availability are subject to change. Please enquire for the latest offer and unit availability details.
                 </div>
             </div>
@@ -1527,7 +1533,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call Now
         </a>
-        <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Surya%20Valencia" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+        <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Sattva%20Vasanta%20Cove" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
             WhatsApp
         </a>
@@ -1541,40 +1547,40 @@
     <section class="project-footer-strip">
       <div class="pfs-inner">
 
-        <span class="pfs-label">Also in Yelahanka</span>
+        <span class="pfs-label">Also in Devanahalli</span>
         <h2 class="pfs-title">Similar Projects to Consider</h2>
-        <p class="pfs-intro">Explore comparable properties in the <a href="/areas/yelahanka/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Yelahanka corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
+        <p class="pfs-intro">Explore comparable properties in the <a href="/areas/devanahalli/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Devanahalli corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
         <div class="proj-compare-grid">
-      <a href="/projects/sattva-lumina/" class="proj-compare-card">
+      <a href="/projects/sattva-aeropolis/" class="proj-compare-card">
         <div class="proj-compare-img-wrap">
-          <img src="../../additional_websites/Lumina/imgi_7_Top-Cam.webp" alt="Sattva Lumina" loading="lazy">
-          <span class="proj-compare-badge">Rajankunte</span>
+          <img src="/images/projects-thumbs/sattva-aeropolis-thumb.webp" alt="Sattva Aeropolis" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
         </div>
         <div class="proj-compare-body">
-          <p class="proj-compare-name">Sattva Lumina</p>
-          <p class="proj-compare-detail">1, 2 &amp; 3 BHK · Rajankunte, Yelahanka</p>
+          <p class="proj-compare-name">Sattva Aeropolis</p>
+          <p class="proj-compare-detail">Studio, 1, 2 &amp; 3 BHK · Same Developer · Devanahalli</p>
           <span class="proj-compare-link">View Project →</span>
         </div>
       </a>
-      <a href="/projects/concorde-mayfair/" class="proj-compare-card">
+      <a href="/projects/sattva-city/" class="proj-compare-card">
         <div class="proj-compare-img-wrap">
-          <img src="../../additional_websites/Mayfair/Concorde-Mayfair-overview.jpg" alt="Concorde Mayfair" loading="lazy">
-          <span class="proj-compare-badge">Yelahanka</span>
+          <img src="/images/projects-thumbs/sattva-city-thumb.webp" alt="Sattva City" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
         </div>
         <div class="proj-compare-body">
-          <p class="proj-compare-name">Concorde Mayfair</p>
-          <p class="proj-compare-detail">3 BHK · Bellary Road, Yelahanka</p>
+          <p class="proj-compare-name">Sattva City</p>
+          <p class="proj-compare-detail">2, 3 &amp; 4 BHK · Integrated Township · Devanahalli</p>
           <span class="proj-compare-link">View Project →</span>
         </div>
       </a>
-      <a href="/projects/vajram-chrysanthemum/" class="proj-compare-card">
+      <a href="/projects/assetz-palmscape/" class="proj-compare-card">
         <div class="proj-compare-img-wrap">
-          <img src="/images/projects-thumbs/vajram-chrysanthemum-thumb.webp" alt="Vajram Chrysanthemum" loading="lazy">
-          <span class="proj-compare-badge">Yelahanka</span>
+          <img src="/images/projects-thumbs/assetz-palmscape-thumb.webp" alt="Assetz Palmscape" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
         </div>
         <div class="proj-compare-body">
-          <p class="proj-compare-name">Vajram Chrysanthemum</p>
-          <p class="proj-compare-detail">3 &amp; 3.5 BHK · Avalahalli, Yelahanka</p>
+          <p class="proj-compare-name">Assetz Palmscape</p>
+          <p class="proj-compare-detail">Villa Plots · IVC Road, Devanahalli</p>
           <span class="proj-compare-link">View Project →</span>
         </div>
       </a>
@@ -1584,29 +1590,29 @@
 
         <span class="pfs-label">Research &amp; Guides</span>
         <h2 class="pfs-title">Related Market Insights</h2>
-        <p class="pfs-intro">Before you decide, read our independent research on the Yelahanka market.</p>
+        <p class="pfs-intro">Before you decide, read our independent research on the Devanahalli market.</p>
         <div class="insight-grid">
-      <a href="/blog/surya-valencia-rajankunte-price-review/" class="insight-card">
-        <img src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia: Price, Villas &amp; What to Verify" loading="lazy">
+      <a href="/blog/sattva-vasanta-cove-devanahalli-price-layout-rera/" class="insight-card">
+        <img src="/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp" alt="Sattva Vasanta Cove: Price, Layout &amp; RERA Deep-Dive" loading="lazy">
         <div class="insight-card-body">
           <span class="insight-card-tag">Project Review · 7 Min</span>
-          <h4 class="insight-card-title">Surya Valencia: Price, Villas &amp; What to Verify</h4>
+          <h4 class="insight-card-title">Sattva Vasanta Cove: Price, Layout &amp; RERA Deep-Dive</h4>
           <span class="insight-card-link">Read Article →</span>
         </div>
       </a>
-      <a href="/blog/yelahanka-vs-yelahanka-new-town-investment/" class="insight-card">
-        <img src="../../additional_websites/Lumina/imgi_7_Top-Cam.webp" alt="Yelahanka vs Yelahanka New Town: Where to Invest?" loading="lazy">
+      <a href="/blog/sattva-vasanta-cove-vs-sattva-aeropolis-devanahalli/" class="insight-card">
+        <img src="/images/projects/vasanta-cove/vasanta-cove-tower-exterior.webp" alt="Sattva Vasanta Cove vs Sattva Aeropolis: Which Studio Investment Fits You?" loading="lazy">
         <div class="insight-card-body">
-          <span class="insight-card-tag">Comparison · 8 Min</span>
-          <h4 class="insight-card-title">Yelahanka vs Yelahanka New Town: Where to Invest?</h4>
+          <span class="insight-card-tag">Comparison · 6 Min</span>
+          <h4 class="insight-card-title">Sattva Vasanta Cove vs Sattva Aeropolis: Which Fits You?</h4>
           <span class="insight-card-link">Read Article →</span>
         </div>
       </a>
-      <a href="/blog/villas-vs-apartments-north-bengaluru-yelahanka/" class="insight-card">
-        <img src="/images/projects/surya-valencia/surya-valencia-villa-cluster.webp" alt="Villas vs Apartments in North Bengaluru: Which Suits You?" loading="lazy">
+      <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/" class="insight-card">
+        <img src="/images/projects/vasanta-cove/vasanta-cove-aerial-view.webp" alt="Devanahalli ROI: Land Appreciation vs Rental Yield" loading="lazy">
         <div class="insight-card-body">
           <span class="insight-card-tag">Investment Guide · 7 Min</span>
-          <h4 class="insight-card-title">Villas vs Apartments in North Bengaluru: Which Suits You?</h4>
+          <h4 class="insight-card-title">Devanahalli ROI: Land Appreciation vs Rental Yield</h4>
           <span class="insight-card-link">Read Article →</span>
         </div>
       </a>
@@ -1618,14 +1624,15 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-section">
-                <h5>About Surya Valencia</h5>
-                <p>Spanish-themed 4 &amp; 5 BHK villas near Rajankunte, Yelahanka with a 40,000 sq ft clubhouse managed by Illesium Clubs.</p>
+                <h5>About Sattva Vasanta Cove</h5>
+                <p>A 1.3-acre Studio &amp; 1 BHK development by Sattva Group off Bellary Road, Devanahalli — 200 homes across 2 towers, minutes from the KIADB Aerospace Park and Bangalore Airport.</p>
             </div>
 
             <div class="footer-section">
                 <h5>Our Projects</h5>
-                <p><a href="/projects/sattva-lumina/">Sattva Lumina, Rajankunte</a></p>
-                <p><a href="/areas/yelahanka/">Yelahanka projects</a></p>
+                <p><a href="/projects/sattva-aeropolis/">Sattva Aeropolis, Devanahalli</a></p>
+                <p><a href="/projects/sattva-city/">Sattva City, Devanahalli</a></p>
+                <p><a href="/projects/assetz-palmscape/">Assetz Palmscape, Devanahalli</a></p>
                 <p><a href="/projects/">All verified projects</a></p>
             </div>
 
@@ -1634,7 +1641,7 @@
                 <p><a href="#about">About</a></p>
                 <p><a href="#amenities">Amenities</a></p>
                 <p><a href="#gallery">Gallery</a></p>
-                <p><a href="#units">Floor Plans</a></p>
+                <p><a href="#units">Unit Plans</a></p>
                 <p><a href="#location">Location</a></p>
                 <p><a href="/privacy.html">Privacy Policy</a></p>
             </div>
@@ -1647,7 +1654,7 @@
                 </div>
                 <div class="footer-contact" style="margin-top:0.8rem;">
                     <strong>WhatsApp</strong>
-                    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Surya%20Valencia" target="_blank" rel="noopener">Chat with us</a>
+                    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Sattva%20Vasanta%20Cove" target="_blank" rel="noopener">Chat with us</a>
                 </div>
                 <div class="footer-contact" style="margin-top:0.8rem;">
                     <strong>Email</strong>
@@ -1657,17 +1664,15 @@
         </div>
 
         <div class="footer-bottom">
-            <div>© Copyright 2026 Surya Valencia Team. All Rights Reserved.</div>
-            <div style="margin-top:0.6rem;">This website is for informational purposes only. Prices and offers subject to change without notice.</div>
+            <div>© Copyright 2026 Sattva Vasanta Cove Team. All Rights Reserved.</div>
+            <div style="margin-top:0.6rem;">This website is for informational purposes only. Prices and offers subject to change without notice. The project is registered under Real Estate (Regulation and Development) Act, 2016 (RERA).</div>
 
             <div style="margin-top:0.9rem; font-size:0.78rem; color: rgba(255,255,255,0.75); max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.55;">
                 <strong>RERA Authorized Agent:</strong> Narayanan Rajesh, Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045<br/>
-                <strong>Developer:</strong> Surya Developers, Yelahanka, Bengaluru<br/>
-                <strong>Project RERA No. (Phase I):</strong> PRM/KA/RERA/1251/472/PR/171224/007305<br/>
-                <strong>Project RERA No. (Phase II):</strong> PRM/KA/RERA/1251/472/PR/020125/007343<br/>
-                <strong>Site Address:</strong> Near Rajankunte, Yelahanka, Bengaluru, Karnataka<br/><br/>
+                <strong>RERA Project Registration No:</strong> PRM/KA/RERA/1250/303/PR/041225/008310<br/>
+                <strong>Site Address:</strong> Off Bellary Road, Devanahalli, North Bengaluru, Karnataka<br/><br/>
                 <strong>Authorized Channel Partner:</strong> This is an authorized channel partner platform used strictly for informational marketing objectives. Provided content is given by respective owners and this website and content are for information purpose only and does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.<br/><br/>
-                © Copyright 2026 Surya Valencia Team. All Rights Reserved.
+                © Copyright 2026 Sattva Vasanta Cove Team. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -1707,6 +1712,7 @@
             });
         });
 
+        // Lightbox images collection
         let currentImageIndex = 0;
         let allLightboxImages = [];
 
@@ -1782,6 +1788,8 @@
             collectAllImages();
             initProjectPageScrollReveal('section .reveal');
         });
+
+        // Forms are submitted directly to Web3Forms (no custom submit handlers required).
 
         initProjectPageSmoothScroll();
         initProjectPageActiveNav();

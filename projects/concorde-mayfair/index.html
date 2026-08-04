@@ -104,14 +104,14 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             z-index: 1000; padding: 12px 0;
         }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; gap: clamp(10px, 2vw, 30px); max-width: 1400px; }
         .logo img { height: 45px; filter: none; } /* Make logo white */
-        
-        .nav-links { display: flex; gap: 15px; list-style: none; }
-        .nav-links a { font-weight: 500; font-size: 14px; color: #30362f; transition: var(--transition); }
+        .project-brand { flex-shrink: 0; }
+
+        .nav-links { display: flex; flex-wrap: nowrap; flex: 1; justify-content: center; gap: clamp(8px, 1.4vw, 18px); list-style: none; min-width: 0; }
+        .nav-links a { font-weight: 500; font-size: clamp(12px, 1vw, 14px); color: #30362f; transition: var(--transition); white-space: nowrap; }
         .nav-links a:hover { color: var(--accent-green); }
-        
-        .contact-cta { display: flex; gap: 10px; align-items: center; }
+        .contact-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
         
         .btn-wa-top {
             background-color: var(--wa-green); color: var(--white);
@@ -309,8 +309,25 @@
         .mobile-sticky-bar { display: none; }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .nav-links a { font-size: 13px; }
+        /* 9 nav links + call/WhatsApp CTAs don't fit one line below this width,
+           so the hamburger menu takes over earlier than the general mobile breakpoint. */
+        @media (max-width: 1180px) {
+            .nav-links, .contact-cta { display: none; }
+            .hamburger-menu { display: flex; }
+
+            /* Mushroom Menu Active State */
+            .nav-links.active {
+                display: flex; flex-direction: column; position: absolute;
+                top: 69px; left: 0; width: 100%; background: var(--primary);
+                padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.2); text-align: center; gap: 20px;
+            }
+            .nav-links.active a { color: var(--white); }
+            .nav-links.active a:hover { color: var(--secondary); }
+            .contact-cta.active {
+                display: flex; flex-direction: column; position: absolute;
+                top: 380px; left: 0; width: 100%; background: var(--primary);
+                padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.2); text-align: center; gap: 15px;
+            }
         }
 
         @media (max-width: 992px) {
@@ -324,21 +341,6 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links, .contact-cta { display: none; }
-            .hamburger-menu { display: flex; }
-            
-            /* Mushroom Menu Active State */
-            .nav-links.active {
-                display: flex; flex-direction: column; position: absolute;
-                top: 69px; left: 0; width: 100%; background: var(--primary);
-                padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.2); text-align: center; gap: 20px;
-            }
-            .contact-cta.active {
-                display: flex; flex-direction: column; position: absolute;
-                top: 380px; left: 0; width: 100%; background: var(--primary);
-                padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.2); text-align: center; gap: 15px;
-            }
-            
             .hero h1 { font-size: 26px; line-height: 1.25; }
             .hero { padding-top: 100px; padding-bottom: 60px; height: auto; display: block; }
 
