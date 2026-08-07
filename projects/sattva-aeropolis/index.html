@@ -134,7 +134,7 @@
             flex: 1;
             flex-wrap: nowrap;
         }
-.nav-links a { text-decoration: none; color: #2563eb; font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+.nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
         .nav-links a:hover { color: var(--accent-green); }
         .nav-links a.active { color: var(--accent-green); }
 
@@ -171,6 +171,8 @@
             text-decoration: none;
         }
         .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.nav-call, .nav-cta { display: none; }
 
         /* Hero */
         .hero {
@@ -371,7 +373,7 @@
         .hero-form-submit:hover { background: #075b31; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(11, 107, 60, 0.25); }
 
         section { padding: 5rem 2rem; }
-        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: #2563eb; margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
 
         .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
         .container { max-width: 1200px; margin: 0 auto; }
@@ -539,8 +541,8 @@
             font-size: 0.98rem;
         }
         .highlights-table thead th {
-            background: rgba(37, 99, 235, 0.08);
-            color: #2563eb;
+            background: rgba(11, 107, 60, 0.08);
+            color: var(--accent-green);
             font-weight: 900;
             text-align: left;
         }
@@ -632,6 +634,14 @@
         .lightbox-prev { left: 18px; }
         .lightbox-next { right: 18px; }
         .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(11,107,60,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+        @media (max-width: 1650px) {
+            .nav-links { gap: clamp(0.3rem, 0.9vw, 0.9rem); }
+            .nav-links a { font-size: 0.7rem; }
+            .phone-section { padding: 0.35rem 0.55rem; }
+            .whatsapp-btn { padding: 0.45rem 0.65rem; font-size: 0.68rem; }
+            .whatsapp-icon { width: 16px; height: 16px; }
+        }
 
 @media (max-width: 1024px) {
             .phone-section { display: flex; }
@@ -1109,7 +1119,11 @@
 
 
             <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20Phase%202%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
-                <span>Get Offers in WhatsApp</span>
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details on whatsapp</span>
             </a>
 
             <a href="tel:+918438344093" class="nav-call" aria-label="Call us">
@@ -1856,6 +1870,17 @@
           <span class="proj-compare-link">View Project →</span>
         </div>
       </a>
+      <a href="/projects/park-cubix/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/park-cubix-thumb.webp" alt="Sattva Park Cubix" loading="lazy">
+          <span class="proj-compare-badge">Devanahalli</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva Park Cubix</p>
+          <p class="proj-compare-detail">1, 2 &amp; 3 BHK · Same Developer · Phase 1 Ready</p>
+          <span class="proj-compare-link">View Project →</span>
+        </div>
+      </a>
         </div>
 
         <hr class="pfs-divider">
@@ -1864,6 +1889,14 @@
         <h2 class="pfs-title">Related Market Insights</h2>
         <p class="pfs-intro">Before you decide, read our independent research on the Devanahalli market.</p>
         <div class="insight-grid">
+      <a href="/blog/sattva-park-cubix-devanahalli-price-layout-rera/" class="insight-card">
+        <img src="/images/projects/park-cubix/park-cubix-entrance.webp" alt="Sattva Park Cubix: Price, Layout &amp; RERA Deep-Dive" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Project Review · 8 Min</span>
+          <h4 class="insight-card-title">Sattva Park Cubix: Price, Layout &amp; RERA Deep-Dive</h4>
+          <span class="insight-card-link">Read Article →</span>
+        </div>
+      </a>
       <a href="/blog/sattva-vasanta-skye-devanahalli-price-layout-rera/" class="insight-card">
         <img src="/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp" alt="Sattva Vasanta Skye: Price, Layout &amp; RERA Deep-Dive" loading="lazy">
         <div class="insight-card-body">

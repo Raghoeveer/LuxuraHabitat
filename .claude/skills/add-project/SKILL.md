@@ -209,19 +209,55 @@ silently reinherit by copy-pasting the template):
   there loses nothing.
 - Any heading/accent color from the source export gets swapped to this project's own
   brand palette before shipping — don't inherit a generic blue or the wrong project's
-  colors just because the source file had them. This includes `.section-title`: every
-  page copied from `sattva-aeropolis` inherits `color: #2563eb` (a generic blue with no
-  connection to this site's green/gold branding) in that rule's base declaration —
-  replace it, don't leave it. Pick the replacement from the project's **type**, and
-  make sibling projects of different types visibly distinct rather than converging on
-  the same green: villas/plotted developments get a warm terracotta/bronze tone (e.g.
-  `#9a5b28`, playing off `--accent-warm`), apartments/high-rises use the standard brand
-  green (`var(--accent-green)`, `#0b6b3c`), and plots/land parcels should get their own
-  third tone (e.g. an earthy clay `#a0522d`-family color) rather than reusing whichever
-  of the two above is closest. Two sibling pages of the *same* type on the same hub can
-  still share a color; a villa page and an apartment page shipped around the same time
-  should not (Surya Valencia — villas — and Concorde Sienna — apartments — were caught
-  both still on the inherited `#2563eb` blue and split into bronze/green respectively).
+  colors just because the source file had them. **`#2563eb` (the generic blue) leaks
+  into four separate CSS rules copied from `sattva-aeropolis`, not just
+  `.section-title`** — `.nav-links a`, `.highlights-table thead th`, and
+  `.pricing-table thead th` all carry it too, and each one is easy to fix in isolation
+  while missing the other three. That's exactly what happened: Surya Valencia and
+  Concorde Sienna both had `.section-title` swapped to their type color but still
+  shipped with blue nav links and blue table headers; `sattva-aeropolis` itself (the
+  page every new project is built from) still had the blue in three places; and three
+  brand-new pages (Concorde Neo, Park Cubix, both Vasanta Cove and Vasanta Skye) copied
+  it forward unfixed. Treat this as one checklist item covering all four rules, not
+  four independent ones:
+  - `.section-title { color: #2563eb; ... }` → the project's type color (see below).
+  - `.nav-links a { color: #2563eb; ... }` → `var(--primary-dark)` — this one stays
+    neutral regardless of project type, matching every already-correct sibling page.
+  - `.highlights-table thead th { background: rgba(37, 99, 235, 0.08); color: #2563eb; ... }`
+    and `.pricing-table thead th { background: rgba(37, 99, 235, 0.08); color: #2563eb; ... }`
+    → swap both the tinted background and the text color together, e.g. for green:
+    `background: rgba(11, 107, 60, 0.08); color: var(--accent-green);`; for bronze:
+    `background: rgba(154, 91, 40, 0.08); color: #9a5b28;` (rgba is just the hex color's
+    RGB channels at 8% alpha — keep the tint and the text color in the same family).
+  Pick the replacement from the project's **type**, and make sibling projects of
+  different types visibly distinct rather than converging on the same green:
+  villas/plotted developments get a warm terracotta/bronze tone (e.g. `#9a5b28`,
+  playing off `--accent-warm`), apartments/high-rises use the standard brand green
+  (`var(--accent-green)`, `#0b6b3c`), and plots/land parcels should get their own third
+  tone (e.g. an earthy clay `#a0522d`-family color) rather than reusing whichever of the
+  two above is closest. Two sibling pages of the *same* type on the same hub can still
+  share a color; a villa page and an apartment page shipped around the same time should
+  not. Verify with `grep -n '#2563eb' projects/<slug>/index.html` before shipping —
+  it must return nothing; a partial fix (only `.section-title` swapped) still passes a
+  quick visual glance at the hero but leaves the nav bar and both data tables on the
+  wrong color.
+- The nav-bar WhatsApp button (`class="whatsapp-btn"`, next to the phone number) needs
+  both **the exact label text `Get details on whatsapp`** and **the real WhatsApp logo**
+  — the official glyph SVG (`viewBox="0 0 24 24"`, `fill="currentColor"`, path starting
+  `M17.472 14.382c...`), not a generic chat-bubble icon, an emoji, and not left
+  text-only. Copy the `<svg class="whatsapp-icon">...</svg>` block plus the
+  `.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }` CSS rule (goes right
+  after `.whatsapp-btn:hover`) from any already-correct page, e.g. `sattva-songbird` —
+  don't hand-roll a new icon or reuse a generic message-circle glyph that happens to sit
+  elsewhere on the page (the hero panel's outline "WhatsApp Chat" icon is not this logo).
+  This was found inconsistent/missing across nearly every shipped page before being
+  swept and fixed in one pass — wording had drifted per page ("Get Offers on
+  WhatsApp", "Send Details in Whatsapp", "Whatapp me Details", etc.) and the icon was
+  absent on all but 3 pages; `sattva-kaveri-siri` had gone further and shipped an
+  `<img src="whatsapp.png">` pointing at a file that was never actually copied into
+  that project's folder — a completely invisible broken image. Grep
+  `projects/<slug>/index.html` for `Get details on whatsapp` and for the `17.472 14.382`
+  path fragment to confirm both the text and the real icon are present before shipping.
 - Every Web3Forms form (there are usually 2-3: hero panel, main lead-form section,
   possibly a sticky-bar mini form) needs the hidden `redirect` field set to exactly
   `https://luxurahabitat.com/thank-you/`.
@@ -446,6 +482,10 @@ For each post:
 - `grep -c "seo.js" projects/<slug>/index.html` — confirm the `/js/seo.js` script tag
   is actually present (see Phase 3); its absence produces no error, just silently
   missing `BreadcrumbList` schema.
+- `grep -n "#2563eb" projects/<slug>/index.html` — must return nothing. This generic
+  blue leaks into four separate rules (`.section-title`, `.nav-links a`,
+  `.highlights-table thead th`, `.pricing-table thead th`, see Phase 3) and fixing only
+  the most visible one (the section headings) has shipped broken twice already.
 - Confirm title/description/`og:title`/`twitter:title` state the same configuration
   range as the page's own hero/highlights/pricing content — a mismatch here usually
   means the meta tags were drafted before Phase 0/1 facts were fully resolved and
