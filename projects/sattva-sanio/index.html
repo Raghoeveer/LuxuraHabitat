@@ -460,9 +460,7 @@
         }
 
         .hero-media {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
+            display: none;
         }
 
         .hero-media img {
@@ -2319,7 +2317,8 @@
     </script>
 
     <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="hero" aria-label="Hero section">
+    <section class="hero" id="hero" aria-label="Hero section" style="background-image: url('/images/projects/sattva-sanio/sattva-sanio-hero.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(5, 8, 15, 0.7) 0%, rgba(5, 8, 15, 0.45) 50%, rgba(5, 8, 15, 0.6) 100%); z-index: 1;"></div>
         <div class="hero-container">
 
             <div class="hero-content">
@@ -2371,7 +2370,7 @@
             </div>
 
             <div class="hero-media" aria-hidden="true">
-                <img src="Sattva-sanio-overview.png"
+                <img src="/images/projects/sattva-sanio/sattva-sanio-hero.webp"
                     alt="Sattva Sanio - Premium Apartments on Old Madras Road"
                     fetchpriority="high">
                 <span class="artist-note">Artist's Impression</span>

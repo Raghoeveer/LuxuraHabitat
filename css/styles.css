@@ -2080,6 +2080,16 @@ textarea.form-control {
    ============================================ */
 main {
   padding-top: var(--header-total-height);
+  transition: padding-top var(--transition-fast);
+}
+
+/* Keep main's reserved top space in sync with the fixed header: once .scrolled
+   collapses the top-bar (see .site-header.scrolled .top-bar), the header itself
+   shrinks to just nav height, so main's padding must shrink with it — otherwise
+   main still reserves space for the taller unscrolled header and its first
+   content (breadcrumb, hero heading) ends up clipped under the fixed header. */
+.site-header.scrolled ~ main {
+  padding-top: var(--nav-height);
 }
 
 .page-hero {

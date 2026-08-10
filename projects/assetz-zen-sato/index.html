@@ -576,15 +576,7 @@
         }
 
         .hero-media {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 100vw;
-            transform: translateX(-50%);
-            min-height: 100%;
-            background: #20231f;
-            z-index: 0;
+            display: none;
         }
 
         .hero-media img {
@@ -2896,7 +2888,8 @@
     </script>
 
     <!-- Hero Section with Form -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" style="background-image: url('g-8.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(5, 8, 15, 0.7) 0%, rgba(5, 8, 15, 0.45) 50%, rgba(5, 8, 15, 0.6) 100%); z-index: 1;"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <a href="#" class="hero-logo" aria-label="Assetz Zen and Sato home" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">

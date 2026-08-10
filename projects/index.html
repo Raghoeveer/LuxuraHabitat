@@ -159,10 +159,10 @@
     }
 
     .project-card__title {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-size: 1.4rem;
       font-weight: 700;
-      color: var(--color-text);
+      color: var(--text-charcoal);
       line-height: 1.15;
     }
 
@@ -195,10 +195,10 @@
     }
 
     .spec-pill__value {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-size: 0.85rem;
       font-weight: 700;
-      color: var(--color-text);
+      color: var(--text-charcoal);
       line-height: 1.1;
     }
 
@@ -299,31 +299,84 @@
 
     .projects-intro__icon {
       flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, #b08d57, #d4a96a);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--color-primary);
       width: 48px;
       height: 48px;
+      background: linear-gradient(135deg, #b08d57, #d4a96a);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
     }
 
     .projects-intro p {
       font-size: 0.94rem;
       line-height: 1.6;
-      color: var(--color-text-muted);
+      color: var(--text-muted);
       margin: 0;
     }
 
-    .projects-intro strong { color: var(--color-text); }
+    .projects-intro strong { color: var(--text-charcoal); }
+
+    /* ── Search bar ── */
+    .projects-search {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto var(--space-md, 1.5rem);
+    }
+
+    .projects-search__icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a8a196;
+      pointer-events: none;
+    }
+
+    .projects-search__input {
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.94rem;
+      color: var(--text-charcoal);
+      background: #fff;
+      border: 1px solid #e0dacb;
+      border-radius: 50px;
+      padding: 13px 44px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .projects-search__input::placeholder { color: #a8a196; }
+
+    .projects-search__input:focus {
+      outline: none;
+      border-color: #b08d57;
+      box-shadow: 0 0 0 3px rgba(176,141,87,0.14);
+    }
+
+    /* Hide native browser "clear" (x) control so it doesn't double up with ours */
+    .projects-search__input::-webkit-search-cancel-button { display: none; }
+
+    .projects-search__clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border: none;
+      background: #f5f0e8;
+      color: #7a5c2a;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .projects-search__clear:hover { background: #ecdfc4; }
 
     /* ── Area filter ── */
     .area-filter {
@@ -339,7 +392,7 @@
       font-family: inherit;
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--color-text-muted);
+      color: var(--text-muted);
       background: #fff;
       border: 1px solid #e0dacb;
       border-radius: 50px;
@@ -366,7 +419,7 @@
 
     .area-filter__empty {
       text-align: center;
-      color: var(--color-text-muted);
+      color: var(--text-muted);
       font-size: 0.94rem;
       max-width: 780px;
       margin: 0 auto var(--space-lg);
@@ -536,6 +589,12 @@
           <p><strong>Our curation promise:</strong> We only feature projects where we can stand behind the developer's track record, RERA compliance, construction quality, and location fundamentals. Every listing below comes with our direct advisory support — no cold handoffs, no hidden referral agendas.</p>
         </div>
 
+        <div class="projects-search" role="search">
+          <svg class="projects-search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="search" id="project-search" class="projects-search__input" placeholder="Search by project, developer, or location…" aria-label="Search projects" autocomplete="off">
+          <button type="button" class="projects-search__clear" id="project-search-clear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+
         <div class="area-filter" id="area-filter" role="group" aria-label="Filter projects by area">
           <button type="button" class="area-filter__btn is-active" data-area="all">All Areas <span class="area-filter__count"></span></button>
           <button type="button" class="area-filter__btn" data-area="yelahanka">Yelahanka</button>
@@ -546,7 +605,7 @@
           <button type="button" class="area-filter__btn" data-area="other">Other Locations</button>
         </div>
 
-        <p class="area-filter__empty" id="area-filter-empty" hidden>No projects found in this area yet — <a href="https://wa.me/918438344093?text=Hi%2C%20I'm%20looking%20for%20projects%20in%20a%20specific%20area." target="_blank" rel="noopener noreferrer">ask us directly</a>.</p>
+        <p class="area-filter__empty" id="area-filter-empty" hidden><span id="area-filter-empty-text">No projects found in this area yet</span> — <a href="https://wa.me/918438344093?text=Hi%2C%20I'm%20looking%20for%20projects%20in%20a%20specific%20area." target="_blank" rel="noopener noreferrer">ask us directly</a>.</p>
 
         <div class="projects-grid" id="projects-grid">
 
@@ -1676,7 +1735,7 @@
     <!-- CTA STRIP -->
     <section class="section" id="projects-cta-strip" style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);padding:var(--space-xl) 0;">
       <div class="container" style="text-align:center;">
-        <h2 style="font-family:var(--font-display);color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;">Looking for Something Specific?</h2>
+        <h2 style="font-family:var(--font-heading);color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;">Looking for Something Specific?</h2>
         <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:540px;margin:0 auto 32px;">Tell us your requirements — budget, location, configuration — and get a personally curated shortlist within hours.</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
           <a href="https://wa.me/918438344093?text=Hello%2C%20I%20have%20specific%20requirements%20for%20a%20property.%20Can%20you%20help%3F" class="btn btn--whatsapp btn--lg" id="projects-whatsapp-cta" target="_blank" rel="noopener noreferrer">
@@ -1761,35 +1820,111 @@
   <script>
     (function () {
       var filterBar = document.getElementById('area-filter');
-      if (!filterBar) return;
+      var searchInput = document.getElementById('project-search');
+      var searchClear = document.getElementById('project-search-clear');
+      if (!filterBar && !searchInput) return;
 
       var cards = Array.prototype.slice.call(document.querySelectorAll('#projects-grid .project-card'));
-      var buttons = Array.prototype.slice.call(filterBar.querySelectorAll('.area-filter__btn'));
+      var buttons = filterBar ? Array.prototype.slice.call(filterBar.querySelectorAll('.area-filter__btn')) : [];
       var emptyMsg = document.getElementById('area-filter-empty');
-      var allCountEl = filterBar.querySelector('[data-area="all"] .area-filter__count');
+      var emptyMsgText = document.getElementById('area-filter-empty-text');
+      var allCountEl = filterBar ? filterBar.querySelector('[data-area="all"] .area-filter__count') : null;
 
       if (allCountEl) allCountEl.textContent = '(' + cards.length + ')';
 
-      function applyFilter(area) {
+      // Map each area filter's data-area value to its button label (e.g. "hennur" ->
+      // "Hennur – Thanisandra") so searching an area name works even when a card's own
+      // address text doesn't literally contain it (e.g. "Old Madras Road" is filed under
+      // "whitefield" but never says the word "Whitefield").
+      var areaLabels = {};
+      buttons.forEach(function (btn) {
+        var area = btn.getAttribute('data-area');
+        var label = btn.textContent.replace(/\(\d+\)\s*$/, '').trim();
+        if (area) areaLabels[area] = label;
+      });
+
+      // Cache each card's searchable text once (title, developer, location, config, tags,
+      // area label) rather than re-reading the DOM on every keystroke.
+      cards.forEach(function (card) {
+        var parts = [
+          card.querySelector('.project-card__title'),
+          card.querySelector('.project-card__developer'),
+          card.querySelector('.project-card__location')
+        ].concat(
+          Array.prototype.slice.call(card.querySelectorAll('.spec-pill__value')),
+          Array.prototype.slice.call(card.querySelectorAll('.project-tag'))
+        ).filter(Boolean).map(function (el) { return el.textContent; });
+        parts.push(areaLabels[card.getAttribute('data-area')] || '');
+        card._searchText = parts.join(' ').toLowerCase().replace(/\s+/g, ' ');
+      });
+
+      var state = { area: 'all', search: '' };
+
+      function applyFilters() {
         var visibleCount = 0;
         cards.forEach(function (card) {
-          var match = area === 'all' || card.getAttribute('data-area') === area;
+          var areaMatch = state.area === 'all' || card.getAttribute('data-area') === state.area;
+          var searchMatch = !state.search || card._searchText.indexOf(state.search) !== -1;
+          var match = areaMatch && searchMatch;
           card.classList.toggle('project-card--filtered-out', !match);
-          if (match) {
-            visibleCount++;
-            card.classList.add('visible');
-          }
+          if (match) visibleCount++;
         });
-        if (emptyMsg) emptyMsg.hidden = visibleCount !== 0;
+
+        if (emptyMsg) {
+          emptyMsg.hidden = visibleCount !== 0;
+          if (visibleCount === 0 && emptyMsgText) {
+            if (state.search && state.area !== 'all') {
+              emptyMsgText.textContent = 'No projects match "' + searchInput.value.trim() + '" in this area';
+            } else if (state.search) {
+              emptyMsgText.textContent = 'No projects match "' + searchInput.value.trim() + '"';
+            } else {
+              emptyMsgText.textContent = 'No projects found in this area yet';
+            }
+          }
+        }
       }
 
-      filterBar.addEventListener('click', function (e) {
-        var btn = e.target.closest('.area-filter__btn');
-        if (!btn) return;
-        buttons.forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-        applyFilter(btn.getAttribute('data-area'));
-      });
+      if (filterBar) {
+        filterBar.addEventListener('click', function (e) {
+          var btn = e.target.closest('.area-filter__btn');
+          if (!btn) return;
+          buttons.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          state.area = btn.getAttribute('data-area');
+          applyFilters();
+          if (window.gtag) gtag('event', 'area_filter', { area: state.area });
+        });
+      }
+
+      if (searchInput) {
+        var searchTrackTimer = null;
+        var lastTracked = '';
+
+        searchInput.addEventListener('input', function () {
+          state.search = searchInput.value.trim().toLowerCase();
+          if (searchClear) searchClear.hidden = state.search.length === 0;
+          applyFilters();
+
+          // Debounce analytics only — the visible filtering above stays instant.
+          clearTimeout(searchTrackTimer);
+          searchTrackTimer = setTimeout(function () {
+            if (state.search && state.search !== lastTracked && window.gtag) {
+              gtag('event', 'project_search', { search_term: state.search });
+              lastTracked = state.search;
+            }
+          }, 600);
+        });
+
+        if (searchClear) {
+          searchClear.addEventListener('click', function () {
+            searchInput.value = '';
+            state.search = '';
+            searchClear.hidden = true;
+            applyFilters();
+            searchInput.focus();
+          });
+        }
+      }
     })();
   </script>
 </body>
