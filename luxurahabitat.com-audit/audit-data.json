@@ -7,15 +7,14 @@
       "3 project pages (sattva-la-vita, sattva-lumina, sattva-aeropolis) have zero real listing schema, only defunct FAQPage",
       "Invalid non-numeric Product price format on orchid-salisbury breaks Rich Results eligibility",
       "No verifiable Google Business Profile signals anywhere on-site",
-      "Catastrophic LCP (13-15s) on blog and area templates from unoptimized images",
-      "GSC/GA4 access blocked by missing service-account permissions and a disabled API"
+      "Catastrophic LCP (13-15s) on blog and area templates from unoptimized images"
     ],
     "quick_wins": [
       "Add FAQPage schema to the 4 area hub pages (visible FAQ content already exists)",
       "Fix mobile sidebar-widget overflow bug on 11 remaining project pages (1-line CSS, proven fix on 5 pages)",
       "Trim meta descriptions sitewide (161-262 chars vs ~155-160 budget)",
       "Fix the Assetz Palmscape RERA sidebar contradiction once correct value confirmed",
-      "Grant GSC/GA4 service account access (3 console actions, ~10 minutes)"
+      "Fix zero-click position 4-10 queries (kanakapura nice road, purva hallmark variants) with small on-page/title tweaks"
     ]
   },
   "categories": [
@@ -142,7 +141,7 @@
     {"name": "SXO (Search Experience)", "score": 58, "note": "Diagnostic metric, not part of Health Score. Weakest persona: NRI Investor (61/100), driven by the RERA trust gap."},
     {"name": "Local SEO", "score": 40, "note": "Critical for this SAB business type: no detectable Google Business Profile signals."},
     {"name": "Maps Intelligence", "score": 32, "note": "Confirms the GBP gap independently from geo-data side; Tier 0 (free APIs only)."},
-    {"name": "Google API (GSC/GA4)", "score": 45, "note": "Blocked by permissions, not a quality signal. 3 console actions needed to unblock."},
+    {"name": "Google API (GSC/GA4)", "score": 70, "note": "Updated 2026-08-07: access granted, fully live. 28-day GA4: 39 sessions/32 users. GSC: 20 clicks/1,738 impressions, avg position 56.2. Homepage indexed and passing. CrUX CLS good, TTFB/FCP needs improvement."},
     {"name": "Backlinks", "score": null, "note": "Unscored - insufficient data. New site not yet in Common Crawl; no Moz/Bing/DataForSEO access."},
     {"name": "DataForSEO Enrichment", "score": null, "note": "Unscored - MCP tools unavailable this session, needs Claude Code restart to load."}
   ],
@@ -194,7 +193,7 @@
         "name": "Phase 4: Monitoring & Iteration",
         "timeframe": "Ongoing",
         "items": [
-          "Re-run GSC/GA4 checks monthly once access is granted",
+          "Re-run GSC/GA4 checks monthly to track growth (access confirmed working as of 2026-08-07)",
           "Restart Claude Code and re-run DataForSEO enrichment",
           "Re-check CrUX field data monthly",
           "Sign up for free Moz API key and Bing Webmaster Tools",

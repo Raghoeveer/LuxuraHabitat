@@ -3,7 +3,7 @@
 **Date:** 2026-08-01
 **Business type:** Real Estate Advisory / Consultancy — Hybrid, leaning Service-Area Business (SAB), Bengaluru, India (Devanahalli, Hennur, Yelahanka, Kanakapura Road corridors)
 **Pages audited:** 62 (full sitemap coverage: homepage, about, 4 area guides, 19 project pages, 30 blog posts, contact, developers, testimonials, privacy, terms)
-**Method:** Live crawl + direct repo read (`/Users/raghuveernr/Desktop/luxuraHabitat`), 13 specialist subagents, Google API Tier 2 (partially blocked — see Google API section), DataForSEO (unavailable this session — see note)
+**Method:** Live crawl + direct repo read (`/Users/raghuveernr/Desktop/luxuraHabitat`), 13 specialist subagents, Google API Tier 2 (fully live as of 2026-08-07 — GSC/GA4 access was granted after the initial audit), DataForSEO (unavailable this session — see note)
 
 ---
 
@@ -34,7 +34,7 @@ Weighted across the 7 standard categories (methodology below). This is a **techn
 | SXO (Search Experience) | 58/100 | Separate diagnostic metric, not averaged into Health Score |
 | Local SEO | 40/100 | Critical for an SAB business — no GBP signals detected |
 | Maps Intelligence | 32/100 | Overlaps with Local; confirms GBP gap independently |
-| Google API (GSC/GA4) | 45/100 | **Blocked by permissions**, not a true quality signal — see below |
+| Google API (GSC/GA4) | 70/100 | **Now fully live** (updated 2026-08-07) — access granted, real data flowing; score reflects an early-stage new site, not a blocker |
 | Backlinks | Unscored | Insufficient data (new site, no Moz/Bing/DataForSEO access) |
 | DataForSEO enrichment | Unscored | MCP tools unavailable this session (needs Claude Code restart) |
 
@@ -45,7 +45,8 @@ Weighted across the 7 standard categories (methodology below). This is a **techn
 3. **Invalid price format breaks Rich Results eligibility.** `/projects/orchid-salisbury/` has `Product.Offer.price` values like `"1.03 Crore"` (a string) instead of a plain number — will fail Google's Rich Results Test outright.
 4. **No verifiable Google Business Profile signals anywhere.** For a Service-Area Business with no storefront, GBP is close to a prerequisite for any Maps-surface visibility. No Maps embed, review widget, or Place ID reference exists for the business itself anywhere on-site (confirmed independently by both Local and Maps agents; OSM/Nominatim also has no POI record).
 5. **Catastrophic LCP (13-15 seconds) on the site's two highest-volume templates.** Blog posts and area pages — together ~70% of the 62 pages — score Lighthouse LCP of 13.9s and 15.3s respectively, driven by unoptimized hero/content images (1.0-1.26MB PNGs/JPGs with 80-99% waste, no WebP/AVIF).
-6. **Google Search Console and GA4 data are currently inaccessible.** The service account lacks Owner access in GSC, the Search Console API isn't enabled in the GCP project, and the service account lacks Viewer access in GA4 — meaning real indexation status, query performance, and organic traffic are all unverifiable right now. This blocks a meaningful chunk of ongoing SEO measurement until fixed (5-10 minutes of user action).
+
+*~~6. Google Search Console and GA4 data are currently inaccessible~~ — **RESOLVED 2026-08-07.** Access granted; see the Google API section below for real data now flowing.*
 
 ### Top 5 Quick Wins
 
@@ -53,7 +54,7 @@ Weighted across the 7 standard categories (methodology below). This is a **techn
 2. **Fix the 11-page mobile sidebar overflow bug.** A one-line CSS fix (`@media (max-width:1024px){ .sidebar-widget{display:none} }`) already exists correctly on 5 of 16 project pages — just needs copying to the other 11.
 3. **Trim meta descriptions sitewide** (currently 161-262 chars vs. the ~155-160 char SERP budget) — a template-level tweak, not a per-page rewrite.
 4. **Fix the Assetz Palmscape RERA sidebar contradiction** (Critical Issue #1) — a single-field edit once the correct number (or "pending") is confirmed.
-5. **Grant the service account GSC/GA4 access** (Critical Issue #6) — three checkbox-level actions in Google's consoles, unlocks real performance data going forward.
+5. ~~Grant the service account GSC/GA4 access~~ — **done 2026-08-07.**
 
 ---
 
@@ -254,22 +255,61 @@ Full detail + screenshots: `findings/visual.md`, `screenshots/`
 
 ---
 
-## 13. Google API Data (GSC / GA4 / CrUX) — 45/100 (blocked by permissions)
+## 13. Google API Data (GSC / GA4 / CrUX) — 70/100 (updated 2026-08-07, now fully live)
 
-**This score reflects an access blocker, not a quality signal.** PSI/CrUX (API-key auth) work correctly; GSC and GA4 (service-account auth) are blocked:
+**Access was granted on 2026-08-07** — the Search Console API is enabled, the service account has Owner access in GSC and Viewer access in GA4, and the Analytics Data API is enabled. All previously-blocked checks now return real data. The score reflects an early-stage new site with real but modest traction, not an access problem.
 
-1. GSC service account lacks Owner-level access on `sc-domain:luxurahabitat.com`.
-2. Search Console API is not enabled in GCP project `openclawplaces-494918` (957832293351).
-3. GA4 service account lacks Viewer access on property `547237847`.
+### Indexation (URL Inspection)
+Homepage: **PASS** — "Submitted and indexed", robots ALLOWED, canonical matches, `Breadcrumbs` rich result detected, last crawled 2026-08-04.
 
-**Action needed (5-10 minutes):**
-1. Search Console → Settings → Users and permissions → add `claude-seo@openclawplaces-494918.iam.gserviceaccount.com` as **Owner**.
-2. Enable the Search Console API: `console.developers.google.com/apis/api/searchconsole.googleapis.com/overview?project=957832293351`.
-3. GA4 Admin → Property Access Management → add the same service account as **Viewer** on property `547237847`.
+### Sitemap status (GSC)
+`sitemap.xml` submitted, 0 errors, 0 warnings, 87 URLs submitted (last submitted 2026-07-25). *(87 vs. the 62 in the site's current sitemap — GSC keeps historical submission counts; use the crawl/sitemap audit above for the current live count.)*
 
-What we *could* measure: PSI lab data shows homepage mobile LCP 4.1s (Poor), desktop TBT 1,080ms (Poor) — consistent with the Performance section's findings. No CrUX field data yet (expected — site hasn't crossed the minimum-traffic threshold).
+### Search performance (last 28 days, `sc-domain:luxurahabitat.com`)
+| Metric | Value |
+|---|---|
+| Clicks | 20 |
+| Impressions | 1,738 |
+| Average CTR | 1.15% |
+| Average position | 56.2 |
+| Query-page rows tracked | 862 |
 
-Full detail: `findings/google-api.md`
+Low CTR and a deep average position are expected for a brand-new site with almost no backlink profile (consistent with the Backlinks section) — most tracked queries are long-tail and not yet ranking on page 1.
+
+**Quick-win queries (position 4-10, ranked by impressions):**
+| Impressions | Position | Clicks | Query | Page |
+|---|---|---|---|---|
+| 113 | 9.3 | 5 | brigade jeevan sandhya | `/blog/brigade-jeevan-sandhya-kanakapura-road-prelaunch-review/` |
+| 92 | 6.8 | 2 | brigade jeevan sandhya | `/projects/brigade-jeevan-sandhya/` |
+| 43 | 5.8 | 0 | kanakapura nice road | `/blog/kanakapura-road-connectivity-nice-road-metro/` |
+| 24 | 7.7 | 0 | brigade jeevan sandhya location | `/projects/brigade-jeevan-sandhya/` |
+| 23 | 9.3 | 0 | brigade jeevan sandhya location | `/blog/brigade-jeevan-sandhya-kanakapura-road-prelaunch-review/` |
+| 8 | 6.5 | 1 | purva hallmark | `/blog/purva-hallmark-vajarahalli-prelaunch-review/` |
+| 8 | 9.4 | 0 | nice road kanakapura | `/blog/kanakapura-road-connectivity-nice-road-metro/` |
+
+The Brigade Jeevan Sandhya pair (blog + project page) is the clear standout — already earning real clicks at position 6.8-9.3. The zero-click, position 5-9 rows (kanakapura nice road, purva hallmark variants) are the cheapest wins: small on-page/title tweaks to nudge them onto page 1 where CTR jumps sharply.
+
+### Organic traffic (GA4, last 28 days, property `547237847`)
+| Metric | Value |
+|---|---|
+| Sessions | 39 |
+| Users | 32 |
+| Pageviews | 97 |
+| Avg. daily sessions | 4.9 |
+
+Top landing pages: homepage (7 sessions), the Brigade Jeevan Sandhya blog post (6) and project page (4), the Kanakapura Road connectivity blog post (3), Century Kindle project page (3). Traffic is small but real and spread across exactly the page types the audit expects to perform (blog + matching project page pairs).
+
+### Core Web Vitals — field data (CrUX)
+The site has now crossed CrUX's minimum-traffic threshold for some metrics:
+| Metric | p75 | Rating |
+|---|---|---|
+| CLS | 0.01 | **Good** (90.7% of experiences) |
+| TTFB | 1,241ms | Needs Improvement |
+| FCP | 1,919ms | Needs Improvement |
+
+LCP and INP still have insufficient sample volume for a field-data rating — re-check as traffic grows. The available metrics are consistent with the Performance section's lab findings (render-blocking fonts, third-party scripts).
+
+Full detail (original blocked-state findings, now superseded by this update): `findings/google-api.md`
 
 ---
 

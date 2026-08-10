@@ -11,7 +11,7 @@
 
       // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
       // any per-button onclick can call stopPropagation and hide the click from
-      // GA4's own automatic outbound-click detection — this happened on the
+      // GA4's own automatic outbound-click detection: this happened on the
       // /projects/ card grid, where each WhatsApp button stops propagation so
       // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
@@ -101,6 +101,17 @@
       .article-sidebar { grid-template-columns: 1fr; }
       .related-cards-grid { grid-template-columns: 1fr; }
     }
+    .faq-section{margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:1px solid var(--border-light);}
+    .faq-section h2{font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:var(--space-sm);}
+    .faq-list{max-width:900px;margin:1.5rem 0 0;display:grid;gap:.8rem;}
+    .faq-item{background:#faf8f5;border-radius:8px;border:1px solid var(--border-light);overflow:hidden;}
+    .faq-question{width:100%;background:none;border:none;text-align:left;padding:1.1rem 1.3rem;font-family:inherit;font-size:.97rem;font-weight:600;color:var(--primary-forest);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s;}
+    .faq-question:hover{background:rgba(11,107,60,.05);}
+    .faq-question.open{color:var(--accent-copper);}
+    .faq-arrow{font-size:1.1rem;transition:transform .3s;flex-shrink:0;}
+    .faq-question.open .faq-arrow{transform:rotate(180deg);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 1.3rem;color:#555;font-size:.92rem;line-height:1.75;}
+    .faq-answer.open{max-height:400px;padding:0 1.3rem 1.1rem;}
   </style>
   <script type="application/ld+json">
   {
@@ -112,11 +123,11 @@
           "@type": "WebPage",
           "@id": "https://luxurahabitat.com/blog/devanahalli-roi-land-appreciation-vs-rental-yield/"
         },
-        "headline": "Devanahalli ROI: Land Appreciation vs Rental Yield — Which Wins?",
+        "headline": "Devanahalli ROI: Land Appreciation vs Rental Yield. Which Wins?",
         "description": "A data-backed comparison of plotted land vs apartment investment in Devanahalli. Which gives better returns and which buyer profile each strategy suits.",
         "image": "https://luxurahabitat.com/images/blog/devanahalli_roi.png",
         "datePublished": "2026-07-21",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-08-07",
         "author": {
           "@type": "Person",
           "name": "Narayanan Rajesh",
@@ -138,7 +149,60 @@
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
           {"@type": "ListItem", "position": 3, "name": "Devanahalli Real Estate Guide", "item": "https://luxurahabitat.com/areas/devanahalli/"},
-          {"@type": "ListItem", "position": 4, "name": "Devanahalli ROI: Land Appreciation vs Rental Yield — Which Wins?", "item": "https://luxurahabitat.com/blog/devanahalli-roi-land-appreciation-vs-rental-yield/"}
+          {"@type": "ListItem", "position": 4, "name": "Devanahalli ROI: Land Appreciation vs Rental Yield. Which Wins?", "item": "https://luxurahabitat.com/blog/devanahalli-roi-land-appreciation-vs-rental-yield/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should I buy a plot or an apartment in Devanahalli?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your goal. Plots, like those at Assetz Palmscape, suit buyers with a 5-10 year horizon who want pure capital appreciation and can go without rental income during the holding period. Apartments, like Sattva Aeropolis, suit buyers who want monthly rental cash flow alongside more moderate appreciation, over a shorter 3-7 year horizon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does land generate returns if there's no rental income?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The entire return comes from capital appreciation: the value of the plot itself rising over the holding period, which historically compounded at 20-26% annually in Devanahalli since 2022. There is no offsetting cash flow, so the return is fully realised only when the plot is eventually sold or built upon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What rental yield can I realistically expect from a Devanahalli apartment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gross rental yields on Devanahalli apartments currently run 3.2-4.0%. As an illustration, a ₹1.5 Cr apartment renting for around ₹40,000 a month generates ₹4.8 lakh a year, which works out to roughly 3.2% gross, before maintenance, property tax and any vacancy between tenants are deducted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do NRIs often prefer plotted developments over apartments in Devanahalli?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mainly for simplicity and structure. A plot means no ongoing construction risk, no rental-income tax exposure during the holding period, and typically a lower GST burden than an under-construction apartment. Apartment ownership also only confers an Undivided Share (UDS) of the land beneath the building, whereas a plot gives full, direct land ownership: a structural reason land often compounds faster."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What holding period should I plan for with each strategy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Plotted developments are best suited to a 5-10 year horizon, since the return is backend-loaded and land can take longer to liquidate (roughly 6-12 months to sell). Apartments suit a shorter 3-7 year horizon, helped by both ongoing rental income and comparatively faster liquidity (roughly 3-6 months to sell)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the hybrid strategy of buying both a plot and an apartment a good idea?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's a strategy some experienced investors in Devanahalli use: a plot for long-term appreciation paired with a rental apartment for monthly cash flow that offsets holding costs on the plot. It requires more capital upfront than either strategy alone, so it suits investors who can commit to both, not first-time buyers with a single budget."
+            }
+          }
         ]
       }
     ]
@@ -196,32 +260,34 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Devanahalli ROI Explained: Land Appreciation vs Rental Yield</h1>
           <div class="article-meta">
-            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 23, 2026</span><span>&bull;</span><span>7 Min Read</span>
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 23, 2026</span><span>&bull;</span><span>11 Min Read</span>
           </div>
         </header>
         <div class="article-content">
         <img src="../../images/blog/devanahalli_roi.png" alt="Devanahalli Roi Land Appreciation Vs Rental Yield" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
           
-          <p>In the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate market</a>, investors constantly debate between two distinct return models: land appreciation through plotted development, and rental yield through apartment ownership. This is not a trivial distinction — the two strategies suit entirely different risk profiles and investment horizons.</p>
+          <p>In the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate market</a>, investors constantly debate between two distinct return models: land appreciation through plotted development, and rental yield through apartment ownership. This is not a trivial distinction: the two strategies suit entirely different risk profiles and investment horizons, and the right answer depends less on which one is "better" in the abstract and more on your own cash-flow needs and how long you can afford to stay invested. This guide walks through both models in detail, works through the actual numbers, and lays out a straightforward way to decide between them.</p>
 
           <h2>1. Understanding the Two Strategies</h2>
 
           <h3>Strategy A: Land Appreciation (Plotted Development)</h3>
-          <p>Buying a pre-approved plot in a gated community like <a href="/projects/assetz-palmscape/" class="money-link">Assetz Palmscape</a> means you are acquiring land rather than a built apartment. The return model is almost entirely capital appreciation — land in Devanahalli has compounded at 20–26% annually since 2022, well above any risk-adjusted alternative.</p>
-          <p>The key advantages are:</p>
+          <p>Buying a pre-approved plot in a gated community like <a href="/projects/assetz-palmscape/" class="money-link">Assetz Palmscape</a> means you are acquiring land rather than a built apartment. The return model is almost entirely capital appreciation: land in Devanahalli has compounded at 20–26% annually since 2022, well above any risk-adjusted alternative available in the city.</p>
+          <p>The key advantages, and why each one actually matters, are:</p>
           <ul>
-            <li><strong>No construction risk:</strong> You buy land; the developer delivers the infrastructure</li>
-            <li><strong>Flexibility:</strong> Build immediately, hold as-is, or sell the plot post-development</li>
-            <li><strong>Lower GST burden:</strong> Approved plots attract significantly lower GST than under-construction apartments</li>
-            <li><strong>NRI preference:</strong> Plots are the preferred vehicle for NRIs looking to repatriate funds into Bangalore real estate</li>
+            <li><strong>No construction risk:</strong> "Construction risk" is the possibility that a developer delays handover, cuts quality to manage costs, or in the worst case, stalls the project altogether. Land doesn't carry this risk in the same way: a serviced plot with roads, drainage and boundary walls in place is a largely finished product the day you buy it, rather than a promise of a building years out.</li>
+            <li><strong>Flexibility:</strong> You can build immediately, hold the plot as-is while it appreciates, or sell it on to another buyer post-development, none of these choices are locked in at the time of purchase the way they are with a completed apartment.</li>
+            <li><strong>Lower GST burden:</strong> Approved, registered plots generally do not attract the same GST treatment as an under-construction apartment purchase. Treatment can vary by transaction structure, so it's worth confirming the specifics with your chartered accountant at the time of purchase rather than assuming a fixed rule.</li>
+            <li><strong>NRI preference:</strong> Plots are widely preferred by NRIs bringing funds into Bangalore real estate, partly because the ownership structure is simpler to explain and manage from overseas than a rented-out apartment.</li>
           </ul>
-          <p>The downside: <strong>no rental income during the holding period</strong>. The return is entirely backend-loaded.</p>
+          <p>The downside: <strong>no rental income during the holding period</strong>. The return is entirely backend-loaded: you don't see a rupee of it until you sell or build and occupy, which is the trade-off every plot buyer needs to be comfortable with before committing capital.</p>
 
           <h3>Strategy B: Rental Yield (Apartment Ownership)</h3>
-          <p>Devanahalli apartments — particularly those in integrated township projects near the airport — generate 3.2–4.0% gross rental yields, driven by corporate tenants from the aviation, aerospace, and logistics sectors. Projects like <a href="/projects/sattva-aeropolis/" class="money-link">Sattva Aeropolis</a> are specifically designed with this tenant profile in mind.</p>
+          <p>Devanahalli apartments, particularly those in integrated township projects near the airport, generate 3.2–4.0% gross rental yields, driven by corporate tenants from the aviation, aerospace, and logistics sectors. Projects like <a href="/projects/sattva-aeropolis/" class="money-link">Sattva Aeropolis</a> are specifically designed with this tenant profile in mind.</p>
+          <p>It's worth understanding what you actually own when you buy an apartment, versus a plot. An apartment purchase gives you the built unit plus an <strong>Undivided Share (UDS)</strong> of the land beneath the building: your proportional share of the plot, pooled across every owner in the project. Since land is typically what drives long-term appreciation, and a single unit's UDS is only a fraction of the total plot, this is one structural reason apartments in a given corridor tend to appreciate more slowly than standalone plots of comparable value: the land-value upside is shared across every unit in the building rather than belonging to one owner outright.</p>
 
           <h2>2. Side-by-Side ROI Comparison</h2>
+          <!-- TODO(editorial): Assetz Palmscape's own project page currently lists pricing as "On Request" (pre-launch, EOI token only) and does not disclose a per-plot price. The "Entry Price ₹60L – ₹1.5 Cr" figure below appears to reflect general Devanahalli plotted-development market pricing rather than a confirmed Palmscape figure. Left as-is (not invented by this edit) since removing pre-existing data without a replacement source risks being equally wrong: flagging for the site owner to confirm against current Palmscape pricing or relabel as "market range, not Palmscape-specific." -->
           <table>
             <thead><tr><th>Metric</th><th>Plotted Development</th><th>Apartment (Luxury)</th></tr></thead>
             <tbody>
@@ -234,16 +300,96 @@
               <tr><td>NRI Suitability</td><td>High</td><td>Medium-High</td></tr>
             </tbody>
           </table>
+          <p>Quick definition before we go further: <strong>gross rental yield</strong> is the annual rent a property earns divided by its purchase price. It's "gross" because nothing has been deducted yet: no maintenance, no property tax, no vacancy between tenants. Your actual, take-home ("net") yield will always be somewhat lower than the gross figure quoted above and in most market comparisons.</p>
+
+          <h3>How the Rental-Yield-vs-Appreciation Math Actually Works</h3>
+          <p>Numbers in a table are easy to skim past. Here's what they mean when you actually run them, using only the figures already in the table above.</p>
+          <p>Take a representative apartment at ₹1.5 Cr (the midpoint of the ₹80L–₹2.5 Cr range), renting for roughly ₹40,000 a month (the midpoint of the ₹22,000–₹55,000 range). That's ₹4,80,000 a year in rent, which works out to 3.2% gross on the purchase price: right at the low end of the stated 3.2–4.0% band, which makes sense since we used mid-range figures for both price and rent rather than the most favourable combination.</p>
+          <p>Now take a representative plot at ₹90 Lakhs (within the ₹60L–₹1.5 Cr range). It earns no rent at all. Its entire return depends on capital appreciation: which the table above puts at 80–120% for plotted developments over the 2022–2026 window.</p>
+          <p>Purely as an illustration, using this article's own historical range as an assumption, not a forecast, here's how the two would compare if each continued performing in line with the ranges already quoted, over a similar-length holding period:</p>
+          <ul>
+            <li><strong>Apartment (₹1.5 Cr):</strong> Appreciation of 45–65% would take the property's value to roughly ₹2.17–2.48 Cr. Add in the rental income collected along the way, ₹4.8 lakh a year, so roughly ₹24 lakh over five years, and the combined return (appreciation plus rent, before tax and expenses) works out to approximately 61–81% on the original ₹1.5 Cr.</li>
+            <li><strong>Plot (₹90 Lakhs):</strong> Appreciation of 80–120% would take the plot's value to roughly ₹1.62–1.98 Cr, with no rental income to add. The entire 80–120% return is the return.</li>
+          </ul>
+          <p>Even after crediting the apartment with five years of rental income on top of its appreciation, the plot's illustrative return still comes out ahead in this comparison: which is consistent with why land has been the higher-conviction capital-growth play in this corridor. What the apartment offers instead is something the plot doesn't: cash in hand along the way, rather than a return that's entirely locked up until you sell.</p>
 
           <h2>3. The Tax Dimension</h2>
-          <p>For resident Indians, rental income is taxed as income, reducing the net yield by 20–30% depending on the tax bracket. For NRIs, TDS rules apply at 30% on rental income, making the post-tax yield on apartments considerably less attractive. This is why NRIs almost universally prefer the plotted development model in Devanahalli — a clean, tax-efficient capital appreciation play.</p>
+          <p>This section is deliberately general: tax rules depend on your residency status, income bracket, and can change from year to year, so treat this as context for a conversation with a chartered accountant rather than tax advice. In broad terms: rental income is taxable, which means the net yield you actually keep from an apartment will be lower than the gross yield quoted in the table above. For NRIs specifically, rental income is typically subject to tax withholding (TDS) before it reaches you, and repatriating sale proceeds involves its own compliance steps. This is one reason, alongside the structural points made earlier, like avoiding UDS dilution and construction risk, that NRIs often lean toward the plotted-land route: no rental income during the holding period also means no ongoing rental-income tax exposure to manage from overseas, which simplifies the picture considerably until the eventual sale.</p>
 
           <h2>4. The Hybrid Strategy: What Experienced Investors Are Doing</h2>
-          <p>The most sophisticated buyers in Devanahalli right now are pursuing a hybrid — purchasing a plot in a development like Assetz Palmscape while simultaneously holding a 2 BHK apartment in an airport-adjacent integrated township for monthly cash flow. The plot provides the long-term appreciation engine; the apartment provides the carry income that offsets holding costs.</p>
+          <p>The most sophisticated buyers in Devanahalli right now are pursuing a hybrid: purchasing a plot in a development like Assetz Palmscape while simultaneously holding a 2 BHK apartment in an airport-adjacent integrated township for monthly cash flow. The plot provides the long-term appreciation engine; the apartment provides the carry income that offsets holding costs like plot maintenance charges and any loan servicing. The trade-off is obvious but worth stating plainly: this approach needs roughly double the capital of either strategy alone, so it's realistic mainly for HNI or NRI buyers rather than a first home purchase.</p>
+
+          <h2>Holding-Period Scenarios: What Changes at 3, 5 and 10 Years</h2>
+          <p>The "ideal horizon" row in the table above isn't arbitrary: it reflects how each strategy's return profile actually plays out over time:</p>
+          <ul>
+            <li><strong>3 years:</strong> Too short for a plot to realise most of its appreciation potential, and transaction costs (registration, brokerage) eat disproportionately into a short hold. An apartment at least generates rental income during this window, partially offsetting the short horizon: though it's still a tight timeframe for either strategy to shine.</li>
+            <li><strong>5 years:</strong> The apartment's rental income has had time to add up meaningfully, and its appreciation has had a reasonable runway too. This is close to the sweet spot for the rental-yield strategy. A plot at 5 years is only approaching, not necessarily reaching, the point where its higher appreciation ceiling starts to clearly outpace the apartment's blended return.</li>
+            <li><strong>10 years:</strong> This is where the plot's backend-loaded return model tends to pay off most clearly, assuming the corridor's infrastructure story (airport expansion, STRR, metro) continues to play out as expected. A decade is also long enough that an apartment owner has typically collected a substantial multiple of the original purchase price in cumulative rent, so the comparison narrows again: just via a different route.</li>
+          </ul>
 
           <h2>Which is Right for You?</h2>
           <p>There is no universal answer. If your primary goal is monthly income and you have a 3–5 year horizon, the apartment route with a strong corporate rental catchment makes sense. If you have a 7+ year horizon, are an NRI or HNI looking to preserve and grow capital, and can absorb a zero-income holding period, the plotted development route in Devanahalli is one of the highest-conviction buys available in Indian real estate today. For the broader version of this decision beyond Devanahalli specifically, see our <a href="/blog/plots-vs-apartments-investment-bangalore/" class="money-link">city-wide plots vs apartments comparison</a>.</p>
         </div>
+
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Should I buy a plot or an apartment in Devanahalli?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">It depends on your goal. Plots, like those at Assetz Palmscape, suit buyers with a 5-10 year horizon who want pure capital appreciation and can go without rental income during the holding period. Apartments, like Sattva Aeropolis, suit buyers who want monthly rental cash flow alongside more moderate appreciation, over a shorter 3-7 year horizon.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">How does land generate returns if there's no rental income?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The entire return comes from capital appreciation: the value of the plot itself rising over the holding period, which historically compounded at 20-26% annually in Devanahalli since 2022. There is no offsetting cash flow, so the return is fully realised only when the plot is eventually sold or built upon.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">What rental yield can I realistically expect from a Devanahalli apartment?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Gross rental yields on Devanahalli apartments currently run 3.2-4.0%. As an illustration, a ₹1.5 Cr apartment renting for around ₹40,000 a month generates ₹4.8 lakh a year, which works out to roughly 3.2% gross, before maintenance, property tax and any vacancy between tenants are deducted.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">Why do NRIs often prefer plotted developments over apartments in Devanahalli?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Mainly for simplicity and structure. A plot means no ongoing construction risk, no rental-income tax exposure during the holding period, and typically a lower GST burden than an under-construction apartment. Apartment ownership also only confers an Undivided Share (UDS) of the land beneath the building, whereas a plot gives full, direct land ownership: a structural reason land often compounds faster.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">What holding period should I plan for with each strategy?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Plotted developments are best suited to a 5-10 year horizon, since the return is backend-loaded and land can take longer to liquidate (roughly 6-12 months to sell). Apartments suit a shorter 3-7 year horizon, helped by both ongoing rental income and comparatively faster liquidity (roughly 3-6 months to sell).</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">Is the hybrid strategy of buying both a plot and an apartment a good idea?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">It's a strategy some experienced investors in Devanahalli use: a plot for long-term appreciation paired with a rental apartment for monthly cash flow that offsets holding costs on the plot. It requires more capital upfront than either strategy alone, so it suits investors who can commit to both, not first-time buyers with a single budget.</p>
+              </div>
+            </div>
+          </div>
+        </section>
                 <section class="related-projects" aria-label="Related content">
           <h3>You May Also Be Interested In</h3>
           <div class="related-cards-grid">
@@ -285,7 +431,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by the Luxura Habitat Team</h5>
+              <h5>Written by Narayanan Rajesh</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
             </div>
           </div>

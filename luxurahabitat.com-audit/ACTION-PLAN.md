@@ -12,7 +12,7 @@ Derived from `FULL-AUDIT-REPORT.md`. Phased by urgency and dependency, not just 
 | 2 | **Fix RERA/NAP footer inconsistency** — Yelahanka drops the TN registration; Devanahalli/Hennur/Kanakapura Road area pages have no NAP footer at all. | Same class of trust/compliance risk as #1, affecting the highest-intent local landing pages. | **User must confirm which RERA line(s) legitimately apply sitewide** — do not guess between the two. | All templates show identical, confirmed RERA/NAP data. |
 | 3 | **Add real listing schema to 3 project pages** (sattva-la-vita, sattva-lumina, sattva-aeropolis) that currently have only defunct FAQPage schema. | These are commercially critical pages deriving zero structured-data value today. | None — pattern already proven on `tvs-emerald-altura` (see `findings/schema.md` for ready-to-merge JSON-LD). | Google Rich Results Test passes; pages show `RealEstateListing`/`Offer` in structured-data testing tools. |
 | 4 | **Fix invalid Product price format** on orchid-salisbury (`"1.03 Crore"` → `"10300000"` numeric). | Currently fails Google's Rich Results Test outright. | None. | Rich Results Test passes for this page. |
-| 5 | **Grant Google API access** — add the service account as Owner in GSC, enable the Search Console API in GCP, add the service account as Viewer in GA4. | Unblocks all future measurement of real indexation/traffic/query data; a 5-10 minute task. | User has console access (already demonstrated in this session). | Re-run `/seo google gsc` and `/seo google ga4` successfully. |
+| 5 | ~~Grant Google API access~~ | — | — | **DONE 2026-08-07.** GSC and GA4 both confirmed live with real data; see `FULL-AUDIT-REPORT.md` Section 13. |
 | 6 | **Compress the worst-offending images** — `about_us_advisor.png` (1.26MB), `devanahalli_market_trends.png` (1.07MB), `devanahalli-hero.jpg` (1.0MB) — convert to WebP, resize to actual render dimensions. | Directly fixes the two worst LCP scores (13.9s, 15.3s) on the site's two highest-volume templates (~70% of pages). | None. | Re-run PageSpeed Insights; LCP on blog/area templates drops from 13-15s toward sub-3s. |
 
 ---
@@ -53,7 +53,7 @@ Derived from `FULL-AUDIT-REPORT.md`. Phased by urgency and dependency, not just 
 
 | # | Item |
 |---|---|
-| 25 | Re-run `/seo google gsc` and `/seo google ga4` monthly once access is granted — watch real indexation status and query "quick wins" (position 4-10, high impressions). |
+| 25 | Re-run `/seo google gsc` and `/seo google ga4` monthly (access confirmed live 2026-08-07) — track the Brigade Jeevan Sandhya quick win (position 6.8-9.3) and push the zero-click position 5-9 queries (kanakapura nice road, purva hallmark) onto page 1. |
 | 26 | Restart Claude Code and re-run the DataForSEO enrichment (SERP positions, keyword volume, backlink summary, AI-visibility check) — $1 trial budget, prioritize SERP checks first. |
 | 27 | Re-check CrUX field data monthly (currently empty — insufficient Chrome traffic; will resolve organically as the site gains visitors). |
 | 28 | Sign up for a free Moz API key and register in Bing Webmaster Tools to unlock 5 of 7 backlink-scoring factors at no cost. |

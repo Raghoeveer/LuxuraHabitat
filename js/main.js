@@ -130,3 +130,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// Shared FAQ accordion toggle (Pattern A: button + schema.org microdata).
+// Kept as a plain global so onclick="toggleFAQ(this)" markup works on any
+// page that loads main.js, not just project pages (see js/project-page.js).
+function toggleFAQ(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer.open').forEach(function (a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question.open').forEach(function (b) {
+    b.classList.remove('open');
+    b.setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}

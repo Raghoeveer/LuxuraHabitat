@@ -11,7 +11,7 @@
 
       // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
       // any per-button onclick can call stopPropagation and hide the click from
-      // GA4's own automatic outbound-click detection — this happened on the
+      // GA4's own automatic outbound-click detection: this happened on the
       // /projects/ card grid, where each WhatsApp button stops propagation so
       // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
@@ -93,6 +93,16 @@
     .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
     .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
     .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
     @media (max-width: 900px) {
       .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
       .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -113,10 +123,10 @@
           "@id": "https://luxurahabitat.com/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/"
         },
         "headline": "Assetz Palmscape vs Sattva Aeropolis Devanahalli: Full Comparison",
-        "description": "Villa plots vs luxury apartments in Devanahalli — a side-by-side comparison of Assetz Palmscape and Sattva Aeropolis on pricing, ROI, and buyer fit.",
+        "description": "Villa plots vs luxury apartments in Devanahalli: a side-by-side comparison of Assetz Palmscape and Sattva Aeropolis on pricing, ROI, and buyer fit.",
         "image": "https://luxurahabitat.com/images/blog/palmscape_vs_aeropolis.png",
         "datePublished": "2026-07-21",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-08-07",
         "author": {
           "@type": "Person",
           "name": "Narayanan Rajesh",
@@ -139,6 +149,41 @@
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
           {"@type": "ListItem", "position": 3, "name": "Devanahalli Real Estate Guide", "item": "https://luxurahabitat.com/areas/devanahalli/"},
           {"@type": "ListItem", "position": 4, "name": "Assetz Palmscape vs Sattva Aeropolis Devanahalli: Full Comparison", "item": "https://luxurahabitat.com/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Assetz Palmscape or Sattva Aeropolis a better investment?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Neither is categorically better: they solve different problems. Palmscape suits buyers prioritising long-term land ownership and capital appreciation who are comfortable managing construction later. Aeropolis suits buyers who want a ready-to-occupy or under-construction home sooner, with predictable costs and professional upkeep." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between buying a plot and buying an apartment's UDS?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A plot buyer at Palmscape owns the land outright and controls 100% of what gets built on it. An apartment buyer at Aeropolis owns an Undivided Share (UDS) of the total land, a fractional, proportional stake based on unit size, plus the built-up flat itself. UDS matters most at resale and at redevelopment: your share of any future land value or redevelopment payout is fixed by that UDS percentage, not by your flat's individual sale price." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which project has confirmed RERA registration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sattva Aeropolis Phase 2 carries a confirmed Karnataka RERA registration number with an expected possession date of October 2028. Assetz Palmscape is still at the pre-launch EOI stage and its RERA registration is pending: verify the current status of both directly with our team before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get rental income from Assetz Palmscape?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not directly and not soon. A plot generates no income until you build on it: the return model is almost entirely capital appreciation. Sattva Aeropolis, as a ready-to-occupy apartment format, is built for rental income from day one, drawing on steady demand from professionals in the nearby IT parks, aerospace SEZs and the airport itself." }
+          },
+          {
+            "@type": "Question",
+            "name": "What has land appreciation in Devanahalli looked like historically?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Villa-plot land in Devanahalli has compounded at 20–26% annually since 2022, driven by airport expansion, the planned STRR and growing NRI demand. Apartment values in the same corridor have also appreciated, though the return mix for an apartment blends more modest capital appreciation with ongoing rental income rather than relying on appreciation alone." }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I split my budget between both projects instead of choosing one?",
+            "acceptedAnswer": { "@type": "Answer", "text": "For buyers with sufficient capital, a hybrid allocation is a legitimate diversification strategy: a plot for long-horizon appreciation and land ownership, paired with an apartment for monthly rental carry and lower management overhead. It isn't necessary for every buyer, but it's worth considering if your budget and risk tolerance support holding both asset types." }
+          }
         ]
       }
     ]
@@ -196,56 +241,136 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Assetz Palmscape vs Sattva Aeropolis: Which Devanahalli Project Fits You?</h1>
           <div class="article-meta">
-            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 27, 2026</span><span>&bull;</span><span>6 Min Read</span>
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 27, 2026</span><span>&bull;</span><span>11 Min Read</span>
           </div>
         </header>
         <div class="article-content">
         <img src="../../images/blog/palmscape_vs_aeropolis.png" alt="Assetz Palmscape Vs Sattva Aeropolis Devanahalli" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
-          
-          <p>Two of the most discussed projects in the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate corridor</a> cater to entirely different buyer profiles — <a href="/projects/assetz-palmscape/" class="money-link">Assetz Palmscape</a> (a villa plotted development on IVC Road) and <a href="/projects/sattva-aeropolis/" class="money-link">Sattva Aeropolis</a> (a premium apartment complex near the airport). This guide will help you decide which fits your specific profile.</p>
+          <p>Two of the most discussed projects in the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate corridor</a> cater to entirely different buyer profiles: <a href="/projects/assetz-palmscape/" class="money-link">Assetz Palmscape</a>, a villa plotted development on IVC Road, and <a href="/projects/sattva-aeropolis/" class="money-link">Sattva Aeropolis</a>, a premium apartment complex near the airport. Before comparing them line by line, it helps to be clear on what that first distinction actually means: a <strong>plotted development</strong> sells you serviced land inside a gated community, and you build your own home on it, on your own timeline. An <strong>apartment</strong> sells you a finished (or under-construction) unit inside a building the developer designs, builds and hands over. Everything else in this comparison, cost structure, ownership rights, returns, risk, flows from that one structural difference. This guide walks through it in detail so you can decide which fits your specific situation.</p>
 
           <h2>1. At a Glance</h2>
           <table>
             <thead><tr><th>Parameter</th><th>Assetz Palmscape</th><th>Sattva Aeropolis</th></tr></thead>
             <tbody>
-              <tr><td>Product Type</td><td>Villa Plotted Development</td><td>Luxury Apartments</td></tr>
-              <tr><td>Location</td><td>IVC Road, Devanahalli</td><td>Near KIAL, Devanahalli</td></tr>
-              <tr><td>Developer</td><td>Assetz Property Group</td><td>Sattva Group</td></tr>
-              <tr><td>Total Units</td><td>450 plots</td><td>Multiple towers</td></tr>
+              <tr><td>Product Type</td><td>Villa Plotted Development</td><td>Apartments (Studio, 1, 2 &amp; 3 BHK)</td></tr>
+              <tr><td>Location</td><td>IVC Road, Devanahalli</td><td>NH-44, near KIAL, Devanahalli</td></tr>
+              <tr><td>Developer</td><td>Assetz Property Group (est. 2006)</td><td>Sattva Group</td></tr>
+              <tr><td>Total Units</td><td>450 plots (1,200 / 1,500 / 2,400 sq ft)</td><td>Multi-tower, phased delivery</td></tr>
               <tr><td>Open Space</td><td>60%+</td><td>Standard township norms</td></tr>
-              <tr><td>Key Feature</td><td>Miyawaki forest, wide roads</td><td>Airport proximity, connectivity</td></tr>
-              <tr><td>Rental Income</td><td>None (land)</td><td>₹22,000 – ₹45,000/month</td></tr>
-              <tr><td>Best For</td><td>Capital appreciation, NRIs</td><td>End-users, rental investors</td></tr>
+              <tr><td>RERA Status</td><td>Pre-launch: registration pending</td><td>Phase 2 registered; possession expected Oct 2028</td></tr>
+              <tr><td>Key Feature</td><td>Miyawaki forest, wide internal roads</td><td>Airport proximity, ready connectivity</td></tr>
+              <tr><td>Rental Income</td><td>None until you build (land only)</td><td>Rental demand from airport-corridor professionals</td></tr>
+              <tr><td>Best For</td><td>Capital appreciation, NRIs, custom-home buyers</td><td>End-users, rental-yield investors</td></tr>
             </tbody>
           </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">RERA and possession details are current as of this review: always confirm directly with our team before booking, since pre-launch statuses change as projects progress.</p>
 
           <h2>2. Design Philosophy</h2>
 
           <h3>Assetz Palmscape: The Nature-First Plot</h3>
-          <p>Assetz Palmscape is built around an ecological design philosophy. The project dedicates over 60% of its total land area to open spaces, including a Miyawaki forest — a dense, fast-growing native tree plantation that creates a genuine micro-ecosystem. The road network within the development is designed at 9-metre and 12-metre widths, ensuring the community never feels congested even as it matures. It is fundamentally designed for buyers who intend to build a custom home — their own design, their own timeline.</p>
+          <p>Assetz Palmscape is built around an ecological design philosophy. The project dedicates over 60% of its total land area to open spaces, including a Miyawaki forest: a dense, fast-growing native-species tree plantation that produces a genuine micro-ecosystem within a few years, not just decorative landscaping. The internal road network is designed at 9-metre and 12-metre widths, so the community shouldn't feel congested even once it's fully built out. Plots come in three sizes: 1,200 sq ft (30×40 ft), 1,500 sq ft (30×50 ft) and 2,400 sq ft (40×60 ft): typically supporting 3–4, 4–5 and 5+ BHK homes respectively, depending on what the buyer chooses to build. It is fundamentally designed for buyers who want a custom home on their own design and timeline, not a finished, standardised unit.</p>
 
           <h3>Sattva Aeropolis: The Airport Professional's Apartment</h3>
-          <p>Sattva Aeropolis prioritises airport proximity and seamless urban living. It targets corporate professionals — particularly those in the aviation, aerospace, and logistics sectors — who need fast, reliable airport access and do not want to compromise on urban amenities. The apartment format provides a ready-to-occupy home with professional property management, making it highly suitable for both end-users and investors targeting rental income.</p>
+          <p>Sattva Aeropolis prioritises airport proximity and turnkey urban living, on Main NH-44 close to Kempegowda International Airport. It's built around Studio, 1, 2 and 3 BHK configurations, targeting professionals working the airport, aviation and logistics corridor who want fast, reliable airport access without giving up urban amenities. The apartment format delivers a ready-to-occupy (or soon-to-be-occupied) home with professional upkeep, no construction to manage, no contractor to hire, which makes it the lower-friction choice for both end-users and investors chasing rental income.</p>
 
-          <h2>3. The Returns Question</h2>
-          <p>As discussed in depth in our <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/" class="money-link">Devanahalli ROI analysis</a>, the two products optimise for different return types. Palmscape buyers are making a pure land appreciation bet — which has delivered 20–26% CAGR in Devanahalli since 2022. Aeropolis buyers are making a blended bet on rental yield (3–4%) plus moderate capital appreciation (12–15% annually).</p>
+          <h2>3. What You Actually Own: Freehold Plot vs UDS in an Apartment</h2>
+          <p>This is the part of the comparison buyers most often skip, and it matters more than the surface-level "plot vs flat" framing suggests. When you buy a plot at Palmscape, you own the land outright, in full: a freehold title with no shared ownership structure. When you buy a flat at Aeropolis, you own two separate things: the flat itself, and an <strong>Undivided Share (UDS)</strong> of the total land the building sits on. UDS is a fractional, proportional stake in the land, calculated roughly as your unit's area divided by the total saleable area of the project, then multiplied by the total land parcel size.</p>
+          <p>Why this matters in practice: your UDS percentage, not your flat's individual resale price, is what determines your share of any future land value, and critically, your entitlement if the building is ever redeveloped decades from now (a real consideration on any 15–20+ year ownership horizon in a growing city). A studio or 1 BHK buyer at Aeropolis holds a smaller UDS than a 3 BHK buyer in the same building, even though both are buying into the same land parcel. A Palmscape plot buyer sidesteps this calculation entirely: the land is undivided and entirely theirs, which is one of the structural reasons plotted developments are often positioned as the cleaner long-term land-appreciation play.</p>
 
-          <h2>4. Who Should Buy Which?</h2>
+          <h2>4. The Returns Question, With a Worked Example</h2>
+          <p>As discussed in more depth in our <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/" class="money-link">Devanahalli ROI analysis</a>, the two products optimise for different return types entirely. Palmscape buyers are making a close-to-pure land appreciation bet: villa-plot land in Devanahalli has compounded at 20–26% annually since 2022, driven by airport expansion, the planned STRR and growing NRI demand. Aeropolis buyers are making a blended bet: rental income from day one, plus capital appreciation on the unit, drawn from steady demand among the IT, aerospace-SEZ and airport workforce in the corridor.</p>
+          <p>To make the compounding effect concrete: <em>for illustration only</em>, if a plot were purchased today for a hypothetical ₹1 crore and the corridor's land continued compounding at the lower end of its historical 20–26% range, simple compounding at 20% would put the nominal value at roughly ₹2.07 crore after four years and roughly ₹2.99 crore after six years, before accounting for build costs if you construct on it, or for the fact that historical performance doesn't guarantee future results. The point of the illustration isn't the specific rupee figure (your actual entry price will differ), it's the mechanism: at 20%+ compounding, value roughly doubles every four years, which is why land-appreciation plays reward patience and penalise buyers who need to exit early.</p>
+
+          <h2>5. Scoring the Two Investment Theses</h2>
+          <p>Beyond the headline "plot vs apartment" framing, here's how the two projects stack up on the dimensions that actually drive a buying decision:</p>
+          <table>
+            <thead><tr><th>Dimension</th><th>Assetz Palmscape</th><th>Sattva Aeropolis</th></tr></thead>
+            <tbody>
+              <tr><td>Legal clarity today</td><td>Lower, pre-launch, RERA pending</td><td>Higher, Phase 2 RERA registered with a stated possession date</td></tr>
+              <tr><td>Entry cost flexibility</td><td>Lower entry via EOI token; final pricing not yet published</td><td>Published indicative pricing across unit types</td></tr>
+              <tr><td>Time to occupancy / income</td><td>Long: construction is entirely on you, after purchase</td><td>Shorter: moves toward handover on the developer's committed timeline</td></tr>
+              <tr><td>Design control</td><td>Complete, you choose the architect, layout and finish</td><td>None, fixed floor plans and specifications</td></tr>
+              <tr><td>Ongoing cash flow</td><td>None until built and let out</td><td>Rental income achievable from possession</td></tr>
+              <tr><td>Long-term ownership structure</td><td>Simple, outright freehold land</td><td>More complex, UDS-based, shared with other owners</td></tr>
+            </tbody>
+          </table>
+          <p>Read across the row, not down the column: no single project wins on every dimension, which is exactly why this comparison exists rather than a simple "pick the better one" recommendation.</p>
+
+          <h2>6. Who Should Buy Which?</h2>
           <table>
             <thead><tr><th>Buyer Profile</th><th>Recommended Project</th><th>Reason</th></tr></thead>
             <tbody>
-              <tr><td>NRI investor, 5–10 year horizon</td><td>Assetz Palmscape</td><td>Tax-efficient land appreciation, no rental management headache</td></tr>
-              <tr><td>End-user, wants to build custom home</td><td>Assetz Palmscape</td><td>Full design flexibility, low-density community</td></tr>
-              <tr><td>Corporate professional, airport sector</td><td>Sattva Aeropolis</td><td>Ready apartment, zero commute to airport</td></tr>
-              <tr><td>Rental income investor</td><td>Sattva Aeropolis</td><td>3–4% yield, corporate tenant base</td></tr>
-              <tr><td>Portfolio diversifier</td><td>Both (hybrid)</td><td>Plot for appreciation + apartment for monthly carry</td></tr>
+              <tr><td>NRI investor, 5–10 year horizon</td><td>Assetz Palmscape</td><td>Simple freehold land ownership, no rental-management headache from overseas, appreciation-led thesis</td></tr>
+              <tr><td>End-user who wants to build a custom home</td><td>Assetz Palmscape</td><td>Full design flexibility, low-density community, choice of plot size to match the home you want</td></tr>
+              <tr><td>Corporate professional in the airport/aviation sector</td><td>Sattva Aeropolis</td><td>Ready or near-ready apartment, minimal commute, confirmed RERA registration and possession date</td></tr>
+              <tr><td>Rental-income-focused investor</td><td>Sattva Aeropolis</td><td>Turnkey unit, steady tenant demand from the airport-corridor workforce</td></tr>
+              <tr><td>Portfolio diversifier with sufficient capital</td><td>Both (hybrid)</td><td>Plot for long-horizon appreciation, apartment for monthly carry and lower management overhead</td></tr>
             </tbody>
           </table>
 
           <h2>The Verdict</h2>
-          <p>These are not competing products — they are complementary ones designed for fundamentally different investment theses. Assetz Palmscape wins for long-term capital preservation and NRI buyers. Sattva Aeropolis wins for corporate end-users and yield-focused investors. Contact us for a personalised recommendation based on your specific budget and timeline.</p>
+          <p>These are not competing products, they're complementary ones built for fundamentally different investment theses and different buyer psychologies. Assetz Palmscape wins for long-term capital preservation, design control and NRI buyers comfortable with pre-launch uncertainty in exchange for pre-launch pricing. Sattva Aeropolis wins for corporate end-users who need a home sooner and yield-focused investors who want cash flow without managing construction. If you're still undecided, the honest starting question isn't "which project is better": it's "do I need income sooner, or am I optimising for the largest possible appreciation over the longest horizon I can tolerate." Contact us for a personalised recommendation based on your specific budget, timeline and risk comfort.</p>
         </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Is Assetz Palmscape or Sattva Aeropolis a better investment?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Neither is categorically better: they solve different problems. Palmscape suits buyers prioritising long-term land ownership and capital appreciation who are comfortable managing construction later. Aeropolis suits buyers who want a ready-to-occupy or under-construction home sooner, with predictable costs and professional upkeep.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is the difference between buying a plot and buying an apartment's UDS?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">A plot buyer at Palmscape owns the land outright and controls 100% of what gets built on it. An apartment buyer at Aeropolis owns an Undivided Share (UDS) of the total land, a fractional, proportional stake based on unit size, plus the built-up flat itself. UDS matters most at resale and at redevelopment: your share of any future land value or redevelopment payout is fixed by that UDS percentage, not by your flat's individual sale price.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Which project has confirmed RERA registration?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva Aeropolis Phase 2 carries a confirmed Karnataka RERA registration number with an expected possession date of October 2028. Assetz Palmscape is still at the pre-launch EOI stage and its RERA registration is pending: verify the current status of both directly with our team before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">Can I get rental income from Assetz Palmscape?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Not directly and not soon. A plot generates no income until you build on it: the return model is almost entirely capital appreciation. Sattva Aeropolis, as a ready-to-occupy apartment format, is built for rental income from day one, drawing on steady demand from professionals in the nearby IT parks, aerospace SEZs and the airport itself.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">What has land appreciation in Devanahalli looked like historically?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Villa-plot land in Devanahalli has compounded at 20–26% annually since 2022, driven by airport expansion, the planned STRR and growing NRI demand. Apartment values in the same corridor have also appreciated, though the return mix for an apartment blends more modest capital appreciation with ongoing rental income rather than relying on appreciation alone.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">Should I split my budget between both projects instead of choosing one?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">For buyers with sufficient capital, a hybrid allocation is a legitimate diversification strategy: a plot for long-horizon appreciation and land ownership, paired with an apartment for monthly rental carry and lower management overhead. It isn't necessary for every buyer, but it's worth considering if your budget and risk tolerance support holding both asset types.</p>
+              </div>
+            </div>
+          </div>
+        </section>
                 <section class="related-projects" aria-label="Related content">
           <h3>You May Also Be Interested In</h3>
           <div class="related-cards-grid">
@@ -279,7 +404,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by the Luxura Habitat Team</h5>
+              <h5>Written by Narayanan Rajesh</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
             </div>
           </div>

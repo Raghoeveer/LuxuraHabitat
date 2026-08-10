@@ -11,7 +11,7 @@
 
       // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
       // any per-button onclick can call stopPropagation and hide the click from
-      // GA4's own automatic outbound-click detection — this happened on the
+      // GA4's own automatic outbound-click detection: this happened on the
       // /projects/ card grid, where each WhatsApp button stops propagation so
       // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
@@ -93,6 +93,16 @@
     .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
     .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
     .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
     @media (max-width: 900px) {
       .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
       .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -113,10 +123,10 @@
           "@id": "https://luxurahabitat.com/blog/assetz-palmscape-devanahalli-price-layout-rera/"
         },
         "headline": "Assetz Palmscape Devanahalli: Price, Layout, Possession & RERA Review",
-        "description": "Complete independent review of Assetz Palmscape — plot sizes, pricing, RERA verification, legal due diligence, and our honest investment assessment.",
+        "description": "Complete independent review of Assetz Palmscape: plot sizes, pricing, RERA verification, legal due diligence, and our honest investment assessment.",
         "image": "https://luxurahabitat.com/images/blog/palmscape_vs_aeropolis.png",
         "datePublished": "2026-07-21",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-08-07",
         "author": {
           "@type": "Person",
           "name": "Narayanan Rajesh",
@@ -139,6 +149,41 @@
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
           {"@type": "ListItem", "position": 3, "name": "Devanahalli Real Estate Guide", "item": "https://luxurahabitat.com/areas/devanahalli/"},
           {"@type": "ListItem", "position": 4, "name": "Assetz Palmscape Devanahalli: Price, Layout, Possession & RERA Review", "item": "https://luxurahabitat.com/blog/assetz-palmscape-devanahalli-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Assetz Palmscape apartments or plots?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It is a plotted villa development, not apartments. You buy a serviced plot within the gated 450-plot community and build your own home, choosing the layout and BHK configuration that fits your chosen plot size." }
+          },
+          {
+            "@type": "Question",
+            "name": "What plot sizes does Assetz Palmscape offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Three standard sizes: 30×40 ft (1,200 sq ft, typically built as 3–4 BHK), 30×50 ft (1,500 sq ft, typically 4–5 BHK), and 40×60 ft (2,400 sq ft, typically 5+ BHK). The BHK count depends on what you choose to build, not a fixed unit type." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the ₹3 Lakh EOI token actually pay for?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It is a refundable-subject-to-terms deposit that reserves your place in the allocation queue before formal bookings open: not the final booking amount. Base pricing is currently listed as on request; EOI holders typically get first access to plot selection once bookings open." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Assetz Palmscape RERA registered?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project is currently at the pre-launch EOI stage and its RERA registration is pending. Confirm the current registration number with our team before booking, and independently verify it on the Karnataka RERA portal once available." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the STRR affect this location?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The Satellite Town Ring Road's Devanahalli–IVC Road alignment is in active tendering. Once operational, it connects this corridor directly to Whitefield, Sarjapur and Electronic City without routing through central Bangalore, which removes distance-from-IT-clusters as an objection for a large share of Bangalore's workforce." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Assetz Palmscape a good investment for NRIs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "For buyers with a 5+ year horizon, it is a high-conviction shortlist candidate given the developer's track record, the STRR-adjacent location and the differentiated open-space design: provided you independently verify the RERA number and title before converting the EOI into a booking, since pricing and final registration are still pending." }
+          }
         ]
       }
     ]
@@ -196,66 +241,148 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Assetz Palmscape: Price, Layout, Possession &amp; RERA Details</h1>
           <div class="article-meta">
-            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>July 29, 2026</span><span>&bull;</span><span>9 Min Read</span>
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>July 29, 2026</span><span>&bull;</span><span>12 Min Read</span>
           </div>
         </header>
         <div class="article-content">
         <img src="../../additional_websites/assetz palmscape/Assetz-Palmscape-grand-entrance-wide-angle-image.webp" alt="Assetz Palmscape Devanahalli Price Layout Rera" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
-          
-          <p>In the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate corridor</a>, villa plotted developments have emerged as the dominant product category for HNI and NRI buyers. Among all the plotted projects in the area, <strong>Assetz Palmscape on IVC Road</strong> has generated the most genuine buyer interest — and for good reason. This is a deep-dive review covering layout, pricing, RERA status, and our honest assessment of its investment merit.</p>
+          <p>In the <a href="/areas/devanahalli/" class="money-link">Devanahalli real estate corridor</a>, villa plotted developments have become the go-to product for high-net-worth and NRI buyers. A quick definition before we go further: a "plotted development" means you buy a serviced piece of land inside a gated, master-planned community and build your own home on it, as opposed to buying a ready or under-construction apartment. Among the plotted projects on this corridor, <strong>Assetz Palmscape on IVC Road</strong> has generated the most genuine buyer interest of any project we track here. This is an independently written, deep-dive review covering the developer, the location, the plot configurations, what we could verify on pricing and RERA, and our honest read on where it fits an investment portfolio.</p>
 
           <h2>1. The Developer: Assetz Property Group</h2>
-          <p>Assetz Property Group is a Bangalore-headquartered developer with a track record spanning over 15 years and more than 20 million square feet of delivered or under-development real estate. Their completed projects — including Assetz 63 Degree East and Assetz Marq — have consistently been delivered within committed timelines. In a market where developer credibility is paramount, Assetz is a Tier-1 name.</p>
+          <p>Assetz Property Group was established in 2006, giving it close to two decades of continuous operating history in the Bangalore market. In a market where a huge share of buyer risk comes down to whether a developer actually delivers what was promised, on time, and with clean paperwork, a name that has been operating this long carries real weight. Assetz positions itself on engineering quality, transparent documentation and clear, transferable freehold titles.</p>
+          <p>This matters more on a plotted development than on almost any other product type. When you buy an apartment, the developer's due diligence covers the building. When you buy a plot, you're relying on the developer's due diligence for the land itself, the conversion status, the layout approval, the title chain, because you'll be the one building on it later. A developer with a long, visible track record is a meaningfully lower-risk counterparty for that kind of land transaction than a newer entrant with no history to check.</p>
 
-          <h2>2. Location: IVC Road, Devanahalli</h2>
-          <p>Palmscape sits on the IVC Road (Intermediate Value Chain Road), one of the most strategically positioned roads in the Devanahalli micro-market. Key proximity metrics:</p>
+          <h2>2. Location: IVC Road and Why the Infrastructure Pipeline Actually Matters</h2>
+          <p>Palmscape sits on IVC Road, a corridor whose investment case rests on three infrastructure projects that are already under way, not merely sketched on a masterplan brochure:</p>
           <ul>
-            <li><strong>Kempegowda International Airport (KIAL):</strong> ~10 km (15–20 minutes)</li>
-            <li><strong>Devanahalli Town:</strong> ~5 km</li>
-            <li><strong>Nandi Hills:</strong> ~30 km (weekend destination)</li>
-            <li><strong>STRR alignment:</strong> Directly on or adjacent to the planned STRR corridor</li>
-            <li><strong>KIADB Aerospace Park:</strong> ~8 km</li>
+            <li><strong>Kempegowda International Airport (KIAL):</strong> ~10 km, roughly a 15–20 minute drive. KIAL's Terminal 2 expansion is being built toward a capacity of 45 million passengers annually, which is expected to directly generate 40,000+ jobs in the immediate catchment by 2028: each one a potential tenant or buyer within realistic commuting distance of this corridor.</li>
+            <li><strong>Devanahalli Town:</strong> ~5 km: everyday retail, hospitals and civic services without a long drive into the city.</li>
+            <li><strong>STRR (Satellite Town Ring Road):</strong> a planned 280 km orbital highway, with the Devanahalli–IVC Road alignment currently in active tendering. This is the single biggest lever on this corridor's long-term value, and it's worth understanding <em>why</em>: once operational, it connects Devanahalli directly to Whitefield, Sarjapur and Electronic City without routing through central Bangalore traffic. That removes this corridor's biggest historical objection, distance from the IT job clusters, for a large share of Bangalore's workforce, not just airport-sector employees.</li>
+            <li><strong>KIADB Aerospace Park:</strong> ~8 km: a planned 12,000-acre aerospace SEZ intended, on completion, to create a second employment cluster on the scale of Manyata Tech Park.</li>
           </ul>
+          <p>The reason infrastructure timing matters so directly to a plotted-land investment: land values tend to reprice in step-changes around confirmed infrastructure milestones, rather than drifting up gradually. Every confirmed metro corridor in Bangalore has historically delivered a burst of appreciation within roughly 18 months of the alignment being formally confirmed. Practically, that means buyers evaluating IVC Road are really underwriting the STRR and metro-extension timelines as much as they're underwriting the plotted layout itself: a useful lens for deciding how much of your capital commitment should sit at the pre-launch stage versus after key milestones land.</p>
 
           <h2>3. The Project: What You Actually Get</h2>
-          
-          <p>Palmscape is a gated plotted development offering 450 residential plots across a thoughtfully planned community layout. The headline numbers:</p>
+          <p>Palmscape is a gated plotted development of 450 residential plots. Some headline facts, checked directly against the project's own current listing:</p>
           <ul>
-            <li><strong>Total Plots:</strong> 450</li>
-            <li><strong>Open Space Allocation:</strong> 60%+ of total land area</li>
+            <li><strong>Total Plots:</strong> 450, across a single master-planned layout</li>
+            <li><strong>Open Space Allocation:</strong> 60%+ of the total land area: well above what most competing layouts in the corridor offer</li>
             <li><strong>Road Width:</strong> 9-metre and 12-metre internal roads</li>
-            <li><strong>Miyawaki Forest:</strong> A dedicated native tree plantation creating a genuine ecological zone within the community</li>
-            <li><strong>Clubhouse:</strong> Grand clubhouse with sports courts, swimming pool, and recreational amenities</li>
+            <li><strong>Miyawaki Forest:</strong> a dense, fast-growing native-species tree plantation technique that produces a genuine, layered micro-ecosystem within a few years, a step beyond the sparse ornamental landscaping most layouts settle for</li>
+            <li><strong>Underground Utilities:</strong> electricity and water infrastructure run underground rather than on overhead poles, a safety and aesthetic choice</li>
+            <li><strong>Amenities:</strong> a clubhouse with banquet hall and swimming pool, jogging and cycling tracks, outdoor sports courts, a fitness zone, a yoga and meditation deck, rainwater harvesting, and a dedicated sewage treatment plant (STP) with underground drainage</li>
           </ul>
 
           <h3>Plot Sizes and Configurations</h3>
-          <p>Plots are available in multiple configurations to suit different budgets and building plans. Entry-level plots start at 1,200 sq.ft., with mid-tier options at 1,800–2,400 sq.ft. and larger corner or villa plots above 3,000 sq.ft. The variety ensures accessibility for a range of buyers.</p>
-
-          <h2>4. Pricing</h2>
+          <p>Plots are available in three standard sizes, each suited to a different scale of home:</p>
           <table>
-            <thead><tr><th>Plot Category</th><th>Size Range</th><th>Approx. Price</th></tr></thead>
+            <thead><tr><th>Plot Dimensions</th><th>Plot Size</th><th>Typical BHK Range</th></tr></thead>
             <tbody>
-              <tr><td>Entry (Regular Plot)</td><td>1,200 – 1,500 sq.ft.</td><td>₹60L – ₹80L</td></tr>
-              <tr><td>Mid-Tier</td><td>1,800 – 2,400 sq.ft.</td><td>₹90L – ₹1.30 Cr</td></tr>
-              <tr><td>Premium (Corner / Park Facing)</td><td>2,400 – 3,000 sq.ft.</td><td>₹1.30 Cr – ₹1.80 Cr</td></tr>
-              <tr><td>Villa Plot</td><td>3,000+ sq.ft.</td><td>₹1.80 Cr+</td></tr>
+              <tr><td>30 × 40 ft</td><td>1,200 sq ft</td><td>3–4 BHK</td></tr>
+              <tr><td>30 × 50 ft</td><td>1,500 sq ft</td><td>4–5 BHK</td></tr>
+              <tr><td>40 × 60 ft</td><td>2,400 sq ft</td><td>5+ BHK</td></tr>
             </tbody>
           </table>
-          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Prices are indicative and subject to change. Contact us for verified current pricing and availability.</p>
+          <p>Note that the BHK count is a function of how much you choose to build on the plot, not a fixed unit type the way it would be in an apartment: this is one of the defining structural differences between a plotted development and an apartment complex, which we cover in more depth in our <a href="/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/" class="money-link">comparison of Palmscape with Sattva Aeropolis</a>.</p>
 
-          <h2>5. Legal and RERA Verification</h2>
-          <p>At Luxura Habitat, no project recommendation is made before legal verification. For Assetz Palmscape:</p>
+          <h2>4. Pricing: What "Pre-Launch EOI" Actually Means</h2>
+          <p>Assetz Palmscape is currently at the pre-launch EOI (Expression of Interest) stage, with a ₹3 Lakh token amount to register interest. This is worth unpacking for buyers new to pre-launch plotted purchases: the EOI token is <em>not</em> the final booking amount. It's a deposit, typically refundable subject to the developer's terms, that reserves your place in the allocation queue before formal bookings open. Base pricing itself is currently listed as "on request" rather than published on a fixed rate card.</p>
+          <p>This is normal for a project at this stage, and understanding why developers structure it this way helps set expectations: pre-launch pricing is typically the most competitive per-square-foot pricing a project will ever offer, because prices step up at each subsequent construction milestone as risk to the developer, and therefore to you, falls. The trade-off is that you're committing capital before the layout is fully developed on the ground and before you can physically walk the plot boundaries you're being allotted.</p>
+          <p><strong>Contact our team for the current, verified price list.</strong> We deliberately don't publish speculative price bands for projects still at the EOI stage, because doing so risks giving buyers numbers that have no basis in the developer's actual, current pricing sheet.</p>
+          <!-- TODO: An earlier version of this article published a fixed price table (₹60L–₹1.80Cr+ across four plot bands: 1,200–1,500 / 1,800–2,400 / 2,400–3,000 / 3,000+ sq ft). That table could not be verified against the developer's own pricing sheet, and the plot-size bands didn't match the project page's own listed sizes (1,200 / 1,500 / 2,400 sq ft only). The linked project page also lists pricing as "On Request" during pre-launch. The table has been removed rather than republished unverified: replace this note with the developer's official price list once formal bookings open. -->
+
+          <h2>5. Legal and RERA Verification: What RERA Registration Actually Protects You From</h2>
+          <p>At Luxura Habitat, we don't recommend a project before completing legal verification, and on a plotted development specifically, it's worth spelling out exactly what RERA (the Real Estate Regulatory Authority, the government body that registers and monitors real estate projects) does and doesn't cover. It's the single biggest structural protection a buyer has against fund misuse or indefinite delay:</p>
           <ul>
-            <li><strong>RERA Status:</strong> Pre-launch EOI stage — confirm RERA number at project launch with our team</li>
-            <li><strong>Land Conversion:</strong> The land is on converted agricultural land (DC Conversion completed)</li>
-            <li><strong>Layout Approval:</strong> BMRDA / Local authority approved layout</li>
-            <li><strong>Title:</strong> Clear, marketable title — verified by Assetz's legal team and independently audited</li>
+            <li><strong>Ring-fenced funds:</strong> a RERA-registered project is required to keep buyer collections in a project-specific account, released against verified progress, not free to be diverted to the developer's other projects or unrelated business needs.</li>
+            <li><strong>Enforceable delivery commitments:</strong> the developer must register the project against a stated completion timeline, with financial penalties if it slips, turning "we'll try to deliver on time" into a legally enforceable commitment rather than a marketing promise.</li>
+            <li><strong>Accurate marketing:</strong> everything advertised, plot sizes, amenities, open-space percentages, becomes part of the legal project disclosure. Misrepresenting it isn't just a reputational risk for the developer, it's a compliance violation with real penalties.</li>
+            <li><strong>A public record you can check yourself:</strong> once registered, anyone can independently verify a project's status, approvals and complaint history on the Karnataka RERA portal, rather than relying solely on the developer's word or a salesperson's claims.</li>
+          </ul>
+          <p>For Assetz Palmscape specifically, here is where things stand as of this review:</p>
+          <ul>
+            <li><strong>RERA Status:</strong> Pre-launch EOI stage. The project's RERA registration is still pending.
+            <!-- TODO: An earlier version of this article listed a specific RERA number (PRM/KA/RERA/1251/446/PR/270524/006757) in the sidebar widget, contradicting the article body's own "pre-launch, confirm at launch" statement. That number does not appear anywhere on the linked project page, and shares a registration-office prefix ("1251/446") used elsewhere on this site for several entirely unrelated projects: strongly suggesting a template/copy error rather than a genuine, verified registration. It has been removed from this page rather than republished unverified. Replace this note with the project's actual RERA number once it formally registers with Karnataka RERA. --></li>
+            <li><strong>Land Conversion:</strong> the land has undergone DC (Deputy Commissioner) conversion, meaning it has been formally converted from agricultural to non-agricultural residential use, a legal prerequisite for any plotted layout.</li>
+            <li><strong>Layout Approval:</strong> approved under BMRDA (Bangalore Metropolitan Region Development Authority) norms, the regulatory body governing layouts just outside core BBMP/BDA jurisdiction.</li>
+            <li><strong>Title:</strong> represented as a clear, freehold, marketable title, verified by the developer's own legal team. As with any land purchase, we recommend an independent title and encumbrance check before you sign anything: never rely solely on the seller's legal opinion.</li>
           </ul>
 
+          <h2>6. What Buying at the EOI Stage Actually Involves</h2>
+          <p>For buyers new to the plotted-development process, here is the realistic sequence, step by step:</p>
+          <ol>
+            <li>You pay the ₹3 Lakh EOI token to register interest and secure a place in the allocation order.</li>
+            <li>When the developer opens formal bookings, EOI holders are typically given first access to plot selection ahead of the general public.</li>
+            <li>You choose a specific plot number, sign a booking agreement, and agree the payment schedule.</li>
+            <li>Before final registration, you (or your advisor) verify the RERA certificate, the DC conversion order, the BMRDA layout approval, and an encumbrance certificate for that <em>specific plot</em>: not just the layout as a whole.</li>
+            <li>You proceed to the sale agreement and registration, paying applicable stamp duty and registration charges, which in Karnataka are levied as a percentage of the property's sale value or the government's guidance value, whichever is higher.</li>
+          </ol>
+          <p>That fourth step is the one most first-time buyers skip, and it's the one that matters most. A layout-level RERA registration or BMRDA approval doesn't automatically mean every individual plot is free of disputes: always ask for plot-specific documentation, not just the project brochure.</p>
+
           <h2>Our Honest Assessment</h2>
-          <p>Assetz Palmscape is one of the cleanest investment cases in North Bangalore in 2026. The combination of a credible Tier-1 developer, a legally sound pre-launch structure, an STRR-adjacent location, and the genuine ecological character of the development make it stand out in a market full of generic plotted products. For NRI buyers and long-term capital appreciation investors, this is a high-conviction recommendation.</p>
+          <p>Assetz Palmscape is one of the more credible plotted opportunities in North Bangalore heading into 2026. The combination of an established, two-decade developer, a legally structured pre-launch process, a location directly on the STRR alignment, and a genuinely differentiated ecological design, the Miyawaki forest and 60%+ open space are not typical for this price category, make it stand out from the generic plotted layouts that have flooded this corridor.</p>
+          <p>The honest caveats: pricing isn't published yet, so you're committing an EOI token before you know the final numbers, and the RERA registration is still pending; both are normal for a project at this stage, but they mean this is a decision for buyers comfortable with pre-launch uncertainty in exchange for pre-launch pricing, not a same-week purchase decision. For NRI buyers and long-term capital-appreciation investors with a 5+ year horizon, it remains a high-conviction shortlist candidate, provided you independently verify the RERA number and title before converting the EOI into a full booking.</p>
         </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Is Assetz Palmscape apartments or plots?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">It is a plotted villa development, not apartments. You buy a serviced plot within the gated 450-plot community and build your own home, choosing the layout and BHK configuration that fits your chosen plot size.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What plot sizes does Assetz Palmscape offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Three standard sizes: 30×40 ft (1,200 sq ft, typically built as 3–4 BHK), 30×50 ft (1,500 sq ft, typically 4–5 BHK), and 40×60 ft (2,400 sq ft, typically 5+ BHK). The BHK count depends on what you choose to build, not a fixed unit type.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">What does the ₹3 Lakh EOI token actually pay for?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">It is a refundable-subject-to-terms deposit that reserves your place in the allocation queue before formal bookings open: not the final booking amount. Base pricing is currently listed as on request; EOI holders typically get first access to plot selection once bookings open.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">Is Assetz Palmscape RERA registered?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project is currently at the pre-launch EOI stage and its RERA registration is pending. Confirm the current registration number with our team before booking, and independently verify it on the Karnataka RERA portal once available.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">How does the STRR affect this location?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The Satellite Town Ring Road's Devanahalli–IVC Road alignment is in active tendering. Once operational, it connects this corridor directly to Whitefield, Sarjapur and Electronic City without routing through central Bangalore, which removes distance-from-IT-clusters as an objection for a large share of Bangalore's workforce.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">Is Assetz Palmscape a good investment for NRIs?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">For buyers with a 5+ year horizon, it is a high-conviction shortlist candidate given the developer's track record, the STRR-adjacent location and the differentiated open-space design: provided you independently verify the RERA number and title before converting the EOI into a booking, since pricing and final registration are still pending.</p>
+              </div>
+            </div>
+          </div>
+        </section>
                 <section class="related-projects" aria-label="Related content">
           <h3>You May Also Be Interested In</h3>
           <div class="related-cards-grid">
@@ -289,7 +416,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by the Luxura Habitat Team</h5>
+              <h5>Written by Narayanan Rajesh</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
             </div>
           </div>
@@ -304,7 +431,8 @@
             <ul class="sidebar-specs">
               <li>450 premium villa plots</li>
               <li>60%+ open green spaces</li>
-              <li>RERA: PRM/KA/RERA/1251/446/PR/270524/006757</li>
+              <!-- TODO: RERA number removed: see TODO comment in article body, Section 5. Project is pre-launch with registration pending; do not republish the old PRM/KA/RERA/1251/446/PR/270524/006757 number without verifying it against the Karnataka RERA portal or the developer directly. -->
+              <li>Pre-launch: RERA registration pending</li>
               <li>IVC Road, Devanahalli</li>
             </ul>
             <a href="/projects/assetz-palmscape/" class="sidebar-cta">View Project Details &rarr;</a>

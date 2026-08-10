@@ -128,7 +128,6 @@
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
@@ -1742,6 +1741,9 @@
         }
 
         @media (max-width: 1024px) {
+            .sidebar-widget {
+                display: none;
+            }
             .phone-section {
                 display: flex;
             }
