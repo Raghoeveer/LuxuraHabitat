@@ -296,6 +296,25 @@ silently reinherit by copy-pasting the template):
   found in production analytics before being fixed. If you copy this inline script
   from `_TEMPLATE.html` verbatim (don't hand-roll a shorter version), WhatsApp clicks
   stay tracked regardless of any `stopPropagation()` elsewhere on the page.
+- **Footer copyright + Privacy/Terms links.** The copyright line must read
+  "Luxura Habitat" — not the builder's name. This site is a Luxura Habitat
+  marketing property, not the developer's official site (the disclaimer
+  paragraph right next to the copyright line already says "we are not
+  developers or builders"), so attributing copyright to "Assetz Property
+  Group", "TVS Emerald", "[Project] Team", etc. contradicts the page's own
+  disclaimer. Separately, the Privacy Policy / Terms & Conditions links
+  must point at exactly `/privacy.html` and `/terms.html` — absolute,
+  exact filenames. This was wrong in one of five different ways on 28 of
+  29 shipped project pages before an SEO audit caught it and every
+  instance had to be fixed in one pass: `href="#"` (dead placeholder),
+  relative `privacy.html` (resolves under `/projects/<slug>/`, 404s),
+  `privacy-policy.html`/`terms-and-conditions.html` (wrong filenames —
+  the real files are `privacy.html`/`terms.html` at site root),
+  `/privacy`/`/terms` with no extension (404s — no Netlify `_redirects`/
+  `netlify.toml` exists to strip extensions), or the link missing
+  entirely. Copy the footer block verbatim from an already-correct page
+  (e.g. `kns-sampada`) rather than an arbitrary sibling — see the
+  `_TEMPLATE.html` footer comment for the exact reference line.
 - **`<script src="/js/seo.js"></script>` must actually be on the page**, right before
   `</body>` alongside `project-page.js` — it's what generates the `BreadcrumbList`
   JSON-LD at runtime (see Phase 4). It's easy to copy the Zendesk snippet and the
@@ -482,6 +501,10 @@ For each post:
 - `grep -c "seo.js" projects/<slug>/index.html` — confirm the `/js/seo.js` script tag
   is actually present (see Phase 3); its absence produces no error, just silently
   missing `BreadcrumbList` schema.
+- `grep -oE 'href="[^"]*"[^>]*>(Privacy Policy|Terms)' projects/<slug>/index.html` —
+  both matches must read exactly `href="/privacy.html"` or `href="/terms.html"`; and
+  `grep -n "Copyright 202" projects/<slug>/index.html` must show "Luxura Habitat", not
+  the builder's name (see Phase 3).
 - `grep -n "#2563eb" projects/<slug>/index.html` — must return nothing. This generic
   blue leaks into four separate rules (`.section-title`, `.nav-links a`,
   `.highlights-table thead th`, `.pricing-table thead th`, see Phase 3) and fixing only

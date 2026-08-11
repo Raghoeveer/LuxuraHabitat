@@ -442,6 +442,7 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p>
         <p class="footer-disclaimer">
           Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
           All project information is sourced directly from our developer partners across Bengaluru.
@@ -470,9 +471,41 @@
       "addressRegion": "Karnataka",
       "addressCountry": "IN"
     },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.076,
+        "longitude": 77.631
+      },
+      "geoRadius": "35000"
+    },
     "areaServed": [
-      "Kanakapura Road", "South Bengaluru", "Sarjapur Road",
-      "Devanahalli", "Whitefield", "Hennur", "Thanisandra", "Bengaluru", "Bangalore"
+      {
+        "@type": "Place",
+        "name": "Devanahalli",
+        "geo": { "@type": "GeoCoordinates", "latitude": 13.2484, "longitude": 77.7134 }
+      },
+      {
+        "@type": "Place",
+        "name": "Hennur",
+        "geo": { "@type": "GeoCoordinates", "latitude": 13.0371, "longitude": 77.6414 }
+      },
+      {
+        "@type": "Place",
+        "name": "Yelahanka",
+        "geo": { "@type": "GeoCoordinates", "latitude": 13.1007, "longitude": 77.5963 }
+      },
+      {
+        "@type": "Place",
+        "name": "Kanakapura Road",
+        "geo": { "@type": "GeoCoordinates", "latitude": 12.9189, "longitude": 77.5739 }
+      },
+      { "@type": "Place", "name": "South Bengaluru" },
+      { "@type": "Place", "name": "Sarjapur Road" },
+      { "@type": "Place", "name": "Whitefield" },
+      { "@type": "Place", "name": "Thanisandra" },
+      { "@type": "City", "name": "Bengaluru", "containedInPlace": { "@type": "State", "name": "Karnataka" } }
     ],
     "knowsAbout": ["Luxury Real Estate Bangalore", "Premium Plots Bangalore", "Villas in Bangalore", "Property Investment", "RERA Compliance", "Legal Due Diligence"],
     "hasOfferCatalog": {

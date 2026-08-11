@@ -53,6 +53,30 @@ caused a real, shipped bug once.
 - Add the RERA disclaimer paragraph and NAP (Name/Address/Phone) footer
   block verbatim from an existing page. These are legally load-bearing —
   don't reword them per project.
+- The footer's copyright line must read **`Luxura Habitat`**, not the
+  builder's name — this is a Luxura Habitat marketing site, not the
+  developer's official site (the disclaimer paragraph right next to it
+  says exactly that: "We are not developers or builders"). Attributing
+  copyright to "Assetz Property Group", "TVS Emerald", "[Project] Team",
+  etc. contradicts that disclaimer on the same page. This was wrong on
+  28 of 29 shipped project pages before being caught and fixed in one
+  pass — check it explicitly, don't copy the copyright line verbatim
+  from a random existing page without reading what name is in it.
+- The footer must link `Privacy Policy` → `/privacy.html` and
+  `Terms & Conditions` → `/terms.html` — **absolute paths, exact
+  filenames, no trailing variation.** Every one of these is a real bug
+  that shipped before: `href="#"` (dead placeholder, never wired up),
+  relative `privacy.html`/`terms.html` (resolves to
+  `/projects/<slug>/privacy.html`, which doesn't exist, once the page
+  is nested under `/projects/<slug>/`), `privacy-policy.html` /
+  `terms-and-conditions.html` (wrong filenames — the real files are
+  `privacy.html` and `terms.html` at site root), and `/privacy` /
+  `/terms` with no extension (404s — there's no Netlify `_redirects` or
+  `netlify.toml` doing extension-stripping on this site). Copy the link
+  markup verbatim from an already-correct page (e.g. `kns-sampada`) and
+  grep the finished page to confirm both links resolve:
+  `grep -oE 'href="[^"]*"[^>]*>(Privacy Policy|Terms)' projects/<slug>/index.html`
+  — both matches must read `/privacy.html` or `/terms.html` exactly.
 - The GA4 tag + tel/mailto/WhatsApp click tracking is already in
   `_TEMPLATE.html` — don't strip it out or swap the Measurement ID per
   project. Every page shares one GA4 property (`G-4VD9RSVKTV`). Form

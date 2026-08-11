@@ -219,7 +219,31 @@
              paragraph verbatim from any existing page — these are legally
              load-bearing (RERA advertising rules require identifying the
              registered agent) and must stay word-for-word consistent
-             site-wide, not reworded per project. -->
+             site-wide, not reworded per project.
+
+             Two footer bugs shipped on nearly every prior project page
+             before being caught and fixed sitewide — don't reintroduce
+             either:
+
+             1. Copyright line must read "Luxura Habitat", never the
+                builder's name. This is a Luxura Habitat marketing site,
+                not the developer's official site (the disclaimer above
+                says so) — attributing copyright to the builder
+                contradicts that on the same page.
+
+             2. Privacy/Terms links must be absolute and use the exact
+                filenames: href="/privacy.html" and href="/terms.html".
+                NOT href="#" (dead), NOT relative "privacy.html" (breaks
+                once nested under /projects/<slug>/), NOT
+                "privacy-policy.html"/"terms-and-conditions.html" (wrong
+                filenames), NOT "/privacy"/"/terms" with no extension
+                (404s — no Netlify redirect rules exist on this site).
+
+             Copy this exact line (or the equivalent for this page's own
+             footer style) from an already-correct page, e.g. kns-sampada:
+             © Copyright 2026 Luxura Habitat. All Rights Reserved. |
+             <a href="/privacy.html">Privacy Policy</a> |
+             <a href="/terms.html">Terms &amp; Conditions</a> -->
     </footer>
 
     <!-- Shared behavior — must load BEFORE the inline script below that
