@@ -340,9 +340,17 @@ headline/keyword matters for message-match and Quality Score, not just organic
 ranking, so don't let page copy drift from how the project is actually advertised.
 
 - **`<title>`**: unique per page, primary keyword near the front, project name +
-  locality + config or angle, brand at the end. Keep it short enough that Google
-  doesn't truncate it in the SERP (~55-60 characters is the safe zone — verify actual
-  rendered length, not the raw string).
+  locality + config or angle, brand at the end if it fits. Hard limit **60 characters,
+  rendered** (decode `&amp;`/entities before counting — the raw source string is
+  longer and will undercount how much room you actually have). This isn't a soft
+  guideline: a sitewide audit on 2026-08-12 found 75/98 pages had shipped over it
+  (up to 101 chars), because the prose rule existed but nothing actually checked the
+  number before shipping. Verify every new/edited page with:
+  `python3 -c "import re,html,sys; t=re.search(r'<title>(.*?)</title>', open(sys.argv[1]).read(), re.DOTALL).group(1); d=html.unescape(t); print(len(d), d); sys.exit(1 if len(d)>60 else 0)" path/to/index.html`
+  — if it prints >60 or exits non-zero, shorten before moving on. When the full
+  `Project + Locality + Config + | Luxura Habitat` doesn't fit, drop the locality or
+  the brand suffix before dropping the config/keyword — searchers scan for config and
+  price, not the brand tail, and Google truncates the tail first anyway.
 - **`<meta name="description">`**: ~150-160 characters (see
   `docs/adding-a-project.md` — Century Kindle and Vajram Vivera's first drafts both
   shipped over this and got truncated). Check the rendered character count, not the
@@ -498,6 +506,8 @@ For each post:
   project's own folder, robots meta isn't accidentally `noindex`, exactly one `<h1>`,
   no skipped heading levels, and the favicon link is the developer's own mark (not
   the site-wide default).
+- Run the Phase 4 title-length one-liner against every new/edited page's `index.html`
+  before shipping — don't eyeball it. A page passes only if it prints ≤60.
 - `grep -c "seo.js" projects/<slug>/index.html` — confirm the `/js/seo.js` script tag
   is actually present (see Phase 3); its absence produces no error, just silently
   missing `BreadcrumbList` schema.
