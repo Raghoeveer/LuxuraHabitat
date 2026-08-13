@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>TVS Emerald Altura: Price, Layout &amp; RERA Review | Luxura Habitat</title>
+  <meta name="description" content="Independent review of TVS Emerald Altura, Sathanur, North Bangalore: pricing across 2 &amp; 3 BHK configurations, the 975-unit layout, connectivity, and RERA verification.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/tvs-emerald-altura-sathanur-price-layout-rera/">
+  <meta property="og:title" content="TVS Emerald Altura: Price, Layout & RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of TVS Emerald Altura, Sathanur, North Bangalore: pricing, layout, possession and RERA verification.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/tvs-emerald-altura-sathanur-price-layout-rera/"
+        },
+        "headline": "TVS Emerald Altura: Price, Layout & RERA Review",
+        "description": "Independent review of TVS Emerald Altura, Sathanur, North Bangalore: pricing across 2 & 3 BHK configurations, the 975-unit layout, connectivity, and RERA verification.",
+        "image": "https://luxurahabitat.com/images/projects-thumbs/tvs-altura-thumb.webp",
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/tvs-emerald-altura-sathanur-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Devanahalli Real Estate Guide", "item": "https://luxurahabitat.com/areas/devanahalli/"},
+          {"@type": "ListItem", "position": 4, "name": "TVS Emerald Altura: Price, Layout & RERA Review", "item": "https://luxurahabitat.com/blog/tvs-emerald-altura-sathanur-price-layout-rera/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/devanahalli/">Devanahalli Hub</a><span>/</span><span>TVS Emerald Altura Deep-Dive</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">TVS Emerald Altura: Price, Layout &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 12, 2026</span><span>&bull;</span><span>7 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects-thumbs/tvs-altura-thumb.webp" alt="TVS Emerald Altura Price Layout RERA" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>TVS Emerald Altura is one of the newer high-rise launches on the Bagalur Main Road corridor in Sathanur, North Bangalore, and it has generated an unusually sharp spike in buyer interest since its price list went public. This is a deep-dive review covering layout, pricing, possession, RERA status, and our honest assessment of its investment merit.</p>
+
+          <h2>1. The Developer: TVS Emerald</h2>
+          <p>TVS Emerald Housing &amp; Estates Pvt. Ltd. is the residential real estate arm of the TVS Group, a name with decades of manufacturing and engineering credibility behind it. Altura is TVS Emerald's high-rise entry into the Sathanur micro-market, positioned as a Japandi-inspired community with a scale (975 residences) that's meaningfully larger than most boutique projects we cover in the North Bangalore corridor.</p>
+
+          <h2>2. Location: Sathanur, Bagalur Main Road</h2>
+          <p>TVS Emerald Altura sits in Sathanur, on the Bagalur Main Road corridor of North Bangalore. The project's own positioning leans heavily on this corridor's proximity to established and emerging employment hubs:</p>
+          <ul>
+            <li><strong>Thanisandra Main Road and Bagalur Main Road:</strong> direct corridor access</li>
+            <li><strong>Hebbal and Outer Ring Road:</strong> within reach</li>
+            <li><strong>Manyata Tech Park and Hebbal business district:</strong> key workplace hub</li>
+            <li><strong>KIADB Aerospace Park:</strong> growing airport-linked employment corridor</li>
+            <li><strong>Kempegowda International Airport:</strong> approximately 20 minutes by road</li>
+            <li><strong>Thanisandra and Nagawara commercial catchments:</strong> nearby retail and daily convenience</li>
+          </ul>
+
+          <h2>3. The Project: What You Actually Get</h2>
+          <p>The project spans 10.06 acres and holds 975 residences across 12 high-rise towers built to a 2B+G+12 format, with more than 70% of the land kept as open, landscaped space. Amenities are organised around dual clubhouses, a swimming pool, work-friendly community spaces, 100% DG power backup, and 24/7 gated security. The overall design language is Japandi-inspired, a departure from the more conventional amenity-heavy branding used by several nearby projects.</p>
+
+          <h3>Unit Sizes</h3>
+          <p>TVS Emerald Altura offers four distinct configurations. 2 BHK Classic units run approximately 1,131 sq.ft.; 2 BHK Premium units run approximately 1,223 sq.ft. 3 BHK units span approximately 1,510 to 1,588 sq.ft., with a larger 3 BHK Luxe configuration at approximately 2,123 sq.ft. for buyers who want more room without moving to a 4 BHK price bracket.</p>
+
+          <h2>4. Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Super Built-up Area</th><th>Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>2 BHK Classic</td><td>~1,131 sq.ft.</td><td>₹1.4 Cr onwards*</td></tr>
+              <tr><td>2 BHK Premium</td><td>~1,223 sq.ft.</td><td>On request*</td></tr>
+              <tr><td>3 BHK</td><td>~1,510 – 1,588 sq.ft.</td><td>On request*</td></tr>
+              <tr><td>3 BHK Luxe</td><td>~2,123 sq.ft.</td><td>On request*</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Entry price shown is for the 2 BHK Classic configuration as published at launch; final pricing may vary by floor, facing, and applicable taxes. Contact us for verified current pricing and availability across all four configurations.</p>
+          <p>Altura's ₹1.4 Cr entry point puts it toward the accessible end of new high-rise launches on this side of North Bangalore, and it's a meaningful part of why search interest in the project has climbed so sharply since launch benefits went live. As always, we'd treat a published starting price as a floor to verify rather than a number to book against directly, since it typically applies to a specific floor range and facing rather than the whole 2 BHK Classic inventory.</p>
+
+          <h2>5. Possession Timeline</h2>
+          <p>TVS Emerald Altura is a new launch, currently in the RERA-linked delivery schedule with phase-wise progress updates as construction proceeds. The developer has not published a specific possession date on record at the time of writing; we'd recommend requesting the current construction-linked payment schedule directly, and cross-checking the delivery timeline against the RERA registration before booking.</p>
+
+          <h2>6. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. For TVS Emerald Altura:</p>
+          <ul>
+            <li><strong>Project RERA Number:</strong> PRM/KA/RERA/1251/309/PR/040426/008572</li>
+            <li><strong>Status:</strong> RERA-registered, new launch</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Marketing Partner of TVS Emerald / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <p>We encourage all prospective buyers to independently verify this registration number on the official Karnataka RERA website before finalising a booking, a step we recommend regardless of developer reputation or brand recognition.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>TVS Emerald Altura's strongest case is scale plus price: 975 units across 12 towers give it a level of amenity infrastructure that smaller boutique projects on this corridor can't match, and a ₹1.4 Cr entry point keeps the 2 BHK Classic configuration within reach for a wider set of North Bangalore buyers than most comparable launches nearby. The trade-off of that scale is density; buyers who prioritise a low-unit-count, boutique feel should look elsewhere on the same corridor. As a fresh launch without a published possession date, the usual diligence applies in full: confirm the construction-linked payment schedule directly with the developer and independently verify the RERA registration (PRM/KA/RERA/1251/309/PR/040426/008572) before booking.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/tvs-emerald-altura/" class="related-card">
+              <img src="../../images/projects-thumbs/tvs-altura-thumb.webp" alt="TVS Emerald Altura" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">TVS Emerald Altura</p>
+                <p class="related-card-detail">2 &amp; 3 BHK · Sathanur, North Bangalore</p>
+              </div>
+            </a>
+            <a href="/projects/orchid-salisbury/" class="related-card">
+              <img src="../../images/projects/orchid-salisbury/orchid-salisbury-hero.webp" alt="Orchid Salisbury" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Project</p>
+                <p class="related-card-title">Orchid Salisbury</p>
+                <p class="related-card-detail">2, 3 &amp; 4 BHK · Thanisandra</p>
+              </div>
+            </a>
+            <a href="/blog/housing-near-kiadb-aerospace-park-airport-road-bangalore/" class="related-card">
+              <img src="../../images/projects-thumbs/tvs-altura-thumb.webp" alt="Housing Near KIADB Aerospace Park" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Housing Near KIADB Aerospace Park</p>
+                <p class="related-card-detail">Airport Corridor Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects-thumbs/tvs-altura-thumb.webp" alt="TVS Emerald Altura" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">TVS Emerald Altura</p>
+            <ul class="sidebar-specs">
+              <li>2 &amp; 3 BHK · 10.06 Acres · 975 Units</li>
+              <li>70%+ Open Space · 12 Towers</li>
+              <li>From ₹1.4 Cr onwards</li>
+              <li>Sathanur, North Bangalore</li>
+            </ul>
+            <a href="/projects/tvs-emerald-altura/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>North Bangalore</h4>
+          <a href="/projects/tvs-emerald-altura/">TVS Emerald Altura</a>
+          <a href="/projects/orchid-salisbury/">Orchid Salisbury</a>
+          <a href="/areas/devanahalli/">Devanahalli Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

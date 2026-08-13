@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Sattva Green Groves, Nelamangala — 735 RERA plots (1,200-1,936 sq ft), 45 acres, Tumkur Road. From &#8377;75.6 Lakh*. Layout, amenities &amp; RERA details inside.">
+    <meta name="keywords" content="Sattva Green Groves, Sattva Green Groves price, Sattva Green Groves Nelamangala, Sattva Green Groves RERA, RERA approved plots Nelamangala, Sattva Group plots Tumkur Road, plots near Nelamangala, residential plots Bangalore">
+    <meta name="author" content="Luxura Habitat">
+
+    <meta property="og:title" content="Sattva Green Groves, Nelamangala | RERA-Approved Plots by Sattva Group">
+    <meta property="og:description" content="735 RERA-approved residential plots (1,200-1,936 sq ft) across 45 acres on Tumkur Road, Nelamangala. Explore the layout plan, 17 named parks, pricing and RERA details.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/sattva-green-groves/">
+    <meta property="og:site_name" content="Sattva Green Groves">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sattva Green Groves, Nelamangala | RERA-Approved Plots by Sattva Group">
+    <meta name="twitter:description" content="735 RERA-approved residential plots (1,200-1,936 sq ft) across 45 acres on Tumkur Road, Nelamangala. Explore the layout plan, 17 named parks, pricing and RERA details.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp">
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/images/projects/sattva-green-groves/sattva-green-groves-hero.webp" fetchpriority="high">
+
+    <link rel="icon" href="/images/projects/sattva-green-groves/favicon.png" type="image/png">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/sattva-green-groves/" />
+    <title>Sattva Green Groves, Nelamangala: Plots | Price &amp; RERA</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-dark: #2c2620;
+            --secondary-dark: #3d342a;
+            --accent-clay: #a0522d;
+            --accent-gold: #b8862b;
+            --bg-light: #faf7f2;
+            --bg-white: #ffffff;
+            --text-dark: #2c2620;
+            --text-light: #6b6055;
+            --border-light: #e5ddd2;
+            --success: #22c55e;
+        }
+
+        html { overflow-x: hidden; }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 0.8rem clamp(1rem, 4vw, 2rem);
+            box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(14px);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            gap: 6px;
+            z-index: 101;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #111827;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .logo { display: flex; align-items: center; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 42px; width: auto; object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.6vw, 1.6rem);
+            list-style: none;
+            flex: 1;
+            flex-wrap: nowrap;
+        }
+.nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { color: var(--accent-clay); }
+        .nav-links a.active { color: var(--accent-clay); }
+
+        .nav-buttons { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(160, 82, 45, 0.08);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .phone-section:hover { background: rgba(160, 82, 45, 0.15); transform: translateY(-2px); }
+
+        .phone-label { font-size: clamp(0.6rem, 0.8vw, 0.75rem); color: #6b7280; font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase; }
+        .phone-number { font-size: clamp(0.75rem, 1vw, 0.95rem); color: var(--accent-clay); font-weight: 800; white-space: nowrap; }
+
+        .whatsapp-btn {
+            background: #128c4f;
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: clamp(0.7rem, 0.9vw, 0.86rem);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.nav-call, .nav-cta { display: none; }
+
+        /* Hero */
+        .hero {
+            background: #05080f;
+            color: #e5e7eb;
+            min-height: calc(100vh - 68px);
+            padding: clamp(1rem, 2.2vw, 2rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: calc(100vh - 108px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 0.5fr);
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 4.5rem);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(1rem, 2vh, 1.45rem);
+            padding: clamp(1.5rem, 3.8vw, 3.1rem);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 7px solid var(--accent-gold);
+            border-radius: 10px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        .hero-logo { display: block; width: min(220px, 60%); margin: 0 0 0.35rem; }
+        .hero-logo img { display: block; width: 100%; height: auto; }
+
+        .hero-badge {
+            color: #ffffff;
+            background: var(--accent-clay);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            width: fit-content;
+            padding: 0.45rem 1rem;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--accent-clay);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin: 0.2rem 0;
+            max-width: 100%;
+        }
+
+        .hero-intro { color: #0b1220; font-size: clamp(0.95rem, 1.25vw, 1.15rem); line-height: 1.7; max-width: 620px; }
+
+        .hero-info-boxes { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+
+        .info-box {
+            border: 1px solid rgba(160, 82, 45, 0.16);
+            border-radius: 10px;
+            padding: clamp(0.9rem, 2vh, 1.2rem);
+            background: rgba(245, 243, 240, 0.78);
+        }
+
+        .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .info-row { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 0.8rem; }
+
+        .info-box-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-clay);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 900;
+        }
+
+        .info-box-title { color: #111827; font-size: clamp(1rem, 1.25vw, 1.25rem); font-weight: 900; }
+        .info-box-subtitle { color: #111827; font-size: clamp(0.82rem, 1vw, 0.98rem); font-weight: 600; }
+
+        .price-box { text-align: left; color: var(--accent-clay); line-height: 1.25; }
+        .price-copy { display: block; font-weight: 700; font-size: 0.95rem; }
+        .price-line { display: block; color: #111827; font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 800; }
+        .new-price { color: #111827; font-weight: 900; }
+        .offer-note { color: #111827; display: block; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 0.2rem; }
+
+        .hero-media {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+            min-height: 100%;
+            background: #0b1220;
+            z-index: 0;
+        }
+        .hero-media img { width: 100%; height: 100%; min-height: 100%; display: block; object-fit: cover; object-position: 60% center; filter: saturate(1.02) contrast(1.02); }
+        .hero-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.18) 42%, rgba(2, 6, 23, 0.62)),
+                linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.08) 46%, rgba(2, 6, 23, 0.52));
+            pointer-events: none;
+        }
+
+        .artist-note {
+            position: absolute;
+            right: 2.4rem;
+            bottom: 1.25rem;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.72rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+            z-index: 2;
+        }
+
+        .hero-form-section {
+            position: relative;
+            justify-self: end;
+            width: min(390px, 100%);
+            background: rgba(255, 255, 255, 0.96);
+            border-top: 5px solid var(--accent-clay);
+            border-radius: 10px;
+            padding: clamp(1rem, 2vw, 1.45rem);
+            box-shadow: 0 28px 74px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+            color: #111827;
+        }
+
+        .hero-form-title { color: #0b1220; font-size: 1.28rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.4rem; }
+        .hero-form-subtitle { display: block; color: #5b6776; font-size: 0.85rem; margin-bottom: 0.9rem; }
+
+        .hero-form { display: flex; flex-direction: column; gap: 0.75rem; }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            min-height: 50px;
+            padding: 0.9rem 1.1rem;
+            border: 2px solid rgba(160, 82, 45, 0.15);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.98rem;
+            background: #fff;
+            color: #0b1220;
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--accent-clay);
+            box-shadow: 0 0 0 4px rgba(160, 82, 45, 0.15);
+            transform: translateY(-2px);
+        }
+        form input::placeholder, form textarea::placeholder { color: #6b7280; font-weight: 500; }
+        form textarea { resize: vertical; min-height: 120px; padding-top: 1rem; }
+        form select {
+            width: 100%;
+            min-height: 50px;
+            padding: 0.9rem 1.1rem;
+            border: 2px solid rgba(160, 82, 45, 0.15);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.98rem;
+            background: #fff;
+            color: #0b1220;
+        }
+
+        .hero-form-submit {
+            width: 100%;
+            min-height: 46px;
+            background: var(--accent-clay);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 0.98rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form-submit:hover { background: #7a3d1f; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(160, 82, 45, 0.25); }
+
+        section { padding: 5rem 2rem; }
+        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: var(--accent-clay); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+
+        .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .about { background: var(--bg-light); padding: 4rem 2rem; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr); gap: 2rem; align-items: center; }
+        .about-content h3 { font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        .about-content p { font-size: 1rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+        .feature-item { display: flex; gap: 1rem; }
+        .feature-icon { width: 44px; height: 44px; background: var(--accent-clay); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
+
+        .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+        .gallery { background: var(--bg-white); }
+
+        .faq { background: var(--bg-white); }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.1rem 1.3rem;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(160, 82, 45, 0.05);
+        }
+
+        .faq-question.open {
+            color: var(--accent-clay);
+        }
+
+        .faq-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-question.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 1.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer.open {
+            max-height: 400px;
+            padding: 0 1.3rem 1.1rem;
+        }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(160,82,45,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(160,82,45,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .amenities { background: var(--bg-light); }
+        .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(160,82,45,0.12); }
+        .amenity-card:hover { border-color: rgba(160,82,45,0.35); }
+        .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
+        .amenity-list { list-style: none; display: grid; gap: 0.45rem; }
+        .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
+        .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-clay); margin-top: 0.55rem; }
+
+        .plan { background: var(--bg-white); }
+        .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
+        .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
+        .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
+        .plan-image:hover img { transform: scale(1.02); }
+
+        .plan-notes { display: grid; gap: 0.9rem; }
+        .plan-note { background: #fff; border-left: 5px solid var(--accent-clay); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+        .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
+        .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
+
+        .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
+        .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
+        .form-container { max-width: 620px; margin: 2rem auto 0; }
+        .form-container form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 800; font-size: 0.95rem; }
+
+        .form-submit { width: 100%; padding: 1rem; background: var(--accent-clay); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: #7a3d1f; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(160,82,45,0.25); }
+
+        .form-message { text-align: center; margin-top: 0.8rem; padding: 0.9rem; border-radius: 10px; display: none; }
+        .form-message.success { display: block; background: rgba(34, 197, 94, 0.2); color: var(--success); border: 1px solid rgba(34,197,94,0.35); }
+
+        .footer { background: #0b1220; color: #fff; padding: 3rem 2rem 2.2rem; }
+
+        /* Project Highlights table */
+        .highlights { background: var(--bg-light); }
+        .highlights-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(160,82,45,0.18);
+            margin-top: 1.8rem;
+        }
+        table.highlights-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+        }
+        .highlights-table th,
+        .highlights-table td {
+            padding: 0.95rem 1rem;
+            border-bottom: 1px solid rgba(160,82,45,0.12);
+            vertical-align: top;
+            font-size: 0.98rem;
+        }
+        .highlights-table thead th {
+            background: rgba(160, 82, 45, 0.08);
+            color: var(--accent-clay);
+            font-weight: 900;
+            text-align: left;
+        }
+        .highlights-table tbody tr:hover td { background: rgba(160,82,45,0.04); }
+        .highlights-table tbody tr:last-child td { border-bottom: none; }
+        .highlights-table td strong { color: var(--primary-dark); }
+
+        .pricing-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(160,82,45,0.18);
+            margin-top: 1.8rem;
+        }
+        table.pricing-table { width: 100%; min-width: 560px; border-collapse: collapse; text-align: center; }
+        .pricing-table th, .pricing-table td { padding: 1.1rem 1rem; border-bottom: 1px solid rgba(160,82,45,0.12); font-size: 0.95rem; }
+        .pricing-table thead th { background: var(--accent-clay); color: #fff; font-weight: 900; text-align: center; }
+        .pricing-table tbody tr:nth-child(even) td { background: rgba(160,82,45,0.03); }
+        .pricing-table tbody tr:hover td { background: rgba(160,82,45,0.08); }
+        .pricing-table tbody tr:last-child td { border-bottom: none; }
+        .pricing-table td:nth-child(1) { font-weight: 900; color: var(--primary-dark); font-size: 1rem; }
+        .pricing-table td:nth-child(2) { font-weight: 900; color: var(--accent-clay); font-size: 1.05rem; }
+        .pricing-footnote { font-size: 0.82rem; color: var(--text-light); text-align: center; padding: 1rem 1rem 1.4rem; }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: #a7f3d0; }
+        .footer-section p, .footer-section a { font-size: 0.92rem; color: rgba(255,255,255,0.75); text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
+        .footer-section a:hover { color: #4ade80; }
+        .footer-contact strong { display: block; color: #fff; margin-bottom: 0.25rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+        /* Sidebar widget */
+        .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
+        .details-button {
+            background: linear-gradient(135deg, var(--accent-clay) 0%, var(--accent-gold) 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 0.85rem;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 0.9rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transition: all 0.3s ease;
+            box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.6px;
+        }
+        .details-panel {
+            position: fixed;
+            right: -420px;
+            top: 0;
+            width: min(400px, 100vw);
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            z-index: 998;
+            transition: right 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+        .details-panel.active { right: 0; }
+
+        .panel-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 997; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .panel-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-light); }
+        .panel-header h3 { font-size: 1.5rem; color: var(--primary-dark); font-family: 'Playfair Display', serif; font-weight: 900; }
+        .close-button { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #6b7280; transition: color 0.3s ease; }
+        .close-button:hover { color: var(--accent-clay); }
+
+        .panel-section { margin-bottom: 2rem; }
+        .panel-section h3 { color: var(--accent-clay); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
+        .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-clay); text-decoration: none; font-weight: 800; }
+        .quick-contact a:hover { color: var(--accent-gold); }
+
+        .panel-cta { background: var(--accent-clay); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
+        .panel-cta:hover { background: #7a3d1f; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(160,82,45,0.25); }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { display: flex; opacity: 1; align-items: center; justify-content: center; }
+        .lightbox-content { position: relative; max-width: 94%; max-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.9); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; color: #fff; font-size: 2.2rem; cursor: pointer; background: none; border: none; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .lightbox-close:hover { transform: scale(1.15); color: #a7f3d0; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(160,82,45,0.85); color: #fff; border: 2px solid #fff; font-size: 2.5rem; padding: 1rem 1.5rem; cursor: pointer; border-radius: 10px; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .lightbox-nav:hover { background: var(--accent-clay); transform: translateY(-50%) scale(1.08); }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(160,82,45,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+        @media (max-width: 1650px) {
+            .nav-links { gap: clamp(0.3rem, 0.9vw, 0.9rem); }
+            .nav-links a { font-size: 0.7rem; }
+            .phone-section { padding: 0.35rem 0.55rem; }
+            .whatsapp-btn { padding: 0.45rem 0.65rem; font-size: 0.68rem; }
+            .whatsapp-icon { width: 16px; height: 16px; }
+        }
+
+@media (max-width: 1024px) {
+            .sidebar-widget { display: none; }
+            .phone-section { display: flex; }
+            .mobile-call-btn { display: none; }
+            .nav-cta { display: inline-flex; }
+
+
+
+            .mobile-call-icon { font-size: 1.05rem; }
+            .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .sidebar-widget { right: auto; left: 0; top: auto; bottom: 0; transform: none; width: 100%; flex-direction: row; justify-content: space-around; padding: 0.5rem; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); }
+            .details-button { writing-mode: initial; text-orientation: initial; min-height: auto; padding: 0.7rem 0.9rem; border-radius: 10px; }
+
+            .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
+            .hero-media { display: none; width: 100%; left: 0; right: 0; transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding-bottom: 0.5rem; }
+
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0;
+                background: #fff;
+                box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            }
+            .mobile-cta-btn {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 0.75rem;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--border-light);
+            }
+            .mobile-cta-btn:last-child { border-right: none; }
+            .mobile-cta-btn svg { margin-bottom: 3px; }
+            .btn-whatsapp { color: #128c4f; }
+            .btn-call { color: var(--accent-clay); }
+            .btn-price { background: var(--bg-light); }
+            .btn-visit { background: var(--accent-clay); color: #fff; border: none; }
+
+            .hamburger-menu { display: flex; order: 3; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,255,255,0.98); flex-direction: column; gap: 0.2rem; padding: 1.2rem 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99; border-bottom: 1px solid var(--border-light); }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 0.85rem 0.5rem; border-bottom: 1px solid #f0f0f0; }
+            .nav-links a:last-child { border-bottom: none; }
+
+            /* Prevent header spillover on smaller screens */
+            .nav-buttons { gap: 0.5rem; flex: 1; justify-content: flex-end; min-width: 0; }
+            .phone-section { display: none; }
+            .whatsapp-btn { flex: 0 1 auto; max-width: 160px; overflow: hidden; }
+            .whatsapp-btn span { white-space: normal; line-height: 1.2; font-size: 0.78rem; }
+
+.nav-cta { display: none; }
+
+            .nav-call { display: inline-flex; }
+            .nav-call-text { font-size: 0.82rem; font-weight: 900; }
+            .nav-call-icon { font-size: 1.1rem; }
+            .nav-call { background: rgba(160,82,45,0.10); border: 1px solid rgba(160,82,45,0.25); color: var(--accent-clay); padding: 0.55rem 0.7rem; border-radius: 999px; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 900; transition: all 0.2s ease; }
+            .nav-call:hover { background: rgba(160,82,45,0.16); transform: translateY(-1px); }
+
+
+            .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .info-box.primary-details { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .features-list { grid-template-columns: 1fr 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .section-title { font-size: 1.6rem; }
+            section { padding: 2.8rem 1rem; }
+
+            .lightbox-nav { width: 58px; height: 58px; font-size: 2.2rem; }
+            .lightbox-prev { left: 12px; }
+            .lightbox-next { right: 12px; }
+
+            /* Push Zendesk up so mobile CTA doesn't cover it */
+            iframe#launcher { bottom: 75px !important; }
+            iframe#webWidget { bottom: 75px !important; }
+        }
+
+        @media (max-width: 480px) {
+            .features-list { grid-template-columns: 1fr; }
+            .amenity-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 5;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .trust-item svg { color: var(--success); }
+
+        /* Urgency Block */
+        .urgency-block {
+            background: linear-gradient(135deg, rgba(184, 134, 43, 0.15), rgba(184, 134, 43, 0.05));
+            border-left: 5px solid var(--accent-gold);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .urgency-title {
+            color: #fff;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .urgency-text { color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 600; }
+
+        /* Luxura Habitat Branding Styles */
+        .project-brand {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
+            min-width: 205px !important;
+            text-decoration: none !important;
+            flex-shrink: 0 !important;
+        }
+
+        .project-brand img {
+            display: block !important;
+            height: 30px !important;
+            width: auto !important;
+        }
+
+        .partner-divider {
+            display: none !important;
+        }
+
+        .partner-caption {
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 1180px) {
+            .project-brand {
+                min-width: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-brand {
+                min-width: 0 !important;
+                gap: 0.55rem !important;
+            }
+            .project-brand img {
+                height: 26px !important;
+            }
+            .partner-divider,
+            .partner-caption {
+                display: none !important;
+            }
+        }
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b8862b; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #2c2620; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Similar projects grid */
+    .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+    .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(44,38,32,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #2c2620; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
+    .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #b8862b; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b8862b; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #2c2620; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #b8862b; }
+
+    /* Plot infrastructure spec cards */
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .spec-card { background: #fff; border-radius: 12px; padding: 1.4rem; border-left: 4px solid var(--accent-gold); box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+    .spec-card h3 { color: var(--primary-dark); margin-bottom: 0.7rem; font-size: 1.05rem; font-weight: 900; }
+    .spec-card ul { list-style: none; padding: 0; font-size: 0.9rem; color: var(--text-light); display: grid; gap: 0.4rem; }
+
+    /* Parks highlight strip */
+    .park-highlight { background: linear-gradient(135deg, rgba(160,82,45,0.08), rgba(184,134,43,0.05)); border: 1px solid rgba(160,82,45,0.2); border-radius: 16px; padding: 1.8rem clamp(1.2rem, 3vw, 2.2rem); margin-top: 2rem; }
+    .park-highlight h3 { color: var(--accent-clay); font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .park-tags { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
+    .park-tag { background: #fff; border: 1px solid rgba(160,82,45,0.25); color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 0.4rem 0.85rem; border-radius: 999px; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "name": "Sattva Green Groves",
+          "description": "RERA-approved plotted development by Sattva Group at Nelamangala, off Tumkur Road, West/North-West Bangalore. 735 residential plots across 45 acres.",
+          "url": "https://luxurahabitat.com/projects/sattva-green-groves/",
+          "image": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "price": "7560000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://luxurahabitat.com/projects/sattva-green-groves/"
+          }
+        },
+        {
+          "@type": "Residence",
+          "name": "Sattva Green Groves Plots",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Off Tumkur Road, Nelamangala",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "accommodationCategory": "Residential Plot",
+          "numberOfAccommodationUnits": "735 Residential Plots (1,200 - 1,936 Sq Ft)"
+        },
+        {
+          "@type": "Organization",
+          "name": "Sattva Group",
+          "url": "https://luxurahabitat.com/projects/sattva-green-groves/",
+          "logo": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-logo.webp"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Sattva Green Groves and who is the developer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sattva Green Groves is a RERA-registered plotted development by Sattva Group, located at Nelamangala, off Tumkur Road, West/North-West Bangalore. The project spans approximately 45 acres with 735 residential plots." }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Sattva Green Groves located?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sattva Green Groves is located at Nelamangala, roughly 500 metres off Tumkur Road and minutes from the Nelamangala Toll Booth, the entry point to Bengaluru from the Tumkur Road corridor." }
+            },
+            {
+              "@type": "Question",
+              "name": "What plot sizes does Sattva Green Groves offer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The project's current marketing focuses on plots from 1,200 to 1,936 Sq Ft, in dimensions including 20x30, 30x40, 30x45, 30x50 ft and other configurations." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the price of plots in Sattva Green Groves?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The 1,200 Sq Ft plot is currently priced from approximately ₹75.6 Lakh onwards, per the project's own listing. The 1,936 Sq Ft plot is priced at approximately ₹1.35 Crore on one current market listing. Please enquire for the latest, verified price list, as figures vary across third-party portals." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Sattva Green Groves RERA approved?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, Sattva Green Groves is RERA registered under number PRM/KA/RERA/1250/307/PR/040524/006863. We encourage buyers to verify this directly on the Karnataka RERA portal (rera.karnataka.gov.in) before booking." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the total land area and number of plots?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sattva Green Groves spans approximately 45 acres with 735 residential plots." }
+            },
+            {
+              "@type": "Question",
+              "name": "What amenities does Sattva Green Groves include?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The layout includes a roughly 25,000 Sq Ft clubhouse, swimming pool, badminton and tennis courts, a cricket practice net, indoor games, a party hall, jogging track, meditation and yoga zones, kids' play areas, elders' seating zones and 30+ amenities in total, alongside 17 named parks and green spaces." }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the 17 named parks at Sattva Green Groves?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sattva Green Groves' master plan reserves 17 individually named parks and green zones across the layout, including a Neighbourhood Park, Community Park, Urban Forest, Native Tree Park, Woodland Park, Fitness Park, Readers Park, Elders Park, Picnic Park, Totlot Park, Sports Park, Birds Park and a Community Leisure & Pets Park, an unusually extensive green network for a plotted development of this size." }
+            },
+            {
+              "@type": "Question",
+              "name": "When is the expected possession or completion date?",
+              "acceptedAnswer": { "@type": "Answer", "text": "As per current information, the project is under development with an expected completion around September 2026. Some older marketing materials cite December 2025; please confirm the current timeline directly before booking." }
+            },
+            {
+              "@type": "Question",
+              "name": "How wide are the internal roads at Sattva Green Groves?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Internal roads across the layout range from approximately 9 to 24 metres wide." }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I buy a plot or an apartment in this part of Bangalore?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Plots typically offer greater long-term appreciation and full ownership freedom to design and build at your own pace, while apartments offer immediate move-in convenience. Sattva Green Groves suits buyers who want a RERA-registered plot to build their own home, or who are investing for long-term land appreciation on the Tumkur Road / Nelamangala corridor." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book a plot or get the Sattva Green Groves brochure?",
+              "acceptedAnswer": { "@type": "Answer", "text": "You can request the brochure, latest price list and book a site visit using the enquiry form, WhatsApp button or call button on this page." }
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Sattva Green Groves Authorized Partner",
+          "image": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Off Tumkur Road, Nelamangala",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91-8438344093",
+          "url": "https://luxurahabitat.com/projects/sattva-green-groves/"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp",
+          "description": "Sattva Green Groves Plotted Development, Nelamangala, Tumkur Road",
+          "name": "Sattva Green Groves Grand Entrance Arch"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="panel-overlay" id="panelOverlay" onclick="toggleDetailsPanel()"></div>
+
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Get Project Details</h3>
+            <button class="close-button" type="button" onclick="toggleDetailsPanel()">&times;</button>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="fbb07716-bda4-45c9-96cc-76286a94dc08">
+            <input type="hidden" name="subject" value="New Inquiry - Sattva Green Groves">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Name</label>
+            <input type="text" name="name" required placeholder="Full Name" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Email</label>
+            <input type="email" name="email" required placeholder="Email Address" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Phone</label>
+            <label for="phone" class="phone-label">Phone Number</label><input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Message</label>
+            <textarea name="message" placeholder="Your message" aria-label="Your message"></textarea>
+
+            <button type="submit" class="panel-cta">Submit Inquiry</button>
+        </form>
+
+        <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
+            <h3>Direct Contact</h3>
+            <div class="quick-contact">
+                <a href="tel:+918438344093">Call: +91 8438 344 093</a>
+                <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Green%20Groves%20and%20available%20offers">WhatsApp Chat</a>
+                <a href="mailto:projectinfoindia@gmail.com">Email Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-widget" id="sidebarWidget">
+        <button class="details-button" type="button" onclick="toggleDetailsPanel()">Request Brochure</button>
+    </div>
+
+    <nav>
+        <a href="#" class="project-brand" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="partner-caption">Real Estate Advisory</span>
+        </a>
+
+        <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#masterplan">Layout Plan</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#form">Enquire</a></li>
+        </ul>
+
+        <div class="nav-buttons" id="navButtons">
+            <a href="tel:+918438344093" class="phone-section" aria-label="Call: 8438344093">
+                <div class="phone-number" style="font-size: 1rem;">Call: 8438344093</div>
+            </a>
+
+            <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Green%20Groves%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details on whatsapp</span>
+            </a>
+
+            <a href="tel:+918438344093" class="nav-call" aria-label="Call us">
+                <span class="nav-call-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+                <span class="nav-call-text">Call</span>
+            </a>
+            <button type="button" class="nav-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});">Request Brochure</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero" style="background-image: url('/images/projects/sattva-green-groves/sattva-green-groves-hero.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(5, 8, 15, 0.75) 0%, rgba(5, 8, 15, 0.55) 50%, rgba(5, 8, 15, 0.7) 100%); z-index: 1;"></div>
+
+        <div class="hero-container" style="position: relative; z-index: 2;">
+            <div class="hero-content reveal">
+                <a href="#" class="hero-logo" aria-label="Sattva Green Groves home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="/images/projects/sattva-green-groves/sattva-green-groves-logo.webp" alt="Sattva Green Groves by Sattva Group">
+                </a>
+
+                <div class="hero-badge">RERA-Approved Plots</div>
+                <h1>Sattva Green Groves, Nelamangala — Plots on Tumkur Road</h1>
+                <p class="hero-intro">
+                    735 RERA-approved residential plots (1,200 &ndash; 1,936 Sq Ft) across 45 acres, just 500 m off Tumkur Road near the Nelamangala Toll Booth. Explore the layout plan, 17 named parks, pricing and connectivity, and enquire for the latest offer.
+                </p>
+
+                <div class="hero-info-boxes">
+                    <div class="info-box primary-details">
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">45 Acres</div>
+                                <div class="info-box-subtitle">735 Residential Plots</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">RERA Approved</div>
+                                <div class="info-box-subtitle">By Sattva Group</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box price-box">
+                        <span class="price-copy">Plots</span>
+                        <span class="price-line"><span class="new-price">Starts @ &#8377;75.6 Lakh*</span></span>
+                        <span class="offer-note">Onwards, subject to availability</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-form-section reveal" style="transition-delay:120ms;">
+                <h3 class="hero-form-title">Get Sattva Green Groves Details</h3>
+                <span class="hero-form-subtitle">Share your details and receive the layout plan + offers on WhatsApp.</span>
+
+                <form class="hero-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fbb07716-bda4-45c9-96cc-76286a94dc08">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Green Groves">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
+                    <label for="phone" class="phone-label">Phone Number</label><input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+                    <select name="plotsize" aria-label="Plot size" required>
+                        <option value="">Select Plot Size</option>
+                        <option>1,200 Sq Ft</option>
+                        <option>1,500 Sq Ft</option>
+                        <option>1,936 Sq Ft</option>
+                        <option>Not Decided Yet</option>
+                    </select>
+                    <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
+                    <button type="submit" class="hero-form-submit">Get Layout Plan &amp; Offers</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 45-Acre Gated Layout</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 17 Named Parks</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Sattva Group</div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-subtitle">A RERA-approved plotted development for buyers who want to build their own home in a 45-acre master-planned community.</p>
+
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <h3>Own the Land in a 45-Acre Master-Planned Community</h3>
+                    <p>Sattva Green Groves is a premium plotted development by Sattva Group at Nelamangala, off Tumkur Road, roughly 500 metres from the highway and minutes from the Nelamangala Toll Booth &mdash; the entry point to Bengaluru from the Tumkur Road corridor. Spread across approximately 45 acres with 735 RERA-registered plots, the layout is built for buyers who want full ownership freedom to design and build their own home, rather than a ready-made unit.</p>
+                    <p>The layout's standout feature is its green infrastructure: 17 individually named parks and open zones threaded through the community, from a dedicated Birds Park and Urban Forest to a Fitness Park, Elders Park and Community Leisure &amp; Pets Park. Explore the layout plan, amenities and pricing below, and enquire to receive the brochure and current offers.</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
+                            <div>
+                                <h3>RERA-Registered Plots</h3>
+                                <p>735 plots, legally verified layout.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+                            <div>
+                                <h3>17 Named Parks</h3>
+                                <p>Extensive green zones across the layout.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <div>
+                                <h3>24&times;7 Gated Security</h3>
+                                <p>Grand entrance arch, CCTV surveillance.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg></div>
+                            <div>
+                                <h3>Wide Internal Roads</h3>
+                                <p>9&ndash;24 m roads across the community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/images/projects/sattva-green-groves/sattva-green-groves-about.webp" alt="Sattva Green Groves Nelamangala landscaped internal boulevard road" class="about-visual" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <h2 class="section-title">Project Highlights</h2>
+            <p class="section-subtitle">Key details for Sattva Green Groves &mdash; ready for quick comparison.</p>
+
+            <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
+                <table class="highlights-table" aria-label="Sattva Green Groves project highlights">
+                    <thead>
+                        <tr><th>Attribute</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Developer</strong></td><td>Sattva Group</td></tr>
+                        <tr><td><strong>Project Type</strong></td><td>RERA-Approved Plotted Development</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Nelamangala, off Tumkur Road (~500 m), near Nelamangala Toll Booth, West/North-West Bangalore</td></tr>
+                        <tr><td><strong>Land Area</strong></td><td>~45 Acres</td></tr>
+                        <tr><td><strong>Total Plots</strong></td><td>735</td></tr>
+                        <tr><td><strong>Plot Sizes</strong></td><td>1,200 &ndash; 1,936 Sq Ft (20&times;30, 30&times;40, 30&times;45, 30&times;50 ft &amp; other configurations)</td></tr>
+                        <tr><td><strong>Starting Price</strong></td><td>&#8377;75.6 Lakh* Onwards (1,200 Sq Ft)</td></tr>
+                        <tr><td><strong>Internal Roads</strong></td><td>9 &ndash; 24 Metres Wide</td></tr>
+                        <tr><td><strong>Clubhouse</strong></td><td>~25,000 Sq Ft</td></tr>
+                        <tr><td><strong>Green Zones</strong></td><td>17 Named Parks &amp; Open Spaces</td></tr>
+                        <tr><td><strong>Project Status</strong></td><td>Under Development / Construction</td></tr>
+                        <tr><td><strong>Expected Completion</strong></td><td>September 2026</td></tr>
+                        <tr><td><strong>RERA Registration</strong></td><td>PRM/KA/RERA/1250/307/PR/040524/006863</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <h2 class="section-title">Amenities &amp; Layout Features</h2>
+            <p class="section-subtitle">30+ amenities and a ~25,000 Sq Ft clubhouse, set within 17 named parks and green zones.</p>
+
+            <div class="amenity-grid">
+                <div class="amenity-card reveal">
+                    <h3>Sports &amp; Active</h3>
+                    <ul class="amenity-list">
+                        <li>Basketball Court</li>
+                        <li>Tennis Court</li>
+                        <li>Multi Sports Court</li>
+                        <li>Cricket Practice Net</li>
+                        <li>Badminton Court</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <h3>Leisure &amp; Community</h3>
+                    <ul class="amenity-list">
+                        <li>~25,000 Sq Ft Clubhouse</li>
+                        <li>Party Hall</li>
+                        <li>Indoor Games</li>
+                        <li>Table Tennis</li>
+                        <li>Card Room &amp; Gaming Zone</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <h3>Green &amp; Wellness</h3>
+                    <ul class="amenity-list">
+                        <li>Landscaped Gardens</li>
+                        <li>Meditation Zone</li>
+                        <li>Yoga / Aerobics Zone</li>
+                        <li>Jogging Track</li>
+                        <li>Skating Rink</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:240ms;">
+                    <h3>Family &amp; Security</h3>
+                    <ul class="amenity-list">
+                        <li>Kids' Play Area</li>
+                        <li>Elders' Seating Zone</li>
+                        <li>Outdoor Gymnasium</li>
+                        <li>24&times;7 Gated Security</li>
+                        <li>Grand Entrance Arch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top:3rem;">
+                <div class="gallery-grid" id="amenitiesGalleryStrip">
+                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-green-groves-clubhouse.webp')"><img src="/images/projects/sattva-green-groves/sattva-green-groves-clubhouse.webp" alt="Sattva Green Groves Nelamangala clubhouse exterior" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-green-groves-badminton.webp')"><img src="/images/projects/sattva-green-groves/sattva-green-groves-badminton.webp" alt="Sattva Green Groves indoor badminton court amenity" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-green-groves-party-hall.webp')"><img src="/images/projects/sattva-green-groves/sattva-green-groves-party-hall.webp" alt="Sattva Green Groves party hall and dining interior" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-green-groves-kids-play.webp')"><img src="/images/projects/sattva-green-groves/sattva-green-groves-kids-play.webp" alt="Sattva Green Groves Community Leisure Park kids play area" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-green-groves-park.webp')"><img src="/images/projects/sattva-green-groves/sattva-green-groves-park.webp" alt="Sattva Green Groves Birds Park walking path at sunrise" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Explore Sattva Green Groves' entrance, boulevards, parks and clubhouse.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves Nelamangala grand entrance arch" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-about.webp" alt="Sattva Green Groves landscaped internal boulevard road" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-park.webp" alt="Sattva Green Groves Birds Park walking path and stream" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-clubhouse.webp" alt="Sattva Green Groves clubhouse building exterior" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-badminton.webp" alt="Sattva Green Groves indoor badminton court" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-party-hall.webp" alt="Sattva Green Groves party hall interior" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-green-groves/sattva-green-groves-kids-play.webp" alt="Sattva Green Groves Community Leisure Park swing installation" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="masterplan" style="padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Layout Plan &amp; 17 Named Parks</h2>
+            <p class="section-subtitle">735 numbered plots zoned around 17 individually named parks, a grand clubhouse and wide 9&ndash;24 m internal roads.</p>
+
+            <div style="max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="/images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp" alt="Sattva Green Groves Nelamangala master layout plan" loading="lazy" style="width:100%; display:block; cursor:pointer;" onclick="toggleDetailsPanel()">
+            </div>
+
+            <div class="park-highlight reveal">
+                <h3>17 Named Parks &amp; Green Zones</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">An unusually extensive green network for a plotted development &mdash; every park in the layout has its own name and purpose, from neighbourhood greens to a dedicated pets park.</p>
+                <div class="park-tags">
+                    <span class="park-tag">Neighbourhood Park</span>
+                    <span class="park-tag">Community Park</span>
+                    <span class="park-tag">Urban Forest</span>
+                    <span class="park-tag">Native Tree Park</span>
+                    <span class="park-tag">Woodland Park</span>
+                    <span class="park-tag">Fitness Park</span>
+                    <span class="park-tag">Readers Park</span>
+                    <span class="park-tag">Elders Park</span>
+                    <span class="park-tag">Picnic Park</span>
+                    <span class="park-tag">Totlot Park</span>
+                    <span class="park-tag">Sports Park</span>
+                    <span class="park-tag">Birds Park</span>
+                    <span class="park-tag">Community Leisure &amp; Pets Park</span>
+                </div>
+            </div>
+
+            <p style="text-align:center; color: var(--text-light); font-size: 0.9rem; margin-top: 1.5rem;">Click the layout plan above to request the full plot-numbering sheet and current availability.</p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="padding: 4rem 1rem; background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Plot Sizes &amp; Pricing</h2>
+            <p class="section-subtitle">Marketing currently focuses on the 1,200&ndash;1,936 Sq Ft range. Actual prices subject to updates and plot-specific premiums (facing, corner plots, phase).</p>
+
+            <div class="pricing-table-wrap">
+                <table class="pricing-table">
+                    <thead>
+                        <tr><th>Plot Size</th><th>Approx. Price</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1,200 Sq Ft</td><td>&#8377;75.6 Lakh Onwards</td><td>Current starting price</td></tr>
+                        <tr><td>1,500 Sq Ft</td><td>Price on Request</td><td>Not publicly confirmed &ndash; enquire for the latest figure</td></tr>
+                        <tr><td>1,936 Sq Ft</td><td>~&#8377;1.35 Crore*</td><td>Approximate, per one current market listing</td></tr>
+                    </tbody>
+                </table>
+                <div class="pricing-footnote">*Indicative pricing. The &#8377;75.6 Lakh starting price for 1,200 Sq Ft reflects the project's own current listing; some third-party portals show different figures (as low as &#8377;35 Lakh for smaller plots, or &#8377;84.66 Lakh for 1,200 Sq Ft). Please enquire for the verified, current price list before booking.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="infrastructure" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">What's Included in Your Plot</h2>
+            <p class="section-subtitle">Infrastructure delivered as part of the RERA-approved layout.</p>
+            <div class="spec-grid reveal">
+                <div class="spec-card">
+                    <h3>Roads &amp; Access</h3>
+                    <ul>
+                        <li>Internal roads ranging from 9 to 24 metres wide</li>
+                        <li>Grand, landscaped gated entrance arch</li>
+                        <li>~500 m from Tumkur Road</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Security</h3>
+                    <ul>
+                        <li>24/7 gated security with CCTV surveillance</li>
+                        <li>Controlled community access</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Green &amp; Community Spaces</h3>
+                    <ul>
+                        <li>17 individually named parks and open zones</li>
+                        <li>~25,000 Sq Ft clubhouse with 30+ amenities</li>
+                        <li>Dedicated sports, kids' and elders' zones</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>Approvals</h3>
+                    <ul>
+                        <li>RERA registered: PRM/KA/RERA/1250/307/PR/040524/006863</li>
+                        <li>735 numbered plots across ~45 acres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="location" style="background: var(--bg-white); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Location &amp; Connectivity</h2>
+            <p class="section-subtitle">Sattva Green Groves sits at the entry point to Bengaluru on the Tumkur Road corridor, near the Nelamangala Toll Booth.</p>
+            <div class="plan-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/sattva-green-groves/sattva-green-groves-location-map.webp" alt="Sattva Green Groves Nelamangala Tumkur Road connectivity map" onclick="openLightboxFromSrc('sattva-green-groves-location-map.webp')">
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>Distance to Key Points</strong>
+                        <span>
+                            Tumkur Road: ~500 m<br>
+                            D-Mart: ~1 km<br>
+                            Kulumepalya Toll Plaza: ~1 km<br>
+                            Nelamangala Toll Booth: Minutes away
+                        </span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>City Connectivity</strong>
+                        <span>~35 minutes to Yeshwanthpur, Malleshwaram, Rajajinagar &amp; Basaveshwar Nagar</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>On the Tumkur Road Corridor</strong>
+                        <span>Near Nelamangala Junction &amp; NICE Junction, with Nagasandra Metro Station, IKEA, Kennametal, Inventure Academy, Jindal Aluminium Limited and BIEC Exhibition Center along the same stretch, plus the Kunigal Bypass Road / Janapriya BH Road junction nearby.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Employment Corridor</strong>
+                        <span>Per the developer's own site, 60+ companies are located within a 6 km radius.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="investment" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">The Investment Advantage</h2>
+            <p class="section-subtitle">Why Sattva Green Groves is a strong choice for buyers who want to build, and for long-term investors.</p>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Land Ownership, On Your Terms</strong>
+                    <span>Unlike an apartment, a plot gives you full ownership and the freedom to design and build your own home at your own pace &mdash; with no shared building, no ongoing builder-managed maintenance, and no depreciation from ageing construction.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">An Improving Tumkur Road Corridor</strong>
+                    <span>Sattva Green Groves sits at the entry point to Bengaluru on Tumkur Road, near the Nelamangala Toll Booth and roughly 35 minutes from Yeshwanthpur, Malleshwaram, Rajajinagar and Basaveshwar Nagar. As this corridor's connectivity and commercial base continue to grow, well-approved plotted layouts here are positioned to benefit from that infrastructure push.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Backed by Sattva Group's Track Record</strong>
+                    <span>Sattva Group brings over three decades of development experience and 140+ delivered projects across India, giving Sattva Green Groves buyers a well-established brand's track record behind a RERA-registered layout &mdash; rather than a first-time, unproven developer entry into the corridor.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="developer" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">About Sattva Group</h2>
+            <p class="section-subtitle">A legacy of excellence, trust, and innovation in real estate.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0 3rem;" class="reveal">
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-clay);">30+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Years Experience</div>
+                </div>
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-clay);">140+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Projects Delivered</div>
+                </div>
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-clay);">7+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Cities Presence</div>
+                </div>
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-clay);">80+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Awards Won</div>
+                </div>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
+                <p style="margin-bottom: 1rem;">Sattva Group is one of India's leading real estate developers, known for delivering premium residential and commercial properties across apartments, villas and plotted developments. With a legacy spanning over three decades, Sattva has consistently redefined how Bengaluru builds and lives.</p>
+                <p style="margin-bottom: 1rem;">Sattva Green Groves brings that expertise to the Tumkur Road / Nelamangala corridor as a RERA-registered plotted development, focused on wide roads, an extensive 17-park green network and a well-equipped ~25,000 Sq Ft clubhouse &mdash; built for buyers who want full ownership freedom on their own timeline.</p>
+                <p>The group's other plotted development in North Bangalore, <a href="/projects/sattva-thippapura/" style="color: var(--accent-clay); font-weight: 700; text-decoration: underline;">Sattva Thippapura</a> in Doddaballapur, follows the same approach &mdash; giving buyers a second, verifiable Sattva Group plotted layout to compare before deciding.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about Sattva Green Groves, Nelamangala.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Sattva Green Groves and who is the developer?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sattva Green Groves is a RERA-registered plotted development by Sattva Group, located at Nelamangala, off Tumkur Road, West/North-West Bangalore. The project spans approximately 45 acres with 735 residential plots.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where is Sattva Green Groves located?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sattva Green Groves is located at Nelamangala, roughly 500 metres off Tumkur Road and minutes from the Nelamangala Toll Booth, the entry point to Bengaluru from the Tumkur Road corridor.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What plot sizes does Sattva Green Groves offer?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project's current marketing focuses on plots from 1,200 to 1,936 Sq Ft, in dimensions including 20x30, 30x40, 30x45, 30x50 ft and other configurations.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">What is the price of plots in Sattva Green Groves?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The 1,200 Sq Ft plot is currently priced from approximately &#8377;75.6 Lakh onwards, per the project's own listing. The 1,936 Sq Ft plot is priced at approximately &#8377;1.35 Crore on one current market listing. Please enquire for the latest, verified price list, as figures vary across third-party portals.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Is Sattva Green Groves RERA approved?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, Sattva Green Groves is RERA registered under number PRM/KA/RERA/1250/307/PR/040524/006863. We encourage buyers to verify this directly on the Karnataka RERA portal (rera.karnataka.gov.in) before booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">What is the total land area and number of plots?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sattva Green Groves spans approximately 45 acres with 735 residential plots.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">What amenities does Sattva Green Groves include?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The layout includes a roughly 25,000 Sq Ft clubhouse, swimming pool, badminton and tennis courts, a cricket practice net, indoor games, a party hall, jogging track, meditation and yoga zones, kids' play areas, elders' seating zones and 30+ amenities in total, alongside 17 named parks and green spaces.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">What are the 17 named parks at Sattva Green Groves?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sattva Green Groves' master plan reserves 17 individually named parks and green zones across the layout, including a Neighbourhood Park, Community Park, Urban Forest, Native Tree Park, Woodland Park, Fitness Park, Readers Park, Elders Park, Picnic Park, Totlot Park, Sports Park, Birds Park and a Community Leisure &amp; Pets Park, an unusually extensive green network for a plotted development of this size.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">When is the expected possession or completion date?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">As per current information, the project is under development with an expected completion around September 2026. Some older marketing materials cite December 2025; please confirm the current timeline directly before booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">How wide are the internal roads at Sattva Green Groves?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Internal roads across the layout range from approximately 9 to 24 metres wide.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">Should I buy a plot or an apartment in this part of Bangalore?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Plots typically offer greater long-term appreciation and full ownership freedom to design and build at your own pace, while apartments offer immediate move-in convenience. Sattva Green Groves suits buyers who want a RERA-registered plot to build their own home, or who are investing for long-term land appreciation on the Tumkur Road / Nelamangala corridor.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">How do I book a plot or get the Sattva Green Groves brochure?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can request the brochure, latest price list and book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Enquire for Offers &amp; Availability</h2>
+            <p class="section-subtitle">Schedule a site visit or request the Sattva Green Groves layout plan and brochure.</p>
+
+            <div class="form-container">
+                <div class="urgency-block">
+                    <div class="urgency-title">&#9200; Limited Inventory Available</div>
+                    <div class="urgency-text">735 Plots Across 45 Acres &middot; Get the Latest Launch Offer &middot; Book a Site Visit Today</div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fbb07716-bda4-45c9-96cc-76286a94dc08">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Green Groves (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="your.email@example.com" />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <label for="phone" class="phone-label">Phone Number</label><input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" />
+                    </div>
+                    <div class="form-group">
+                        <label>Plot Size Preference</label>
+                        <select name="plotsize">
+                            <option value="">Select Plot Size</option>
+                            <option>1,200 Sq Ft</option>
+                            <option>1,500 Sq Ft</option>
+                            <option>1,936 Sq Ft</option>
+                            <option>Not Decided Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Tell us what you are interested in and your timeline."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+
+                <div class="rera-notice" style="margin-top:1.8rem;background: rgba(184, 134, 43, 0.14); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-gold); border-radius: 14px; color:#faf3e6;">
+                    <strong>&#9888; Disclaimer:</strong>
+                    Images and information are for representation purpose. Pricing and availability are subject to change. Please enquire for the latest offer and unit availability details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SIMILAR PROJECTS + MARKET INSIGHTS ===== -->
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+        <span class="pfs-label">Plotted Developments</span>
+        <h2 class="pfs-title">Other Verified Projects to Consider</h2>
+        <p class="pfs-intro">Compare Sattva Green Groves against other verified plotted developments on this corridor. <a href="/projects/" style="color:var(--accent-gold);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
+        <div class="proj-compare-grid">
+          <a href="/projects/kns-samooha/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/kns-samooha-thumb.webp" alt="KNS Samooha premium plots Nelamangala Tumkur Road" loading="lazy">
+              <span class="proj-compare-badge">Nelamangala</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">KNS Samooha</p>
+              <p class="proj-compare-detail">600-2,400 Sq.Ft &middot; ~2,500 Plots &middot; Adjacent Layout, Tumkur Road</p>
+              <span class="proj-compare-link">View Project &rarr;</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-thippapura/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/sattva-thippapura-thumb.webp" alt="Sattva Thippapura plots Doddaballapur" loading="lazy">
+              <span class="proj-compare-badge">Doddaballapur</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">Sattva Thippapura</p>
+              <p class="proj-compare-detail">500 Plots &middot; Same Developer &middot; Doddaballapur, North Bangalore</p>
+              <span class="proj-compare-link">View Project &rarr;</span>
+            </div>
+          </a>
+          <a href="/projects/kns-sampada/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/kns-sampada-thumb.webp" alt="KNS Sampada plots Mysore Road" loading="lazy">
+              <span class="proj-compare-badge">Mysore Road</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">KNS Sampada</p>
+              <p class="proj-compare-detail">193 BDA Approved Plots &middot; Hejjala Toll, Mysore Road</p>
+              <span class="proj-compare-link">View Project &rarr;</span>
+            </div>
+          </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Research &amp; Guides</span>
+        <h2 class="pfs-title">Nelamangala &amp; Plot-Buying Insights</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on Sattva Green Groves, this corridor, and plot-buying in Bangalore.</p>
+        <div class="insight-grid">
+          <a href="/blog/sattva-green-groves-nelamangala-price-layout-rera/" class="insight-card">
+            <img src="/images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves Price, Layout &amp; RERA Review" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Project Review &middot; 8 Min</span>
+              <h4 class="insight-card-title">Sattva Green Groves: Price, Plot Sizes &amp; RERA Review</h4>
+              <span class="insight-card-link">Read Review &rarr;</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-green-groves-vs-kns-samooha/" class="insight-card">
+            <img src="/images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp" alt="Sattva Green Groves vs KNS Samooha comparison" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Comparison &middot; 7 Min</span>
+              <h4 class="insight-card-title">Sattva Green Groves vs KNS Samooha: Which Plot Fits You?</h4>
+              <span class="insight-card-link">Read Comparison &rarr;</span>
+            </div>
+          </a>
+          <a href="/blog/why-invest-in-nelamangala-tumkur-road-real-estate/" class="insight-card">
+            <img src="/images/projects/sattva-green-groves/sattva-green-groves-location-map.webp" alt="Why Invest in Nelamangala Tumkur Road Real Estate" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Locality Guide &middot; 6 Min</span>
+              <h4 class="insight-card-title">Why Invest in Nelamangala / Tumkur Road Real Estate (2026)</h4>
+              <span class="insight-card-link">Read Guide &rarr;</span>
+            </div>
+          </a>
+          <a href="/blog/plots-vs-apartments-investment-bangalore/" class="insight-card">
+            <img src="/images/projects/sattva-green-groves/sattva-green-groves-park.webp" alt="Plots vs Apartments Investment Bangalore" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Investment Guide &middot; 8 Min</span>
+              <h4 class="insight-card-title">Plots vs Apartments: Which Is the Smarter Investment in Bangalore?</h4>
+              <span class="insight-card-link">Read Guide &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>About Sattva Green Groves</h5>
+                <p>735 RERA-approved residential plots (1,200-1,936 Sq Ft) by Sattva Group at Nelamangala, off Tumkur Road, West/North-West Bangalore.</p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <p><a href="#masterplan">Layout Plan</a></p>
+                <p><a href="#pricing">Pricing</a></p>
+                <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#gallery">Gallery</a></p>
+                <p><a href="#location">Location</a></p>
+                <p><a href="#form">Contact</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
+                <p><a href="/terms.html">Terms &amp; Conditions</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <div class="footer-contact">
+                    <strong>Phone:</strong>
+                    <a href="tel:+918438344093">+91 8438 344 093</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>Email:</strong>
+                    <a href="mailto:projectinfoindia@gmail.com">projectinfoindia@gmail.com</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Green%20Groves%20and%20available%20offers" target="_blank" rel="noopener">Chat with us</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <p><strong>Developer:</strong> Sattva Group</p>
+                <p><strong>Location:</strong> Nelamangala, off Tumkur Road, Bengaluru, Karnataka</p>
+                <p><strong>RERA:</strong> PRM/KA/RERA/1250/307/PR/040524/006863</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; Copyright 2026 Luxura Habitat. All Rights Reserved.</div>
+            <div style="margin-top:0.6rem;">This website is for informational purposes only. Prices and offers subject to change without notice. The project is registered under Real Estate (Regulation and Development) Act, 2016 (RERA).</div>
+
+            <div style="margin-top:0.9rem; font-size:0.78rem; color: rgba(255,255,255,0.75); max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.55;">
+                <strong>RERA Authorized Agent:</strong> Narayanan Rajesh, Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045<br/>
+                <strong>RERA Project Registration No:</strong> PRM/KA/RERA/1250/307/PR/040524/006863<br/>
+                <strong>Site Address:</strong> Nelamangala, Off Tumkur Road, Bengaluru, Karnataka<br/><br/>
+                <strong>Authorized Channel Partner:</strong> This is an authorized channel partner platform used strictly for informational marketing objectives. Provided content is given by respective owners and this website and content are for information purpose only and does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()">&times;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded view">
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="previousImage()">&lt;</button>
+            <button class="lightbox-nav lightbox-next" type="button" onclick="nextImage()">&gt;</button>
+            <div class="lightbox-counter"><span id="imageCounter">1</span> / <span id="imageTotal">1</span></div>
+        </div>
+    </div>
+
+    <div class="mobile-bottom-cta" aria-hidden="true">
+        <a href="tel:+918438344093" class="mobile-cta-btn btn-call" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call
+        </a>
+        <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Green%20Groves" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+        </a>
+        <a href="#form" class="mobile-cta-btn btn-visit" aria-label="Enquire now">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Enquire
+        </a>
+    </div>
+
+    <script src="/js/project-page.js"></script>
+    <script>
+        function toggleDetailsPanel() {
+            const panel = document.getElementById('detailsPanel');
+            const overlay = document.getElementById('panelOverlay');
+            panel.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.getElementById('hamburgerMenu');
+                const navLinks = document.getElementById('navLinks');
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox images collection
+        let currentImageIndex = 0;
+        let allLightboxImages = [];
+
+        function collectAllImages() {
+            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img');
+            allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
+        }
+
+        function openLightbox(itemElement) {
+            const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
+            if (!allLightboxImages.length) collectAllImages();
+
+            const idx = allLightboxImages.findIndex(x => x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex] ? allLightboxImages[currentImageIndex].src : src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex] ? (allLightboxImages[currentImageIndex].alt || 'Image') : 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function openLightboxFromSrc(src) {
+            if (!allLightboxImages.length) collectAllImages();
+            const idx = allLightboxImages.findIndex(x => x.src.endsWith(src) || x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex] ? allLightboxImages[currentImageIndex].src : src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex] ? (allLightboxImages[currentImageIndex].alt || 'Image') : 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateLightboxImage() {
+            if (!allLightboxImages.length) return;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allLightboxImages.length; updateLightboxImage(); }
+        function previousImage() { currentImageIndex = (currentImageIndex - 1 + allLightboxImages.length) % allLightboxImages.length; updateLightboxImage(); }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            collectAllImages();
+            initProjectPageScrollReveal('section .reveal');
+        });
+
+        // Nav smooth-scroll, scroll-reveal and active-nav-link highlighting are
+        // handled by the shared /js/project-page.js — see docs/adding-a-project.md.
+        initProjectPageSmoothScroll();
+        initProjectPageActiveNav();
+
+        // Zendesk Settings
+        window.zESettings = {
+            webWidget: {
+                launcher: {
+                    chatLabel: { '*': 'Chat now' }
+                }
+            }
+        };
+
+        // Zendesk
+        (function(){
+            var script = document.createElement('script');
+            script.id = 'ze-snippet';
+            script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+            script.async = true;
+            document.body.appendChild(script);
+        })();
+    </script>
+
+    <!-- seo.js auto-generates this page's BreadcrumbList JSON-LD from the
+         URL + <h1> — no manual breadcrumb code needed. -->
+    <script src="/js/seo.js"></script>
+</body>
+</html>

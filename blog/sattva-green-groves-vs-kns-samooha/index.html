@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Sattva Green Groves vs KNS Samooha | Luxura Habitat</title>
+  <meta name="description" content="Sattva Green Groves vs KNS Samooha: two adjacent Tumkur Road plotted layouts compared on scale, pricing, amenities, green space and RERA status.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/sattva-green-groves-vs-kns-samooha/">
+  <meta property="og:title" content="Sattva Green Groves vs KNS Samooha: Which Plot Fits You? | Luxura Habitat">
+  <meta property="og:description" content="Two adjacent Tumkur Road, Nelamangala plotted layouts compared on scale, pricing at matching plot sizes, amenities, green space and RERA status.">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/sattva-green-groves-vs-kns-samooha/"
+        },
+        "headline": "Sattva Green Groves vs KNS Samooha: Which Plot Fits You?",
+        "description": "Two adjacent Tumkur Road, Nelamangala plotted layouts compared on scale, pricing at matching plot sizes, amenities, green space and RERA status.",
+        "image": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp",
+        "datePublished": "2026-08-13",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/sattva-green-groves-vs-kns-samooha/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Sattva Green Groves vs KNS Samooha", "item": "https://luxurahabitat.com/blog/sattva-green-groves-vs-kns-samooha/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Sattva Green Groves vs KNS Samooha</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Sattva Green Groves vs KNS Samooha: Which Plot Fits You?</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 13, 2026</span><span>&bull;</span><span>7 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp" alt="Sattva Green Groves vs KNS Samooha comparison" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Sattva Green Groves and KNS Samooha sit on the same stretch of Tumkur Road at Nelamangala &mdash; close enough that several aggregator listings describe them as adjacent layouts. Both are RERA-registered plotted developments, both offer a 1,200 Sq Ft plot as part of their inventory, and both are actively marketed to the same buyer: someone who wants to own land on this corridor rather than an apartment. That overlap is exactly why the two get cross-shopped, and why a direct, honest comparison is more useful here than two separate reviews read in isolation.</p>
+
+          <h2>Quick Comparison</h2>
+          <table>
+            <thead><tr><th>Attribute</th><th>Sattva Green Groves</th><th>KNS Samooha</th></tr></thead>
+            <tbody>
+              <tr><td>Developer</td><td>Sattva Group</td><td>KNS Group (KNS Infra)</td></tr>
+              <tr><td>Land Area</td><td>~45 Acres</td><td>150-170 Acres</td></tr>
+              <tr><td>Total Plots</td><td>735</td><td>~2,500</td></tr>
+              <tr><td>Plot Size Range</td><td>1,200 &ndash; 1,936 Sq Ft (marketed range)</td><td>600 &ndash; 2,400 Sq.Ft</td></tr>
+              <tr><td>1,200 Sq Ft Price</td><td>~₹75.6 Lakh onwards</td><td>~₹84 &ndash; 94 Lakh</td></tr>
+              <tr><td>Clubhouse</td><td>~25,000 Sq Ft</td><td>Community clubhouse (size not specified)</td></tr>
+              <tr><td>Green Spaces</td><td>17 individually named parks</td><td>Landscaped parks, open green spaces</td></tr>
+              <tr><td>Internal Roads</td><td>9 &ndash; 24 metres wide</td><td>9M &amp; 12M, widened to 18M boundary road</td></tr>
+              <tr><td>RERA Registration</td><td>Single registration: PRM/KA/RERA/1250/307/PR/040524/006863</td><td>Three phases, each separately registered</td></tr>
+              <tr><td>Location Anchor</td><td>~500 m off Tumkur Road, near Nelamangala Toll Booth</td><td>Kanegowdanhalli, ~2 min from Bengaluru-Mysuru Expressway</td></tr>
+            </tbody>
+          </table>
+
+          <h2>1. Scale: A Boutique Layout vs a Mega-Township</h2>
+          <p>This is the single biggest structural difference between the two. KNS Samooha is one of the largest plotted launches on this corridor &mdash; 150-170 acres and roughly 2,500 plots, released in three separate phases. Sattva Green Groves is smaller and more contained at 45 acres and 735 plots. Neither scale is objectively "better": a larger layout can mean more amenities spread across more open land and more long-term community development, while a smaller, single-phase layout can mean a simpler RERA picture and a more finished feel sooner, since there's no multi-phase rollout to track.</p>
+
+          <h2>2. Developer Track Record</h2>
+          <p>Sattva Group is a larger, multi-city developer with 140+ delivered projects and over three decades of experience, including another plotted layout in North Bangalore, <a href="/projects/sattva-thippapura/" class="money-link">Sattva Thippapura</a> in Doddaballapur. KNS Group is a more regionally focused, Bengaluru-based developer with 18+ years of experience and 35+ completed projects &mdash; notably including three sister developments (KNS Alora, KNS Amora, KNS Ananta) already delivered in the same Kanegowdanhalli micro-market as Samooha, which gives KNS Group a visible, walkable local track record specific to this exact area. Sattva's brand recognition is broader; KNS's local delivery history on this specific corridor is deeper.</p>
+
+          <h2>3. Pricing at a Matching Plot Size</h2>
+          <p>Both projects market a 1,200 Sq Ft plot, which makes for the cleanest like-for-like price comparison available. Sattva Green Groves' 1,200 Sq Ft plot starts at approximately ₹75.6 Lakh per the project's own current listing, while KNS Samooha's equivalent 30x40 plot runs from roughly ₹84 Lakh to ₹94 Lakh at a base rate of ₹5,750 per Sq.Ft before premiums. On this specific size, Sattva Green Groves currently prices lower &mdash; though as we've flagged in our <a href="/blog/sattva-green-groves-nelamangala-price-layout-rera/" class="money-link">Sattva Green Groves price review</a>, that project's own pricing has shown wider-than-usual variation across sources (from ₹35 Lakh to ₹84.66 Lakh depending on the listing), so treat any single figure, including this one, as a starting point for a conversation with the developer rather than a locked-in number. KNS Samooha's pricing is comparatively more consistent across the sources we checked.</p>
+
+          <h2>4. Amenities &amp; Green Space</h2>
+          <p>This is where Sattva Green Groves differentiates itself most clearly. Its master plan reserves 17 individually named parks and green zones &mdash; a Neighbourhood Park, Community Park, Urban Forest, Native Tree Park, Woodland Park, Fitness Park, Readers Park, Elders Park, Picnic Park, Totlot Park, Sports Park, Birds Park and a Community Leisure &amp; Pets Park &mdash; backed by a roughly 25,000 Sq Ft clubhouse and 30+ amenities. KNS Samooha's green infrastructure is real but more conventionally described: landscaped parks and open green spaces, a cricket net, volleyball court, jogging tracks and a yoga deck, without the same degree of individually named zoning. If a dense, named park network is a priority for you, Sattva Green Groves is the stronger fit on paper.</p>
+
+          <h2>5. Amenity Depth: What Each Project's Own Page Actually Lists</h2>
+          <p>Beyond the qualitative comparison above, it is worth counting what each project's own amenity section actually names, rather than relying on a general "amenities" claim from either side. Sattva Green Groves' page lists 20 individually named amenities across four categories: Sports &amp; Active (basketball, tennis, multi sports court, cricket practice net, badminton), Leisure &amp; Community (the ~25,000 Sq Ft clubhouse, party hall, indoor games, table tennis, a card room and gaming zone), Green &amp; Wellness (landscaped gardens, a meditation zone, yoga/aerobics zone, jogging track, skating rink) and Family &amp; Security (kids' play area, elders' seating zone, outdoor gymnasium, 24x7 gated security, the grand entrance arch), alongside its marketed "30+ amenities" headline figure.</p>
+          <p>KNS Samooha's page lists 12 individually named items across three categories: Sports &amp; Active (cricket net practice, volleyball court, jogging and walking tracks, an outdoor gymnasium), Nature &amp; Wellness (landscaped parks and open green spaces, a yoga deck, proximity to Kanegowdanhalli State Forest, a children's play area) and Community &amp; Security (clubhouse community spaces, wide internal roads with street lighting, 24/7 gated security with CCTV, and a Sewage Treatment Plant). Neither list is necessarily exhaustive of what either layout ultimately delivers, brochures typically name a subset, but based purely on what each project chooses to enumerate on its own page, Sattva Green Groves lists roughly 1.6x as many distinct amenities as KNS Samooha, while KNS Samooha's page is the only one of the two that explicitly names a Sewage Treatment Plant.</p>
+
+          <h2>6. Location Nuance</h2>
+          <p>Both projects sit on the Tumkur Road corridor at Nelamangala and are close enough to be described as adjacent by third-party listings, but their specific anchors differ slightly. Sattva Green Groves is positioned right at the Tumkur Road entry point to the city, about 500 m from the highway and minutes from the Nelamangala Toll Booth. KNS Samooha sits in Kanegowdanhalli, about 2 minutes from the Bengaluru-Mysuru Expressway and 2 minutes from Kanegowdanhalli State Forest, with Challaghatta Metro Station roughly 15 minutes away. If your daily commute leans toward central Bengaluru via Tumkur Road itself, Green Groves' position is marginally more direct; if expressway access toward Mysuru or forest-adjacent surroundings matter more to you, Samooha's position has the edge.</p>
+
+          <h2>7. RERA Complexity</h2>
+          <p>Sattva Green Groves carries a single RERA registration (PRM/KA/RERA/1250/307/PR/040524/006863) covering the full 735-plot layout. KNS Samooha is registered and released in three separate phases, each with its own RERA number &mdash; which means a buyer needs to confirm which phase a specific plot belongs to and check that phase's registration individually, rather than relying on one number for the whole project. This is not a red flag on its own (multi-phase registration is common for large layouts), but it is an extra verification step Sattva Green Groves buyers don't need to take.</p>
+
+          <h2>8. Road Infrastructure and Civic Amenities Compared</h2>
+          <p>Internal road width is one of the more overlooked comparison points between plotted layouts, and the two projects differ here. Sattva Green Groves' internal roads range from 9 to 24 metres, giving the layout a wider top end, its main boulevards at 24m are unusually generous for a plotted development this size. KNS Samooha's internal roads run at 9M and 12M, with an existing 15M boundary road currently being widened to an 18M master-plan road, a wider top end than its own current interior roads but narrower than Sattva Green Groves' widest stated boulevards.</p>
+          <p>KNS Samooha's page also specifies something Sattva Green Groves' does not: two dedicated Civic Amenity sites (CA-1 and CA-2) set aside within the layout, alongside its green zone, clubhouse, multi-sport court and children's play area. Civic Amenity sites are typically reserved for future community-serving uses, a school, clinic, or local retail, for instance, rather than being immediately built out, so this is a longer-term infrastructure marker rather than something available to buyers on day one, but it is a planning detail KNS Samooha states explicitly that has no stated equivalent on the Sattva Green Groves page.</p>
+
+          <h2>9. Possession Timelines: What Each Project States (and Doesn't)</h2>
+          <p>Sattva Green Groves states an expected completion around September 2026, though as we've flagged in our full <a href="/blog/sattva-green-groves-nelamangala-price-layout-rera/" class="money-link">price and RERA review</a>, some older marketing materials cite a December 2025 date instead, a gap wide enough that we recommend confirming the current RERA-filed timeline directly before booking. KNS Samooha's own project page does not state a specific completion or possession date at all, for any of its three phases, which is understandable given the layout's larger, multi-phase rollout (Phase 1, Phase 2 and Phase 3 each carry their own separate RERA registration), but it also means a buyer has to ask the developer directly for the phase-specific, RERA-filed completion date rather than finding one published.</p>
+          <p>Neither situation is a red flag by itself: possession-date drift on older marketing collateral is common across this corridor, and a large phased township genuinely may not have a single project-wide completion date to publish. But it does mean the practical step is the same for both projects: before you book on either one, ask specifically which phase (for KNS Samooha) or which current marketing cycle (for Sattva Green Groves) your plot falls under, and get that phase or project's RERA-filed possession date in writing.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>These two projects aren't identical, and the better fit genuinely depends on what you're optimizing for. Choose <strong>Sattva Green Groves</strong> if you want a more contained, single-phase layout with an unusually extensive 17-park green network, a larger dedicated clubhouse, and currently lower pricing at the matching 1,200 Sq Ft size &mdash; while accepting that you'll need to nail down a verified, current price list given the spread we found across sources. Choose <strong>KNS Samooha</strong> if scale matters to you, if you want a developer with a specific, already-delivered local track record in this exact micro-market, or if expressway-adjacent, forest-fringe positioning suits your commute better &mdash; while accepting the extra step of verifying which of its three phases your plot falls under. Whichever you lean toward, don't decide on marketing copy alone: request a dated, written price list and the current RERA-filed possession timeline for both before booking, and if budget allows, compare a specific plot number from each side by side rather than headline "from" prices.</p>
+
+          <p>Want help comparing a specific plot from either project? <a href="/projects/sattva-green-groves/#form" class="money-link">Enquire about Sattva Green Groves</a> or <a href="https://wa.me/918438344093?text=Hi%2C%20I%27d%20like%20to%20compare%20Sattva%20Green%20Groves%20and%20KNS%20Samooha" class="money-link" target="_blank" rel="noopener">message us on WhatsApp</a> for a side-by-side walkthrough.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/sattva-green-groves/" class="related-card">
+              <img src="../../images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Sattva Green Groves</p>
+                <p class="related-card-detail">735 Plots &middot; Nelamangala, Tumkur Road</p>
+              </div>
+            </a>
+            <a href="/projects/kns-samooha/" class="related-card">
+              <img src="../../images/projects/kns-samooha/kns-samooha-banner.webp" alt="KNS Samooha" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Compared Project</p>
+                <p class="related-card-title">KNS Samooha</p>
+                <p class="related-card-detail">~2,500 Plots &middot; Nelamangala, Tumkur Road</p>
+              </div>
+            </a>
+            <a href="/blog/sattva-green-groves-nelamangala-price-layout-rera/" class="related-card">
+              <img src="../../images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves Price, Layout and RERA Review" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Sattva Green Groves: Price, Plots &amp; RERA</p>
+                <p class="related-card-detail">8 Min Read &middot; Project Review</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Sattva Green Groves</p>
+            <ul class="sidebar-specs">
+              <li>735 Plots &middot; 45 Acres &middot; 1,200-1,936 Sq Ft</li>
+              <li>RERA Approved</li>
+              <li>From ₹75.6 Lakh* onwards</li>
+              <li>Nelamangala, Tumkur Road</li>
+            </ul>
+            <a href="/projects/sattva-green-groves/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Plotted Developments</h4>
+          <a href="/projects/sattva-green-groves/">Sattva Green Groves</a>
+          <a href="/projects/kns-samooha/">KNS Samooha</a>
+          <a href="/projects/sattva-thippapura/">Sattva Thippapura</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

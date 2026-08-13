@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Sattva Green Groves: Price, Plots &amp; RERA | Luxura Habitat</title>
+  <meta name="description" content="Independent review of Sattva Green Groves, Nelamangala: plot sizes, verified pricing, the 17-park layout plan and RERA status, plus our honest assessment.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/sattva-green-groves-nelamangala-price-layout-rera/">
+  <meta property="og:title" content="Sattva Green Groves: Price, Plots &amp; RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Sattva Green Groves, Nelamangala: plot sizes, verified pricing, the 17-park layout plan and RERA status.">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/sattva-green-groves-nelamangala-price-layout-rera/"
+        },
+        "headline": "Sattva Green Groves: Price, Plots & RERA Review",
+        "description": "Independent review of Sattva Green Groves, Nelamangala: plot sizes, verified pricing, the 17-park layout plan and RERA status.",
+        "image": "https://luxurahabitat.com/images/projects/sattva-green-groves/sattva-green-groves-hero.webp",
+        "datePublished": "2026-08-13",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/sattva-green-groves-nelamangala-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Sattva Green Groves: Price, Plots & RERA Review", "item": "https://luxurahabitat.com/blog/sattva-green-groves-nelamangala-price-layout-rera/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Sattva Green Groves Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Sattva Green Groves: Price, Plots &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 13, 2026</span><span>&bull;</span><span>8 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves Price Layout RERA Review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Off Tumkur Road at Nelamangala, just 500 metres from the highway and minutes from the Nelamangala Toll Booth, Sattva Green Groves is Sattva Group's plotted-development entry into the corridor &mdash; a 45-acre, 735-plot layout built around an unusually extensive 17-park green network. This is a deep-dive review covering plot sizes, verified pricing, the layout plan, and RERA status, plus our honest assessment of its investment merit.</p>
+
+          <h2>1. The Developer: Sattva Group</h2>
+          <p>Sattva Group is one of India's larger real estate developers, with over three decades of experience and 140+ projects delivered across residential, commercial and plotted formats. Sattva Green Groves isn't the group's only plotted layout in North Bangalore either &mdash; <a href="/projects/sattva-thippapura/" class="money-link">Sattva Thippapura</a> in Doddaballapur follows the same plotted-development approach, giving buyers a second, verifiable Sattva Group layout to compare before deciding.</p>
+
+          <h2>2. Location: Nelamangala, Tumkur Road</h2>
+          <p>Sattva Green Groves sits right off Tumkur Road at Nelamangala, positioned at what is effectively the entry point to Bengaluru from this corridor. Key proximity points:</p>
+          <ul>
+            <li><strong>Tumkur Road:</strong> ~500 metres</li>
+            <li><strong>D-Mart:</strong> ~1 km</li>
+            <li><strong>Kulumepalya Toll Plaza:</strong> ~1 km</li>
+            <li><strong>Nelamangala Toll Booth:</strong> minutes away</li>
+            <li><strong>Yeshwanthpur, Malleshwaram, Rajajinagar, Basaveshwar Nagar:</strong> ~35 minutes</li>
+            <li><strong>Nagasandra Metro Station, IKEA, Kennametal, Inventure Academy, Jindal Aluminium Limited, BIEC Exhibition Center:</strong> along the same Tumkur Road corridor, near the Nelamangala &amp; NICE Junctions</li>
+          </ul>
+          <p>Per the developer's own site, more than 60 companies sit within a 6 km radius &mdash; we're flagging this as the developer's claim rather than an independently verified count, but it's consistent with the corridor's growing industrial and warehousing base.</p>
+
+          <h2>3. The Layout: 735 Plots and 17 Named Parks</h2>
+          <p>The project spans approximately 45 acres with 735 RERA-registered plots. What sets Sattva Green Groves apart from most plotted developments this size is its green infrastructure: the master plan reserves <strong>17 individually named parks and open zones</strong> &mdash; including a Neighbourhood Park, Community Park, Urban Forest, Native Tree Park, Woodland Park, Fitness Park, Readers Park, Elders Park, Picnic Park, Totlot Park, Sports Park, Birds Park and a Community Leisure &amp; Pets Park &mdash; woven through the layout rather than one or two generic green patches. Internal roads range from 9 to 24 metres wide, and the community is anchored by a roughly 25,000 Sq Ft clubhouse offering 30+ amenities, from a swimming pool and badminton/tennis courts to a cricket practice net, meditation zone and kids' play areas.</p>
+
+          <h3>Plot Sizes</h3>
+          <p>Sattva Green Groves' current marketing focuses on plots from 1,200 to 1,936 Sq Ft, across dimensions including 20x30, 30x40, 30x45, 30x50 ft and other configurations. (Some older listings reference smaller entry-tier plots down to 600 Sq Ft, but that is not what the project's current marketing leads with, so we're not headlining it here.)</p>
+
+          <h2>4. Plot Dimensions in Detail: Corner Plots, Interior Plots and Road Widths</h2>
+          <p>The 20x30, 30x40, 30x45 and 30x50 ft dimensions on Sattva Green Groves' plot list are not interchangeable in practice, and the difference matters more for a plot than it does for an apartment, since you are the one who eventually designs and builds on it. A 30x40 ft plot (1,200 Sq Ft) is the standard mid-size site most buyers on this corridor compare against, while the 30x45 and 30x50 ft dimensions give you extra depth or width to work with when you plan your own floor layout, setbacks and car parking.</p>
+          <p>Plot position within the layout matters as much as size. Corner plots typically carry two road frontages instead of one, which generally means better natural light and cross-ventilation on two sides of whatever you build, plus more flexibility for a compound wall gate or a side entrance. The trade-off, as with most gated layouts, is that corner plots usually carry a developer premium over the base rate and lose a little more buildable area to setback requirements on the second frontage. Interior plots, by contrast, are typically priced closer to the base rate and back onto a single road, which some buyers prefer for a quieter, less through-traffic position.</p>
+          <p>Road width across the layout ranges from 9 to 24 metres, and where your plot sits relative to that range is worth checking before you shortlist a plot number. Wider roads, generally the 18-24m boulevards, tend to run past the entrance, clubhouse and the larger civic zones, and plots facing them usually see more visibility and easier vehicle access, sometimes at a modest price premium. The narrower 9-12m roads are the interior residential lanes that make up most of the layout, offering a quieter frontage with less through-traffic. Neither is objectively better: ask for the specific road width fronting any plot number you are seriously considering, since it is not something you can infer from the "1,200 to 1,936 Sq Ft" headline range alone.</p>
+
+          <h2>5. Pricing &mdash; and Why the Numbers Vary So Much Online</h2>
+          <p>Sattva Green Groves' pricing is genuinely inconsistent across the sources we checked &mdash; more so than most plotted launches on this corridor. Some third-party portals list a starting price as low as ₹35 Lakh (for the smallest entry-tier plots), others show figures around ₹43 Lakh, and one currently shows ₹84.66 Lakh for a 1,200 Sq Ft plot. The figure we're treating as authoritative is the project's own current listing:</p>
+          <table>
+            <thead><tr><th>Plot Size</th><th>Approx. Price</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>1,200 Sq Ft</td><td>₹75.6 Lakh onwards</td><td>Current starting price, per the project's own site</td></tr>
+              <tr><td>1,500 Sq Ft</td><td>Price on request</td><td>Not publicly confirmed in any source we checked</td></tr>
+              <tr><td>1,936 Sq Ft</td><td>~₹1.35 Crore*</td><td>Approximate, per one current market listing</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Indicative pricing only. A separate third-party listing shows ₹84.66 Lakh for the 1,200 Sq Ft plot &mdash; a meaningful gap from the ₹75.6 Lakh figure above. Neither figure should be treated as final; contact us for the current, verified price list before booking.</p>
+          <p>Our recommendation: don't anchor your budget to any single number you see online for this project, including ours. Ask the developer or an authorized channel partner for a dated, written price list for the specific plot number you're considering, rather than relying on a headline "from ₹X Lakh" figure that may reflect a smaller or older-priced plot.</p>
+
+          <h2>6. Project Status &amp; Possession</h2>
+          <p>Sattva Green Groves is currently under development. Here too, sources disagree: a number of older marketing materials and aggregator listings cite a December 2025 possession date, but the more current information we have places the expected completion around September 2026. Given how far apart these two dates are, ask the developer directly for the current, RERA-filed completion timeline before making any purchase decision timed around possession.</p>
+
+          <h2>7. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. Sattva Green Groves carries the following registration:</p>
+          <ul>
+            <li><strong>RERA Registration:</strong> PRM/KA/RERA/1250/307/PR/040524/006863</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Channel Partner / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <p>We encourage all prospective buyers to independently verify this registration number on the official Karnataka RERA website (rera.karnataka.gov.in) before finalising a booking, and to request the RERA-filed completion date in writing given the possession-date discrepancy noted above.</p>
+
+          <h2>8. Financing a Plot Purchase in Karnataka: What Buyers Should Know</h2>
+          <p>Financing a plot works differently from financing an apartment, and it is worth understanding the differences before you budget for Sattva Green Groves. Most banks and housing finance companies treat a "plot loan" or "land loan" as a distinct product from a standard home loan, and it typically comes with a lower loan-to-value ratio, often in the 70-75% range against the plot's registered value, compared to the 80-90% that is common on a ready or under-construction home loan. Lenders will usually only finance a plot inside an approved, RERA-registered layout like this one, not agricultural or unapproved land, so the project's RERA status is also part of what makes it loan-eligible in the first place.</p>
+          <p>The tax treatment differs too, and this is the part buyers most often miss. Under current income tax rules, interest paid on a pure plot loan is not eligible for a Section 24(b) deduction on its own, because there is no residential structure yet to claim it against. That changes once you construct a house on the plot: if construction is completed within five years of taking the loan, the interest paid during the construction period becomes claimable in five equal instalments starting the year construction finishes, alongside the usual annual interest and Section 80C principal deductions once the house is ready. In effect, a plot-only purchase is a longer game for tax planning than a ready apartment, since the benefit only kicks in once you build. Confirm the current rules with a tax advisor before assuming any specific deduction, as this is general guidance and not project-specific advice.</p>
+          <p>Registration and stamp duty are separate, one-time costs to budget for on top of the plot price. Karnataka's stamp duty currently runs at approximately 5% of the property's value for properties above roughly ₹45 Lakh, plus a small surcharge and cess that varies depending on whether the layout falls within a municipal corporation, a city municipal council, or a gram panchayat area, with an additional 1% registration fee on top. Since Sattva Green Groves is priced from ₹75.6 Lakh onwards, most buyers here will fall into that higher stamp duty slab. Ask the developer or your sub-registrar's office for the exact, current rate applicable to Nelamangala before finalising your budget, since this is a general Karnataka guideline rather than a figure specific to this project.</p>
+          <p>One more practical difference: a plot purchase is typically paid as a lump sum or over a short milestone schedule to the developer, since there is no ongoing construction on their end to link payments to, unlike an apartment's construction-linked payment plan. Your own house construction, whenever you get to it, is a separate financing decision you will make later, usually through a composite home loan once you have building plans ready.</p>
+
+          <h2>9. Land Appreciation and Resale: Why Plots Behave Differently From Apartments</h2>
+          <p>Land and built-up property tend to move in different directions over time, and that is the core argument for buying a plot instead of an apartment on a growth corridor like this one. A building depreciates as it ages, its fittings wear out, its structure needs eventual repair, and its resale value reflects that wear even as the land underneath continues to appreciate. A vacant, RERA-registered plot has no structure to depreciate: its value is a function of the land alone, plus whatever the surrounding corridor's connectivity and commercial development do to demand in that specific pocket over the years.</p>
+          <p>The self-build angle is the other real differentiator. Buying a plot means you are not locked into a builder's floor plan, finish specifications or construction timeline. You decide when to build, what to build, and how much to spend on it, whether that is a modest single-storey home now or a larger multi-storey build a few years down the line once your budget allows. That flexibility has a cost too: unlike an apartment, you are managing your own construction project, contractor selection, approvals, quality control, whenever you choose to build, so the "you save on markup" argument for plots comes with real time and effort attached.</p>
+          <p>Developer track record matters more for a plot purchase than buyers sometimes assume, since the thing you are really relying on the developer for is not a finished building, it is a correctly approved, correctly registered, correctly delivered layout: roads, drainage, the promised parks and clubhouse, and clean title on your specific plot number. Sattva Group's 140+ delivered projects and three-decade track record is a real, checkable factor here, which is why we have flagged the developer's own history in this review rather than treating it as boilerplate. Once you do build, resale dynamics shift again: a completed home on your own plot resells, and often rents, more like a standard house, with the finished structure adding to, not just riding along with, the underlying land value, which is a different proposition from reselling the vacant plot itself.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Sattva Green Groves' clearest strength is its green infrastructure: 17 individually named parks across a 45-acre, 735-plot layout is a genuinely unusual level of planning for a plotted development, backed by a ~25,000 Sq Ft clubhouse and 30+ amenities. Its location at the Tumkur Road entry point to Bengaluru, near the Nelamangala Toll Booth, is also a real connectivity advantage. The clear caution flag is pricing and possession-date consistency: we found a wider-than-usual spread across sources on both, from a ₹35 Lakh to ₹84.66 Lakh entry price and a December 2025 vs September 2026 completion date. Neither of these is disqualifying on its own &mdash; this kind of drift is common as a project's marketing materials age and get re-syndicated across portals &mdash; but it does mean you should insist on a dated, written price list and completion timeline from the developer or an authorized channel partner before booking, rather than working off any single online listing. If you want a RERA-registered plot on an improving Tumkur Road corridor and value an unusually extensive park network, Sattva Green Groves is worth shortlisting alongside its adjacent neighbour <a href="/blog/sattva-green-groves-vs-kns-samooha/" class="money-link">KNS Samooha</a> &mdash; just verify the current price list and RERA-filed possession date directly before committing.</p>
+
+          <p>Have questions about Sattva Green Groves, or want the current verified price list? <a href="/projects/sattva-green-groves/#form" class="money-link">Enquire on the project page</a> or <a href="https://wa.me/918438344093?text=Hi%2C%20I%27d%20like%20the%20current%20price%20list%20for%20Sattva%20Green%20Groves" class="money-link" target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/sattva-green-groves/" class="related-card">
+              <img src="../../images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp" alt="Sattva Green Groves" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Sattva Green Groves</p>
+                <p class="related-card-detail">735 Plots &middot; Nelamangala, Tumkur Road</p>
+              </div>
+            </a>
+            <a href="/blog/sattva-green-groves-vs-kns-samooha/" class="related-card">
+              <img src="../../images/projects/kns-samooha/kns-samooha-master-plan.webp" alt="Sattva Green Groves vs KNS Samooha" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Sattva Green Groves vs KNS Samooha</p>
+                <p class="related-card-detail">7 Min Read &middot; Comparison</p>
+              </div>
+            </a>
+            <a href="/blog/why-invest-in-nelamangala-tumkur-road-real-estate/" class="related-card">
+              <img src="../../images/projects/kns-samooha/kns-samooha-location-map.png" alt="Why Invest in Nelamangala Tumkur Road Real Estate" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Why Invest in Nelamangala / Tumkur Road</p>
+                <p class="related-card-detail">6 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/sattva-green-groves/sattva-green-groves-master-plan.webp" alt="Sattva Green Groves" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Sattva Green Groves</p>
+            <ul class="sidebar-specs">
+              <li>735 Plots &middot; 45 Acres &middot; 1,200-1,936 Sq Ft</li>
+              <li>RERA Approved</li>
+              <li>From ₹75.6 Lakh* onwards</li>
+              <li>Nelamangala, Tumkur Road</li>
+            </ul>
+            <a href="/projects/sattva-green-groves/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Plotted Developments</h4>
+          <a href="/projects/sattva-green-groves/">Sattva Green Groves</a>
+          <a href="/projects/kns-samooha/">KNS Samooha</a>
+          <a href="/projects/sattva-thippapura/">Sattva Thippapura</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

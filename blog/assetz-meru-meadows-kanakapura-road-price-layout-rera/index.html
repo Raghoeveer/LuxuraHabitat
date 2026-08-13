@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Assetz Meru &amp; Meadows: Price, Layout &amp; RERA | Luxura Habitat</title>
+  <meta name="description" content="Independent review of Assetz Meru &amp; Meadows, Kanakapura Main Road: pricing, floor plans, possession timeline and RERA verification, plus our honest assessment.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/assetz-meru-meadows-kanakapura-road-price-layout-rera/">
+  <meta property="og:title" content="Assetz Meru &amp; Meadows: Price, Layout &amp; RERA Details | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Assetz Meru &amp; Meadows: pricing, floor plans, possession and RERA verification.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Assetz Meru &amp; Meadows: Price, Layout &amp; RERA Details">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .cta-box { background: #faf8f5; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 20px 24px; margin: var(--space-lg) 0; text-align: center; }
+    .cta-box p { margin-bottom: 12px; font-weight: 600; color: var(--primary-forest); }
+    .cta-box a { display: inline-block; background: var(--primary-forest); color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.92rem; transition: background 0.2s; }
+    .cta-box a:hover { background: var(--accent-copper); }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/assetz-meru-meadows-kanakapura-road-price-layout-rera/"
+        },
+        "headline": "Assetz Meru & Meadows: Price, Layout & RERA Details",
+        "description": "Independent review of Assetz Meru & Meadows, Kanakapura Main Road: pricing by configuration, floor plans, possession timeline and RERA verification.",
+        "image": "https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp",
+        "datePublished": "2026-08-13",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/assetz-meru-meadows-kanakapura-road-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Kanakapura Road Real Estate Guide", "item": "https://luxurahabitat.com/areas/kanakapura-road/"},
+          {"@type": "ListItem", "position": 4, "name": "Assetz Meru & Meadows: Price, Layout & RERA Details", "item": "https://luxurahabitat.com/blog/assetz-meru-meadows-kanakapura-road-price-layout-rera/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/kanakapura-road/">Kanakapura Road Hub</a><span>/</span><span>Assetz Meru &amp; Meadows Deep-Dive</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Assetz Meru &amp; Meadows: Price, Layout, Possession &amp; RERA Details</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 13, 2026</span><span>&bull;</span><span>8 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp" alt="Assetz Meru & Meadows Price Layout RERA" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Assetz Meru &amp; Meadows is one of the newer high-rise launches on the <a href="/areas/kanakapura-road/" class="money-link">Kanakapura Road corridor</a>, and one that's already drawing plenty of aggregator listings and third-party price chatter online &mdash; not all of it consistent. This is a deep-dive review covering layout, verified pricing, possession, RERA status, and our honest assessment of its investment merit.</p>
+
+          <h2>1. The Developer: Assetz Property Group</h2>
+          <p>Assetz Property Group is a Bangalore-headquartered real estate developer with an established portfolio of residential and commercial developments across the city, known for contemporary architecture and quality construction. Meru &amp; Meadows carries that brand into a twin-tower, high-rise format on Kanakapura Main Road.</p>
+
+          <h2>2. Location: Kanakapura Main Road</h2>
+          <p>The project sits on Kanakapura Main Road, near NICE Road, in South Bangalore. Key proximity metrics:</p>
+          <ul>
+            <li><strong>JP Nagar:</strong> ~5.0 km</li>
+            <li><strong>Banashankari:</strong> ~4.6 km</li>
+            <li><strong>Jayanagar:</strong> ~7.4 km</li>
+            <li><strong>BTM Layout:</strong> ~8.9 km</li>
+            <li><strong>RR Nagar:</strong> ~8.0 km</li>
+            <li><strong>Kengeri:</strong> ~9.0 km</li>
+            <li><strong>Silk Board Junction:</strong> ~10.4 km</li>
+            <li><strong>Bannerghatta:</strong> ~12.0 km</li>
+          </ul>
+
+          <h2>3. The Project: What You Actually Get</h2>
+          <p>Meru &amp; Meadows spans roughly 5 acres with an unusually high 87% open space for a high-rise development, arranged as two towers housing <strong>468+ residences</strong> &mdash; all verified as 3 BHK. A roughly 31,000 sq ft clubhouse anchors 30+ amenities, including an infinity pool, kids' pool, gym, spa, multiple sports courts (tennis, padel tennis, pickleball, badminton), a pet park, amphitheatre, co-working space and café.</p>
+
+          <h3>Unit Sizes: 3 BHK Only</h3>
+          <p>We want to flag this clearly, because it's a point of confusion in some third-party listings: <strong>every verified floor plan at Meru &amp; Meadows is 3 BHK.</strong> Claims of a "4 BHK, 2,500 sq ft" configuration exist only in unverified marketing chatter, not in the builder's official floor plan documentation, and should not be relied on. The three confirmed layouts are 1,897 sq ft (3T), 2,061 sq ft (4T) and 2,111 sq ft (4T) super built-up area, each with ~75% carpet-area efficiency and balconies up to 125 sq ft.</p>
+
+          <h2>4. Room-by-Room: What Each Layout Actually Offers</h2>
+          <p>The three confirmed floor plans aren't just the same layout scaled up to different total areas &mdash; room by room, they behave quite differently. Here's the verified dimension breakdown for all three, pulled directly from the builder's floor plan documentation:</p>
+          <table>
+            <thead><tr><th>Room</th><th>3 BHK 3T (1,897 sq ft)</th><th>3 BHK 4T (2,061 sq ft)</th><th>3 BHK 4T (2,111 sq ft)</th></tr></thead>
+            <tbody>
+              <tr><td>Foyer</td><td>6'5" x 5'11"</td><td>6'7" x 6'1"</td><td>5'10" x 6'1"</td></tr>
+              <tr><td>Living &amp; Dining</td><td>26'3" x 13'0"</td><td>13'0" x 27'11"</td><td>13'0" x 31'5"</td></tr>
+              <tr><td>Balcony</td><td>8'11" x 13'0"</td><td>13'0" x 9'0"</td><td>13'0" x 9'0"</td></tr>
+              <tr><td>Kitchen</td><td>9'0" x 12'0"</td><td>9'0" x 12'0"</td><td>9'0" x 12'0"</td></tr>
+              <tr><td>Utility</td><td>4'11" x 8'0"</td><td>8'0" x 4'11"</td><td>8'0" x 4'11"</td></tr>
+              <tr><td>Powder Toilet</td><td>5'5" x 6'1"</td><td>6'2" x 5'5"</td><td>6'2" x 5'5"</td></tr>
+              <tr><td>Master Bedroom</td><td>13'5" x 12'0"</td><td>11'5" x 13'11"</td><td>11'5" x 13'11"</td></tr>
+              <tr><td>Bedroom 1</td><td>10'6" x 11'0"</td><td>11'0" x 11'0"</td><td>11'0" x 11'0"</td></tr>
+              <tr><td>Bedroom 2</td><td>14'6" x 11'0"</td><td>12'0" x 12'6"</td><td>12'0" x 12'6"</td></tr>
+            </tbody>
+          </table>
+          <p>A few things stand out once you compare these side by side rather than just going by the headline square footage. First, the kitchen is identical across all three layouts at 9'0" x 12'0" &mdash; the extra area in the 4T units doesn't go toward a bigger kitchen, it goes almost entirely into the living and dining room, which stretches from 26'3" long in the 3T unit to 31'5" long in the largest 4T layout. Second, the master bedroom is actually very close in floor area across all three configurations (roughly 161 sq ft in the 3T unit versus roughly 159 sq ft in both 4T units) even though the overall unit is 165-215 sq ft larger &mdash; so a buyer upgrading from the 1,897 sq ft to the 2,061 or 2,111 sq ft layout should know they're mainly paying for a longer living/dining span and a fourth toilet, not meaningfully larger bedrooms. Third, both 4T layouts share nearly identical room dimensions to each other; the 2,111 sq ft plan's extra 50 sq ft over the 2,061 sq ft plan comes almost entirely from the living/dining room being roughly 3.5 feet longer, not from any other room changing size.</p>
+
+          <h2>5. Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Super Built-up Area</th><th>Carpet Area</th><th>Price (Approx.)</th></tr></thead>
+            <tbody>
+              <tr><td>3 BHK 3T</td><td>1,897 sq.ft.</td><td>1,421 sq.ft.</td><td>₹2.74 Cr Onwards</td></tr>
+              <tr><td>3 BHK 4T</td><td>2,061 sq.ft.</td><td>1,543 sq.ft.</td><td>Price on Request</td></tr>
+              <tr><td>3 BHK 4T</td><td>2,111 sq.ft.</td><td>1,582 sq.ft.</td><td>Price on Request</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*₹2.74 Cr is the only figure we could verify against an official builder reference at the time of writing. Some aggregator sites list figures anywhere from ₹2.3 Cr to ₹2.96 Cr for the same project &mdash; treat those as approximate market chatter, not confirmed pricing, and always request the current official price sheet before relying on any number, including ours.</p>
+
+          <h2>6. Financing a ₹2.74 Cr+ Purchase: What to Ask Before You Sign</h2>
+          <p>At the ₹2.74 Cr entry price point, financing mechanics matter almost as much as the floor plan itself. A few things worth working through with your bank and your advisor before booking:</p>
+          <h3>Loan Structuring and an Illustrative EMI</h3>
+          <p>Most lenders will finance up to 75-80% of the property's value for a ticket size in this range, subject to your income and credit profile, leaving the remaining 20-25% &mdash; plus stamp duty, registration and any applicable GST on the under-construction portion &mdash; to be funded upfront. On an indicative 80% loan-to-value basis for the ₹2.74 Cr, 1,897 sq ft unit, that's a loan of roughly ₹2.19 Cr. At an illustrative floating rate of around 8.5-9% per annum over a 20-year tenure &mdash; a reasonable but not guaranteed range for well-qualified salaried borrowers &mdash; the EMI would work out to approximately ₹1.9-2.0 lakh per month. Treat this purely as a planning estimate: actual rates, eligibility and EMI depend on the lender, your credit score, income documentation and any scheme the bank is running when you apply, and rates move over time, so get a current, written loan estimate before budgeting against this figure.</p>
+          <h3>Pre-EMI vs Full EMI During Construction</h3>
+          <p>Because possession is scheduled for November 2030, this is a construction-linked purchase, and most banks offer two disbursement structures during the build period: <strong>pre-EMI</strong>, where you pay interest only on the amount disbursed so far against each construction milestone (lower monthly outgo now, but the principal doesn't reduce until possession, and total interest paid over the loan's life is higher); or <strong>full EMI</strong> from day one, where you start paying principal and interest on the full sanctioned amount immediately, even though the flat isn't ready (higher monthly outgo now, but more principal closed out earlier and less interest paid overall). Ask your bank to run both scenarios with real numbers before choosing, and factor in whether you're also paying rent elsewhere during construction.</p>
+          <h3>Stamp Duty and Registration in Karnataka</h3>
+          <p>For a property priced above ₹45 lakh in Karnataka, stamp duty is currently levied at 5% of the property value (or the government guidance value, whichever is higher), plus applicable surcharge and cess that typically push the effective rate to somewhere in the 6-7% range depending on whether the property falls within BBMP limits or a different local body's jurisdiction, plus a separate 1% registration fee. On a ₹2.74 Cr transaction, that's a meaningful add-on cost &mdash; potentially ₹16-19 lakh combined &mdash; on top of the base price. These are statutory rates revised periodically by the Karnataka government, so confirm the exact current percentage with your lawyer or the local sub-registrar's office before finalising your budget; don't rely on this or any other online estimate as the final figure.</p>
+
+          <h2>7. Possession Timeline</h2>
+          <p>Possession is scheduled for <strong>November 2030</strong>, per the project's RERA registration &mdash; a longer runway than several other Kanakapura Road launches, reflecting the project's relatively early construction stage. We'd recommend confirming the current construction milestone directly before booking.</p>
+
+          <h2>8. Density, Scale and Long-Term Value</h2>
+          <p>Run the numbers on Meru &amp; Meadows' own figures and a few things become clearer about what kind of community this actually is. At 468+ residences across roughly 5 acres, the project works out to approximately 94 units per acre &mdash; a meaningful density for a high-rise, but one that's offset by the fact that it's concentrated into just two towers rather than spread across several mid-rise blocks, which is how the project manages to keep 87% of the land as open, landscaped space. A typical high-rise project on this corridor with a similar unit count spread across four or five towers would usually land at a noticeably lower open-space percentage, because more towers generally means more building footprint even at the same total unit count.</p>
+          <p>What this means practically for a buyer: you're getting a taller, more vertically-organised building in exchange for more garden, amenity and landscaped space at ground level &mdash; a genuine trade-off, not just marketing framing. It also means lift capacity, corridor traffic and common-area upkeep are concentrated in two structures rather than distributed across several, which is worth asking about directly (number of lifts per tower, homes per floor, and the maintenance/CAM structure), since Assetz hasn't published those specifics in the material we've reviewed.</p>
+          <p>On the resale and rental side: an all-3-BHK, single-configuration project tends to have a narrower but more predictable buyer pool at resale than a project mixing 1 BHK through 4 BHK &mdash; you're not competing with your own project's smaller or larger units for the same buyer segment, but you're also not able to appeal outside that segment either. For an under-construction project with possession still several years out, near-term rental yield isn't yet a meaningful data point, since there's no completed inventory to actually rent out &mdash; any rental-yield figure quoted for this project today is necessarily a corridor-level estimate based on comparable completed developments nearby, not a verified number specific to Meru &amp; Meadows, and should be treated with appropriate caution until the project nears completion.</p>
+
+          <h2>9. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. For Assetz Meru &amp; Meadows:</p>
+          <ul>
+            <li><strong>Project RERA Number:</strong> PRM/KA/RERA/1251/310/PR/130625/007828</li>
+            <li><strong>Status:</strong> RERA-registered, active project</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Channel Partner / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <h3>How to Verify This Yourself in Under Five Minutes</h3>
+          <p>Go to the official Karnataka RERA portal (rera.karnataka.gov.in), open the "Registered Projects" search, and enter either the project name or the registration number above. The listing should show the promoter's name, the registered project area, the approved unit count, and the validity period of the registration &mdash; cross-check these against what's stated on this page and against the builder's official price sheet. If the search returns nothing, or if the promoter name doesn't match Assetz Property Group's registered entity, treat that as a reason to pause and ask direct questions before paying anything, not a minor discrepancy to overlook.</p>
+          <p>We encourage all prospective buyers to independently verify these details on the official Karnataka RERA website before finalising a booking.</p>
+
+          <div class="cta-box">
+            <p>Want the current price sheet and floor plans for Assetz Meru &amp; Meadows?</p>
+            <a href="/projects/assetz-meru-meadows/#form">Request Price List &rarr;</a>
+          </div>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Assetz Meru &amp; Meadows pairs a credible, established developer name with a genuinely differentiated open-space ratio for a high-rise project &mdash; 87% open space and a 31,000 sq ft clubhouse across just two towers is a real trade-off in favour of density, not just marketing language. The all-3-BHK configuration mix keeps the buyer profile focused, which can be a plus for resale liquidity within that segment. The main things we'd want a buyer to nail down before booking: get a written, official price sheet for the 2,061 sq ft and 2,111 sq ft layouts (avoid anchoring on aggregator-site numbers), and independently confirm the current construction stage given the 2030 possession date. For buyers specifically set on a premium, low-density 3 BHK high-rise on this corridor, it's a serious option worth shortlisting alongside <a href="/blog/assetz-meru-meadows-vs-purva-hallmark/" class="money-link">Purva Hallmark</a>, its closest price-and-size match nearby.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/assetz-meru-meadows/" class="related-card">
+              <img src="../../images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Assetz Meru &amp; Meadows</p>
+                <p class="related-card-detail">3 BHK &middot; Kanakapura Main Road</p>
+              </div>
+            </a>
+            <a href="/blog/assetz-meru-meadows-vs-purva-hallmark/" class="related-card">
+              <img src="../../images/projects/purva-hallmark/purva-hallmark-banner.webp" alt="Assetz Meru & Meadows vs Purva Hallmark" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Assetz Meru &amp; Meadows vs Purva Hallmark</p>
+                <p class="related-card-detail">7 Min Read &middot; Comparison</p>
+              </div>
+            </a>
+            <a href="/projects/purva-hallmark/" class="related-card">
+              <img src="../../images/projects-thumbs/purva-hallmark-thumb.webp" alt="Purva Hallmark" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Project</p>
+                <p class="related-card-title">Purva Hallmark</p>
+                <p class="related-card-detail">3 &amp; 3.5/4 BHK &middot; Vajarahalli, Kanakapura Road</p>
+              </div>
+            </a>
+            <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="related-card">
+              <img src="../../images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Kanakapura Road Market Trends 2026" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Kanakapura Road Market Trends 2026</p>
+                <p class="related-card-detail">7 Min Read &middot; Market Analysis</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Assetz Meru &amp; Meadows</p>
+            <ul class="sidebar-specs">
+              <li>468+ premium 3 BHK residences</li>
+              <li>87% open space, 31,000 sq ft clubhouse</li>
+              <li>RERA: PRM/KA/RERA/1251/310/PR/130625/007828</li>
+              <li>Kanakapura Main Road, near NICE Road</li>
+            </ul>
+            <a href="/projects/assetz-meru-meadows/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="https://wa.me/918438344093?text=Hi%20I%20have%20a%20question%20about%20Assetz%20Meru%20%26%20Meadows" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Kanakapura Road</h4>
+          <a href="/projects/assetz-meru-meadows/">Assetz Meru &amp; Meadows</a>
+          <a href="/projects/purva-hallmark/">Purva Hallmark</a>
+          <a href="/areas/kanakapura-road/">Kanakapura Road Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

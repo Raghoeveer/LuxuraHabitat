@@ -131,6 +131,25 @@ caused a real, shipped bug once.
   `[project]-vs-[closest-sibling]` comparison are fine outcomes if the
   research supports them — but pick the 2 topics because the keywords
   justify them, not because they're the default pattern.
+- **Every blog post needs 1,500+ words of actual article body content**
+  (nav/footer/script boilerplate doesn't count toward this). The
+  2026-08-12 SEO audit flagged all ~30 existing posts as thin (650-1,220
+  words) against this same 1,500-word floor — a real, already-diagnosed
+  problem, not a new bar. Four brand-new posts (2 for Assetz Meru &
+  Meadows, 2 for Sattva Green Groves) shipped under this floor (873-1,316
+  words counting the *whole page*, so less once boilerplate is excluded)
+  before being caught, meaning the thin-content problem is easy to
+  reproduce on a fresh page even when everything else on the Phase 4/8
+  checklist passes — title/description length and word count are
+  independent checks, passing one says nothing about the other. Hit the
+  floor with genuine additional depth (construction/spec detail, deeper
+  locality analysis, financing/loan angle, resale-value reasoning, more
+  granular comparison tables), not filler or repetition. Verify with a
+  word count on the rendered article body before shipping, e.g.:
+  `python3 -c "import re,html,sys; t=open(sys.argv[1]).read(); t=re.sub(r'<script.*?</script>|<style.*?</style>','',t,flags=re.DOTALL); t=html.unescape(re.sub(r'<[^>]+>',' ',t)); print(len(t.split()))" path/to/index.html`
+  — this counts the whole page including nav/footer, so treat it as a
+  floor check (must clearly exceed 1,500, with margin for the boilerplate
+  it's over-counting), not a precise article-body count.
 
 ## 4. Interlink — in both directions
 

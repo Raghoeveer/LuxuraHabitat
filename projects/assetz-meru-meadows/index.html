@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+      }, true);
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Assetz Meru &amp; Meadows, Kanakapura Main Road: premium 3 BHK homes from 1,897 sq ft, &#8377;2.74 Cr onwards. 87% open space, 31,000 sq ft clubhouse. RERA-verified.">
+    <meta name="keywords" content="Assetz Meru & Meadows, Assetz Meru Meadows Kanakapura Road, Assetz 3 BHK Kanakapura, premium apartments Kanakapura Main Road, Assetz Property Group Bangalore">
+    <meta name="author" content="Luxura Habitat">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <meta property="og:title" content="Assetz Meru &amp; Meadows, Kanakapura Road | Premium 3 BHK High-Rise">
+    <meta property="og:description" content="468+ premium 3 BHK residences on Kanakapura Main Road by Assetz Property Group. 87% open space, 31,000 sq ft clubhouse, 30+ amenities. From &#8377;2.74 Cr.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/assetz-meru-meadows/">
+    <meta property="og:site_name" content="Assetz Meru & Meadows">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Assetz Meru &amp; Meadows, Kanakapura Road | Premium 3 BHK High-Rise">
+    <meta name="twitter:description" content="468+ premium 3 BHK residences on Kanakapura Main Road by Assetz Property Group. 87% open space, 31,000 sq ft clubhouse. From &#8377;2.74 Cr.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp" fetchpriority="high">
+
+    <link rel="icon" href="/images/projects/assetz-meru-meadows/favicon.png" type="image/png">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/assetz-meru-meadows/" />
+    <title>Assetz Meru &amp; Meadows, Kanakapura Road: 3 BHK | RERA</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
+
+        :root {
+            --primary-dark: #0f172a;
+            --secondary-dark: #111827;
+            --accent-green: #0b6b3c;
+            --accent-warm: #d4a574;
+            --bg-light: #f5f3f0;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #556070;
+            --border-light: #e6e2dc;
+            --success: #22c55e;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 0.8rem clamp(1rem, 4vw, 2rem);
+            box-shadow: 0 2px 18px rgba(25, 31, 28, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(14px);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            gap: 6px;
+            z-index: 101;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #30362f;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .logo { display: flex; flex-direction: column; align-items: flex-start; gap: 0.32rem; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 28px; width: auto; object-fit: contain; }
+        .partner-divider { display: none; }
+        .partner-caption { display: block; width: 105px; color: var(--text-light); font-size: 0.56rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.09em; text-transform: uppercase; text-align: justify; text-align-last: justify; text-justify: inter-character; white-space: nowrap; }
+        @media (max-width: 768px) {
+            .partner-divider, .partner-caption { display: none; }
+        }
+        .brand-text { color: var(--accent-green); font-size: clamp(0.9rem, 1.8vw, 1.2rem); font-weight: 900; line-height: 1; letter-spacing: 0; text-transform: uppercase; white-space: nowrap; }
+        .brand-text small { display: block; color: var(--accent-warm); font-size: 0.58em; font-weight: 800; margin-top: 0.18rem; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.6vw, 1.6rem);
+            list-style: none;
+            flex: 1;
+            flex-wrap: nowrap;
+        }
+        .nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { color: var(--accent-green); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        .nav-buttons { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(11, 107, 60, 0.08);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .phone-section:hover { background: rgba(11, 107, 60, 0.15); transform: translateY(-2px); }
+
+        .phone-label { font-size: clamp(0.6rem, 0.8vw, 0.75rem); color: var(--text-light); font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase; }
+        .phone-number { font-size: clamp(0.75rem, 1vw, 0.95rem); color: var(--primary-dark); font-weight: 800; white-space: nowrap; }
+
+        .whatsapp-btn {
+            background: #128c4f;
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: clamp(0.7rem, 0.9vw, 0.86rem);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+        /* Hero */
+        .hero {
+            background: #05080f url('/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp') center/cover no-repeat;
+            color: #e5e7eb;
+            min-height: calc(100vh - 68px);
+            padding: clamp(1rem, 2.2vw, 2rem);
+            position: relative;
+            overflow: hidden;
+            margin-top: 68px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(2,6,23,0.55), rgba(2,6,23,0.28) 55%, rgba(2,6,23,0.5));
+            z-index: 0;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: calc(100vh - 108px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 0.5fr);
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 4.5rem);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(1rem, 2vh, 1.45rem);
+            padding: clamp(1.5rem, 3.8vw, 3.1rem);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 7px solid var(--accent-warm);
+            border-radius: 10px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        .hero-logo { display: block; width: min(220px, 60%); margin: 0 0 0.35rem; text-decoration: none; }
+        .hero-logo img { display: block; width: 100%; height: auto; }
+
+        .hero-badge {
+            color: #ffffff;
+            background: var(--accent-green);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            width: fit-content;
+            padding: 0.45rem 1rem;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--accent-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin: 0.2rem 0;
+            max-width: 900px;
+        }
+
+        .hero-intro { color: #0b1220; font-size: clamp(0.95rem, 1.25vw, 1.15rem); line-height: 1.7; max-width: 620px; }
+
+        .hero-info-boxes { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+
+        .info-box {
+            border: 1px solid rgba(11, 107, 60, 0.16);
+            border-radius: 10px;
+            padding: clamp(0.9rem, 2vh, 1.2rem);
+            background: rgba(245, 243, 240, 0.78);
+        }
+
+        .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .info-row { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 0.8rem; }
+
+        .info-box-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 900;
+        }
+
+        .info-box-title { color: #111827; font-size: clamp(1rem, 1.25vw, 1.25rem); font-weight: 900; }
+        .info-box-subtitle { color: #111827; font-size: clamp(0.82rem, 1vw, 0.98rem); font-weight: 600; }
+
+        .price-box { text-align: left; color: var(--accent-green); line-height: 1.25; }
+        .price-copy { display: block; font-weight: 700; font-size: 0.95rem; }
+        .price-line { display: block; color: #111827; font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 800; }
+        .new-price { color: #111827; font-weight: 900; }
+        .offer-note { color: #111827; display: block; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 0.2rem; }
+
+        .hero-media { display: none; }
+
+        .hero-form-section {
+            position: relative;
+            justify-self: end;
+            width: min(390px, 100%);
+            background: rgba(255, 255, 255, 0.96);
+            border-top: 5px solid var(--accent-green);
+            border-radius: 10px;
+            padding: clamp(1.35rem, 2.6vw, 2rem);
+            box-shadow: 0 28px 74px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+            color: #111827;
+        }
+
+        .hero-form-title { color: #0b1220; font-size: 1.34rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.5rem; }
+        .hero-form-subtitle { display: block; color: #5b6776; font-size: 0.88rem; line-height: 1.55; margin-bottom: 1.15rem; }
+
+        .hero-form { display: flex; flex-direction: column; gap: 0.9rem; }
+        .hero-form input[type="text"],
+        .hero-form input[type="tel"],
+        .hero-form input[type="email"],
+        .hero-form textarea {
+            width: 100%;
+            min-height: 48px;
+            padding: 0.86rem 0.95rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.92rem;
+            background: rgba(255,255,255,0.97);
+            color: var(--text-dark);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form input:focus, .hero-form textarea:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(11, 107, 60, 0.14); }
+        .hero-form textarea { min-height: 96px; resize: vertical; }
+        .hero-form input::placeholder, .hero-form textarea::placeholder { color: #6b7280; }
+
+        .hero-form-submit {
+            width: 100%;
+            min-height: 50px;
+            background: var(--accent-green);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 0.98rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form-submit:hover { background: #075b31; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(11, 107, 60, 0.25); }
+
+        section { padding: 5rem 2rem; }
+        .section-title { font-size: 2.4rem; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+
+        .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .about { background: var(--bg-light); padding: 4rem 2rem; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr); gap: 2rem; align-items: center; }
+        .about-content h3 { font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        .about-content p { font-size: 1rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+        .feature-item { display: flex; gap: 1rem; }
+        .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
+
+        .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 60%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+        .gallery { background: var(--bg-white); }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(11,107,60,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(11,107,60,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .amenities { background: var(--bg-light); }
+        .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(11,107,60,0.12); }
+        .amenity-card:hover { border-color: rgba(11,107,60,0.35); }
+        .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
+        .amenity-list { list-style: none; display: grid; gap: 0.45rem; }
+        .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
+        .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); margin-top: 0.55rem; }
+
+        .plan { background: var(--bg-white); }
+        .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
+        .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
+        .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
+        .plan-image:hover img { transform: scale(1.02); }
+
+        .plan-notes { display: grid; gap: 0.9rem; }
+        .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+        .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
+        .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
+
+        .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
+        .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
+        .form-container { max-width: 620px; margin: 2rem auto 0; }
+        .form-container form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 800; font-size: 0.95rem; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.95rem; border: none; border-radius: 10px; font-family: inherit; font-size: 0.95rem;
+            background: rgba(255,255,255,0.95); color: #0b1220;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(11, 107, 60, 0.22); background: #fff; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .form-submit { width: 100%; padding: 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11,107,60,0.25); }
+
+        .form-message { text-align: center; margin-top: 0.8rem; padding: 0.9rem; border-radius: 10px; display: none; }
+        .form-message.success { display: block; background: rgba(34, 197, 94, 0.2); color: var(--success); border: 1px solid rgba(34,197,94,0.35); }
+
+        .faq-section { background: var(--bg-white); padding: 4.5rem 2rem; }
+        .faq-list { max-width: 980px; margin: 0 auto; display: grid; gap: 1rem; }
+        .faq-item { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.05); }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.2rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+        .faq-question:hover { background: rgba(11, 107, 60, 0.05); }
+        .faq-question.open { color: var(--accent-green); }
+        .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-question.open .faq-arrow { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.2rem; color: var(--text-light); font-size: 0.94rem; line-height: 1.75; }
+        .faq-answer.open { max-height: 500px; padding: 0 1.2rem 1.1rem; }
+        .footer { background: var(--primary-dark); color: var(--bg-white); padding: 3rem 2rem 2rem; }
+
+        /* Project Highlights table */
+        .highlights { background: var(--bg-light); }
+        .highlights-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(11,107,60,0.18);
+            margin-top: 1.8rem;
+        }
+        table.highlights-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+        .highlights-table th,
+        .highlights-table td {
+            padding: 0.95rem 1rem;
+            border-bottom: 1px solid rgba(11,107,60,0.12);
+            vertical-align: top;
+            font-size: 0.98rem;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .highlights-table thead th {
+            background: rgba(11, 107, 60, 0.08);
+            color: var(--accent-green);
+            font-weight: 900;
+            text-align: left;
+        }
+        .highlights-table tbody tr:hover td { background: rgba(11,107,60,0.04); }
+        .highlights-table tbody tr:last-child td { border-bottom: none; }
+        .highlights-table td strong { color: var(--primary-dark); }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: var(--accent-green); }
+        .footer-section p, .footer-section a { font-size: 0.9rem; color: #bbb; text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
+        .footer-section a:hover { color: var(--accent-green); }
+        .footer-contact strong { display: block; color: var(--bg-white); margin-bottom: 0.25rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: #999; }
+
+        /* Sidebar widget */
+        .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
+        .details-button {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 0.85rem;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 0.9rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transition: all 0.3s ease;
+            box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.6px;
+        }
+        .details-panel {
+            position: fixed;
+            right: -420px;
+            top: 0;
+            width: 400px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            z-index: 998;
+            transition: right 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+        .details-panel.active { right: 0; }
+
+        .panel-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 997; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .panel-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-light); }
+        .panel-header h3 { font-size: 1.5rem; color: var(--primary-dark); font-family: 'Playfair Display', serif; font-weight: 900; }
+        .close-button { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #6b7280; transition: color 0.3s ease; }
+        .close-button:hover { color: var(--accent-green); }
+
+        .panel-section { margin-bottom: 2rem; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
+        .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
+        .quick-contact a:hover { color: var(--accent-warm); }
+
+        .panel-cta { background: var(--accent-green); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
+        .panel-cta:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(11,107,60,0.25); }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { display: flex; opacity: 1; align-items: center; justify-content: center; }
+        .lightbox-content { position: relative; max-width: 94%; max-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.9); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; color: #fff; font-size: 2.2rem; cursor: pointer; background: none; border: none; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .lightbox-close:hover { transform: scale(1.15); color: #a7f3d0; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(11,107,60,0.85); color: #fff; border: 2px solid #fff; font-size: 2.5rem; padding: 1rem 1.5rem; cursor: pointer; border-radius: 10px; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .lightbox-nav:hover { background: var(--accent-green); transform: translateY(-50%) scale(1.08); }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(11,107,60,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+@media (max-width: 1024px) {
+            .sidebar-widget { display: none; }
+            .phone-section { display: flex; }
+            .mobile-call-btn { display: none; }
+            .nav-cta { display: inline-flex; }
+
+            .mobile-call-icon { font-size: 1.05rem; }
+            .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+            .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
+            .hero-media { display: none; }
+        }
+
+        .mobile-bottom-cta { display: none; }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.5rem 1rem;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                z-index: 9999 !important;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+
+            .hamburger-menu { display: flex; order: 3; margin-right: 1rem; }
+            .hamburger-menu span { background-color: #30362f; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 99;
+                border-bottom: 1px solid rgba(15,23,42,0.08);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a {
+                padding: 1.2rem 1.5rem;
+                border-bottom: 1px solid rgba(15,23,42,0.08);
+                color: var(--primary-dark);
+                font-size: 1.05rem;
+                text-align: center;
+            }
+            .nav-links a:last-child { border-bottom: none; }
+
+            .nav-buttons { display: none !important; }
+
+.nav-cta { display: none; }
+
+            .nav-call { display: none; }
+            .nav-call-text { font-size: 0.82rem; font-weight: 900; }
+            .nav-call-icon { font-size: 1.1rem; }
+            .nav-call { background: rgba(11,107,60,0.10); border: 1px solid rgba(11,107,60,0.25); color: var(--accent-green); padding: 0.55rem 0.7rem; border-radius: 999px; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 900; transition: all 0.2s ease; }
+
+            .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .about-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .features-list { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.85rem; }
+            section { padding: 2.8rem 1rem; }
+
+            .lightbox-nav { width: 58px; height: 58px; font-size: 2.2rem; }
+            .lightbox-prev { left: 12px; }
+            .lightbox-next { right: 12px; }
+
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0;
+                background: #fff;
+                box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            }
+            .mobile-cta-btn {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 0.75rem;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--border-light);
+            }
+            .mobile-cta-btn:last-child { border-right: none; }
+            .mobile-cta-btn svg { margin-bottom: 3px; }
+            .btn-whatsapp { color: #128c4f; }
+            .btn-call { color: var(--accent-green); }
+            .btn-visit { background: var(--accent-green); color: #fff; border: none; }
+
+            iframe#launcher { bottom: 75px !important; }
+            iframe#webWidget { bottom: 75px !important; }
+        }
+
+        @media (max-width: 480px) {
+            .features-list { grid-template-columns: 1fr; }
+            .amenity-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(1.1rem, 5vw, 1.6rem); }
+            .hero-content { max-width: 100%; }
+            .hero-form-section { width: 100%; }
+            .info-box.primary-details { grid-template-columns: 1fr; }
+            .whatsapp-btn { padding: 0.42rem 0.65rem; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
+        }
+
+        .masterplan-grid { display: grid; gap: 2rem; margin-top: 1.5rem; }
+        .masterplan-image { border-radius: 12px; overflow: hidden; box-shadow: 0 14px 36px rgba(2,6,23,0.1); }
+        .masterplan-image img { width: 100%; display: block; cursor: pointer; }
+
+        .floor-group { margin-top: 3rem; }
+        .floor-group h3 { font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-warm); }
+        .floor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .floor-card { background: #fff; border: 1px solid rgba(11,107,60,0.15); border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .floor-card:hover { transform: translateY(-5px); border-color: var(--accent-green); }
+        .floor-card img { width: 100%; aspect-ratio: 1/1; object-fit: contain; margin-bottom: 1rem; cursor: pointer; }
+        .floor-card h3 { color: var(--text-dark); font-weight: 800; font-size: 1.1rem; }
+        .floor-card p { color: var(--text-light); font-size: 0.85rem; font-weight: 600; }
+
+        /* Project footer strip — links out to the Kanakapura Road hub and research */
+        .project-footer-strip { padding: 64px 24px; background: var(--bg-light); }
+        .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+        .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 10px; display: block; }
+        .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--primary-dark); margin-bottom: 8px; }
+        .pfs-intro { font-size: 0.97rem; color: var(--text-light); margin-bottom: 28px; max-width: 620px; }
+        .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+        .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+        .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+        .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-warm); margin-bottom: 6px; display: block; }
+        .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); line-height: 1.35; margin-bottom: 10px; flex: 1; }
+        .insight-card-link { font-size: 0.82rem; font-weight: 700; color: var(--accent-warm); }
+        .pfs-divider { border: none; border-top: 1px solid var(--border-light); margin: 52px 0; }
+        .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+        .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+        .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+        .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.82); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+        .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+        .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px; line-height: 1.3; }
+        .proj-compare-detail { font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px; flex: 1; }
+        .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: var(--accent-warm); }
+    </style>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "name": "Assetz Meru & Meadows",
+          "description": "Premium 3 BHK high-rise residences on Kanakapura Main Road, South Bangalore, by Assetz Property Group.",
+          "url": "https://luxurahabitat.com/projects/assetz-meru-meadows/",
+          "image": "https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp"
+        },
+        {
+          "@type": "Residence",
+          "name": "Assetz Meru & Meadows Premium 3 BHK Residences",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kanakapura Main Road",
+            "addressRegion": "Bangalore",
+            "addressCountry": "IN"
+          },
+          "numberOfRooms": 3,
+          "accommodationCategory": "Apartment"
+        },
+        {
+          "@type": "Organization",
+          "name": "Assetz Property Group",
+          "url": "https://luxurahabitat.com/projects/assetz-meru-meadows/",
+          "logo": "https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-logo.webp"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the starting price of Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The 3 BHK, 1,897 sq ft configuration at Assetz Meru & Meadows starts at approximately ₹2.74 Cr onwards. Pricing for the larger 2,061 sq ft and 2,111 sq ft 3 BHK layouts is available on request, and can vary by tower, floor rise and any ongoing offers. Use the enquiry form or WhatsApp link on this page for the current pricing sheet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What configurations are available at Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Meru & Meadows offers 3 BHK residences only, across three verified layouts: 1,897 sq ft (3T), 2,061 sq ft (4T) and 2,111 sq ft (4T) super built-up area. There is no verified 4 BHK configuration at this project; any such claim seen elsewhere is unconfirmed third-party marketing, not the builder's official floor plan documentation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the RERA number for Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The official RERA registration number for Assetz Meru & Meadows is PRM/KA/RERA/1251/310/PR/130625/007828. We encourage all prospective buyers to independently verify this number on the official Karnataka RERA website before finalizing a booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What amenities does Assetz Meru & Meadows offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Meru & Meadows offers 30+ amenities across a roughly 31,000 sq ft clubhouse and 87% open landscaped grounds, including an infinity swimming pool, kids' pool, gymnasium, spa & salon, yoga room, tennis, padel tennis, pickleball, badminton, jogging track, pet park, amphitheatre, co-working space, café, and dedicated senior citizen and kids' play zones. See the Amenities and Gallery sections on this page for the full list."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I see the Assetz Meru & Meadows master plan and floor plans?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The master plan and all three verified 3 BHK floor plans (1,897, 2,061 and 2,111 sq ft) are available on this page under the 'Master Plan' and 'Floor Plans' sections, with super built-up area, carpet area and room-wise dimensions for each layout."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When is possession for Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Possession for Assetz Meru & Meadows is scheduled for November 2030, per the project's RERA registration. We recommend confirming the current construction status and any tower-wise handover schedule directly through the enquiry form before booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far is Assetz Meru & Meadows from JP Nagar and Silk Board?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Meru & Meadows sits on Kanakapura Main Road, close to NICE Road, roughly 5.0 km from JP Nagar, 4.6 km from Banashankari, 7.4 km from Jayanagar, 8.9 km from BTM Layout and 10.4 km from Silk Board Junction."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I enquire or book a site visit for Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can send an enquiry, request the current price list, or schedule a site visit using the contact form, the call button, or the WhatsApp button available throughout this page. Providing your phone number in the form lets our team follow up with accurate availability and pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are home loans available for Assetz Meru & Meadows?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. As a RERA-registered project by an established developer, Assetz Meru & Meadows is eligible for home loan approval from major national and private banks and housing finance companies. Our team can help connect you with lenders and assist with documentation once you enquire."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Assetz Meru & Meadows Authorized Partner",
+          "image": "https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kanakapura Main Road",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560062",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91-8438344093",
+          "url": "https://luxurahabitat.com/projects/assetz-meru-meadows/"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://luxurahabitat.com/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp",
+          "description": "Assetz Meru & Meadows twin-tower elevation at dusk, Kanakapura Main Road",
+          "name": "Assetz Meru & Meadows Elevation"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="panel-overlay" id="panelOverlay" onclick="toggleDetailsPanel()"></div>
+
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Get Project Details</h3>
+            <button class="close-button" type="button" onclick="toggleDetailsPanel()">&times;</button>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+            <input type="hidden" name="access_key" value="279d458e-2b55-447e-8bf2-d2045a5785be">
+            <input type="hidden" name="subject" value="New Inquiry - Assetz Meru & Meadows">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Name</label>
+            <input type="text" name="name" required placeholder="Full Name" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Email</label>
+            <input type="email" name="email" required placeholder="Email Address" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Phone</label>
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Message</label>
+            <textarea name="message" placeholder="Your message" aria-label="Your message"></textarea>
+
+            <button type="submit" class="panel-cta">Submit Inquiry</button>
+        </form>
+
+        <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
+            <h3>Direct Contact</h3>
+            <div class="quick-contact">
+                <a href="tel:+918438344093">Call: +91 8438 344 093</a>
+                <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Assetz%20Meru%20%26%20Meadows%20and%20available%20offers">WhatsApp Chat</a>
+<a href="mailto:projectinfoindia@gmail.com">Email Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-widget" id="sidebarWidget">
+        <button class="details-button" type="button" onclick="toggleDetailsPanel()">Request Brochure</button>
+    </div>
+
+    <nav>
+        <a href="#" class="logo" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+<img src="/images/logos/company_logo.png" alt="Luxura Habitat">
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="partner-caption">Real Estate Advisory</span>
+        </a>
+
+        <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#units">Unit Plans</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#form">Enquire</a></li>
+        </ul>
+
+        <div class="nav-buttons" id="navButtons">
+            <a href="tel:+918438344093" class="phone-section">
+                <div class="phone-number">Call: 8438344093</div>
+            </a>
+
+            <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Assetz%20Meru%20%26%20Meadows%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details on whatsapp</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <a href="#" class="hero-logo" aria-label="Assetz Meru & Meadows home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-logo.webp" alt="Assetz Meru & Meadows logo" onerror="this.style.display='none'">
+                </a>
+
+                <h1>Assetz Meru &amp; Meadows, Kanakapura Main Road — Premium 3 BHK High-Rise Residences</h1>
+                <p class="hero-intro">
+                    Assetz Meru &amp; Meadows brings 468+ premium 3 BHK residences across twin high-rise towers on Kanakapura Main Road, South Bangalore. With 87% open space, a ~31,000 sq ft clubhouse and 30+ amenities, it's built for buyers who want space, greenery, and a strong developer name in one address. Enquire now for the latest price list and offers.
+                </p>
+
+                <div class="hero-info-boxes">
+                    <div class="info-box primary-details">
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">468+ Residences</div>
+                                <div class="info-box-subtitle">Twin Tower High-Rise</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">87% Open Space</div>
+                                <div class="info-box-subtitle">31,000 Sq Ft Clubhouse</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box price-box">
+                        <span class="price-copy">Starting from</span>
+<span class="price-line"><span class="new-price">&#8377;2.74 Cr* Onwards</span></span>
+                        <span class="offer-note">3 BHK, 1,897 Sq Ft &middot; Subject to availability</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-form-section reveal" style="transition-delay:120ms;">
+                <h3 class="hero-form-title">Get Meru &amp; Meadows Details</h3>
+                <span class="hero-form-subtitle">Share your details and receive the price list + offers on WhatsApp.</span>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="hero-form">
+                    <input type="hidden" name="access_key" value="279d458e-2b55-447e-8bf2-d2045a5785be">
+                    <input type="hidden" name="subject" value="New Inquiry - Assetz Meru & Meadows">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Name</label>
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Email</label>
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Phone</label>
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Message</label>
+                    <textarea name="message" placeholder="Your message" aria-label="Your message"></textarea>
+
+                    <button type="submit" class="hero-form-submit">Get Price List &amp; Offers</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-subtitle">A premium twin-tower community offering space, greenery and an established developer brand. If you're searching for 3 BHK apartments on Kanakapura Road, Assetz Meru &amp; Meadows is a genuine high-rise contender in the corridor.</p>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Welcome to Assetz Meru &amp; Meadows</h3>
+                    <p>Welcome to <strong>Assetz Meru &amp; Meadows</strong>, a premium residential development by <strong>Assetz Property Group</strong> on Kanakapura Main Road, near NICE Road, in South Bangalore. Spread across approximately 5 acres, the project is designed as two high-rise towers housing <strong>468+ residences</strong>, all in verified 3 BHK configurations.</p>
+                    <p>With an impressive <strong>87% open space</strong> and a roughly <strong>31,000 sq ft clubhouse</strong>, Meru &amp; Meadows leans into low-density, resort-style living even within a high-rise footprint &mdash; a genuine differentiator for buyers comparing twin-tower developments against denser, more compact projects on the same corridor. Possession is scheduled for <strong>November 2030</strong>.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">A</div>
+                            <div>
+                                <h3>Assetz Brand</h3>
+                                <p>Established Bangalore developer</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">87%</div>
+                            <div>
+                                <h3>Open Space</h3>
+                                <p>Landscaped, low-density feel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows landscaped garden and clubhouse walkway, Kanakapura Road" class="about-visual" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <h2 class="section-title">Amenities</h2>
+            <p class="section-subtitle">30+ amenities spread across a ~31,000 sq ft clubhouse and 87% open landscaped grounds.</p>
+
+            <div class="amenity-grid">
+                <div class="amenity-card reveal">
+                    <h3>Fitness &amp; Wellness</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">A full wellness circuit for residents, from lap swimming to guided fitness and recovery spaces.</p>
+                    <ul class="amenity-list">
+                        <li>Infinity Swimming Pool</li>
+                        <li>Gymnasium</li>
+                        <li>Spa &amp; Salon</li>
+                        <li>Yoga Room</li>
+                        <li>Outdoor Gym</li>
+                        <li>Jogging Track</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <h3>Sports &amp; Recreation</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">Multiple professional-grade courts for residents who want a genuine sporting lifestyle at home.</p>
+                    <ul class="amenity-list">
+                        <li>Tennis Court</li>
+                        <li>Padel Tennis</li>
+                        <li>Pickleball Court</li>
+                        <li>Badminton Court</li>
+                        <li>Multipurpose Court</li>
+                        <li>Box Cricket</li>
+                        <li>Table Tennis</li>
+                        <li>Billiards</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <h3>Kids &amp; Family</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">Dedicated spaces for every generation of the family, including a genuine pet park &mdash; not a common inclusion on this corridor.</p>
+                    <ul class="amenity-list">
+                        <li>Kids' Pool</li>
+                        <li>Kids' Play Area</li>
+                        <li>Pet Park</li>
+                        <li>Senior Citizen Park with Seating Pods</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:240ms;">
+                    <h3>Leisure &amp; Work-Life</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">Social, cultural and work-from-home-friendly spaces woven through the landscaped grounds.</p>
+                    <ul class="amenity-list">
+                        <li>Amphitheatre</li>
+                        <li>Outdoor Reading / Working Pods</li>
+                        <li>Co-working Space</li>
+                        <li>Caf&eacute;</li>
+                        <li>Creative Studio</li>
+                        <li>Party Hall &amp; Games Area</li>
+                        <li>Landscape Island &amp; Water Feature</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A first look at Assetz Meru &amp; Meadows.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item"><img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp" alt="Assetz Meru & Meadows twin-tower elevation at dusk, Kanakapura Main Road" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows landscaped garden and clubhouse walkway" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-amenities-1.webp" alt="Assetz Meru & Meadows pet park amenity, Kanakapura Road" loading="lazy" onclick="openLightbox(this)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="masterplan" style="background: var(--bg-white); padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Master Plan</h2>
+            <p class="section-subtitle">Two high-rise towers set within 87% open, landscaped grounds &mdash; click for the full amenity layout.</p>
+            <div class="masterplan-grid">
+                <div class="masterplan-image" style="max-width: 900px; margin: 0 auto;">
+                    <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-master-plan.webp" alt="Assetz Meru & Meadows master plan with clubhouse, pool and amenity layout, Kanakapura Main Road" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="units" style="background: var(--bg-light); padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Floor Plans</h2>
+            <p class="section-subtitle">Three verified 3 BHK layouts, all with large balconies up to 125 sq ft and ~75% carpet-area efficiency. Click any plan for pricing &amp; details.</p>
+            <div class="floor-group reveal">
+                <div class="floor-grid">
+                    <div class="floor-card">
+                        <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-3bhk-1897sqft.webp" alt="Assetz Meru & Meadows 3 BHK 1,897 sq ft floor plan layout" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                        <h3>3 BHK 3T &mdash; 1,897 Sq Ft</h3>
+                        <p>Carpet: 1,421 sq ft (~75%)</p>
+                    </div>
+                    <div class="floor-card">
+                        <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-3bhk-2061sqft.webp" alt="Assetz Meru & Meadows 3 BHK 2,061 sq ft floor plan layout" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                        <h3>3 BHK 4T &mdash; 2,061 Sq Ft</h3>
+                        <p>Carpet: 1,543 sq ft (~75%)</p>
+                    </div>
+                    <div class="floor-card">
+                        <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-3bhk-2111sqft.webp" alt="Assetz Meru & Meadows 3 BHK 2,111 sq ft floor plan layout" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                        <h3>3 BHK 4T &mdash; 2,111 Sq Ft</h3>
+                        <p>Carpet: 1,582 sq ft (~75%)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlights-table-wrap reveal" style="margin-top: 3rem;">
+                <table class="highlights-table">
+                    <thead>
+                        <tr>
+                            <th>Room</th>
+                            <th>3 BHK 3T (1,897 Sq Ft)</th>
+                            <th>3 BHK 4T (2,061 Sq Ft)</th>
+                            <th>3 BHK 4T (2,111 Sq Ft)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Foyer</strong></td><td>6'5" x 5'11"</td><td>6'7" x 6'1"</td><td>5'10" x 6'1"</td></tr>
+                        <tr><td><strong>Living &amp; Dining</strong></td><td>26'3" x 13'0"</td><td>13'0" x 27'11"</td><td>13'0" x 31'5"</td></tr>
+                        <tr><td><strong>Balcony</strong></td><td>8'11" x 13'0"</td><td>13'0" x 9'0"</td><td>13'0" x 9'0"</td></tr>
+                        <tr><td><strong>Kitchen</strong></td><td>9'0" x 12'0"</td><td>9'0" x 12'0"</td><td>9'0" x 12'0"</td></tr>
+                        <tr><td><strong>Utility</strong></td><td>4'11" x 8'0"</td><td>8'0" x 4'11"</td><td>8'0" x 4'11"</td></tr>
+                        <tr><td><strong>Powder Toilet</strong></td><td>5'5" x 6'1"</td><td>6'2" x 5'5"</td><td>6'2" x 5'5"</td></tr>
+                        <tr><td><strong>Master Bedroom</strong></td><td>13'5" x 12'0"</td><td>11'5" x 13'11"</td><td>11'5" x 13'11"</td></tr>
+                        <tr><td><strong>Bedroom 1</strong></td><td>10'6" x 11'0"</td><td>11'0" x 11'0"</td><td>11'0" x 11'0"</td></tr>
+                        <tr><td><strong>Bedroom 2</strong></td><td>14'6" x 11'0"</td><td>12'0" x 12'6"</td><td>12'0" x 12'6"</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="padding: 4rem 1rem; background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Price</h2>
+            <p class="section-subtitle">All three verified layouts are 3 BHK &mdash; there is no confirmed 4 BHK configuration at this project.</p>
+            <div class="highlights-table-wrap reveal">
+                <table class="highlights-table">
+                    <thead>
+                        <tr>
+                            <th>Configuration</th>
+                            <th>Super Built-up Area</th>
+                            <th>Carpet Area</th>
+                            <th>Price (Approx.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3 BHK 3T</strong></td>
+                            <td>1,897 sq. ft.</td>
+                            <td>1,421 sq. ft.</td>
+                            <td>Rs. 2.74 Cr* Onwards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 BHK 4T</strong></td>
+                            <td>2,061 sq. ft.</td>
+                            <td>1,543 sq. ft.</td>
+                            <td>Price on Request</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 BHK 4T</strong></td>
+                            <td>2,111 sq. ft.</td>
+                            <td>1,582 sq. ft.</td>
+                            <td>Price on Request</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-top:1rem;">*Price shown is for the 1,897 sq ft 3 BHK layout, the only configuration with a verified official reference price at the time of writing. Contact us for the current price list across all three layouts.</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="form-submit" style="width: auto; padding: 1rem 3rem;" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Request Complete Price List</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="location" style="background: var(--bg-light); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Location</h2>
+            <p class="section-subtitle">On Kanakapura Main Road, near NICE Road &mdash; well placed for South Bangalore's established residential belt.</p>
+
+            <div class="plan-grid reveal">
+                <div class="plan-image">
+                    <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-location-map.webp" alt="Assetz Meru & Meadows location map showing distance to JP Nagar, Banashankari, Jayanagar and Silk Board" loading="lazy" onclick="openLightbox(this)">
+                </div>
+                <div class="plan-notes">
+                    <div class="plan-note">
+                        <h2 class="section-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 0.5rem; margin-top: 0;">Connectivity</h2>
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">Perfect for buyers searching for apartments near Kanakapura Main Road or apartments near NICE Road, with quick access across South Bangalore.</p>
+                        <strong>Distance to Key Areas</strong>
+                        <span>JP Nagar: ~5.0 km<br>Banashankari: ~4.6 km<br>Jayanagar: ~7.4 km<br>BTM Layout: ~8.9 km<br>RR Nagar: ~8.0 km<br>Kengeri: ~9.0 km<br>Silk Board Junction: ~10.4 km<br>Bannerghatta: ~12.0 km</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Corridor Advantage</strong>
+                        <span>Kanakapura Main Road offers direct access to NICE Road, bypassing central Bangalore traffic while staying connected to JP Nagar, Banashankari and Jayanagar's established social infrastructure.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment & Kanakapura Road -->
+    <section class="investment" id="investment" style="padding: 4rem 1rem; background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Why Invest in Assetz Meru &amp; Meadows?</h2>
+            <p class="section-subtitle">A high-rise twin-tower address from an established developer, on a corridor with genuine connectivity.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(11,107,60,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(11,107,60,0.1);">
+                    <h3 style="color: var(--primary-dark); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">The Assetz Advantage</h3>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">Assetz Property Group is an established Bangalore-based developer with a long-running presence in the city's residential and commercial real estate market. For buyers, a recognized developer name typically means more predictable construction quality, documentation standards and after-sales support &mdash; factors that matter as much as the floor plan itself.</p>
+                    <p style="color: var(--text-light); line-height: 1.8;">Meru &amp; Meadows applies that brand to a genuinely low-density high-rise format: just two towers across ~5 acres, with 87% of the land kept open. That's a deliberate trade-off &mdash; fewer towers, more green space &mdash; aimed at buyers who want a high-rise address without a crowded, wall-to-wall tower footprint.</p>
+                </div>
+                <div style="background: rgba(11,107,60,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(11,107,60,0.1);">
+                    <h3 style="color: var(--primary-dark); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Why Kanakapura Main Road</h3>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">Kanakapura Main Road sits within a short drive of NICE Road, giving residents a bypass route around central Bangalore's congestion while staying connected to JP Nagar, Banashankari and Jayanagar's established schools, hospitals and retail.</p>
+                    <p style="color: var(--text-light); line-height: 1.8;">As South Bangalore's inner core continues to see limited new land supply, corridors like Kanakapura Main Road are where new large-format, high-rise launches are increasingly concentrated &mdash; making early entry into a credible developer's project a reasonable long-term position for both end-users and investors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Enquire for Price List &amp; Availability</h2>
+            <p class="section-subtitle">Schedule a call or request the official Assetz Meru &amp; Meadows price list and floor plans.</p>
+
+            <div class="form-container">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="279d458e-2b55-447e-8bf2-d2045a5785be">
+                    <input type="hidden" name="subject" value="New Inquiry - Assetz Meru & Meadows (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="your.email@example.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Tell us what you are interested in and your timeline."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+
+                <div class="rera-notice" style="margin-top:1.8rem;background: rgba(212, 165, 116, 0.12); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-warm); border-radius: 14px; color:#fefce8;">
+                    <strong>&#9888; Disclaimer:</strong>
+                    Images and information are for representation purpose. Pricing and availability are subject to change. Please enquire for the latest offer and unit availability details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Builder Section -->
+    <section class="builder" id="builder" style="padding: 4rem 1rem; background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">About the Builder: Assetz Property Group</h2>
+            <p class="section-subtitle">An established Bangalore developer, active across residential and commercial real estate.</p>
+
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; background: #fff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-logo.webp" alt="Assetz Meru & Meadows Kanakapura Road logo" style="height: 60px; width: auto; margin-bottom: 1.5rem;">
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;"><strong>Assetz Property Group</strong> is a Bangalore-headquartered real estate developer with an established portfolio of residential and commercial developments across the city. The group has built a reputation for contemporary architecture, quality construction and thoughtfully planned communities.</p>
+                <p style="color: var(--text-light); line-height: 1.8;">Assetz Meru &amp; Meadows applies that same design and delivery approach to a twin-tower, low-density high-rise format on Kanakapura Main Road &mdash; combining the scale of a 468+ unit development with the open-space ratio more typical of a boutique project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQs</h2>
+            <p class="section-subtitle">Helpful answers for buyers comparing Assetz Meru &amp; Meadows, location, plans, pricing, and enquiry details.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is the starting price of Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The 3 BHK, 1,897 sq ft configuration at Assetz Meru &amp; Meadows starts at approximately &#8377;2.74 Cr onwards. Pricing for the larger 2,061 sq ft and 2,111 sq ft 3 BHK layouts is available on request, and can vary by tower, floor rise and any ongoing offers. Use the enquiry form or WhatsApp link on this page for the current pricing sheet.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">What configurations are available at Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Meru &amp; Meadows offers 3 BHK residences only, across three verified layouts: 1,897 sq ft (3T), 2,061 sq ft (4T) and 2,111 sq ft (4T) super built-up area. There is no verified 4 BHK configuration at this project; any such claim seen elsewhere is unconfirmed third-party marketing, not the builder's official floor plan documentation.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What is the RERA number for Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The official RERA registration number for Assetz Meru &amp; Meadows is PRM/KA/RERA/1251/310/PR/130625/007828. We encourage all prospective buyers to independently verify this number on the official Karnataka RERA website before finalizing a booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">What amenities does Assetz Meru &amp; Meadows offer?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Meru &amp; Meadows offers 30+ amenities across a roughly 31,000 sq ft clubhouse and 87% open landscaped grounds, including an infinity swimming pool, kids' pool, gymnasium, spa &amp; salon, yoga room, tennis, padel tennis, pickleball, badminton, jogging track, pet park, amphitheatre, co-working space, caf&eacute;, and dedicated senior citizen and kids' play zones. See the Amenities and Gallery sections on this page for the full list.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Where can I see the Assetz Meru &amp; Meadows master plan and floor plans?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The master plan and all three verified 3 BHK floor plans (1,897, 2,061 and 2,111 sq ft) are available on this page under the 'Master Plan' and 'Floor Plans' sections, with super built-up area, carpet area and room-wise dimensions for each layout.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">When is possession for Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Possession for Assetz Meru &amp; Meadows is scheduled for November 2030, per the project's RERA registration. We recommend confirming the current construction status and any tower-wise handover schedule directly through the enquiry form before booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">How far is Assetz Meru &amp; Meadows from JP Nagar and Silk Board?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Meru &amp; Meadows sits on Kanakapura Main Road, close to NICE Road, roughly 5.0 km from JP Nagar, 4.6 km from Banashankari, 7.4 km from Jayanagar, 8.9 km from BTM Layout and 10.4 km from Silk Board Junction.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">How can I enquire or book a site visit for Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can send an enquiry, request the current price list, or schedule a site visit using the contact form, the call button, or the WhatsApp button available throughout this page. Providing your phone number in the form lets our team follow up with accurate availability and pricing.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">Are home loans available for Assetz Meru &amp; Meadows?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. As a RERA-registered project by an established developer, Assetz Meru &amp; Meadows is eligible for home loan approval from major national and private banks and housing finance companies. Our team can help connect you with lenders and assist with documentation once you enquire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+
+        <span class="pfs-label">Kanakapura Road Corridor</span>
+        <h2 class="pfs-title">Other Verified Projects to Consider</h2>
+        <p class="pfs-intro">Comparing Assetz Meru &amp; Meadows against other verified Kanakapura Road launches at a similar price point and further out on the corridor. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
+        <div class="proj-compare-grid">
+      <a href="/projects/purva-hallmark/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/purva-hallmark-thumb.webp" alt="Purva Hallmark">
+          <span class="proj-compare-badge">Kanakapura Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Purva Hallmark</p>
+          <p class="proj-compare-detail">3 &amp; 3.5/4 BHK &middot; Vajarahalli, Kanakapura Main Road</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+      <a href="/projects/sattva-forest-ridge/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/sattva-forest-ridge-thumb.webp" alt="Sattva Forest Ridge">
+          <span class="proj-compare-badge">Kanakapura Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva Forest Ridge</p>
+          <p class="proj-compare-detail">1, 2 &amp; 3 BHK &middot; Anjanapura, JP Nagar 9th Phase</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+      <a href="/projects/brigade-jeevan-sandhya/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/brigade-jeevan-sandhya-thumb.webp" alt="Brigade Silvercrest">
+          <span class="proj-compare-badge">Kanakapura Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Brigade Silvercrest</p>
+          <p class="proj-compare-detail">3 &amp; 4 BHK &middot; Near Vajarahalli Metro</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Kanakapura Road Corridor</span>
+        <h2 class="pfs-title">Research &amp; Guides</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on the <a href="/areas/kanakapura-road/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Kanakapura Road corridor</a>. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
+        <div class="insight-grid">
+      <a href="/blog/assetz-meru-meadows-kanakapura-road-price-layout-rera/" class="insight-card">
+        <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp" alt="Assetz Meru & Meadows Price, Layout & RERA Review" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Project Review &middot; 8 Min</span>
+          <h4 class="insight-card-title">Assetz Meru &amp; Meadows: Price, Layout &amp; RERA Review</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/assetz-meru-meadows-vs-purva-hallmark/" class="insight-card">
+        <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows vs Purva Hallmark comparison" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Comparison &middot; 7 Min</span>
+          <h4 class="insight-card-title">Assetz Meru &amp; Meadows vs Purva Hallmark: Which Fits You?</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="insight-card">
+        <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Kanakapura Road Market Trends 2026" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Market Analysis &middot; 7 Min</span>
+          <h4 class="insight-card-title">Kanakapura Road Market Trends 2026</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/kanakapura-road-connectivity-nice-road-metro/" class="insight-card">
+        <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-location.webp" alt="NICE Road & Metro: Connectivity Story" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Infrastructure &middot; 6 Min</span>
+          <h4 class="insight-card-title">NICE Road &amp; Metro: Kanakapura Road's Connectivity Story</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>About Assetz Meru &amp; Meadows</h5>
+                <p>Premium 3 BHK high-rise residences with resort-style amenities, 87% open space, and a connected Kanakapura Main Road address.</p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <p><a href="#units">Floor Plans</a></p>
+                <p><a href="#pricing">Price</a></p>
+                <p><a href="#masterplan">Master Plan</a></p>
+                <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#gallery">Gallery</a></p>
+                <p><a href="#location">Location</a></p>
+                <p><a href="#form">Contact</a></p>
+                <p><a href="/blog/">Blogs</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <div class="footer-contact">
+                    <strong>Phone:</strong>
+                    <a href="tel:+918438344093">+91 8438 344 093</a>
+                </div>
+                <div class="footer-contact">
+                    <strong>Email:</strong>
+                    <a href="mailto:projectinfoindia@gmail.com">projectinfoindia@gmail.com</a>
+                </div>
+                <div class="footer-contact">
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Assetz%20Meru%20%26%20Meadows%20and%20available%20offers" target="_blank" rel="noopener">Chat with us</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <p><strong>RERA ID:</strong> PRM/KA/RERA/1251/310/PR/130625/007828</p>
+                <p><strong>Developer:</strong> Assetz Property Group</p>
+                <p><strong>Location:</strong> Kanakapura Main Road, Bengaluru, Karnataka</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div style="font-size: 0.85rem; line-height: 1.8; color: #666; margin-bottom: 1rem; text-align: center;">
+                <p style="margin-bottom: 0.5rem;">Project RERA ID: PRM/KA/RERA/1251/310/PR/130625/007828</p>
+                <p style="margin-bottom: 0.5rem;"><a href="/privacy.html" style="color: #666; text-decoration: none;">Privacy Policy</a> | <a href="/terms.html" style="color: #666; text-decoration: none;">Terms &amp; Conditions</a> | <a href="/sitemap.xml" style="color: #666; text-decoration: none;">Sitemap</a></p>
+                <p style="margin-bottom: 0;">Disclaimer: This is an authorized channel partner marketing site intended strictly for informational and lead-generation objectives.</p>
+            </div>
+
+            <div style="margin-top:1.5rem; font-size:0.85rem; color: #555; background-color: #fef8f8; border: 1px solid #fca5a5; border-radius: 8px; padding: 1rem; max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <strong>Disclaimer &amp; Channel Partner Disclosure:</strong> This website is maintained by an <strong>Authorized Channel Partner / RERA Authorised Advertiser</strong> (Narayanan Rajesh | Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045) for marketing and lead generation purposes. It is <strong>NOT</strong> the official website of Assetz Property Group or the developer. The content provided is for informational purposes only and does not constitute an official offer or guarantee. Please verify all details directly with the developer before making a purchase decision.
+            </div>
+            <div style="margin-top:1rem; font-size:0.75rem; color: #999; text-align: center;">
+                &copy; Copyright 2026 Luxura Habitat. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()">&times;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded view">
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="previousImage()">&lt;</button>
+            <button class="lightbox-nav lightbox-next" type="button" onclick="nextImage()">&gt;</button>
+            <div class="lightbox-counter"><span id="imageCounter">1</span> / <span id="imageTotal">1</span></div>
+        </div>
+    </div>
+
+    <script src="/js/project-page.js"></script>
+    <script>
+        function toggleDetailsPanel() {
+            const panel = document.getElementById('detailsPanel');
+            const overlay = document.getElementById('panelOverlay');
+            panel.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.getElementById('hamburgerMenu');
+                const navLinks = document.getElementById('navLinks');
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox images collection
+        let currentImageIndex = 0;
+        let allLightboxImages = [];
+
+        function collectAllImages() {
+            const imgs = document.querySelectorAll('.gallery-item img, #location .plan-image img');
+            allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
+        }
+
+        function openLightbox(itemElement) {
+            const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
+            if (!allLightboxImages.length) collectAllImages();
+
+            const idx = allLightboxImages.findIndex(x => x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateLightboxImage() {
+            if (!allLightboxImages.length) return;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allLightboxImages.length; updateLightboxImage(); }
+        function previousImage() { currentImageIndex = (currentImageIndex - 1 + allLightboxImages.length) % allLightboxImages.length; updateLightboxImage(); }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            collectAllImages();
+        });
+
+        // toggleFAQ() is provided by the shared /js/project-page.js — no
+        // page-local override needed.
+
+        // Forms are submitted directly to Web3Forms (no custom submit handlers required).
+
+        // Nav smooth-scroll, scroll-reveal and active-nav-link highlighting are
+        // handled by the shared /js/project-page.js — see docs/adding-a-project.md.
+        initProjectPageSmoothScroll();
+        initProjectPageScrollReveal('section .reveal');
+        initProjectPageActiveNav();
+
+        // Zendesk Settings
+        window.zESettings = {
+            webWidget: {
+                launcher: {
+                    chatLabel: {
+                        '*': 'Chat now'
+                    }
+                }
+            }
+        };
+
+        // Zendesk
+        (function(){
+            var script = document.createElement('script');
+            script.id = 'ze-snippet';
+            script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+            script.async = true;
+            document.body.appendChild(script);
+        })();
+    </script>
+
+    <div class="mobile-bottom-cta" aria-hidden="true">
+        <a href="tel:+918438344093" class="mobile-cta-btn btn-call" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call
+        </a>
+        <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Assetz%20Meru%20%26%20Meadows%20and%20available%20offers" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+        </a>
+        <a href="#form" class="mobile-cta-btn btn-visit" aria-label="Enquire now">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Enquire
+        </a>
+    </div>
+    <script>
+        (function () {
+            var bar = document.querySelector('.mobile-bottom-cta');
+            if (!bar || !window.visualViewport) return;
+            function reposition() {
+                var vv = window.visualViewport;
+                var gap = window.innerHeight - (vv.height + vv.offsetTop);
+                bar.style.bottom = Math.max(Math.round(gap), 0) + 'px';
+            }
+            window.visualViewport.addEventListener('resize', reposition);
+            window.visualViewport.addEventListener('scroll', reposition);
+            reposition();
+        })();
+    </script>
+
+    <!-- seo.js auto-generates this page's BreadcrumbList JSON-LD from the
+         URL + <h1> — no manual breadcrumb code needed. -->
+    <script src="/js/seo.js"></script>
+</body>
+</html>

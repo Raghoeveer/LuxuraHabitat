@@ -432,6 +432,20 @@ For each post:
   the project page's `#form` anchor or a WhatsApp deep link, plus whatever internal
   links Phase 6 adds. A blog post that only informs and never asks for the click is a
   wasted funnel stage.
+- **1,500+ words of actual article body content, non-negotiable.** The 2026-08-12 SEO
+  audit flagged all ~30 pre-existing posts as thin (650-1,220 words) against this exact
+  floor. This is not a soft target: 4 brand-new posts shipped under it (873-1,316 words
+  counting the whole rendered page, so less once nav/footer/script boilerplate is
+  excluded) before being caught in review — on pages that had otherwise cleanly passed
+  every other Phase 4/8 check, because title length, meta description length, and word
+  count are three independent checks that don't imply each other. Passing two says
+  nothing about the third. Hit the floor with genuine depth appropriate to the post's
+  topic (construction/spec detail, deeper locality analysis, financing/loan angle,
+  resale-value reasoning, more granular comparison tables) — not repetition or filler.
+  Verify the rendered word count before shipping, e.g.:
+  `python3 -c "import re,html,sys; t=open(sys.argv[1]).read(); t=re.sub(r'<script.*?</script>|<style.*?</style>','',t,flags=re.DOTALL); t=html.unescape(re.sub(r'<[^>]+>',' ',t)); print(len(t.split()))" path/to/index.html`
+  — since this counts the whole page including boilerplate, treat 1,500 as a floor to
+  clear with real margin, not a number to just barely exceed.
 
 ## Phase 6 — Internal-linking pass (do this explicitly, not incidentally)
 
@@ -501,6 +515,10 @@ For each post:
 - Confirm every new blog post URL appears both in `sitemap.xml` **and** as a card in
   `blog/index.html`'s grid — these are two separate lists that don't derive from
   each other, so passing one check doesn't confirm the other.
+- Run the Phase 5 word-count one-liner against every new blog post — must clearly
+  clear 1,500 words. Do this as its own explicit check; don't assume a post is long
+  enough just because it looks substantial or because title/description length
+  already passed (see Phase 5 — those are independent checks).
 - Re-check the Phase 4 SEO list per page: title length, meta description length,
   canonical present/correct/absolute, `og:image`/`twitter:image` point at this
   project's own folder, robots meta isn't accidentally `noindex`, exactly one `<h1>`,
