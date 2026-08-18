@@ -1,0 +1,18 @@
+# Orphaned mini-site folders under additional_websites/ and zen&sato3/ have no
+# index.html (already removed), so their folder-root URLs 404. The individual
+# image files inside these folders are still live (used as the image source
+# for several project/blog pages) and are served directly by Netlify before
+# any redirect rule below is evaluated, so this only catches paths that do not
+# match an actual file, i.e. the bare folder-root 404s.
+/additional_websites/Aeropolis/*            /projects/sattva-aeropolis/       301
+/additional_websites/altura/*               /projects/tvs-emerald-altura/     301
+/additional_websites/assetz%20palmscape/*   /projects/assetz-palmscape/       301
+/additional_websites/ETERNIA/*              /projects/brigade-eternia/        301
+/additional_websites/Kaveri%20Siri/*        /projects/sattva-kaveri-siri/     301
+/additional_websites/La%20Vita/*            /projects/sattva-la-vita/         301
+/additional_websites/Lumina/*                /projects/sattva-lumina/          301
+/additional_websites/Mayfair/*               /projects/concorde-mayfair/       301
+/additional_websites/Salisbury/*             /projects/orchid-salisbury/       301
+/additional_websites/SANIO/*                 /projects/sattva-sanio/           301
+/additional_websites/Sattva%20City/*         /projects/sattva-city/            301
+/zen&sato3/*                                  /projects/assetz-zen-sato/        301
