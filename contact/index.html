@@ -8,6 +8,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
 
       // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
       // any per-button onclick can call stopPropagation and hide the click from
@@ -20,6 +21,11 @@
         var href = link.getAttribute('href');
         var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
         gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
       }, true);
     </script>
 
