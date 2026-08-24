@@ -89,6 +89,16 @@
     .sidebar-consult{background:#faf8f5;border-radius:14px;padding:18px;border:1px solid rgba(0,0,0,.06);}
     .sidebar-consult p{font-size:.88rem;color:#555;line-height:1.6;margin-bottom:12px;}
     .sidebar-consult a{display:block;text-align:center;background:var(--accent-copper);color:#fff;padding:10px;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;}
+    .faq-section{margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:1px solid var(--border-light);}
+    .faq-list{max-width:900px;margin:var(--space-sm) 0 0;display:grid;gap:.8rem;}
+    .faq-item{background:#faf8f5;border-radius:8px;border:1px solid var(--border-light);overflow:hidden;}
+    .faq-question{width:100%;background:none;border:none;text-align:left;padding:1.1rem 1.3rem;font-family:inherit;font-size:.97rem;font-weight:600;color:var(--primary-forest);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s;}
+    .faq-question:hover{background:rgba(184,115,51,.06);}
+    .faq-question.open{color:var(--accent-copper);}
+    .faq-arrow{font-size:1.1rem;transition:transform .3s;flex-shrink:0;}
+    .faq-question.open .faq-arrow{transform:rotate(180deg);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 1.3rem;color:#555;font-size:.95rem;line-height:1.75;}
+    .faq-answer.open{max-height:600px;padding:0 1.3rem 1.1rem;}
     @media(max-width:900px){.blog-page-wrapper{grid-template-columns:1fr;gap:32px;}.article-sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;}}
     @media(max-width:540px){.article-sidebar{grid-template-columns:1fr;}.related-cards-grid{grid-template-columns:1fr;}}
   </style>
@@ -106,7 +116,7 @@
         "description": "Independent review of Surya Valencia's pricing, 4 & 5 BHK villa specs, amenities, and what to verify before booking this newly launched Rajankunte project.",
         "image": "https://luxurahabitat.com/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-08-04",
+        "dateModified": "2026-08-24",
         "author": { "@type": "Person", "name": "Narayanan Rajesh", "url": "https://luxurahabitat.com/about/" },
         "publisher": {
           "@type": "Organization",
@@ -122,6 +132,41 @@
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
           {"@type": "ListItem", "position": 3, "name": "Yelahanka Real Estate Guide", "item": "https://luxurahabitat.com/areas/yelahanka/"},
           {"@type": "ListItem", "position": 4, "name": "Surya Valencia Rajankunte: Price, Villas & What to Verify", "item": "https://luxurahabitat.com/blog/surya-valencia-rajankunte-price-review/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where exactly is Surya Valencia located?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Near Rajankunte, Yelahanka, North Bengaluru, close to Taj Urban Resort and Angsana Oasis, with easy access to the airport, STRR and PRR." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between the 4 BHK Estate Villa and 5 BHK Regal Edition?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both share the triple-height sky ceiling and a private backyard, but the 5 BHK Regal Edition adds a private swimming pool, a pre-fit lift, home automation, a sky pergola and a twin terrace on top of the shared features, which is what drives the roughly Rs. 1 Cr price gap between the two." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does every Surya Valencia villa have a lift?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every villa is built with dedicated space reserved for a lift across its floors. The 5 BHK Regal Edition comes with the lift pre-fit; on the 4 BHK Estate Villa, owners can have one installed in the reserved space." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Surya Valencia RERA registered?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, in two separately registered phases. Phase I (44 villas, 3.64 acres) is registered under PRM/KA/RERA/1251/472/PR/171224/007305 with possession targeted for December 2028. Phase II (78 villas, 5.32 acres) is registered under PRM/KA/RERA/1251/472/PR/020125/007343 with possession targeted for December 2030." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Surya Valencia a good investment?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Rajankunte sits on Bengaluru's fast-growing northern corridor near the airport, STRR and PRR, and Spanish-themed private-pool villas are a genuinely scarce product type in this belt, which supports both lifestyle appeal and long-term demand for buyers with a multi-year horizon." }
+          },
+          {
+            "@type": "Question",
+            "name": "How big is the private backyard at Surya Valencia?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Private backyards range from approximately 300 to 700 sq ft depending on the villa's plot position within the layout." }
+          }
         ]
       }
     ]
@@ -179,13 +224,13 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Surya Valencia Rajankunte: Price, Villas &amp; What to Verify</h1>
           <div class="article-meta">
-            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 4, 2026</span><span>&bull;</span><span>7 Min Read</span>
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>August 24, 2026</span><span>&bull;</span><span>10 Min Read</span>
           </div>
         </header>
         <div class="article-content">
         <img src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia 4 BHK Estate Villa Rajankunte" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
-          <p><a href="/projects/surya-valencia/" class="money-link">Surya Valencia</a> is a newly launched, RERA-registered, Spanish-themed villa community near Rajankunte, Yelahanka — a genuinely uncommon product type for this stretch of North Bengaluru, which is otherwise dominated by high-rise apartment supply. Here's an independent look at the pricing, specs and what a serious buyer should verify before booking.</p>
+          <p><a href="/projects/surya-valencia/" class="money-link">Surya Valencia</a> is a newly launched, RERA-registered, Spanish-themed villa community near Rajankunte, Yelahanka: a genuinely uncommon product type for this stretch of North Bengaluru, which is otherwise dominated by high-rise apartment supply. Here's an independent look at the location, pricing, villa specs, amenities and what a serious buyer should verify before booking.</p>
 
           <h2>1. Project Snapshot</h2>
           <table>
@@ -204,7 +249,11 @@
             </tbody>
           </table>
 
-          <h2>2. Pricing &amp; What You Get</h2>
+          <h2>2. Location: Rajankunte, Yelahanka</h2>
+          <p>Surya Valencia sits near Rajankunte in Yelahanka, North Bengaluru, close to the Taj Urban Resort and Angsana Oasis, with easy access to the airport, the Satellite Town Ring Road (STRR) and the Peripheral Ring Road (PRR). This is a quieter, more resort-adjacent stretch of the Yelahanka corridor than the denser apartment belt closer to the city, which fits the low-rise, private-pool villa positioning: buyers here are typically trading some proximity to daily conveniences for space, privacy and a genuinely different living format.</p>
+          <p>The STRR and PRR are both material to how this corridor develops over the next several years. Once operational, they connect Rajankunte to other employment and residential clusters around Bengaluru's periphery without routing through the city centre, which is the same infrastructure logic driving land-value appreciation across North Bengaluru's other growth corridors. Buyers evaluating Surya Valencia purely as an investment should treat these road projects as a multi-year tailwind rather than an immediate convenience.</p>
+
+          <h2>3. Pricing &amp; What You Get</h2>
           <table>
             <thead><tr><th>Villa Type</th><th>Area</th><th>Indicative Price</th><th>Exclusive Features</th></tr></thead>
             <tbody>
@@ -212,20 +261,85 @@
               <tr><td>5 BHK Regal Edition Villa</td><td>3,893 sq ft</td><td>₹4.59 Cr* onwards</td><td>+ Private swimming pool, pre-fit lift, home automation, sky pergola, twin terrace</td></tr>
             </tbody>
           </table>
-          <p>At roughly ₹10,600/sq ft for the 4 BHK and ₹11,800/sq ft for the 5 BHK Regal Edition, Surya Valencia prices as a premium independent-villa product rather than a budget layout — consistent with the private-pool, resort-clubhouse positioning. The roughly ₹1 Cr jump for the Regal Edition buys a genuinely distinct package (private pool + automation + lift), not just 548 extra sq ft, so buyers should weigh whether those specific features justify the premium for their use case.</p>
+          <p>At roughly ₹10,600/sq ft for the 4 BHK and ₹11,800/sq ft for the 5 BHK Regal Edition, Surya Valencia prices as a premium independent-villa product rather than a budget layout, consistent with the private-pool, resort-clubhouse positioning. The roughly ₹1 Cr jump for the Regal Edition buys a genuinely distinct package (private pool, automation and a pre-fit lift), not just 548 extra sq ft, so buyers should weigh whether those specific features justify the premium for their use case rather than treating it purely as a per-sq.ft. upgrade.</p>
 
-          <h2>3. The Villa Format Itself</h2>
-          <p>Both villa types are laid out across four levels — ground floor (parking, living/dining, kitchen), first and second floors (bedrooms, family lounge), and a terrace/third floor with a multi-purpose room or additional terrace bedroom. Every villa reserves space for a lift, and both configurations get the same signature triple-height living room ceiling — a genuinely differentiating architectural feature that few villa projects in this price band offer as standard. The private backyard, at 300–700 sq ft depending on plot position, is usable outdoor space that apartment buyers in the same corridor simply don't get.</p>
+          <h2>4. The Villa Format Itself</h2>
+          <p>Both villa types are laid out across four levels: a ground floor with parking, living/dining and kitchen; a first floor and second floor with bedrooms and a family lounge; and a terrace/third floor with a multi-purpose room or additional terrace bedroom. That vertical stacking is standard for independent villas on a compact plot footprint, and it's worth understanding before you buy: unlike a single-level home, day-to-day movement between the kitchen, bedrooms and terrace involves stairs (or the reserved lift space) across all four levels, which matters more for elderly residents than it does for a young family.</p>
+          <p>Every villa reserves space for a lift, and both configurations get the same signature triple-height living room ceiling: a genuinely differentiating architectural feature that few villa projects in this price band offer as standard. On the 5 BHK Regal Edition, that lift comes pre-fit rather than merely reserved as space, which is one of the concrete, checkable differences buyers are paying the roughly ₹1 Cr premium for. The private backyard, at 300-700 sq ft depending on plot position, is usable outdoor space that apartment buyers in the same corridor simply don't get, though the range is wide enough that it's worth confirming the specific backyard size for the exact plot you're considering rather than assuming the top end of the range.</p>
 
-          <h2>4. The Clubhouse &amp; Master-Planned Amenities</h2>
-          <p>The master plan lists over 40 named facilities anchored by a 40,000 sq ft clubhouse managed by Illesium Clubs — including an azure pool, party lawn with amphitheatre, yoga and meditation corner, putting green, reflexology walk and multiple themed gardens. This level of amenity curation is closer to what large apartment townships offer than what most standalone villa layouts provide, and it's a meaningful part of Surya Valencia's pitch.</p>
+          <h2>5. The Clubhouse &amp; Master-Planned Amenities</h2>
+          <p>The master plan lists over 40 named facilities anchored by a 40,000 sq ft clubhouse managed by Illesium Clubs, including an azure pool, party lawn with amphitheatre, yoga and meditation corner, outdoor fitness area, putting green, reflexology walk, and multiple landscaped gardens and trellised walkways. This level of amenity curation is closer to what large apartment townships offer than what most standalone villa layouts provide, and it's a meaningful part of Surya Valencia's pitch: buyers get the privacy and space of an independent villa without giving up the shared clubhouse lifestyle that's typically the preserve of large apartment complexes.</p>
 
-          <h2>5. Developer, RERA &amp; Possession — What We Verified</h2>
-          <p>Surya Valencia is developed by <strong>Surya Developers</strong>, based in Yelahanka, Bengaluru, and the project is split into two separately RERA-registered phases. <strong>Phase I</strong> covers 44 villas across 3.64 acres under RERA number <strong>PRM/KA/RERA/1251/472/PR/171224/007305</strong>, with possession scheduled for <strong>December 2028</strong>. <strong>Phase II</strong> covers 78 villas across 5.32 acres under RERA number <strong>PRM/KA/RERA/1251/472/PR/020125/007343</strong>, with possession scheduled for <strong>December 2030</strong>. Always cross-check both numbers directly on the Karnataka RERA portal before any booking amount changes hands, and confirm which phase your specific villa falls under — the possession date differs by two years between the two.</p>
+          <h2>6. Who Surya Valencia Is Actually Built For</h2>
+          <p>Rajankunte's investment case rests on the same logic driving the rest of North Bengaluru's periphery: proximity to the airport corridor combined with upcoming ring-road infrastructure (STRR and PRR) that connects this stretch to other employment clusters without a central-city commute. Layered on top of that is a genuinely scarce product type. Spanish-themed, private-pool independent villas with a full resort-style clubhouse are uncommon in this belt, which is otherwise dominated by high-rise apartment supply, and that scarcity is itself part of the long-term demand case for buyers with a multi-year horizon.</p>
+          <p>The clearest fit is a buyer who specifically wants an independent villa rather than an apartment: more privacy, a private backyard, and (on the Regal Edition) a private pool, while still getting shared clubhouse amenities most standalone villa layouts don't offer. It's a weaker fit for buyers prioritising short possession timelines, since both phases run out to 2028 and 2030, or for anyone comparing strictly on a per-sq.ft. basis against high-rise apartment inventory in the same corridor, since the villa format itself commands a premium independent of location.</p>
+
+          <h2>7. Developer, RERA &amp; Possession: What We Verified</h2>
+          <p>Surya Valencia is developed by <strong>Surya Developers</strong>, based in Yelahanka, Bengaluru, and the project is split into two separately RERA-registered phases. <strong>Phase I</strong> covers 44 villas across 3.64 acres under RERA number <strong>PRM/KA/RERA/1251/472/PR/171224/007305</strong>, with possession scheduled for <strong>December 2028</strong>. <strong>Phase II</strong> covers 78 villas across 5.32 acres under RERA number <strong>PRM/KA/RERA/1251/472/PR/020125/007343</strong>, with possession scheduled for <strong>December 2030</strong>. Always cross-check both numbers directly on the Karnataka RERA portal before any booking amount changes hands, and confirm which phase your specific villa falls under: the possession date differs by two years between the two.</p>
 
           <h2>Our Honest Assessment</h2>
-          <p>Surya Valencia's core appeal is real: Spanish-themed independent villas with private backyards, triple-height ceilings and (on the Regal Edition) a private pool are a genuinely scarce product on the Yelahanka-Rajankunte corridor, which is otherwise almost entirely apartment supply. The 40,000 sq ft Illesium-managed clubhouse adds township-level amenity scale that most villa layouts skip. With a named developer, dual RERA registration and published possession dates for both phases, this listing now clears the basic diligence bar that many pre-launch projects don't. Buyers should still confirm which phase a specific villa unit belongs to before booking, since Phase I and Phase II carry different possession timelines two years apart.</p>
+          <p>Surya Valencia's core appeal is real: Spanish-themed independent villas with private backyards, triple-height ceilings and (on the Regal Edition) a private pool are a genuinely scarce product on the Yelahanka-Rajankunte corridor, which is otherwise almost entirely apartment supply. The 40,000 sq ft Illesium-managed clubhouse adds township-level amenity scale that most villa layouts skip, and the location's STRR/PRR-linked growth story is a reasonable multi-year tailwind for buyers willing to hold through both possession timelines.</p>
+          <p>With a named developer, dual RERA registration and published possession dates for both phases, this listing clears the basic diligence bar that many pre-launch projects don't. The honest caveats are the price point, well above apartment inventory in the same corridor, and the possession runway, out to December 2028 for Phase I and December 2030 for Phase II. Buyers should confirm which phase a specific villa unit belongs to before booking, since the two carry possession timelines two years apart, and should independently verify both RERA numbers before any payment changes hands.</p>
         </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Where exactly is Surya Valencia located?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Near Rajankunte, Yelahanka, North Bengaluru, close to Taj Urban Resort and Angsana Oasis, with easy access to the airport, STRR and PRR.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is the difference between the 4 BHK Estate Villa and 5 BHK Regal Edition?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Both share the triple-height sky ceiling and a private backyard, but the 5 BHK Regal Edition adds a private swimming pool, a pre-fit lift, home automation, a sky pergola and a twin terrace on top of the shared features, which is what drives the roughly ₹1 Cr price gap between the two.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Does every Surya Valencia villa have a lift?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Every villa is built with dedicated space reserved for a lift across its floors. The 5 BHK Regal Edition comes with the lift pre-fit; on the 4 BHK Estate Villa, owners can have one installed in the reserved space.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">Is Surya Valencia RERA registered?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, in two separately registered phases. Phase I (44 villas, 3.64 acres) is registered under PRM/KA/RERA/1251/472/PR/171224/007305 with possession targeted for December 2028. Phase II (78 villas, 5.32 acres) is registered under PRM/KA/RERA/1251/472/PR/020125/007343 with possession targeted for December 2030.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">Is Surya Valencia a good investment?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Rajankunte sits on Bengaluru's fast-growing northern corridor near the airport, STRR and PRR, and Spanish-themed private-pool villas are a genuinely scarce product type in this belt, which supports both lifestyle appeal and long-term demand for buyers with a multi-year horizon.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">How big is the private backyard at Surya Valencia?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Private backyards range from approximately 300 to 700 sq ft depending on the villa's plot position within the layout.</p>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="related-projects" aria-label="Related content">
           <h3>You May Also Be Interested In</h3>
           <div class="related-cards-grid">
@@ -259,7 +373,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by the Luxura Habitat Team</h5>
+              <h5>Written by Narayanan Rajesh</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years navigating Bangalore's premium real estate corridors with absolute legal clarity and zero developer bias.</p>
             </div>
           </div>
