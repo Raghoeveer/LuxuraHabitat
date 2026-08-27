@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Shriram 107 SouthEast: Price, Layout &amp; RERA | Luxura Habitat</title>
+  <meta name="description" content="Independent review of Shriram 107 SouthEast, Attibele: Phase 3 pricing by configuration, amenities, possession timeline and all three RERA numbers verified.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/shriram-107-south-east-attibele-price-layout-rera/">
+  <meta property="og:title" content="Shriram 107 SouthEast: Price, Layout &amp; RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Shriram 107 SouthEast, Attibele: pricing, amenities, possession and RERA verification for all three phases.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shriram 107 SouthEast: Price, Layout &amp; RERA Review">
+  <meta name="twitter:description" content="Independent review of Shriram 107 SouthEast, Attibele: pricing, amenities, possession and RERA verification.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/shriram-107-south-east-attibele-price-layout-rera/"
+        },
+        "headline": "Shriram 107 SouthEast: Price, Layout & RERA Review",
+        "description": "Independent review of Shriram 107 SouthEast, Attibele: Phase 3 pricing by configuration, amenities, possession timeline and all three RERA numbers verified.",
+        "image": "https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp",
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/shriram-107-south-east-attibele-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Shriram 107 SouthEast: Price, Layout & RERA Review", "item": "https://luxurahabitat.com/blog/shriram-107-south-east-attibele-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Shriram 107 SouthEast and who is the developer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Shriram 107 SouthEast is a 22-tower, 2,200+ unit residential project by Shriram Properties, developed in joint venture with Garden City Realty, spread across 19 acres in Attibele, South East Bangalore, roughly 15 minutes from Electronic City off Hosur Road." }
+          },
+          {
+            "@type": "Question",
+            "name": "How many phases does the project have, and which one is currently selling?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project has three phases. Phase 1 (Dil Chahta Hai) and Phase 2 (Dil Chahta Hai Dobara) have both received their Occupancy Certificate and are ready to move in. Phase 3, branded Shriram 107 SouthEast, is the phase currently under construction and being sold, with handover expected January 2027." }
+          },
+          {
+            "@type": "Question",
+            "name": "What configurations and pricing does Phase 3 offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Phase 3 offers 2 BHK apartments of approximately 698-752 sq.ft super built-up starting from ₹57 Lakhs onwards, and 3 BHK apartments of approximately 914 sq.ft super built-up starting from ₹75 Lakhs onwards." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RERA number for Shriram 107 SouthEast Phase 3?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Phase 3 is registered under PRM/KA/RERA/1251/308/PR/140222/004708. Phase 1 carries PRM/KA/RERA/1251/308/PR/181122/002156 and Phase 2 carries PRM/KA/RERA/1251/308/PR/190715/002689, both already OC-received. We recommend verifying all three independently on the Karnataka RERA portal, since conflating them would misstate which phase a given registration actually covers." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between the RERA carpet area and the marketed super built-up area?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The 698-752 sq.ft and ~914 sq.ft figures used in marketing are super built-up area. The project's own RERA-filed floor plans show smaller carpet-area figures: the 2 Bedroom Type 1A unit has a RERA carpet area of 42.755 sq.m (460.214 sq.ft) plus a 1.550 sq.m (16.684 sq.ft) balcony, and the 3 BHK unit has a RERA carpet area of 56.977 sq.m (613.295 sq.ft) plus a 2.045 sq.m (22.012 sq.ft) balcony." }
+          },
+          {
+            "@type": "Question",
+            "name": "What amenities does Shriram 107 SouthEast offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project features an 18,000 sq.ft (G+2) clubhouse with a skating rink, a lake-side garden, two amphitheatres, multiple swimming pools, sand volleyball and basketball courts, kids' and toddlers' play zones, an elder's park, a pet park and more, spread across a 19-acre layout with 78% open area." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Shriram 107 SouthEast Price &amp; RERA</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Shriram 107 SouthEast: Price, Layout &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published August 27, 2026</span><span>&bull;</span><span>11 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp" alt="Shriram 107 SouthEast Attibele Price Layout RERA" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Attibele, off Hosur Road in South East Bangalore, is where Shriram Properties has built one of its largest single-site communities: 22 towers, over 2,200 units, and a three-phase rollout that already has two completed, occupied phases sitting right next to the one currently being sold. This is a deep-dive review of Shriram 107 SouthEast covering the developer, the location, unit sizes and pricing, possession timelines, all three RERA registrations on this site, and our honest assessment of whether Phase 3 is worth booking into.</p>
+
+          <h2>1. The Developer: Shriram Properties</h2>
+          <p>Shriram Properties is one of South India's established, listed real estate developers, with a multi-decade track record of residential and commercial projects spread across Bangalore, Chennai and other major cities. For Shriram 107 SouthEast, the developer has partnered with Garden City Realty on a joint-venture basis, a structure common on larger land parcels where two parties bring capital, land and execution capability together.</p>
+          <p>What makes this particular project unusual to review is the amount of already-delivered evidence sitting on the same plot of land. Most under-construction launches ask a buyer to trust a brochure and a set of renders. Here, Phase 1 (internally codenamed "Dil Chahta Hai") and Phase 2 ("Dil Chahta Hai Dobara") have both already received their Occupancy Certificate and are fully ready to move in. A prospective Phase 3 buyer can walk those completed towers, inspect the finished clubhouse and landscaping in person, and form a view on the developer's actual delivered quality rather than relying purely on marketing material.</p>
+
+          <h2>2. Location: Attibele, South East Bangalore</h2>
+          <p>The project sits in Attibele, off Hosur Road, roughly 15 minutes from Electronic City via the E-City Elevated Flyover, which connects onward to Silk Board. Google Maps places the exact site here: <a href="https://maps.app.goo.gl/1tWBqJPRPh8tP1hi6" class="money-link" target="_blank" rel="noopener">Shriram 107 SouthEast location</a>. The corridor's proximity profile, transcribed from the project's own location map, breaks down into a few clear clusters:</p>
+          <ul>
+            <li><strong>IT and tech employment:</strong> Electronic City IT Hub, Infosys, Wipro, Tech Mahindra, Biocon, AMR Tech Park and PES IT College, plus the E-City and Bommasandra Metro stations (both currently under construction)</li>
+            <li><strong>Industrial employment:</strong> the Attibele Industrial Hub itself, the Bommasandra &amp; Jigni Industrial Hub, the Hosur Industrial Hub, the Sarjapur Hub, and the broader Chandapura manufacturing belt</li>
+            <li><strong>Education:</strong> DPS School, Alliance University, Bangalore College of Engineering &amp; Technology</li>
+            <li><strong>Healthcare:</strong> Vimalalaya Hospital, Oxford Medical College, Athreya Hospital</li>
+            <li><strong>Retail and lifestyle:</strong> D Mart, Decathlon, Chandapura Market, Ramee Guestline Hotels &amp; Resorts, Sun Palace and Mango Mist Resorts</li>
+          </ul>
+          <p>Read together, this is a location with two independent demand drivers rather than one. Most Electronic City-adjacent projects lean entirely on the IT workforce; this site also sits inside a genuine industrial employment belt (Attibele, Bommasandra-Jigni, Hosur), which broadens who might actually want to rent or buy here beyond software employees alone.</p>
+
+          <h2>3. The Project: Scale, Phasing and Approvals</h2>
+          <p>Shriram 107 SouthEast spans 19 acres with 22 towers and 2,200+ units, built under BMRDA approval with an elevation of 2 Basement + Ground + 14 Floors. 78% of the land is kept as open, landscaped space, anchored by an 18,000 sq.ft (G+2) clubhouse with a skating rink and spillover space.</p>
+          <p>The project is being delivered in three phases, and it's important not to conflate them, since each carries its own separate RERA registration:</p>
+          <ul>
+            <li><strong>Phase 1, "Dil Chahta Hai":</strong> Occupancy Certificate received, ready to move in</li>
+            <li><strong>Phase 2, "Dil Chahta Hai Dobara":</strong> Occupancy Certificate received, ready to move in</li>
+            <li><strong>Phase 3, "Shriram 107 SouthEast":</strong> currently under construction and open for booking, expected handover January 2027</li>
+          </ul>
+          <p>We've covered the differences between these three phases in more depth, including a side-by-side of what's actually delivered versus what's still being built, in our dedicated <a href="/blog/shriram-107-south-east-phase-3-vs-phase-1-2/" class="money-link">Phase 3 vs Phase 1 &amp; 2 comparison</a>.</p>
+
+          <h3>Amenities</h3>
+          <p>The amenity list, transcribed directly from the project's own master plan legend, is substantial and organised into clear zones rather than a generic checklist: a clubhouse with a skating rink and stepped terrace, a lake-side garden with a butterfly garden trail and herb garden, two separate amphitheatres (one with a lake-view backdrop), a main swimming pool plus a dedicated kids' pool, sand volleyball and practice basketball courts, a cognitive play zone and toddlers' play area alongside a more traditional kids' play area, an elder's park, a pet park, and casual-game infrastructure like a giant chess park, hopscotch court and snakes-and-ladders court. The project's own cluster plan also references additional 2 BHK Type-2 and 3 BHK Type-3 layout variants beyond the two representative unit plans covered below, so buyers evaluating a specific unit should ask for that unit's exact plan rather than assuming every 2 BHK or 3 BHK is identical.</p>
+
+          <h2>4. Unit Sizes: Super Built-up vs RERA Carpet Area</h2>
+          <p>Shriram 107 SouthEast Phase 3 markets 2 BHK apartments of approximately 698-752 sq.ft and 3 BHK apartments of approximately 914 sq.ft, both figures quoted as super built-up area, the number typically used in brochures and price lists. The project's own RERA-filed floor plans, however, disclose carpet area separately, and the two representative unit plans we've reviewed show a meaningful gap between the two figures:</p>
+          <ul>
+            <li><strong>2 Bedroom Type 1A:</strong> RERA carpet area of 42.755 sq.m (460.214 sq.ft), plus a 1.550 sq.m (16.684 sq.ft) balcony</li>
+            <li><strong>3 BHK:</strong> RERA carpet area of 56.977 sq.m (613.295 sq.ft), plus a 2.045 sq.m (22.012 sq.ft) balcony</li>
+          </ul>
+          <p>Neither of these should be confused with the super built-up figures used in pricing: carpet area (what RERA actually requires disclosure of) is consistently smaller than super built-up area (which includes a proportionate share of common areas like lobbies, corridors and the clubhouse). Any buyer comparing this project against a competing launch should compare the same area metric on both sides, not a carpet-area figure from one brochure against a super built-up figure from another.</p>
+
+          <h2>5. Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Super Built-up Area</th><th>Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>2 BHK</td><td>698 - 752 sq.ft.</td><td>₹57 Lakhs onwards</td></tr>
+              <tr><td>3 BHK</td><td>~914 sq.ft.</td><td>₹75 Lakhs onwards</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Indicative starting price for Phase 3, super built-up area. Please <a href="/projects/shriram-107-south-east/#form" class="money-link">enquire for the current, verified price list</a> and availability.</p>
+          <p>At a headline level, a sub-₹60 Lakh entry point for a 2 BHK is a genuinely competitive price for a project sitting 15 minutes from Electronic City's employment base, and it compares favourably against similarly-sized homes closer to the Electronic City core itself, where land costs are higher. The trade-off, as with most Bangalore peripheral-corridor launches, is that a buyer is paying a lower per-square-foot rate partly in exchange for a longer commute and a still-maturing social infrastructure around the immediate site, both of which are improving but haven't fully caught up with more established micro-markets yet.</p>
+          <p>On the financing side, a 2 BHK at ₹57 Lakhs and a 3 BHK at ₹75 Lakhs both sit comfortably within standard home-loan eligibility bands for a dual-income household earning in the ₹15-25 Lakh per annum range, assuming a conventional 80-85% loan-to-value ratio and a 20-year tenure. Buyers should still budget separately for stamp duty, registration, GST on the under-construction component, and an estimated monthly maintenance figure, none of which were disclosed in the source material we reviewed and should be confirmed directly with the sales team before booking.</p>
+
+          <h2>6. Possession Timeline</h2>
+          <p>Phase 3 of Shriram 107 SouthEast has an expected handover of January 2027, as disclosed under its RERA registration. Because Phase 1 and Phase 2 on this same site have already been delivered and occupied, this isn't a developer's first attempt at hitting a completion date on this particular plot, which is a meaningfully different risk profile from a first-of-its-kind launch with no track record to check against. That said, a quoted RERA possession date is a regulatory disclosure, not a guarantee; we recommend confirming current construction progress directly with the developer or our team closer to your intended booking date.</p>
+
+          <h2>7. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification, and this project's three-phase structure makes that verification step more important than usual, since each phase carries its own, separate RERA registration:</p>
+          <ul>
+            <li><strong>Phase 3 (currently selling):</strong> PRM/KA/RERA/1251/308/PR/140222/004708</li>
+            <li><strong>Phase 1 (OC received, ready to move in):</strong> PRM/KA/RERA/1251/308/PR/181122/002156</li>
+            <li><strong>Phase 2 (OC received, ready to move in):</strong> PRM/KA/RERA/1251/308/PR/190715/002689</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Channel Partner / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <p>If you're booking into Phase 3, the registration that actually governs your purchase is PRM/KA/RERA/1251/308/PR/140222/004708, not either of the other two. We encourage every prospective buyer to independently verify this number on the official Karnataka RERA website before finalising a booking, a step worth taking regardless of how established the developer is or how many phases have already been delivered on the same site.</p>
+
+          <h2>8. Who This Project Actually Suits</h2>
+          <p>Shriram 107 SouthEast is a strong fit for buyers who work in or near Electronic City and want a shorter commute than the city core offers, but who also want to see a developer's actual delivered work before committing to an under-construction unit. It also suits buyers targeting the Attibele, Bommasandra-Jigni or Hosur industrial belts directly, since the site's dual IT-and-industrial catchment is unusual for this price band. The 2 BHK entry point at ₹57 Lakhs is well suited to a young dual-income household or a first-time investor; the 3 BHK at ₹75 Lakhs suits a small family wanting an extra room without stretching into the ₹1 Cr-plus segment.</p>
+          <p>It's a weaker fit for a buyer who needs possession within the next year (Phase 3's January 2027 handover is a multi-year hold from today), or for someone unwilling to trade proximity to the Electronic City core itself for a lower entry price and a location that's still 15 minutes further out along Hosur Road.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>The single most convincing thing about Shriram 107 SouthEast is not in the brochure, it's standing on the same 19-acre site: two fully delivered, OC-received phases that a buyer can actually walk through before deciding whether to trust Phase 3. That's a rare, concrete form of due diligence in an under-construction market where most buyers are working entirely from renders. Combined with a genuinely competitive entry price relative to Electronic City proper, and a location with both IT and industrial employment within commuting distance, Phase 3 has a reasonable case as a value-oriented buy in this corridor.</p>
+          <p>The trade-offs are real, though: a January 2027 handover means this is a multi-year commitment, not a quick move-in, and the surrounding social infrastructure along this stretch of Hosur Road is still catching up to more established Bangalore micro-markets. As always, verify the Phase 3 RERA registration (PRM/KA/RERA/1251/308/PR/140222/004708) independently on the Karnataka RERA portal, confirm current construction progress directly with the developer, and check the encumbrance and title documents for your specific unit before booking.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">What is Shriram 107 SouthEast and who is the developer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Shriram 107 SouthEast is a 22-tower, 2,200+ unit residential project by Shriram Properties, developed in joint venture with Garden City Realty, spread across 19 acres in Attibele, South East Bangalore, roughly 15 minutes from Electronic City off Hosur Road.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">How many phases does the project have, and which one is currently selling?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project has three phases. Phase 1 (Dil Chahta Hai) and Phase 2 (Dil Chahta Hai Dobara) have both received their Occupancy Certificate and are ready to move in. Phase 3, branded Shriram 107 SouthEast, is the phase currently under construction and being sold, with handover expected January 2027.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">What configurations and pricing does Phase 3 offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Phase 3 offers 2 BHK apartments of approximately 698-752 sq.ft super built-up starting from ₹57 Lakhs onwards, and 3 BHK apartments of approximately 914 sq.ft super built-up starting from ₹75 Lakhs onwards.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What is the RERA number for Shriram 107 SouthEast Phase 3?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Phase 3 is registered under PRM/KA/RERA/1251/308/PR/140222/004708. Phase 1 carries PRM/KA/RERA/1251/308/PR/181122/002156 and Phase 2 carries PRM/KA/RERA/1251/308/PR/190715/002689, both already OC-received. We recommend verifying all three independently on the Karnataka RERA portal, since conflating them would misstate which phase a given registration actually covers.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">What is the difference between the RERA carpet area and the marketed super built-up area?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The 698-752 sq.ft and ~914 sq.ft figures used in marketing are super built-up area. The project's own RERA-filed floor plans show smaller carpet-area figures: the 2 Bedroom Type 1A unit has a RERA carpet area of 42.755 sq.m (460.214 sq.ft) plus a 1.550 sq.m (16.684 sq.ft) balcony, and the 3 BHK unit has a RERA carpet area of 56.977 sq.m (613.295 sq.ft) plus a 2.045 sq.m (22.012 sq.ft) balcony.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">What amenities does Shriram 107 SouthEast offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project features an 18,000 sq.ft (G+2) clubhouse with a skating rink, a lake-side garden, two amphitheatres, multiple swimming pools, sand volleyball and basketball courts, kids' and toddlers' play zones, an elder's park, a pet park and more, spread across a 19-acre layout with 78% open area.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/shriram-107-south-east/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-about.webp" alt="Shriram 107 SouthEast" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Shriram 107 SouthEast</p>
+                <p class="related-card-detail">2 &amp; 3 BHK &middot; Attibele, South East Bangalore</p>
+              </div>
+            </a>
+            <a href="/blog/shriram-107-south-east-phase-3-vs-phase-1-2/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp" alt="Shriram 107 SouthEast Phase 3 vs Phase 1 and 2" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Phase 3 vs Phase 1 &amp; 2 Comparison</p>
+                <p class="related-card-detail">8 Min Read &middot; Project Comparison</p>
+              </div>
+            </a>
+            <a href="/blog/attibele-electronic-city-south-investment-guide/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-location-map.webp" alt="Attibele Electronic City South investment guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Attibele Investment Guide</p>
+                <p class="related-card-detail">9 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-about.webp" alt="Shriram 107 SouthEast" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Shriram 107 SouthEast</p>
+            <ul class="sidebar-specs">
+              <li>2 &amp; 3 BHK &middot; 19 Acres &middot; 22 Towers</li>
+              <li>78% Open Space &middot; 18,000 Sq.Ft Clubhouse</li>
+              <li>From ₹57 Lakhs onwards</li>
+              <li>Attibele, South East Bangalore</li>
+            </ul>
+            <a href="/projects/shriram-107-south-east/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Shriram 107 SouthEast</h4>
+          <a href="/projects/shriram-107-south-east/">Project Overview</a>
+          <a href="/blog/shriram-107-south-east-phase-3-vs-phase-1-2/">Phase 3 vs Phase 1 &amp; 2</a>
+          <a href="/blog/attibele-electronic-city-south-investment-guide/">Attibele Investment Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

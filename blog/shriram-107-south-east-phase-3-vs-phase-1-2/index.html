@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Shriram 107 SouthEast Phase 3 vs Phase 1 &amp; 2</title>
+  <meta name="description" content="Shriram 107 SouthEast Phase 3 vs Phase 1 &amp; 2 compared: construction status, all three RERA numbers, pricing, and what a buyer actually gets in each phase.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/shriram-107-south-east-phase-3-vs-phase-1-2/">
+  <meta property="og:title" content="Shriram 107 SouthEast: Phase 3 vs Phase 1 &amp; 2 Compared">
+  <meta property="og:description" content="What's actually different between Shriram 107 SouthEast's currently-selling Phase 3 and its two already-delivered phases, including all three RERA numbers.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shriram 107 SouthEast: Phase 3 vs Phase 1 &amp; 2">
+  <meta name="twitter:description" content="What's actually different between Phase 3 and the two already-delivered phases, including all three RERA numbers.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/shriram-107-south-east-phase-3-vs-phase-1-2/"
+        },
+        "headline": "Shriram 107 SouthEast: Phase 3 vs Phase 1 & 2 Compared",
+        "description": "Shriram 107 SouthEast Phase 3 vs Phase 1 & 2 compared: construction status, all three RERA numbers, pricing, and what a buyer actually gets in each phase.",
+        "image": "https://luxurahabitat.com/images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp",
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/shriram-107-south-east-phase-3-vs-phase-1-2/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Shriram 107 SouthEast Phase 3 vs Phase 1 & 2", "item": "https://luxurahabitat.com/blog/shriram-107-south-east-phase-3-vs-phase-1-2/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are Phase 1, Phase 2 and Phase 3 of Shriram 107 SouthEast the same registration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Each phase carries its own separate RERA registration: Phase 1 is PRM/KA/RERA/1251/308/PR/181122/002156, Phase 2 is PRM/KA/RERA/1251/308/PR/190715/002689, and Phase 3 is PRM/KA/RERA/1251/308/PR/140222/004708. They should never be used interchangeably." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I still buy a unit in Phase 1 or Phase 2?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Phase 1 and Phase 2 have both received their Occupancy Certificate and are ready to move in, which typically means original developer inventory in these phases is limited or sold out; any unit still available there would likely be a resale. Phase 3 is the phase currently being actively sold by the developer." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the codename for Phase 1 and Phase 2?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Phase 1 was developed under the codename \"Dil Chahta Hai\" and Phase 2 under \"Dil Chahta Hai Dobara\". Phase 3 carries the project's own public name, Shriram 107 SouthEast." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Phase 1 and Phase 2's OC status matter for a Phase 3 buyer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Because Phase 1 and Phase 2 sit on the same 19-acre site and have already been fully constructed, occupied and issued their Occupancy Certificate, a Phase 3 buyer can physically inspect the developer's actual delivered quality, clubhouse and landscaping before booking, rather than relying solely on renders for an unproven project." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the possession timeline the same across all three phases?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Phase 1 and Phase 2 are already complete and occupied. Phase 3 is still under construction, with an expected handover of January 2027 as per its RERA disclosure." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Phase 3 vs Phase 1 &amp; 2</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Shriram 107 SouthEast: Phase 3 vs Phase 1 &amp; 2, What's Actually Different?</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published August 27, 2026</span><span>&bull;</span><span>9 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp" alt="Shriram 107 SouthEast Phase 3 vs Phase 1 and 2 comparison" style="width:100%; max-width:420px; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Search results for Shriram 107 SouthEast often surface a specific, separate query: "Shriram 107 Southeast Phase 3" on its own. That's not a coincidence. This is a three-phase project on a single 19-acre site in Attibele, and each phase is different enough, in construction status, RERA registration and what a buyer actually gets, that treating them as interchangeable would be a genuine mistake. This article walks through exactly what separates Phase 3 from Phase 1 and Phase 2, so a reader doesn't accidentally conflate a completed phase's RERA number with the one that actually governs a fresh Phase 3 booking.</p>
+
+          <h2>1. The Three Phases, at a Glance</h2>
+          <p>Shriram 107 SouthEast was developed in three distinct phases on the same land parcel, each carrying its own internal codename during construction:</p>
+          <ul>
+            <li><strong>Phase 1, codenamed "Dil Chahta Hai":</strong> fully constructed, Occupancy Certificate received, ready to move in</li>
+            <li><strong>Phase 2, codenamed "Dil Chahta Hai Dobara":</strong> fully constructed, Occupancy Certificate received, ready to move in</li>
+            <li><strong>Phase 3, publicly branded "Shriram 107 SouthEast":</strong> currently under construction and open for booking, expected handover January 2027</li>
+          </ul>
+          <p>The internal codenames for Phase 1 and Phase 2 are worth knowing specifically because they occasionally surface in older marketing material, resale listings or word-of-mouth references, and a buyer unfamiliar with them might not immediately connect "Dil Chahta Hai" back to this same 19-acre Attibele project.</p>
+
+          <h2>2. Construction Status and What You Can Actually Inspect</h2>
+          <p>This is the single biggest practical difference between the phases. Phase 1 and Phase 2 are not just "under construction with a target date", they are complete, occupied buildings with residents already living in them, a functioning clubhouse, and mature landscaping that has had time to settle in. A prospective Phase 3 buyer can request a site visit and walk through these completed phases in person: see the actual finish quality of common areas, the real (not rendered) look of the clubhouse and skating rink, and talk to existing residents about their experience.</p>
+          <p>Phase 3, by contrast, is still under construction. What a Phase 3 buyer is evaluating is a combination of the developer's disclosed construction timeline, the design intent shown in the master plan and cluster plan, and the tangible proof-of-execution sitting right next door in Phase 1 and Phase 2. That's a meaningfully stronger evidence base than a typical first-of-its-kind launch, where a buyer has nothing built on-site to compare against at all.</p>
+
+          <h2>3. RERA Registration: Three Separate Numbers, Not One</h2>
+          <p>Because these are legally distinct phases, each has its own RERA project registration, and none of the three should be substituted for another when verifying a purchase:</p>
+          <table>
+            <thead><tr><th>Phase</th><th>Codename</th><th>RERA Number</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Phase 1</td><td>Dil Chahta Hai</td><td>PRM/KA/RERA/1251/308/PR/181122/002156</td><td>OC Received, Ready to Move In</td></tr>
+              <tr><td>Phase 2</td><td>Dil Chahta Hai Dobara</td><td>PRM/KA/RERA/1251/308/PR/190715/002689</td><td>OC Received, Ready to Move In</td></tr>
+              <tr><td>Phase 3</td><td>Shriram 107 SouthEast</td><td>PRM/KA/RERA/1251/308/PR/140222/004708</td><td>Under Construction, Handover Jan 2027</td></tr>
+            </tbody>
+          </table>
+          <p>If you are booking a fresh unit today, the registration relevant to your purchase is almost certainly Phase 3's: PRM/KA/RERA/1251/308/PR/140222/004708. Quoting a Phase 1 or Phase 2 number for a Phase 3 booking, or vice versa, would misstate which phase's legal disclosures, escrow account and completion timeline actually apply to your money. We recommend verifying whichever number is relevant to your specific unit directly on the Karnataka RERA portal before signing anything, and reading our full <a href="/blog/shriram-107-south-east-attibele-price-layout-rera/" class="money-link">Shriram 107 SouthEast price and RERA review</a> for the complete legal breakdown.</p>
+
+          <h2>4. Availability and Pricing</h2>
+          <p>Because Phase 1 and Phase 2 have already received their Occupancy Certificate, original developer-priced inventory in those phases is typically limited or already sold out; any unit still changing hands there would generally be a resale transaction, priced by the current owner rather than the developer's original price list, and subject to different due-diligence steps (existing loan status, society transfer process, and so on) than a fresh under-construction booking.</p>
+          <p>Phase 3 is the phase the developer is actively selling today, with 2 BHK apartments of approximately 698-752 sq.ft super built-up starting from ₹57 Lakhs onwards, and 3 BHK apartments of approximately 914 sq.ft super built-up starting from ₹75 Lakhs onwards. For most readers researching this project today, Phase 3 is the relevant option, both because it's the phase with active developer inventory and because it's the phase this website's project page and pricing tables cover in detail.</p>
+
+          <h2>5. Shared Infrastructure: What Phase 3 Buyers Inherit</h2>
+          <p>Even though Phase 3 is a separate legal registration, it sits on the same 19-acre master-planned site as Phase 1 and Phase 2, sharing the project's overall amenity philosophy: the 18,000 sq.ft (G+2) clubhouse with its skating rink, the lake-side garden, the two amphitheatres, and the broader network of sports courts and play zones described in the project's master plan. Depending on how the developer has structured access and maintenance across phases (a detail worth confirming directly, since phase-wise amenity access arrangements vary project to project), a Phase 3 resident may benefit from amenities that Phase 1 and Phase 2 residents have already been using and maturing for some time, rather than a completely fresh set of facilities being built and tested for the first time alongside their own move-in.</p>
+
+          <h2>6. Should You Consider a Phase 1 or Phase 2 Resale Instead?</h2>
+          <p>For a buyer prioritising immediate move-in over new-construction pricing, a resale unit in the already-completed Phase 1 or Phase 2 is worth evaluating as an alternative to booking Phase 3. The trade-offs run in both directions: a resale unit skips the multi-year wait for Phase 3's January 2027 handover and lets you inspect the exact physical unit before buying, but it also means paying whatever premium the resale market has attached to a ready-to-move-in home in this corridor, and running a different due-diligence checklist (verifying the seller's title, any existing loan on the unit, and the housing society's transfer process) than a standard developer booking. If ready possession matters more to you than new-construction pricing, it's worth asking our team specifically about resale availability in Phase 1 and Phase 2 alongside a Phase 3 enquiry.</p>
+
+          <h2>7. What a Resale in Phase 1 or Phase 2 Actually Involves</h2>
+          <p>If you're weighing a Phase 1 or Phase 2 resale against a fresh Phase 3 booking, it's worth understanding that the two purchases are structurally different transactions, not just different price points. A developer booking in Phase 3 runs through the standard RERA-governed process: a defined payment schedule tied to construction milestones, funds held in a project-specific escrow account, and a completion date with regulatory consequences if the developer slips. A resale in an already-completed phase skips construction risk entirely, but it shifts the diligence burden onto the seller's paperwork: you'll want to verify the seller's original sale deed and title chain, confirm there's no outstanding loan or lien on the specific unit, check the housing society's or association's no-objection certificate for the transfer, and independently confirm that property tax and maintenance dues are current before any money changes hands.</p>
+          <p>None of this makes a resale a worse option, ready possession is a genuine, valuable trade-off for many buyers, particularly those relocating for a job or needing a home within the next few months rather than years. It does mean the two paths call for different advisors and different checklists, and a buyer shouldn't assume the same diligence process that applies to a fresh Phase 3 booking automatically covers a Phase 1 or Phase 2 resale, or vice versa.</p>
+
+          <h2>8. A Quick Decision Framework</h2>
+          <p>Putting the comparison together, here's a simple way to think about which phase actually fits your situation:</p>
+          <ul>
+            <li><strong>Need to move in within the next few months:</strong> a Phase 1 or Phase 2 resale is your only realistic option here, since Phase 3 won't hand over until January 2027 at the earliest.</li>
+            <li><strong>Comfortable with a multi-year hold and want new-construction pricing:</strong> Phase 3 is the natural fit, and it comes with the unusual advantage of two completed sibling phases to inspect before committing.</li>
+            <li><strong>Prioritising the lowest possible entry price:</strong> Phase 3's developer pricing is likely to undercut whatever premium the resale market has attached to a ready Phase 1 or Phase 2 unit, though this is worth confirming with current resale listings rather than assumed.</li>
+            <li><strong>Want to physically verify build quality before paying anything:</strong> this is where Phase 3 uniquely benefits from Phase 1 and Phase 2 being right next door, ask for a site visit to both the completed phases and the Phase 3 construction site in the same trip.</li>
+          </ul>
+
+          <h2>Our Honest Assessment</h2>
+          <p>The clearest takeaway from comparing these three phases is that Phase 3 buyers are in an unusually well-evidenced position: rather than trusting a developer's promises on a blank plot, they can walk two fully delivered, occupied phases built by the same team on the same land before deciding. That's a genuine, structural advantage over a typical first launch, and it's the main reason we'd treat Shriram 107 SouthEast's Phase 3 as a lower-risk under-construction purchase than most comparably priced options in this corridor.</p>
+          <p>The caveat is that "lower risk" doesn't mean "no risk". Phase 3 is still a multi-year, under-construction commitment with its own separate RERA registration (PRM/KA/RERA/1251/308/PR/140222/004708) and its own January 2027 handover date to track. Don't assume Phase 1 or Phase 2's completed status automatically extends to Phase 3's construction quality or timeline, verify Phase 3's specific registration and current construction progress independently, exactly as you would for any other under-construction project.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Are Phase 1, Phase 2 and Phase 3 of Shriram 107 SouthEast the same registration?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No. Each phase carries its own separate RERA registration: Phase 1 is PRM/KA/RERA/1251/308/PR/181122/002156, Phase 2 is PRM/KA/RERA/1251/308/PR/190715/002689, and Phase 3 is PRM/KA/RERA/1251/308/PR/140222/004708. They should never be used interchangeably.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">Can I still buy a unit in Phase 1 or Phase 2?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Phase 1 and Phase 2 have both received their Occupancy Certificate and are ready to move in, which typically means original developer inventory in these phases is limited or sold out; any unit still available there would likely be a resale. Phase 3 is the phase currently being actively sold by the developer.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">What is the codename for Phase 1 and Phase 2?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Phase 1 was developed under the codename "Dil Chahta Hai" and Phase 2 under "Dil Chahta Hai Dobara". Phase 3 carries the project's own public name, Shriram 107 SouthEast.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">Why does Phase 1 and Phase 2's OC status matter for a Phase 3 buyer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Because Phase 1 and Phase 2 sit on the same 19-acre site and have already been fully constructed, occupied and issued their Occupancy Certificate, a Phase 3 buyer can physically inspect the developer's actual delivered quality, clubhouse and landscaping before booking, rather than relying solely on renders for an unproven project.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">Is the possession timeline the same across all three phases?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No. Phase 1 and Phase 2 are already complete and occupied. Phase 3 is still under construction, with an expected handover of January 2027 as per its RERA disclosure.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/shriram-107-south-east/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-master-plan.webp" alt="Shriram 107 SouthEast master plan" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Shriram 107 SouthEast</p>
+                <p class="related-card-detail">2 &amp; 3 BHK &middot; Attibele, South East Bangalore</p>
+              </div>
+            </a>
+            <a href="/blog/shriram-107-south-east-attibele-price-layout-rera/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp" alt="Shriram 107 SouthEast price layout RERA review" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Price, Layout &amp; RERA Review</p>
+                <p class="related-card-detail">11 Min Read &middot; Project Review</p>
+              </div>
+            </a>
+            <a href="/blog/attibele-electronic-city-south-investment-guide/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-location-map.webp" alt="Attibele Electronic City South investment guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Attibele Investment Guide</p>
+                <p class="related-card-detail">9 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp" alt="Shriram 107 SouthEast OC received badge" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Shriram 107 SouthEast</p>
+            <ul class="sidebar-specs">
+              <li>Phase 1 &amp; 2: OC Received, Ready to Move In</li>
+              <li>Phase 3: Under Construction, Jan 2027</li>
+              <li>Phase 3 from ₹57 Lakhs onwards</li>
+              <li>Attibele, South East Bangalore</li>
+            </ul>
+            <a href="/projects/shriram-107-south-east/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions about which phase fits you? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Shriram 107 SouthEast</h4>
+          <a href="/projects/shriram-107-south-east/">Project Overview</a>
+          <a href="/blog/shriram-107-south-east-attibele-price-layout-rera/">Price, Layout &amp; RERA Review</a>
+          <a href="/blog/attibele-electronic-city-south-investment-guide/">Attibele Investment Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
