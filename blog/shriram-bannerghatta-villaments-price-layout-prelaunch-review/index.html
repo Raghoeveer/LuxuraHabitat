@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Shriram Bannerghatta Villaments: Price &amp; Layout Review</title>
+  <meta name="description" content="Shriram Bannerghatta villaments pre-launch review: 3 &amp; 4 BHK duplex layouts, tentative pricing, 5-acre master plan, amenities and RERA status explained.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/shriram-bannerghatta-villaments-price-layout-prelaunch-review/">
+  <meta property="og:title" content="Shriram Bannerghatta Villaments: Price, Layout &amp; Pre-Launch Review">
+  <meta property="og:description" content="Independent pre-launch review of Shriram Bannerghatta: duplex villament layouts, tentative pricing by configuration, amenities and why RERA is still pending.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/shriram-bannerghatta/shriram-bannerghatta-banner.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shriram Bannerghatta Villaments: Price &amp; Layout Review">
+  <meta name="twitter:description" content="Independent pre-launch review: duplex villament layouts, tentative pricing, amenities and RERA status for Shriram Bannerghatta.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/shriram-bannerghatta/shriram-bannerghatta-banner.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/shriram-bannerghatta-villaments-price-layout-prelaunch-review/"
+        },
+        "headline": "Shriram Bannerghatta Villaments: Price, Layout & Pre-Launch Review",
+        "description": "Shriram Bannerghatta villaments pre-launch review: 3 & 4 BHK duplex layouts, tentative pricing, 5-acre master plan, amenities and RERA status explained.",
+        "image": "https://luxurahabitat.com/images/projects/shriram-bannerghatta/shriram-bannerghatta-banner.webp",
+        "datePublished": "2026-08-29",
+        "dateModified": "2026-08-29",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/shriram-bannerghatta-villaments-price-layout-prelaunch-review/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Shriram Bannerghatta Price & Layout Review", "item": "https://luxurahabitat.com/blog/shriram-bannerghatta-villaments-price-layout-prelaunch-review/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Shriram Bannerghatta and who is the developer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Shriram Bannerghatta is an exclusive pre-launch villament community by Shriram Properties on Bannerghatta Road, South Bengaluru, spread across 5 acres, offering 3 BHK and 4 BHK duplex villaments with a Simplex option available on request." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a villament, and why does the developer use that term?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A villament combines villa and apartment: a low-rise, land-attached home with a private entrance, garden or deck and a duplex layout, offering villa-style privacy and space inside a planned, gated community, rather than a stand-alone plotted villa or a high-rise apartment tower." }
+          },
+          {
+            "@type": "Question",
+            "name": "What configurations and tentative pricing does the project offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The confirmed configurations are a 3 BHK Duplex Villament of 2,000 sq. ft. tentatively priced at Rs 3.00-3.30 Cr, and a 4 BHK Duplex Villament of 3,000 sq. ft. tentatively priced at Rs 3.80-4.25 Cr. A Simplex option is also available on request, with no separate price disclosed yet. All figures are subject to change at official launch." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RERA status of Shriram Bannerghatta?",
+            "acceptedAnswer": { "@type": "Answer", "text": "RERA registration for Shriram Bannerghatta is yet to be advised by the developer, since the project is currently in the pre-launch stage. Buyers should verify the registration number directly on the Karnataka RERA portal once it is issued, before making any booking decision." }
+          },
+          {
+            "@type": "Question",
+            "name": "What amenities does the master plan show?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The developer's own pre-launch material groups amenities under a Mind, Body, Soul theme: landscaped spaces, community zones and indoor recreation for Mind; a fitness centre, swimming pool, sports facilities and jogging or wellness spaces for Body; and green landscapes, leisure zones, kids' spaces, relaxation areas and community lawns for Soul, arranged around individual unit gardens and a central clubhouse and pool." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Shriram Bannerghatta Price &amp; Layout Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Shriram Bannerghatta: Price, Layout &amp; Pre-Launch Review</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published August 29, 2026</span><span>&bull;</span><span>12 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/shriram-bannerghatta/shriram-bannerghatta-banner.webp" alt="Shriram Bannerghatta villaments price layout pre-launch review aerial night view" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Shriram Properties, better known in Bangalore for large apartment communities, has quietly moved into a different product category on Bannerghatta Road: the villament, a duplex, land-attached home inside a gated 5-acre community. Shriram Bannerghatta is currently at an exclusive pre-launch stage, which means the usual review checklist looks a little different here, no confirmed RERA number, no finalised unit count, no possession date, but the developer has already shared confirmed configurations, tentative pricing and a full master plan. This review walks through everything that is actually known today, is explicit about what isn't, and gives our honest read on whether registering interest now makes sense.</p>
+
+          <h2>1. What Exactly Is a "Villament"?</h2>
+          <p>Villament, a portmanteau of villa and apartment, is the term Shriram Properties uses for this product, and it's worth defining precisely because it's easy to conflate with either a plotted villa or a regular apartment. A villament is a duplex, low-rise, land-attached home, meaning it has its own private ground-floor entrance, an individual private garden or deck, and internal stairs connecting two full levels, but it sits within a single, unified gated community with shared amenities, security and maintenance, rather than being sold as an independent plot where the buyer manages construction. The developer's own positioning captures this directly: "Experience the privacy and spaciousness of a villa with the convenience of a thoughtfully planned community."</p>
+          <p>In practical terms, this puts Shriram Bannerghatta in a different competitive set from both a typical high-rise apartment tower (no private garden, shared common walls, elevator-dependent access) and a raw villa plot (no shared amenities, buyer bears full construction risk and timeline). For a buyer who has outgrown an apartment but doesn't want the effort of building or maintaining a stand-alone villa, that middle position is the entire value proposition.</p>
+
+          <h2>2. Location: Bannerghatta Road, South Bengaluru</h2>
+          <p>The project sits on the Bannerghatta Road corridor in South Bengaluru. Per the developer's own location graphic, the immediate surroundings include RV Institute of Technology, KS School of Engineering &amp; Technology and Holiday Village Resort, with the DMart on Kanakapura Road and a second DMart near Hulimavu both shown as nearby retail anchors. The pin itself sits closest to Doddakammanahalli, with Hulimavu, Akshayanagar, Anjanapura and Konanakunte all visible as surrounding localities, and Begur Fort and the HRBR Layout stretch further to the east. Bannerghatta Road is one of South Bengaluru's rapidly developing corridors, and its position also puts it within a reasonable distance of the neighbouring Kanakapura Road belt, where established healthcare anchors like Fortis Hospital Bannerghatta already serve residents; see our <a href="/blog/bannerghatta-road-south-bengaluru-investment-guide/" class="money-link">Bannerghatta Road investment guide</a> for a deeper look at the corridor's growth story.</p>
+          <p>One honest caveat: the developer's own location graphic does not label exact drive-time distances to any of these landmarks, unlike some of the other pre-launch material we've reviewed for nearby projects. We've described what's genuinely shown on the map rather than estimating commute times we can't verify, and recommend confirming exact distances directly with the sales team or via your own maps app before treating any specific landmark as a firm commute-time anchor.</p>
+
+          <h2>3. The Master Plan: A 5-Acre, Cluster-Based Layout</h2>
+          <p>Shriram Bannerghatta spans 5 acres, organised into multiple villament clusters arranged around a central clubhouse and swimming pool, with perimeter gardens and a children's play area positioned along the community's edges. The developer's own master plan graphic shows several distinct cluster groupings of varying sizes wrapped around internal roads leading from a single main entrance, a layout designed to give each cluster a degree of separation and privacy while keeping the shared clubhouse, pool and multi-purpose court centrally accessible to every resident.</p>
+          <p>What the master plan does not yet confirm is a final, official total unit count. The graphic shows individual unit numbers within each cluster, but since this is explicitly labelled "coming soon" pre-launch material, we're treating those as indicative cluster sizes rather than a confirmed final unit count, and recommend asking the sales team directly for the finalised total before booking.</p>
+
+          <h2>4. Confirmed Configurations and Floor Plans</h2>
+          <p>Two duplex configurations are confirmed, both following the same broad ground-floor-plus-upper-level layout logic:</p>
+          <ul>
+            <li><strong>3 BHK Duplex Villament (2,000 sq. ft.):</strong> Ground floor includes a master bedroom with attached bath, dining area, modern kitchen, a guest bedroom, powder room, entrance foyer and a large private deck opening onto the garden, plus private parking. The upper level adds two further bedrooms (including a second ensuite), a family lounge, a walk-in wardrobe and a balcony.</li>
+            <li><strong>4 BHK Duplex Villament (3,000 sq. ft.):</strong> Follows the same ground-floor logic as the 3 BHK but adds a dedicated staff room. The upper level carries a fourth bedroom (also ensuite) alongside the same family lounge, walk-in wardrobe and balcony arrangement.</li>
+          </ul>
+          <p>A Simplex option is also mentioned by the developer as available on request, though no floor plan or price has been disclosed for it in the material we've reviewed; if a single-level layout matters to you, ask the sales team directly for details before assuming it matches either duplex plan.</p>
+
+          <h2>5. Tentative Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Area</th><th>Tentative Price</th></tr></thead>
+            <tbody>
+              <tr><td>3 BHK Duplex Villament</td><td>2,000 sq. ft.</td><td>Rs 3.00 &ndash; 3.30 Cr</td></tr>
+              <tr><td>4 BHK Duplex Villament</td><td>3,000 sq. ft.</td><td>Rs 3.80 &ndash; 4.25 Cr</td></tr>
+              <tr><td>Simplex</td><td>On request</td><td>Not disclosed</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Tentative pricing, subject to change at official launch. Please <a href="/projects/shriram-bannerghatta/#form" class="money-link">enquire for the latest, confirmed price list</a>.</p>
+          <p>Working out a rough per-square-foot rate from these figures puts the 3 BHK at roughly Rs 15,000-16,500/sq. ft. and the 4 BHK at roughly Rs 12,700-14,200/sq. ft., both broadly consistent with premium low-rise, land-attached product on a growth corridor in South Bengaluru, though the range is wide enough (and explicitly tentative) that we'd treat it as directional rather than something to build a firm budget around just yet. Note too that both figures are described by the developer as tentative and subject to change, which is standard for a pre-launch project but does mean a buyer registering interest today should not treat either number as locked in.</p>
+          <p>On financing, a purchase in the Rs 3-4.25 Cr band typically sits in a segment where lenders expect a larger down payment proportion and closer income documentation than a mass-market apartment purchase, so buyers should start conversations with their bank or a home-loan advisor early, even at the pre-launch, registration stage, so financing isn't a bottleneck once final pricing and booking terms are released.</p>
+
+          <h2>6. Amenities: The Mind, Body, Soul Framework</h2>
+          <p>The developer's own pre-launch material groups amenities under a "Mind, Body, Soul" theme rather than a flat checklist. Mind covers landscaped spaces, community zones and indoor recreation and social areas; Body covers a fitness centre, swimming pool, sports facilities and jogging or wellness spaces; and Soul covers green landscapes, leisure zones, kids' spaces, relaxation areas and community lawns. In practice, this maps to a fairly standard premium-community amenity set, a clubhouse and pool, a multi-purpose sports court, a children's play zone and individual unit gardens layered on top of shared perimeter gardens, but organised thematically rather than as a bare list, which is consistent with how the developer is positioning the whole project around lifestyle and wellness rather than just square footage.</p>
+
+          <h2>7. RERA and Legal Status: What's Genuinely Pending</h2>
+          <p>This is the section we'd urge every prospective buyer to read carefully. Shriram Bannerghatta has no RERA registration number yet; the developer has explicitly described the project as being at the pre-launch, registration-in-progress stage. That also means there is no confirmed possession date, no finalised total unit count, and no tower or floor count disclosed in the material we've reviewed. We have not invented or estimated any of these figures for this review, and any source that quotes a specific RERA number, possession date or unit count for this project today should be treated with caution until it's independently verifiable on the Karnataka RERA portal.</p>
+          <p>None of this makes the project untrustworthy, pre-launch registration of interest ahead of a formal RERA-backed launch is a common and legal practice, but it does mean the risk profile is meaningfully different from booking into an already-RERA-registered, under-construction project. Registering interest now can offer early access to unit selection and pricing before wider release; it should not be treated as equivalent to a booking with the legal protections a RERA registration provides.</p>
+
+          <h2>8. Who This Project Actually Suits</h2>
+          <p>Shriram Bannerghatta is a strong fit for a buyer who specifically wants villa-style privacy, a private entrance, garden or deck and a duplex layout, but doesn't want the construction risk, land-title diligence or ongoing maintenance overhead of a stand-alone villa plot, and is comfortable with the higher price band that comes with a large-format, low-density product on Bannerghatta Road. The 3 BHK at 2,000 sq. ft. suits a family wanting extra space without moving to the largest layout; the 4 BHK at 3,000 sq. ft. with its fourth ensuite bedroom and staff room suits a larger household or a buyer who values a dedicated staff space.</p>
+          <p>It's a weaker fit for a buyer who needs a firm possession date to plan around, since none has been announced, or for someone who wants the legal certainty of an already-RERA-registered project before committing any funds or serious time to a decision. It's also a poor fit for someone assuming this is a budget or mid-market purchase; at Rs 3-4.25 Cr tentative, this sits firmly in the premium segment.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>What stands out about Shriram Bannerghatta is the product itself: genuine duplex, land-attached villaments with private decks and gardens are a distinctly different offering from the high-rise apartment towers that dominate most Bangalore growth corridors, and the confirmed 3 BHK and 4 BHK layouts, plus the Mind-Body-Soul amenity framing, suggest a project built around a specific, differentiated lifestyle pitch rather than a generic checklist. The 5-acre scale is also a genuine point in its favour: large enough for a proper clubhouse, pool and multiple amenity zones, small enough to stay low-density and exclusive rather than sprawling.</p>
+          <p>The honest trade-off is that this genuinely is an early-stage registration, not a booking with the usual RERA-backed protections, and every buyer should weigh that explicitly: no RERA number yet, no possession date, no finalised total unit count, and tentative pricing that is explicitly subject to change. If the villament format and Bannerghatta Road location are a strong fit for what you're looking for, registering interest now is a reasonable way to get early access to pricing and unit selection, provided you go in with clear eyes about what "pre-launch" actually means, and independently verify the RERA registration on the Karnataka RERA portal the moment it's issued before making any financial commitment. As always, <a href="/projects/shriram-bannerghatta/#form" class="money-link">enquire directly</a> for the latest confirmed details before booking.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">What is Shriram Bannerghatta and who is the developer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Shriram Bannerghatta is an exclusive pre-launch villament community by Shriram Properties on Bannerghatta Road, South Bengaluru, spread across 5 acres, offering 3 BHK and 4 BHK duplex villaments with a Simplex option available on request.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is a villament, and why does the developer use that term?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">A villament combines villa and apartment: a low-rise, land-attached home with a private entrance, garden or deck and a duplex layout, offering villa-style privacy and space inside a planned, gated community, rather than a stand-alone plotted villa or a high-rise apartment tower.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">What configurations and tentative pricing does the project offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The confirmed configurations are a 3 BHK Duplex Villament of 2,000 sq. ft. tentatively priced at Rs 3.00-3.30 Cr, and a 4 BHK Duplex Villament of 3,000 sq. ft. tentatively priced at Rs 3.80-4.25 Cr. A Simplex option is also available on request, with no separate price disclosed yet. All figures are subject to change at official launch.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What is the RERA status of Shriram Bannerghatta?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">RERA registration for Shriram Bannerghatta is yet to be advised by the developer, since the project is currently in the pre-launch stage. Buyers should verify the registration number directly on the Karnataka RERA portal once it is issued, before making any booking decision.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">What amenities does the master plan show?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The developer's own pre-launch material groups amenities under a Mind, Body, Soul theme: landscaped spaces, community zones and indoor recreation for Mind; a fitness centre, swimming pool, sports facilities and jogging or wellness spaces for Body; and green landscapes, leisure zones, kids' spaces, relaxation areas and community lawns for Soul, arranged around individual unit gardens and a central clubhouse and pool.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/shriram-bannerghatta/" class="related-card">
+              <img src="../../images/projects/shriram-bannerghatta/shriram-bannerghatta-about.webp" alt="Shriram Bannerghatta" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Shriram Bannerghatta</p>
+                <p class="related-card-detail">3 &amp; 4 BHK Villaments &middot; Bannerghatta Road, South Bengaluru</p>
+              </div>
+            </a>
+            <a href="/blog/bannerghatta-road-south-bengaluru-investment-guide/" class="related-card">
+              <img src="../../images/projects/shriram-bannerghatta/shriram-bannerghatta-location-map.webp" alt="Bannerghatta Road South Bengaluru investment guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Bannerghatta Road Investment Guide</p>
+                <p class="related-card-detail">10 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+            <a href="/projects/shriram-107-south-east/" class="related-card">
+              <img src="../../images/projects/shriram-107-south-east/shriram-107-south-east-about.webp" alt="Shriram 107 SouthEast" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Same Developer</p>
+                <p class="related-card-title">Shriram 107 SouthEast</p>
+                <p class="related-card-detail">2 &amp; 3 BHK &middot; Attibele, South East Bengaluru</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/shriram-bannerghatta/shriram-bannerghatta-about.webp" alt="Shriram Bannerghatta" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Shriram Bannerghatta</p>
+            <ul class="sidebar-specs">
+              <li>3 &amp; 4 BHK Duplex Villaments &middot; 5 Acres</li>
+              <li>Rs 3.00 &ndash; 4.25 Cr* Tentative</li>
+              <li>Pre-Launch &middot; RERA Pending</li>
+              <li>Bannerghatta Road, South Bengaluru</li>
+            </ul>
+            <a href="/projects/shriram-bannerghatta/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Bengaluru's trusted independent real estate consultancy connecting discerning buyers with verified tier-one developer properties.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Shriram Bannerghatta</h4>
+          <a href="/projects/shriram-bannerghatta/">Project Overview</a>
+          <a href="/blog/bannerghatta-road-south-bengaluru-investment-guide/">Bannerghatta Road Investment Guide</a>
+          <a href="/projects/shriram-107-south-east/">Shriram 107 SouthEast (Attibele)</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
