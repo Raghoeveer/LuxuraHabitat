@@ -89,6 +89,16 @@
     .sidebar-consult{background:#faf8f5;border-radius:14px;padding:18px;border:1px solid rgba(0,0,0,.06);}
     .sidebar-consult p{font-size:.88rem;color:#555;line-height:1.6;margin-bottom:12px;}
     .sidebar-consult a{display:block;text-align:center;background:var(--accent-copper);color:#fff;padding:10px;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;}
+    .faq-section{margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:1px solid var(--border-light);}
+    .faq-list{max-width:900px;margin:var(--space-sm) 0 0;display:grid;gap:0.8rem;}
+    .faq-item{background:#faf8f5;border-radius:8px;border:1px solid var(--border-light);overflow:hidden;}
+    .faq-question{width:100%;background:none;border:none;text-align:left;padding:1.1rem 1.3rem;font-family:inherit;font-size:0.97rem;font-weight:600;color:var(--primary-forest);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background 0.2s;}
+    .faq-question:hover{background:rgba(184,115,51,0.06);}
+    .faq-question.open{color:var(--accent-copper);}
+    .faq-arrow{font-size:1.1rem;transition:transform 0.3s;flex-shrink:0;}
+    .faq-question.open .faq-arrow{transform:rotate(180deg);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease, padding 0.3s;padding:0 1.3rem;color:#555;font-size:0.95rem;line-height:1.75;}
+    .faq-answer.open{max-height:600px;padding:0 1.3rem 1.1rem;}
     @media(max-width:900px){.blog-page-wrapper{grid-template-columns:1fr;gap:32px;}.article-sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;}}
     @media(max-width:540px){.article-sidebar{grid-template-columns:1fr;}.related-cards-grid{grid-template-columns:1fr;}}
   </style>
@@ -106,7 +116,7 @@
         "description": "A full breakdown of Concorde Sienna's pricing, 2 & 3 BHK floor plans, RERA registration, amenities and our honest take on this pre-launch Hennur Main Road tower.",
         "image": "https://luxurahabitat.com/images/projects/concorde-sienna/concorde-sienna-elevation-1.webp",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-08-04",
+        "dateModified": "2026-09-01",
         "author": { "@type": "Person", "name": "Narayanan Rajesh", "url": "https://luxurahabitat.com/about/" },
         "publisher": {
           "@type": "Organization",
@@ -122,6 +132,41 @@
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
           {"@type": "ListItem", "position": 3, "name": "Hennur-Thanisandra Real Estate Guide", "item": "https://luxurahabitat.com/areas/hennur/"},
           {"@type": "ListItem", "position": 4, "name": "Concorde Sienna Hennur: Price, Layout & RERA Deep-Dive", "item": "https://luxurahabitat.com/blog/concorde-sienna-hennur-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Concorde Sienna apartments or plots?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Concorde Sienna is an apartment tower, not a plotted or villa development. It is a single 92-metre high-rise with 2 basements, ground floor and 28/29 upper floors, offering ready-configured 2 and 3 BHK units rather than land you build on yourself." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the starting price of Concorde Sienna?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Indicative pre-launch pricing starts around Rs 1.26 Cr onwards for the 1,200 to 1,221 sq ft 2 BHK, rising to roughly Rs 1.96 Cr onwards for the largest 1,870 sq ft 3 BHK. These are pre-launch, indicative figures, so confirm the current price sheet with our team before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "How many units does Concorde Sienna have, and how much open space?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Approximately 269 to 270 apartments across the single tower, spread over a 3.05-acre plot with up to 70% of the land kept as open space, a high ratio for a project this compact, achieved specifically because it is one vertical tower rather than several spread-out blocks." }
+          },
+          {
+            "@type": "Question",
+            "name": "What amenities does Concorde Sienna offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A sky-deck clubhouse with an infinity pool and a separate kids' pool, a gymnasium, a yoga and meditation studio, a spa with sauna and steam room, indoor and outdoor sports courts, a dedicated co-working space, a banquet hall, an indoor amphitheatre, and smart-home features including EV charging provisions." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Concorde Sienna RERA registered, and when is possession?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is registered under Karnataka RERA number PRM/KA/RERA/1251/446/PR/220626/008740. As a pre-launch project the exact possession date is not yet published in the material we've reviewed, so request the RERA-registered possession date directly and verify it on the Karnataka RERA portal before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Concorde Sienna compare to Sattva La Vita nearby?",
+            "acceptedAnswer": { "@type": "Answer", "text": "They are different product types on the same corridor: Sienna is a single-tower 2 & 3 BHK apartment project, while Sattva La Vita is a 4 BHK row-house villa community with private gardens. See our full comparison for a side-by-side breakdown of price, format and who each suits." }
+          }
         ]
       }
     ]
@@ -179,13 +224,13 @@
         <header class="article-header">
           <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Concorde Sienna Hennur: Price, Layout &amp; RERA Deep-Dive</h1>
           <div class="article-meta">
-            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>August 4, 2026</span><span>&bull;</span><span>8 Min Read</span>
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Updated September 1, 2026</span><span>&bull;</span><span>12 Min Read</span>
           </div>
         </header>
         <div class="article-content">
         <img src="/images/projects/concorde-sienna/concorde-sienna-elevation-1.webp" alt="Concorde Sienna Hennur Main Road tower elevation" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
 
-          <p><a href="/projects/concorde-sienna/" class="money-link">Concorde Sienna</a> is a new pre-launch tower from Concorde Group on Hennur Main Road, Kannuru — the same North Bengaluru corridor that's home to <a href="/projects/sattva-la-vita/" class="money-link">Sattva La Vita</a> and <a href="/projects/orchid-salisbury/" class="money-link">Goyal Orchid Salisbury</a>. Unlike most of its neighbours, Sienna is a single vertical tower rather than a multi-block layout — a design choice that shapes almost everything about how it will look, live, and price. Here's what the numbers and floor plans actually say.</p>
+          <p><a href="/projects/concorde-sienna/" class="money-link">Concorde Sienna</a> is a new pre-launch tower from Concorde Group on Hennur Main Road, Kannuru, the same North Bengaluru corridor that's home to <a href="/projects/sattva-la-vita/" class="money-link">Sattva La Vita</a> and <a href="/projects/orchid-salisbury/" class="money-link">Goyal Orchid Salisbury</a>. Unlike most of its neighbours, Sienna is a single vertical tower rather than a multi-block layout, a design choice that shapes almost everything about how it will look, live, and price. Here's what the numbers and floor plans actually say.</p>
 
           <h2>1. Project Snapshot</h2>
           <table>
@@ -204,7 +249,7 @@
           </table>
 
           <h2>2. Floor Plans &amp; Pricing, Unit by Unit</h2>
-          <p>Sienna's floor plan lineup is compact and deliberately simple — four configurations, no filler variants:</p>
+          <p>Sienna's floor plan lineup is compact and deliberately simple: four configurations, no filler variants.</p>
           <table>
             <thead><tr><th>Configuration</th><th>Area</th><th>Indicative Price</th></tr></thead>
             <tbody>
@@ -214,20 +259,87 @@
               <tr><td>3 BHK (3 Toilet Large)</td><td>1,870 sq ft</td><td>₹1.96 Cr* onwards</td></tr>
             </tbody>
           </table>
-          <p>Working the numbers backward, the 2 BHK prices out at roughly ₹10,300–10,500 per sq ft, while the largest 3 BHK comes in closer to ₹10,500 per sq ft — a fairly tight, consistent per-sq-ft band across the whole line-up, which is typical of a single-tower project where every unit shares the same structure, lobby and amenity access rather than varying by block or phase.</p>
+          <p>Working the numbers backward, the 2 BHK prices out at roughly ₹10,300–10,500 per sq ft, while the largest 3 BHK comes in closer to ₹10,500 per sq ft, a fairly tight, consistent per-sq-ft band across the whole line-up, which is typical of a single-tower project where every unit shares the same structure, lobby and amenity access rather than varying by block or phase.</p>
 
           <h2>3. Why a Single Tower Changes the Math</h2>
-          <p>Most large layouts in this price band spread units across several 12–16 storey blocks, which lets a developer stage construction and phase amenities. Concorde Sienna instead concentrates roughly 269–270 homes into one ~92-metre tower on a comparatively compact 3.05-acre plot. The upside is density-efficient open space — up to 70% of the plot stays free for landscaping, the sky-deck clubhouse and sports courts, which is a high ratio for a plot this size. The trade-off is that a single-tower format means one shared lift core, one construction timeline with no phase buffer, and a smaller total unit count than most nearby multi-block projects — worth factoring in if liquidity (i.e. how many comparable resale units exist nearby) matters to your exit plan.</p>
+          <p>Most large layouts in this price band spread units across several 12–16 storey blocks, which lets a developer stage construction and phase amenities. Concorde Sienna instead concentrates roughly 269–270 homes into one ~92-metre tower on a comparatively compact 3.05-acre plot. The upside is density-efficient open space: up to 70% of the plot stays free for landscaping, the sky-deck clubhouse and sports courts, which is a high ratio for a plot this size. The trade-off is that a single-tower format means one shared lift core, one construction timeline with no phase buffer, and a smaller total unit count than most nearby multi-block projects, worth factoring in if liquidity (i.e. how many comparable resale units exist nearby) matters to your exit plan.</p>
 
           <h2>4. Amenities Worth Actually Weighing</h2>
-          <p>Beyond the standard clubhouse-and-gym checklist, two amenities stand out on the master plan: a genuine <strong>sky-deck infinity pool</strong> rather than a ground-level pool, and a dedicated <strong>co-working space</strong> — a increasingly common but still not universal amenity that matters if you or a tenant works hybrid. The master plan also shows the site backing onto a lake and nala buffer on its western edge, which should keep that side of the tower's views open longer-term, though buyers should independently verify the buffer's exact status with the developer before relying on it as a permanent view guarantee.</p>
+          <p>Beyond the standard clubhouse-and-gym checklist, the amenity list runs deeper than most single-tower launches on this corridor. The headline piece is a genuine <strong>sky-deck infinity pool</strong> rather than a ground-level pool, paired with a separate kids' pool so families aren't sharing one water body across age groups. Fitness and wellness gets its own cluster: a full gymnasium, a dedicated yoga and meditation studio, and a spa with sauna and steam room, which is a level of wellness infrastructure that's still uncommon at this price band on Hennur Main Road.</p>
+          <p>The second cluster worth calling out is built around how people actually spend their downtime rather than a generic "recreation zone": indoor and outdoor sports courts, a banquet hall for functions, and an indoor amphitheatre for community events. Then there's the amenity that matters most if you or a future tenant works hybrid, a dedicated <strong>co-working space</strong> within the tower itself, still not a universal inclusion even in premium projects. Smart-home features and EV charging provisions round out the list, both increasingly table-stakes for buyers under 40 evaluating a tower launch in 2026.</p>
+          <p>The master plan also shows the site backing onto a lake and nala buffer on its western edge, which should keep that side of the tower's views open longer-term. That said, buyers should independently verify the buffer's exact status and any setback requirements with the developer before relying on it as a permanent view guarantee, since buffer zones can be affected by future civic infrastructure work along the corridor.</p>
 
-          <h2>5. RERA &amp; Legal Status</h2>
-          <p>Concorde Sienna is registered under Karnataka RERA number <strong>PRM/KA/RERA/1251/446/PR/220626/008740</strong>. As a pre-launch project, the exact possession date has not yet been published in the material we reviewed — buyers should request the RERA-registered possession date directly and confirm it against the state RERA portal before booking, standard practice for any pre-launch purchase.</p>
+          <h2>5. Location &amp; Connectivity</h2>
+          <p>Concorde Sienna sits on Hennur Main Road in Kannuru village, part of the broader <a href="/areas/hennur/" class="money-link">Hennur-Thanisandra corridor</a> that has become one of North Bengaluru's busiest residential growth belts over the past several years. The corridor's core investment thesis rests on its proximity to Manyata Tech Park, one of Bengaluru's largest IT and business-park clusters, along with reasonably direct access to the Outer Ring Road and onward to Kempegowda International Airport. For a working professional employed in the Manyata-Hebbal-ORR belt, that combination keeps the daily commute realistic without requiring a move deep into the city core.</p>
+          <p>Because it's a single tower on a comparatively small footprint rather than a sprawling township, Sienna doesn't come with its own captive retail or school campus the way some larger integrated townships in Devanahalli or Sarjapur do. Buyers should factor in a short drive for day-to-day retail and schooling needs, weighed against the corridor's established civic infrastructure, since Hennur-Thanisandra is a mature residential belt rather than a greenfield location still waiting on basic infrastructure to catch up.</p>
+
+          <h2>6. RERA &amp; Legal Status</h2>
+          <p>Concorde Sienna is registered under Karnataka RERA number <strong>PRM/KA/RERA/1251/446/PR/220626/008740</strong>. As a pre-launch project, the exact possession date has not yet been published in the material we reviewed. Buyers should request the RERA-registered possession date directly and confirm it against the state RERA portal before booking, standard practice for any pre-launch purchase. RERA registration itself is worth understanding in practical terms: it means buyer collections for this project are legally required to sit in a project-specific account released against verified construction progress, rather than being freely usable by the developer for other projects, and it gives buyers a formal, enforceable delivery timeline rather than an informal sales promise.</p>
+          <p>As with any pre-launch purchase, we recommend treating the RERA number, the layout approval and the title documentation as three separate things to verify, not one. A registered RERA number confirms the project is on record with the regulator; it doesn't by itself confirm every representation in the sales brochure, which is why an independent review before booking remains worthwhile even for a Tier-1-adjacent developer like Concorde.</p>
 
           <h2>Our Honest Assessment</h2>
-          <p>Concorde Sienna is a straightforward, well-specified single-tower project in a corridor — Hennur Main Road — that already has credible Tier-1 competition from Sattva and Goyal. Its case rests on three things: a genuinely high open-space ratio for its plot size, pre-launch pricing that undercuts what nearby resale/near-completion inventory typically commands, and a sky-deck-plus-co-working amenity set that leans toward working professionals rather than large joint families. It suits a buyer prioritising a compact, well-amenitised 2 or 3 BHK over sheer scale — but because it's a single tower with a comparatively small unit count, it's worth comparing rental and resale liquidity against larger multi-block neighbours like <a href="/projects/sattva-la-vita/" class="money-link">Sattva La Vita</a> before committing at the pre-launch stage.</p>
+          <p>Concorde Sienna is a straightforward, well-specified single-tower project in a corridor, Hennur Main Road, that already has credible Tier-1 competition from Sattva and Goyal. Its case rests on three things: a genuinely high open-space ratio for its plot size, pre-launch pricing that undercuts what nearby resale or near-completion inventory typically commands, and an amenity set (sky-deck pool, co-working space, dedicated wellness zone) that leans toward working professionals and young families rather than large joint families needing sprawling common areas.</p>
+          <p>It suits a buyer prioritising a compact, well-amenitised 2 or 3 BHK over sheer scale. But because it's a single tower with a comparatively small unit count of roughly 269 to 270 apartments, it's worth comparing rental and resale liquidity against larger, more established neighbours on the same corridor, such as <a href="/projects/sattva-la-vita/" class="money-link">Sattva La Vita</a> (note: La Vita is a 4 BHK row-villa community rather than a directly comparable apartment product, so the comparison is really about corridor fundamentals, not a like-for-like unit match), before committing at the pre-launch stage.</p>
         </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Is Concorde Sienna apartments or plots?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Concorde Sienna is an apartment tower, not a plotted or villa development. It is a single 92-metre high-rise with 2 basements, ground floor and 28/29 upper floors, offering ready-configured 2 and 3 BHK units rather than land you build on yourself.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is the starting price of Concorde Sienna?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Indicative pre-launch pricing starts around &#8377;1.26 Cr onwards for the 1,200 to 1,221 sq ft 2 BHK, rising to roughly &#8377;1.96 Cr onwards for the largest 1,870 sq ft 3 BHK. These are pre-launch, indicative figures, so confirm the current price sheet with our team before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">How many units does Concorde Sienna have, and how much open space?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Approximately 269 to 270 apartments across the single tower, spread over a 3.05-acre plot with up to 70% of the land kept as open space, a high ratio for a project this compact, achieved specifically because it is one vertical tower rather than several spread-out blocks.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What amenities does Concorde Sienna offer?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">A sky-deck clubhouse with an infinity pool and a separate kids' pool, a gymnasium, a yoga and meditation studio, a spa with sauna and steam room, indoor and outdoor sports courts, a dedicated co-working space, a banquet hall, an indoor amphitheatre, and smart-home features including EV charging provisions.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">Is Concorde Sienna RERA registered, and when is possession?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, it is registered under Karnataka RERA number PRM/KA/RERA/1251/446/PR/220626/008740. As a pre-launch project the exact possession date is not yet published in the material we've reviewed, so request the RERA-registered possession date directly and verify it on the Karnataka RERA portal before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">How does Concorde Sienna compare to Sattva La Vita nearby?</span>
+                <span class="faq-arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">They are different product types on the same corridor: Sienna is a single-tower 2 &amp; 3 BHK apartment project, while Sattva La Vita is a 4 BHK row-house villa community with private gardens. See our full comparison for a side-by-side breakdown of price, format and who each suits.</p>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="related-projects" aria-label="Related content">
           <h3>You May Also Be Interested In</h3>
           <div class="related-cards-grid">
@@ -244,7 +356,7 @@
               <div class="related-card-body">
                 <p class="related-card-label">Featured Project</p>
                 <p class="related-card-title">Sattva La Vita</p>
-                <p class="related-card-detail">2 &amp; 3 BHK · Hennur</p>
+                <p class="related-card-detail">4 BHK Row Villas &middot; Hennur</p>
               </div>
             </a>
             <a href="/blog/manyata-tech-park-rental-yield-hennur-thanisandra/" class="related-card">
@@ -261,7 +373,7 @@
           <div class="author-card">
             <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
             <div class="author-info">
-              <h5>Written by the Luxura Habitat Team</h5>
+              <h5>Written by Narayanan Rajesh</h5>
               <p>Principal Advisor at Luxura Habitat with 12+ years navigating Bangalore's premium real estate corridors with absolute legal clarity and zero developer bias.</p>
             </div>
           </div>
