@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Assetz Codename Paradise: Price, Layout &amp; RERA</title>
+  <meta name="description" content="Independent review of Assetz Codename Paradise, Hennur Road: 4 BHK villament pricing, amenities, RERA status and our honest pre-launch assessment.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/assetz-codename-paradise-hennur-road-price-rera/">
+  <meta property="og:title" content="Assetz Codename Paradise: Price, Layout &amp; RERA Details | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Assetz Codename Paradise: villament pricing, amenities, and pre-launch RERA status.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Assetz Codename Paradise: Price, Layout &amp; RERA Details">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .cta-box { background: #faf8f5; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 20px 24px; margin: var(--space-lg) 0; text-align: center; }
+    .cta-box p { margin-bottom: 12px; font-weight: 600; color: var(--primary-forest); }
+    .cta-box a { display: inline-block; background: var(--primary-forest); color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.92rem; transition: background 0.2s; }
+    .cta-box a:hover { background: var(--accent-copper); }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/assetz-codename-paradise-hennur-road-price-rera/"
+        },
+        "headline": "Assetz Codename Paradise: Price, Layout & RERA Details",
+        "description": "Independent review of Assetz Codename Paradise, Hennur Road: 4 BHK villament pricing, amenities, and pre-launch RERA status.",
+        "image": "https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp",
+        "datePublished": "2026-09-02",
+        "dateModified": "2026-09-02",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/assetz-codename-paradise-hennur-road-price-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Hennur-Thanisandra Real Estate Guide", "item": "https://luxurahabitat.com/areas/hennur/"},
+          {"@type": "ListItem", "position": 4, "name": "Assetz Codename Paradise: Price, Layout & RERA Details", "item": "https://luxurahabitat.com/blog/assetz-codename-paradise-hennur-road-price-rera/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/hennur/">Hennur-Thanisandra Hub</a><span>/</span><span>Assetz Codename Paradise Deep-Dive</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Assetz Codename Paradise: Price, Villament Configuration &amp; RERA Status</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>September 2, 2026</span><span>&bull;</span><span>9 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp" alt="Assetz Codename Paradise Price Layout RERA" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Assetz Codename Paradise is one of the more unusual launches on the <a href="/areas/hennur/" class="money-link">Hennur Road corridor</a> right now: a low-density, Balinese-themed 4 BHK "villament" community from Assetz Property Group that's already generating aggregator listings and YouTube walkthroughs, despite still being at pre-launch stage with its project RERA number awaited. This review covers what the project actually offers, verified pricing, the RERA and possession situation, and our honest take on whether it's worth shortlisting today.</p>
+
+          <h2>1. The Developer: Assetz Property Group</h2>
+          <p>Assetz Property Group was established in 2006 and is one of the more prominent multinational developers active in Bangalore, with a portfolio spanning over 10 million square feet under development across luxury residential complexes, premium villaments and large-scale tech parks. Codename Paradise, now also being marketed under the name <strong>Assetz Mizu &amp; Ki</strong>, applies that track record to an eco-conscious, Balinese-themed villament format that's a genuine departure from the developer's more familiar high-rise apartment products (such as its Kanakapura Road project, Assetz Meru &amp; Meadows).</p>
+
+          <h2>2. What's in a Name: Codename Paradise vs Assetz Mizu &amp; Ki</h2>
+          <p>If you've come across both names while researching this project and weren't sure whether they're the same development, they are. Like several Assetz launches, this project carried an internal "Codename" during its pre-launch marketing phase before the developer settled on its formal brand name. Some listings, brochures and third-party aggregator pages still use "Codename Paradise," while newer material increasingly uses "Assetz Mizu &amp; Ki." Both refer to the identical 188-villament community off Hennur Road described in this article, we use "Assetz Codename Paradise" throughout since it remains the more widely searched and referenced name at the time of writing.</p>
+
+          <h2>3. Location: Off Hennur Road, North Bangalore</h2>
+          <p>The project sits off the Hennur Road corridor in North Bangalore, pin code 560064, with stated connectivity to:</p>
+          <ul>
+            <li><strong>Manyata Tech Park</strong> and <strong>Karle Town Centre</strong>, the corridor's core IT employment hubs</li>
+            <li><strong>Kirloskar Business Park</strong></li>
+            <li><strong>Bagalur Aerospace SEZ / KIADB Park</strong></li>
+            <li><strong>Thanisandra Main Road</strong> and the <strong>Outer Ring Road (ORR)</strong></li>
+            <li>An upcoming <strong>Nagawara Metro Station</strong> and a short drive to <strong>Thanisandra Railway Station</strong></li>
+            <li>A toll-free, signal-free route to <strong>Kempegowda International Airport</strong> via the alternative Hennur-Bagalur Road</li>
+          </ul>
+          <p>For schools and healthcare, the surrounding neighbourhood covers Delhi Public School (DPS) North, Legacy School, Vidyashilp Academy, Aster CMI Hospital and Motherhood Hospital.</p>
+
+          <h2>4. The Project: What You Actually Get</h2>
+          <p>Codename Paradise spans <strong>8.2 acres</strong>, with an unusually high <strong>55% dedicated to open space</strong> and Balinese-themed landscaping, including gardens, water features and shaded pavilions. Rather than a conventional apartment tower, the project is built as a low-rise <strong>Basement + Ground + 4 Floors (B+G+4)</strong> structure housing just <strong>188 exclusive villaments</strong>, a genuinely low unit count for a project this size.</p>
+          <p>The developer positions these homes as "villaments," a hybrid format that combines a villa's privacy and exclusivity with an apartment community's shared security and amenities. Every villament here is <strong>4 BHK</strong>, with roughly <strong>3,060 sq ft</strong> of super built-up area, a private backyard of up to 500 sq ft, a large private terrace, and a dedicated 2-car private garage.</p>
+
+          <h3>Amenities</h3>
+          <p>The project's 20+ amenities are grouped across three broad categories in the developer's own material:</p>
+          <ul>
+            <li><strong>Sports &amp; Fitness:</strong> half-Olympic swimming pool, kids' pool, outdoor fitness area, half-basketball and cricket pitch, skating rink, jogging and bicycle track</li>
+            <li><strong>Leisure &amp; Relaxation:</strong> premium clubhouse, lounge deck, sitting alcoves, meditation deck, amphitheatre, barbecue deck</li>
+            <li><strong>Community &amp; Family:</strong> kids' play area, indoor games room, pet park, and Balinese-themed gardens throughout the grounds</li>
+          </ul>
+          <p>A note on aggregator claims: several third-party listing sites describe additional specifics for this project, such as a named clubhouse area in square feet, a carpet-efficiency percentage, or a split between "Garden Unit" and "Open Terrace Unit" sub-configurations. We haven't been able to verify these details against the developer's own material, so we've deliberately left them out of this review. If a specific number matters to your decision (clubhouse size, exact carpet area, or which exact unit gets a backyard versus a terrace), request it in writing from the developer before relying on it.</p>
+
+          <h2>5. Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Super Built-up Area</th><th>Features</th><th>Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>4 BHK Villament</td><td>3,060 sq. ft.</td><td>Private backyard up to 500 sq ft, 2-car garage</td><td>₹3.5 Cr* Onwards</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*₹3.5 Cr is the indicative launch price stated by the developer at the time of writing, with a stated launch offer for the first 30 buyers. This is a pre-launch, single-configuration project, treat this figure as a starting reference rather than a locked-in number, and always request the current, official price sheet before making any decision.</p>
+
+          <h2>6. Financing a ₹3.5 Cr+ Purchase: What to Ask Before You Sign</h2>
+          <p>At this ticket size, financing structure matters as much as the floor plan. A few things worth working through with your bank and advisor before booking:</p>
+          <h3>Loan Structuring and an Illustrative EMI</h3>
+          <p>Most lenders finance up to 75-80% of a property's value at this price range, subject to income and credit profile, leaving the remaining 20-25%, plus stamp duty, registration and any applicable GST on the under-construction portion, to be funded upfront. On an indicative 75% loan-to-value basis for the ₹3.5 Cr villament, that's a loan of roughly ₹2.63 Cr. At an illustrative floating rate of around 8.5-9% per annum over a 20-year tenure, a reasonable but not guaranteed range for well-qualified salaried borrowers, the EMI would work out to approximately ₹2.3-2.4 lakh per month. Treat this purely as a planning estimate: actual rates, eligibility and EMI depend on the lender, your credit score, income documentation and any scheme the bank is running when you apply, so get a current, written loan estimate before budgeting against this figure.</p>
+          <h3>Pre-Launch Purchases Carry Extra Diligence</h3>
+          <p>Because this project's RERA registration is still awaited, a booking made today is effectively a pre-launch reservation, not a RERA-protected sale in the same sense as an already-registered project. Before paying any booking amount, confirm in writing what happens to your money if RERA registration is delayed or if project specifications change once the registration is filed (unit count, layout, or amenities can shift between pre-launch marketing and the final RERA-filed plan). Ask specifically whether your booking amount is refundable, and under what conditions, before RERA registration comes through.</p>
+          <h3>Stamp Duty and Registration in Karnataka</h3>
+          <p>For a property priced above ₹45 lakh in Karnataka, stamp duty is currently levied at 5% of the property value (or the government guidance value, whichever is higher), plus applicable surcharge and cess that typically push the effective rate to somewhere in the 6-7% range depending on jurisdiction, plus a separate 1% registration fee. On a ₹3.5 Cr transaction, that's a meaningful add-on cost, potentially ₹21-24 lakh combined, on top of the base price. These are statutory rates revised periodically by the Karnataka government, so confirm the exact current percentage with your lawyer or the local sub-registrar's office before finalising your budget.</p>
+
+          <h2>7. Possession Timeline</h2>
+          <p>The developer has not published a formal possession date for this project as of the time of writing. This is consistent with its pre-launch stage: possession dates in Karnataka are typically only fixed once a project's RERA registration is filed and approved. We'd recommend treating any possession date quoted by a third party or broker as unconfirmed until it appears on the project's own RERA filing, and asking for the developer's current construction and launch timeline directly before booking.</p>
+
+          <h2>8. Density, Privacy and the "Villament" Trade-Off</h2>
+          <p>Run the numbers on Codename Paradise's own figures and the positioning becomes clear. At 188 villaments across 8.2 acres, the project works out to roughly 23 units per acre, a fraction of the density you'd see on a comparable high-rise apartment plot in the same corridor, which can easily run past 100 units per acre. That low density is what funds the 55% open-space ratio and lets every home get a private backyard or terrace plus a 2-car garage, features that are structurally difficult to offer at apartment-tower density.</p>
+          <p>The trade-off is the flip side of the same coin: with only 188 homes and a single 4 BHK configuration, the buyer pool at resale is narrower than a project offering 1 BHK through 4 BHK. You're not competing with smaller or larger units from your own project for the same buyer segment, but you're also not able to appeal outside the "large-format, high-budget end-user" segment either. For an under-construction, pre-launch project with no possession date yet, near-term rental yield isn't a meaningful data point since there's no completed inventory, any yield figure quoted today would necessarily be a corridor-level estimate from comparable completed villa or villament developments nearby, not a verified number specific to this project.</p>
+
+          <h2>9. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification, and for a pre-launch project like this one, that verification step matters even more than usual. For Assetz Codename Paradise:</p>
+          <ul>
+            <li><strong>Project RERA Number:</strong> Awaited, this project is at pre-launch stage and has not yet been filed for RERA registration as of the time of writing</li>
+            <li><strong>Status:</strong> Pre-launch; not yet RERA-registered</li>
+            <li><strong>Advertiser/Agent RERA:</strong> This listing is marketed by an Authorized Channel Partner / RERA Authorised Advertiser (Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045)</li>
+          </ul>
+          <h3>How to Verify This Yourself in Under Five Minutes</h3>
+          <p>Go to the official Karnataka RERA portal (rera.karnataka.gov.in) and search "Registered Projects" for "Assetz Codename Paradise" or "Assetz Mizu &amp; Ki." As of the time of writing, you should not expect to find a project-level listing yet, since registration is awaited. If a listing does appear, cross-check the promoter's name, registered project area, and approved unit count against what's stated on this page. Do not treat pre-launch marketing material, including this article, as a substitute for a confirmed RERA registration before paying any non-refundable amount.</p>
+          <p>We encourage all prospective buyers to independently verify RERA status on the official Karnataka RERA website before booking, and to specifically ask the developer for a written registration timeline.</p>
+
+          <div class="cta-box">
+            <p>Want the current price sheet and floor plan for Assetz Codename Paradise?</p>
+            <a href="/projects/assetz-codename-paradise/#form">Request Price List &rarr;</a>
+          </div>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Assetz Codename Paradise pairs a credible, established developer name with a genuinely differentiated product, low-density villaments with private gardens and 2-car garages are a real trade-off in favour of space and privacy, not just marketing language, and 55% open space with Balinese-themed landscaping is a legitimate point of difference from the apartment towers that dominate this corridor. The single 4 BHK configuration keeps the buyer profile narrow but focused. The one thing we'd flag clearly: this is a pre-launch project with its RERA registration still awaited and no published possession date, which means the usual RERA-based protections aren't yet in place. If you're set on this specific product and location, it's worth shortlisting and following closely, but we'd treat any booking today as a pre-launch reservation requiring extra written confirmation on refund terms, not a standard, RERA-protected purchase. For buyers who want to understand how this "villament" format compares to a conventional apartment or a full independent villa before deciding, see our companion guide, <a href="/blog/villament-vs-apartment-vs-villa-bangalore/" class="money-link">Villament vs Apartment vs Villa: What Should You Buy in Bangalore?</a></p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/assetz-codename-paradise/" class="related-card">
+              <img src="../../images/projects/assetz-codename-paradise/assetz-codename-paradise-about.webp" alt="Assetz Codename Paradise" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Assetz Codename Paradise</p>
+                <p class="related-card-detail">4 BHK Villaments &middot; Off Hennur Road</p>
+              </div>
+            </a>
+            <a href="/blog/villament-vs-apartment-vs-villa-bangalore/" class="related-card">
+              <img src="../../images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-1.webp" alt="Villament vs Apartment vs Villa in Bangalore" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Villament vs Apartment vs Villa</p>
+                <p class="related-card-detail">7 Min Read &middot; Buyer Guide</p>
+              </div>
+            </a>
+            <a href="/projects/sattva-la-vita/" class="related-card">
+              <img src="../../images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Project</p>
+                <p class="related-card-title">Sattva La Vita</p>
+                <p class="related-card-detail">2, 3 &amp; 4 BHK &middot; Hennur Road</p>
+              </div>
+            </a>
+            <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="related-card">
+              <img src="../../images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-2.webp" alt="Hennur Thanisandra Market Trends 2026" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Hennur-Thanisandra Market Trends 2026</p>
+                <p class="related-card-detail">7 Min Read &middot; Market Analysis</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/assetz-codename-paradise/assetz-codename-paradise-about.webp" alt="Assetz Codename Paradise" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Assetz Codename Paradise</p>
+            <ul class="sidebar-specs">
+              <li>188 exclusive 4 BHK villaments</li>
+              <li>8.2 acres, 55% open space</li>
+              <li>RERA: Awaited (pre-launch)</li>
+              <li>Off Hennur Road, North Bangalore</li>
+            </ul>
+            <a href="/projects/assetz-codename-paradise/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="https://wa.me/918438344093?text=Hi%20I%20have%20a%20question%20about%20Assetz%20Codename%20Paradise" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Hennur Road</h4>
+          <a href="/projects/assetz-codename-paradise/">Assetz Codename Paradise</a>
+          <a href="/projects/sattva-la-vita/">Sattva La Vita</a>
+          <a href="/areas/hennur/">Hennur-Thanisandra Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

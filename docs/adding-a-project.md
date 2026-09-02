@@ -34,9 +34,9 @@ caused a real, shipped bug once.
   external template, a builder's own microsite export), check this
   explicitly — Sattva Forest Ridge's source file had the builder's logo
   in the nav instead, and it shipped that way before being caught.
-- The Luxura Habitat nav logo needs an "Authorized Channel Partner"
-  caption next to it (divider + caption span, hidden below ~1024px width)
-  — matching every other project page. Copy the exact markup/CSS from an
+- The Luxura Habitat nav logo needs a "Real Estate Advisory"
+  caption next to it (divider + caption span, hidden below ~1024px width),
+  matching every other project page. Copy the exact markup/CSS from an
   existing page rather than just the bare logo image.
 - Any heading/accent color pulled from an external source file (a
   builder's own microsite export, an external template) needs to be
@@ -113,11 +113,19 @@ caused a real, shipped bug once.
 
 ## 3. Identify the content cluster
 
-- Which of the 3 area hubs (Devanahalli / Hennur-Thanisandra / Yelahanka)
-  does this project belong to? If none, a standalone locality post is
-  fine until there's enough inventory to justify a full hub page (see
-  `why-invest-in-bagalur-main-road-real-estate` for the existing
-  precedent).
+- **First confirm the city.** Bangalore is the default unless told otherwise.
+  If this project is in a different city (e.g. Chennai, Coimbatore), it does
+  not use the 3-hub pattern below at all yet, and it ships at a
+  city-prefixed URL (`/projects/<city>/<slug>/`, not the flat
+  `/projects/<slug>/` every existing Bangalore project uses). See the
+  `add-project` skill's Phase 0/3/6/7 for the full mechanics. Never
+  retroactively move an existing Bangalore project into a city-prefixed
+  path just for consistency, only new non-Bangalore projects get one.
+- For a Bangalore project: which of the 3 area hubs (Devanahalli /
+  Hennur-Thanisandra / Yelahanka) does this project belong to? If none, a
+  standalone locality post is fine until there's enough inventory to
+  justify a full hub page (see `why-invest-in-bagalur-main-road-real-estate`
+  for the existing precedent).
 - Don't default to the same two blog templates (review post + vs-sibling
   comparison) for every project — that's a habit, not a strategy. Do
   genuine keyword research specific to this project first: check Google
@@ -167,10 +175,23 @@ caused a real, shipped bug once.
 ## 5. Site plumbing
 
 - Add the card block to `projects/index.html`, following the exact shape
-  of an existing card (e.g. the `sattva-city` one) — thumbnail from
+  of an existing card (e.g. the `sattva-city` one), thumbnail from
   `/images/projects-thumbs/<slug>-thumb.webp`, `data-area` attribute,
-  WhatsApp CTA link.
-- Add the URL to `sitemap.xml`.
+  WhatsApp CTA link. Every card also needs a `data-city` attribute:
+  `data-city="bangalore"` for an existing-pattern project. For a project
+  in a different city, use that city's slug (e.g. `data-city="chennai"`)
+  **and** set `data-area="na"`, not a Bangalore corridor value and not
+  `"other"` (that bucket is reserved for odd-corridor Bangalore projects,
+  reusing it for a different city would mix the two under one filter tab).
+  See the HTML comment above `#city-filter` on `projects/index.html` for
+  the mechanics, the filter bar itself stays hidden until cards actually
+  span more than one city, so nothing needs to be manually un-hidden.
+- Add the same `data-city` attribute to each new blog post's card in
+  `blog/index.html` (see the HTML comment above `#blog-city-filter`
+  there), and to any new `/areas/` zone card (see the comment above
+  `#zone-city-filter` on `areas/index.html`).
+- Add the URL to `sitemap.xml`, using the city-prefixed path if this is a
+  non-Bangalore project (`/projects/<city>/<slug>/`).
 - Double-check no image reference was accidentally copy-pasted from
   another project's folder (see Phase 7 note in the consistency plan —
   ~185 such cross-references already exist site-wide from before this

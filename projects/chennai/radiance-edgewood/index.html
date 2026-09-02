@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+    <link rel="canonical" href="https://luxurahabitat.com/projects/chennai/radiance-edgewood/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- High-Intent Meta Structure -->
+    <title>Radiance Edgewood, Navalur: 3 &amp; 4 BHK Villas | RERA</title>
+    <meta name="description" content="Radiance Edgewood by Radiance Realty: 83 gated villas, 3 &amp; 4 BHK, on Thalambur Road, Navalur, OMR near Siruseri. RERA registered. Price from ₹2.27 Cr.">
+    <meta name="keywords" content="Radiance Edgewood, Radiance Edgewood Navalur, Radiance Edgewood OMR, Radiance Edgewood price, Radiance Edgewood RERA, Radiance Edgewood floor plan, Villas in Navalur, Villas in OMR Chennai, Gated community villas Thalambur, 3 BHK Villas OMR, 4 BHK Villas Navalur, Radiance Realty Chennai, Villas near Siruseri SIPCOT">
+    <meta name="author" content="Luxura Habitat">
+
+    <!-- Open Graph Social Protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/chennai/radiance-edgewood/">
+    <meta property="og:title" content="Radiance Edgewood, Navalur: Premium Row Villas on OMR">
+    <meta property="og:description" content="83 exclusive 3 & 4 BHK row villas on a 5.5-acre gated community in Navalur, OMR, Chennai, 5 mins from Siruseri SIPCOT IT Park. RERA registered.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Radiance Edgewood, Navalur: 3 & 4 BHK Villas on OMR">
+    <meta name="twitter:description" content="Explore floor plans, master plan and gallery for Radiance Edgewood's 83 row villas near Siruseri IT Park, Chennai. Enquire now.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp">
+
+    <!-- Robots Instructions -->
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp" fetchpriority="high">
+    <link rel="icon" href="/images/projects/radiance-edgewood/favicon.png" type="image/png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-dark: #0f172a;
+            --secondary-dark: #111827;
+            --accent-green: #9a5b28;
+            --accent-warm: #d4a574;
+            --bg-light: #f5f3f0;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #556070;
+            --border-light: #e6e2dc;
+            --success: #22c55e;
+        }
+
+        html { overflow-x: hidden; }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 0.8rem clamp(1rem, 4vw, 2rem);
+            box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(14px);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            gap: 6px;
+            z-index: 101;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #111827;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .logo { display: flex; align-items: center; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 42px; width: auto; object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.6vw, 1.6rem);
+            list-style: none;
+            flex: 1;
+            flex-wrap: nowrap;
+        }
+        .nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { color: var(--accent-green); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        .nav-buttons { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(154, 91, 40, 0.08);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .phone-section:hover { background: rgba(154, 91, 40, 0.15); transform: translateY(-2px); }
+
+        .phone-label { font-size: clamp(0.6rem, 0.8vw, 0.75rem); color: #6b7280; font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase; }
+        .phone-number { font-size: clamp(0.75rem, 1vw, 0.95rem); color: var(--accent-green); font-weight: 800; white-space: nowrap; }
+
+        .whatsapp-btn {
+            background: #128c4f;
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: clamp(0.7rem, 0.9vw, 0.86rem);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+        .whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+        .nav-call, .nav-cta { display: none; }
+
+        /* Hero */
+        .hero {
+            background: #05080f;
+            color: #e5e7eb;
+            min-height: calc(100vh - 68px);
+            padding: clamp(1rem, 2.2vw, 2rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: calc(100vh - 108px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 0.5fr);
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 4.5rem);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(1rem, 2vh, 1.45rem);
+            padding: clamp(1.5rem, 3.8vw, 3.1rem);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 7px solid var(--accent-warm);
+            border-radius: 10px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        .hero-badge {
+            color: #ffffff;
+            background: var(--accent-green);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            width: fit-content;
+            padding: 0.45rem 1rem;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--accent-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin: 0.2rem 0;
+            max-width: 100%;
+        }
+
+        .hero-intro { color: #0b1220; font-size: clamp(0.95rem, 1.25vw, 1.15rem); line-height: 1.7; max-width: 620px; }
+
+        .hero-info-boxes { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+
+        .info-box {
+            border: 1px solid rgba(154, 91, 40, 0.16);
+            border-radius: 10px;
+            padding: clamp(0.9rem, 2vh, 1.2rem);
+            background: rgba(245, 243, 240, 0.78);
+        }
+
+        .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .info-row { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 0.8rem; }
+
+        .info-box-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 900;
+        }
+
+        .info-box-title { color: #111827; font-size: clamp(1rem, 1.25vw, 1.25rem); font-weight: 900; }
+        .info-box-subtitle { color: #111827; font-size: clamp(0.82rem, 1vw, 0.98rem); font-weight: 600; }
+
+        .price-box { text-align: left; color: var(--accent-green); line-height: 1.25; }
+        .price-copy { display: block; font-weight: 700; font-size: 0.95rem; }
+        .price-line { display: block; color: #111827; font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 800; }
+        .new-price { color: #111827; font-weight: 900; }
+        .offer-note { color: #111827; display: block; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 0.2rem; }
+
+        .hero-form-section {
+            position: relative;
+            justify-self: end;
+            width: min(390px, 100%);
+            background: rgba(255, 255, 255, 0.96);
+            border-top: 5px solid var(--accent-green);
+            border-radius: 10px;
+            padding: clamp(1rem, 2vw, 1.45rem);
+            box-shadow: 0 28px 74px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+            color: #111827;
+        }
+
+        .hero-form-title { color: #0b1220; font-size: 1.28rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.4rem; }
+        .hero-form-subtitle { display: block; color: #5b6776; font-size: 0.85rem; margin-bottom: 0.9rem; }
+
+        .hero-form { display: flex; flex-direction: column; gap: 0.75rem; }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            min-height: 50px;
+            padding: 0.9rem 1.1rem;
+            border: 2px solid rgba(154, 91, 40, 0.15);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.98rem;
+            background: #fff;
+            color: #0b1220;
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 4px rgba(154, 91, 40, 0.15);
+            transform: translateY(-2px);
+        }
+        form input::placeholder, form textarea::placeholder { color: #6b7280; font-weight: 500; }
+        form textarea { resize: vertical; min-height: 120px; padding-top: 1rem; }
+
+        .hero-form-submit {
+            width: 100%;
+            min-height: 46px;
+            background: var(--accent-green);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 0.98rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form-submit:hover { background: #7a4820; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(154, 91, 40, 0.25); }
+
+        section { padding: 5rem 2rem; }
+        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+
+        .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .about { background: var(--bg-light); padding: 4rem 2rem; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr); gap: 2rem; align-items: center; }
+        .about-content h3 { font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        .about-content p { font-size: 1rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+        .feature-item { display: flex; gap: 1rem; }
+        .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
+
+        .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+        .gallery { background: var(--bg-white); }
+
+        .faq { background: var(--bg-white); }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.1rem 1.3rem;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(154, 91, 40, 0.05);
+        }
+
+        .faq-question.open {
+            color: var(--accent-green);
+        }
+
+        .faq-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-question.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 1.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer.open {
+            max-height: 400px;
+            padding: 0 1.3rem 1.1rem;
+        }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(154,91,40,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(154,91,40,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .amenities { background: var(--bg-light); }
+        .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(154,91,40,0.12); }
+        .amenity-card:hover { border-color: rgba(154,91,40,0.35); }
+        .amenity-icon-img { width: 34px; height: 34px; margin-bottom: 0.6rem; display: block; }
+        .amenity-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+        .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
+        .amenity-list { list-style: none; display: grid; gap: 0.45rem; }
+        .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
+        .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); margin-top: 0.55rem; }
+
+        .plan { background: var(--bg-white); }
+        .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
+        .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
+        .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
+        .plan-image:hover img { transform: scale(1.02); }
+
+        .plan-notes { display: grid; gap: 0.9rem; }
+        .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+        .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
+        .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
+
+        .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
+        .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
+        .form-container { max-width: 620px; margin: 2rem auto 0; }
+        .form-container form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 800; font-size: 0.95rem; }
+
+        .form-submit { width: 100%; padding: 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: #7a4820; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(154,91,40,0.25); }
+
+        .form-message { text-align: center; margin-top: 0.8rem; padding: 0.9rem; border-radius: 10px; display: none; }
+        .form-message.success { display: block; background: rgba(34, 197, 94, 0.2); color: var(--success); border: 1px solid rgba(34,197,94,0.35); }
+
+        .footer { background: #0b1220; color: #fff; padding: 3rem 2rem 2.2rem; }
+
+        /* Project Highlights table */
+        .highlights { background: var(--bg-light); }
+        .highlights-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(154,91,40,0.18);
+            margin-top: 1.8rem;
+        }
+        table.highlights-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+        }
+        .highlights-table th,
+        .highlights-table td {
+            padding: 0.95rem 1rem;
+            border-bottom: 1px solid rgba(154,91,40,0.12);
+            vertical-align: top;
+            font-size: 0.98rem;
+        }
+        .highlights-table thead th {
+            background: rgba(154, 91, 40, 0.08);
+            color: var(--accent-green);
+            font-weight: 900;
+            text-align: left;
+        }
+        .highlights-table tbody tr:hover td { background: rgba(154,91,40,0.04); }
+        .highlights-table tbody tr:last-child td { border-bottom: none; }
+        .highlights-table td strong { color: var(--primary-dark); }
+
+        .pricing-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(154,91,40,0.18);
+            margin-top: 1.8rem;
+        }
+        table.pricing-table { width: 100%; min-width: 520px; border-collapse: collapse; }
+        .pricing-table th, .pricing-table td { padding: 0.95rem 1rem; border-bottom: 1px solid rgba(154,91,40,0.12); text-align: left; font-size: 0.98rem; }
+        .pricing-table thead th { background: rgba(154, 91, 40, 0.08); color: var(--accent-green); font-weight: 900; text-align: left; }
+        .pricing-table tbody tr:hover td { background: rgba(154,91,40,0.04); }
+        .pricing-table tbody tr:last-child td { border-bottom: none; }
+        .pricing-footnote { padding: 1rem 1.2rem; font-size: 0.85rem; color: var(--text-light); }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: #a7f3d0; }
+        .footer-section p, .footer-section a { font-size: 0.92rem; color: rgba(255,255,255,0.75); text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
+        .footer-section a:hover { color: #4ade80; }
+        .footer-contact strong { display: block; color: #fff; margin-bottom: 0.25rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+        /* Sidebar widget */
+        .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
+        .details-button {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 0.85rem;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 0.9rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transition: all 0.3s ease;
+            box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.6px;
+        }
+        .details-panel {
+            position: fixed;
+            right: -420px;
+            top: 0;
+            width: min(400px, 100vw);
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            z-index: 998;
+            transition: right 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+        .details-panel.active { right: 0; }
+
+        .panel-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 997; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .panel-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-light); }
+        .panel-header h3 { font-size: 1.5rem; color: var(--primary-dark); font-family: 'Playfair Display', serif; font-weight: 900; }
+        .close-button { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #6b7280; transition: color 0.3s ease; }
+        .close-button:hover { color: var(--accent-green); }
+
+        .panel-section { margin-bottom: 2rem; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
+        .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
+        .quick-contact a:hover { color: var(--accent-warm); }
+
+        .panel-cta { background: var(--accent-green); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
+        .panel-cta:hover { background: #7a4820; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(154,91,40,0.25); }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { display: flex; opacity: 1; align-items: center; justify-content: center; }
+        .lightbox-content { position: relative; max-width: 94%; max-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.9); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; color: #fff; font-size: 2.2rem; cursor: pointer; background: none; border: none; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .lightbox-close:hover { transform: scale(1.15); color: #a7f3d0; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(154,91,40,0.85); color: #fff; border: 2px solid #fff; font-size: 2.5rem; padding: 1rem 1.5rem; cursor: pointer; border-radius: 10px; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .lightbox-nav:hover { background: var(--accent-green); transform: translateY(-50%) scale(1.08); }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(154,91,40,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+        @media (max-width: 1650px) {
+            .nav-links { gap: clamp(0.3rem, 0.9vw, 0.9rem); }
+            .nav-links a { font-size: 0.7rem; }
+            .phone-section { padding: 0.35rem 0.55rem; }
+            .whatsapp-btn { padding: 0.45rem 0.65rem; font-size: 0.68rem; }
+            .whatsapp-icon { width: 16px; height: 16px; }
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar-widget { display: none; }
+            .phone-section { display: flex; }
+            .mobile-call-btn { display: none; }
+            .nav-cta { display: inline-flex; }
+
+            .mobile-call-icon { font-size: 1.05rem; }
+            .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .sidebar-widget { right: auto; left: 0; top: auto; bottom: 0; transform: none; width: 100%; flex-direction: row; justify-content: space-around; padding: 0.5rem; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); }
+            .details-button { writing-mode: initial; text-orientation: initial; min-height: auto; padding: 0.7rem 0.9rem; border-radius: 10px; }
+
+            .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
+            .hero-media { display: none; width: 100%; left: 0; right: 0; transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding-bottom: 0.5rem; }
+
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+                background: rgba(255,255,255,0.98);
+                border-top: 1px solid var(--border-light);
+                gap: 0.8rem;
+            }
+            .mobile-bottom-call,
+            .mobile-bottom-brochure {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                border-radius: 999px;
+                font-weight: 900;
+                cursor: pointer;
+                min-height: 46px;
+                white-space: nowrap;
+            }
+            .mobile-bottom-call {
+                background: rgba(154,91,40,0.08);
+                border: 1px solid rgba(154,91,40,0.25);
+                color: var(--accent-green);
+                gap: 0.4rem;
+            }
+            .mobile-bottom-brochure {
+                background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
+                border: none;
+                color: #fff;
+                font-size: 0.95rem;
+            }
+
+            .mobile-bottom-cta { display: flex; }
+
+            .hamburger-menu { display: flex; order: 3; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,255,255,0.98); flex-direction: column; gap: 0.2rem; padding: 1.2rem 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99; border-bottom: 1px solid var(--border-light); }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 0.85rem 0.5rem; border-bottom: 1px solid #f0f0f0; }
+            .nav-links a:last-child { border-bottom: none; }
+
+            .nav-buttons { gap: 0.5rem; flex: 1; justify-content: flex-end; min-width: 0; }
+            .phone-section { display: none; }
+            .whatsapp-btn { flex: 0 1 auto; max-width: 160px; overflow: hidden; }
+            .whatsapp-btn span { white-space: normal; line-height: 1.2; font-size: 0.78rem; }
+
+            .nav-cta { display: none; }
+
+            .nav-call { display: inline-flex; }
+            .nav-call-text { font-size: 0.82rem; font-weight: 900; }
+            .nav-call-icon { font-size: 1.1rem; }
+            .nav-call { background: rgba(154,91,40,0.10); border: 1px solid rgba(154,91,40,0.25); color: var(--accent-green); padding: 0.55rem 0.7rem; border-radius: 999px; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 900; transition: all 0.2s ease; }
+            .nav-call:hover { background: rgba(154,91,40,0.16); transform: translateY(-1px); }
+
+            .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .info-box.primary-details { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .features-list { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.6rem; }
+            section { padding: 2.8rem 1rem; }
+
+            .lightbox-nav { width: 58px; height: 58px; font-size: 2.2rem; }
+            .lightbox-prev { left: 12px; }
+            .lightbox-next { right: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .features-list { grid-template-columns: 1fr; }
+            .amenity-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 5;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .trust-item svg { color: var(--success); }
+
+        /* Urgency Block */
+        .urgency-block {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.05));
+            border-left: 5px solid var(--accent-warm);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .urgency-title {
+            color: #fff;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .urgency-text { color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .trust-bar { gap: 1rem; padding: 0.8rem 1rem; }
+            .trust-item { font-size: 0.85rem; }
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0;
+                background: #fff;
+                box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            }
+            .mobile-cta-btn {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 0.75rem;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--border-light);
+            }
+            .mobile-cta-btn:last-child { border-right: none; }
+            .mobile-cta-btn svg { margin-bottom: 3px; }
+            .btn-whatsapp { color: #128c4f; }
+            .btn-call { color: var(--accent-green); }
+            .btn-price { background: var(--bg-light); }
+            .btn-visit { background: var(--accent-green); color: #fff; border: none; }
+
+            /* Push Zendesk up so mobile CTA doesn't cover it */
+            iframe#launcher { bottom: 75px !important; }
+            iframe#webWidget { bottom: 75px !important; }
+        }
+
+        /* Luxura Habitat Branding Styles */
+        .project-brand {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
+            min-width: 205px !important;
+            text-decoration: none !important;
+            flex-shrink: 0 !important;
+        }
+
+        .project-brand img {
+            display: block !important;
+            height: 30px !important;
+            width: auto !important;
+        }
+
+        .partner-divider {
+            display: none !important;
+        }
+
+        .partner-caption {
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 1180px) {
+            .project-brand {
+                min-width: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-brand {
+                min-width: 0 !important;
+                gap: 0.55rem !important;
+            }
+            .project-brand img {
+                height: 26px !important;
+            }
+            .partner-divider,
+            .partner-caption {
+                display: none !important;
+            }
+        }
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #9a5b28; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #9a5b28; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #9a5b28; }
+
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "Radiance Edgewood",
+      "description": "83 exclusive 3 & 4 BHK row villas by Radiance Realty Developers India Ltd. on Thalambur Main Road, Navalur, OMR, Chennai, near Siruseri SIPCOT IT Park.",
+      "url": "https://luxurahabitat.com/projects/chennai/radiance-edgewood/",
+      "image": "https://luxurahabitat.com/images/projects-thumbs/radiance-edgewood-thumb.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thalambur Main Road, Navalur",
+        "addressLocality": "Navalur",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "about": {
+        "@type": "HousingProject",
+        "name": "Radiance Edgewood",
+        "numberOfAccommodationUnits": "83 Villas (3 BHK + 3T, 4 BHK + 4T & 4 BHK + Home Theater)",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "Tamil Nadu RERA Project Registration Number",
+          "value": "TNRERA/35/BLG/0239/2026"
+        }
+      },
+      "agent": {
+        "@type": "RealEstateAgent",
+        "name": "Luxura Habitat",
+        "telephone": "+918438344093",
+        "email": "projectinfoindia@gmail.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "22700000",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://luxurahabitat.com/projects/chennai/radiance-edgewood/"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radiance Edgewood is a gated row-villa community by Radiance Realty Developers India Ltd., spread across 5.5 acres on Thalambur Main Road, Navalur, on Chennai's OMR IT corridor."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Where is Radiance Edgewood located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project is located on Thalambur Main Road, Navalur, adjacent to a reserved forest area, close to Siruseri on the Old Mahabalipuram Road (OMR) IT corridor in Chennai."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What configurations are available at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project offers 3 BHK + 3T Villas, 4 BHK + 4T Villas, and 4 BHK + Home Theater (HT) Villas across G+1 and G+2 floor structures."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How many villas does the project have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radiance Edgewood comprises 83 exclusive villas set within a 5.5-acre gated community."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the price range at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prices range from approximately ₹2.27 Cr for a 3 BHK + 3T villa to ₹4.05 Cr for the largest 4 BHK + Home Theater villa, based on built-up area and floor premiums."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the RERA registration number for Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radiance Edgewood is registered under TNRERA/35/BLG/0239/2026."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Who is the developer of Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project is developed by Radiance Realty Developers India Ltd."
+        }
+      }, {
+        "@type": "Question",
+        "name": "When is the possession date for Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Possession is targeted for December 2028."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the built-up area of the villas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Built-up area ranges from 2,179 sq. ft. for the 3 BHK + 3T configuration up to 3,554 sq. ft. for the 4 BHK + Home Theater configuration."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What amenities are available at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Residents get a clubhouse with a gym, sauna and yoga studio, a swimming pool with a kids' pool, a multipurpose sports court, table tennis and billiards, a banquet hall, landscaped gardens, a reflexology pathway, and 24/7 security with CCTV surveillance."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is Radiance Edgewood a good investment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The project sits within 5 minutes of Siruseri SIPCOT IT Park and TCS Siruseri Campus, on the established OMR IT corridor, which has historically supported strong rental demand and appreciation for gated villa communities."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How far is Radiance Edgewood from Siruseri IT Park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radiance Edgewood is approximately 5 minutes from Siruseri SIPCOT IT Park and the TCS Siruseri Campus."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the base rate per square foot at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Base rates typically range from ₹10,300 to ₹11,200 per sq. ft., excluding taxes, floor premiums, and registration charges."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What schools are near Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The School KFI (1.4 km), Vels Vidyashram (1.2 km), PSBB Millennium (3.1 km), and Sathyabama University (7.1 km) are all within easy reach."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the backup power arrangement at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each villa gets a 1,500W DG backup, with 100% common area backup also provided."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How do I book a site visit at Radiance Edgewood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can request a site visit or brochure by filling out the enquiry form on this page or contacting us directly via phone or WhatsApp."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is Radiance Edgewood close to hospitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sri Isari Velan Mission Hospital is less than 1 km away, Good Life Hospital is 2.5 km away, and Dr. Kamakshi Memorial Hospital is 5.6 km away."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+    <div class="panel-overlay" id="panelOverlay" onclick="toggleDetailsPanel()"></div>
+
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Get Project Details</h3>
+            <button class="close-button" type="button" onclick="toggleDetailsPanel()">✕</button>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+            <input type="hidden" name="access_key" value="eca8dc5d-504f-4feb-a9a1-9f74bddf1c86">
+            <input type="hidden" name="subject" value="New Inquiry - Radiance Edgewood">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+            <input type="text" name="name" required placeholder="Full Name" />
+            <input type="email" name="email" required placeholder="Email Address" />
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+            <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
+
+            <button type="submit" class="panel-cta">Submit Inquiry</button>
+        </form>
+
+        <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
+            <h3>Direct Contact</h3>
+            <div class="quick-contact">
+                <a href="tel:+918438344093"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> +91 8438 344 093</a>
+                <a href="https://wa.me/918438344093?text=Hi,%20I%20would%20like%20to%20know%20more%20details%20on%20Radiance%20Edgewood"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
+                <a href="mailto:projectinfoindia@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-widget" id="sidebarWidget">
+        <button class="details-button" type="button" onclick="toggleDetailsPanel()">Request Brochure</button>
+    </div>
+
+    <nav>
+        <a href="#" class="project-brand" aria-label="Luxura Habitat: back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="partner-caption">Real Estate Advisory</span>
+        </a>
+
+        <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlights">Project Highlights</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#units">Unit Plans</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#form">Enquire</a></li>
+        </ul>
+
+        <div class="nav-buttons" id="navButtons">
+            <a href="tel:+918438344093" class="phone-section" aria-label="Call: 8438344093">
+                <div class="phone-number" style="font-size: 1rem;">Call: 8438344093</div>
+            </a>
+
+            <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Radiance%20Edgewood%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details on whatsapp</span>
+            </a>
+
+            <a href="tel:+918438344093" class="nav-call" aria-label="Call us">
+                <span class="nav-call-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+                <span class="nav-call-text">Call</span>
+            </a>
+            <button type="button" class="nav-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});">Request Brochure</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero" style="background-image: url('/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
+
+        <div class="hero-container" style="position: relative; z-index: 2;">
+            <div class="hero-content reveal">
+                <div class="hero-badge">83 Villas · 5.5 Acres</div>
+                <h1>Radiance Edgewood, Navalur: Premium 3 &amp; 4 BHK Row Villas on OMR</h1>
+                <p class="hero-intro">
+                    A gated community of 83 exclusive row villas by Radiance Realty on Thalambur Main Road, Navalur, adjacent to a reserved forest, just 5 minutes from Siruseri SIPCOT IT Park.
+                    Explore the master plan, unit plans, amenities and gallery below. Enquire for pricing and availability.
+                </p>
+
+                <div class="hero-info-boxes">
+                    <div class="info-box primary-details">
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                            <div>
+                                <div class="info-box-title">83 Villas</div>
+                                <div class="info-box-subtitle">G+1 &amp; G+2 Floors</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+                            <div>
+                                <div class="info-box-title">5.5 Acres</div>
+                                <div class="info-box-subtitle">Gated Villa Layout</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box price-box">
+                        <span class="price-copy">Starting from</span>
+                        <span class="price-line"><span class="new-price">₹2.27 Cr* onwards</span></span>
+                        <span class="offer-note">Subject to availability</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-form-section reveal" style="transition-delay:120ms;">
+                <h3 class="hero-form-title">Get Villa Details</h3>
+                <span class="hero-form-subtitle">Share your details and receive brochure + pricing on WhatsApp.</span>
+
+                <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <input type="hidden" name="access_key" value="eca8dc5d-504f-4feb-a9a1-9f74bddf1c86">
+                    <input type="hidden" name="subject" value="New Inquiry - Radiance Edgewood">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+                    <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
+                    <button type="submit" class="hero-form-submit">Get Brochure &amp; Pricing</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Registered</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Near Siruseri IT Park</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 83 Exclusive Villas</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> By Radiance Realty</div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Project Overview &amp; Master Plan Details</h2>
+            <p class="section-subtitle">A gated row-villa community designed for privacy, green living and OMR IT-corridor connectivity.</p>
+
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <h3>Row villas designed for elevated, private living</h3>
+                    <p>
+                        Radiance Edgewood is a gated community of 83 exclusive row villas developed by Radiance Realty Developers India Ltd. on Thalambur Main Road, Navalur, part of Chennai's OMR (Old Mahabalipuram Road) IT corridor.
+                        The 5.5-acre layout sits adjacent to a reserved forest area, close to Siruseri, and is built across G+1 and G+2 floor structures with 3 BHK + 3T, 4 BHK + 4T and 4 BHK + Home Theater (HT) configurations.
+                    </p>
+                    <p>
+                        Explore the master plan, unit plans, amenities and gallery below to understand the layout and lifestyle on offer. Enquire to receive the brochure and current pricing details.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                            <div>
+                                <h3>Premium Row Villas</h3>
+                                <p>G+1 &amp; G+2 designs across 83 exclusive homes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+                            <div>
+                                <h3>Forest-Adjacent Setting</h3>
+                                <p>Bordering a reserved forest area for a quieter, greener address.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
+                            <div>
+                                <h3>Recreation &amp; Sports</h3>
+                                <p>Pool, sports court, indoor games, VR gaming zone and more.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+                            <div>
+                                <h3>Gated Security Community</h3>
+                                <p>24/7 CCTV, boom barriers and dedicated backup power per villa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay:160ms;">
+                    <img class="about-visual" src="/images/projects/radiance-edgewood/radiance-edgewood-master-plan.webp" alt="Radiance Edgewood Navalur master plan overview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <h2 class="section-title">Project Highlights</h2>
+            <p class="section-subtitle">Key details for Radiance Edgewood, ready for quick comparison and easy discovery.</p>
+
+            <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
+                <table class="highlights-table" aria-label="Radiance Edgewood project highlights">
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Developer</strong></td><td>Radiance Realty Developers India Ltd.</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Thalambur Main Road, Navalur, OMR, Chennai, near Siruseri, adjacent to a reserved forest area</td></tr>
+                        <tr><td><strong>Land Extent</strong></td><td>Approximately 5.5 Acres</td></tr>
+                        <tr><td><strong>Total Units</strong></td><td>83 Exclusive Villas</td></tr>
+                        <tr><td><strong>Building Structure</strong></td><td>G+1 &amp; G+2 Floors</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>3 BHK + 3T, 4 BHK + 4T, 4 BHK + Home Theater (HT)</td></tr>
+                        <tr><td><strong>Project Status</strong></td><td>Under Construction / New Launch</td></tr>
+                        <tr><td><strong>Expected Possession</strong></td><td>December 2028</td></tr>
+                        <tr><td><strong>RERA Registration No.</strong></td><td>TNRERA/35/BLG/0239/2026</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <h2 class="section-title">World-Class Amenities &amp; Clubhouse Specifications</h2>
+            <p class="section-subtitle">A curated set of lifestyle amenities across clubhouse, recreation, social and infrastructure zones.</p>
+
+            <div class="amenity-grid">
+                <div class="amenity-card reveal">
+                    <img class="amenity-icon-img" src="/images/projects/radiance-edgewood/icons/fitness.svg" alt="">
+                    <h3>Clubhouse &amp; Wellness</h3>
+                    <ul class="amenity-list">
+                        <li>Modern Clubhouse</li>
+                        <li>Fully Equipped Elevated Gym</li>
+                        <li>Sauna Room</li>
+                        <li>Yoga / Aerobics / Zumba Studio</li>
+                        <li>Association Room</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <img class="amenity-icon-img" src="/images/projects/radiance-edgewood/icons/swimming-pool.svg" alt="">
+                    <h3>Recreation &amp; Sports</h3>
+                    <ul class="amenity-list">
+                        <li>Swimming Pool with Kids' Pool</li>
+                        <li>Multipurpose Sports Court</li>
+                        <li>Table Tennis</li>
+                        <li>Billiards</li>
+                        <li>VR / Video Gaming Zone</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <img class="amenity-icon-img" src="/images/projects/radiance-edgewood/icons/party-lawn.svg" alt="">
+                    <h3>Social &amp; Green Spaces</h3>
+                    <ul class="amenity-list">
+                        <li>Banquet Hall with Pantry + Open Lawn</li>
+                        <li>Reflexology Pathway</li>
+                        <li>Landscaped Gardens</li>
+                        <li>BBQ / Party Lawn</li>
+                        <li>Library</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:240ms;">
+                    <div class="amenity-icon" aria-hidden="true">🔒</div>
+                    <h3>Infrastructure &amp; Security</h3>
+                    <ul class="amenity-list">
+                        <li>24/7 CCTV Surveillance</li>
+                        <li>Boom Barriers</li>
+                        <li>1,500W DG Backup per Villa (100% Common Area Backup)</li>
+                        <li>Hydro-Pneumatic Water System &amp; STP</li>
+                        <li>Water Softener &amp; EV Charging Points</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top:3rem;" class="gallery-grid-wrapper">
+                <div class="gallery-grid" id="amenitiesGalleryStrip">
+                    <div class="gallery-item" onclick="openLightboxFromSrc('radiance-edgewood-clubhouse-1.webp')"><img src="/images/projects/radiance-edgewood/radiance-edgewood-clubhouse-1.webp" alt="Radiance Edgewood Navalur clubhouse interior view"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('radiance-edgewood-clubhouse-2.webp')"><img src="/images/projects/radiance-edgewood/radiance-edgewood-clubhouse-2.webp" alt="Radiance Edgewood Navalur clubhouse amenity view"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('radiance-edgewood-elevation-5.webp')"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-5.webp" alt="Radiance Edgewood Navalur villa cluster exterior view"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('radiance-edgewood-elevation-6.webp')"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-6.webp" alt="Radiance Edgewood Navalur row villa street view"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Explore Radiance Edgewood's villa elevations and clubhouse visuals.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp" alt="Radiance Edgewood Navalur villa elevation exterior view 1"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-2.webp" alt="Radiance Edgewood Navalur villa elevation exterior view 2"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-3.webp" alt="Radiance Edgewood Navalur villa elevation exterior view 3"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-4.webp" alt="Radiance Edgewood Navalur villa elevation exterior view 4"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-5.webp" alt="Radiance Edgewood Navalur villa cluster exterior view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-6.webp" alt="Radiance Edgewood Navalur row villa street view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-7.webp" alt="Radiance Edgewood Navalur villa elevation exterior view 7"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-clubhouse-1.webp" alt="Radiance Edgewood Navalur clubhouse interior view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/radiance-edgewood/radiance-edgewood-clubhouse-2.webp" alt="Radiance Edgewood Navalur clubhouse amenity view"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="units">
+        <div class="container">
+            <h2 class="section-title">Unit Plans</h2>
+            <p class="section-subtitle">Explore Radiance Edgewood's master plan and villa layouts</p>
+
+            <div class="plan-grid" style="margin-top: 1.5rem;">
+                <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto; cursor:pointer;">
+                    <img src="/images/projects/radiance-edgewood/radiance-edgewood-master-plan.webp" alt="Radiance Edgewood Navalur master plan" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                </div>
+
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>83 Exclusive Villas</strong>
+                        <span>Set within a 5.5-acre gated layout adjacent to a reserved forest area.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>G+1 &amp; G+2 Structures</strong>
+                        <span>Flexible row-villa footprints across the community.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>3 &amp; 4 BHK Configurations</strong>
+                        <span>Including a dedicated 4 BHK + Home Theater option.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Enquire for Details</strong>
+                        <span>Get the brochure, exact unit-wise pricing and availability instantly.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-grid" style="max-height: 420px; margin-top: 1.8rem;">
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-site-layout.webp" alt="Radiance Edgewood Navalur site layout plan"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type1-4bhk-terrace-north.webp" alt="Radiance Edgewood 4 BHK terrace villa north-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type3-4bhk-north.webp" alt="Radiance Edgewood 4 BHK villa north-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type4-4bhk-east.webp" alt="Radiance Edgewood 4 BHK villa east-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type4-4bhk-north.webp" alt="Radiance Edgewood 4 BHK villa north-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type5-3bhk-south.webp" alt="Radiance Edgewood 3 BHK villa south-facing layout, starting from 2,179 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type7-4bhk-south.webp" alt="Radiance Edgewood 4 BHK villa south-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type8-3bhk-north.webp" alt="Radiance Edgewood 3 BHK villa north-facing layout, starting from 2,179 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type9-4bhk-south.webp" alt="Radiance Edgewood 4 BHK villa south-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type10-4bhk-east.webp" alt="Radiance Edgewood 4 BHK villa east-facing layout, starting from 2,572 sq. ft."></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()" style="cursor:pointer;"><img src="/images/projects/radiance-edgewood/radiance-edgewood-type11-3bhk-east.webp" alt="Radiance Edgewood 3 BHK villa east-facing layout, starting from 2,179 sq. ft."></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Radiance Edgewood Navalur Pricing &amp; Configuration Details</h2>
+            <p class="section-subtitle">Indicative pricing for each villa configuration. Actual prices subject to updates.</p>
+
+            <div class="pricing-table-wrap">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Configuration</th>
+                            <th>Built-up Area (BUA)</th>
+                            <th>Approx. Price Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 BHK + 3T Villa</td>
+                            <td>2,179 – 2,187 sq. ft.</td>
+                            <td>₹2.27 Cr – ₹2.54 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>4 BHK + 4T Villa</td>
+                            <td>2,572 – 3,021 sq. ft.</td>
+                            <td>₹2.67 Cr – ₹3.51 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>4 BHK + HT (Home Theater)</td>
+                            <td>3,506 – 3,554 sq. ft.</td>
+                            <td>₹3.71 Cr – ₹4.05 Cr</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pricing-footnote">*Base rates typically range ₹10,300–₹11,200 per sq. ft., excluding taxes, floor premiums, and registration charges. Please enquire for the latest offer, floor-wise premium and availability.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="location">
+        <div class="container">
+            <h2 class="section-title">Strategic Location Advantage &amp; OMR Connectivity</h2>
+            <p class="section-subtitle">Radiance Edgewood offers convenient access to Chennai's IT corridor, schools, hospitals and entertainment hubs.</p>
+
+            <div class="plan-grid" style="grid-template-columns: 1fr; margin-top: 2rem;">
+                <div class="plan-notes reveal" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
+                    <div class="plan-note">
+                        <strong>IT Hubs</strong>
+                        <span>~5 mins to Siruseri SIPCOT IT Park &amp; TCS Siruseri Campus.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Road Corridors</strong>
+                        <span>Easy access to OMR, Thalambur Road, and Vandalur-Kelambakkam Road.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Schools &amp; Colleges</strong>
+                        <span>The School KFI (1.4 km), Vels Vidyashram (1.2 km), PSBB Millennium (3.1 km), Sathyabama University (7.1 km).</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Hospitals</strong>
+                        <span>Sri Isari Velan Mission Hospital (&lt;1 km), Good Life Hospital (2.5 km), Dr. Kamakshi Memorial Hospital (5.6 km).</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Entertainment</strong>
+                        <span>The Marina Mall and Vivira Mall (Navalur) within 10-15 minutes.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Enquire for Details</strong>
+                        <span>Get the brochure and exact location details on request.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="investment" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">The Investment Advantage</h2>
+            <p class="section-subtitle">Why Radiance Edgewood is a compelling choice for home buyers and investors on the OMR corridor.</p>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Why Invest in the OMR-Siruseri Corridor</strong>
+                    <span>
+                        Navalur sits within Chennai's established OMR (Old Mahabalipuram Road) IT corridor, one of the city's largest concentrations of technology campuses and business parks. <strong>Radiance Edgewood</strong> is barely 5 minutes from Siruseri SIPCOT IT Park and the TCS Siruseri Campus, placing residents close to a large, stable base of employment without the density and traffic pressure of the older OMR stretches closer to the city. <br><br>
+                        The corridor's continued expansion, ongoing road-widening on Vandalur-Kelambakkam Road, and steady growth of IT/ITES employment around Siruseri and Navalur keep housing demand consistent in this belt. A gated villa community with only 83 units on 5.5 acres, next to a reserved forest, gives buyers a lower-density, greener alternative to the high-rise apartment supply that dominates most of OMR.
+                    </span>
+                </div>
+
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Villas vs Apartments: The OMR Resale Case</strong>
+                    <span>
+                        Row-villa supply on OMR is far more limited than apartment supply. Most new launches in this corridor are high-rise apartment towers, so that scarcity is itself a structural advantage for a project like <strong>Radiance Edgewood</strong>: buyers who specifically want a private villa with no shared walls, an independent terrace, and a small, low-density community of 83 homes have very few comparable options in Navalur and Siruseri. <br><br>
+                        Villas also typically carry a meaningfully higher land-to-built-up-area ratio than apartments, which tends to support land-value-driven appreciation over the long term, in addition to any construction-quality premium. Buyers should independently verify current resale trends for OMR villa communities before treating this as a guarantee, and should not rely on this page alone for investment decisions.
+                    </span>
+                </div>
+
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Rental Yield Potential Near Siruseri IT Park</strong>
+                    <span>
+                        The steady presence of IT and ITES professionals working at Siruseri SIPCOT IT Park and TCS Siruseri Campus supports consistent rental demand for well-located homes in Navalur. Senior professionals and relocating families in particular tend to prefer villas over apartments when budgets allow, valuing the privacy, independent parking and larger built-up area that <strong>Radiance Edgewood's</strong> 3 and 4 BHK configurations offer. <br><br>
+                        With amenities spanning a clubhouse, swimming pool, sports court and landscaped gardens, the project is positioned to appeal to both end-users and investors seeking a rental-ready home in a corridor with an established, IT-driven tenant base.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="developer" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">About Radiance Realty Developers India Ltd.</h2>
+            <p class="section-subtitle">The developer behind Radiance Edgewood.</p>
+            <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
+                <p style="margin-bottom: 1rem;">
+                    <strong>Radiance Edgewood</strong> is developed by Radiance Realty Developers India Ltd., a Chennai-based real estate developer. The project reflects the developer's focus on low-density, gated row-villa communities on the OMR IT corridor, an approach distinct from the high-rise apartment developments that dominate much of this stretch of Chennai.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Spanning 5.5 acres on Thalambur Main Road, Navalur, Radiance Edgewood is built around 83 exclusive villas across G+1 and G+2 structures, with a comprehensive amenity set spanning a clubhouse, wellness zone, sports facilities, social spaces and dedicated infrastructure such as 100% common-area power backup and a sewage treatment plant.
+                </p>
+                <p>
+                    The project is registered with Tamil Nadu RERA under registration number TNRERA/35/BLG/0239/2026, with possession targeted for December 2028. Prospective buyers are encouraged to independently verify all project, developer and construction-status details directly with Radiance Realty Developers India Ltd. and via the official TNRERA portal before making a purchase decision.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about Radiance Edgewood, Navalur.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Radiance Edgewood is a gated row-villa community by Radiance Realty Developers India Ltd., spread across 5.5 acres on Thalambur Main Road, Navalur, on Chennai's OMR IT corridor.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where is Radiance Edgewood located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is located on Thalambur Main Road, Navalur, adjacent to a reserved forest area, close to Siruseri on the Old Mahabalipuram Road (OMR) IT corridor in Chennai.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">What configurations are available at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project offers 3 BHK + 3T Villas, 4 BHK + 4T Villas, and 4 BHK + Home Theater (HT) Villas across G+1 and G+2 floor structures.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">How many villas does the project have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Radiance Edgewood comprises 83 exclusive villas set within a 5.5-acre gated community.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">What is the price range at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Prices range from approximately ₹2.27 Cr for a 3 BHK + 3T villa to ₹4.05 Cr for the largest 4 BHK + Home Theater villa, based on built-up area and floor premiums.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">What is the RERA registration number for Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Radiance Edgewood is registered under TNRERA/35/BLG/0239/2026.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">Who is the developer of Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is developed by Radiance Realty Developers India Ltd.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">When is the possession date for Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Possession is targeted for December 2028.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">What is the built-up area of the villas?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Built-up area ranges from 2,179 sq. ft. for the 3 BHK + 3T configuration up to 3,554 sq. ft. for the 4 BHK + Home Theater configuration.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">What amenities are available at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Residents get a clubhouse with a gym, sauna and yoga studio, a swimming pool with a kids' pool, a multipurpose sports court, table tennis and billiards, a banquet hall, landscaped gardens, a reflexology pathway, and 24/7 security with CCTV surveillance.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">Is Radiance Edgewood a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. The project sits within 5 minutes of Siruseri SIPCOT IT Park and TCS Siruseri Campus, on the established OMR IT corridor, which has historically supported strong rental demand and appreciation for gated villa communities.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">How far is Radiance Edgewood from Siruseri IT Park?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Radiance Edgewood is approximately 5 minutes from Siruseri SIPCOT IT Park and the TCS Siruseri Campus.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">What is the base rate per square foot at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Base rates typically range from ₹10,300 to ₹11,200 per sq. ft., excluding taxes, floor premiums, and registration charges.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">What schools are near Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The School KFI (1.4 km), Vels Vidyashram (1.2 km), PSBB Millennium (3.1 km), and Sathyabama University (7.1 km) are all within easy reach.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">What is the backup power arrangement at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Each villa gets a 1,500W DG backup, with 100% common area backup also provided.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">How do I book a site visit at Radiance Edgewood?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can request a site visit or brochure by filling out the enquiry form on this page or contacting us directly via phone or WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">Is Radiance Edgewood close to hospitals?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Sri Isari Velan Mission Hospital is less than 1 km away, Good Life Hospital is 2.5 km away, and Dr. Kamakshi Memorial Hospital is 5.6 km away.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Enquire for Pricing &amp; Availability</h2>
+            <p class="section-subtitle">Schedule a call or request the brochure for Radiance Edgewood, Navalur.</p>
+
+            <div class="form-container">
+                <div class="urgency-block">
+                    <div class="urgency-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Only 83 Villas Available
+                    </div>
+                    <div class="urgency-text">Get Latest Pricing &amp; Offers &middot; Book Site Visit Today</div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="eca8dc5d-504f-4feb-a9a1-9f74bddf1c86">
+                    <input type="hidden" name="subject" value="New Inquiry - Radiance Edgewood (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <input type="text" name="name" required placeholder="Enter your full name" />
+                    <input type="email" name="email" required placeholder="your.email@example.com" />
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    <textarea name="message" placeholder="Message (Optional)"></textarea>
+
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+
+                <div class="rera-notice" style="margin-top:1.8rem;background: rgba(212, 165, 116, 0.12); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-warm); border-radius: 14px; color:#fefce8;">
+                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
+                    Images and information are for representation purpose. Pricing and availability are subject to change. Please enquire for the latest offer and unit availability details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-bottom-cta" aria-hidden="true">
+        <a href="tel:+918438344093" class="mobile-cta-btn btn-call" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Now
+        </a>
+        <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Radiance%20Edgewood" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+        </a>
+
+        <button type="button" class="mobile-cta-btn btn-visit" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});" aria-label="Get Brochure">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Get Brochure
+        </button>
+    </div>
+
+    <!-- ===== MARKET INSIGHTS ===== -->
+    <!-- Radiance Edgewood was the first Chennai project on this site; Shriram 122
+         West (Mangadu, West Chennai) has since shipped as the second. No full
+         "Similar Projects" comparison grid (with its own CSS) has been built on
+         this page, so rather than retrofit that structure, the one real sibling
+         is linked inline in the intro paragraph below alongside the blog/insight
+         cards, which remain this project's own. -->
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+
+        <span class="pfs-label">Research &amp; Guides</span>
+        <h2 class="pfs-title">Related Market Insights</h2>
+        <p class="pfs-intro">Read our independent research on Radiance Edgewood and the Navalur-OMR market before you decide. Also in Chennai: <a href="/projects/chennai/shriram-122-west/" style="color:#9a5b28;font-weight:600;text-decoration:underline;">Shriram 122 West, Mangadu &rarr;</a> Or <a href="/projects/" style="color:#9a5b28;font-weight:600;text-decoration:underline;">browse all verified projects &rarr;</a></p>
+        <div class="insight-grid" id="insightGrid">
+          <!-- populated in Phase 5 with this project's own new blog posts -->
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>About Radiance Edgewood</h5>
+                <p>83 exclusive gated row villas with lifestyle amenities, green surroundings, and OMR IT-corridor connectivity.</p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Our Projects</h5>
+                <p><a href="/projects/">All Verified Projects</a></p>
+                <p><a href="/blog/">Luxura Habitat Blog</a></p>
+                <p><a href="/about/">About Luxura Habitat</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <p><a href="#about">About</a></p>
+                <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#gallery">Gallery</a></p>
+                <p><a href="#units">Unit Plans</a></p>
+                <p><a href="#location">Location</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
+                <p><a href="/terms.html">Terms &amp; Conditions</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Contact</h5>
+                <div class="footer-contact" style="margin-top:0.4rem;">
+                    <strong>Phone</strong>
+                    <a href="tel:+918438344093">+91 8438 344 093</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Radiance%20Edgewood%20and%20available%20offers" target="_blank" rel="noopener">Chat with us</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>Email</strong>
+                    <a href="mailto:projectinfoindia@gmail.com">projectinfoindia@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© Copyright 2026 Luxura Habitat. All Rights Reserved.</div>
+            <div style="margin-top:0.6rem;">This website is for informational purposes only. Prices and offers subject to change without notice. The project is registered under the Tamil Nadu Real Estate (Regulation and Development) Act, 2016 (RERA).</div>
+
+            <div style="margin-top:0.9rem; font-size:0.78rem; color: rgba(255,255,255,0.75); max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.55;">
+                <strong>RERA Authorized Agent:</strong> Narayanan Rajesh, Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045<br/>
+                <strong>RERA Project Registration No:</strong> TNRERA/35/BLG/0239/2026<br/>
+                <strong>Site Address:</strong> Thalambur Main Road, Navalur, Chennai, Tamil Nadu<br/><br/>
+                <strong>Authorized Channel Partner:</strong> This is an authorized channel partner platform used strictly for informational marketing objectives. Provided content is given by respective owners and this website and content are for information purpose only and does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.<br/><br/>
+                © Copyright 2026 Luxura Habitat. All Rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()">✕</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded view">
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="previousImage()">❮</button>
+            <button class="lightbox-nav lightbox-next" type="button" onclick="nextImage()">❯</button>
+            <div class="lightbox-counter"><span id="imageCounter">1</span> / <span id="imageTotal">1</span></div>
+        </div>
+    </div>
+
+    <script src="/js/project-page.js"></script>
+    <script>
+        function toggleDetailsPanel() {
+            const panel = document.getElementById('detailsPanel');
+            const overlay = document.getElementById('panelOverlay');
+            panel.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.getElementById('hamburgerMenu');
+                const navLinks = document.getElementById('navLinks');
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox images collection
+        let currentImageIndex = 0;
+        let allLightboxImages = [];
+
+        function collectAllImages() {
+            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img');
+            allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
+        }
+
+        function openLightbox(itemElement) {
+            const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
+            if (!allLightboxImages.length) collectAllImages();
+
+            const idx = allLightboxImages.findIndex(x => x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function openLightboxFromSrc(src) {
+            if (!allLightboxImages.length) collectAllImages();
+            const idx = allLightboxImages.findIndex(x => x.src.endsWith(src) || x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateLightboxImage() {
+            if (!allLightboxImages.length) return;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allLightboxImages.length; updateLightboxImage(); }
+        function previousImage() { currentImageIndex = (currentImageIndex - 1 + allLightboxImages.length) % allLightboxImages.length; updateLightboxImage(); }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            collectAllImages();
+            initProjectPageScrollReveal('section .reveal');
+        });
+
+        // Forms are submitted directly to Web3Forms (no custom submit handlers required).
+
+        initProjectPageSmoothScroll();
+        initProjectPageActiveNav();
+
+        // Zendesk
+        window.zESettings = {
+            webWidget: {
+                launcher: {
+                    chatLabel: { '*': 'Chat now' }
+                }
+            }
+        };
+
+        (function(){
+            var script = document.createElement('script');
+            script.id = 'ze-snippet';
+            script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+            script.async = true;
+            document.body.appendChild(script);
+        })();
+    </script>
+<script src="/js/seo.js"></script>
+</body>
+</html>

@@ -38,13 +38,13 @@
   <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <title>Bangalore Real Estate Blog | Luxura Habitat</title>
-  <meta name="description" content="Get expert insights on the Bangalore real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.">
-  <meta name="keywords" content="Bangalore real estate blog, Bangalore property market reviews, real estate investment guides Yelahanka, Luxura Habitat advisory blog">
+  <title>South India Real Estate Blog | Luxura Habitat</title>
+  <meta name="description" content="Get expert insights on the South India real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.">
+  <meta name="keywords" content="South India real estate blog, Bangalore real estate blog, Bangalore property market reviews, real estate investment guides Yelahanka, Luxura Habitat advisory blog">
   <link rel="canonical" href="https://luxurahabitat.com/blog/">
 
   <meta property="og:title" content="Real Estate Insights &amp; Market Blog — Luxura Habitat">
-  <meta property="og:description" content="Expert property advice, neighborhood appreciation updates, and unbiased project reviews in Bengaluru.">
+  <meta property="og:description" content="Expert property advice, neighborhood appreciation updates, and unbiased project reviews across South India.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://luxurahabitat.com/blog/">
 
@@ -167,13 +167,61 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* City filter (hidden until posts span more than one city, see script below) */
+    .area-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 780px;
+      margin: var(--space-lg) auto 0;
+    }
+
+    .area-filter__btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: #fff;
+      border: 1px solid #e0dacb;
+      border-radius: 50px;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .area-filter__btn:hover {
+      border-color: #b08d57;
+      color: #7a5c2a;
+    }
+
+    .area-filter__btn.is-active {
+      background: linear-gradient(135deg, #b08d57, #d4a96a);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .area-filter__count {
+      opacity: 0.75;
+      font-weight: 500;
+    }
+
+    .blog-card--filtered-out {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .area-filter { gap: 8px; }
+      .area-filter__btn { font-size: 0.78rem; padding: 7px 14px; }
+    }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Real Estate Insights & Bangalore Property Market Blog | Luxura Habitat",
-    "description": "Get expert insights on the Bangalore real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.",
+    "name": "Real Estate Insights & South India Property Market Blog | Luxura Habitat",
+    "description": "Get expert insights on the South India real estate market. Read project reviews, location analyses, investment guides, and legal due diligence tips from our advisory panel.",
     "url": "https://luxurahabitat.com/blog/",
     "publisher": {
       "@type": "LocalBusiness",
@@ -206,7 +254,7 @@
     <div class="top-bar">
       <div class="top-bar-inner">
         <div class="top-bar-left">
-          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
         </div>
         <div class="top-bar-right">
           <a href="tel:+918438344093" class="top-bar-link">
@@ -254,17 +302,259 @@
           <span>Blog</span>
         </div>
         <h1>Market Insights &amp; Advice</h1>
-        <p>Unbiased reviews, neighborhood growth analyses, and professional guidelines for premium real estate buyers in Bangalore.</p>
+        <p>Unbiased reviews, neighborhood growth analyses, and professional guidelines for premium real estate buyers across South India.</p>
       </div>
     </section>
 
     <!-- BLOG POSTS SECTION -->
     <section class="section" id="blog-listing">
       <div class="container">
+
+        <!--
+          City filter: stays hidden (via the `hidden` attribute) as long as every
+          .blog-card on this page shares one data-city value, which is the case today
+          (all 70 cards are data-city="bangalore"). The script at the bottom of this
+          file detects more than 1 distinct data-city value among the cards at load
+          time and un-hides this bar automatically, so no manual toggle is needed once
+          a non-Bangalore post ships. New posts outside Bangalore should carry
+          data-city="chennai"/"coimbatore"/etc. on their .blog-card article tag.
+        -->
+        <div class="area-filter" id="blog-city-filter" role="group" aria-label="Filter posts by city" hidden>
+          <button type="button" class="area-filter__btn is-active" data-city="all">All Cities <span class="area-filter__count"></span></button>
+          <button type="button" class="area-filter__btn" data-city="bangalore">Bangalore</button>
+          <button type="button" class="area-filter__btn" data-city="chennai">Chennai</button>
+          <button type="button" class="area-filter__btn" data-city="coimbatore">Coimbatore</button>
+        </div>
+
         <div class="blog-grid">
 
+          <!-- Blog Card: Assetz Codename Paradise Price, Layout & RERA Review -->
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp" alt="Assetz Codename Paradise Hennur Road price layout RERA review" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>9 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/assetz-codename-paradise-hennur-road-price-rera/">Assetz Codename Paradise: Price, Layout &amp; RERA</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Assetz Codename Paradise (Assetz Mizu &amp; Ki) off Hennur Road: verified 4 BHK villament pricing, amenities, pre-launch RERA status and our honest assessment.
+              </p>
+              <a href="/blog/assetz-codename-paradise-hennur-road-price-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Villament vs Apartment vs Villa Buyer Guide -->
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-about.webp" alt="Villament vs apartment vs villa Bangalore buyer guide" loading="eager">
+              <span class="blog-card__category">Buyer Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/villament-vs-apartment-vs-villa-bangalore/">Villament vs Apartment vs Villa: What Should You Buy?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                What a "villament" actually is, how it compares to a conventional apartment and a standalone villa on cost, privacy and resale, and which fits you.
+              </p>
+              <a href="/blog/villament-vs-apartment-vs-villa-bangalore/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Shriram Shankari Price, Layout & RERA Review -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/shriram-shankari/shriram-shankari-hero.webp" alt="Shriram Shankari Guduvanchery Chennai price layout RERA review" loading="eager">
+              <span class="blog-card__category">New Launch Alert</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>11 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/shriram-shankari-guduvanchery-price-layout-rera/">Shriram Shankari: Price, Layout &amp; RERA Review</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Shriram Shankari in Guduvanchery, South Chennai: verified 1 &amp; 2 BHK pricing and areas, RERA status, the real floor plan situation, possession timeline and amenities.
+              </p>
+              <a href="/blog/shriram-shankari-guduvanchery-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Shriram Shankari Phase 1 vs Phase 2 -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/shriram-shankari/shriram-shankari-master-plan.webp" alt="Shriram Shankari Phase 1 vs Phase 2 RERA and price compared" loading="eager">
+              <span class="blog-card__category">RERA Comparison</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>9 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/">Shriram Shankari: Phase 1 vs Phase 2, What's Actually Different?</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Shriram Shankari's earlier Phase 1 launch vs the currently-selling Phase 2, Codename: The View, compared: two separate RERA numbers, configurations and pricing.
+              </p>
+              <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Shriram 122 West Price, Layout & RERA Review -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/shriram-122-west/shriram-122-west-hero.webp" alt="Shriram 122 West Mangadu Chennai price layout RERA review" loading="eager">
+              <span class="blog-card__category">New Launch Alert</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>11 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/shriram-122-west-mangadu-price-layout-rera/">Shriram 122 West: Price, Layout &amp; RERA Review</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Shriram 122 West in Mangadu, Chennai: verified 2, 2.5 &amp; 3 BHK pricing and areas, RERA status, the real floor plan situation, possession timeline and amenities.
+              </p>
+              <a href="/blog/shriram-122-west-mangadu-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Mangadu Porur Chennai Real Estate Investment Guide -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/shriram-122-west/shriram-122-west-location-map.webp" alt="Mangadu Porur West Chennai real estate investment guide" loading="eager">
+              <span class="blog-card__category">Locality Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>10 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/">Mangadu &amp; Porur, Chennai: Real Estate Investment Guide</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Connectivity, upcoming Metro access, employment hubs and social infrastructure driving West Chennai's Mangadu-Porur corridor, and what it means for buyers and investors.
+              </p>
+              <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Radiance Edgewood Navalur Price, Layout & RERA -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp" alt="Radiance Edgewood Navalur villa price layout and RERA" loading="eager">
+              <span class="blog-card__category">Project Review</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>10 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/radiance-edgewood-navalur-price-layout-rera/">Radiance Edgewood Navalur: Price, Layout &amp; RERA Deep-Dive</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Full breakdown of pricing, villa layouts, TNRERA registration and amenities for Radiance Edgewood, an 83-villa gated community in Navalur, OMR, Chennai.
+              </p>
+              <a href="/blog/radiance-edgewood-navalur-price-layout-rera/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: Villas in Navalur, OMR - Siruseri Commute Guide -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-3.webp" alt="Villas in Navalur OMR Siruseri commute guide" loading="eager">
+              <span class="blog-card__category">Locality Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>9 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/villas-in-navalur-omr-siruseri-commute-guide/">Villas in Navalur, OMR: Siruseri Commute &amp; Locality Guide</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                A locality guide to Navalur, OMR: commute times to Siruseri SIPCOT IT Park, schools, hospitals and connectivity for villa buyers.
+              </p>
+              <a href="/blog/villas-in-navalur-omr-siruseri-commute-guide/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card: OMR Chennai Villa Investment Guide & Rental Yield -->
+          <article class="blog-card animate-on-scroll" data-city="chennai">
+            <div class="blog-card__image-wrap">
+              <img src="/images/projects/radiance-edgewood/radiance-edgewood-clubhouse-1.webp" alt="OMR Chennai villa investment guide and rental yield" loading="eager">
+              <span class="blog-card__category">Investment Guide</span>
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>September 2, 2026</span>
+                <span>•</span>
+                <span>10 Min Read</span>
+              </div>
+              <h2 class="blog-card__title">
+                <a href="/blog/omr-chennai-villa-investment-guide-rental-yield/">OMR Chennai Villa Investment Guide: Rental Yield &amp; Resale</a>
+              </h2>
+              <p class="blog-card__excerpt">
+                Villas vs apartments on OMR Chennai: rental yield expectations, resale scarcity and holding periods, with Radiance Edgewood as a case study.
+              </p>
+              <a href="/blog/omr-chennai-villa-investment-guide-rental-yield/" class="blog-card__link">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
           <!-- Blog Card: Shriram Bannerghatta Villaments Price, Layout & Pre-Launch Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/shriram-bannerghatta/shriram-bannerghatta-banner.webp" alt="Shriram Bannerghatta villaments price layout pre-launch review" loading="eager">
               <span class="blog-card__category">New Launch Alert</span>
@@ -289,7 +579,7 @@
           </article>
 
           <!-- Blog Card: Bannerghatta Road South Bengaluru Investment Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/shriram-bannerghatta/shriram-bannerghatta-location-map.webp" alt="Bannerghatta Road South Bengaluru real estate investment guide" loading="eager">
               <span class="blog-card__category">Locality Guide</span>
@@ -314,7 +604,7 @@
           </article>
 
           <!-- Blog Card: Purva Codename Skye Price, Layout & RERA Status -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/purva-codename-skye/purva-codename-skye-banner.webp" alt="Purva Codename Skye Hennur Main Road price layout RERA status" loading="eager">
               <span class="blog-card__category">New Launch Alert</span>
@@ -339,7 +629,7 @@
           </article>
 
           <!-- Blog Card: Purva Codename Skye vs Concorde Sienna -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/purva-codename-skye/purva-codename-skye-amenities.webp" alt="Purva Codename Skye vs Concorde Sienna Hennur Main Road comparison" loading="eager">
               <span class="blog-card__category">Project Comparison</span>
@@ -364,7 +654,7 @@
           </article>
 
           <!-- Blog Card: Purva Codename Skye Configuration Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/purva-codename-skye/purva-codename-skye-banner.webp" alt="Purva Codename Skye 3 BHK vs 4 BHK Study configuration guide" loading="eager">
               <span class="blog-card__category">Buying Guide</span>
@@ -389,7 +679,7 @@
           </article>
 
           <!-- Blog Card: Divyasree The Quiet Side Price, Configurations & RERA Status -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/divyasree-quiet-side/divyasree-quiet-side-banner.webp" alt="Divyasree The Quiet Side Yelahanka price configurations RERA status" loading="eager">
               <span class="blog-card__category">New Launch Alert</span>
@@ -414,7 +704,7 @@
           </article>
 
           <!-- Blog Card: Bellary Road, Yelahanka & Manyata Tech Park Connectivity Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/divyasree-quiet-side/divyasree-quiet-side-location-map.webp" alt="Bellary Road Yelahanka Manyata Tech Park connectivity guide" loading="eager">
               <span class="blog-card__category">Locality Guide</span>
@@ -439,7 +729,7 @@
           </article>
 
           <!-- Blog Card: Shriram 107 SouthEast Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-banner.webp" alt="Shriram 107 SouthEast Attibele price layout RERA" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -464,7 +754,7 @@
           </article>
 
           <!-- Blog Card: Shriram 107 SouthEast Phase 3 vs Phase 1 & 2 -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-oc-badge.webp" alt="Shriram 107 SouthEast Phase 3 vs Phase 1 and 2 comparison" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -489,7 +779,7 @@
           </article>
 
           <!-- Blog Card: Attibele & Electronic City South Investment Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-location-map.webp" alt="Attibele Electronic City South investment guide" loading="eager">
               <span class="blog-card__category">Investment Guide</span>
@@ -514,7 +804,7 @@
           </article>
 
           <!-- Blog Card: Sattva Green Groves Price, Plots & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves Nelamangala Tumkur Road" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -539,7 +829,7 @@
           </article>
 
           <!-- Blog Card: Sattva Green Groves vs KNS Samooha -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-green-groves/sattva-green-groves-about.webp" alt="Sattva Green Groves vs KNS Samooha comparison" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -564,7 +854,7 @@
           </article>
 
           <!-- Blog Card: Assetz Meru & Meadows Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-hero.webp" alt="Assetz Meru & Meadows Kanakapura Main Road" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -589,7 +879,7 @@
           </article>
 
           <!-- Blog Card: Assetz Meru & Meadows vs Purva Hallmark -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/assetz-meru-meadows/assetz-meru-meadows-about.webp" alt="Assetz Meru & Meadows vs Purva Hallmark comparison" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -614,7 +904,7 @@
           </article>
 
           <!-- Blog Card: Sattva Thippapura Price, Plots & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-thippapura/sattva-thippapura-hero.webp" alt="Sattva Thippapura Doddaballapur" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -639,7 +929,7 @@
           </article>
 
           <!-- Blog Card: Doddaballapur Real Estate Investment Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-thippapura/sattva-thippapura-hero.webp" alt="Doddaballapur real estate North Bangalore" loading="eager">
               <span class="blog-card__category">Investment Guide</span>
@@ -664,7 +954,7 @@
           </article>
 
           <!-- Blog Card: Sattva Lumina Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-lumina/sattva-lumina-hero.webp" alt="Sattva Lumina Rajankunte Yelahanka" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -689,7 +979,7 @@
           </article>
 
           <!-- Blog Card: TVS Emerald Altura Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects-thumbs/tvs-altura-thumb.webp" alt="TVS Emerald Altura Sathanur" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -714,7 +1004,7 @@
           </article>
 
           <!-- Blog Card: Century Astoria Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/century-astoria/century-astoria-banner.webp" alt="Century Astoria Immencity North Bangalore" loading="lazy">
               <span class="blog-card__category">Project Review</span>
@@ -739,7 +1029,7 @@
           </article>
 
           <!-- Blog Card: Vajram Chrysanthemum Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vajram-chrysanthemum/vajram-chrysanthemum-banner.webp" alt="Vajram Chrysanthemum Avalahalli Yelahanka" loading="lazy">
               <span class="blog-card__category">Project Review</span>
@@ -764,7 +1054,7 @@
           </article>
 
           <!-- Blog Card: Vajram Vivera Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vajram-vivera/vajram-vivera-banner.webp" alt="Vajram Vivera Kogilu Main Road" loading="lazy">
               <span class="blog-card__category">Project Review</span>
@@ -789,7 +1079,7 @@
           </article>
 
           <!-- Blog Card: Vajram Vivera vs Chrysanthemum -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects-thumbs/vajram-vivera-thumb.webp" alt="Vajram Vivera vs Vajram Chrysanthemum" loading="lazy">
               <span class="blog-card__category">Project Comparison</span>
@@ -814,7 +1104,7 @@
           </article>
 
           <!-- Blog Card: Housing Near KIADB Aerospace Park -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/century-astoria/century-astoria-location-map.webp" alt="Housing Near KIADB Aerospace Park Airport Road Bangalore" loading="lazy">
               <span class="blog-card__category">Locality Guide</span>
@@ -839,7 +1129,7 @@
           </article>
 
           <!-- Blog Card: Sattva Park Cubix Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/park-cubix/park-cubix-entrance.webp" alt="Sattva Park Cubix Devanahalli" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -864,7 +1154,7 @@
           </article>
 
           <!-- Blog Card: Park Cubix vs Sattva City -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/park-cubix/park-cubix-master-plan.webp" alt="Park Cubix vs Sattva City Devanahalli" loading="eager">
               <span class="blog-card__category">Project Comparison</span>
@@ -889,7 +1179,7 @@
           </article>
 
           <!-- Blog Card: Goyal Riviera Glade Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-elevation.webp" alt="Goyal Riviera Glade MVIT Road Yelahanka" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -914,7 +1204,7 @@
           </article>
 
           <!-- Blog Card: Riviera Glade vs Surya Valencia -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-master-plan.webp" alt="Riviera Glade vs Surya Valencia Yelahanka villas" loading="eager">
               <span class="blog-card__category">Project Comparison</span>
@@ -939,7 +1229,7 @@
           </article>
 
           <!-- Blog Card: Concorde Neo Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo Thanisandra Main Road" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -964,7 +1254,7 @@
           </article>
 
           <!-- Blog Card: Concorde Neo vs Orchid Salisbury -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/concorde-neo/concorde-neo-master-plan.webp" alt="Concorde Neo vs Orchid Salisbury Thanisandra" loading="eager">
               <span class="blog-card__category">Project Comparison</span>
@@ -989,7 +1279,7 @@
           </article>
 
           <!-- Blog Card: Sattva Vasanta Skye Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp" alt="Sattva Vasanta Skye Devanahalli" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1014,7 +1304,7 @@
           </article>
 
           <!-- Blog Card: Vasanta Skye vs Vasanta Cove -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vasanta-skye/vasanta-skye-gallery-1.webp" alt="Vasanta Skye vs Vasanta Cove" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -1039,7 +1329,7 @@
           </article>
 
           <!-- Blog Card: Sattva Vasanta Cove Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp" alt="Sattva Vasanta Cove Devanahalli" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1064,7 +1354,7 @@
           </article>
 
           <!-- Blog Card: Sattva Vasanta Cove vs Sattva Aeropolis -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/vasanta-cove/vasanta-cove-tower-exterior.webp" alt="Sattva Vasanta Cove vs Sattva Aeropolis" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -1089,7 +1379,7 @@
           </article>
 
           <!-- Blog Card: Sattva Songbird Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-songbird/sattva-songbird-banner.webp" alt="Sattva Songbird Budigere Cross" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1114,7 +1404,7 @@
           </article>
 
           <!-- Blog Card: Why Invest in Budigere Cross -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/sattva-songbird/sattva-songbird-aerial-wide.webp" alt="Budigere Cross Real Estate" loading="eager">
               <span class="blog-card__category">Investment Guide</span>
@@ -1139,7 +1429,7 @@
           </article>
 
           <!-- Blog Card: Surya Valencia Price Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia Rajankunte Yelahanka" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1164,7 +1454,7 @@
           </article>
 
           <!-- Blog Card: Villas vs Apartments North Bengaluru -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/surya-valencia/surya-valencia-villa-cluster.webp" alt="Villas vs Apartments North Bengaluru" loading="eager">
               <span class="blog-card__category">Investment Guide</span>
@@ -1189,7 +1479,7 @@
           </article>
 
           <!-- Blog Card: Concorde Sienna Price, Layout & RERA -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/concorde-sienna/concorde-sienna-elevation-1.webp" alt="Concorde Sienna Hennur Main Road" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1214,7 +1504,7 @@
           </article>
 
           <!-- Blog Card: Concorde Sienna vs Sattva La Vita -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="/images/projects/concorde-sienna/concorde-sienna-elevation-3.webp" alt="Concorde Sienna vs Sattva La Vita Hennur" loading="eager">
               <span class="blog-card__category">Comparison</span>
@@ -1239,7 +1529,7 @@
           </article>
 
           <!-- Blog Card: Purva Hallmark Pre-Launch Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/purva-hallmark/purva-hallmark-banner.webp" alt="Purva Hallmark Vajarahalli" loading="eager">
               <span class="blog-card__category">Pre-Launch Review</span>
@@ -1264,7 +1554,7 @@
           </article>
 
           <!-- Blog Card: Brigade Silvercrest Pre-Launch Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-hero.jpg" alt="Brigade Silvercrest Kanakapura Road" loading="eager">
               <span class="blog-card__category">Pre-Launch Review</span>
@@ -1289,7 +1579,7 @@
           </article>
 
           <!-- Blog Card: KNS Samooha Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/kns-samooha/kns-samooha-banner.webp" alt="KNS Samooha Nelamangala" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1314,7 +1604,7 @@
           </article>
 
           <!-- Blog Card: Why Invest in Nelamangala / Tumkur Road -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/kns-samooha/kns-samooha-location-map.png" alt="Why Invest in Nelamangala Tumkur Road Real Estate" loading="lazy">
               <span class="blog-card__category">Locality Guide</span>
@@ -1339,7 +1629,7 @@
           </article>
 
           <!-- Blog Card: Aparna Wonder Woods Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/wonder-woods/wonder-woods-hero.jpg" alt="Aparna Wonder Woods Mallasandra" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1364,7 +1654,7 @@
           </article>
 
           <!-- Blog Card: Wonder Woods vs Forest Ridge -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/wonder-woods/wonder-woods-birdseye-view.jpeg" alt="Aparna Wonder Woods vs Sattva Forest Ridge" loading="lazy">
               <span class="blog-card__category">Comparison</span>
@@ -1389,7 +1679,7 @@
           </article>
 
           <!-- Blog Card: KNS Sampada Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/kns-sampada/kns-sampada-banner.jpeg" alt="KNS Sampada Mysore Road" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1414,7 +1704,7 @@
           </article>
 
           <!-- Blog Card: Plots vs Apartments -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/kns-sampada/kns-sampada-layout.png" alt="Plots vs Apartments Investment Bangalore" loading="lazy">
               <span class="blog-card__category">Investment Guide</span>
@@ -1439,7 +1729,7 @@
           </article>
 
           <!-- Blog Card: Why Invest in Mysore Road / Hejjala -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/kns-sampada/kns-sampada-location-map.webp" alt="Why Invest in Mysore Road Hejjala Real Estate" loading="lazy">
               <span class="blog-card__category">Locality Guide</span>
@@ -1464,7 +1754,7 @@
           </article>
 
           <!-- Blog Card: Century Kindle Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/century-kindle/century-kindle-banner.webp" alt="Century Kindle Yelahanka" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1489,7 +1779,7 @@
           </article>
 
           <!-- Blog Card: Century Kindle vs Brigade Eternia -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/century-kindle/century-kindle-interior-1.webp" alt="Century Kindle vs Brigade Eternia" loading="lazy">
               <span class="blog-card__category">Comparison</span>
@@ -1514,7 +1804,7 @@
           </article>
 
           <!-- Blog Card: Sattva Forest Ridge Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Sattva Forest Ridge Anjanapura" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1539,7 +1829,7 @@
           </article>
 
           <!-- Blog Card: Kanakapura Road Market Trends 2026 -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/sattva-forest-ridge/Sattva-forestridge-Gallery-1.webp" alt="Kanakapura Road Real Estate Market Trends 2026" loading="lazy">
               <span class="blog-card__category">Market Report</span>
@@ -1564,7 +1854,7 @@
           </article>
 
           <!-- Blog Card: Kanakapura Road Connectivity -->
-          <article class="blog-card animate-on-scroll animate-delay-2">
+          <article class="blog-card animate-on-scroll animate-delay-2" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/sattva-forest-ridge/Sattva-forestridge-location.webp" alt="NICE Road and Metro Kanakapura Road Connectivity" loading="lazy">
               <span class="blog-card__category">Infrastructure</span>
@@ -1589,7 +1879,7 @@
           </article>
 
           <!-- Blog Card: Kanakapura Road Family Lifestyle Guide -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/projects/sattva-forest-ridge/Sattva-forestridge-aminities-01.webp" alt="Kanakapura Road Family Lifestyle Guide" loading="lazy">
               <span class="blog-card__category">Family Guide</span>
@@ -1614,7 +1904,7 @@
           </article>
 
           <!-- Blog Card 1: Assetz Zen & Sato Review -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../zen&sato3/g-8.webp" alt="Assetz Zen & Sato Project Aerial View" loading="eager">
               <span class="blog-card__category">Project Review</span>
@@ -1639,7 +1929,7 @@
           </article>
 
           <!-- Blog Card 2: Bagalur Main Road Appreciation -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/bagalur_road.png" alt="Yelahanka North Bangalore Real Estate Map" loading="lazy">
               <span class="blog-card__category">Market Report</span>
@@ -1664,7 +1954,7 @@
           </article>
 
           <!-- Blog Card 3: Yelahanka vs Yelahanka New Town -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/yelahanka_vs_new_town.png" alt="Yelahanka New Town Lifestyle" loading="lazy">
               <span class="blog-card__category">Investment Guide</span>
@@ -1689,7 +1979,7 @@
           </article>
 
           <!-- Blog Card 4: Top 3 Upcoming Luxury Apartments -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/luxury_apartments_yelahanka.png" alt="Luxury Apartments in Yelahanka" loading="lazy">
               <span class="blog-card__category">Top Projects</span>
@@ -1714,7 +2004,7 @@
           </article>
 
           <!-- Blog Card 5: Metro Blue Line Impact -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/namma_metro_blue_line.png" alt="Namma Metro Blue Line Impact" loading="lazy">
               <span class="blog-card__category">Infrastructure</span>
@@ -1739,7 +2029,7 @@
           </article>
 
           <!-- Blog Card 6: Yelahanka Family Lifestyle -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/yelahanka_family_lifestyle.png" alt="Family Lifestyle in Yelahanka" loading="lazy">
               <span class="blog-card__category">Lifestyle</span>
@@ -1764,7 +2054,7 @@
           </article>
 
           <!-- D-Blog 1: Market Trends -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/devanahalli_market_trends.png" alt="Devanahalli Real Estate Market Trends 2026" loading="lazy">
               <span class="blog-card__category">Market Trends</span>
@@ -1789,7 +2079,7 @@
           </article>
 
           <!-- D-Blog 2: ROI -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/devanahalli_roi.png" alt="Devanahalli ROI Land vs Rental Yield" loading="lazy">
               <span class="blog-card__category">Investment Guide</span>
@@ -1814,7 +2104,7 @@
           </article>
 
           <!-- D-Blog 3: Metro & STRR -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/strr_metro_devanahalli.png" alt="Metro Blue Line and STRR Devanahalli impact" loading="lazy">
               <span class="blog-card__category">Infrastructure</span>
@@ -1839,7 +2129,7 @@
           </article>
 
           <!-- D-Blog 4: Project Comparison -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/palmscape_vs_aeropolis.png" alt="Assetz Palmscape vs Sattva Aeropolis Devanahalli comparison" loading="lazy">
               <span class="blog-card__category">Project Comparison</span>
@@ -1864,7 +2154,7 @@
           </article>
 
           <!-- D-Blog 5: Deep Dive -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../additional_websites/assetz palmscape/Assetz-Palmscape-grand-entrance-wide-angle-image.webp" alt="Assetz Palmscape Devanahalli full review" loading="lazy">
               <span class="blog-card__category">Project Deep-Dive</span>
@@ -1889,7 +2179,7 @@
           </article>
 
           <!-- H-Blog 1: Hennur Market Trends -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/hennur_market.png" alt="Hennur Thanisandra Real Estate Market 2026" loading="lazy" onerror="this.src='../additional_websites/assetz palmscape/Assetz-Palmscape-grand-entrance-wide-angle-image.webp'">
               <span class="blog-card__category">Market Trends</span>
@@ -1914,7 +2204,7 @@
           </article>
 
           <!-- H-Blog 2: Manyata Rental Yield -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/manyata_tech_park.png" alt="Manyata Tech Park rental yield Hennur Thanisandra" loading="lazy">
               <span class="blog-card__category">Investment Guide</span>
@@ -1939,7 +2229,7 @@
           </article>
 
           <!-- H-Blog 3: Connectivity -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/strr_metro_devanahalli.png" alt="ORR Hebbal flyover Nagavara Metro Hennur" loading="lazy">
               <span class="blog-card__category">Infrastructure</span>
@@ -1964,7 +2254,7 @@
           </article>
 
           <!-- H-Blog 4: Project Comparison -->
-          <article class="blog-card animate-on-scroll animate-delay-1">
+          <article class="blog-card animate-on-scroll animate-delay-1" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../images/blog/palmscape_vs_aeropolis.png" alt="Goyal Orchid Salisbury vs Sattva La Vita Hennur comparison" loading="lazy" onerror="this.src='../additional_websites/assetz palmscape/Assetz-Palmscape-Main-Elevation-image-1 (1).webp'">
               <span class="blog-card__category">Project Comparison</span>
@@ -1989,7 +2279,7 @@
           </article>
 
           <!-- H-Blog 5: Deep Dive -->
-          <article class="blog-card animate-on-scroll">
+          <article class="blog-card animate-on-scroll" data-city="bangalore">
             <div class="blog-card__image-wrap">
               <img src="../additional_websites/Salisbury/dji_fly_20250628_104102_0330_1751528006863_photo.jpg" alt="Goyal Orchid Salisbury Thanisandra full review" loading="lazy">
               <span class="blog-card__category">Project Deep-Dive</span>
@@ -2026,7 +2316,7 @@
           <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
             <img src="../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
           </a>
-          <p>Bengaluru's trusted independent real estate consultancy, connecting discerning buyers with verified tier-one developer properties across premium micro-markets.</p>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
         </div>
 
         <div class="footer-col">
@@ -2078,7 +2368,7 @@
         <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p>
         <p class="footer-disclaimer">
           Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
-          All project information is sourced directly from our developer partners across Bengaluru.
+          All project information is sourced directly from our developer partners.
           Buyers are advised to independently verify all claims before making purchase decisions.
         </p>
       </div>
@@ -2086,5 +2376,47 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      var cityBar = document.getElementById('blog-city-filter');
+      if (!cityBar) return;
+
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-grid .blog-card'));
+      var cityButtons = Array.prototype.slice.call(cityBar.querySelectorAll('.area-filter__btn'));
+      var cityAllCountEl = cityBar.querySelector('[data-city="all"] .area-filter__count');
+
+      // Stays hidden until posts actually span more than one city (see the HTML
+      // comment above this bar). Today every card is data-city="bangalore".
+      var distinctCities = {};
+      cards.forEach(function (card) {
+        var city = card.getAttribute('data-city');
+        if (city) distinctCities[city] = true;
+      });
+      var showCityFilter = Object.keys(distinctCities).length > 1;
+      cityBar.hidden = !showCityFilter;
+      if (!showCityFilter) return;
+
+      if (cityAllCountEl) cityAllCountEl.textContent = '(' + cards.length + ')';
+
+      var state = { city: 'all' };
+
+      function applyFilters() {
+        cards.forEach(function (card) {
+          var match = state.city === 'all' || card.getAttribute('data-city') === state.city;
+          card.classList.toggle('blog-card--filtered-out', !match);
+        });
+      }
+
+      cityBar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.area-filter__btn');
+        if (!btn) return;
+        cityButtons.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        state.city = btn.getAttribute('data-city');
+        applyFilters();
+        if (window.gtag) gtag('event', 'blog_city_filter', { city: state.city });
+      });
+    })();
+  </script>
 </body>
 </html>

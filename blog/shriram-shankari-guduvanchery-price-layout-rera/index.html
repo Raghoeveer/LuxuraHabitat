@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Shriram Shankari: Price, Layout &amp; RERA | Luxura Habitat</title>
+  <meta name="description" content="Independent review of Shriram Shankari, Guduvanchery: verified 1 &amp; 2 BHK pricing, RERA status, the real floor plan situation, possession timeline and amenities.">
+  <meta name="keywords" content="Shriram Shankari price, Shriram Shankari RERA, Shriram Shankari Guduvanchery review, Shriram Shankari floor plan, Shriram Shankari possession date, Shriram Codename The View">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/shriram-shankari-guduvanchery-price-layout-rera/">
+  <meta property="og:title" content="Shriram Shankari: Price, Layout &amp; RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Shriram Shankari, Guduvanchery: pricing by configuration, the real floor plan situation, possession and RERA verification.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/shriram-shankari/shriram-shankari-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shriram Shankari: Price, Layout &amp; RERA Review">
+  <meta name="twitter:description" content="Independent review of Shriram Shankari, Guduvanchery: pricing, floor plans, possession and RERA verification.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/shriram-shankari/shriram-shankari-hero.webp">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="IN-TN">
+  <meta name="geo.placename" content="Guduvanchery, Chennai">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/shriram-shankari-guduvanchery-price-layout-rera/"
+        },
+        "headline": "Shriram Shankari: Price, Layout & RERA Review",
+        "description": "Independent review of Shriram Shankari, Guduvanchery: verified 1 & 2 BHK pricing, RERA status, the real floor plan situation, possession timeline and amenities.",
+        "image": "https://luxurahabitat.com/images/projects/shriram-shankari/shriram-shankari-hero.webp",
+        "datePublished": "2026-09-02",
+        "dateModified": "2026-09-02",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/shriram-shankari-guduvanchery-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Shriram Shankari: Price, Layout & RERA Review", "item": "https://luxurahabitat.com/blog/shriram-shankari-guduvanchery-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Shriram Shankari and who is the developer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Shriram Shankari is a premium high-rise apartment township by Shriram Properties Limited, spread across 36 acres with 75% open and green space, in Guduvanchery on Chennai's GST Road corridor." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Shriram Shankari price for each configuration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "1 BHK homes in Tower 8 (approx. 656-676 sq.ft) start from Rs.36.3 Lakhs onwards, and 2 BHK homes in Tower 27 (approx. 1,080-1,100 sq.ft) start from Rs.62 Lakhs onwards, both plus registration and other charges." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Shriram Shankari the same as Shriram Codename The View?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Codename: The View (also referenced as Lakeside Residences) is the marketing name for the current active launch of Shriram Shankari, offering 1 BHK and 2 BHK homes in Tower 8 and Tower 27." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RERA number for Shriram Shankari?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The current launch is registered under TNRERA number TN/01/BUILDING/0418/2021. We recommend verifying this independently on the TNRERA portal (rera.tn.gov.in) before booking. An earlier phase of the same township, Phase 1, carries a separate number, TN/01/Building/0035/2020." }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the possession date for Shriram Shankari?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project follows a phased handover schedule, with early units targeted for mid-2027 and full project completion targeted for December 2028, as per the RERA-registered timeline." }
+          },
+          {
+            "@type": "Question",
+            "name": "What amenities does Shriram Shankari offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project features a 12,000 sq.ft multi-level clubhouse with 45+ facilities including an outdoor swimming pool, mini-theatre and gymnasium, sports courts, jogging tracks, kids' play parks, and an approximately 18,000 sq.ft on-site commercial zone with a convenience store, pharmacy, ATM vestibules and a creche." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Chennai &amp; Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Shriram Shankari Price &amp; RERA</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Shriram Shankari: Price, Layout &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published September 2, 2026</span><span>&bull;</span><span>11 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/shriram-shankari/shriram-shankari-hero.webp" alt="Shriram Shankari Guduvanchery price layout RERA review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p><strong>Shriram Shankari price</strong> is one of the most-searched terms around this Guduvanchery launch, and for good reason: it is a new high-rise phase by an established developer on one of South Chennai's busiest arterial roads. This review covers the developer, the location, the real unit configurations and pricing, the honest floor plan situation, possession timeline, amenities and RERA verification, so you can decide whether Shriram Shankari is worth pursuing before you contact the sales team.</p>
+
+          <h2>1. The Developer: Shriram Properties Limited</h2>
+          <p>Shriram Properties Limited is one of South India's leading residential developers, with a long-standing, customer-centric track record built primarily across the mid-market and affordable housing segments in Bangalore, Chennai and other major cities. Shriram Shankari is a Chennai township by this same developer, positioned in Guduvanchery on the city's GST Road corridor, and it is registered under Tamil Nadu's RERA regime (TNRERA), not Karnataka's, a distinction worth keeping in mind if you are comparing this project against the developer's Bangalore projects like Shriram 107 SouthEast or Shriram Bannerghatta.</p>
+
+          <h2>2. Location: Guduvanchery, South Chennai</h2>
+          <p>The project sits on Nellikuppam Road, Perumattunallur Village, in Guduvanchery, directly off GST Road (NH45) in South Chennai. Guduvanchery has historically been a more affordable, industrial-adjacent pocket relative to Tambaram or OMR, but its position on GST Road, combined with the Kilambakkam integrated bus terminus and the ongoing 8-lane widening of GST Road itself, has been steadily pulling it into a stronger demand catchment for both end-users and investors.</p>
+          <p>At a glance, the proximity profile looks like this:</p>
+          <ul>
+            <li><strong>Connectivity:</strong> Guduvanchery Railway Station (5 min), Kilambakkam Bus Terminus (5 min), GST Road / NH45 (5 min), Chennai International Airport (35 min)</li>
+            <li><strong>Employment hubs:</strong> Mahindra World City (15 min), MEPZ Tambaram (20 min), Oragadam Industrial Area (25 min)</li>
+            <li><strong>Schools:</strong> SRM Public School, Velammal Vidyashram (5 min), SRM University (10 min)</li>
+            <li><strong>Hospitals:</strong> SRM General Hospital (10 min), Hindu Mission Hospital (25 min)</li>
+            <li><strong>Landmarks:</strong> Vandalur Zoo and Shriram Gateway (5 min)</li>
+          </ul>
+          <p>Chennai Metro Phase 2's planned stations along the Tambaram-Chromepet-Kilambakkam-Vandalur corridor are frequently cited as a medium-term growth driver for Guduvanchery. That extension is not operational yet, so treat it as upside to watch rather than a reason to expect an immediate price jump.</p>
+
+          <h2>3. The Project: A Township Sold in Phases, and a Naming Quirk Worth Knowing</h2>
+          <p>Shriram Shankari is a 36-acre township, with 75% of the land kept as open and green space. Like several large Shriram townships, it has been developed and sold in phases over time, and the phase currently being marketed carries its own internal codename: <strong>Codename: The View</strong>, sometimes also referenced as <strong>Lakeside Residences</strong>. This is the launch this review, and the Luxura Habitat project page, actually covers: high-rise towers, specifically <strong>Tower 8</strong> (1 BHK) and <strong>Tower 27</strong> (2 BHK). An earlier phase of the same township, generally referred to as Phase 1, was launched several years earlier under a separate RERA registration and offered a wider 1, 2 and 3 BHK configuration mix. We've written a dedicated comparison of the two, <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/" class="money-link">Shriram Shankari Phase 1 vs Phase 2: RERA &amp; Price Compared</a>, since conflating the two phases' pricing or RERA numbers is a genuinely easy mistake to make when researching this project online.</p>
+          <p>Beyond the residential towers, the current launch integrates an approximately 18,000 sq.ft on-site commercial zone, a genuinely useful feature for a high-rise community this size, with a convenience store, ATM vestibules, a pharmacy, food outlets and an on-site creche.</p>
+
+          <h2>4. Unit Configurations and the Real Floor Plan Situation</h2>
+          <p>The current launch is marketed across two configuration tiers: 1 BHK in Tower 8 and 2 BHK in Tower 27. We want to be direct about something we found while researching this project: a clean, standalone unit-level floor plan for the 1 BHK configuration was not part of the material we reviewed. What is available is a genuine "Typical 2 BHK" plan, printed directly on the builder's own artwork as 1,035-1,100 sq.ft, along with two illustrative tower floor plates (Tower 23 and Tower 26) showing the stacked-unit arrangement typical of the township's high-rise towers. If you are seriously considering a 1 BHK unit specifically in Tower 8, ask the sales team directly for that unit's dedicated plan before booking, rather than assuming it mirrors the 2 BHK layout scaled down.</p>
+          <p>We also want to flag a naming inconsistency we found in the source marketing material for this launch: one section of the builder's own microsite describes the project as a "low-density township of low-rise blocks (Stilt + 4 floors)," while the overwhelming majority of the same material, including the meta descriptions, the about section, the master plan artwork and the tower floor plates themselves, consistently describes it as a high-rise township across numbered towers (Tower 8, Tower 23, Tower 26, Tower 27 all appear on actual plan artwork). We've gone with the high-rise description here, since it's what the concrete tower floor plates and the master plan actually show, but it's worth independently confirming your specific tower's exact floor count with the sales team before booking.</p>
+
+          <h2>5. Pricing and Area by Configuration</h2>
+          <div style="overflow-x:auto;">
+          <table style="min-width:520px;">
+            <thead><tr><th>Configuration</th><th>Tower</th><th>Area</th><th>Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>1 BHK</td><td>Tower 8</td><td>656-676 sq.ft</td><td>₹36.3-39.7 Lakhs onwards</td></tr>
+              <tr><td>2 BHK</td><td>Tower 27</td><td>1,080-1,100 sq.ft</td><td>₹62-66 Lakhs onwards</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*All prices are + Registration &amp; Other Charges and are indicative starting figures for the current launch. Please <a href="/projects/chennai/shriram-shankari/#form" class="money-link">enquire for the current, verified price list</a> and availability.</p>
+          <p>A sub-₹40 Lakh entry point for a 1 BHK is a genuinely competitive price for a high-rise, amenity-rich launch directly on GST Road, and it compares favourably against similarly-positioned inventory closer to Tambaram, where land costs run higher. As with any peripheral-but-improving corridor, the trade-off is that some of the connectivity upside, the Metro Phase 2 extension in particular, is not live yet, so today's pricing reflects a location that is still partway through its infrastructure build-out rather than one that has already fully arrived.</p>
+          <p>On financing, a 1 BHK at ₹36.3 Lakhs and a 2 BHK at ₹62 Lakhs both sit comfortably within standard home-loan eligibility for a salaried buyer in the mid-income bracket, assuming a conventional 80-85% loan-to-value ratio over a 20-year tenure. Budget separately for stamp duty, registration, GST on the under-construction component and monthly maintenance, none of which were disclosed in the source material we reviewed and should be confirmed directly with the sales team before booking.</p>
+
+          <h2>6. Amenities</h2>
+          <p>The amenity list spans a 12,000 sq.ft multi-level clubhouse with 45+ facilities, including an outdoor swimming pool, mini-theatre, meditation spaces and a cafeteria; sports facilities including a tennis court, badminton court, skating rink and basketball hoops; community and outdoor features like jogging tracks, kids' play parks, a community lounge and landscaped gardens; core infrastructure covering 24/7 security, 100% DG power backup, advanced water management and high-speed internet readiness; and, worth calling out on its own, the roughly 18,000 sq.ft integrated commercial zone with a convenience store, ATM vestibules, a pharmacy, food outlets and an on-site creche.</p>
+
+          <h2>7. Possession Timeline</h2>
+          <p>Shriram Shankari's current launch follows a phased handover schedule, with early units targeted for mid-2027 and full project completion targeted for December 2028, per the RERA-registered timeline. A phased schedule like this typically means some towers are handed over ahead of others, so if your timeline is a priority, ask specifically which phase your tower, Tower 8 or Tower 27, falls into, rather than assuming the earliest date applies to every unit in the launch.</p>
+
+          <h2>8. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. The current launch of Shriram Shankari is registered under TNRERA number <strong>TN/01/BUILDING/0418/2021</strong>. We recommend verifying this number independently on the official TNRERA portal (rera.tn.gov.in) before finalising a booking, a step worth taking regardless of how established the developer is. Importantly, this is a different registration from Phase 1 of the same township, which carries its own separate number, TN/01/Building/0035/2020, issued several years earlier. Quoting the wrong number for your specific tower would misstate which phase's legal disclosures and completion timeline actually apply to your money; see our <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/" class="money-link">Phase 1 vs Phase 2 comparison</a> for the full breakdown. This project-level registration is also separate from any individual agent's own RERA registration, don't conflate the two when checking documentation.</p>
+
+          <h2>9. Who This Project Actually Suits</h2>
+          <p>Shriram Shankari's current launch is a strong fit for a buyer who wants a genuine high-rise, amenity-rich lifestyle product from an established, listed developer, at a price point below what similar inventory costs closer to Tambaram, and who is comfortable with a phased possession timeline running into 2027-2028. The integrated commercial zone is a real convenience differentiator for anyone who values not having to leave the community for everyday errands. It's a weaker fit for a buyer who needs a dedicated 1 BHK layout confirmed in writing before booking, since published artwork for that exact unit isn't yet available, or for someone who needs possession within the next year.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Shriram Shankari has real fundamentals in its favour: a listed, established developer, a genuine high-rise format with 75% open space, a well-rounded amenity list, an unusually useful integrated commercial zone, and a starting price that undercuts more established parts of the GST Road corridor. Where we'd urge caution is the floor plan situation for 1 BHK buyers specifically, insist on seeing your exact unit's plan before booking, and the fact that this township's phased history means it's easy to accidentally research the wrong RERA number or price list online if you're not clear on which phase you're looking at. As always, verify the RERA registration (TN/01/BUILDING/0418/2021) independently on the TNRERA portal, confirm current construction progress directly with the developer, and check title and encumbrance documents for your specific unit before booking.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">What is Shriram Shankari and who is the developer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Shriram Shankari is a premium high-rise apartment township by Shriram Properties Limited, spread across 36 acres with 75% open and green space, in Guduvanchery on Chennai's GST Road corridor.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is Shriram Shankari price for each configuration?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">1 BHK homes in Tower 8 (approx. 656-676 sq.ft) start from Rs.36.3 Lakhs onwards, and 2 BHK homes in Tower 27 (approx. 1,080-1,100 sq.ft) start from Rs.62 Lakhs onwards, both plus registration and other charges.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Is Shriram Shankari the same as Shriram Codename The View?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes. Codename: The View (also referenced as Lakeside Residences) is the marketing name for the current active launch of Shriram Shankari, offering 1 BHK and 2 BHK homes in Tower 8 and Tower 27.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What is the RERA number for Shriram Shankari?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The current launch is registered under TNRERA number TN/01/BUILDING/0418/2021. We recommend verifying this independently on the TNRERA portal (rera.tn.gov.in) before booking. An earlier phase of the same township, Phase 1, carries a separate number, TN/01/Building/0035/2020.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">When is the possession date for Shriram Shankari?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project follows a phased handover schedule, with early units targeted for mid-2027 and full project completion targeted for December 2028, as per the RERA-registered timeline.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">What amenities does Shriram Shankari offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project features a 12,000 sq.ft multi-level clubhouse with 45+ facilities including an outdoor swimming pool, mini-theatre and gymnasium, sports courts, jogging tracks, kids' play parks, and an approximately 18,000 sq.ft on-site commercial zone with a convenience store, pharmacy, ATM vestibules and a creche.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/chennai/shriram-shankari/" class="related-card">
+              <img src="../../images/projects/shriram-shankari/shriram-shankari-about.webp" alt="Shriram Shankari" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Shriram Shankari</p>
+                <p class="related-card-detail">1 &amp; 2 BHK &middot; Guduvanchery, South Chennai</p>
+              </div>
+            </a>
+            <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/" class="related-card">
+              <img src="../../images/projects/shriram-shankari/shriram-shankari-master-plan.webp" alt="Shriram Shankari Phase 1 vs Phase 2 RERA and price compared" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Phase 1 vs Phase 2 Compared</p>
+                <p class="related-card-detail">9 Min Read &middot; RERA Comparison</p>
+              </div>
+            </a>
+            <a href="/projects/chennai/shriram-122-west/" class="related-card">
+              <img src="../../images/projects-thumbs/shriram-122-west-thumb.webp" alt="Shriram 122 West" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Also by Shriram Properties</p>
+                <p class="related-card-title">Shriram 122 West</p>
+                <p class="related-card-detail">2, 2.5 &amp; 3 BHK &middot; Mangadu, West Chennai</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating South Indian real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/shriram-shankari/shriram-shankari-about.webp" alt="Shriram Shankari" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Shriram Shankari</p>
+            <ul class="sidebar-specs">
+              <li>1 &amp; 2 BHK &middot; 36 Acre Township</li>
+              <li>75% Open Space &middot; 12,000 Sq.Ft Clubhouse</li>
+              <li>From ₹36.3 Lakhs onwards</li>
+              <li>Guduvanchery, South Chennai</li>
+            </ul>
+            <a href="/projects/chennai/shriram-shankari/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across Bangalore and Chennai.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Shriram Shankari</h4>
+          <a href="/projects/chennai/shriram-shankari/">Project Overview</a>
+          <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/">Phase 1 vs Phase 2 Compared</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Chennai, Tamil Nadu</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

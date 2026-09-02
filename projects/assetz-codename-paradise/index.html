@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Assetz Codename Paradise, Hennur Road: Balinese-themed 4 BHK villaments, 3,060 sq ft, &#8377;3.5 Cr onwards. 8.2 acres, 55% open space, 188 units. Pre-launch.">
+    <meta name="keywords" content="Assetz Codename Paradise, Assetz Mizu and Ki, Assetz Codename Paradise Hennur Road, Assetz Codename Paradise 4 BHK, Assetz Codename Paradise price, Assetz villaments Hennur Road, 4 BHK villaments North Bangalore, Assetz Property Group Bangalore">
+    <meta name="author" content="Luxura Habitat">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <meta property="og:title" content="Assetz Codename Paradise, Hennur Road | 4 BHK Villaments">
+    <meta property="og:description" content="188 exclusive Balinese-themed 4 BHK villaments off Hennur Road, North Bangalore. 8.2 acres, 55% open space, private gardens & 2-car garages. From &#8377;3.5 Cr.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/assetz-codename-paradise/">
+    <meta property="og:site_name" content="Assetz Codename Paradise">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Assetz Codename Paradise, Hennur Road | 4 BHK Villaments">
+    <meta name="twitter:description" content="188 exclusive Balinese-themed 4 BHK villaments off Hennur Road, North Bangalore. 8.2 acres, 55% open space. From &#8377;3.5 Cr.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp" fetchpriority="high">
+
+    <link rel="icon" href="/images/projects/assetz-codename-paradise/favicon.png" type="image/png">
+    <link rel="canonical" href="https://luxurahabitat.com/projects/assetz-codename-paradise/" />
+    <title>Assetz Codename Paradise, Hennur Road: 4 BHK | RERA</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
+
+        :root {
+            --primary-dark: #0f172a;
+            --secondary-dark: #111827;
+            --accent-green: #2c5838;
+            --accent-warm: #c9a227;
+            --bg-light: #f5f3f0;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #556070;
+            --border-light: #e6e2dc;
+            --success: #22c55e;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 0.8rem clamp(1rem, 4vw, 2rem);
+            box-shadow: 0 2px 18px rgba(25, 31, 28, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(14px);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            gap: 6px;
+            z-index: 101;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #30362f;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .logo { display: flex; flex-direction: column; align-items: flex-start; gap: 0.32rem; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 28px; width: auto; object-fit: contain; }
+        .partner-divider { display: none; }
+        .partner-caption { display: block; width: 105px; color: var(--text-light); font-size: 0.56rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.09em; text-transform: uppercase; text-align: justify; text-align-last: justify; text-justify: inter-character; white-space: nowrap; }
+        @media (max-width: 768px) {
+            .partner-divider, .partner-caption { display: none; }
+        }
+        .brand-text { color: var(--accent-green); font-size: clamp(0.9rem, 1.8vw, 1.2rem); font-weight: 900; line-height: 1; letter-spacing: 0; text-transform: uppercase; white-space: nowrap; }
+        .brand-text small { display: block; color: var(--accent-warm); font-size: 0.58em; font-weight: 800; margin-top: 0.18rem; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.6vw, 1.6rem);
+            list-style: none;
+            flex: 1;
+            flex-wrap: nowrap;
+        }
+        .nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { color: var(--accent-green); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        .nav-buttons { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(44, 88, 56, 0.08);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .phone-section:hover { background: rgba(44, 88, 56, 0.15); transform: translateY(-2px); }
+
+        .phone-label { font-size: clamp(0.6rem, 0.8vw, 0.75rem); color: var(--text-light); font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase; }
+        .phone-number { font-size: clamp(0.75rem, 1vw, 0.95rem); color: var(--primary-dark); font-weight: 800; white-space: nowrap; }
+
+        .whatsapp-btn {
+            background: #128c4f;
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: clamp(0.7rem, 0.9vw, 0.86rem);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+        /* Hero */
+        .hero {
+            background: #05080f url('/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp') center/cover no-repeat;
+            color: #e5e7eb;
+            min-height: calc(100vh - 68px);
+            padding: clamp(1rem, 2.2vw, 2rem);
+            position: relative;
+            overflow: hidden;
+            margin-top: 68px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(2,6,23,0.55), rgba(2,6,23,0.28) 55%, rgba(2,6,23,0.5));
+            z-index: 0;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: calc(100vh - 108px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 0.5fr);
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 4.5rem);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(1rem, 2vh, 1.45rem);
+            padding: clamp(1.5rem, 3.8vw, 3.1rem);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 7px solid var(--accent-warm);
+            border-radius: 10px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        .hero-logo { display: block; width: min(220px, 60%); margin: 0 0 0.35rem; text-decoration: none; }
+        .hero-logo img { display: block; width: 100%; height: auto; }
+
+        .hero-badge {
+            color: #ffffff;
+            background: var(--accent-green);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            width: fit-content;
+            padding: 0.45rem 1rem;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--accent-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.2rem, 2.3vw, 2rem);
+            font-weight: 900;
+            line-height: 1.18;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin: 0.2rem 0;
+            max-width: 900px;
+        }
+
+        .hero-intro { color: #0b1220; font-size: clamp(0.95rem, 1.25vw, 1.15rem); line-height: 1.7; max-width: 620px; }
+
+        .hero-info-boxes { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+
+        .info-box {
+            border: 1px solid rgba(44, 88, 56, 0.16);
+            border-radius: 10px;
+            padding: clamp(0.9rem, 2vh, 1.2rem);
+            background: rgba(245, 243, 240, 0.78);
+        }
+
+        .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .info-row { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 0.8rem; }
+
+        .info-box-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 900;
+        }
+
+        .info-box-title { color: #111827; font-size: clamp(1rem, 1.25vw, 1.25rem); font-weight: 900; }
+        .info-box-subtitle { color: #111827; font-size: clamp(0.82rem, 1vw, 0.98rem); font-weight: 600; }
+
+        .price-box { text-align: left; color: var(--accent-green); line-height: 1.25; }
+        .price-copy { display: block; font-weight: 700; font-size: 0.95rem; }
+        .price-line { display: block; color: #111827; font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 800; }
+        .new-price { color: #111827; font-weight: 900; }
+        .offer-note { color: #111827; display: block; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 0.2rem; }
+
+        .hero-media { display: none; }
+
+        .hero-form-section {
+            position: relative;
+            justify-self: end;
+            width: min(390px, 100%);
+            background: rgba(255, 255, 255, 0.96);
+            border-top: 5px solid var(--accent-green);
+            border-radius: 10px;
+            padding: clamp(1.35rem, 2.6vw, 2rem);
+            box-shadow: 0 28px 74px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+            color: #111827;
+        }
+
+        .hero-form-title { color: #0b1220; font-size: 1.34rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.5rem; }
+        .hero-form-subtitle { display: block; color: #5b6776; font-size: 0.88rem; line-height: 1.55; margin-bottom: 1.15rem; }
+
+        .hero-form { display: flex; flex-direction: column; gap: 0.9rem; }
+        .hero-form input[type="text"],
+        .hero-form input[type="tel"],
+        .hero-form input[type="email"],
+        .hero-form textarea {
+            width: 100%;
+            min-height: 48px;
+            padding: 0.86rem 0.95rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.92rem;
+            background: rgba(255,255,255,0.97);
+            color: var(--text-dark);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form input:focus, .hero-form textarea:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(44, 88, 56, 0.14); }
+        .hero-form textarea { min-height: 96px; resize: vertical; }
+        .hero-form input::placeholder, .hero-form textarea::placeholder { color: #6b7280; }
+
+        .hero-form-submit {
+            width: 100%;
+            min-height: 50px;
+            background: var(--accent-green);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 0.98rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form-submit:hover { background: #1c3a24; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(44, 88, 56, 0.25); }
+
+        section { padding: 5rem 2rem; }
+        .section-title { font-size: 2.4rem; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+
+        .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .about { background: var(--bg-light); padding: 4rem 2rem; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr); gap: 2rem; align-items: center; }
+        .about-content h3 { font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        .about-content p { font-size: 1rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+        .feature-item { display: flex; gap: 1rem; }
+        .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
+
+        .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 60%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+        .gallery { background: var(--bg-white); }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(44,88,56,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(44,88,56,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .amenities { background: var(--bg-light); }
+        .amenity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(44,88,56,0.12); }
+        .amenity-card:hover { border-color: rgba(44,88,56,0.35); }
+        .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
+        .amenity-list { list-style: none; display: grid; gap: 0.45rem; }
+        .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
+        .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); margin-top: 0.55rem; }
+
+        .plan { background: var(--bg-white); }
+        .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
+        .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
+        .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
+        .plan-image:hover img { transform: scale(1.02); }
+
+        .plan-notes { display: grid; gap: 0.9rem; }
+        .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+        .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
+        .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
+
+        .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
+        .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
+        .form-container { max-width: 620px; margin: 2rem auto 0; }
+        .form-container form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 800; font-size: 0.95rem; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.95rem; border: none; border-radius: 10px; font-family: inherit; font-size: 0.95rem;
+            background: rgba(255,255,255,0.95); color: #0b1220;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(44, 88, 56, 0.22); background: #fff; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .form-submit { width: 100%; padding: 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: #1c3a24; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(44,88,56,0.25); }
+
+        .form-message { text-align: center; margin-top: 0.8rem; padding: 0.9rem; border-radius: 10px; display: none; }
+        .form-message.success { display: block; background: rgba(34, 197, 94, 0.2); color: var(--success); border: 1px solid rgba(34,197,94,0.35); }
+
+        .faq-section { background: var(--bg-white); padding: 4.5rem 2rem; }
+        .faq-list { max-width: 980px; margin: 0 auto; display: grid; gap: 1rem; }
+        .faq-item { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.05); }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.2rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+        .faq-question:hover { background: rgba(44, 88, 56, 0.05); }
+        .faq-question.open { color: var(--accent-green); }
+        .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-question.open .faq-arrow { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.2rem; color: var(--text-light); font-size: 0.94rem; line-height: 1.75; }
+        .faq-answer.open { max-height: 500px; padding: 0 1.2rem 1.1rem; }
+        .footer { background: var(--primary-dark); color: var(--bg-white); padding: 3rem 2rem 2rem; }
+
+        /* Project Highlights table */
+        .highlights { background: var(--bg-light); }
+        .highlights-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(44,88,56,0.18);
+            margin-top: 1.8rem;
+        }
+        table.highlights-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+        .highlights-table th,
+        .highlights-table td {
+            padding: 0.95rem 1rem;
+            border-bottom: 1px solid rgba(44,88,56,0.12);
+            vertical-align: top;
+            font-size: 0.98rem;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .highlights-table thead th {
+            background: rgba(44, 88, 56, 0.08);
+            color: var(--accent-green);
+            font-weight: 900;
+            text-align: left;
+        }
+        .highlights-table tbody tr:hover td { background: rgba(44,88,56,0.04); }
+        .highlights-table tbody tr:last-child td { border-bottom: none; }
+        .highlights-table td strong { color: var(--primary-dark); }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: var(--accent-green); }
+        .footer-section p, .footer-section a { font-size: 0.9rem; color: #bbb; text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
+        .footer-section a:hover { color: var(--accent-green); }
+        .footer-contact strong { display: block; color: var(--bg-white); margin-bottom: 0.25rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: #999; }
+
+        /* Sidebar widget */
+        .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
+        .details-button {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 0.85rem;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 0.9rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transition: all 0.3s ease;
+            box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.6px;
+        }
+        .details-panel {
+            position: fixed;
+            right: -420px;
+            top: 0;
+            width: 400px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            z-index: 998;
+            transition: right 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+        .details-panel.active { right: 0; }
+
+        .panel-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 997; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .panel-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-light); }
+        .panel-header h3 { font-size: 1.5rem; color: var(--primary-dark); font-family: 'Playfair Display', serif; font-weight: 900; }
+        .close-button { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #6b7280; transition: color 0.3s ease; }
+        .close-button:hover { color: var(--accent-green); }
+
+        .panel-section { margin-bottom: 2rem; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
+        .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
+        .quick-contact a:hover { color: var(--accent-warm); }
+
+        .panel-cta { background: var(--accent-green); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
+        .panel-cta:hover { background: #1c3a24; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(44,88,56,0.25); }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { display: flex; opacity: 1; align-items: center; justify-content: center; }
+        .lightbox-content { position: relative; max-width: 94%; max-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.9); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; color: #fff; font-size: 2.2rem; cursor: pointer; background: none; border: none; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .lightbox-close:hover { transform: scale(1.15); color: #a7f3d0; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(44,88,56,0.85); color: #fff; border: 2px solid #fff; font-size: 2.5rem; padding: 1rem 1.5rem; cursor: pointer; border-radius: 10px; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .lightbox-nav:hover { background: var(--accent-green); transform: translateY(-50%) scale(1.08); }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(44,88,56,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 5;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .trust-item svg { color: var(--success); }
+
+@media (max-width: 1024px) {
+            .sidebar-widget { display: none; }
+            .phone-section { display: flex; }
+            .mobile-call-btn { display: none; }
+            .nav-cta { display: inline-flex; }
+
+            .mobile-call-icon { font-size: 1.05rem; }
+            .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+            .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
+            .hero-media { display: none; }
+        }
+
+        .mobile-bottom-cta { display: none; }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.5rem 1rem;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                z-index: 9999 !important;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+
+            .hamburger-menu { display: flex; order: 3; margin-right: 1rem; }
+            .hamburger-menu span { background-color: #30362f; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 99;
+                border-bottom: 1px solid rgba(15,23,42,0.08);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a {
+                padding: 1.2rem 1.5rem;
+                border-bottom: 1px solid rgba(15,23,42,0.08);
+                color: var(--primary-dark);
+                font-size: 1.05rem;
+                text-align: center;
+            }
+            .nav-links a:last-child { border-bottom: none; }
+
+            .nav-buttons { display: none !important; }
+
+.nav-cta { display: none; }
+
+            .nav-call { display: none; }
+            .nav-call-text { font-size: 0.82rem; font-weight: 900; }
+            .nav-call-icon { font-size: 1.1rem; }
+            .nav-call { background: rgba(44,88,56,0.10); border: 1px solid rgba(44,88,56,0.25); color: var(--accent-green); padding: 0.55rem 0.7rem; border-radius: 999px; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 900; transition: all 0.2s ease; }
+
+            .amenity-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .features-list { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.85rem; }
+            section { padding: 2.8rem 1rem; }
+
+            .lightbox-nav { width: 58px; height: 58px; font-size: 2.2rem; }
+            .lightbox-prev { left: 12px; }
+            .lightbox-next { right: 12px; }
+
+            .trust-bar { gap: 1rem; padding: 0.8rem 1rem; }
+            .trust-item { font-size: 0.85rem; }
+
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0;
+                background: #fff;
+                box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            }
+            .mobile-cta-btn {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 0.75rem;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--border-light);
+            }
+            .mobile-cta-btn:last-child { border-right: none; }
+            .mobile-cta-btn svg { margin-bottom: 3px; }
+            .btn-whatsapp { color: #128c4f; }
+            .btn-call { color: var(--accent-green); }
+            .btn-visit { background: var(--accent-green); color: #fff; border: none; }
+
+            iframe#launcher { bottom: 75px !important; }
+            iframe#webWidget { bottom: 75px !important; }
+        }
+
+        @media (max-width: 480px) {
+            .features-list { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(1.1rem, 5vw, 1.6rem); }
+            .hero-content { max-width: 100%; }
+            .hero-form-section { width: 100%; }
+            .info-box.primary-details { grid-template-columns: 1fr; }
+            .whatsapp-btn { padding: 0.42rem 0.65rem; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
+        }
+
+        .masterplan-grid { display: grid; gap: 2rem; margin-top: 1.5rem; }
+        .masterplan-image { border-radius: 12px; overflow: hidden; box-shadow: 0 14px 36px rgba(2,6,23,0.1); }
+        .masterplan-image img { width: 100%; display: block; cursor: pointer; }
+
+        .floor-group { margin-top: 3rem; }
+        .floor-group h3 { font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-warm); }
+        .floor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .floor-card { background: #fff; border: 1px solid rgba(44,88,56,0.15); border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .floor-card:hover { transform: translateY(-5px); border-color: var(--accent-green); }
+        .floor-card img { width: 100%; aspect-ratio: 1/1; object-fit: contain; margin-bottom: 1rem; cursor: pointer; }
+        .floor-card h3 { color: var(--text-dark); font-weight: 800; font-size: 1.1rem; }
+        .floor-card p { color: var(--text-light); font-size: 0.85rem; font-weight: 600; }
+
+        /* Project footer strip - links out to the Hennur Road hub and research */
+        .project-footer-strip { padding: 64px 24px; background: var(--bg-light); }
+        .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+        .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 10px; display: block; }
+        .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--primary-dark); margin-bottom: 8px; }
+        .pfs-intro { font-size: 0.97rem; color: var(--text-light); margin-bottom: 28px; max-width: 620px; }
+        .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+        .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+        .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+        .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-warm); margin-bottom: 6px; display: block; }
+        .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); line-height: 1.35; margin-bottom: 10px; flex: 1; }
+        .insight-card-link { font-size: 0.82rem; font-weight: 700; color: var(--accent-warm); }
+        .pfs-divider { border: none; border-top: 1px solid var(--border-light); margin: 52px 0; }
+        .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+        .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+        .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+        .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.82); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+        .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+        .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px; line-height: 1.3; }
+        .proj-compare-detail { font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px; flex: 1; }
+        .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: var(--accent-warm); }
+    </style>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "name": "Assetz Codename Paradise",
+          "description": "Exclusive Balinese-themed 4 BHK villaments off Hennur Road, North Bangalore, by Assetz Property Group.",
+          "url": "https://luxurahabitat.com/projects/assetz-codename-paradise/",
+          "image": "https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp"
+        },
+        {
+          "@type": "Residence",
+          "name": "Assetz Codename Paradise 4 BHK Villaments",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Off Hennur Road",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560064",
+            "addressCountry": "IN"
+          },
+          "numberOfRooms": 4,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 3060,
+            "unitCode": "SQF"
+          },
+          "accommodationCategory": "Villament"
+        },
+        {
+          "@type": "Organization",
+          "name": "Assetz Property Group",
+          "url": "https://luxurahabitat.com/projects/assetz-codename-paradise/",
+          "logo": "https://luxurahabitat.com/images/projects/assetz-codename-paradise/favicon.png"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the starting price of Assetz Codename Paradise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The indicative starting price of the 4 BHK villaments at Assetz Codename Paradise is &#8377;3.5 Crore onwards, for the 3,060 sq ft configuration. This is a launch-stage price, subject to availability and change by the developer. Use the enquiry form or WhatsApp link on this page for the current pricing sheet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What configuration is available at Assetz Codename Paradise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Codename Paradise offers a single premium configuration: 4 BHK villaments with approximately 3,060 sq ft of super built-up area, private gardens, large terraces, private backyards of up to 500 sq ft and dedicated 2-car private garages, across a B+G+4 structure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Assetz Codename Paradise the same project as Assetz Mizu & Ki?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Assetz Codename Paradise is the pre-launch codename for the project now also marketed by the developer as Assetz Mizu & Ki. Both names refer to the same Balinese-themed 4 BHK villament community off Hennur Road, North Bangalore."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Assetz Codename Paradise RERA registered?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Codename Paradise is currently at pre-launch stage and its project-level RERA registration number is awaited from the developer. We will update this page as soon as it is officially issued. Prospective buyers should independently verify RERA status on the Karnataka RERA website before booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What amenities does Assetz Codename Paradise offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Codename Paradise offers 20+ amenities across 55% open Balinese-themed green space, including a half-Olympic swimming pool, kids' pool, outdoor fitness area, half-basketball and cricket pitch, skating rink, jogging and bicycle track, clubhouse, lounge deck, meditation deck, amphitheatre, barbecue deck, kids' play area, indoor games room and a dedicated pet park."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When is possession for Assetz Codename Paradise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Codename Paradise is a pre-launch project and the developer has not yet announced a formal possession date. Contact us via the enquiry form for the latest construction timeline and launch updates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Assetz Codename Paradise located and how far is it from Manyata Tech Park?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Assetz Codename Paradise is located off Hennur Road, North Bangalore, close to Thanisandra Main Road, with connectivity to Manyata Tech Park, Karle Town Centre, Kirloskar Business Park, Outer Ring Road, Bagalur Road and Kempegowda International Airport."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I enquire or register interest for Assetz Codename Paradise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can send an enquiry, request the current price list, or register your interest using the contact form, the call button, or the WhatsApp button available throughout this page. Providing your phone number lets our team follow up with accurate availability and launch-offer details."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Assetz Codename Paradise Authorized Partner",
+          "image": "https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Off Hennur Road",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560064",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 13.080000,
+            "longitude": 77.660250
+          },
+          "telephone": "+91-8438344093",
+          "url": "https://luxurahabitat.com/projects/assetz-codename-paradise/"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://luxurahabitat.com/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp",
+          "description": "Assetz Codename Paradise Balinese-themed 4 BHK villament elevation, Hennur Road",
+          "name": "Assetz Codename Paradise Elevation"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="panel-overlay" id="panelOverlay" onclick="toggleDetailsPanel()"></div>
+
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Get Project Details</h3>
+            <button class="close-button" type="button" onclick="toggleDetailsPanel()">&times;</button>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+            <input type="hidden" name="access_key" value="34b1143d-68a7-4986-938f-e53f058dbaa8">
+            <input type="hidden" name="subject" value="New Inquiry - Assetz Codename Paradise">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Name</label>
+            <input type="text" name="name" required placeholder="Full Name" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Email</label>
+            <input type="email" name="email" required placeholder="Email Address" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Phone</label>
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+
+            <label style="display:block; font-weight:bold; margin-bottom:-0.5rem;">Message</label>
+            <textarea name="message" placeholder="Your message" aria-label="Your message"></textarea>
+
+            <button type="submit" class="panel-cta">Submit Inquiry</button>
+        </form>
+
+        <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
+            <h3>Direct Contact</h3>
+            <div class="quick-contact">
+                <a href="tel:+918438344093">Call: +91 8438 344 093</a>
+                <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20get%20details%20on%20Assetz%20Codename%20Paradise">WhatsApp Chat</a>
+<a href="mailto:projectinfoindia@gmail.com">Email Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-widget" id="sidebarWidget">
+        <button class="details-button" type="button" onclick="toggleDetailsPanel()">Request Brochure</button>
+    </div>
+
+    <nav>
+        <a href="#" class="logo" aria-label="Luxura Habitat - back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+<img src="/images/logos/company_logo.png" alt="Luxura Habitat">
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="partner-caption">Real Estate Advisory</span>
+        </a>
+
+        <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#units">Floor Plan</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#form">Enquire</a></li>
+        </ul>
+
+        <div class="nav-buttons" id="navButtons">
+            <a href="tel:+918438344093" class="phone-section">
+                <div class="phone-number">Call: 8438344093</div>
+            </a>
+
+            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20get%20details%20on%20Assetz%20Codename%20Paradise" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details on whatsapp</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <a href="#" class="hero-logo" aria-label="Assetz Codename Paradise home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="/images/projects/assetz-codename-paradise/favicon.png" alt="Assetz Codename Paradise logo" onerror="this.style.display='none'">
+                </a>
+
+                <h1>Assetz Codename Paradise, Hennur Road: Luxury 4 BHK Balinese-Themed Villaments</h1>
+                <p class="hero-intro">
+                    Assetz Codename Paradise (also marketed as Assetz Mizu &amp; Ki) brings 188 exclusive Balinese-themed 4 BHK villaments to 8.2 acres off Hennur Road, North Bangalore. With 55% open green landscapes, private gardens and backyards up to 500 sq ft, and 2-car private garages, it's built for buyers who want villa-scale privacy with community amenities. Register your interest for launch pricing and offers.
+                </p>
+
+                <div class="hero-info-boxes">
+                    <div class="info-box primary-details">
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">188 Villaments</div>
+                                <div class="info-box-subtitle">8.2 Acres, B+G+4</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true">&check;</div>
+                            <div>
+                                <div class="info-box-title">55% Open Space</div>
+                                <div class="info-box-subtitle">Balinese-Themed Landscapes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box price-box">
+                        <span class="price-copy">Starting from</span>
+<span class="price-line"><span class="new-price">&#8377;3.5 Cr* Onwards</span></span>
+                        <span class="offer-note">4 BHK, 3,060 Sq Ft &middot; Launch offer for first 30 buyers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-form-section reveal" style="transition-delay:120ms;">
+                <h3 class="hero-form-title">Get Codename Paradise Details</h3>
+                <span class="hero-form-subtitle">Share your details and receive the price list + launch offers on WhatsApp.</span>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="hero-form">
+                    <input type="hidden" name="access_key" value="34b1143d-68a7-4986-938f-e53f058dbaa8">
+                    <input type="hidden" name="subject" value="New Inquiry - Assetz Codename Paradise">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Name</label>
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Email</label>
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Phone</label>
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+
+                    <label style="font-weight:bold; font-size:0.9rem; margin-bottom:-0.4rem; display:block;">Message</label>
+                    <textarea name="message" placeholder="Your message" aria-label="Your message"></textarea>
+
+                    <button type="submit" class="hero-form-submit">Get Price List &amp; Offers</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Pre-Launch &middot; Register Interest</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Off Hennur Road, North Bangalore</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 4 BHK Villaments Only</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> By Assetz Property Group</div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-subtitle">A low-density, Balinese-themed villament community for buyers who want villa-scale privacy off Hennur Road, North Bangalore.</p>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Welcome to Assetz Codename Paradise</h3>
+                    <p>Welcome to <strong>Assetz Codename Paradise</strong>, now also marketed by the developer as <strong>Assetz Mizu &amp; Ki</strong>, a premium residential development by <strong>Assetz Property Group</strong> off the Hennur Road corridor in North Bangalore. Spanning <strong>8.2 acres</strong>, the project dedicates an impressive <strong>55% of its total area</strong> to open green spaces and Balinese-themed aesthetics, with sweeping gardens, tranquil water features and shaded pavilions.</p>
+                    <p>Breaking from traditional apartment living, the project introduces the concept of <strong>&lsquo;Villaments&rsquo;</strong>: residences that combine the privacy, scale and exclusivity of an independent villa with the security and community amenities of a premium apartment complex. Each spacious <strong>4 BHK villament</strong> spans approximately <strong>3,060 sq ft</strong> of super built-up area, with private backyards up to 500 sq ft, large private terraces and dedicated 2-car private garages. With only <strong>188 exclusive villaments</strong> across a B+G+4 structure, this is a genuinely low-density address.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">A</div>
+                            <div>
+                                <h3>Assetz Brand</h3>
+                                <p>Established Bangalore developer</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">55%</div>
+                            <div>
+                                <h3>Open Space</h3>
+                                <p>Balinese-themed landscaping</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-about.webp" alt="Assetz Codename Paradise Balinese-themed villament overview, Hennur Road" class="about-visual" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="highlights" style="padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Project Highlights</h2>
+            <p class="section-subtitle">Key facts about Assetz Codename Paradise at a glance.</p>
+            <div class="highlights-table-wrap reveal">
+                <table class="highlights-table">
+                    <thead>
+                        <tr>
+                            <th>Highlight</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Land Area</strong></td><td>8.2 Acres</td></tr>
+                        <tr><td><strong>Open Space</strong></td><td>55% Balinese-themed landscaping</td></tr>
+                        <tr><td><strong>Total Units</strong></td><td>188 exclusive villaments</td></tr>
+                        <tr><td><strong>Structure</strong></td><td>Basement + Ground + 4 Floors (B+G+4)</td></tr>
+                        <tr><td><strong>Configuration</strong></td><td>4 BHK Villaments, ~3,060 sq ft super built-up</td></tr>
+                        <tr><td><strong>Private Backyard</strong></td><td>Up to 500 sq ft</td></tr>
+                        <tr><td><strong>Parking</strong></td><td>2-car private garage per villament</td></tr>
+                        <tr><td><strong>Starting Price</strong></td><td>&#8377;3.5 Cr* onwards</td></tr>
+                        <tr><td><strong>RERA Status</strong></td><td>Registration awaited (pre-launch)</td></tr>
+                        <tr><td><strong>Developer</strong></td><td>Assetz Property Group</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <h2 class="section-title">Amenities</h2>
+            <p class="section-subtitle">20+ amenities woven through 55% open, Balinese-themed landscaped grounds.</p>
+
+            <div class="amenity-grid">
+                <div class="amenity-card reveal">
+                    <h3>Sports &amp; Fitness</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">A full activity circuit set within the landscaped grounds.</p>
+                    <ul class="amenity-list">
+                        <li>Half-Olympic Swimming Pool</li>
+                        <li>Kids&rsquo; Pool</li>
+                        <li>Outdoor Fitness Area</li>
+                        <li>Half-Basketball &amp; Cricket Pitch</li>
+                        <li>Skating Rink</li>
+                        <li>Bicycle &amp; Jogging Track</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <h3>Leisure &amp; Relaxation</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">Balinese-inspired spaces for unwinding, socialising and quiet reflection.</p>
+                    <ul class="amenity-list">
+                        <li>Premium Clubhouse</li>
+                        <li>Lounge Deck</li>
+                        <li>Sitting Alcoves</li>
+                        <li>Meditation Deck</li>
+                        <li>Amphitheatre</li>
+                        <li>Barbecue Deck</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <h3>Community &amp; Family</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; line-height: 1.6;">Dedicated spaces for every member of the family, pets included.</p>
+                    <ul class="amenity-list">
+                        <li>Kids&rsquo; Play Area</li>
+                        <li>Indoor Games Room</li>
+                        <li>Pet Park</li>
+                        <li>Lush Balinese Gardens</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A first look at Assetz Codename Paradise.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-1.webp" alt="Assetz Codename Paradise luxury 4 BHK villament exterior, Hennur Road" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-2.webp" alt="Assetz Codename Paradise Balinese-themed community landscaping" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-3.webp" alt="Assetz Codename Paradise clubhouse and amenities" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-4.webp" alt="Assetz Codename Paradise luxury villament interior living space" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-amenities-pool.webp" alt="Assetz Codename Paradise half-Olympic swimming pool amenity" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-amenities-amphitheatre.webp" alt="Assetz Codename Paradise amphitheatre amenity, Hennur Road" loading="lazy" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-amenities-pet-park.webp" alt="Assetz Codename Paradise pet park amenity" loading="lazy" onclick="openLightbox(this)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="masterplan" style="background: var(--bg-white); padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Master Plan</h2>
+            <p class="section-subtitle">188 villaments set within 8.2 acres of Balinese-themed landscaping. Click for the full layout and pricing.</p>
+            <div class="masterplan-grid">
+                <div class="masterplan-image" style="max-width: 900px; margin: 0 auto;">
+                    <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-master-plan.webp" alt="Assetz Codename Paradise master plan, Hennur Road" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="units" style="background: var(--bg-light); padding-top: 5rem;">
+        <div class="container">
+            <h2 class="section-title">Floor Plan</h2>
+            <p class="section-subtitle">A single premium 4 BHK villament layout with private backyard and 2-car garage. Click the plan for pricing &amp; details.</p>
+            <div class="floor-group reveal">
+                <div class="floor-grid" style="max-width: 420px; margin: 0 auto;">
+                    <div class="floor-card">
+                        <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-4bhk-3060sqft.webp" alt="Assetz Codename Paradise 4 BHK 3,060 sq ft villament floor plan layout" loading="lazy" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                        <h3>4 BHK Villament: 3,060 Sq Ft</h3>
+                        <p>Private backyard up to 500 sq ft &middot; 2-car garage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="padding: 4rem 1rem; background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Price</h2>
+            <p class="section-subtitle">A single verified 4 BHK villament configuration at Assetz Codename Paradise.</p>
+            <div class="highlights-table-wrap reveal">
+                <table class="highlights-table">
+                    <thead>
+                        <tr>
+                            <th>Configuration</th>
+                            <th>Super Built-up Area</th>
+                            <th>Features</th>
+                            <th>Starting Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>4 BHK Villament</strong></td>
+                            <td>3,060 sq. ft.</td>
+                            <td>Private backyard up to 500 sq ft, 2-car garage</td>
+                            <td>&#8377;3.5 Cr* Onwards</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-top:1rem;">*Indicative launch price, subject to availability and change by the developer. An exclusive launch offer is available for the first 30 buyers, contact us for the current price list.</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="form-submit" style="width: auto; padding: 1rem 3rem;" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Request Complete Price List</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="location" style="background: var(--bg-light); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Location</h2>
+            <p class="section-subtitle">Off Hennur Road, North Bangalore, connected to the Manyata Tech Park employment corridor and Kempegowda International Airport.</p>
+
+            <div class="plan-grid reveal">
+                <div class="plan-image">
+                    <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-location-map.webp" alt="Assetz Codename Paradise location map, off Hennur Road North Bangalore" loading="lazy" onclick="openLightbox(this)">
+                </div>
+                <div class="plan-notes">
+                    <div class="plan-note">
+                        <h2 class="section-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 0.5rem; margin-top: 0;">Connectivity</h2>
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">Perfect for buyers searching for villaments or 4 BHK homes near Hennur Road, Thanisandra Main Road or Manyata Tech Park.</p>
+                        <strong>Nearby Landmarks</strong>
+                        <span>Manyata Tech Park<br>Karle Town Centre<br>Kirloskar Business Park<br>Bagalur Aerospace SEZ / KIADB Park<br>Upcoming Nagawara Metro Station<br>Thanisandra Railway Station<br>Outer Ring Road (ORR)<br>Kempegowda International Airport</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Corridor Advantage</strong>
+                        <span>The alternative Hennur-Bagalur road offers a toll-free, signal-free route to Kempegowda International Airport, while Hennur Road itself connects directly to Nagawara, Thanisandra and the Outer Ring Road IT corridor.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Schools &amp; Hospitals</strong>
+                        <span>Delhi Public School (DPS) North, Legacy School, Vidyashilp Academy, Aster CMI Hospital and Motherhood Hospital are all within the surrounding Hennur Road neighbourhood.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment & Hennur Road -->
+    <section class="investment" id="investment" style="padding: 4rem 1rem; background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Why Invest in Assetz Codename Paradise?</h2>
+            <p class="section-subtitle">A low-density villament address from an established developer, on a corridor with genuine airport and IT-park connectivity.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(44,88,56,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(44,88,56,0.1);">
+                    <h3 style="color: var(--primary-dark); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">The Villament Advantage</h3>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">With only 188 units across 8.2 acres and 55% open space, Assetz Codename Paradise trades tower density for villa-scale privacy: a private garden, backyard and 2-car garage with every 4 BHK home. For buyers comparing high-rise apartments against standalone villas, the villament format is a deliberate middle path, offering independent-home privacy with the security and shared amenities of a managed community.</p>
+                    <p style="color: var(--text-light); line-height: 1.8;">Assetz Property Group, established in 2006, is one of Bangalore's more prominent multinational developers with over 10 million sq ft under development, a recognized name that typically means more predictable construction quality and after-sales support.</p>
+                </div>
+                <div style="background: rgba(44,88,56,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(44,88,56,0.1);">
+                    <h3 style="color: var(--primary-dark); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Why Hennur Road</h3>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">Hennur Road is a well-connected North Bangalore corridor with direct access to Manyata Tech Park, Karle Town Centre and Kirloskar Business Park, and an alternative toll-free, signal-free route to Kempegowda International Airport via Hennur-Bagalur Road.</p>
+                    <p style="color: var(--text-light); line-height: 1.8;">Property values along the corridor have tracked the expansion of the IT belt and airport-linked infrastructure, making early entry into a credible developer's pre-launch project a reasonable position for both end-users and long-term investors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Register Interest &amp; Get Launch Offers</h2>
+            <p class="section-subtitle">Schedule a call or request the latest Assetz Codename Paradise price list and floor plan.</p>
+
+            <div class="form-container">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="34b1143d-68a7-4986-938f-e53f058dbaa8">
+                    <input type="hidden" name="subject" value="New Inquiry - Assetz Codename Paradise (Main Form)">
+                    <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="your.email@example.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Tell us what you are interested in and your timeline."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+
+                <div class="rera-notice" style="margin-top:1.8rem;background: rgba(201, 162, 39, 0.12); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-warm); border-radius: 14px; color:#fefce8;">
+                    <strong>&#9888; Disclaimer:</strong>
+                    Images and information are for representation purpose. This is a pre-launch project; pricing, RERA status and availability are subject to change. Please enquire for the latest offer and unit availability details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Builder Section -->
+    <section class="builder" id="builder" style="padding: 4rem 1rem; background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">About the Builder: Assetz Property Group</h2>
+            <p class="section-subtitle">An established Bangalore developer, active across residential and commercial real estate since 2006.</p>
+
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; background: #fff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <img src="/images/projects/assetz-codename-paradise/favicon.png" alt="Assetz Property Group logo" style="height: 60px; width: auto; margin-bottom: 1.5rem;">
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">Established in <strong>2006</strong>, <strong>Assetz Property Group</strong> is one of the prominent multinational developers active in Bangalore, with over <strong>10 million square feet</strong> under development. Known for contemporary architecture, sustainable building practices and timely delivery, Assetz has built a portfolio spanning luxury residential complexes, premium villaments and large-scale tech parks.</p>
+                <p style="color: var(--text-light); line-height: 1.8;">Assetz Codename Paradise carries forward that legacy with an eco-conscious, Balinese-themed villament community that blends villa-scale luxury with nature, a genuine differentiator on the Hennur Road corridor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQs</h2>
+            <p class="section-subtitle">Helpful answers for buyers comparing Assetz Codename Paradise, location, pricing, and enquiry details.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is the starting price of Assetz Codename Paradise?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The indicative starting price of the 4 BHK villaments at Assetz Codename Paradise is &#8377;3.5 Crore onwards, for the 3,060 sq ft configuration. This is a launch-stage price, subject to availability and change by the developer. Use the enquiry form or WhatsApp link on this page for the current pricing sheet.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">What configuration is available at Assetz Codename Paradise?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Codename Paradise offers a single premium configuration: 4 BHK villaments with approximately 3,060 sq ft of super built-up area, private gardens, large terraces, private backyards of up to 500 sq ft and dedicated 2-car private garages, across a B+G+4 structure.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">Is Assetz Codename Paradise the same project as Assetz Mizu &amp; Ki?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Assetz Codename Paradise is the pre-launch codename for the project now also marketed by the developer as Assetz Mizu &amp; Ki. Both names refer to the same Balinese-themed 4 BHK villament community off Hennur Road, North Bangalore.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">Is Assetz Codename Paradise RERA registered?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Codename Paradise is currently at pre-launch stage and its project-level RERA registration number is awaited from the developer. We will update this page as soon as it is officially issued. Prospective buyers should independently verify RERA status on the Karnataka RERA website before booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">What amenities does Assetz Codename Paradise offer?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Codename Paradise offers 20+ amenities across 55% open Balinese-themed green space, including a half-Olympic swimming pool, kids&rsquo; pool, outdoor fitness area, half-basketball and cricket pitch, skating rink, jogging and bicycle track, clubhouse, lounge deck, meditation deck, amphitheatre, barbecue deck, kids&rsquo; play area, indoor games room and a dedicated pet park.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">When is possession for Assetz Codename Paradise?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Codename Paradise is a pre-launch project and the developer has not yet announced a formal possession date. Contact us via the enquiry form for the latest construction timeline and launch updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">Where is Assetz Codename Paradise located and how far is it from Manyata Tech Park?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Assetz Codename Paradise is located off Hennur Road, North Bangalore, close to Thanisandra Main Road, with connectivity to Manyata Tech Park, Karle Town Centre, Kirloskar Business Park, Outer Ring Road, Bagalur Road and Kempegowda International Airport.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">How can I enquire or register interest for Assetz Codename Paradise?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">You can send an enquiry, request the current price list, or register your interest using the contact form, the call button, or the WhatsApp button available throughout this page. Providing your phone number lets our team follow up with accurate availability and launch-offer details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+
+        <span class="pfs-label">Hennur Road Corridor</span>
+        <h2 class="pfs-title">Other Verified Projects to Consider</h2>
+        <p class="pfs-intro">Comparing Assetz Codename Paradise against other verified Hennur &amp; Thanisandra corridor launches at a similar price point. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
+        <div class="proj-compare-grid">
+      <a href="/projects/sattva-la-vita/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita">
+          <span class="proj-compare-badge">Hennur Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Sattva La Vita</p>
+          <p class="proj-compare-detail">2, 3 &amp; 4 BHK &middot; Hennur Road</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+      <a href="/projects/concorde-sienna/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/concorde-sienna-thumb.webp" alt="Concorde Sienna">
+          <span class="proj-compare-badge">Hennur Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Concorde Sienna</p>
+          <p class="proj-compare-detail">2 &amp; 3 BHK &middot; Hennur Road</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+      <a href="/projects/purva-codename-skye/" class="proj-compare-card">
+        <div class="proj-compare-img-wrap">
+          <img src="/images/projects-thumbs/purva-codename-skye-thumb.webp" alt="Purva Codename Skye">
+          <span class="proj-compare-badge">Hennur Road</span>
+        </div>
+        <div class="proj-compare-body">
+          <p class="proj-compare-name">Purva Codename Skye</p>
+          <p class="proj-compare-detail">Pre-launch &middot; Thanisandra / Hennur</p>
+          <span class="proj-compare-link">View Project &rarr;</span>
+        </div>
+      </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Hennur Road Corridor</span>
+        <h2 class="pfs-title">Research &amp; Guides</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on the <a href="/areas/hennur/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Hennur &amp; Thanisandra corridor</a>. <a href="/projects/" style="color:var(--accent-warm);font-weight:600;text-decoration:underline;">Browse all verified projects &rarr;</a></p>
+        <div class="insight-grid">
+      <a href="/blog/assetz-codename-paradise-hennur-road-price-rera/" class="insight-card">
+        <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-hero.webp" alt="Assetz Codename Paradise Price, Configuration & RERA Review" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Project Review &middot; 8 Min</span>
+          <h4 class="insight-card-title">Assetz Codename Paradise: Price, Villament Configuration &amp; RERA Status</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/villament-vs-apartment-vs-villa-bangalore/" class="insight-card">
+        <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-about.webp" alt="Villament vs Apartment vs Villa in Bangalore" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Buyer Guide &middot; 7 Min</span>
+          <h4 class="insight-card-title">Villament vs Apartment vs Villa: What Should You Buy in Bangalore?</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="insight-card">
+        <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-1.webp" alt="Hennur Thanisandra Real Estate Market Trends 2026" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Market Analysis &middot; 7 Min</span>
+          <h4 class="insight-card-title">Hennur-Thanisandra Real Estate Market Trends 2026</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+      <a href="/blog/hennur-connectivity-orr-hebbal-metro-nagavara/" class="insight-card">
+        <img src="/images/projects/assetz-codename-paradise/assetz-codename-paradise-gallery-2.webp" alt="Hennur Connectivity: ORR, Hebbal & Nagavara Metro" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Infrastructure &middot; 6 Min</span>
+          <h4 class="insight-card-title">Hennur Connectivity: ORR, Hebbal &amp; Nagavara Metro</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>About Assetz Codename Paradise</h5>
+                <p>Balinese-themed 4 BHK villaments with private gardens, 55% open space, and a connected Hennur Road address.</p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <p><a href="#units">Floor Plan</a></p>
+                <p><a href="#pricing">Price</a></p>
+                <p><a href="#masterplan">Master Plan</a></p>
+                <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#gallery">Gallery</a></p>
+                <p><a href="#location">Location</a></p>
+                <p><a href="#form">Contact</a></p>
+                <p><a href="/blog/">Blogs</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <div class="footer-contact">
+                    <strong>Phone:</strong>
+                    <a href="tel:+918438344093">+91 8438 344 093</a>
+                </div>
+                <div class="footer-contact">
+                    <strong>Email:</strong>
+                    <a href="mailto:projectinfoindia@gmail.com">projectinfoindia@gmail.com</a>
+                </div>
+                <div class="footer-contact">
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20get%20details%20on%20Assetz%20Codename%20Paradise" target="_blank" rel="noopener">Chat with us</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <p><strong>RERA Project ID:</strong> Awaited (pre-launch)</p>
+                <p><strong>Developer:</strong> Assetz Property Group</p>
+                <p><strong>Location:</strong> Off Hennur Road, Bengaluru, Karnataka 560064</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div style="font-size: 0.85rem; line-height: 1.8; color: #666; margin-bottom: 1rem; text-align: center;">
+                <p style="margin-bottom: 0.5rem;">Project RERA Registration No: Awaited. This project is at pre-launch stage.</p>
+                <p style="margin-bottom: 0.5rem;"><a href="/privacy.html" style="color: #666; text-decoration: none;">Privacy Policy</a> | <a href="/terms.html" style="color: #666; text-decoration: none;">Terms &amp; Conditions</a> | <a href="/sitemap.xml" style="color: #666; text-decoration: none;">Sitemap</a></p>
+                <p style="margin-bottom: 0;">Disclaimer: This is an authorized channel partner marketing site intended strictly for informational and lead-generation objectives.</p>
+            </div>
+
+            <div style="margin-top:1.5rem; font-size:0.85rem; color: #555; background-color: #fef8f8; border: 1px solid #fca5a5; border-radius: 8px; padding: 1rem; max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <strong>Disclaimer &amp; Channel Partner Disclosure:</strong> This website is maintained by an <strong>Authorized Channel Partner / RERA Authorised Advertiser</strong> (Narayanan Rajesh | Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045) for marketing and lead generation purposes. It is <strong>NOT</strong> the official website of Assetz Property Group or the developer. The content provided is for informational purposes only and does not constitute an official offer or guarantee. Please verify all details directly with the developer before making a purchase decision.
+            </div>
+            <div style="margin-top:1rem; font-size:0.75rem; color: #999; text-align: center;">
+                &copy; Copyright 2026 Luxura Habitat. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()">&times;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded view">
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="previousImage()">&lt;</button>
+            <button class="lightbox-nav lightbox-next" type="button" onclick="nextImage()">&gt;</button>
+            <div class="lightbox-counter"><span id="imageCounter">1</span> / <span id="imageTotal">1</span></div>
+        </div>
+    </div>
+
+    <script src="/js/project-page.js"></script>
+    <script>
+        function toggleDetailsPanel() {
+            const panel = document.getElementById('detailsPanel');
+            const overlay = document.getElementById('panelOverlay');
+            panel.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.getElementById('hamburgerMenu');
+                const navLinks = document.getElementById('navLinks');
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox images collection
+        let currentImageIndex = 0;
+        let allLightboxImages = [];
+
+        function collectAllImages() {
+            const imgs = document.querySelectorAll('.gallery-item img, #location .plan-image img');
+            allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
+        }
+
+        function openLightbox(itemElement) {
+            const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
+            if (!allLightboxImages.length) collectAllImages();
+
+            const idx = allLightboxImages.findIndex(x => x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateLightboxImage() {
+            if (!allLightboxImages.length) return;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allLightboxImages.length; updateLightboxImage(); }
+        function previousImage() { currentImageIndex = (currentImageIndex - 1 + allLightboxImages.length) % allLightboxImages.length; updateLightboxImage(); }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            collectAllImages();
+        });
+
+        // toggleFAQ() is provided by the shared /js/project-page.js, no
+        // page-local override needed.
+
+        // Forms are submitted directly to Web3Forms (no custom submit handlers required).
+
+        // Nav smooth-scroll, scroll-reveal and active-nav-link highlighting are
+        // handled by the shared /js/project-page.js, see docs/adding-a-project.md.
+        initProjectPageSmoothScroll();
+        initProjectPageScrollReveal('section .reveal');
+        initProjectPageActiveNav();
+
+        // Zendesk Settings
+        window.zESettings = {
+            webWidget: {
+                launcher: {
+                    chatLabel: {
+                        '*': 'Chat now'
+                    }
+                }
+            }
+        };
+
+        // Zendesk
+        (function(){
+            var script = document.createElement('script');
+            script.id = 'ze-snippet';
+            script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+            script.async = true;
+            document.body.appendChild(script);
+        })();
+    </script>
+
+    <div class="mobile-bottom-cta" aria-hidden="true">
+        <a href="tel:+918438344093" class="mobile-cta-btn btn-call" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call
+        </a>
+        <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20get%20details%20on%20Assetz%20Codename%20Paradise" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+        </a>
+        <a href="#form" class="mobile-cta-btn btn-visit" aria-label="Enquire now">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Enquire
+        </a>
+    </div>
+    <script>
+        (function () {
+            var bar = document.querySelector('.mobile-bottom-cta');
+            if (!bar || !window.visualViewport) return;
+            function reposition() {
+                var vv = window.visualViewport;
+                var gap = window.innerHeight - (vv.height + vv.offsetTop);
+                bar.style.bottom = Math.max(Math.round(gap), 0) + 'px';
+            }
+            window.visualViewport.addEventListener('resize', reposition);
+            window.visualViewport.addEventListener('scroll', reposition);
+            reposition();
+        })();
+    </script>
+
+    <!-- seo.js auto-generates this page's BreadcrumbList JSON-LD from the
+         URL + h1, no manual breadcrumb code needed. -->
+    <script src="/js/seo.js"></script>
+</body>
+</html>

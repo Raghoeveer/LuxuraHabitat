@@ -42,6 +42,16 @@
   if (path.startsWith('/areas/')) crumbs.push({ '@type': 'ListItem', position: 2, name: 'Areas', item: `${origin}/areas/` });
   else if (path.startsWith('/blog/')) crumbs.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: `${origin}/blog/` });
   else if (path.startsWith('/projects/')) crumbs.push({ '@type': 'ListItem', position: 2, name: 'Projects', item: `${origin}/projects/` });
+  // City-prefixed pages (/projects/<city>/<slug>/ or /areas/<city>/<locality>/) are one
+  // segment deeper than the existing flat Bangalore pattern (/projects/<slug>/). Insert
+  // the city itself as its own crumb only in that 3-segment case, so already-shipped
+  // 2-segment pages are unaffected.
+  const segments = path.split('/').filter(Boolean);
+  if (segments.length === 3 && (path.startsWith('/projects/') || path.startsWith('/areas/'))) {
+    const citySlug = segments[1];
+    const cityName = citySlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    crumbs.push({ '@type': 'ListItem', position: crumbs.length + 1, name: cityName, item: `${origin}/${segments[0]}/${citySlug}/` });
+  }
   crumbs.push({ '@type': 'ListItem', position: crumbs.length + 1, name: h1, item: canonical });
   addJsonLd({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs });
   if (path.startsWith('/blog/') && path !== '/blog/') {

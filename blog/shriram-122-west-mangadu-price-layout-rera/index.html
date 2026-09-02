@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Shriram 122 West: Price, Layout &amp; RERA | Luxura Habitat</title>
+  <meta name="description" content="Independent review of Shriram 122 West, Mangadu: verified 2, 2.5 &amp; 3 BHK pricing, RERA status, the real floor plan situation, possession timeline and amenities.">
+  <meta name="keywords" content="Shriram 122 West price, Shriram 122 West RERA, Shriram 122 West Mangadu review, Shriram 122 West floor plan, Shriram 122 West possession date">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/shriram-122-west-mangadu-price-layout-rera/">
+  <meta property="og:title" content="Shriram 122 West: Price, Layout &amp; RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Shriram 122 West, Mangadu: pricing by configuration, the real floor plan situation, possession and RERA verification.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/shriram-122-west/shriram-122-west-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shriram 122 West: Price, Layout &amp; RERA Review">
+  <meta name="twitter:description" content="Independent review of Shriram 122 West, Mangadu: pricing, floor plans, possession and RERA verification.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/shriram-122-west/shriram-122-west-hero.webp">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="IN-TN">
+  <meta name="geo.placename" content="Mangadu, Chennai">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/shriram-122-west-mangadu-price-layout-rera/"
+        },
+        "headline": "Shriram 122 West: Price, Layout & RERA Review",
+        "description": "Independent review of Shriram 122 West, Mangadu: verified 2, 2.5 & 3 BHK pricing, RERA status, the real floor plan situation, possession timeline and amenities.",
+        "image": "https://luxurahabitat.com/images/projects/shriram-122-west/shriram-122-west-hero.webp",
+        "datePublished": "2026-09-02",
+        "dateModified": "2026-09-02",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/shriram-122-west-mangadu-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Shriram 122 West: Price, Layout & RERA Review", "item": "https://luxurahabitat.com/blog/shriram-122-west-mangadu-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Shriram 122 West and who is the developer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Shriram 122 West is a premium high-rise apartment township by Shriram Properties Limited, spread across 4.98 acres with 75% open and green space, in Mangadu on Chennai's West Porur corridor." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Shriram 122 West price for each configuration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "2 BHK homes (approx. 818 sq.ft super built-up) start from Rs.57 Lakhs onwards, 2.5 BHK homes (approx. 1,157 sq.ft super built-up) start from Rs.80 Lakhs onwards, and 3 BHK homes (approx. 1,280-1,296 sq.ft super built-up) start from Rs.93 Lakhs onwards, all plus other charges." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are floor plans available for all three configurations?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Verified floor plan artwork is available for three 2 BHK layouts (Type 1, Type 5 and Type 5A) and four 3 BHK layouts (Type 1, Type 3, Type 3A and Type 4). Floor plans for the 2.5 BHK configuration are available on request directly from the sales team, not as published artwork at this time." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RERA number for Shriram 122 West?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project is registered under TNRERA number TN/29/BUILDING/0459/2023. We recommend verifying this independently on the TNRERA portal (rera.tn.gov.in) before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the possession date for Shriram 122 West?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project follows a phased handover schedule, with early units targeted for 2027 and full project completion targeted for June 2028, as per the RERA-registered timeline." }
+          },
+          {
+            "@type": "Question",
+            "name": "What amenities does Shriram 122 West offer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The project features a 20,000 sq.ft clubhouse with a rooftop swimming pool, mini-theatre, aroma garden and gymnasium, sports courts, jogging tracks, kids' play areas, an in-community temple, and an approximately 18,000 sq.ft on-site commercial zone with a convenience store, pharmacy, ATM vestibules and a creche." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Chennai &amp; Bangalore RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Shriram 122 West Price &amp; RERA</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Shriram 122 West: Price, Layout &amp; RERA Review</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published September 2, 2026</span><span>&bull;</span><span>11 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/shriram-122-west/shriram-122-west-hero.webp" alt="Shriram 122 West Mangadu price layout RERA review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p><strong>Shriram 122 West price</strong> is one of the most-searched terms around this project, and for good reason: it is a new high-rise launch by an established developer in a genuinely improving pocket of West Chennai. This review covers the developer, the location, the real unit configurations and pricing, the honest floor plan situation, possession timeline, amenities and RERA verification, so you can decide whether Shriram 122 West is worth pursuing before you contact the sales team.</p>
+
+          <h2>1. The Developer: Shriram Properties Limited</h2>
+          <p>Shriram Properties Limited is one of South India's leading residential developers, with a long-standing, customer-centric track record built primarily across the mid-market and affordable housing segments in Bangalore, Chennai and other major cities. Shriram 122 West is a Chennai launch by this same developer, positioned in Mangadu on the city's West Porur corridor, and it is registered under Tamil Nadu's RERA regime (TNRERA), not Karnataka's, a distinction worth keeping in mind if you are comparing this project against the developer's Bangalore projects.</p>
+
+          <h2>2. Location: Mangadu, West Chennai</h2>
+          <p>The project sits on Shriram City Road, Sri Pandian Nagar, Mangadu, close to the Porur and DLF IT Park corridor in West Chennai. Mangadu has historically been a quieter, more affordable pocket relative to Porur itself, but its proximity to an established IT and employment cluster, combined with planned infrastructure upgrades, has been steadily pulling it into the same demand catchment. We cover this locality dynamic in far more depth, including connectivity, employment hubs and growth drivers, in our companion piece: <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/" class="money-link">Mangadu &amp; Porur, Chennai: Real Estate Investment Guide</a>.</p>
+          <p>At a glance, the proximity profile looks like this:</p>
+          <ul>
+            <li><strong>Connectivity:</strong> Porur &amp; DLF IT Park (10-15 min), Outer Ring Road (10-15 min), Poonamallee High Road (10-15 min), upcoming Metro connectivity (10-15 min), Muthukumaran Medical College (10-15 min)</li>
+            <li><strong>Employment hubs:</strong> MEPZ Tambaram (20 min), Oragadam Industrial Area (25 min)</li>
+            <li><strong>Schools:</strong> SRM Public School, Velammal Vidyashram and SRM University, all within 10-15 minutes</li>
+            <li><strong>Hospitals:</strong> SRM General Hospital (10 min), Hindu Mission Hospital (20 min)</li>
+            <li><strong>Landmarks:</strong> Vandalur Zoo and Shriram Gateway (5 min)</li>
+          </ul>
+
+          <h2>3. The Project: Scale, Structure and Phasing</h2>
+          <p>Shriram 122 West is built across 4.98 acres, with 75% of the land kept as open and green space. The residential towers rise to 2 Basement + Ground + 19 Floors, a genuine high-rise format for this part of Chennai. One secondary market source we cross-checked reports a typical floor efficiency of around 63% and roughly 6 flats per floor with 2 lifts and a staircase per tower; we're flagging this explicitly as a secondary-source figure rather than a developer-published specification, since it did not appear directly in the project's own marketing material we reviewed. Beyond the residential component, the project integrates an approximately 18,000 sq.ft on-site commercial zone, a genuinely useful feature for a high-rise community this size, with a convenience store, ATM vestibules, a pharmacy, food outlets, branded fitness setups and an on-site creche.</p>
+
+          <h2>4. Unit Configurations and the Real Floor Plan Situation</h2>
+          <p>Shriram 122 West is marketed across three configuration tiers: 2 BHK, 2.5 BHK and 3 BHK. We want to be direct about something we found while researching this project: verified floor plan artwork exists for seven layouts in total, three 2 BHK units, individually titled on the artwork itself as "2 Bedroom Type 1 Unit Plan," "2 Bedroom Type 5 Unit Plan" and "2 Bedroom Type 5A Unit Plan," and four 3 BHK units, titled "3 Bedroom Type 1," "Type 3," "Type 3A" and "Type 4," each printed with a carpet area of roughly 908 sq.ft. Some marketing material circulating for this project relabels the three 2 BHK images a second time as "3 BHK Variant 1" through "3 BHK Variant 4," which is inaccurate and worth watching for, since it's a duplicate of the genuine 2 BHK artwork rather than a real 3 BHK plan; the genuine 3 BHK artwork listed above is separate and unambiguous, with three bedrooms, three toilets, a corridor and two balconies.</p>
+          <p>The one configuration without published floor plan artwork is 2.5 BHK. It clearly exists, and is priced and sized in the table below, but as of this review, no plan drawing for it was included in the material we reviewed. If you are seriously considering a 2.5 BHK unit specifically, ask the sales team directly for that unit's plan before booking rather than assuming it is a 2 BHK or 3 BHK layout scaled to fit.</p>
+
+          <h2>5. Pricing and Area by Configuration</h2>
+          <div style="overflow-x:auto;">
+          <table style="min-width:640px;">
+            <thead><tr><th>Configuration</th><th>Carpet Area</th><th>Built-up Area</th><th>Super Built-up Area</th><th>Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>2 BHK</td><td>~515 sq.ft</td><td>~736 sq.ft</td><td>~818 sq.ft</td><td>₹57 Lakhs onwards</td></tr>
+              <tr><td>2.5 BHK</td><td>~729 sq.ft</td><td>~1,041 sq.ft</td><td>~1,157 sq.ft</td><td>₹80 Lakhs onwards</td></tr>
+              <tr><td>3 BHK</td><td>~908 sq.ft (verified)</td><td>~1,152 sq.ft</td><td>~1,280 to 1,296 sq.ft</td><td>₹93 Lakhs+ onwards</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*All prices are + Other Charges and are indicative starting figures. 2 BHK = 2 Bedrooms + 1.5 Bathrooms; 3 BHK = 3 Bedrooms + 2 Bathrooms; 2.5 BHK is a compact 3-bedroom/study-room layout, standard industry usage for that terminology. Please <a href="/projects/chennai/shriram-122-west/#form" class="money-link">enquire for the current, verified price list</a> and availability.</p>
+          <p>A sub-₹60 Lakh entry point for a 2 BHK is a competitive price point for a high-rise, amenity-rich project this close to the Porur-DLF IT Park corridor, and it compares favourably against similarly-positioned inventory closer to Porur itself, where land costs run higher. As with any peripheral-but-improving corridor, the trade-off is that some of the connectivity upside (the upcoming Metro, in particular) is not live yet, so today's pricing reflects a location that is still partway through its infrastructure build-out rather than one that has already fully arrived.</p>
+          <p>On financing, a 2 BHK at ₹57 Lakhs and a 3 BHK at ₹93 Lakhs both sit within standard home-loan eligibility for a dual-income household in the mid-income bracket, assuming a conventional 80-85% loan-to-value ratio over a 20-year tenure. Budget separately for stamp duty, registration, GST on the under-construction component and monthly maintenance, none of which were disclosed in the source material we reviewed and should be confirmed directly with the sales team before booking.</p>
+
+          <h2>6. Amenities</h2>
+          <p>The amenity list spans a 20,000 sq.ft grand clubhouse with a rooftop swimming pool, mini-theatre, aroma and sensory garden, cafeteria and indoor gymnasium; sports facilities including a tennis court, badminton court, cricket practice pitch and basketball hoops; community and outdoor features like jogging tracks, kids' play areas, a community lounge, landscaped gardens, an in-community temple and visitors' parking; core infrastructure covering 24/7 security, 100% DG power backup, rainwater harvesting, a wastewater treatment plant, smart metering, EV charging points and high-speed internet readiness; and, worth calling out on its own, the roughly 18,000 sq.ft integrated commercial zone with a convenience store, ATM vestibules, a pharmacy, food outlets, branded fitness setups and an on-site creche.</p>
+
+          <h2>7. Possession Timeline</h2>
+          <p>Shriram 122 West follows a phased handover schedule, with early units targeted for 2027 and full project completion targeted for June 2028, per the RERA-registered timeline. A phased schedule like this typically means some towers or blocks are handed over ahead of others, so if your timeline is a priority, ask specifically which block or tower your unit falls into and where that block sits in the phasing, rather than assuming the earliest date applies to every unit in the project.</p>
+
+          <h2>8. Legal and RERA Verification</h2>
+          <p>At Luxura Habitat, no project recommendation is made before legal verification. Shriram 122 West is registered under TNRERA number <strong>TN/29/BUILDING/0459/2023</strong>. We recommend verifying this number independently on the official TNRERA portal (rera.tn.gov.in) before finalising a booking, a step worth taking regardless of how established the developer is. This project-level registration is separate from any individual agent's own RERA registration; don't conflate the two when checking documentation.</p>
+
+          <h2>9. Who This Project Actually Suits</h2>
+          <p>Shriram 122 West is a strong fit for a buyer who wants a genuine high-rise, amenity-rich lifestyle product from an established, listed developer, at a price point below what similar inventory costs closer to Porur itself, and who is comfortable with a phased possession timeline running into 2027-2028. The integrated commercial zone is a real convenience differentiator for anyone who values not having to leave the community for everyday errands. It's a weaker fit for a buyer who needs a specific 2.5 BHK layout confirmed in writing before booking, since published artwork for that tier isn't yet available, or for someone who needs possession within the next year.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>Shriram 122 West has real fundamentals in its favour: a listed, established developer, a genuine high-rise format with 75% open space, a well-rounded amenity list, an unusually useful integrated commercial zone, and pricing that undercuts more established parts of the Porur corridor. Where we'd urge caution is the floor plan situation for 2.5 BHK buyers specifically, insist on seeing your exact unit's plan before booking, and the fact that some of the corridor's biggest upside drivers (the Metro, the Parandur Airport) are still in progress rather than delivered. As always, verify the RERA registration (TN/29/BUILDING/0459/2023) independently on the TNRERA portal, confirm current construction progress directly with the developer, and check title and encumbrance documents for your specific unit before booking.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">What is Shriram 122 West and who is the developer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Shriram 122 West is a premium high-rise apartment township by Shriram Properties Limited, spread across 4.98 acres with 75% open and green space, in Mangadu on Chennai's West Porur corridor.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is Shriram 122 West price for each configuration?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">2 BHK homes (approx. 818 sq.ft super built-up) start from Rs.57 Lakhs onwards, 2.5 BHK homes (approx. 1,157 sq.ft super built-up) start from Rs.80 Lakhs onwards, and 3 BHK homes (approx. 1,280-1,296 sq.ft super built-up) start from Rs.93 Lakhs onwards, all plus other charges.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Are floor plans available for all three configurations?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Verified floor plan artwork is available for three 2 BHK layouts (Type 1, Type 5 and Type 5A) and four 3 BHK layouts (Type 1, Type 3, Type 3A and Type 4). Floor plans for the 2.5 BHK configuration are available on request directly from the sales team, not as published artwork at this time.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What is the RERA number for Shriram 122 West?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project is registered under TNRERA number TN/29/BUILDING/0459/2023. We recommend verifying this independently on the TNRERA portal (rera.tn.gov.in) before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">When is the possession date for Shriram 122 West?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project follows a phased handover schedule, with early units targeted for 2027 and full project completion targeted for June 2028, as per the RERA-registered timeline.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">What amenities does Shriram 122 West offer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The project features a 20,000 sq.ft clubhouse with a rooftop swimming pool, mini-theatre, aroma garden and gymnasium, sports courts, jogging tracks, kids' play areas, an in-community temple, and an approximately 18,000 sq.ft on-site commercial zone with a convenience store, pharmacy, ATM vestibules and a creche.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/chennai/shriram-122-west/" class="related-card">
+              <img src="../../images/projects/shriram-122-west/shriram-122-west-about.webp" alt="Shriram 122 West" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Shriram 122 West</p>
+                <p class="related-card-detail">2, 2.5 &amp; 3 BHK &middot; Mangadu, West Chennai</p>
+              </div>
+            </a>
+            <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/" class="related-card">
+              <img src="../../images/projects/shriram-122-west/shriram-122-west-location-map.webp" alt="Mangadu and Porur Chennai investment guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Mangadu &amp; Porur Investment Guide</p>
+                <p class="related-card-detail">10 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+            <a href="/projects/shriram-107-south-east/" class="related-card">
+              <img src="../../images/projects-thumbs/shriram-107-south-east-thumb.webp" alt="Shriram 107 SouthEast" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Also by Shriram Properties</p>
+                <p class="related-card-title">Shriram 107 SouthEast</p>
+                <p class="related-card-detail">2 &amp; 3 BHK &middot; Attibele, Bangalore</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating South Indian real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/shriram-122-west/shriram-122-west-about.webp" alt="Shriram 122 West" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Shriram 122 West</p>
+            <ul class="sidebar-specs">
+              <li>2, 2.5 &amp; 3 BHK &middot; 4.98 Acres</li>
+              <li>75% Open Space &middot; 20,000 Sq.Ft Clubhouse</li>
+              <li>From ₹57 Lakhs onwards</li>
+              <li>Mangadu, West Chennai</li>
+            </ul>
+            <a href="/projects/chennai/shriram-122-west/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across Bangalore and Chennai.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Shriram 122 West</h4>
+          <a href="/projects/chennai/shriram-122-west/">Project Overview</a>
+          <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/">Mangadu &amp; Porur Investment Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Chennai, Tamil Nadu</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

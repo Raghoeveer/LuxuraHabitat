@@ -559,7 +559,7 @@
     <div class="top-bar">
       <div class="top-bar-inner">
         <div class="top-bar-left">
-          <span class="top-bar-text">Bangalore RERA-Registered Property Advisory</span>
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
         </div>
         <div class="top-bar-right">
           <a href="tel:+918438344093" class="top-bar-link">
@@ -631,11 +631,30 @@
           <button type="button" class="projects-search__clear" id="project-search-clear" aria-label="Clear search" hidden>&times;</button>
         </div>
 
+        <!--
+          City filter: stays hidden (via the `hidden` attribute) as long as every
+          .project-card on this page shares one data-city value, which is the case
+          today (all 37 cards are data-city="bangalore"). The script at the bottom of
+          this file detects more than 1 distinct data-city value among the cards at
+          load time and un-hides this bar automatically, so no manual toggle is needed
+          once a non-Bangalore project card ships. New cards outside Bangalore should
+          carry data-city="chennai"/"coimbatore"/etc. AND data-area="na" (not "other",
+          which is reserved for odd-corridor Bangalore projects that don't fit the five
+          named hubs below; reusing it for a different city would mix the two under one
+          filter tab).
+        -->
+        <div class="area-filter" id="city-filter" role="group" aria-label="Filter projects by city" hidden>
+          <button type="button" class="area-filter__btn is-active" data-city="all">All Cities <span class="area-filter__count"></span></button>
+          <button type="button" class="area-filter__btn" data-city="bangalore">Bangalore</button>
+          <button type="button" class="area-filter__btn" data-city="chennai">Chennai</button>
+          <button type="button" class="area-filter__btn" data-city="coimbatore">Coimbatore</button>
+        </div>
+
         <div class="area-filter" id="area-filter" role="group" aria-label="Filter projects by area">
           <button type="button" class="area-filter__btn is-active" data-area="all">All Areas <span class="area-filter__count"></span></button>
           <button type="button" class="area-filter__btn" data-area="yelahanka">Yelahanka</button>
           <button type="button" class="area-filter__btn" data-area="devanahalli">Devanahalli</button>
-          <button type="button" class="area-filter__btn" data-area="hennur">Hennur – Thanisandra</button>
+          <button type="button" class="area-filter__btn" data-area="hennur">Hennur - Thanisandra</button>
           <button type="button" class="area-filter__btn" data-area="whitefield">Whitefield</button>
           <button type="button" class="area-filter__btn" data-area="kanakapura">Kanakapura Road</button>
           <button type="button" class="area-filter__btn" data-area="other">Other Locations</button>
@@ -647,7 +666,7 @@
 
           <!-- PROJECT 1: Assetz Zen & Sato -->
           <!-- PROJECT: Divyasree The Quiet Side -->
-          <article class="project-card animate-on-scroll" id="project-divyasree-quiet-side" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-divyasree-quiet-side" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/divyasree-quiet-side/'"
             role="link"
             tabindex="0"
@@ -701,7 +720,7 @@
           </article>
 
 
-          <article class="project-card animate-on-scroll" id="project-zen-sato" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-zen-sato" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/assetz-zen-sato/'"
             role="link"
             tabindex="0"
@@ -756,7 +775,7 @@
 
 
           <!-- PROJECT 2: Concorde Mayfair -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-concorde-mayfair" data-area="yelahanka"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-concorde-mayfair" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/concorde-mayfair/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/concorde-mayfair/'">
@@ -793,7 +812,7 @@
           </article>
 
           <!-- PROJECT 3: Orchid Salisbury -->
-          <article class="project-card animate-on-scroll" id="project-orchid-salisbury" data-area="hennur"
+          <article class="project-card animate-on-scroll" id="project-orchid-salisbury" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/orchid-salisbury/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/orchid-salisbury/'">
@@ -829,8 +848,45 @@
             </div>
           </article>
 
+          <!-- PROJECT: Assetz Codename Paradise -->
+          <article class="project-card animate-on-scroll" id="project-assetz-codename-paradise" data-city="bangalore" data-area="hennur"
+            onclick="window.location.href='/projects/assetz-codename-paradise/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-codename-paradise/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/assetz-codename-paradise-thumb.webp" alt="Assetz Codename Paradise Balinese-themed 4 BHK villaments Hennur Road Bangalore" loading="lazy">
+              <span class="project-card__status project-card__status--new">Pre-Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Assetz Property Group</p>
+                <h2 class="project-card__title">Assetz Codename Paradise</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Off Hennur Road, Bengaluru
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">4 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;3.5 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">188 Villaments</span>
+                <span class="project-tag">8.2 Acres</span>
+                <span class="project-tag">55% Open Space</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/assetz-codename-paradise/" class="btn btn--primary" id="assetz-codename-paradise-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20get%20details%20on%20Assetz%20Codename%20Paradise" class="btn btn--whatsapp" id="assetz-codename-paradise-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
           <!-- PROJECT: Concorde Neo -->
-          <article class="project-card animate-on-scroll" id="project-concorde-neo" data-area="hennur"
+          <article class="project-card animate-on-scroll" id="project-concorde-neo" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/concorde-neo/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/concorde-neo/'">
@@ -867,7 +923,7 @@
           </article>
 
           <!-- PROJECT: Purva Codename Skye -->
-          <article class="project-card animate-on-scroll" id="project-purva-codename-skye" data-area="hennur"
+          <article class="project-card animate-on-scroll" id="project-purva-codename-skye" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/purva-codename-skye/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/purva-codename-skye/'">
@@ -904,7 +960,7 @@
           </article>
 
           <!-- PROJECT: Concorde Sienna -->
-          <article class="project-card animate-on-scroll" id="project-concorde-sienna" data-area="hennur"
+          <article class="project-card animate-on-scroll" id="project-concorde-sienna" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/concorde-sienna/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/concorde-sienna/'">
@@ -941,7 +997,7 @@
           </article>
 
           <!-- PROJECT: Goyal Riviera Glade -->
-          <article class="project-card animate-on-scroll" id="project-goyal-riviera-glade" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-goyal-riviera-glade" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/goyal-riviera-glade/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/goyal-riviera-glade/'">
@@ -978,7 +1034,7 @@
           </article>
 
           <!-- PROJECT: Surya Valencia -->
-          <article class="project-card animate-on-scroll" id="project-surya-valencia" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-surya-valencia" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/surya-valencia/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/surya-valencia/'">
@@ -1015,7 +1071,7 @@
           </article>
 
           <!-- PROJECT 4: Brigade Eternia -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-brigade-eternia" data-area="yelahanka"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-brigade-eternia" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/brigade-eternia/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/brigade-eternia/'">
@@ -1052,7 +1108,7 @@
           </article>
 
           <!-- PROJECT 5: Sattva Aeropolis -->
-          <article class="project-card animate-on-scroll" id="project-sattva-aeropolis" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-sattva-aeropolis" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/sattva-aeropolis/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-aeropolis/'">
@@ -1089,7 +1145,7 @@
           </article>
 
           <!-- PROJECT 6: Sattva Sanio -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-sattva-sanio" data-area="whitefield"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-sattva-sanio" data-city="bangalore" data-area="whitefield"
             onclick="window.location.href='/projects/sattva-sanio/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-sanio/'">
@@ -1126,7 +1182,7 @@
           </article>
 
           <!-- PROJECT: Sattva Songbird -->
-          <article class="project-card animate-on-scroll" id="project-sattva-songbird" data-area="whitefield"
+          <article class="project-card animate-on-scroll" id="project-sattva-songbird" data-city="bangalore" data-area="whitefield"
             onclick="window.location.href='/projects/sattva-songbird/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-songbird/'">
@@ -1163,7 +1219,7 @@
           </article>
 
           <!-- PROJECT 7: Sattva City -->
-          <article class="project-card animate-on-scroll" id="project-sattva-city" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-sattva-city" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/sattva-city/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-city/'">
@@ -1199,7 +1255,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-park-cubix" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-park-cubix" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/park-cubix/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/park-cubix/'">
@@ -1236,7 +1292,7 @@
           </article>
 
           <!-- PROJECT: Sattva Vasanta Cove -->
-          <article class="project-card animate-on-scroll" id="project-vasanta-cove" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-vasanta-cove" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/vasanta-cove/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/vasanta-cove/'">
@@ -1273,7 +1329,7 @@
           </article>
 
           <!-- PROJECT: Sattva Vasanta Skye -->
-          <article class="project-card animate-on-scroll" id="project-vasanta-skye" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-vasanta-skye" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/vasanta-skye/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/vasanta-skye/'">
@@ -1310,7 +1366,7 @@
           </article>
 
           <!-- PROJECT 8: TVS Emerald Altura -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-tvs-altura" data-area="devanahalli"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-tvs-altura" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/tvs-emerald-altura/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/tvs-emerald-altura/'">
@@ -1347,7 +1403,7 @@
           </article>
 
           <!-- PROJECT 9: Sattva Lumina -->
-          <article class="project-card animate-on-scroll" id="project-sattva-lumina" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-sattva-lumina" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/sattva-lumina/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-lumina/'">
@@ -1384,7 +1440,7 @@
           </article>
 
           <!-- PROJECT 10: Sattva Kaveri Siri -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-kaveri-siri" data-area="hennur"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-kaveri-siri" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/sattva-kaveri-siri/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-kaveri-siri/'">
@@ -1421,7 +1477,7 @@
           </article>
 
           <!-- PROJECT: Sattva Thippapura -->
-          <article class="project-card animate-on-scroll animate-delay-1" id="project-thippapura" data-area="other"
+          <article class="project-card animate-on-scroll animate-delay-1" id="project-thippapura" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/sattva-thippapura/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-thippapura/'">
@@ -1458,7 +1514,7 @@
           </article>
 
           <!-- PROJECT 11: Assetz Palmscape -->
-          <article class="project-card animate-on-scroll" id="project-assetz-palmscape" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-assetz-palmscape" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/assetz-palmscape/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-palmscape/'">
@@ -1495,7 +1551,7 @@
           </article>
 
           <!-- PROJECT 12: Sattva La Vita -->
-          <article class="project-card animate-on-scroll animate-delay-2" id="project-sattva-la-vita" data-area="hennur"
+          <article class="project-card animate-on-scroll animate-delay-2" id="project-sattva-la-vita" data-city="bangalore" data-area="hennur"
             onclick="window.location.href='/projects/sattva-la-vita/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-la-vita/'">
@@ -1532,7 +1588,7 @@
           </article>
 
           <!-- PROJECT 13: Sattva Forest Ridge -->
-          <article class="project-card animate-on-scroll" id="project-sattva-forest-ridge" data-area="kanakapura"
+          <article class="project-card animate-on-scroll" id="project-sattva-forest-ridge" data-city="bangalore" data-area="kanakapura"
             onclick="window.location.href='/projects/sattva-forest-ridge/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-forest-ridge/'">
@@ -1568,7 +1624,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-wonder-woods" data-area="kanakapura"
+          <article class="project-card animate-on-scroll" id="project-wonder-woods" data-city="bangalore" data-area="kanakapura"
             onclick="window.location.href='/projects/wonder-woods/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/wonder-woods/'">
@@ -1604,7 +1660,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-purva-hallmark" data-area="kanakapura"
+          <article class="project-card animate-on-scroll" id="project-purva-hallmark" data-city="bangalore" data-area="kanakapura"
             onclick="window.location.href='/projects/purva-hallmark/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/purva-hallmark/'">
@@ -1640,7 +1696,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-brigade-jeevan-sandhya" data-area="kanakapura"
+          <article class="project-card animate-on-scroll" id="project-brigade-jeevan-sandhya" data-city="bangalore" data-area="kanakapura"
             onclick="window.location.href='/projects/brigade-jeevan-sandhya/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/brigade-jeevan-sandhya/'">
@@ -1676,7 +1732,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-assetz-meru-meadows" data-area="kanakapura"
+          <article class="project-card animate-on-scroll" id="project-assetz-meru-meadows" data-city="bangalore" data-area="kanakapura"
             onclick="window.location.href='/projects/assetz-meru-meadows/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/assetz-meru-meadows/'">
@@ -1713,7 +1769,7 @@
           </article>
 
           <!-- PROJECT 14: Century Kindle -->
-          <article class="project-card animate-on-scroll" id="project-century-kindle" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-century-kindle" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/century-kindle/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/century-kindle/'">
@@ -1749,7 +1805,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-vajram-vivera" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-vajram-vivera" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/vajram-vivera/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/vajram-vivera/'">
@@ -1785,7 +1841,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-century-astoria" data-area="devanahalli"
+          <article class="project-card animate-on-scroll" id="project-century-astoria" data-city="bangalore" data-area="devanahalli"
             onclick="window.location.href='/projects/century-astoria/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/century-astoria/'">
@@ -1821,7 +1877,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-vajram-chrysanthemum" data-area="yelahanka"
+          <article class="project-card animate-on-scroll" id="project-vajram-chrysanthemum" data-city="bangalore" data-area="yelahanka"
             onclick="window.location.href='/projects/vajram-chrysanthemum/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/vajram-chrysanthemum/'">
@@ -1857,7 +1913,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-kns-sampada" data-area="other"
+          <article class="project-card animate-on-scroll" id="project-kns-sampada" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/kns-sampada/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/kns-sampada/'">
@@ -1893,7 +1949,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-sattva-green-groves" data-area="other"
+          <article class="project-card animate-on-scroll" id="project-sattva-green-groves" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/sattva-green-groves/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/sattva-green-groves/'">
@@ -1929,7 +1985,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-kns-samooha" data-area="other"
+          <article class="project-card animate-on-scroll" id="project-kns-samooha" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/kns-samooha/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/kns-samooha/'">
@@ -1965,7 +2021,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-shriram-bannerghatta" data-area="other"
+          <article class="project-card animate-on-scroll" id="project-shriram-bannerghatta" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/shriram-bannerghatta/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/shriram-bannerghatta/'">
@@ -2001,7 +2057,7 @@
             </div>
           </article>
 
-          <article class="project-card animate-on-scroll" id="project-shriram-107-south-east" data-area="other"
+          <article class="project-card animate-on-scroll" id="project-shriram-107-south-east" data-city="bangalore" data-area="other"
             onclick="window.location.href='/projects/shriram-107-south-east/'"
             role="link" tabindex="0"
             onkeydown="if(event.key==='Enter')window.location.href='/projects/shriram-107-south-east/'">
@@ -2030,6 +2086,117 @@
               <div class="project-card__actions">
                 <a href="/projects/shriram-107-south-east/" class="btn btn--primary" id="shriram-107-south-east-explore-btn">View Details</a>
                 <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Shriram%20107%20SouthEast.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="shriram-107-south-east-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT: Shriram 122 West (Chennai) -->
+          <article class="project-card animate-on-scroll" id="project-shriram-122-west" data-city="chennai" data-area="na"
+            onclick="window.location.href='/projects/chennai/shriram-122-west/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/chennai/shriram-122-west/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/shriram-122-west-thumb.webp" alt="Shriram 122 West apartments Mangadu Chennai" loading="lazy">
+              <span class="project-card__status project-card__status--new">Under Construction</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Shriram Properties</p>
+                <h2 class="project-card__title">Shriram 122 West</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Mangadu, West Chennai
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">2, 2.5 &amp; 3 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;57 L+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">4.98 Acres</span>
+                <span class="project-tag">75% Open Space</span>
+                <span class="project-tag">RERA Approved</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/chennai/shriram-122-west/" class="btn btn--primary" id="shriram-122-west-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Shriram%20122%20West.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="shriram-122-west-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT: Shriram Shankari (Chennai) -->
+          <article class="project-card animate-on-scroll" id="project-shriram-shankari" data-city="chennai" data-area="na"
+            onclick="window.location.href='/projects/chennai/shriram-shankari/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/chennai/shriram-shankari/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/shriram-shankari-thumb.webp" alt="Shriram Shankari apartments Guduvanchery Chennai" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Shriram Properties</p>
+                <h2 class="project-card__title">Shriram Shankari</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Guduvanchery, South Chennai
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">1 &amp; 2 BHK</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;36.3 L+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">36 Acre Township</span>
+                <span class="project-tag">75% Open Space</span>
+                <span class="project-tag">RERA Approved</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/chennai/shriram-shankari/" class="btn btn--primary" id="shriram-shankari-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Shriram%20Shankari.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="shriram-shankari-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT: Radiance Edgewood (Chennai) -->
+          <article class="project-card animate-on-scroll" id="project-radiance-edgewood" data-city="chennai" data-area="na"
+            onclick="window.location.href='/projects/chennai/radiance-edgewood/'"
+            role="link" tabindex="0"
+            onkeydown="if(event.key==='Enter')window.location.href='/projects/chennai/radiance-edgewood/'">
+            <div class="project-card__image-wrap">
+              <img src="/images/projects-thumbs/radiance-edgewood-thumb.webp" alt="Radiance Edgewood row villas Navalur OMR Chennai" loading="lazy">
+              <span class="project-card__status project-card__status--new">New Launch</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <p class="project-card__developer">Radiance Realty</p>
+                <h2 class="project-card__title">Radiance Edgewood</h2>
+                <p class="project-card__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Navalur, OMR, Chennai
+                </p>
+              </div>
+              <div class="project-card__specs-row">
+                <div class="spec-pill"><span class="spec-pill__value">3 &amp; 4 BHK Villas</span><span class="spec-pill__label">Config</span></div>
+                <div class="spec-pill"><span class="spec-pill__value">&#8377;2.27 Cr+</span><span class="spec-pill__label">From</span></div>
+              </div>
+              <div class="project-card__highlights">
+                <span class="project-tag">83 Exclusive Villas</span>
+                <span class="project-tag">Near Siruseri IT Park</span>
+                <span class="project-tag">RERA Registered</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="/projects/chennai/radiance-edgewood/" class="btn btn--primary" id="radiance-edgewood-explore-btn">View Details</a>
+                <a href="https://wa.me/918438344093?text=Hello%2C%20I'm%20interested%20in%20Radiance%20Edgewood.%20Please%20share%20more%20details." class="btn btn--whatsapp" id="radiance-edgewood-whatsapp-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   Enquire
                 </a>
@@ -2067,7 +2234,7 @@
         <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
           <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
         </a>
-        <p>Bengaluru's trusted independent real estate consultancy, connecting discerning buyers with verified tier-one developer properties across premium micro-markets.</p>
+        <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
       </div>
 
       <div class="footer-col">
@@ -2119,7 +2286,7 @@
       <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p>
       <p class="footer-disclaimer">
         Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
-        All project information is sourced directly from our developer partners across Bengaluru.
+        All project information is sourced directly from our developer partners.
         Buyers are advised to independently verify all claims before making purchase decisions.
       </p>
     </div>
@@ -2129,32 +2296,53 @@
   <script src="/js/main.js"></script>
   <script>
     (function () {
+      var cityBar = document.getElementById('city-filter');
       var filterBar = document.getElementById('area-filter');
       var searchInput = document.getElementById('project-search');
       var searchClear = document.getElementById('project-search-clear');
-      if (!filterBar && !searchInput) return;
+      if (!cityBar && !filterBar && !searchInput) return;
 
       var cards = Array.prototype.slice.call(document.querySelectorAll('#projects-grid .project-card'));
+      var cityButtons = cityBar ? Array.prototype.slice.call(cityBar.querySelectorAll('.area-filter__btn')) : [];
       var buttons = filterBar ? Array.prototype.slice.call(filterBar.querySelectorAll('.area-filter__btn')) : [];
       var emptyMsg = document.getElementById('area-filter-empty');
       var emptyMsgText = document.getElementById('area-filter-empty-text');
       var allCountEl = filterBar ? filterBar.querySelector('[data-area="all"] .area-filter__count') : null;
+      var cityAllCountEl = cityBar ? cityBar.querySelector('[data-city="all"] .area-filter__count') : null;
 
       if (allCountEl) allCountEl.textContent = '(' + cards.length + ')';
 
-      // Map each area filter's data-area value to its button label (e.g. "hennur" ->
-      // "Hennur – Thanisandra") so searching an area name works even when a card's own
-      // address text doesn't literally contain it (e.g. "Old Madras Road" is filed under
-      // "whitefield" but never says the word "Whitefield").
+      // City filter only makes sense once cards actually span more than one city.
+      // Today every card is data-city="bangalore", so this stays hidden until a
+      // non-Bangalore project card ships (see the HTML comment above #city-filter).
+      var distinctCities = {};
+      cards.forEach(function (card) {
+        var city = card.getAttribute('data-city');
+        if (city) distinctCities[city] = true;
+      });
+      var showCityFilter = cityBar && Object.keys(distinctCities).length > 1;
+      if (cityBar) cityBar.hidden = !showCityFilter;
+      if (showCityFilter && cityAllCountEl) cityAllCountEl.textContent = '(' + cards.length + ')';
+
+      // Map each filter's data-area/data-city value to its button label (e.g. "hennur"
+      // -> "Hennur - Thanisandra") so searching an area/city name works even when a
+      // card's own address text doesn't literally contain it (e.g. "Old Madras Road"
+      // is filed under "whitefield" but never says the word "Whitefield").
       var areaLabels = {};
       buttons.forEach(function (btn) {
         var area = btn.getAttribute('data-area');
         var label = btn.textContent.replace(/\(\d+\)\s*$/, '').trim();
         if (area) areaLabels[area] = label;
       });
+      var cityLabels = {};
+      cityButtons.forEach(function (btn) {
+        var city = btn.getAttribute('data-city');
+        var label = btn.textContent.replace(/\(\d+\)\s*$/, '').trim();
+        if (city) cityLabels[city] = label;
+      });
 
       // Cache each card's searchable text once (title, developer, location, config, tags,
-      // area label) rather than re-reading the DOM on every keystroke.
+      // area/city label) rather than re-reading the DOM on every keystroke.
       cards.forEach(function (card) {
         var parts = [
           card.querySelector('.project-card__title'),
@@ -2165,17 +2353,32 @@
           Array.prototype.slice.call(card.querySelectorAll('.project-tag'))
         ).filter(Boolean).map(function (el) { return el.textContent; });
         parts.push(areaLabels[card.getAttribute('data-area')] || '');
+        parts.push(cityLabels[card.getAttribute('data-city')] || '');
         card._searchText = parts.join(' ').toLowerCase().replace(/\s+/g, ' ');
       });
 
-      var state = { area: 'all', search: '' };
+      var state = { city: 'all', area: 'all', search: '' };
+
+      // The area-hub filter (Yelahanka, Devanahalli, etc.) is Bangalore-specific, so
+      // it's hidden whenever a different city is selected rather than left showing
+      // buttons that can never match anything.
+      function syncAreaBarVisibility() {
+        if (!filterBar) return;
+        var areaApplies = state.city === 'all' || state.city === 'bangalore';
+        filterBar.hidden = !areaApplies;
+        if (!areaApplies && state.area !== 'all') {
+          state.area = 'all';
+          buttons.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-area') === 'all'); });
+        }
+      }
 
       function applyFilters() {
         var visibleCount = 0;
         cards.forEach(function (card) {
+          var cityMatch = state.city === 'all' || card.getAttribute('data-city') === state.city;
           var areaMatch = state.area === 'all' || card.getAttribute('data-area') === state.area;
           var searchMatch = !state.search || card._searchText.indexOf(state.search) !== -1;
-          var match = areaMatch && searchMatch;
+          var match = cityMatch && areaMatch && searchMatch;
           card.classList.toggle('project-card--filtered-out', !match);
           if (match) visibleCount++;
         });
@@ -2187,11 +2390,26 @@
               emptyMsgText.textContent = 'No projects match "' + searchInput.value.trim() + '" in this area';
             } else if (state.search) {
               emptyMsgText.textContent = 'No projects match "' + searchInput.value.trim() + '"';
+            } else if (state.city !== 'all') {
+              emptyMsgText.textContent = 'No projects found in ' + (cityLabels[state.city] || 'this city') + ' yet';
             } else {
               emptyMsgText.textContent = 'No projects found in this area yet';
             }
           }
         }
+      }
+
+      if (cityBar) {
+        cityBar.addEventListener('click', function (e) {
+          var btn = e.target.closest('.area-filter__btn');
+          if (!btn) return;
+          cityButtons.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          state.city = btn.getAttribute('data-city');
+          syncAreaBarVisibility();
+          applyFilters();
+          if (window.gtag) gtag('event', 'city_filter', { city: state.city });
+        });
       }
 
       if (filterBar) {
@@ -2215,7 +2433,7 @@
           if (searchClear) searchClear.hidden = state.search.length === 0;
           applyFilters();
 
-          // Debounce analytics only — the visible filtering above stays instant.
+          // Debounce analytics only, the visible filtering above stays instant.
           clearTimeout(searchTrackTimer);
           searchTrackTimer = setTimeout(function () {
             if (state.search && state.search !== lastTracked && window.gtag) {

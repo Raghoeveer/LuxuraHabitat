@@ -31,8 +31,15 @@ You need, at minimum:
 - A folder of source images (hero/banner, about, amenities, interiors, master plan,
   unit/floor plans, location map, logo).
 - A Web3Forms access key for the lead forms.
-- If not given, ask: which of the 3 area hubs does this belong to (Devanahalli /
-  Hennur-Thanisandra / Yelahanka), or is it standalone? You'll need this for Phase 6.
+- **Which city.** Bangalore is the default unless told otherwise, don't assume a new
+  city without being told explicitly.
+  - Bangalore: if not given, ask which of the 3 area hubs this belongs to
+    (Devanahalli / Hennur-Thanisandra / Yelahanka), or is it standalone? You'll need
+    this for Phase 6. Ships at the existing flat `/projects/<slug>/` pattern.
+  - A different city (e.g. Chennai, Coimbatore): ships one level deeper, at
+    `/projects/<city-slug>/<slug>/` instead, see Phase 3's folder/URL note and Phase
+    7. Never retroactively move an existing Bangalore project into a city-prefixed
+    path, this only applies to new non-Bangalore projects.
 
 Read the entire source file before extracting anything — don't skim. Note every
 number (units/acre density, sqft ranges, price ranges, possession date, maintenance
@@ -59,7 +66,17 @@ number) — both times guessing would have shipped a legally wrong number. If th
 correction affects an already-shipped page, fix every occurrence there too (table,
 footer, visible FAQ text, FAQPage JSON-LD) and re-verify it, not just the new page.
 
-## Phase 2 — Images
+For a Tamil Nadu project, a **TNRERA project registration number uses a different
+format from Karnataka's `PRM/KA/RERA/...` pattern** (and is a distinct kind of
+identifier from the `TN/Agent/0082/2024` agent-level registration already used
+sitewide for Narayanan in the footer/schema: an individual agent registration and a
+project registration are two different numbers). Don't force-fit a Tamil Nadu
+source's RERA number into the Karnataka grep pattern above, adapt the grep to
+whatever format the source actually shows, and if a source's RERA-looking string
+doesn't match a format you recognize, surface it with AskUserQuestion rather than
+guessing it's correct or malformed.
+
+## Phase 2: Images
 
 Follow `docs/adding-a-project.md` §2 (clean per-project path, never point og:image /
 twitter:image / preload at another project's folder). The site's convention is WebP
@@ -157,14 +174,28 @@ Sattva Lumina, TVS Emerald Altura) before being caught and fixed.
   `_TEMPLATE.html` inherited from the site-wide default — a page should end up with
   exactly one `rel="icon"` tag.
 
-## Phase 3 — Build the page
+## Phase 3: Build the page
+
+**Folder/URL location.** An existing-pattern Bangalore project builds at
+`projects/<slug>/index.html` (URL `/projects/<slug>/`), matching every shipped page
+so far. A project in a different city builds one level deeper, at
+`projects/<city-slug>/<slug>/index.html` (URL `/projects/<city-slug>/<slug>/`), e.g.
+`projects/chennai/some-project/index.html`. This is safe with zero extra work:
+every asset reference and internal link in `_TEMPLATE.html` and every shipped page
+already uses root-relative paths (`/images/...`, `/js/...`, `/projects/...`), never
+`../`-relative ones, so nesting one level deeper breaks nothing. You do still need to
+write the extra `/<city-slug>/` segment explicitly into the canonical URL, `og:url`,
+`twitter:url` if present, and every internal `<a href>` that points back at this
+page. `js/seo.js`'s auto-generated `BreadcrumbList` already detects the extra
+segment and inserts the city as its own crumb (Home > Projects > `<City>` >
+`<Project>`) automatically, no extra work needed there.
 
 Start from `projects/_TEMPLATE.html` and copy structure/CSS from `sattva-aeropolis`
-(the reference the user pointed at) — it's the most conversion-tuned page on the site.
+(the reference the user pointed at), it's the most conversion-tuned page on the site.
 Section order to replicate, top to bottom:
 
-1. `nav` — Luxura Habitat logo (never the builder's), "Authorized Channel Partner"
-   caption, sticky, links scroll to each section below.
+1. `nav` (Luxura Habitat logo, never the builder's, plus a "Real Estate Advisory"
+   caption), sticky, links scroll to each section below.
 2. `.hero` with the photo as a **CSS `background-image` directly on the `<section
    class="hero">`** (not a separate `.hero-media` div, not a mobile-only `<img>`) —
    this is what keeps the hero photo visible on mobile with zero extra markup. Inside:
@@ -447,7 +478,18 @@ For each post:
   — since this counts the whole page including boilerplate, treat 1,500 as a floor to
   clear with real margin, not a number to just barely exceed.
 
-## Phase 6 — Internal-linking pass (do this explicitly, not incidentally)
+## Phase 6: Internal-linking pass (do this explicitly, not incidentally)
+
+**If this is the first project in a new city**, most of this phase does not apply
+yet, there is no `/areas/<city>/` hub page and no sibling project in that city to
+link to or from. Do only what is real: skip steps 1-3 below entirely (nothing exists
+to scan for or link to), and just make sure the new page itself does not contain a
+broken or aspirational link to a hub or sibling that does not exist yet. Once the
+*second* project in that city ships, come back and run this phase properly for both
+pages: link them to each other, and decide whether it is time to build a lightweight
+`/areas/<city>/<locality>/` hub page (same pattern as the existing `/areas/<hub>/`
+pages, but at the city-prefixed path per Phase 0/3) rather than leaving it
+indefinitely without one.
 
 1. **Scan for related pages.** Read `sitemap.xml` and the relevant `/areas/<hub>/`
    page to find: (a) sibling project pages in the same area hub, (b) existing blog
@@ -481,26 +523,53 @@ For each post:
    links, and 2-3 *other* existing pages should now contain a link back to the new
    page(s) that didn't exist before you started.
 
-## Phase 7 — Site plumbing
+## Phase 7: Site plumbing
 
 - Add the card to `projects/index.html` (copy an existing card's exact shape:
   thumbnail from `/images/projects-thumbs/<slug>-thumb.webp`, `data-area` attribute,
-  WhatsApp CTA). If the project doesn't fit any existing `data-area` filter
-  (Yelahanka/Devanahalli/Hennur/Whitefield/Kanakapura), use `data-area="other"`
-  rather than forcing it into the wrong filter bucket.
+  WhatsApp CTA). Every card also needs a `data-city` attribute:
+  - Bangalore project: `data-city="bangalore"`, and `data-area` as before. If the
+    project doesn't fit any existing `data-area` filter
+    (Yelahanka/Devanahalli/Hennur/Whitefield/Kanakapura), use `data-area="other"`
+    rather than forcing it into the wrong filter bucket, exactly as before.
+  - Non-Bangalore project: `data-city="<city-slug>"` (e.g. `data-city="chennai"`)
+    **and** `data-area="na"`, never a Bangalore corridor value and never `"other"`.
+    `"other"` is reserved for odd-corridor Bangalore projects, reusing it for a
+    different city would silently mix the two under one filter tab. This is spelled
+    out in the HTML comment directly above `#city-filter` on `projects/index.html`.
+  The `#city-filter` bar itself needs no manual toggling either way, it stays
+  `hidden` until the script at the bottom of `projects/index.html` detects cards
+  spanning more than one `data-city` value, then reveals itself automatically.
 - Add a card for each new blog post to **`blog/index.html`'s `.blog-grid`**, at the
-  top (newest-first), matching the existing `.blog-card` markup exactly. This is a
-  separate, hand-maintained listing page — it is not auto-generated from
-  `sitemap.xml` or from the posts' own front matter, so a post can be fully live and
-  linked everywhere else and still be invisible here if this step is skipped. This
-  step was missed for two prior projects' posts before being caught — don't skip it.
+  top (newest-first), matching the existing `.blog-card` markup exactly, including a
+  `data-city` attribute on the `.blog-card` article tag (same city-slug convention as
+  above, see the comment above `#blog-city-filter` on that page). This is a separate,
+  hand-maintained listing page, it is not auto-generated from `sitemap.xml` or from
+  the posts' own front matter, so a post can be fully live and linked everywhere else
+  and still be invisible here if this step is skipped. This step was missed for two
+  prior projects' posts before being caught, don't skip it.
+- If Phase 6 decided this project's city needs a new `/areas/<city>/<locality>/` hub
+  page, its zone card on `/areas/index.html` needs the same `data-city` attribute too
+  (see the comment above `#zone-city-filter` there).
 - Add every new URL (project page + each blog post) to `sitemap.xml` with today's date
-  as `<lastmod>`.
+  as `<lastmod>`. For a non-Bangalore project, use its city-prefixed path
+  (`/projects/<city>/<slug>/`), matching whatever URL you actually built in Phase 3.
 
-## Phase 8 — Verify before calling it done
+## Phase 8: Verify before calling it done
 
 - Tag-balance check (div/section/nav/a/form/table/ul/li) on every new/edited HTML
   file via a quick Python regex script.
+- For a non-Bangalore project: `grep -n 'data-city' projects/index.html` and
+  `blog/index.html` to confirm the new card(s) actually carry the right city slug
+  (not left as `data-city="bangalore"` from a copy-pasted sibling card), and confirm
+  the project card also has `data-area="na"`, not `"other"` or a Bangalore corridor
+  value. Load `projects/index.html` locally and confirm the `#city-filter` bar is now
+  visible (it auto-reveals once more than one `data-city` value exists on the page),
+  and that filtering by the new city shows only the expected card(s).
+- Confirm the canonical URL, `og:url`, and every internal link pointing back at the
+  new project actually include the city segment for a non-Bangalore project (easy to
+  drop when copy-pasting meta tags from a Bangalore sibling page). Load the new page
+  and check its `BreadcrumbList` JSON-LD includes the city as its own crumb.
 - JSON-LD parses (`json.loads` on every `<script type="application/ld+json">` block).
 - FAQ visible-text/JSON-LD sync: script-compare `itemprop="name"`/`itemprop="text"`
   against the FAQPage `name`/`acceptedAnswer.text` — must match exactly, count for
