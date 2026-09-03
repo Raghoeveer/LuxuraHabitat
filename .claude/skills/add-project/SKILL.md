@@ -256,6 +256,15 @@ silently reinherit by copy-pasting the template):
   WhatsApp and Get Brochure). Fixed on all shipped pages as of 2026-09-03; don't
   copy-paste an older page's `<style>` block wholesale without checking for a second,
   dead `.mobile-bottom-cta` rule.
+- `.plan-grid` (`.plan-image` + `.plan-notes`, the master-plan/floor-plan section) had
+  a hard `minmax(300px, 0.65fr)` floor on its second column and no mobile override in
+  the template lineage, including sattva-aeropolis itself. On a narrow phone screen the
+  grid can't collapse to one column, so the plan image, the notes cards, and the
+  floating WhatsApp chat bubble all overlap and clip. Fixed on all 19 affected pages as
+  of 2026-09-03 by adding `.plan-grid { grid-template-columns: 1fr; gap: 2rem; }` to
+  the `@media (max-width: 768px)` block, matching the century-astoria precedent; verify
+  this override exists (and check the section in an actual phone-width viewport, not
+  just by reading the CSS) on every new page.
 - **Every configuration card, pricing-table row, and the master-plan image need their
   own visible "Request Floor Plan" / "Request Master Plan" button**, not just an
   `onclick` on the surrounding card or image. A config card that's clickable but shows

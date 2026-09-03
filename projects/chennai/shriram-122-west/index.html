@@ -480,6 +480,10 @@
         .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
         .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
         .plan-image:hover img { transform: scale(1.02); }
+        .plan-image-cta { display: block; width: 100%; margin-top: 1rem; padding: 0.75rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .plan-image-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .pricing-cta-btn { padding: 0.45rem 0.9rem; background: var(--accent-green); color: #fff; border: none; border-radius: 999px; font-weight: 800; font-size: 0.78rem; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease; }
+        .pricing-cta-btn:hover { background: #075b31; transform: translateY(-1px); }
 
         .plan-notes { display: grid; gap: 0.9rem; }
         .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
@@ -704,6 +708,7 @@
         @media (max-width: 480px) {
             .features-list { grid-template-columns: 1fr; }
             .amenity-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
             .gallery-item { min-width: 240px; width: 240px; height: 240px; }
         }
@@ -1344,6 +1349,7 @@
             <div class="plan-grid" style="margin-top: 1.5rem;">
                 <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
                     <img src="/images/projects/shriram-122-west/shriram-122-west-master-plan.webp" alt="Shriram 122 West Mangadu master plan layout diagram showing towers, clubhouse and open spaces" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
@@ -1377,6 +1383,7 @@
                         <p><strong>Approx. Super Built-up Area:</strong> ~818 sq.ft</p>
                         <p><strong>Config:</strong> 2 Bedrooms + 1.5 Bathrooms</p>
                         <p>A representative 2 BHK layout with foyer, living/dining, kitchen/utility and two balconies.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:100ms;">
@@ -1386,6 +1393,7 @@
                         <p><strong>Approx. Super Built-up Area:</strong> ~818 sq.ft</p>
                         <p><strong>Config:</strong> 2 Bedrooms + 1.5 Bathrooms</p>
                         <p>A second 2 BHK layout variant on a different tower position, same overall configuration.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:200ms;">
@@ -1395,6 +1403,7 @@
                         <p><strong>Approx. Super Built-up Area:</strong> ~818 sq.ft</p>
                         <p><strong>Config:</strong> 2 Bedrooms + 1.5 Bathrooms</p>
                         <p>A third 2 BHK layout variant with an extended balcony/terrace.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
             </div>
@@ -1410,6 +1419,7 @@
                         <p><strong>Carpet Area:</strong> ~908.687 sq.ft &middot; <strong>Approx. Super Built-up Area:</strong> ~1,280-1,296 sq.ft</p>
                         <p><strong>Config:</strong> 3 Bedrooms + 3 Toilets</p>
                         <p>A 3 BHK layout with foyer, corridor, two balconies and a dedicated master bedroom.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:100ms;">
@@ -1419,6 +1429,7 @@
                         <p><strong>Carpet Area:</strong> ~908.667 sq.ft &middot; <strong>Approx. Super Built-up Area:</strong> ~1,280-1,296 sq.ft</p>
                         <p><strong>Config:</strong> 3 Bedrooms + 3 Toilets</p>
                         <p>A second 3 BHK layout variant on a different tower position, same overall configuration.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:200ms;">
@@ -1428,6 +1439,7 @@
                         <p><strong>Carpet Area:</strong> ~908.667 sq.ft &middot; <strong>Approx. Super Built-up Area:</strong> ~1,280-1,296 sq.ft</p>
                         <p><strong>Config:</strong> 3 Bedrooms + 3 Toilets</p>
                         <p>A third 3 BHK layout variant with an additional open terrace.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:300ms;">
@@ -1437,6 +1449,7 @@
                         <p><strong>Carpet Area:</strong> ~908.667 sq.ft &middot; <strong>Approx. Super Built-up Area:</strong> ~1,280-1,296 sq.ft</p>
                         <p><strong>Config:</strong> 3 Bedrooms + 3 Toilets</p>
                         <p>A fourth 3 BHK layout variant on a different tower position.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
             </div>
@@ -1461,6 +1474,7 @@
                             <th>Built-up Area</th>
                             <th>Super Built-up Area</th>
                             <th>Starting Price</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1470,6 +1484,7 @@
                             <td>~736 sq.ft</td>
                             <td>~818 sq.ft</td>
                             <td>₹57 Lakhs* Onwards</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Floor Plan</button></td>
                         </tr>
                         <tr>
                             <td>2.5 BHK</td>
@@ -1477,6 +1492,7 @@
                             <td>~1,041 sq.ft</td>
                             <td>~1,157 sq.ft</td>
                             <td>₹80 Lakhs* Onwards</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Floor Plan</button></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
@@ -1484,6 +1500,7 @@
                             <td>~1,152 sq.ft</td>
                             <td>~1,280 to 1,296 sq.ft</td>
                             <td>₹93 Lakhs+* Onwards</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Floor Plan</button></td>
                         </tr>
                     </tbody>
                 </table>

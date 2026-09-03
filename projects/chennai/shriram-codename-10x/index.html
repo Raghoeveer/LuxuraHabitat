@@ -488,6 +488,10 @@
         .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
         .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
         .plan-image:hover img { transform: scale(1.02); }
+        .plan-image-cta { display: block; width: 100%; margin-top: 1rem; padding: 0.75rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .plan-image-cta:hover { background: #7a3f22; transform: translateY(-1px); }
+        .pricing-cta-btn { padding: 0.45rem 0.9rem; background: var(--accent-green); color: #fff; border: none; border-radius: 999px; font-weight: 800; font-size: 0.78rem; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease; }
+        .pricing-cta-btn:hover { background: #7a3f22; transform: translateY(-1px); }
 
         .plan-notes { display: grid; gap: 0.9rem; }
         .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
@@ -721,6 +725,7 @@
         @media (max-width: 480px) {
             .features-list { grid-template-columns: 1fr; }
             .amenity-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
             .gallery-item { min-width: 240px; width: 240px; height: 240px; }
         }
@@ -1385,6 +1390,7 @@
             <div class="plan-grid" style="margin-top: 1.5rem;">
                 <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
                     <img src="/images/projects/shriram-codename-10x/shriram-codename-10x-master-plan.webp" alt="Shriram Codename 10X numbered master plan of villa plots and amenity zones" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
@@ -1457,6 +1463,7 @@
                             <th>Plot Configuration</th>
                             <th>Area (sq. ft.)</th>
                             <th>Indicative Base Price Range</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1464,16 +1471,19 @@
                             <td>Compact Villa Plot</td>
                             <td>~1,800 sq. ft.</td>
                             <td>₹35.10 L - ₹42.00 L</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Details</button></td>
                         </tr>
                         <tr>
                             <td>Medium Villa Plot</td>
                             <td>~1,993 - 2,400 sq. ft.</td>
                             <td>₹43.00 L - ₹52.00 L</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Details</button></td>
                         </tr>
                         <tr>
                             <td>Large Villa Plot</td>
                             <td>~3,000 - 4,000 sq. ft.</td>
                             <td>₹65.00 L - ₹78.00 L</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Details</button></td>
                         </tr>
                     </tbody>
                 </table>
