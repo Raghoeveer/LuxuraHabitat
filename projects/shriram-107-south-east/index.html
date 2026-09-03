@@ -494,6 +494,10 @@
         .unit-plan-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 36px rgba(2,6,23,0.08); border: 1px solid rgba(11,107,60,0.12); }
         .unit-plan-card img { width: 100%; display: block; cursor: pointer; transition: transform 0.5s ease; }
         .unit-plan-card:hover img { transform: scale(1.03); }
+        .plan-image-cta { display: block; width: 100%; margin-top: 1rem; padding: 0.75rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .plan-image-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .pricing-cta-btn { padding: 0.45rem 0.9rem; background: var(--accent-green); color: #fff; border: none; border-radius: 999px; font-weight: 800; font-size: 0.78rem; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease; }
+        .pricing-cta-btn:hover { background: #075b31; transform: translateY(-1px); }
         .unit-plan-body { padding: 1.2rem 1.4rem; }
         .unit-plan-body h4 { font-size: 1.1rem; font-weight: 900; color: var(--primary-dark); margin-bottom: 0.5rem; }
         .unit-plan-body p { font-size: 0.88rem; color: var(--text-light); font-weight: 600; line-height: 1.6; margin-bottom: 0.3rem; }
@@ -1367,6 +1371,7 @@
             <div class="plan-grid" style="margin-top: 1.5rem;">
                 <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
                     <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-master-plan.webp" alt="Shriram 107 SouthEast Attibele master plan layout diagram" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
@@ -1392,6 +1397,7 @@
             <div class="plan-grid" style="margin-top: 2.5rem;">
                 <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
                     <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-cluster-plan.webp" alt="Shriram 107 SouthEast typical floor cluster plan showing unit arrangement around the core" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                 </div>
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
@@ -1416,6 +1422,7 @@
                         <p><strong>RERA Carpet Area:</strong> 42.755 sq.m (460.214 sq.ft)</p>
                         <p><strong>Balcony:</strong> 1.550 sq.m (16.684 sq.ft)</p>
                         <p>A representative 2 BHK layout; the cluster plan also shows a separate 2 BHK Type-2 variant not pictured here.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
                 <div class="unit-plan-card reveal" style="transition-delay:120ms;">
@@ -1425,6 +1432,7 @@
                         <p><strong>RERA Carpet Area:</strong> 56.977 sq.m (613.295 sq.ft)</p>
                         <p><strong>Balcony:</strong> 2.045 sq.m (22.012 sq.ft)</p>
                         <p>A representative 3 BHK layout; the cluster plan also shows a separate 3 BHK Type-3 variant not pictured here.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
             </div>
@@ -1443,6 +1451,7 @@
                             <th>Configuration</th>
                             <th>Super Built-up Area</th>
                             <th>Starting Price</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1450,11 +1459,13 @@
                             <td>2 BHK</td>
                             <td>698 - 752 sq. ft.</td>
                             <td>₹65 Lakhs* Onwards</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Floor Plan</button></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
                             <td>~914 sq. ft.</td>
                             <td>₹80 Lakhs* Onwards</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Request Floor Plan</button></td>
                         </tr>
                     </tbody>
                 </table>

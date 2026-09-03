@@ -495,6 +495,10 @@
         .unit-plan-card .unit-plan-placeholder { background: linear-gradient(135deg, rgba(11,107,60,0.08), rgba(185,138,82,0.1)); padding: 2.4rem 1.4rem; text-align: center; color: var(--accent-green); font-weight: 900; font-size: 1.4rem; font-family: 'Playfair Display', serif; }
         .unit-plan-card img { width: 100%; display: block; cursor: pointer; transition: transform 0.5s ease; }
         .unit-plan-card:hover img { transform: scale(1.03); }
+        .plan-image-cta { display: block; width: 100%; margin-top: 1rem; padding: 0.75rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .plan-image-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .pricing-cta-btn { padding: 0.45rem 0.9rem; background: var(--accent-green); color: #fff; border: none; border-radius: 999px; font-weight: 800; font-size: 0.78rem; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease; }
+        .pricing-cta-btn:hover { background: #075b31; transform: translateY(-1px); }
         .unit-plan-body { padding: 1.2rem 1.4rem; }
         .unit-plan-body h4 { font-size: 1.1rem; font-weight: 900; color: var(--primary-dark); margin-bottom: 0.5rem; }
         .unit-plan-body p { font-size: 0.88rem; color: var(--text-light); font-weight: 600; line-height: 1.6; margin-bottom: 0.3rem; }
@@ -1291,31 +1295,34 @@
             <p class="section-subtitle">Master plan and detailed unit floor plans have not been released yet. Verified configuration and area figures below are from the developer's own pre-launch specification sheet.</p>
 
             <div class="unit-plan-grid" style="margin-top: 1.5rem;">
-                <div class="unit-plan-card reveal" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                <div class="unit-plan-card reveal">
                     <div class="unit-plan-placeholder">3 BHK</div>
                     <div class="unit-plan-body">
                         <h4>3 BHK</h4>
                         <p><strong>Area:</strong> 2,000 sq. ft.</p>
                         <p><strong>Car Parking:</strong> 2</p>
                         <p>Floor plan to be released, register for early access.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Register for Early Access</button>
                     </div>
                 </div>
-                <div class="unit-plan-card reveal" style="transition-delay:120ms;cursor:pointer;" onclick="toggleDetailsPanel()">
+                <div class="unit-plan-card reveal" style="transition-delay:120ms;">
                     <div class="unit-plan-placeholder">3 BHK + Study</div>
                     <div class="unit-plan-body">
                         <h4>3 BHK + Study</h4>
                         <p><strong>Area:</strong> 2,400 sq. ft.</p>
                         <p><strong>Car Parking:</strong> 2</p>
                         <p>Floor plan to be released, register for early access.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Register for Early Access</button>
                     </div>
                 </div>
-                <div class="unit-plan-card reveal" style="transition-delay:180ms;cursor:pointer;" onclick="toggleDetailsPanel()">
+                <div class="unit-plan-card reveal" style="transition-delay:180ms;">
                     <div class="unit-plan-placeholder">4 BHK + Study</div>
                     <div class="unit-plan-body">
                         <h4>4 BHK + Study</h4>
                         <p><strong>Area:</strong> 2,700 sq. ft.</p>
                         <p><strong>Car Parking:</strong> 3</p>
                         <p>Floor plan to be released, register for early access.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Register for Early Access</button>
                     </div>
                 </div>
             </div>
@@ -1350,6 +1357,7 @@
                             <th>Area</th>
                             <th>Car Parking</th>
                             <th>Price</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1358,18 +1366,21 @@
                             <td>2,000 sq. ft.</td>
                             <td>2</td>
                             <td>Price on Request</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Register for Details</button></td>
                         </tr>
                         <tr>
                             <td>3 BHK + Study</td>
                             <td>2,400 sq. ft.</td>
                             <td>2</td>
                             <td>Price on Request</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Register for Details</button></td>
                         </tr>
                         <tr>
                             <td>4 BHK + Study</td>
                             <td>2,700 sq. ft.</td>
                             <td>3</td>
                             <td>Price on Request</td>
+                            <td><button type="button" class="pricing-cta-btn" onclick="toggleDetailsPanel()">Register for Details</button></td>
                         </tr>
                     </tbody>
                 </table>

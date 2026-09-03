@@ -286,7 +286,17 @@ silently reinherit by copy-pasting the template):
   the master-plan image's own `onclick`/`cursor:pointer` (that's a separate element
   from the new button, no nesting conflict there), but drop any `onclick` on a card
   `<div>` that now wraps one of these buttons, and drop the card's own `cursor: pointer`
-  CSS along with it since the card itself is no longer the click target.
+  CSS along with it since the card itself is no longer the click target. This is not
+  hypothetical: purva-codename-skye's `.unit-plan-card` divs had exactly this
+  `onclick` + `cursor:pointer` on the card itself, and adding the button without
+  removing it double-fired the panel toggle until caught and fixed.
+  The same gap (clickable image/card, no visible button) also shipped on the master
+  plan and/or pricing table and/or `.unit-plan-card` set of radiance-edgewood,
+  shriram-122-west, shriram-codename-10x, shriram-shankari, shriram-codename-reserve,
+  shriram-107-south-east, shriram-bannerghatta, divyasree-quiet-side and
+  purva-codename-skye; all fixed as of 2026-09-03. Check every plan image, config
+  card and pricing-table row on every new page for a visible CTA before shipping,
+  don't rely on the source template already having one.
 - Any heading/accent color from the source export gets swapped to this project's own
   brand palette before shipping — don't inherit a generic blue or the wrong project's
   colors just because the source file had them. **`#2563eb` (the generic blue) leaks
@@ -511,6 +521,14 @@ For each post:
 - End with an "Our Honest Assessment" section, not just a sales pitch — this is what
   makes the review posts read as trustworthy rather than an ad, which is itself a
   conversion lever.
+- **Every blog post needs the Zendesk chat widget snippet too**, right before
+  `</body>`, same as the project page (see Phase 3): copy it verbatim from an
+  existing blog post (e.g. `blog/sattva-thippapura-doddaballapur-price-plots-rera/index.html`),
+  don't generate a new key. This is easy to miss because Phase 3's Zendesk bullet
+  and the Phase 8 `grep -c "seo.js"` check are both written against the project page
+  only, and nothing in this skill previously called out blog posts explicitly, so a
+  brand-new post built without copying an existing one's boilerplate could ship
+  without it and nothing would flag the gap.
 - **Funnel every post toward a lead action**: at least one in-content CTA linking to
   the project page's `#form` anchor or a WhatsApp deep link, plus whatever internal
   links Phase 6 adds. A blog post that only informs and never asks for the click is a
@@ -650,6 +668,10 @@ indefinitely without one.
 - `grep -c "seo.js" projects/<slug>/index.html` — confirm the `/js/seo.js` script tag
   is actually present (see Phase 3); its absence produces no error, just silently
   missing `BreadcrumbList` schema.
+- `grep -c "ze-snippet" projects/<slug>/index.html` and, separately, the same grep
+  against every new blog post's `index.html` (see Phase 5): both must return at
+  least 1. The Zendesk snippet's absence produces no error either, it just means the
+  chat widget (and its `chat:start` GA4 tracking) silently never loads on that page.
 - `grep -oE 'href="[^"]*"[^>]*>(Privacy Policy|Terms)' projects/<slug>/index.html` —
   both matches must read exactly `href="/privacy.html"` or `href="/terms.html"`; and
   `grep -n "Copyright 202" projects/<slug>/index.html` must show "Luxura Habitat", not
