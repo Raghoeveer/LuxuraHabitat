@@ -666,46 +666,6 @@
         @media (max-width: 768px) {
             nav { padding-bottom: 0.5rem; }
 
-            .mobile-bottom-cta {
-                display: flex;
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1200;
-                padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
-                background: rgba(255,255,255,0.98);
-                border-top: 1px solid var(--border-light);
-                gap: 0.8rem;
-            }
-            .mobile-bottom-call,
-            .mobile-bottom-brochure {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                border-radius: 999px;
-                font-weight: 900;
-                cursor: pointer;
-                min-height: 46px;
-                white-space: nowrap;
-            }
-            .mobile-bottom-call {
-                background: rgba(154,91,40,0.08);
-                border: 1px solid rgba(154,91,40,0.25);
-                color: var(--accent-terracotta);
-                gap: 0.4rem;
-            }
-            .mobile-bottom-brochure {
-                background: linear-gradient(135deg, var(--accent-terracotta) 0%, var(--accent-warm) 100%);
-                border: none;
-                color: #fff;
-                font-size: 0.95rem;
-            }
-
-            .mobile-bottom-cta { display: flex; }
-
             .hamburger-menu { display: flex; order: 3; }
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,255,255,0.98); flex-direction: column; gap: 0.2rem; padding: 1.2rem 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99; border-bottom: 1px solid var(--border-light); }
             .nav-links.active { display: flex; }

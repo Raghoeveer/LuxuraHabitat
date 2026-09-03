@@ -208,13 +208,21 @@ Section order to replicate, top to bottom:
    RERA number).
 6. `.amenities` — grid + `.gallery-item` photos.
 7. `.gallery` — full photo grid, every item `onclick="openLightbox(this)"`.
-8. `.plan` (`#units`) — master plan image + unit/floor plan cards. **Master plan and
+8. `.plan` (`#units`) - master plan image + unit/floor plan cards. **Master plan and
    every unit/floor-plan image get `onclick="toggleDetailsPanel()"` and
-   `style="cursor:pointer;"` — not `openLightbox()`.** These are the images a serious
+   `style="cursor:pointer;"`, not `openLightbox()`.** These are the images a serious
    buyer clicks to get pricing/detail, so route that click straight into the lead
    panel instead of just showing a bigger picture. Keep `openLightbox()` only for
-   interior/amenity/location-map photos.
-9. `.pricing` — price table by configuration.
+   interior/amenity/location-map photos. **Also add a visible button, not just a
+   clickable image/card:** a "Request Master Plan" button under the master-plan
+   image, and a "Request Floor Plan" button on every per-configuration card, both
+   `onclick="toggleDetailsPanel()"`. An `onclick` on the image or the whole card
+   alone is a real, silent UX gap, nothing on the card visually tells a buyer that
+   tapping it opens the lead panel, so it reads as inert. See the Phase 3 "known
+   latent bugs" note below for the exact markup and a nesting bug to avoid.
+9. `.pricing` - price table by configuration, with a **"Request Floor Plan" button in
+   its own column on every row** (same `onclick="toggleDetailsPanel()"`), not just a
+   price cell, the pricing table is usually where a buyer is closest to converting.
 10. `.plan` (`#location`) — location map image (static image + `openLightboxFromSrc`
     is fine; a live Google Maps iframe isn't required — see Century Astoria/Vajram
     Chrysanthemum precedent) + proximity list (schools/employers/transit).
@@ -234,10 +242,42 @@ silently reinherit by copy-pasting the template):
   and silently eats the click before `openLightbox()` ever fires. No console error, so
   it's easy to ship broken.
 - If you add a fixed vertical "Request Brochure" side-tab (`.sidebar-widget`), give it
-  `display: none` inside the existing mobile media query — it has no built-in mobile
+  `display: none` inside the existing mobile media query, it has no built-in mobile
   override in the template lineage and overflows past the viewport edge on narrow
   screens. `.mobile-cta-btn` already covers the same affordance on mobile, so hiding it
   there loses nothing.
+- The mobile sticky bottom bar (`.mobile-cta-btn`) must have exactly one
+  `.mobile-bottom-cta { ... }` rule block in the mobile media query. An earlier
+  pill-button CTA design (`.mobile-bottom-call` / `.mobile-bottom-brochure`, unused by
+  the current `.mobile-cta-btn` markup) left a dead `.mobile-bottom-cta { ... gap:
+  0.8rem; }` block on several pages, including sattva-aeropolis itself; a later block
+  resets `padding` for the flush-divider design but never resets `gap`, so the stray
+  gap leaks through and shows as visible space before the last button (e.g. between
+  WhatsApp and Get Brochure). Fixed on all shipped pages as of 2026-09-03; don't
+  copy-paste an older page's `<style>` block wholesale without checking for a second,
+  dead `.mobile-bottom-cta` rule.
+- **Every configuration card, pricing-table row, and the master-plan image need their
+  own visible "Request Floor Plan" / "Request Master Plan" button**, not just an
+  `onclick` on the surrounding card or image. A config card that's clickable but shows
+  no button reads as a static price list to a buyer, the tap-to-enquire affordance is
+  invisible; this shipped on Shriram Kinglife Koyambedu before being caught and fixed.
+  Markup pattern (goes inside each `.config-card-simple`, each `.plan-image` wrapper,
+  and as its own `<td>` per `.pricing-table` row):
+  ```html
+  <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+  ```
+  and, next to the master-plan image:
+  ```html
+  <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
+  ```
+  **Do not also leave `onclick="toggleDetailsPanel()"` on the parent `.config-card-simple`
+  div once it contains this button.** The click bubbles from the button up to the div,
+  firing `toggleDetailsPanel()` twice on one tap, opening the panel and immediately
+  closing it again, a real, easy-to-miss bug since nothing throws a console error. Keep
+  the master-plan image's own `onclick`/`cursor:pointer` (that's a separate element
+  from the new button, no nesting conflict there), but drop any `onclick` on a card
+  `<div>` that now wraps one of these buttons, and drop the card's own `cursor: pointer`
+  CSS along with it since the card itself is no longer the click target.
 - Any heading/accent color from the source export gets swapped to this project's own
   brand palette before shipping — don't inherit a generic blue or the wrong project's
   colors just because the source file had them. **`#2563eb` (the generic blue) leaks
@@ -273,21 +313,24 @@ silently reinherit by copy-pasting the template):
   quick visual glance at the hero but leaves the nav bar and both data tables on the
   wrong color.
 - The nav-bar WhatsApp button (`class="whatsapp-btn"`, next to the phone number) needs
-  both **the exact label text `Get details on whatsapp`** and **the real WhatsApp logo**
-  — the official glyph SVG (`viewBox="0 0 24 24"`, `fill="currentColor"`, path starting
+  both **the exact label text `Get details now`** and **the real WhatsApp logo**, the
+  official glyph SVG (`viewBox="0 0 24 24"`, `fill="currentColor"`, path starting
   `M17.472 14.382c...`), not a generic chat-bubble icon, an emoji, and not left
   text-only. Copy the `<svg class="whatsapp-icon">...</svg>` block plus the
   `.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }` CSS rule (goes right
-  after `.whatsapp-btn:hover`) from any already-correct page, e.g. `sattva-songbird` —
+  after `.whatsapp-btn:hover`) from any already-correct page, e.g. `sattva-songbird`,
   don't hand-roll a new icon or reuse a generic message-circle glyph that happens to sit
   elsewhere on the page (the hero panel's outline "WhatsApp Chat" icon is not this logo).
   This was found inconsistent/missing across nearly every shipped page before being
-  swept and fixed in one pass — wording had drifted per page ("Get Offers on
+  swept and fixed in one pass, wording had drifted per page ("Get Offers on
   WhatsApp", "Send Details in Whatsapp", "Whatapp me Details", etc.) and the icon was
   absent on all but 3 pages; `sattva-kaveri-siri` had gone further and shipped an
   `<img src="whatsapp.png">` pointing at a file that was never actually copied into
-  that project's folder — a completely invisible broken image. Grep
-  `projects/<slug>/index.html` for `Get details on whatsapp` and for the `17.472 14.382`
+  that project's folder, a completely invisible broken image. The label itself was
+  later revised a second time, from `Get details on whatsapp` (the first standardized
+  wording) to the current `Get details now`, so a page still carrying the older text is
+  stale, not just inconsistent with a pre-standardization page. Grep
+  `projects/<slug>/index.html` for `Get details now` and for the `17.472 14.382`
   path fragment to confirm both the text and the real icon are present before shipping.
 - Every Web3Forms form (there are usually 2-3: hero panel, main lead-form section,
   possibly a sticky-bar mini form) needs the hidden `redirect` field set to exactly
@@ -613,6 +656,13 @@ indefinitely without one.
 - Grep every `.proj-compare-card` on the new page for its sibling slug and confirm
   the `<img src>` actually points into *that sibling's* image folder, not the new
   project's own (see Phase 6).
+- `grep -c "Request Floor Plan" projects/<slug>/index.html` should be at least (number
+  of configurations x 2), one per `.config-card-simple` and one per `.pricing-table`
+  row; `grep -c "Request Master Plan" projects/<slug>/index.html` should be at least 1.
+  If either comes back low, a config card or pricing row is missing its button (see
+  Phase 3). Also confirm no `.config-card-simple` div still carries its own
+  `onclick="toggleDetailsPanel()"` alongside the button inside it, that double-fires
+  and instantly closes the panel on every tap.
 - Live check with a local server + Playwright: desktop click-through every nav item
   (scrolls to just below the sticky nav, URL hash updates, zero console errors), FAQ
   accordion (only one open at a time, text matches JSON-LD), and a mobile viewport
