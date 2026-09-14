@@ -710,7 +710,13 @@
   </url>
   <url>
     <loc>https://luxurahabitat.com/projects/brigade-jeevan-sandhya/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://luxurahabitat.com/projects/brigade-silvercrest/</loc>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -722,7 +728,13 @@
   </url>
   <url>
     <loc>https://luxurahabitat.com/blog/brigade-jeevan-sandhya-kanakapura-road-prelaunch-review/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://luxurahabitat.com/blog/brigade-silvercrest-kanakapura-road-prelaunch-review/</loc>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
