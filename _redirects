@@ -16,3 +16,8 @@
 /additional_websites/SANIO/*                 /projects/sattva-sanio/           301
 /additional_websites/Sattva%20City/*         /projects/sattva-city/            301
 /zen&sato3/*                                  /projects/assetz-zen-sato/        301
+
+# Assetz Codename Paradise was rebranded to Assetz Mizu and Ki; the old project
+# URL 404s but is still indexed by Google (ranking pos ~2 for "assetz mizu and
+# ki" queries), so redirect it instead of losing that search equity.
+/projects/assetz-codename-paradise/*          /projects/assetz-mizu-and-ki/     301

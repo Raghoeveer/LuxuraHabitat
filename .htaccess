@@ -26,3 +26,7 @@ RewriteRule ^additional_websites/Salisbury/index\.html$ /projects/orchid-salisbu
 RewriteRule ^additional_websites/SANIO/index\.html$ /projects/sattva-sanio/ [R=301,L,NE]
 RewriteRule ^additional_websites/Sattva\ City/index\.html$ /projects/sattva-city/ [R=301,L,NE]
 RewriteRule ^zen&sato3/index\.html$ /projects/assetz-zen-sato/ [R=301,L,NE]
+
+# Assetz Codename Paradise was rebranded to Assetz Mizu and Ki; the old project
+# URL 404s but is still indexed by Google, so redirect instead of losing equity.
+RewriteRule ^projects/assetz-codename-paradise/?$ /projects/assetz-mizu-and-ki/ [R=301,L,NE]
