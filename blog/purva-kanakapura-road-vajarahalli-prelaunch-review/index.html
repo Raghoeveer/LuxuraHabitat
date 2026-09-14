@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection: this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Purva Kanakapura Road Vajarahalli: Pre-Launch Review</title>
+  <meta name="description" content="Independent pre-launch review of Purva Kanakapura Road Vajarahalli (also marketed as Purva Hallmark) - pricing, location, metro access and what to verify.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/purva-kanakapura-road-vajarahalli-prelaunch-review/">
+  <meta property="og:title" content="Purva Kanakapura Road Vajarahalli: Pre-Launch Review & What to Verify">
+  <meta property="og:description" content="Independent pre-launch review of Purva Kanakapura Road Vajarahalli (also marketed as Purva Hallmark) - pricing, location, metro access and what to verify.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .prelaunch-callout { background: #fef8f8; border: 1px solid #fca5a5; border-radius: 10px; padding: 14px 16px; font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: var(--space-md); }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/purva-kanakapura-road-vajarahalli-prelaunch-review/"
+        },
+        "headline": "Purva Kanakapura Road Vajarahalli: Pre-Launch Review & What to Verify",
+        "description": "Independent pre-launch review of Purva Kanakapura Road Vajarahalli (also marketed as Purva Hallmark) - pricing, location, metro access and what to verify.",
+        "image": "https://luxurahabitat.com/images/projects/purva-kanakapura-road-vajarahalli/purva-kanakapura-road-vajarahalli-banner.webp",
+        "datePublished": "2026-09-14",
+        "dateModified": "2026-09-14",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/purva-kanakapura-road-vajarahalli-prelaunch-review/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Purva Kanakapura Road Vajarahalli: Pre-Launch Review & What to Verify", "item": "https://luxurahabitat.com/blog/purva-kanakapura-road-vajarahalli-prelaunch-review/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Purva Kanakapura Road Vajarahalli Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Purva Kanakapura Road Vajarahalli: Pre-Launch Review &amp; What to Verify</h1>
+          <div class="article-meta">
+            <span>By the Luxura Habitat Team</span><span>&bull;</span><span>September 14, 2026</span><span>&bull;</span><span>9 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/purva-kanakapura-road-vajarahalli/purva-kanakapura-road-vajarahalli-banner.webp" alt="Purva Kanakapura Road Vajarahalli Pre-Launch Review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <div class="prelaunch-callout"><strong>Pre-Launch Notice:</strong> Purva Kanakapura Road Vajarahalli is currently in pre-launch stage. RERA registration is not yet complete, and all pricing, unit and possession figures below are indicative and sourced from the developer's current marketing material, not a final, RERA-registered offering. Treat this as an early-look review, not a booking recommendation.</div>
+
+          <p>If you searched something close to "Purva Kanakapura Road Vajarahalli," you have most likely come across a pre-launch high-rise residential tower by Puravankara Limited, sitting directly on Kanakapura Main Road at Vajarahalli in South Bengaluru. The same site, acreage, unit count and pricing are also being marketed under the names Purva Hallmark and Purva Codename Diamond, so before we get into the numbers, it is worth being upfront that this is one project circulating under several working names rather than several separate developments. Here is an honest, early-stage look at what is known so far, and what still needs to be verified before anyone puts money down.</p>
+
+          <h2>1. What's This Project Actually Called?</h2>
+          <p>Pre-launch inventory in this belt is being marketed under more than one name, and the naming here is genuinely locality-driven: "Purva Kanakapura Road Vajarahalli" describes the site by its road and locality, "Purva Hallmark" is the developer's own working project name in some marketing material, and "Purva Diamond Vajarahalli" (sometimes also seen as "Purva Codename Diamond") appears in other listings, all for the identical acreage, unit count and pricing. This kind of naming drift is common before a project's RERA registration locks in a final, official name. If you are researching this project independently, search all of these names side by side, and confirm with the developer or their authorised channel partner which one will appear on the eventual RERA certificate before relying on any single listing.</p>
+
+          <h2>2. The Developer: Puravankara Limited</h2>
+          <p>Puravankara Limited was founded in 1975 and has been listed on the NSE and BSE since 2007 (ticker: PURVA), one of Bengaluru's oldest and largest listed real estate developers, with operations spanning Bengaluru, Chennai, Hyderabad, Mumbai, Pune and more. The group operates through three brands: Puravankara (luxury), Provident Housing (mid-segment) and Purva Land (plotted developments). In FY2024 the group reported record annual sales bookings of ₹5,914 Crore, a 90% year-on-year increase. That listed, publicly-verifiable track record is a meaningfully different risk profile than a first-time or unlisted developer, and it holds regardless of which locality-based or codename branding this particular launch ends up carrying at formal RERA registration.</p>
+
+          <h2>3. Location: Vajarahalli, Kanakapura Main Road</h2>
+          <p>The site (Sy No. 19/2) sits directly on Kanakapura Main Road (NH 948) in Vajarahalli, South Bengaluru, which is precisely the address baked into this project's working name. Key proximity points from the developer's location map:</p>
+          <ul>
+            <li><strong>Thalaghattapura Metro Station (Green Line):</strong> ~280 metres, genuinely walkable</li>
+            <li><strong>Vajarahalli, Doddakallasandra, Konanakunte Cross, JP Nagar &amp; Banashankari Metro Stations:</strong> along the same Green Line corridor</li>
+            <li><strong>NICE Road Junction:</strong> ~1.8 km</li>
+            <li><strong>D-Mart:</strong> ~0.8 km</li>
+            <li><strong>Forum South Mall:</strong> ~3.5 km</li>
+            <li><strong>Purva Zentech IT Park:</strong> nearby, Puravankara's own commercial/business park on the same stretch of Kanakapura Road</li>
+            <li><strong>Turahalli Forest:</strong> ~2.1 km, for green cover</li>
+          </ul>
+          <p>Vajarahalli itself sits along the Green Line metro corridor, between Thalaghattapura and the more established Banashankari/JP Nagar belt further north. A site directly on Kanakapura Main Road, within walking distance of a metro stop, is a genuinely rare combination on this corridor, most comparable pre-launch inventory nearby either sits off the main road or is a longer walk from the nearest metro station. Anyone searching specifically for apartments on Kanakapura Road in Vajarahalli is usually weighing this locality against Thalaghattapura, Uttarahalli and Konanakunte on the same corridor, and the presence of Purva Zentech, Puravankara's own IT/business park just down the road, is a genuine point in Vajarahalli's favour: it means this locality is developing as a live-work corridor, not just a residential pocket riding on someone else's commercial growth.</p>
+
+          <h2>4. The Project: Scale and Configurations</h2>
+          <p>Purva Kanakapura Road Vajarahalli is planned as high-rise towers (2 basements + ground + 29 floors) on approximately 3.6 acres, with around 250 residences, a genuinely low unit count for a tower of this height, which typically translates into larger, more spacious floor plates per unit. Two configurations are planned: a 3 BHK (Compact) at roughly 1,900 to 1,950 Sq.Ft, and a 3.5/4 BHK at roughly 2,100 to 2,250 Sq.Ft. Neither configuration has a confirmed unit-wise floor plan released publicly yet; the sizes above are the developer's own indicative range, and should be treated as such until RERA-registered floor plans are available.</p>
+
+          <h2>5. Pricing</h2>
+          <table>
+            <thead><tr><th>Configuration</th><th>Area</th><th>Approx. Starting Price</th></tr></thead>
+            <tbody>
+              <tr><td>3 BHK (Compact)</td><td>~1,900-1,950 Sq.Ft</td><td>~₹2.76 Cr*</td></tr>
+              <tr><td>3.5 / 4 BHK</td><td>~2,100-2,250 Sq.Ft</td><td>~₹3.05 Cr*</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Pre-launch/EOI pricing at a base rate of ~₹14,500 per Sq.Ft, as shared by the developer's marketing team. Subject to change at formal launch.</p>
+          <p>At ~₹14,500 per Sq.Ft, this pre-launch rate sits at the premium end for the broader Kanakapura Road corridor, reflecting both the metro-adjacent location on the main road itself and Puravankara's brand positioning. Pre-launch/EOI pricing is typically the lowest a project will see before formal launch premiums are added, so buyers who register interest early sometimes capture better per-square-foot rates. That has to be weighed against the added uncertainty of a project that has not yet secured RERA registration, and whose working name still varies depending on which marketing channel you found it through.</p>
+
+          <h2>6. What's Still Unconfirmed</h2>
+          <p>As with any pre-launch project, several things are not yet public, and this applies regardless of which of the project's working names brought you here:</p>
+          <ul>
+            <li><strong>RERA registration:</strong> Not yet filed/approved as of this review. No RERA number exists yet; be wary of any listing that shows one.</li>
+            <li><strong>Final project name:</strong> Marketed variously as Purva Kanakapura Road Vajarahalli, Purva Hallmark, and Purva Diamond Vajarahalli.</li>
+            <li><strong>Detailed floor plans and tower elevations:</strong> Not yet released publicly.</li>
+            <li><strong>Final possession date:</strong> December 2031 is the developer's current indicative target, subject to change once RERA registration formalises the commitment.</li>
+          </ul>
+
+          <h2>7. Amenities (Planned)</h2>
+          <p>The developer's current marketing material lists a multi-level clubhouse with indoor games, co-working spaces and event halls; a temperature-controlled swimming pool, gym, badminton and basketball courts, and jogging/cycling tracks; plus 24/7 3-tier security, video door phones, vehicle-free pedestrian zones, EV charging, solar lighting and rainwater harvesting. As with all pre-launch amenity lists, treat this as a plan rather than a guarantee until it is reflected in RERA-registered project documents.</p>
+
+          <h2>8. Frequently Asked Questions</h2>
+          <h3>Is this the same project as Purva Hallmark?</h3>
+          <p>Yes. Based on the identical site (Sy No. 19/2, Vajarahalli), acreage, unit count, configurations and pricing shared across both names' marketing material, "Purva Kanakapura Road Vajarahalli" and "Purva Hallmark" describe the same pre-launch project, marketed under different working names before RERA registration.</p>
+          <h3>Why does the name describe a road and locality instead of a project brand?</h3>
+          <p>Some pre-launch marketing, particularly broker-driven listings, describes a project by its exact location rather than a brand name, especially before a developer has finalised and publicised an official project name. That is the pattern here.</p>
+          <h3>Should I wait for the RERA-registered name before enquiring?</h3>
+          <p>No, you can register interest under any of the project's current working names, since all point to the same sales team and site. What you should wait for is RERA registration itself before making any binding payment.</p>
+
+          <h2>Our Honest Assessment</h2>
+          <p>This project's strongest, most durable selling point is its position directly on Kanakapura Main Road with genuine metro-adjacency, roughly 280 metres from Thalaghattapura Station is a rare, verifiable advantage that does not depend on future infrastructure delivery. Puravankara's listed, fifty-year track record also reduces, though does not eliminate, developer risk relative to smaller pre-launch players. That said, this remains an early-stage, non-RERA-registered listing marketed under at least three different names in the market: floor plans are not public, the project's own branding is still unsettled, and pricing is EOI-stage rather than final. If you are evaluating this corridor, it is worth comparing against RERA-registered inventory like <a href="/projects/wonder-woods/" class="money-link">Aparna Wonder Woods</a> before committing capital to a pre-launch position, and if you do proceed with this project under whichever name you encountered it, register interest to get updates, but hold off on any binding payment until RERA registration is confirmed and independently verified on the Karnataka RERA portal.</p>
+        </div>
+                <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/purva-kanakapura-road-vajarahalli/" class="related-card">
+              <img src="../../images/projects/purva-kanakapura-road-vajarahalli/purva-kanakapura-road-vajarahalli-banner.webp" alt="Purva Kanakapura Road Vajarahalli" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Purva Kanakapura Road Vajarahalli</p>
+                <p class="related-card-detail">~250 Residences &middot; Vajarahalli, Kanakapura Road</p>
+              </div>
+            </a>
+            <a href="/projects/purva-hallmark/" class="related-card">
+              <img src="../../images/projects/purva-hallmark/purva-hallmark-banner.webp" alt="Purva Hallmark, same project under its other marketing name" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Same Project, Other Name</p>
+                <p class="related-card-title">Purva Hallmark</p>
+                <p class="related-card-detail">~250 Residences &middot; Vajarahalli, Kanakapura Road</p>
+              </div>
+            </a>
+            <a href="/blog/kanakapura-road-connectivity-nice-road-metro/" class="related-card">
+              <img src="../../images/projects/sattva-forest-ridge/Sattva-forestridge-location.webp" alt="Kanakapura Road Connectivity Guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Kanakapura Road Connectivity Guide</p>
+                <p class="related-card-detail">6 Min Read &middot; Infrastructure</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by the Luxura Habitat Team</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+            <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/purva-kanakapura-road-vajarahalli/purva-kanakapura-road-vajarahalli-banner.webp" alt="Purva Kanakapura Road Vajarahalli" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Purva Kanakapura Road Vajarahalli</p>
+            <ul class="sidebar-specs">
+              <li>~250 Residences &middot; ~3.6 Acres</li>
+              <li>Pre-Launch &middot; RERA In Process</li>
+              <li>From ₹2.76 Cr* onwards</li>
+              <li>Vajarahalli, Kanakapura Road</li>
+            </ul>
+            <a href="/projects/purva-kanakapura-road-vajarahalli/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Kanakapura Road Projects</h4>
+          <a href="/projects/purva-kanakapura-road-vajarahalli/">Purva Kanakapura Road Vajarahalli</a>
+          <a href="/projects/purva-hallmark/">Purva Hallmark</a>
+          <a href="/projects/wonder-woods/">Aparna Wonder Woods</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
