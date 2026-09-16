@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Concorde Hennur Apartments: Our Honest Review</title>
+  <meta name="description" content="Our honest review of Concorde Hennur (officially Concorde Sienna): what we liked, what gave us pause, real pricing, RERA status and who it suits.">
+  <meta name="keywords" content="Concorde Hennur, Concorde Hennur review, Concorde apartments Hennur, Concorde Hennur price, Concorde Hennur RERA, Concorde Sienna, apartments in Hennur Main Road Bangalore">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/concorde-hennur-apartments-review/">
+  <meta property="og:title" content="Concorde Hennur Apartments: Our Honest Review | Luxura Habitat">
+  <meta property="og:description" content="What we liked, what gave us pause, real pricing and RERA verification for Concorde Hennur (Concorde Sienna), North Bengaluru.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/concorde-hennur/concorde-hennur-banner.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Concorde Hennur Apartments: Our Honest Review">
+  <meta name="twitter:description" content="What we liked, what gave us pause, real pricing and RERA verification for Concorde Hennur, North Bengaluru.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/concorde-hennur/concorde-hennur-banner.webp">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Hennur, Kannuru, Bengaluru">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: var(--space-md) 0; }
+    .verdict-card { border-radius: 12px; padding: 20px 22px; border: 1px solid rgba(0,0,0,0.06); }
+    .verdict-card.liked { background: #f2f8f4; border-left: 5px solid #2f9e5b; }
+    .verdict-card.paused { background: #fdf5f0; border-left: 5px solid var(--accent-copper); }
+    .verdict-card h4 { font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 10px; }
+    .verdict-card.liked h4 { color: #1e6b3d; }
+    .verdict-card.paused h4 { color: #a8571f; }
+    .verdict-card ul { margin: 0; padding-left: 20px; }
+    .verdict-card li { font-size: 0.94rem; margin-bottom: 8px; }
+    @media (max-width: 600px) { .verdict-grid { grid-template-columns: 1fr; } }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "Apartment",
+          "name": "Concorde Hennur",
+          "alternateName": "Concorde Sienna"
+        },
+        "author": { "@type": "Person", "name": "Narayanan Rajesh" },
+        "reviewBody": "Concorde Hennur (officially Concorde Sienna) is a genuinely low-density single-tower pick on Hennur Main Road with a strong amenity package, though the two-lift, six-unit-per-floor design and a market-reported 2030 possession window are worth weighing before you book.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/concorde-hennur-apartments-review/"
+        },
+        "headline": "Concorde Hennur Apartments: Our Honest Review",
+        "description": "Our honest review of Concorde Hennur apartments (officially Concorde Sienna): what we liked, what gave us pause, real pricing, RERA status and who it actually suits.",
+        "image": "https://luxurahabitat.com/images/projects/concorde-hennur/concorde-hennur-banner.webp",
+        "datePublished": "2026-09-15",
+        "dateModified": "2026-09-15",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "url": "https://luxurahabitat.com/blog/concorde-hennur-apartments-review/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Concorde Hennur Apartments: Our Honest Review", "item": "https://luxurahabitat.com/blog/concorde-hennur-apartments-review/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Concorde Hennur a different project from Concorde Sienna?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No, they are the same project. Concorde Hennur is the developer-plus-locality name buyers commonly search for; Concorde Sienna is the project's official marketing name, printed on its RERA certificate and brochure." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Concorde Hennur cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "2 BHK homes (1,200-1,221 sq.ft) start from Rs.1.26 Cr onwards, and the range runs up to Rs.1.96 Cr for the largest 3 BHK (1,870 sq.ft). Please enquire for the current, verified pre-launch price list." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Concorde Hennur RERA registered?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The project is registered under Karnataka RERA number PRM/KA/RERA/1251/446/PR/220626/008740, filed under its official name, Concorde Sienna. Verify this independently on the RERA Karnataka portal before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the biggest drawback of Concorde Hennur?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The single-tower design packs roughly 269-270 apartments behind just 2 lifts and 2 staircases per the plans we reviewed, which is worth weighing for peak-hour wait times. The July 2030 possession date is also a market-reported figure rather than the developer's own RERA filing." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">Bangalore &amp; Chennai RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Concorde Hennur Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Concorde Hennur Apartments: Our Honest Review</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published September 15, 2026</span><span>&bull;</span><span>10 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="../../images/projects/concorde-hennur/concorde-hennur-banner.webp" alt="Concorde Hennur apartments review" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+        <p>If you searched <strong>"Concorde Hennur"</strong>, you already know the developer and the locality, just not necessarily the project's registered brand name: this launch is officially sold as <strong>Concorde Sienna</strong>. That naming gap trips up a fair number of buyers, especially when they get to the RERA verification step and the certificate shows a name they don't recognise. So before anything else, we're clearing that up, then walking through what we actually liked about this tower, what gave us pause, and the numbers you need before you call the sales team.</p>
+
+        <h2>First, the Naming: Why "Concorde Hennur" and "Concorde Sienna" Are the Same Project</h2>
+        <p>Concorde Group has filed this pre-launch project under the marketing name Concorde Sienna, and that is the name printed on the RERA certificate, the brochure, and every official document you'll be asked to sign. But because it's a Concorde-developed tower sitting directly on Hennur Main Road, a large share of prospective buyers simply search "Concorde Hennur" instead &mdash; the developer plus the locality, which is how most people actually describe a project to a friend or an agent before they know its formal name. If that's how you landed here, you're in the right place, and the facts below apply to both names equally: it's one tower, one RERA filing, one price list.</p>
+
+        <div class="verdict-grid">
+          <div class="verdict-card liked">
+            <h4>What We Liked</h4>
+            <ul>
+              <li>A single-tower format genuinely delivers 70% open space on a compact 3.05-acre plot, rare for a project this tall</li>
+              <li>Established developer with two other live North Bengaluru projects (Concorde Mayfair, Concorde Neo) to cross-check build quality against</li>
+              <li>Sky-deck clubhouse, infinity pool and a dedicated co-working lounge are a genuine fit for the professional buyer this corridor attracts</li>
+              <li>RERA registration is already in place at the pre-launch stage and independently verifiable today</li>
+              <li>Pre-launch entry pricing from &#8377;1.26 Cr undercuts several established stretches of the wider Hebbal-Manyata belt</li>
+            </ul>
+          </div>
+          <div class="verdict-card paused">
+            <h4>What Gave Us Pause</h4>
+            <ul>
+              <li>Just 2 lifts and 2 staircases are planned to serve roughly 270 apartments across a 28-29 floor tower &mdash; worth asking about at peak hours</li>
+              <li>The July 2030 possession date circulating on listing platforms is market-reported, not the developer's own RERA-filed date</li>
+              <li>Carpet area and maintenance figures come from pre-booking sheets, not an official filing, so they need direct confirmation</li>
+              <li>Only 2 and 3 BHK configurations are on offer &mdash; no 1 BHK or 4 BHK option if your budget or family size sits outside that band</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Location: What Hennur Main Road Actually Offers Today</h2>
+        <p>The site sits on Hennur Main Road in Kannuru Village, Bangalore East, a corridor wedged between the established Hebbal-Manyata belt and the still-developing Thanisandra-Bagalur stretch. That in-between position is exactly why it's drawing attention right now: prices haven't caught up to Hebbal yet, but the connectivity is already close to it. Here's the proximity snapshot we verified against the project's own material:</p>
+        <ul>
+          <li><strong>Connectivity:</strong> Kannur Junction (1.2 km), Outer Ring Road / Hebbal interchange (short drive), Kempegowda International Airport (16.5 km), Yeshwanthpur Metro (nearest connected station)</li>
+          <li><strong>Employment hubs:</strong> Manyata Tech Park (7-10 km via ORR and Hebbal)</li>
+          <li><strong>Schools:</strong> Legacy School, Vibgyor High</li>
+          <li><strong>Hospitals:</strong> Aster CMI Hospital, Manipal Hospital Hebbal</li>
+          <li><strong>Shopping:</strong> Bhartiya Mall of Bengaluru (3.2 km), Decathlon (3.6 km)</li>
+        </ul>
+        <p>The site itself backs onto a lake and nala buffer along its western edge, which the developer is using as a natural green boundary rather than building right up to it &mdash; a genuinely useful detail if you care about what's immediately outside your windows, and one that doesn't always show up in a project's headline marketing.</p>
+
+        <h2>The Project Itself: A Single Landmark Tower, Not a Sprawling Layout</h2>
+        <p>Concorde Sienna (the name you'll see on the actual RERA certificate) is a single vertical tower rising to approximately 92 metres &mdash; 2 basements, ground, and either 28 or 29 floors depending on the block. That's a deliberate design choice: instead of spreading a similar unit count across several mid-rise blocks, Concorde Group opted for one landmark structure on the 3.05-acre plot, which is what frees up close to 70% of the surface for landscaped greenery, sports zones and the sky-deck clubhouse. Total inventory is capped at roughly 269 to 270 apartments, exclusively 2 BHK and 3 BHK, so despite the height, density per floor stays genuinely low at 6 apartments per floor.</p>
+        <p>That low per-floor density is real, but it comes with a trade-off we think is worth naming plainly: with only 2 lifts and 2 staircases serving the entire tower's 28-29 floors, the vertical circulation math is tighter than it looks on paper. Six apartments waiting on two lifts during a 9 AM weekday isn't unusual in single-tower Bangalore high-rises, but it's exactly the kind of detail that doesn't show up in a brochure render and is worth asking the sales team to walk you through directly, ideally by comparing it against how Concorde Mayfair or Concorde Neo handle the same math in their own towers.</p>
+
+        <h2>Pricing and Area, Configuration by Configuration</h2>
+        <div style="overflow-x:auto;">
+        <table style="min-width:560px;">
+          <thead><tr><th>Configuration</th><th>Super Built-Up Area</th><th>Carpet Area (Approx.)</th><th>Starting Price</th></tr></thead>
+          <tbody>
+            <tr><td>2 BHK</td><td>1,200-1,221 sq.ft</td><td>816-830 sq.ft</td><td>&#8377;1.26 Cr onwards</td></tr>
+            <tr><td>3 BHK (2 Toilet)</td><td>1,552-1,578 sq.ft</td><td>1,055-1,271 sq.ft</td><td>&#8377;1.63 Cr onwards</td></tr>
+            <tr><td>3 BHK (3 Toilet Compact)</td><td>~1,680 sq.ft</td><td>1,055-1,271 sq.ft</td><td>&#8377;1.76 Cr onwards</td></tr>
+            <tr><td>3 BHK (3 Toilet Large)</td><td>1,870 sq.ft</td><td>1,055-1,271 sq.ft</td><td>&#8377;1.96 Cr onwards</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p style="font-size:0.85rem;color:#888;margin-top:8px;">*Indicative pre-launch pricing. Please <a href="/projects/concorde-hennur/#form" class="money-link">enquire for the current, verified price list</a> and availability.</p>
+        <p>We want to flag something upfront: the carpet area figures above, and the estimated monthly maintenance (roughly &#8377;4,800-4,900 for a 2 BHK and &#8377;6,200-7,500 for a 3 BHK), come from pre-booking sheets circulating in the market rather than the developer's own official RERA filing. They're a useful planning reference, but they're not the number you should sign against. Ask the sales team for the RERA-declared carpet area and the developer's own maintenance estimate for your specific unit before you book, not the version currently doing the rounds online.</p>
+
+        <h2>Amenities: Built for a Professional, Not a Sprawling Family Township</h2>
+        <p>The amenity list leans deliberately toward working professionals rather than the everything-included township model some larger developments go for: a sky-deck clubhouse with an infinity pool and a separate kids' pool, a gymnasium, a yoga and meditation studio, spa/sauna/steam facilities, indoor and outdoor sports courts, a banquet hall and an indoor amphitheatre. The standout for us is the dedicated co-working lounge &mdash; a genuinely practical addition for a corridor that's increasingly home to IT professionals commuting to Manyata Tech Park, and not something every single-tower project in this price band bothers to include. Smart-home provisions and EV charging points round out the list, both table stakes at this price point now but still worth confirming are actually wired in at handover rather than left as a "provision" that requires a separate cost later.</p>
+
+        <h2>RERA Verification &mdash; Do This Before You Book</h2>
+        <p>The project carries Karnataka RERA registration number <strong>PRM/KA/RERA/1251/446/PR/220626/008740</strong>, filed under the name Concorde Sienna. Confirm this independently on the RERA Karnataka portal before signing anything &mdash; not because we doubt the registration, but because that's the standard we'd apply to any project regardless of developer reputation, and because the name mismatch (Hennur vs. Sienna) is precisely the kind of detail that makes it worth double-checking you're looking at the right certificate for the right tower.</p>
+
+        <h2>Our Verdict</h2>
+        <p>Concorde Hennur, officially Concorde Sienna, earns a place on our shortlist for this corridor: a genuinely low-density single-tower format, an amenity package that actually suits the buyer this location attracts, and pre-launch pricing that's still competitive against the wider Hebbal-Manyata belt. Where we'd tell a buyer to slow down and ask direct questions is the lift-to-unit ratio across a 28-29 floor tower, and the gap between the market-reported 2030 possession estimate and whatever date the developer eventually files with RERA. Neither is a dealbreaker, but both are worth a direct conversation with the sales team rather than taking the brochure at face value. If you want a lifestyle-first, single-tower home on Hennur Main Road and you're comfortable with a pre-launch timeline, it's worth a site visit.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">Is Concorde Hennur a different project from Concorde Sienna?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No, they are the same project. Concorde Hennur is the developer-plus-locality name buyers commonly search for; Concorde Sienna is the project's official marketing name, printed on its RERA certificate and brochure.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What does Concorde Hennur cost?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">2 BHK homes (1,200-1,221 sq.ft) start from Rs.1.26 Cr onwards, and the range runs up to Rs.1.96 Cr for the largest 3 BHK (1,870 sq.ft). Please enquire for the current, verified pre-launch price list.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">Is Concorde Hennur RERA registered?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes. The project is registered under Karnataka RERA number PRM/KA/RERA/1251/446/PR/220626/008740, filed under its official name, Concorde Sienna. Verify this independently on the RERA Karnataka portal before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What is the biggest drawback of Concorde Hennur?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The single-tower design packs roughly 269-270 apartments behind just 2 lifts and 2 staircases per the plans we reviewed, which is worth weighing for peak-hour wait times. The July 2030 possession date is also a market-reported figure rather than the developer's own RERA filing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/concorde-hennur/" class="related-card">
+              <img src="../../images/projects/concorde-hennur/concorde-hennur-elevation-2.webp" alt="Concorde Hennur" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Concorde Hennur</p>
+                <p class="related-card-detail">2 &amp; 3 BHK &middot; Hennur Main Road, Bengaluru</p>
+              </div>
+            </a>
+            <a href="/blog/concorde-sienna-hennur-price-layout-rera/" class="related-card">
+              <img src="../../images/projects/concorde-sienna/concorde-sienna-elevation-1.webp" alt="Concorde Sienna Price, Layout and RERA Review" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Concorde Sienna: Price, Layout &amp; RERA</p>
+                <p class="related-card-detail">8 Min Read &middot; Project Review</p>
+              </div>
+            </a>
+            <a href="/blog/purva-codename-skye-vs-concorde-sienna-hennur/" class="related-card">
+              <img src="../../images/projects/purva-codename-skye/purva-codename-skye-banner.webp" alt="Purva Codename Skye vs Concorde Sienna compared" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Purva Codename Skye vs Concorde Sienna</p>
+                <p class="related-card-detail">10 Min Read &middot; Project Comparison</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating South Indian real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="../../images/projects/concorde-hennur/concorde-hennur-elevation-1.webp" alt="Concorde Hennur" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Concorde Hennur</p>
+            <ul class="sidebar-specs">
+              <li>2 &amp; 3 BHK &middot; Single 92m Tower</li>
+              <li>70% Open Space &middot; Sky-Deck Clubhouse</li>
+              <li>From &#8377;1.26 Cr onwards</li>
+              <li>Hennur Main Road, Kannuru, Bengaluru</li>
+            </ul>
+            <a href="/projects/concorde-hennur/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>Independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across Bangalore and Chennai.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Concorde Hennur</h4>
+          <a href="/projects/concorde-hennur/">Project Overview</a>
+          <a href="/blog/concorde-sienna-hennur-price-layout-rera/">Price, Layout &amp; RERA Review</a>
+          <a href="/blog/purva-codename-skye-vs-concorde-sienna-hennur/">vs Purva Codename Skye</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
