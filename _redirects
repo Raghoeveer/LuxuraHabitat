@@ -21,3 +21,10 @@
 # URL 404s but is still indexed by Google (ranking pos ~2 for "assetz mizu and
 # ki" queries), so redirect it instead of losing that search equity.
 /projects/assetz-codename-paradise/*          /projects/assetz-mizu-and-ki/     301
+
+# Sattva Ekatra Doddaballapur Plots was a deliberate near-duplicate of Sattva
+# Thippapura (same underlying project, different name framing). Removed
+# 2026-09-17 to reduce the site's duplicate-content footprint; redirected
+# instead of 404 in case either URL is indexed or externally linked.
+/projects/sattva-ekatra-doddaballapur-plots/*        /projects/sattva-thippapura/                              301
+/blog/sattva-ekatra-doddaballapur-price-plots-rera/*  /blog/sattva-thippapura-doddaballapur-price-plots-rera/   301

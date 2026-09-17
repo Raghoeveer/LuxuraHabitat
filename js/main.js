@@ -212,7 +212,6 @@ function initBlogBrochurePopup() {
     '/projects/purva-codename-skye/': 'f6cde344-a193-40a8-8b47-b66f24d55f9f',
     '/projects/purva-hallmark/': 'cd498e23-5c73-459c-bc6f-2e31a790d89f',
     '/projects/sattva-aeropolis/': 'a41ede52-e0aa-4c13-aa7f-cfd3676bb911',
-    '/projects/sattva-ekatra-doddaballapur-plots/': 'a7b4dbfa-7d56-43c3-929d-cc7821f47fcd',
     '/projects/sattva-forest-ridge/': 'a832d04e-8138-4d22-808c-d504c22f02f6',
     '/projects/sattva-green-groves/': 'fbb07716-bda4-45c9-96cc-76286a94dc08',
     '/projects/sattva-la-vita/': '6e79c430-ddd9-4967-aae9-ae056d8a4134',
