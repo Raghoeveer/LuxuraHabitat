@@ -31,12 +31,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Brigade Jeevan Sandhya, Kanakapura Road: pre-launch 3 &amp; 4 BHK apartments by Brigade Group near Vajarahalli Metro. From &#8377;3 Cr*.">
-    <meta name="keywords" content="Brigade Jeevan Sandhya, Brigade Jeevan Sandhya price, Brigade Jeevan Sandhya Kanakapura Road, Brigade Kanakapura Road, Brigade Group pre-launch, ultra luxury apartments Kanakapura Road, 3 BHK 4 BHK Vajarahalli, Brigade Group Bangalore, pre-launch apartments South Bangalore">
+    <meta name="description" content="Brigade Jeevan Sandhya, Kanakapura Road: pre-launch 3, 3.5 &amp; 4 BHK apartments by Brigade Group near Raghuvanahalli Cross Metro. From &#8377;3.09 Cr*.">
+    <meta name="keywords" content="Brigade Jeevan Sandhya, Brigade Jeevan Sandhya price, Brigade Jeevan Sandhya Kanakapura Road, Brigade Jeevan Sandhya Raghuvanahalli, Brigade Kanakapura Road, Brigade Group pre-launch, ultra luxury apartments Kanakapura Road, 3 BHK 4 BHK Raghuvanahalli, Brigade Group Bangalore, pre-launch apartments South Bangalore">
     <meta name="author" content="Luxura Habitat">
 
     <meta property="og:title" content="Brigade Jeevan Sandhya, Kanakapura Road | Pre-Launch Ultra-Luxury Apartments">
-    <meta property="og:description" content="135 ultra-luxury 3 &amp; 4 BHK homes by Brigade Group on Kanakapura Road, near Vajarahalli Metro. Pre-launch pricing from &#8377;3 Cr*.">
+    <meta property="og:description" content="2-acre ultra-luxury 3, 3.5 &amp; 4 BHK homes by Brigade Group on Kanakapura Road, near Raghuvanahalli Cross Metro. Pre-launch pricing from &#8377;3.09 Cr*.">
     <meta property="og:image" content="https://luxurahabitat.com/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-hero.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxurahabitat.com/projects/brigade-jeevan-sandhya/">
@@ -44,7 +44,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Brigade Jeevan Sandhya, Kanakapura Road | Pre-Launch Ultra-Luxury Apartments">
-    <meta name="twitter:description" content="135 ultra-luxury 3 &amp; 4 BHK homes by Brigade Group on Kanakapura Road, near Vajarahalli Metro. Pre-launch pricing from &#8377;3 Cr*.">
+    <meta name="twitter:description" content="2-acre ultra-luxury 3, 3.5 &amp; 4 BHK homes by Brigade Group on Kanakapura Road, near Raghuvanahalli Cross Metro. Pre-launch pricing from &#8377;3.09 Cr*.">
     <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-hero.jpg">
 
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -371,6 +371,38 @@
         .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
         .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); margin-top: 0.55rem; }
 
+        .amenity-photo-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; margin-bottom: 2.4rem; }
+        .amenity-photo-card { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 6px 18px rgba(2,6,23,0.1); aspect-ratio: 3 / 4; }
+        .amenity-photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+        .amenity-photo-card:hover img { transform: scale(1.08); }
+        .amenity-photo-card span { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.6rem 0.5rem 0.55rem; background: linear-gradient(0deg, rgba(5,8,15,0.82) 0%, rgba(5,8,15,0) 100%); color: #fff; font-size: 0.74rem; font-weight: 800; text-align: center; }
+
+        .config-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+        .config-card { background: #fff; border-radius: 14px; padding: 1.6rem 1.3rem; text-align: center; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .config-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(2,6,23,0.12); }
+        .config-badge { display: inline-block; background: rgba(43,77,117,0.1); color: var(--accent-green); font-weight: 900; font-size: 0.82rem; letter-spacing: 0.4px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 0.9rem; }
+        .config-size { color: var(--text-light); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .config-price { color: var(--primary-dark); font-weight: 900; font-size: 1.5rem; }
+        .config-note { color: var(--text-light); font-size: 0.78rem; margin-bottom: 1rem; }
+        .config-link { display: inline-block; color: var(--accent-warm); font-weight: 800; font-size: 0.88rem; text-decoration: none; }
+        .config-link:hover { text-decoration: underline; }
+
+        .floor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+        .floor-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .floor-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(2,6,23,0.12); }
+        .floor-image { width: 100%; height: 240px; padding: 0.8rem; background: var(--bg-light); }
+        .floor-image img { width: 100%; height: 100%; object-fit: contain; cursor: pointer; transition: transform 0.45s ease; }
+        .floor-card:hover .floor-image img { transform: scale(1.03); }
+        .floor-info { padding: 1.2rem; }
+        .floor-type { font-weight: 900; color: var(--primary-dark); font-size: 1.1rem; font-family: 'Playfair Display', serif; }
+        .floor-size { color: var(--accent-warm); font-weight: 700; font-size: 0.9rem; margin: 0.3rem 0 0.8rem; }
+        .floor-details { display: flex; padding: 0.7rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); margin-bottom: 0.9rem; }
+        .detail-item { display: flex; flex-direction: column; }
+        .detail-label { color: var(--text-light); font-size: 0.76rem; margin-bottom: 0.2rem; }
+        .detail-value { font-weight: 900; color: var(--primary-dark); font-size: 1rem; }
+        .floor-cta { width: 100%; padding: 0.75rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-weight: 800; font-size: 0.85rem; cursor: pointer; transition: background 0.2s ease; }
+        .floor-cta:hover { background: var(--secondary-dark); }
+
         .plan { background: var(--bg-white); }
         .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
         .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
@@ -535,6 +567,9 @@
             .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
             .hero-media { display: none; }
             .sidebar-widget { display: none; }
+            .amenity-photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .config-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .floor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
 
         .mobile-bottom-cta { display: none; }
@@ -581,6 +616,9 @@
             .nav-buttons { display: none !important; }
 
             .amenity-grid { grid-template-columns: 1fr; }
+            .amenity-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .config-grid { grid-template-columns: 1fr; }
+            .floor-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; }
             .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
             .features-list { grid-template-columns: 1fr 1fr; }
@@ -672,7 +710,7 @@
         {
           "@type": "RealEstateListing",
           "name": "Brigade Jeevan Sandhya",
-          "description": "Pre-launch ultra-luxury high-rise apartments by Brigade Group on Kanakapura Road, near Vajarahalli Metro Station, South Bengaluru: 135 units across 20 floors.",
+          "description": "Pre-launch ultra-luxury apartments by Brigade Group on Kanakapura Road, near Raghuvanahalli Cross Metro Station, South Bengaluru. 3, 3.5 and 4 BHK homes across 2 towers on 2 acres.",
           "url": "https://luxurahabitat.com/projects/brigade-jeevan-sandhya/",
           "image": "https://luxurahabitat.com/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-hero.jpg"
         },
@@ -681,7 +719,7 @@
           "name": "Brigade Jeevan Sandhya",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Kanakapura Road, Near Vajarahalli Metro Station",
+            "streetAddress": "Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli",
             "addressLocality": "Bengaluru",
             "addressRegion": "Karnataka",
             "addressCountry": "IN"
@@ -700,32 +738,102 @@
             {
               "@type": "Question",
               "name": "What is Brigade Jeevan Sandhya and who is the developer?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group, located on Kanakapura Road, South Bengaluru, near Vajarahalli Metro Station. The project is planned as a 20-floor tower with 135 ultra-luxury 3 &amp; 4 BHK homes across 2 acres." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group, located on Kanakapura Main Road, Raghuvanahalli, South Bengaluru. The project is planned across 2 towers on approximately 2 acres, offering 3, 3.5 and 4 BHK ultra-luxury homes." }
             },
             {
               "@type": "Question",
               "name": "Where is Brigade Jeevan Sandhya located?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is located on Kanakapura Road, South Bengaluru, close to Vajarahalli Metro Station on the Green Line, with onward access to Doddakallasandra, Konanakunte Cross, JP Nagar and Banashankari metro stations along the same corridor." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is located at Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli, Bengaluru, Karnataka 560062, close to Raghuvanahalli Cross Metro Station." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the total land area of Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is spread across approximately 2 acres at Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, developed across 2 towers, Block 1 (T-01) and Block 2 (T-02)." }
             },
             {
               "@type": "Question",
               "name": "What configurations and pricing does Brigade Jeevan Sandhya offer?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya offers 3 and 4 BHK ultra-luxury apartments ranging from approximately 2,100 to 2,600 Sq.Ft, with indicative pre-launch pricing starting at approximately ₹3 Crore onwards. These are pre-launch figures and subject to change." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya offers 3 BHK (2,010 Sq.Ft), 3 BHK Premium (2,158 Sq.Ft) and 4 BHK (2,685 Sq.Ft) ultra-luxury apartments, with indicative pre-launch pricing from approximately ₹3.09 Crore for the 3 BHK up to ₹4.26 Crore for the 4 BHK. These are pre-launch figures and subject to change." }
             },
             {
               "@type": "Question",
               "name": "Is Brigade Jeevan Sandhya RERA registered?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is currently in pre-launch stage and RERA registration is in process. No RERA number is available yet, and Luxura Habitat does not display or imply one. Under RERA rules, a project cannot be formally booked or advertised for sale until it is registered — please treat any pre-launch pricing as indicative only, and always verify current RERA status on the Karnataka RERA portal (rera.karnataka.gov.in) before making any payment." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Brigade Jeevan Sandhya is currently in pre-launch stage and RERA registration is in process, with approval expected during 2026. No RERA number is available yet, and Luxura Habitat does not display or imply one. Under RERA rules, a project cannot be formally booked or advertised for sale until it is registered, so please treat any pre-launch pricing as indicative only, and always verify current RERA status on the Karnataka RERA portal (rera.karnataka.gov.in) before making any payment." }
             },
             {
               "@type": "Question",
-              "name": "How many units and floors does Brigade Jeevan Sandhya have?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The project is planned as a single 20-floor tower with 135 ultra-luxury apartments on approximately 2 acres of land." }
+              "name": "What city and land approvals has Brigade Jeevan Sandhya applied for?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Alongside Karnataka RERA registration, the developer indicates it has applied for approvals from BBMP, BDA and BMRDC for Brigade Jeevan Sandhya, with the required documentation submitted. Please verify current approval status independently before making any payment." }
             },
             {
               "@type": "Question",
-              "name": "When is the expected possession date for Brigade Jeevan Sandhya?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The developer's indicative possession target is December 2030. As with any pre-launch project, this is subject to change and will be formally confirmed once RERA registration is complete." }
+              "name": "How many towers and units does Brigade Jeevan Sandhya have?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The project is planned across 2 towers (Block 1, Tower T-01 and Block 2, Tower T-02) on approximately 2 acres of land. Exact floor and total unit counts have not been released by the developer yet." }
+            },
+            {
+              "@type": "Question",
+              "name": "When is the expected launch and possession date for Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer's indicative pre-launch date is August 2026, with formal launch targeted for 15 September 2026. Possession is indicatively planned for October 2031, roughly 5 years from launch. As with any pre-launch project, these dates are subject to change and will be formally confirmed once RERA registration is complete." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I see the Brigade Jeevan Sandhya master plan and floor plans?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. An illustrative site master plan and floor plans for the 3 BHK and 4 BHK configurations are available in the Master Plan and Floor Plans sections of this page. The 3 BHK Premium floor plan, exact tower-wise unit distribution and the final RERA-approved layout will be released by the developer at formal launch." }
+            },
+            {
+              "@type": "Question",
+              "name": "Are Brigade Jeevan Sandhya homes designed according to Vaastu?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer's current marketing material describes Brigade Jeevan Sandhya homes as planned according to Vaastu principles. As with other pre-launch details, confirm unit-wise orientation against the final RERA-approved floor plans at formal launch." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which is the nearest metro station to Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The nearest metro station is Raghuvanahalli Cross Metro Station, about 500 meters from the project, roughly a 2-minute walk, connecting onward to the wider Bengaluru Metro network." }
+            },
+            {
+              "@type": "Question",
+              "name": "How far is Brigade Jeevan Sandhya from the airport and railway station?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Kempegowda International Airport is approximately 55 km away via NH-44, about a 90-minute drive. Kengeri Railway Station is about 12.1 km away, roughly a 31-minute drive." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which IT hubs and employment centres are close to Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Electronic City is about 30 minutes away via NICE Road, Global Village Tech Park is nearby along the Kanakapura Road corridor, and the Bannerghatta Road office belt is also within easy reach." }
+            },
+            {
+              "@type": "Question",
+              "name": "What amenities are planned at Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Planned amenities span fitness, leisure and family-focused spaces, including a gymnasium, swimming pool, yoga pavilion, clubhouse, mini theater, indoor games room, tennis court, kids' activity zone, jogging track and 24/7 CCTV monitoring. The developer's marketing material describes the full amenity program as spanning 40+ planned spaces, to be confirmed at formal launch." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I visit a sample or model apartment at Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer plans to open sample model apartments in 3 BHK and 4 BHK configurations at the project site closer to launch, letting buyers walk through actual room sizes and finishes before booking. Enquire for the latest visit schedule." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the Expression of Interest (EOI) process for Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer plans to open an online Expression of Interest (EOI) process ahead of formal launch. Registering early lets you indicate a preferred configuration and get first access to pricing and unit selection once EOI opens. Register your interest on this page to be notified." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the indicative payment plan for Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer's current indicative structure is 10% on booking, 10% on signing the agreement, with the remaining amount linked to construction milestones. This pre-launch structure may be revised at formal launch, so get the confirmed schedule in writing before paying." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which banks approve home loans for Brigade Jeevan Sandhya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The developer indicates in-principle approvals from SBI, HDFC, Kotak Mahindra, ICICI and Axis Bank, so home loan processing should be straightforward once RERA registration is complete. Always verify current approval status directly with your chosen bank." }
+            },
+            {
+              "@type": "Question",
+              "name": "What taxes and charges apply over and above the base price?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Buyers should budget for GST at 5% on under-construction units, Stamp Duty at 5% of property value per Karnataka state rules, Registration Charges at 1% of the agreement value, and an annual BBMP Property Tax based on unit size and location. Confirm current rates with your advisor before booking." }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is Kanakapura Road, Raghuvanahalli a good location to invest in?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Kanakapura Road, Raghuvanahalli combines genuine walk-to-metro access with pre-launch entry pricing that is typically the lowest a project sees before formal launch premiums are added. The corridor also has improving social infrastructure, schools, hospitals and retail, alongside quick access to the NICE Road and Outer Ring Road for onward commutes." }
             },
             {
               "@type": "Question",
@@ -740,7 +848,7 @@
           "image": "https://luxurahabitat.com/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-hero.jpg",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Kanakapura Road, Near Vajarahalli Metro Station",
+            "streetAddress": "Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli",
             "addressLocality": "Bengaluru",
             "addressRegion": "Karnataka",
             "addressCountry": "IN"
@@ -842,6 +950,8 @@
             <li><a href="#hero">Overview</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#masterplan">Master Plan</a></li>
+            <li><a href="#floorplans">Floor Plans</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#form">Enquire</a></li>
@@ -866,10 +976,10 @@
         <div class="hero-container">
             <div class="hero-content reveal">
 
-                <div class="hero-badge">Pre-Launch &middot; RERA Application In Process</div>
+                <div class="hero-badge">Pre-Launch &middot; RERA Approval Due 2026</div>
                 <h1>Brigade Jeevan Sandhya, Kanakapura Road &mdash; Pre-Launch Ultra-Luxury Apartments</h1>
                 <p class="hero-intro">
-                    135 ultra-luxury 3 &amp; 4 BHK homes (2,100 &ndash; 2,600 Sq.Ft) by Brigade Group across a 20-floor tower on 2 acres, near Vajarahalli Metro Station on Kanakapura Road &mdash; on the same corridor as JP Nagar and Banashankari. Explore pre-launch pricing and connectivity, and register your interest for the earliest updates.
+                    Ultra-luxury 3, 3.5 &amp; 4 BHK homes (2,010 to 2,685 Sq.Ft) by Brigade Group across 2 towers on 2 acres, near Raghuvanahalli Cross Metro Station on Kanakapura Road. Explore pre-launch pricing and connectivity, and register your interest for the earliest updates.
                 </p>
 
                 <div class="hero-info-boxes">
@@ -877,22 +987,22 @@
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true">&check;</div>
                             <div>
-                                <div class="info-box-title">20 Floors</div>
-                                <div class="info-box-subtitle">135 Ultra-Luxury Units</div>
+                                <div class="info-box-title">2 Towers</div>
+                                <div class="info-box-subtitle">3, 3.5 &amp; 4 BHK Homes</div>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true">&check;</div>
                             <div>
                                 <div class="info-box-title">2 Acres</div>
-                                <div class="info-box-subtitle">Near Vajarahalli Metro</div>
+                                <div class="info-box-subtitle">500m from Raghuvanahalli Cross Metro</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="info-box price-box">
                         <span class="price-copy">Pre-Launch Price</span>
-                        <span class="price-line"><span class="new-price">&#8377;3 Cr* Onwards</span></span>
+                        <span class="price-line"><span class="new-price">&#8377;3.09 Cr* Onwards</span></span>
                         <span class="offer-note">Indicative, subject to change</span>
                     </div>
                 </div>
@@ -912,8 +1022,9 @@
                     <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
                     <select name="configuration" aria-label="Configuration" required>
                         <option value="">Select Configuration</option>
-                        <option>3 BHK (~2,100-2,300 Sq.Ft)</option>
-                        <option>4 BHK (~2,400-2,600 Sq.Ft)</option>
+                        <option>3 BHK (2,010 Sq.Ft)</option>
+                        <option>3 BHK Premium (2,158 Sq.Ft)</option>
+                        <option>4 BHK (2,685 Sq.Ft)</option>
                         <option>Not Decided Yet</option>
                     </select>
                     <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
@@ -926,28 +1037,28 @@
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">Project Overview</h2>
-            <p class="section-subtitle">A boutique, single-tower ultra-luxury pre-launch by a Tier-1 South India developer.</p>
+            <p class="section-subtitle">A 2-acre, 2-tower ultra-luxury pre-launch by a Tier-1 South India developer.</p>
 
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <h3>135 Homes, One Address, Ultra-Luxury Scale</h3>
-                    <p>Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group on Kanakapura Road, South Bengaluru, close to Vajarahalli Metro Station. Planned as a single 20-floor tower on approximately 2 acres, the project keeps inventory deliberately boutique at 135 units &mdash; spacious 3 &amp; 4 BHK homes ranging from 2,100 to 2,600 Sq.Ft.</p>
-                    <p>As this is a pre-launch listing, detailed floor plans, the final amenity list and RERA registration are still being finalized by the developer. What's already confirmed: a metro-adjacent Kanakapura Road address, backed by Brigade Group's 300+ completed projects and 100 million+ Sq.Ft delivered across South India. Enquire for the latest updates and pricing.</p>
-                    <p>The boutique 135-unit scale is a deliberate choice, not a limitation &mdash; keeping density low so residents get wider common areas, easier movement and more breathing room than typical high-rise developments nearby. That makes it a natural fit for multi-generational families who need functional shared space, professionals upgrading from a smaller home, and buyers who want a calmer, less congested address without leaving Kanakapura Road's improving connectivity behind.</p>
+                    <h3>3, 3.5 &amp; 4 BHK Homes on Kanakapura Main Road</h3>
+                    <p>Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group at Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, South Bengaluru. Planned across 2 towers (Block 1, Tower T-01 and Block 2, Tower T-02) on approximately 2 acres, the project offers 3 BHK, 3 BHK Premium and 4 BHK homes ranging from 2,010 to 2,685 Sq.Ft.</p>
+                    <p>As this is a pre-launch listing, exact floor and unit counts, the final amenity list and RERA registration are still being finalized by the developer, with RERA approval expected during 2026. What's already confirmed: an address just 500 meters (about a 2-minute walk) from Raghuvanahalli Cross Metro Station, backed by Brigade Group's 300+ completed projects and 100 million+ Sq.Ft delivered across South India. Enquire for the latest updates and pricing.</p>
+                    <p>Indicative pre-launch pricing starts at Rs 3.09 Cr for the 3 BHK and goes up to Rs 4.26 Cr for the 4 BHK, with formal launch targeted for 15 September 2026 and possession indicatively planned for October 2031. That makes it a natural fit for buyers evaluating early pre-launch entry pricing on a metro-adjacent Kanakapura Road address, alongside professionals and families who want walk-to-metro convenience without leaving South Bengaluru's improving connectivity behind.</p>
 
                     <div class="features-list">
                         <div class="feature-item">
                             <div class="feature-icon">&#127954;</div>
                             <div>
-                                <h3>Near Vajarahalli Metro</h3>
-                                <p>On the Green Line, Kanakapura Road.</p>
+                                <h3>500m from Metro</h3>
+                                <p>Raghuvanahalli Cross Metro Station, a 2-minute walk.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">&#127968;</div>
                             <div>
-                                <h3>Boutique Scale</h3>
-                                <p>Just 135 homes across 20 floors.</p>
+                                <h3>2-Tower Layout</h3>
+                                <p>Block 1 (T-01) and Block 2 (T-02) on 2 acres.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -967,8 +1078,8 @@
                         <div class="feature-item">
                             <div class="feature-icon">&#127807;</div>
                             <div>
-                                <h3>Low-Density Living</h3>
-                                <p>Wider spaces, less congestion than typical high-rises.</p>
+                                <h3>3 Configurations</h3>
+                                <p>3 BHK, 3 BHK Premium and 4 BHK homes.</p>
                             </div>
                         </div>
                     </div>
@@ -981,7 +1092,7 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Highlights</h2>
-            <p class="section-subtitle">Key details for Brigade Jeevan Sandhya &mdash; ready for quick comparison. This is a pre-launch listing; figures are indicative and subject to change.</p>
+            <p class="section-subtitle">Key details for Brigade Jeevan Sandhya, ready for quick comparison. This is a pre-launch listing; figures are indicative and subject to change.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Highlights table">
                 <table class="highlights-table" aria-label="Brigade Jeevan Sandhya Highlights">
@@ -990,22 +1101,22 @@
                     </thead>
                     <tbody>
                         <tr><td><strong>Developer</strong></td><td>Brigade Group (Brigade Enterprises Limited)</td></tr>
-                        <tr><td><strong>Project Type</strong></td><td>Pre-Launch Ultra-Luxury High-Rise Apartments</td></tr>
-                        <tr><td><strong>Location</strong></td><td>Kanakapura Road, Near Vajarahalli Metro Station, South Bengaluru</td></tr>
+                        <tr><td><strong>Project Type</strong></td><td>Pre-Launch Ultra-Luxury Apartments</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli, Bengaluru 560062</td></tr>
                         <tr><td><strong>Land Area</strong></td><td>2 Acres</td></tr>
-                        <tr><td><strong>Structure</strong></td><td>20 Floors, Single Tower</td></tr>
-                        <tr><td><strong>Total Units</strong></td><td>135 Ultra-Luxury Apartments</td></tr>
-                        <tr><td><strong>Configurations</strong></td><td>3 &amp; 4 BHK (2,100 &ndash; 2,600 Sq.Ft)</td></tr>
-                        <tr><td><strong>Starting Price</strong></td><td>~&#8377;3 Cr* Onwards</td></tr>
-                        <tr><td><strong>Metro Connectivity</strong></td><td>Near Vajarahalli Metro Station (Green Line)</td></tr>
-                        <tr><td><strong>Project Status</strong></td><td>Pre-Launch</td></tr>
-                        <tr><td><strong>Expected Possession</strong></td><td>December 2030 (Indicative)</td></tr>
-                        <tr><td><strong>RERA Registration</strong></td><td>Application in process &mdash; number to be updated on approval</td></tr>
+                        <tr><td><strong>Structure</strong></td><td>2 Towers (Block 1: T-01, Block 2: T-02)</td></tr>
+                        <tr><td><strong>Total Units</strong></td><td>On Request</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>3 BHK, 3 BHK Premium &amp; 4 BHK (2,010 to 2,685 Sq.Ft)</td></tr>
+                        <tr><td><strong>Starting Price</strong></td><td>~&#8377;3.09 Cr* Onwards</td></tr>
+                        <tr><td><strong>Metro Connectivity</strong></td><td>500m from Raghuvanahalli Cross Metro Station (2-minute walk)</td></tr>
+                        <tr><td><strong>Project Status</strong></td><td>Pre-Launch (Formal Launch 15 September 2026)</td></tr>
+                        <tr><td><strong>Expected Possession</strong></td><td>October 2031 (Indicative)</td></tr>
+                        <tr><td><strong>RERA Registration</strong></td><td>Application in process, approval expected in 2026, number to be updated on approval</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="prelaunch-notice">
-                <strong>&#9888; Pre-Launch Notice:</strong> Brigade Jeevan Sandhya is currently in pre-launch stage. Land area, unit count, pricing and possession date above are indicative figures shared by the developer's marketing team and are subject to change once RERA registration is complete. Please verify all details independently before making any payment.
+                <strong>&#9888; Pre-Launch Notice:</strong> Brigade Jeevan Sandhya is currently in pre-launch stage. Tower structure, unit count, pricing and possession date above are indicative figures shared by the developer's marketing team and are subject to change once RERA registration is complete. Please verify all details independently before making any payment.
             </div>
         </div>
     </section>
@@ -1013,49 +1124,195 @@
     <section class="amenities" id="amenities">
         <div class="container">
             <h2 class="section-title">Planned Amenities</h2>
-            <p class="section-subtitle">Lifestyle amenities planned around the tower's landscaped grounds.</p>
+            <p class="section-subtitle">Fitness, leisure and family amenities planned across the 2-tower community.</p>
+
+            <div class="amenity-photo-grid">
+                <div class="amenity-photo-card reveal" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-gym.webp" alt="Brigade Jeevan Sandhya Gymnasium" loading="lazy">
+                    <span>Gymnasium</span>
+                </div>
+                <div class="amenity-photo-card reveal" style="transition-delay:60ms;" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-clubhouse-lounge.webp" alt="Brigade Jeevan Sandhya Clubhouse and Pool Deck" loading="lazy">
+                    <span>Clubhouse &amp; Pool Deck</span>
+                </div>
+                <div class="amenity-photo-card reveal" style="transition-delay:120ms;" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-kids-play-area.webp" alt="Brigade Jeevan Sandhya Kids Play Area" loading="lazy">
+                    <span>Kids&rsquo; Play Area</span>
+                </div>
+                <div class="amenity-photo-card reveal" style="transition-delay:180ms;" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-sports-court.webp" alt="Brigade Jeevan Sandhya Sports Court" loading="lazy">
+                    <span>Sports Court</span>
+                </div>
+                <div class="amenity-photo-card reveal" style="transition-delay:240ms;" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-jogging-track.webp" alt="Brigade Jeevan Sandhya Jogging Track" loading="lazy">
+                    <span>Jogging Track</span>
+                </div>
+                <div class="amenity-photo-card reveal" style="transition-delay:300ms;" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-amenity-security.webp" alt="Brigade Jeevan Sandhya 24x7 CCTV Security" loading="lazy">
+                    <span>24/7 CCTV Security</span>
+                </div>
+            </div>
 
             <div class="amenity-grid">
                 <div class="amenity-card reveal">
-                    <h3>Clubhouse &amp; Leisure</h3>
+                    <h3>Fitness &amp; Wellness</h3>
                     <ul class="amenity-list">
-                        <li>Clubhouse</li>
-                        <li>Swimming Pool</li>
                         <li>Gymnasium</li>
+                        <li>Swimming Pool</li>
+                        <li>Yoga Pavilion</li>
+                        <li>Jogging Track</li>
                     </ul>
                 </div>
                 <div class="amenity-card reveal" style="transition-delay:120ms;">
-                    <h3>Landscape &amp; Open Spaces</h3>
+                    <h3>Clubhouse &amp; Leisure</h3>
                     <ul class="amenity-list">
-                        <li>Beautifully Landscaped Gardens</li>
-                        <li>Open Green Spaces</li>
+                        <li>Club House</li>
+                        <li>Mini Theater</li>
+                        <li>Indoor Games Room</li>
+                        <li>Dance / Music Room</li>
+                        <li>Tennis Court</li>
                     </ul>
                 </div>
                 <div class="amenity-card reveal" style="transition-delay:180ms;">
-                    <h3>Safety &amp; Security</h3>
+                    <h3>Family &amp; Security</h3>
                     <ul class="amenity-list">
+                        <li>Kids Activity Zone</li>
+                        <li>Video Door Phone</li>
+                        <li>24/7 CCTV Monitoring</li>
                         <li>Gated Community</li>
-                        <li>24/7 Security</li>
                     </ul>
                 </div>
             </div>
-            <p class="floor-note">The full amenity list and specifications will be confirmed at formal launch. Enquire for the latest brochure.</p>
+            <p class="floor-note">The developer's current marketing material describes the amenity program as spanning 40+ planned spaces. The full amenity list and specifications will be confirmed at formal launch. Enquire for the latest brochure.</p>
         </div>
     </section>
 
-    <section class="pricing" id="pricing" style="padding: 4rem 1rem; background: var(--bg-light);">
+    <section class="plan" id="masterplan" style="background: var(--bg-white); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Master Plan</h2>
+            <p class="section-subtitle">A landscaped site layout with dedicated entry, drop-off and parking zones on Kanakapura Main Road.</p>
+
+            <div class="plan-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-master-plan.webp" alt="Brigade Jeevan Sandhya Master Plan" onclick="openLightbox(this.src)">
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>Dedicated Drop-Off &amp; Driveway</strong>
+                        <span>A landscaped drop-off court leads into the site, separating visitor movement from resident driveways and basement parking ramps.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Basement Parking</strong>
+                        <span>Dedicated entry and exit ramps route vehicles to basement parking, keeping the surface-level landscaping and walkways free of traffic.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Perimeter Landscaping</strong>
+                        <span>Tree-lined pathways run along the site boundary, with a guard room and surface parking positioned near the main entry.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Enquire for the Brochure</strong>
+                        <span>The formal master plan, tower-wise unit distribution and RERA-approved layout will be released at launch. Request the latest version via the enquiry form.</span>
+                    </div>
+                </div>
+            </div>
+            <p class="floor-note">Master plan shown here is an illustrative site layout shared by the developer. Final layout, tower count and unit distribution are subject to RERA approval and may change.</p>
+        </div>
+    </section>
+
+    <section class="plan" id="floorplans" style="background: var(--bg-light); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Floor Plans</h2>
+            <p class="section-subtitle">Illustrative unit layouts. Actual floor plans for each configuration will be confirmed at formal launch.</p>
+
+            <div class="floor-grid">
+                <div class="floor-card reveal">
+                    <div class="floor-image">
+                        <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-3bhk-floor-plan.webp" alt="Brigade Jeevan Sandhya 3 BHK Floor Plan (Illustrative)" loading="lazy" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="floor-info">
+                        <div class="floor-type">3 BHK</div>
+                        <div class="floor-size">2,010 Sq.Ft</div>
+                        <div class="floor-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Starting Price</span>
+                                <span class="detail-value">&#8377;3.09 Cr*</span>
+                            </div>
+                        </div>
+                        <button class="floor-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Get Best Price</button>
+                    </div>
+                </div>
+                <div class="floor-card reveal" style="transition-delay:120ms;">
+                    <div class="floor-image">
+                        <img src="/images/projects/brigade-jeevan-sandhya/brigade-jeevan-sandhya-4bhk-floor-plan.webp" alt="Brigade Jeevan Sandhya 4 BHK Floor Plan (Illustrative)" loading="lazy" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="floor-info">
+                        <div class="floor-type">4 BHK</div>
+                        <div class="floor-size">2,685 Sq.Ft</div>
+                        <div class="floor-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Starting Price</span>
+                                <span class="detail-value">&#8377;4.26 Cr*</span>
+                            </div>
+                        </div>
+                        <button class="floor-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Get Best Price</button>
+                    </div>
+                </div>
+                <div class="floor-card reveal" style="transition-delay:180ms;">
+                    <div class="floor-info" style="padding: 1.6rem 1.2rem; display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center;">
+                        <div class="floor-type">3 BHK Premium</div>
+                        <div class="floor-size">2,158 Sq.Ft</div>
+                        <div class="floor-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Starting Price</span>
+                                <span class="detail-value">&#8377;3.23 Cr*</span>
+                            </div>
+                        </div>
+                        <p class="floor-note" style="margin-top:0.6rem;">Floor plan to be released at formal launch.</p>
+                        <button class="floor-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Enquire for Floor Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="padding: 4rem 1rem; background: var(--bg-white);">
         <div class="container">
             <h2 class="section-title">Pre-Launch Configurations &amp; Pricing</h2>
             <p class="section-subtitle">Indicative pre-launch pricing. Actual prices will be confirmed at formal launch.</p>
 
-            <div class="pricing-table-wrap">
+            <div class="config-grid">
+                <div class="config-card reveal">
+                    <div class="config-badge">3 BHK</div>
+                    <div class="config-size">2,010 Sq.Ft</div>
+                    <div class="config-price">&#8377;3.09 Cr*</div>
+                    <p class="config-note">Onwards, pre-launch pricing</p>
+                    <a href="#floorplans" class="config-link">View Floor Plan &rarr;</a>
+                </div>
+                <div class="config-card reveal" style="transition-delay:120ms;">
+                    <div class="config-badge">3 BHK Premium</div>
+                    <div class="config-size">2,158 Sq.Ft</div>
+                    <div class="config-price">&#8377;3.23 Cr*</div>
+                    <p class="config-note">Onwards, pre-launch pricing</p>
+                    <a href="#form" class="config-link">Enquire for Floor Plan &rarr;</a>
+                </div>
+                <div class="config-card reveal" style="transition-delay:180ms;">
+                    <div class="config-badge">4 BHK</div>
+                    <div class="config-size">2,685 Sq.Ft</div>
+                    <div class="config-price">&#8377;4.26 Cr*</div>
+                    <p class="config-note">Onwards, pre-launch pricing</p>
+                    <a href="#floorplans" class="config-link">View Floor Plan &rarr;</a>
+                </div>
+            </div>
+
+            <div class="pricing-table-wrap" style="margin-top: 2.4rem;">
                 <table class="pricing-table">
                     <thead>
-                        <tr><th>Configuration</th><th>Area Range</th><th>Approx. Starting Price</th></tr>
+                        <tr><th>Configuration</th><th>Area</th><th>Approx. Starting Price</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>3 BHK</td><td>~2,100 &ndash; 2,300 Sq.Ft</td><td>~&#8377;3 Cr*</td></tr>
-                        <tr><td>4 BHK</td><td>~2,400 &ndash; 2,600 Sq.Ft</td><td>Enquire for Price*</td></tr>
+                        <tr><td>3 BHK</td><td>2,010 Sq.Ft</td><td>&#8377;3.09 Cr*</td></tr>
+                        <tr><td>3 BHK Premium</td><td>2,158 Sq.Ft</td><td>&#8377;3.23 Cr*</td></tr>
+                        <tr><td>4 BHK</td><td>2,685 Sq.Ft</td><td>&#8377;4.26 Cr*</td></tr>
                     </tbody>
                 </table>
                 <div class="pricing-footnote">*Indicative pre-launch pricing shared by the developer. Subject to change at formal launch. Please enquire for the latest updates.</div>
@@ -1063,10 +1320,10 @@
         </div>
     </section>
 
-    <section class="plan" id="location" style="background: var(--bg-white); padding: 4rem 1rem;">
+    <section class="plan" id="location" style="background: var(--bg-light); padding: 4rem 1rem;">
         <div class="container">
             <h2 class="section-title">Location &amp; Connectivity</h2>
-            <p class="section-subtitle">Kanakapura Road at Vajarahalli, on the same corridor as JP Nagar and Banashankari.</p>
+            <p class="section-subtitle">Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, a 2-minute walk from the metro.</p>
 
 
             <div class="plan-grid">
@@ -1075,12 +1332,15 @@
                 </div>
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
-                        <strong>Metro &amp; Road Connectivity</strong>
+                        <strong>Address</strong>
+                        <span>Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli, Bengaluru, Karnataka 560062. Google Plus Code: VGJX+XH Bengaluru, Karnataka.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Metro &amp; Rail Connectivity</strong>
                         <span>
-                            Vajarahalli Metro Station: Nearby, Green Line<br>
-                            Doddakallasandra, Konanakunte Cross, JP Nagar &amp; Banashankari Metro Stations: along the same corridor<br>
-                            NICE Road Junction: ~2.5 km &mdash; signal-free access onward to Electronic City, Mysore Road and Bannerghatta Road<br>
-                            Kempegowda International Airport: ~50 km / ~90 mins
+                            Raghuvanahalli Cross Metro Station: 500 meters, about a 2-minute walk<br>
+                            Kengeri Railway Station: 12.1 km, about 31 minutes<br>
+                            Kempegowda International Airport: approximately 55 km via NH-44, about 90 minutes
                         </span>
                     </div>
                     <div class="plan-note">
@@ -1089,11 +1349,7 @@
                     </div>
                     <div class="plan-note">
                         <strong>Employment Hubs</strong>
-                        <span>Manyata Tech Park: ~50 mins<br>Electronic City: ~30 mins via NICE Road<br>Harohalli Industrial Area: South Bengaluru's manufacturing corridor, within the same NICE Road belt</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Wellness &amp; Lifestyle Landmarks</strong>
-                        <span>Art of Living International Center: a globally known wellness and spiritual campus on Kanakapura Road<br>Pyramid Valley: meditation and wellness retreat set in natural surroundings<br>JP Nagar &amp; Jayanagar: established social infrastructure, schools and retail nearby</span>
+                        <span>Electronic City: ~30 mins via NICE Road<br>Global Village Tech Park: nearby along the Kanakapura Road corridor<br>Bannerghatta Road Corridor: nearby office belt</span>
                     </div>
                     <div class="plan-note">
                         <strong>Enquire for Details</strong>
@@ -1111,16 +1367,42 @@
 
             <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Boutique, Low-Inventory Scale</strong>
-                    <span>At just 135 units across a single 20-floor tower, Brigade Jeevan Sandhya offers a lower-density, more exclusive living experience than large multi-tower townships on the same corridor &mdash; a genuine differentiator for buyers who value privacy and scarcity.</span>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Walk-to-Metro Convenience</strong>
+                    <span>At 500 meters from Raghuvanahalli Cross Metro Station, Brigade Jeevan Sandhya offers genuine walk-to-metro access, a real differentiator on a corridor where most projects only advertise "near metro" connectivity by car.</span>
                 </div>
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Pre-Launch Entry Pricing</strong>
-                    <span>Pre-launch pricing is typically the lowest a project will see before formal launch premiums are added. Buyers who move early often capture better per-square-foot rates &mdash; but should weigh this against the added uncertainty of a project that hasn't yet secured RERA registration.</span>
+                    <span>Pre-launch pricing is typically the lowest a project will see before formal launch premiums are added. Buyers who move early often capture better per-square-foot rates, but should weigh this against the added uncertainty of a project that hasn't yet secured RERA registration.</span>
                 </div>
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">A 300+ Project Developer Track Record</strong>
-                    <span>Brigade Group was founded in 1986 and has delivered 300+ projects covering roughly 100 million Sq.Ft across South India, and has been listed on the NSE and BSE since 2013 &mdash; giving buyers a long, publicly-verifiable track record on a corridor it already knows well.</span>
+                    <span>Brigade Group was founded in 1986 and has delivered 300+ projects covering roughly 100 million Sq.Ft across South India, and has been listed on the NSE and BSE since 2013, giving buyers a long, publicly-verifiable track record on a corridor it already knows well.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="approvals" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Taxes, Bank Approvals &amp; Payment Plan</h2>
+            <p class="section-subtitle">What to budget for beyond the base price, and how the developer's indicative payment schedule works.</p>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Indicative Taxes &amp; Charges</strong>
+                    <span>GST: 5% on under-construction units. Stamp Duty: 5% of property value, per Karnataka state rules. Registration Charges: 1% of the agreement value. Property Tax is an annual BBMP charge based on unit size and location. These are standard statutory charges over and above the base price; confirm current rates with your advisor before booking.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Bank Approvals</strong>
+                    <span>The developer indicates in-principle approvals from SBI, HDFC, Kotak Mahindra, ICICI and Axis Bank, so home loan processing should be straightforward once RERA registration is complete. Always verify current approval status directly with your chosen bank.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Indicative Payment Plan</strong>
+                    <span>10% on booking, 10% on agreement, with the remaining amount linked to construction milestones. This is the developer's current pre-launch structure and may be revised at formal launch; get the confirmed schedule in writing before paying.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Expression of Interest (EOI)</strong>
+                    <span>The developer plans to open an online Expression of Interest process ahead of formal launch, letting early registrants indicate a preferred configuration and get first access to pricing and unit selection. Register your interest on this page to be notified when EOI opens.</span>
                 </div>
             </div>
         </div>
@@ -1151,7 +1433,7 @@
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">Brigade Group (Brigade Enterprises Limited) was founded in 1986 by M. R. Jaishankar and is headquartered in Bengaluru. Its first project, Brigade Towers, completed in 1989, was the city's first private high-rise building. In 2004, Brigade launched Brigade Gateway, Bengaluru's first integrated lifestyle enclave.</p>
                 <p style="margin-bottom: 1rem;">The company listed on the BSE and NSE in 2013 (ticker: BRIGADE) and now operates across residential development, commercial leasing and hospitality, with 300+ projects covering roughly 100 million Sq.Ft delivered across South India. Brigade is currently led by Pavitra Shankar (MD) and Nirupa Shankar (Joint MD), with M. R. Jaishankar continuing as Executive Chairman.</p>
-                <p>Brigade Jeevan Sandhya brings that scale to a boutique, single-tower ultra-luxury format on Kanakapura Road, near Vajarahalli Metro Station.</p>
+                <p>Brigade Jeevan Sandhya brings that scale to a 2-tower ultra-luxury format on Kanakapura Main Road, Raghuvanahalli, a short walk from the metro.</p>
             </div>
         </div>
     </section>
@@ -1187,8 +1469,9 @@
                         <label>Configuration Preference</label>
                         <select name="configuration">
                             <option value="">Select Configuration</option>
-                            <option>3 BHK (~2,100-2,300 Sq.Ft)</option>
-                            <option>4 BHK (~2,400-2,600 Sq.Ft)</option>
+                            <option>3 BHK (2,010 Sq.Ft)</option>
+                            <option>3 BHK Premium (2,158 Sq.Ft)</option>
+                            <option>4 BHK (2,685 Sq.Ft)</option>
                             <option>Not Decided Yet</option>
                         </select>
                     </div>
@@ -1220,7 +1503,7 @@
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group, located on Kanakapura Road, South Bengaluru, near Vajarahalli Metro Station. The project is planned as a 20-floor tower with 135 ultra-luxury 3 &amp; 4 BHK homes across 2 acres.</p>
+                        <p itemprop="text">Brigade Jeevan Sandhya is a pre-launch ultra-luxury residential project by Brigade Group, located on Kanakapura Main Road, Raghuvanahalli, South Bengaluru. The project is planned across 2 towers on approximately 2 acres, offering 3, 3.5 and 4 BHK ultra-luxury homes.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1229,47 +1512,173 @@
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Brigade Jeevan Sandhya is located on Kanakapura Road, South Bengaluru, close to Vajarahalli Metro Station on the Green Line, with onward access to Doddakallasandra, Konanakunte Cross, JP Nagar and Banashankari metro stations along the same corridor.</p>
+                        <p itemprop="text">Brigade Jeevan Sandhya is located at Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli, Bengaluru, Karnataka 560062, close to Raghuvanahalli Cross Metro Station.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
-                        <span itemprop="name">What configurations and pricing does Brigade Jeevan Sandhya offer?</span>
+                        <span itemprop="name">What is the total land area of Brigade Jeevan Sandhya?</span>
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Brigade Jeevan Sandhya offers 3 and 4 BHK ultra-luxury apartments ranging from approximately 2,100 to 2,600 Sq.Ft, with indicative pre-launch pricing starting at approximately ₹3 Crore onwards. These are pre-launch figures and subject to change.</p>
+                        <p itemprop="text">Brigade Jeevan Sandhya is spread across approximately 2 acres at Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, developed across 2 towers, Block 1 (T-01) and Block 2 (T-02).</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
-                        <span itemprop="name">Is Brigade Jeevan Sandhya RERA registered?</span>
+                        <span itemprop="name">What configurations and pricing does Brigade Jeevan Sandhya offer?</span>
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Brigade Jeevan Sandhya is currently in pre-launch stage and RERA registration is in process. No RERA number is available yet, and Luxura Habitat does not display or imply one. Under RERA rules, a project cannot be formally booked or advertised for sale until it is registered — please treat any pre-launch pricing as indicative only, and always verify current RERA status on the Karnataka RERA portal (rera.karnataka.gov.in) before making any payment.</p>
+                        <p itemprop="text">Brigade Jeevan Sandhya offers 3 BHK (2,010 Sq.Ft), 3 BHK Premium (2,158 Sq.Ft) and 4 BHK (2,685 Sq.Ft) ultra-luxury apartments, with indicative pre-launch pricing from approximately ₹3.09 Crore for the 3 BHK up to ₹4.26 Crore for the 4 BHK. These are pre-launch figures and subject to change.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
-                        <span itemprop="name">How many units and floors does Brigade Jeevan Sandhya have?</span>
+                        <span itemprop="name">Is Brigade Jeevan Sandhya RERA registered?</span>
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project is planned as a single 20-floor tower with 135 ultra-luxury apartments on approximately 2 acres of land.</p>
+                        <p itemprop="text">Brigade Jeevan Sandhya is currently in pre-launch stage and RERA registration is in process, with approval expected during 2026. No RERA number is available yet, and Luxura Habitat does not display or imply one. Under RERA rules, a project cannot be formally booked or advertised for sale until it is registered, so please treat any pre-launch pricing as indicative only, and always verify current RERA status on the Karnataka RERA portal (rera.karnataka.gov.in) before making any payment.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
-                        <span itemprop="name">When is the expected possession date for Brigade Jeevan Sandhya?</span>
+                        <span itemprop="name">What city and land approvals has Brigade Jeevan Sandhya applied for?</span>
                         <span class="faq-arrow">&#9660;</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The developer's indicative possession target is December 2030. As with any pre-launch project, this is subject to change and will be formally confirmed once RERA registration is complete.</p>
+                        <p itemprop="text">Alongside Karnataka RERA registration, the developer indicates it has applied for approvals from BBMP, BDA and BMRDC for Brigade Jeevan Sandhya, with the required documentation submitted. Please verify current approval status independently before making any payment.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">How many towers and units does Brigade Jeevan Sandhya have?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is planned across 2 towers (Block 1, Tower T-01 and Block 2, Tower T-02) on approximately 2 acres of land. Exact floor and total unit counts have not been released by the developer yet.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">When is the expected launch and possession date for Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer's indicative pre-launch date is August 2026, with formal launch targeted for 15 September 2026. Possession is indicatively planned for October 2031, roughly 5 years from launch. As with any pre-launch project, these dates are subject to change and will be formally confirmed once RERA registration is complete.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">Can I see the Brigade Jeevan Sandhya master plan and floor plans?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. An illustrative site master plan and floor plans for the 3 BHK and 4 BHK configurations are available in the Master Plan and Floor Plans sections of this page. The 3 BHK Premium floor plan, exact tower-wise unit distribution and the final RERA-approved layout will be released by the developer at formal launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">Are Brigade Jeevan Sandhya homes designed according to Vaastu?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer's current marketing material describes Brigade Jeevan Sandhya homes as planned according to Vaastu principles. As with other pre-launch details, confirm unit-wise orientation against the final RERA-approved floor plans at formal launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">Which is the nearest metro station to Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The nearest metro station is Raghuvanahalli Cross Metro Station, about 500 meters from the project, roughly a 2-minute walk, connecting onward to the wider Bengaluru Metro network.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">How far is Brigade Jeevan Sandhya from the airport and railway station?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Kempegowda International Airport is approximately 55 km away via NH-44, about a 90-minute drive. Kengeri Railway Station is about 12.1 km away, roughly a 31-minute drive.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">Which IT hubs and employment centres are close to Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Electronic City is about 30 minutes away via NICE Road, Global Village Tech Park is nearby along the Kanakapura Road corridor, and the Bannerghatta Road office belt is also within easy reach.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">What amenities are planned at Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Planned amenities span fitness, leisure and family-focused spaces, including a gymnasium, swimming pool, yoga pavilion, clubhouse, mini theater, indoor games room, tennis court, kids' activity zone, jogging track and 24/7 CCTV monitoring. The developer's marketing material describes the full amenity program as spanning 40+ planned spaces, to be confirmed at formal launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">Can I visit a sample or model apartment at Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer plans to open sample model apartments in 3 BHK and 4 BHK configurations at the project site closer to launch, letting buyers walk through actual room sizes and finishes before booking. Enquire for the latest visit schedule.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">What is the Expression of Interest (EOI) process for Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer plans to open an online Expression of Interest (EOI) process ahead of formal launch. Registering early lets you indicate a preferred configuration and get first access to pricing and unit selection once EOI opens. Register your interest on this page to be notified.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">What is the indicative payment plan for Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer's current indicative structure is 10% on booking, 10% on signing the agreement, with the remaining amount linked to construction milestones. This pre-launch structure may be revised at formal launch, so get the confirmed schedule in writing before paying.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span itemprop="name">Which banks approve home loans for Brigade Jeevan Sandhya?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer indicates in-principle approvals from SBI, HDFC, Kotak Mahindra, ICICI and Axis Bank, so home loan processing should be straightforward once RERA registration is complete. Always verify current approval status directly with your chosen bank.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span itemprop="name">What taxes and charges apply over and above the base price?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Buyers should budget for GST at 5% on under-construction units, Stamp Duty at 5% of property value per Karnataka state rules, Registration Charges at 1% of the agreement value, and an annual BBMP Property Tax based on unit size and location. Confirm current rates with your advisor before booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span itemprop="name">Why is Kanakapura Road, Raghuvanahalli a good location to invest in?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Kanakapura Road, Raghuvanahalli combines genuine walk-to-metro access with pre-launch entry pricing that is typically the lowest a project sees before formal launch premiums are added. The corridor also has improving social infrastructure, schools, hospitals and retail, alongside quick access to the NICE Road and Outer Ring Road for onward commutes.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false">
                         <span itemprop="name">How do I get more information or book a Brigade Jeevan Sandhya unit?</span>
                         <span class="faq-arrow">&#9660;</span>
                     </button>
@@ -1349,14 +1758,16 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h5>About Brigade Jeevan Sandhya</h5>
-                <p>Pre-launch ultra-luxury 3 &amp; 4 BHK apartments by Brigade Group on Kanakapura Road, near Vajarahalli Metro Station, South Bengaluru. 135 units across 20 floors.</p>
+                <p>Pre-launch ultra-luxury 3, 3.5 &amp; 4 BHK apartments by Brigade Group on Kanakapura Main Road, Raghuvanahalli, South Bengaluru. 2 towers across 2 acres, 500m from Raghuvanahalli Cross Metro Station.</p>
             </div>
 
             <div class="footer-section">
                 <h5>Quick Links</h5>
                 <p><a href="#about">About</a></p>
-                <p><a href="#pricing">Pricing</a></p>
                 <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#masterplan">Master Plan</a></p>
+                <p><a href="#floorplans">Floor Plans</a></p>
+                <p><a href="#pricing">Pricing</a></p>
                 <p><a href="#location">Location</a></p>
                 <p><a href="#form">Contact</a></p>
                 <p><a href="/blog/">Blogs</a></p>
@@ -1381,7 +1792,7 @@
             <div class="footer-section">
                 <h5>Legal</h5>
                 <p><strong>Developer:</strong> Brigade Group</p>
-                <p><strong>Location:</strong> Kanakapura Road, Near Vajarahalli Metro, Bengaluru, Karnataka</p>
+                <p><strong>Location:</strong> Kanakapura Main Road, Raghuvanahalli, Bengaluru, Karnataka</p>
                 <p><strong>RERA:</strong> Application in process (pre-launch) &mdash; not yet registered</p>
             </div>
         </div>
@@ -1441,7 +1852,7 @@
         let allLightboxImages = [];
 
         function collectAllImages() {
-            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img');
+            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img, .floor-image img, .amenity-photo-card img');
             allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
         }
 
