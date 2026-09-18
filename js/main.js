@@ -219,7 +219,6 @@ function initBlogBrochurePopup() {
     '/projects/sattva-songbird/': 'a41ede52-e0aa-4c13-aa7f-cfd3676bb911',
     '/projects/sattva-thippapura/': 'a7b4dbfa-7d56-43c3-929d-cc7821f47fcd',
     '/projects/shriram-107-south-east/': 'd925a130-8cbe-432a-adfd-674dbd3ffe7a',
-    '/projects/shriram-bannerghatta/': '3725b95c-adea-44f6-a152-c625b988cff7',
     '/projects/shriram-codename-reserve/': '3725b95c-adea-44f6-a152-c625b988cff7',
     '/projects/surya-valencia/': 'b745b3a2-d7ea-48e6-b6b5-a3646e09e13c',
     '/projects/tvs-emerald-altura/': 'b6e5401b-c830-4fa3-810c-a015ea37a060',

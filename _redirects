@@ -34,3 +34,11 @@
 # 2026-09-18; redirected instead of 404 in case either URL is indexed or
 # externally linked.
 /projects/sattva-sanio/*                              /projects/sattva-aangane/                                 301
+
+# Shriram Bannerghatta was a deliberate alias-name duplicate project page of
+# Shriram Codename Reserve (same underlying pre-launch villament project on
+# Bannerghatta Road). The project page was removed 2026-09-18; redirected
+# instead of 404 in case the URL is indexed or externally linked. Its
+# dedicated review blog post was kept live (not a duplicate of anything),
+# just repointed internally to the surviving project page.
+/projects/shriram-bannerghatta/*                              /projects/shriram-codename-reserve/                              301
