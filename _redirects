@@ -42,3 +42,11 @@
 # dedicated review blog post was kept live (not a duplicate of anything),
 # just repointed internally to the surviving project page.
 /projects/shriram-bannerghatta/*                              /projects/shriram-codename-reserve/                              301
+
+# Concorde Hennur was a deliberate alias-name duplicate project page of
+# Concorde Sienna (same underlying pre-launch single-tower project on Hennur
+# Main Road). The project page was removed 2026-09-19; redirected instead of
+# 404 in case the URL is indexed or externally linked. Its dedicated review
+# blog post was kept live, just repointed internally to the surviving
+# project page.
+/projects/concorde-hennur/*                                   /projects/concorde-sienna/                                       301

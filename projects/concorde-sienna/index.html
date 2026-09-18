@@ -486,6 +486,16 @@
         .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
         .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
 
+        /* Floor plan configuration cards */
+        .fp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.4rem; }
+        .fp-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .fp-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(2,6,23,0.12); }
+        .fp-card img { width: 100%; display: block; cursor: pointer; border-bottom: 1px solid var(--border-light); }
+        .fp-card-body { padding: 1.1rem 1.2rem 1.3rem; }
+        .fp-card-body h3 { color: var(--primary-dark); font-size: 1.02rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .fp-card-body p { color: var(--text-light); font-size: 0.86rem; font-weight: 600; margin: 0.2rem 0; }
+        .fp-card-price { color: var(--accent-green); font-weight: 900; margin-top: 0.6rem; font-size: 1.05rem; }
+
         .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
         .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
         .form-container { max-width: 620px; margin: 2rem auto 0; }
@@ -668,6 +678,7 @@
             .nav-cta { display: none; }
 
             .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .fp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .info-box.primary-details { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; }
             .features-list { grid-template-columns: 1fr 1fr; }
@@ -684,6 +695,7 @@
         @media (max-width: 480px) {
             .features-list { grid-template-columns: 1fr; }
             .amenity-grid { grid-template-columns: 1fr; }
+            .fp-grid { grid-template-columns: 1fr; }
             .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
             .gallery-item { min-width: 240px; width: 240px; height: 240px; }
@@ -1003,6 +1015,27 @@
           "@type": "Answer",
           "text": "You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page."
         }
+      }, {
+        "@type": "Question",
+        "name": "What is the total saleable area of Concorde Sienna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project's total saleable area works out to approximately 4.25 lakh sq.ft. across its 2 BHK and 3 BHK homes, spread across the single 29-floor tower."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the metro connectivity for Concorde Sienna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Namma Metro's Phase 2B Blue Line, from KR Pura to Kempegowda International Airport, is under construction with confirmed stations at Nagawara and Hennur Cross and an interchange at Hebbal. Its current operational window is 2027-28, which would cut the airport commute from around 55 minutes by road to a 35-40 minute metro alternative."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the all-inclusive rate and estimated EMI at Concorde Sienna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pre-launch pricing works out to roughly ₹10,500 per sq.ft. all-inclusive (base, floor-rise, PLC and amenity charges), before statutory GST, stamp duty and registration. For a typical 3 BHK (2 Toilet) at ₹1.63 Cr all-inclusive, GST and stamp duty/registration add roughly ₹21 lakh, taking the all-in outlay to about ₹1.84 Cr; on an 80% loan-to-value over a 20-year tenor, the indicative EMI works out to around ₹1.15 lakh a month. Confirm current bank rates and the formal price sheet before budgeting."
+        }
       }]
     }
     </script>
@@ -1086,9 +1119,11 @@
             <li><a href="#highlights">Highlights</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#units">Unit Plans</a></li>
+            <li><a href="#masterplan">Master Plan</a></li>
+            <li><a href="#floorplans">Floor Plans</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
+            <li><a href="#reviews">Reviews</a></li>
             <li><a href="#form">Enquire</a></li>
         </ul>
 
@@ -1169,6 +1204,7 @@
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Single 92m Tower</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 70% Open Space</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ~4.25L Sq.Ft Saleable</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Concorde Group</div>
     </div>
 
@@ -1223,6 +1259,27 @@
                     <img class="about-visual" src="/images/projects/concorde-sienna/concorde-sienna-elevation-2.webp" alt="Concorde Sienna tower facade close-up architectural view">
                 </div>
             </div>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2.5rem;">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">One Tower, Not a Township</strong>
+                    <span>
+                        Concorde Sienna is built around one clean idea: a single iconic tower on a 3.05-acre parcel, with the surface freed up for landscape and amenity instead of additional blocks. A two-basement parking podium keeps cars off the ground plane, and a multi-tier sky-deck clubhouse stacks wellness, sports, social and work-from-home floors above the residences, adding up to roughly 4.25 lakh sq.ft. of saleable area across the tower's 2 BHK and 3 BHK homes. 3+ acre parcels on a corridor like Hennur Main Road typically deliver as two or three mid-rise blocks with a small surface clubhouse and a shared driveway; Concorde Sienna trades that horizontal spread for one vertical mass. The trade is honest &mdash; every household gives up a few surface neighbours and accepts a longer lift wait, in exchange for a quieter ground plane, more daylight inside the apartment, and a sky-deck amenity stack that mid-rise siblings on the same road cannot offer. Buyers who prize ground-level privacy and short vertical circulation should weigh a low-rise scheme instead; those who read the city skyline as part of daily living will read this brief favourably.
+                    </span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Why Demand on This Corridor Is Diversified</strong>
+                    <span>
+                        Demand sources on the Hennur Main Road belt are spread rather than concentrated in one employer cluster. Manyata Tech Park anchors the IT salary base to the south, the Hebbal-Nagawara employment node sits inside the same drive radius, the Yelahanka aerospace and defence cluster lies to the north, and Kempegowda International Airport draws aviation and hospitality households via the Hennur-Bagaluru Cross link. Premium single-tower supply on this stretch has historically been thin &mdash; most launches here have been mid-rise gated communities &mdash; which is the gap this pre-launch is built to fill.
+                    </span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">What Publishes at K-RERA Filing</strong>
+                    <span>
+                        For buyers tracking the RERA filing, the items that publish at registration are the sanctioned tower footprint and floor-plate, the carpet and saleable area break-up by configuration, the final unit count, the agreed possession date with its construction-cycle schedule, the bank-approved escrow account for receivables, and the developer's title chain on the parcel. Pre-launch literature is indicative until those numbers publish, and the brochure can still change in form, finish and amenity scope before the filing locks &mdash; standard pre-launch risk for any premium high-rise on a Bengaluru corridor, and the single largest factor to weigh before a pre-launch commitment.
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1244,6 +1301,7 @@
                         <tr><td><strong>Developer</strong></td><td>Concorde Group</td></tr>
                         <tr><td><strong>Location</strong></td><td>Hennur Main Road, Kannuru Village, Bangalore East</td></tr>
                         <tr><td><strong>Land Area</strong></td><td>3.05 Acres</td></tr>
+                        <tr><td><strong>Saleable Area</strong></td><td>~4.25 Lakh Sq.Ft across 2 BHK &amp; 3 BHK homes</td></tr>
                         <tr><td><strong>Total Units</strong></td><td>Approximately 269–270 Apartments</td></tr>
                         <tr><td><strong>Building Structure</strong></td><td>Single Tower, 2 Basements + Ground + 28/29 Floors (~92m)</td></tr>
                         <tr><td><strong>Open Space</strong></td><td>Up to 70% of the land parcel</td></tr>
@@ -1336,10 +1394,10 @@
         </div>
     </section>
 
-    <section class="plan" id="units">
+    <section class="plan" id="masterplan">
         <div class="container">
-            <h2 class="section-title">Unit Plans &amp; Master Plan</h2>
-            <p class="section-subtitle">Explore Concorde Sienna floor plans and master plan.</p>
+            <h2 class="section-title">Concorde Sienna Master Plan</h2>
+            <p class="section-subtitle">How the single tower footprint and two-basement parking podium free up the 3.05-acre parcel for landscape, sport and the amenity podium. The sanctioned drawing publishes at K-RERA filing.</p>
 
             <div class="plan-grid" style="margin-top: 1.5rem;">
                 <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto;">
@@ -1365,12 +1423,55 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="plan" id="floorplans" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Concorde Sienna Floor Plans</h2>
+            <p class="section-subtitle">Two configurations &mdash; 2 BHK and 3 BHK &mdash; across the tower. Final carpet area, super built-up area and inventory lock at K-RERA filing; the references below are pre-launch indicative bands.</p>
+
+            <div class="fp-grid">
+                <div class="fp-card reveal">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-2bhk-1200sqft.webp" alt="Concorde Sienna 2 BHK 1200 to 1221 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                    <div class="fp-card-body">
+                        <h3>2 BHK (2 Toilet)</h3>
+                        <p>1,200 &ndash; 1,221 sq.ft. &middot; 60 units</p>
+                        <div class="fp-card-price">₹1.26 Cr onwards*</div>
+                    </div>
+                </div>
+                <div class="fp-card reveal" style="transition-delay:120ms;">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-2t-1552sqft.webp" alt="Concorde Sienna 3 BHK 2 toilet 1552 to 1578 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                    <div class="fp-card-body">
+                        <h3>3 BHK (2 Toilet)</h3>
+                        <p>1,552 &ndash; 1,578 sq.ft. &middot; 60 units</p>
+                        <div class="fp-card-price">₹1.63 Cr onwards*</div>
+                    </div>
+                </div>
+                <div class="fp-card reveal" style="transition-delay:180ms;">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-1680sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet compact 1680 to 1694 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                    <div class="fp-card-body">
+                        <h3>3 BHK (3 Toilet Compact)</h3>
+                        <p>1,680 &ndash; 1,694 sq.ft. &middot; 120 units</p>
+                        <div class="fp-card-price">₹1.76 Cr onwards*</div>
+                    </div>
+                </div>
+                <div class="fp-card reveal" style="transition-delay:240ms;">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-large-1870sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet large 1870 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                    <div class="fp-card-body">
+                        <h3>3 BHK (3 Toilet Large)</h3>
+                        <p>1,870 sq.ft. &middot; 30 units</p>
+                        <div class="fp-card-price">₹1.96 Cr onwards*</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-footnote" style="margin-top:1.2rem;">*Indicative pre-launch pricing at ₹10,500 per sq.ft all-inclusive. The 3 Toilet Compact configuration mirrors across unit numbers at 1,680 sq.ft. and 1,687&ndash;1,694 sq.ft.; both variants are shown in the gallery below. Please enquire for the current, verified price list and availability.</div>
 
             <div class="gallery-grid" style="max-height: 420px; margin-top: 1.8rem;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-master-plan.webp" alt="Concorde Sienna master plan layout showing tower, clubhouse and parks"></div>
                 <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-2bhk-1200sqft.webp" alt="Concorde Sienna 2 BHK 1200 sq ft floor plan layout"></div>
                 <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-2t-1552sqft.webp" alt="Concorde Sienna 3 BHK 2 toilet 1552 sq ft floor plan layout"></div>
                 <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-1680sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet compact 1680 sq ft floor plan layout"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-1687sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet compact 1687 to 1694 sq ft floor plan layout"></div>
                 <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-large-1870sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet large 1870 sq ft floor plan layout"></div>
             </div>
         </div>
@@ -1388,6 +1489,7 @@
                             <th>Apartment Type</th>
                             <th>Super Built-Up Area</th>
                             <th>Carpet Area (Approx.)&dagger;</th>
+                            <th>Units</th>
                             <th>Starting Price</th>
                         </tr>
                     </thead>
@@ -1396,29 +1498,48 @@
                             <td>2 BHK</td>
                             <td>1,200 – 1,221 sq. ft.</td>
                             <td>816 – 830 sq. ft.</td>
+                            <td>60</td>
                             <td>₹1.26 Cr*</td>
                         </tr>
                         <tr>
                             <td>3 BHK (2 Toilet)</td>
                             <td>1,552 – 1,578 sq. ft.</td>
                             <td>1,055 – 1,271 sq. ft.</td>
+                            <td>60</td>
                             <td>₹1.63 Cr*</td>
                         </tr>
                         <tr>
                             <td>3 BHK (3 Toilet Compact)</td>
-                            <td>~1,680 sq. ft.</td>
+                            <td>1,680 – 1,694 sq. ft.</td>
                             <td>1,055 – 1,271 sq. ft.</td>
+                            <td>120</td>
                             <td>₹1.76 Cr*</td>
                         </tr>
                         <tr>
                             <td>3 BHK (3 Toilet Large)</td>
                             <td>1,870 sq. ft.</td>
                             <td>1,055 – 1,271 sq. ft.</td>
+                            <td>30</td>
                             <td>₹1.96 Cr*</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="pricing-footnote">*Indicative pre-launch pricing. Please enquire for the latest offer and availability. &dagger;Carpet area figures reflect circulating pre-booking sheets and cover the full 3 BHK range rather than a per-variant split; confirm the exact RERA-declared carpet area for your specific unit before booking.</div>
+                <div class="pricing-footnote">*Indicative pre-launch pricing at ₹10,500 per sq.ft all-inclusive (base, floor-rise, PLC and amenity charges; GST, stamp duty and registration are additional). Please enquire for the latest offer and availability. &dagger;Carpet area figures reflect circulating pre-booking sheets and cover the full 3 BHK range rather than a per-variant split; confirm the exact RERA-declared carpet area for your specific unit before booking.</div>
+            </div>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.6rem;">Reading the Rate Honestly</strong>
+                    <span>
+                        Every configuration is priced off the same ₹10,500 per sq.ft. all-inclusive rate &mdash; that's the arithmetic behind each starting price above. This sits at the upper end of the Hennur Main Road launch range but isn't an outlier: comparable Bengaluru high-rises on metro corridors with similar amenity stacks have transacted in the ₹9,500&ndash;12,000 per sq.ft. band over the last twelve months. The premium over the corridor average reflects the single-tower positioning, the multi-tier sky-deck clubhouse and the metro adjacency. When comparing against mid-rise launches on the same road, normalise on the per-sq.ft. rate rather than the sticker price.
+                    </span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.6rem;">All-In Budget, Not Just the Sticker Price</strong>
+                    <span>
+                        For a typical 3 BHK (2 Toilet) buyer at ₹1.63 Cr all-inclusive: statutory GST at 5% on under-construction inventory, plus stamp duty and registration at roughly 7.6% in Karnataka, add about ₹21 lakh &mdash; taking the all-in outlay to approximately ₹1.84 Cr. On an 80% loan-to-value at current bank rates, the indicative monthly EMI works out to roughly ₹1.15 lakh over a twenty-year tenor. Run the full all-in number rather than the headline price, and hold a buffer for the price-list revision that typically follows K-RERA registration.
+                    </span>
+                </div>
             </div>
         </div>
     </section>
@@ -1440,13 +1561,21 @@
                             <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> ~7–10 km</li>
                             <li><strong style="display:inline; color:var(--text-dark);">Thanisandra Railway Station:</strong> 8.3 km</li>
                             <li><strong style="display:inline; color:var(--text-dark);">Yelahanka Railway Station:</strong> 8.6 km</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Nearest Metro (Yeshwanthpur):</strong> Connected</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Metro (Phase 2B Blue Line, Nagawara/Hennur Cross):</strong> Under construction</li>
                             <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> 16.5 km</li>
                         </ul>
                     </div>
                     <div class="plan-note">
                         <strong>Business &amp; Transport Hubs</strong>
                         <span>Quick access to Manyata Tech Park, the Outer Ring Road / Hebbal, and Kempegowda International Airport via major arterial roads.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Phase 2B Blue Line Metro</strong>
+                        <span>The single biggest infrastructure trigger on this belt is Namma Metro's Phase 2B Blue Line from KR Pura to the airport, with confirmed stations at Nagawara and Hennur Cross and an interchange at Hebbal. Once operational &mdash; the current window is 2027-28 &mdash; it cuts the airport commute from today's ~55-minute road drive to a metro alternative inside 35-40 minutes, and gives Hennur residents a one-seat ride to KR Pura on the east side and the airport on the north. That timeline lines up reasonably well with Concorde Sienna's own construction cycle.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Corridor Price Trend</strong>
+                        <span>Hennur Main Road has matured from a peripheral residential stretch into a properly served North Bengaluru sub-market: Lumbini Gardens lake, the HBR Layout and Kalyan Nagar retail strips, Manyata Tech Park and the Hebbal flyover/ORR interchange all sit within a daily-life radius, alongside schools such as Vibgyor and Legacy and hospitals including Aster CMI and Manipal Hebbal. The corridor's reported 3-year price appreciation runs at around 49%, with trailing-twelve-month appreciation between roughly 10% and 28% &mdash; among the better-performing North Bengaluru sub-markets on a like-for-like basis. Treat these as market-reported ranges, not a guaranteed return.</span>
                     </div>
                     <div class="plan-note">
                         <strong>Education &amp; Healthcare</strong>
@@ -1499,9 +1628,28 @@
                 <p style="margin-bottom: 1rem;">
                     Concorde Group is a Bangalore-based real estate developer with residential projects across the city, built around the brand promise "Experiences for life." <strong>Concorde Sienna</strong> extends the developer's presence in North Bengaluru, joining <strong>Concorde Mayfair</strong> in Yelahanka as part of the group's growing footprint along the Hennur-Yelahanka-Bellary Road belt.
                 </p>
-                <p>
+                <p style="margin-bottom: 1rem;">
                     With Concorde Sienna, the developer has opted for a single, vertically-landmarked tower rather than a sprawling low-rise layout, a design choice aimed at maximising open, green and amenity space on a compact 3.05-acre plot on Hennur Main Road. The sky-deck clubhouse, co-working space and indoor amphitheatre reflect a positioning toward professionals and young families looking for a lifestyle-first home in a well-connected part of North Bengaluru.
                 </p>
+                <p>
+                    Founded in 1998 in Bengaluru, Concorde Group has delivered over 18 million sq.ft. of residential space across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber. The developer sits in the Tier-2 Bengaluru builder band with mature operations and a current pipeline value of approximately ₹750 crore.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="reviews" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Concorde Sienna Reviews</h2>
+            <p class="section-subtitle">Concorde Sienna is pre-launch and has not handed over, so there are no resident reviews for this project yet. Use Concorde Group's delivered portfolio as a buyer-perspective proxy on track record.</p>
+
+            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem;">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.6rem;">Portfolio Track Record: 4.2/5 Across 180 Reviews</strong>
+                    <span>
+                        Concorde Group's aggregate rating across its delivered portfolio stands at 4.2/5 across 180 reviews on Google. Those portfolio reviews cluster around delivery discipline at Concorde Napa Valley and Mist Valley, livability at Concorde Manhattans, and post-handover community feedback at Concorde Amber. Buyers using portfolio reviews as a proxy for a pre-launch project should weight delivery-track signal and post-handover maintenance discipline above amenity completeness, since the Concorde Sienna brief itself locks at K-RERA filing rather than at the present pre-launch literature.
+                    </span>
+                </div>
             </div>
         </div>
     </section>
@@ -1656,6 +1804,33 @@
                         <p itemprop="text">You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
                     </div>
                 </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">What is the total saleable area of Concorde Sienna?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project's total saleable area works out to approximately 4.25 lakh sq.ft. across its 2 BHK and 3 BHK homes, spread across the single 29-floor tower.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span itemprop="name">What is the metro connectivity for Concorde Sienna?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Namma Metro's Phase 2B Blue Line, from KR Pura to Kempegowda International Airport, is under construction with confirmed stations at Nagawara and Hennur Cross and an interchange at Hebbal. Its current operational window is 2027-28, which would cut the airport commute from around 55 minutes by road to a 35-40 minute metro alternative.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span itemprop="name">What is the all-inclusive rate and estimated EMI at Concorde Sienna?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Pre-launch pricing works out to roughly ₹10,500 per sq.ft. all-inclusive (base, floor-rise, PLC and amenity charges), before statutory GST, stamp duty and registration. For a typical 3 BHK (2 Toilet) at ₹1.63 Cr all-inclusive, GST and stamp duty/registration add roughly ₹21 lakh, taking the all-in outlay to about ₹1.84 Cr; on an 80% loan-to-value over a 20-year tenor, the indicative EMI works out to around ₹1.15 lakh a month. Confirm current bank rates and the formal price sheet before budgeting.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1717,17 +1892,6 @@
         <h2 class="pfs-title">Similar Projects to Consider</h2>
         <p class="pfs-intro">Explore comparable properties in the <a href="/areas/hennur/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Hennur-Thanisandra corridor</a> to find the best fit for your budget and lifestyle. <a href="/projects/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Browse all verified projects →</a></p>
         <div class="proj-compare-grid">
-      <a href="/projects/concorde-hennur/" class="proj-compare-card">
-        <div class="proj-compare-img-wrap">
-          <img src="/images/projects-thumbs/concorde-hennur-thumb.webp" alt="Concorde Hennur" loading="lazy">
-          <span class="proj-compare-badge">Same Project, Other Name</span>
-        </div>
-        <div class="proj-compare-body">
-          <p class="proj-compare-name">Concorde Hennur</p>
-          <p class="proj-compare-detail">Same Project, Other Name &middot; Pre-Launch &middot; Hennur Main Road</p>
-          <span class="proj-compare-link">View Project →</span>
-        </div>
-      </a>
       <a href="/projects/assetz-mizu-and-ki/" class="proj-compare-card">
         <div class="proj-compare-img-wrap">
           <img src="/images/projects-thumbs/assetz-mizu-and-ki-thumb.webp" alt="Assetz Mizu and Ki" loading="lazy">
@@ -1875,8 +2039,10 @@
                 <p><a href="#about">About</a></p>
                 <p><a href="#amenities">Amenities</a></p>
                 <p><a href="#gallery">Gallery</a></p>
-                <p><a href="#units">Unit Plans</a></p>
+                <p><a href="#masterplan">Master Plan</a></p>
+                <p><a href="#floorplans">Floor Plans</a></p>
                 <p><a href="#location">Location</a></p>
+                <p><a href="#reviews">Reviews</a></p>
                 <p><a href="/privacy.html">Privacy Policy</a></p>
             </div>
 
