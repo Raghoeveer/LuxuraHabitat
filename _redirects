@@ -13,7 +13,7 @@
 /additional_websites/Lumina/*                /projects/sattva-lumina/          301
 /additional_websites/Mayfair/*               /projects/concorde-mayfair/       301
 /additional_websites/Salisbury/*             /projects/orchid-salisbury/       301
-/additional_websites/SANIO/*                 /projects/sattva-sanio/           301
+/additional_websites/SANIO/*                 /projects/sattva-aangane/         301
 /additional_websites/Sattva%20City/*         /projects/sattva-city/            301
 /zen&sato3/*                                  /projects/assetz-zen-sato/        301
 
@@ -28,3 +28,9 @@
 # instead of 404 in case either URL is indexed or externally linked.
 /projects/sattva-ekatra-doddaballapur-plots/*        /projects/sattva-thippapura/                              301
 /blog/sattva-ekatra-doddaballapur-price-plots-rera/*  /blog/sattva-thippapura-doddaballapur-price-plots-rera/   301
+
+# Sattva Sanio was superseded by Sattva Aangane (marketed under the pre-launch
+# codename "Courtyard") on the same Old Madras Road corridor. Removed
+# 2026-09-18; redirected instead of 404 in case either URL is indexed or
+# externally linked.
+/projects/sattva-sanio/*                              /projects/sattva-aangane/                                 301
