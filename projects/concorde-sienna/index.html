@@ -488,9 +488,9 @@
 
         /* Floor plan configuration cards */
         .fp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.4rem; }
-        .fp-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .fp-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
         .fp-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(2,6,23,0.12); }
-        .fp-card img { width: 100%; display: block; cursor: pointer; border-bottom: 1px solid var(--border-light); }
+        .fp-card img { width: 100%; display: block; border-bottom: 1px solid var(--border-light); }
         .fp-card-body { padding: 1.1rem 1.2rem 1.3rem; }
         .fp-card-body h3 { color: var(--primary-dark); font-size: 1.02rem; font-weight: 900; margin-bottom: 0.5rem; }
         .fp-card-body p { color: var(--text-light); font-size: 0.86rem; font-weight: 600; margin: 0.2rem 0; }
@@ -1424,32 +1424,32 @@
             <p class="section-subtitle">Two configurations &mdash; 2 BHK and 3 BHK &mdash; across the tower. Final carpet area, super built-up area and inventory lock at K-RERA filing; the references below are pre-launch indicative bands.</p>
 
             <div class="fp-grid">
-                <div class="fp-card reveal">
-                    <img src="/images/projects/concorde-sienna/concorde-sienna-2bhk-1200sqft.webp" alt="Concorde Sienna 2 BHK 1200 to 1221 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                <div class="fp-card reveal" onclick="toggleDetailsPanel()">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-2bhk-1200sqft.webp" alt="Concorde Sienna 2 BHK 1200 to 1221 sq ft floor plan layout">
                     <div class="fp-card-body">
                         <h3>2 BHK (2 Toilet)</h3>
                         <p>1,200 &ndash; 1,221 sq.ft. &middot; 60 units</p>
                         <div class="fp-card-price">₹1.26 Cr onwards*</div>
                     </div>
                 </div>
-                <div class="fp-card reveal" style="transition-delay:120ms;">
-                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-2t-1552sqft.webp" alt="Concorde Sienna 3 BHK 2 toilet 1552 to 1578 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                <div class="fp-card reveal" style="transition-delay:120ms;" onclick="toggleDetailsPanel()">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-2t-1552sqft.webp" alt="Concorde Sienna 3 BHK 2 toilet 1552 to 1578 sq ft floor plan layout">
                     <div class="fp-card-body">
                         <h3>3 BHK (2 Toilet)</h3>
                         <p>1,552 &ndash; 1,578 sq.ft. &middot; 60 units</p>
                         <div class="fp-card-price">₹1.63 Cr onwards*</div>
                     </div>
                 </div>
-                <div class="fp-card reveal" style="transition-delay:180ms;">
-                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-1680sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet compact 1680 to 1694 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                <div class="fp-card reveal" style="transition-delay:180ms;" onclick="toggleDetailsPanel()">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-1680sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet compact 1680 to 1694 sq ft floor plan layout">
                     <div class="fp-card-body">
                         <h3>3 BHK (3 Toilet Compact)</h3>
                         <p>1,680 &ndash; 1,694 sq.ft. &middot; 120 units</p>
                         <div class="fp-card-price">₹1.76 Cr onwards*</div>
                     </div>
                 </div>
-                <div class="fp-card reveal" style="transition-delay:240ms;">
-                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-large-1870sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet large 1870 sq ft floor plan layout" onclick="toggleDetailsPanel()">
+                <div class="fp-card reveal" style="transition-delay:240ms;" onclick="toggleDetailsPanel()">
+                    <img src="/images/projects/concorde-sienna/concorde-sienna-3bhk-3t-large-1870sqft.webp" alt="Concorde Sienna 3 BHK 3 toilet large 1870 sq ft floor plan layout">
                     <div class="fp-card-body">
                         <h3>3 BHK (3 Toilet Large)</h3>
                         <p>1,870 sq.ft. &middot; 30 units</p>
