@@ -1467,6 +1467,7 @@
             formData.append('phone', document.querySelector('#heroLeadForm input[name="phone"]').value);
             formData.append('email', document.querySelector('#heroLeadForm input[name="email"]').value);
             formData.append('source', 'Hero Form');
+            formData.append('subject', 'New Inquiry - Sattva Thippapura / Ekatra (Hero Form) (luxurahabitat.com)');
 
             fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
                 .then(() => showSuccessMessage(event.target))
@@ -1557,6 +1558,7 @@
             formData.append('phone', document.querySelector('#panelLeadForm input[name="phone"]').value);
             formData.append('email', document.querySelector('#panelLeadForm input[name="email"]').value);
             formData.append('source', 'Sidebar Widget');
+            formData.append('subject', 'New Inquiry - Sattva Thippapura / Ekatra (Sidebar Widget) (luxurahabitat.com)');
 
             fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
                 .then(() => showPanelSuccess())
@@ -1586,6 +1588,7 @@
             formData.append('email', document.querySelector('#leadForm input[name="email"]').value);
             formData.append('query', document.querySelector('#leadForm textarea[name="query"]').value);
             formData.append('source', 'Website');
+            formData.append('subject', 'New Inquiry - Sattva Thippapura / Ekatra (Website) (luxurahabitat.com)');
 
             fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
                 .then(() => showMainFormSuccess(submitBtn))
