@@ -50,3 +50,13 @@
 # blog post was kept live, just repointed internally to the surviving
 # project page.
 /projects/concorde-hennur/*                                   /projects/concorde-sienna/                                       301
+
+# Purva Codename Diamond and Purva Kanakapura Road Vajarahalli were deliberate
+# alias-name duplicate project pages of Purva Hallmark (same underlying
+# pre-launch twin-tower project at Vajarahalli, off Kanakapura Road). Both
+# project pages were removed 2026-09-19; redirected instead of 404 in case
+# either URL is indexed or externally linked. Their dedicated review blog
+# posts were kept live, just repointed internally to the surviving project
+# page.
+/projects/purva-codename-diamond/*                            /projects/purva-hallmark/                                        301
+/projects/purva-kanakapura-road-vajarahalli/*                 /projects/purva-hallmark/                                        301
