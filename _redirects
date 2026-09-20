@@ -60,3 +60,11 @@
 # page.
 /projects/purva-codename-diamond/*                            /projects/purva-hallmark/                                        301
 /projects/purva-kanakapura-road-vajarahalli/*                 /projects/purva-hallmark/                                        301
+
+# Shriram Guduvanchery was a deliberate developer+locality alias-name
+# duplicate project page for the same underlying project marketed as
+# Shriram Shankari (Guduvanchery, South Chennai). The project page was
+# removed 2026-09-19; redirected instead of 404 in case the URL is indexed
+# or externally linked. Its dedicated review blog post was kept live, just
+# repointed internally to the surviving project page.
+/projects/chennai/shriram-guduvanchery/*                      /projects/chennai/shriram-shankari/                               301
