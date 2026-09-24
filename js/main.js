@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     statNumbers.forEach(el => counterObserver.observe(el));
   }
 
-  // --- Blog Brochure Popup (fires after 45s of active reading) ---
+  // --- Blog Brochure Popup (fires after 10s of active reading) ---
   initBlogBrochurePopup();
 
 });
@@ -264,7 +264,7 @@ function initBlogBrochurePopup() {
   } catch (e) {}
 
   var visibleSeconds = 0;
-  var READ_THRESHOLD = 20;
+  var READ_THRESHOLD = 10;
   var timer = setInterval(function () {
     if (document.visibilityState === 'visible') {
       visibleSeconds += 1;
