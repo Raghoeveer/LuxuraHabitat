@@ -64,7 +64,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/images/projects/concorde-neo/concorde-neo-main-banner.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/projects/concorde-neo/concorde-neo-outdoor-view.webp" fetchpriority="high">
     <link rel="icon" href="/images/projects/concorde-neo/favicon.png" type="image/png">
 
     <style>
@@ -467,7 +467,7 @@
         .gallery-item:hover img { transform: scale(1.1); }
 
         .amenities { background: var(--bg-light); }
-        .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2.4rem; }
         .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(11,107,60,0.12); }
         .amenity-card:hover { border-color: rgba(11,107,60,0.35); }
         .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
@@ -527,6 +527,16 @@
         .highlights-table tbody tr:hover td { background: rgba(11,107,60,0.04); }
         .highlights-table tbody tr:last-child td { border-bottom: none; }
         .highlights-table td strong { color: var(--primary-dark); }
+
+        .config-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+        .config-card { background: #fff; border-radius: 14px; padding: 1.6rem 1.3rem; text-align: center; box-shadow: 0 8px 22px rgba(2,6,23,0.07); border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .config-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(2,6,23,0.12); }
+        .config-badge { display: inline-block; background: rgba(11,107,60,0.1); color: var(--accent-green); font-weight: 900; font-size: 0.82rem; letter-spacing: 0.4px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 0.9rem; }
+        .config-size { color: var(--text-light); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .config-price { color: var(--primary-dark); font-weight: 900; font-size: 1.5rem; }
+        .config-note { color: var(--text-light); font-size: 0.78rem; margin-bottom: 1rem; }
+        .config-link { display: inline-block; color: var(--accent-warm); font-weight: 800; font-size: 0.88rem; text-decoration: none; }
+        .config-link:hover { text-decoration: underline; }
 
         .pricing-table-wrap {
             overflow-x: auto;
@@ -1088,7 +1098,7 @@
         </div>
     </nav>
 
-    <section class="hero" id="hero" style="background-image: url('/images/projects/concorde-neo/concorde-neo-main-banner.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <section class="hero" id="hero" style="background-image: url('/images/projects/concorde-neo/concorde-neo-outdoor-view.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
         <div class="hero-mobile-overlay"></div>
         <div class="hero-container" style="position: relative; z-index: 2;">
             <div class="hero-content reveal">
@@ -1127,6 +1137,8 @@
                         <span class="offer-note">2 BHK onwards · pre-launch pricing</span>
                     </div>
                 </div>
+
+                <a href="#pricing" class="config-link" style="color:var(--accent-green);font-weight:800;font-size:0.92rem;text-decoration:none;margin-top:-0.4rem;">View Configurations &amp; Pricing &rarr;</a>
             </div>
 
             <div class="hero-form-section reveal" style="transition-delay:120ms;">
@@ -1283,6 +1295,17 @@
                         <li>~70% efficiency planning</li>
                     </ul>
                 </div>
+
+                <div class="amenity-card reveal" style="transition-delay:300ms;">
+                    <h3>Convenience &amp; Safety</h3>
+                    <ul class="amenity-list">
+                        <li>High-speed lifts</li>
+                        <li>Ample covered car parking</li>
+                        <li>100% power back-up</li>
+                        <li>Water storage &amp; waste disposal management</li>
+                        <li>24x7 CCTV surveillance</li>
+                    </ul>
+                </div>
             </div>
 
             <div style="margin-top:3rem;" class="gallery-grid-wrapper">
@@ -1357,6 +1380,23 @@
         <div class="container">
             <h2 class="section-title">Concorde Neo Price &amp; Configuration</h2>
             <p class="section-subtitle">Transparent pre-launch pricing for your dream home.</p>
+
+            <div class="config-grid">
+                <div class="config-card reveal">
+                    <div class="config-badge">2 BHK</div>
+                    <div class="config-size">1,107 – 1,241 Sq.Ft</div>
+                    <div class="config-price">&#8377;1.05 Cr*</div>
+                    <p class="config-note">Onwards, pre-launch pricing</p>
+                    <a href="#units" class="config-link">View Floor Plan &rarr;</a>
+                </div>
+                <div class="config-card reveal" style="transition-delay:120ms;">
+                    <div class="config-badge">3 BHK</div>
+                    <div class="config-size">1,477 – 1,539 Sq.Ft</div>
+                    <div class="config-price">&#8377;1.44 Cr*</div>
+                    <p class="config-note">Onwards, pre-launch pricing</p>
+                    <a href="#units" class="config-link">View Floor Plan &rarr;</a>
+                </div>
+            </div>
 
             <div class="pricing-table-wrap">
                 <table class="pricing-table">
