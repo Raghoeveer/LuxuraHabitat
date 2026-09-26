@@ -445,6 +445,52 @@
             padding: 0 1.3rem 1.1rem;
         }
 
+        .gallery { background: var(--bg-white); }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(11,107,60,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(11,107,60,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* EMI Calculator */
+        .emi-calculator { background: var(--bg-white); }
+        .emi-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr); gap: 2rem; align-items: start; margin-top: 2rem; }
+        .emi-card { background: #fff; border-radius: 16px; padding: 1.8rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); border: 1px solid rgba(11,107,60,0.12); }
+        .emi-field { margin-bottom: 1.2rem; }
+        .emi-field label { display: block; font-weight: 800; font-size: 0.9rem; color: var(--primary-dark); margin-bottom: 0.45rem; }
+        .emi-field input[type="number"] { width: 100%; padding: 0.8rem 1rem; border: 2px solid rgba(11,107,60,0.15); border-radius: 10px; font-family: inherit; font-size: 0.98rem; }
+        .emi-field input[type="number"]:focus { outline: none; border-color: var(--accent-green); }
+        .emi-calc-btn { width: 100%; padding: 0.9rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-weight: 900; font-size: 0.98rem; cursor: pointer; transition: all 0.2s ease; }
+        .emi-calc-btn:hover { background: #075b31; transform: translateY(-1px); }
+        .emi-result-card { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); border-radius: 16px; padding: 1.8rem; color: #fff; height: 100%; }
+        .emi-result-card h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 1.2rem; }
+        .emi-result-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.15); font-size: 0.92rem; }
+        .emi-result-row:last-child { border-bottom: none; }
+        .emi-result-row .emi-highlight { font-size: 1.4rem; font-weight: 900; color: #a7f3d0; }
+        .emi-disclaimer { font-size: 0.78rem; color: var(--text-light); font-style: italic; margin-top: 1.2rem; }
+
+        /* Local area tables (schools/hospitals/lifestyle) */
+        .area-tables-grid { display: grid; gap: 2.2rem; margin-top: 2rem; }
+        .area-table-block h3 { font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 0.9rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+
         .amenities { background: var(--bg-light); }
         .amenity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; margin-top: 2.4rem; }
         .amenity-card { background: #fff; padding: 1.2rem 1.4rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(11,107,60,0.12); }
@@ -636,6 +682,10 @@
             .mobile-call-btn { display: none; }
             .nav-cta { display: inline-flex; }
 
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+            .emi-grid { grid-template-columns: 1fr; }
+
             .mobile-call-icon { font-size: 1.05rem; }
             .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
 
@@ -692,6 +742,7 @@
             .amenity-grid { grid-template-columns: 1fr; }
             .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
         }
 
         /* Trust Bar */
@@ -1111,6 +1162,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#highlights">Highlights</a></li>
             <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#units">Master Plan</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
@@ -1334,6 +1386,22 @@
         </div>
     </section>
 
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Sattva Aangane Image Gallery</h2>
+            <p class="section-subtitle">A closer look at the interiors and living spaces envisioned for Sattva Aangane.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-aangane/sattva-aangane-entrance-view.webp" alt="Sattva Aangane grand entrance view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-aangane/sattva-aangane-living-area.webp" alt="Sattva Aangane living area interior"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-aangane/sattva-aangane-dining-area.webp" alt="Sattva Aangane dining area interior"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-aangane/sattva-aangane-balcony.webp" alt="Sattva Aangane balcony view"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/sattva-aangane/sattva-aangane-swimming-pool.webp" alt="Sattva Aangane swimming pool"></div>
+            </div>
+            <p style="text-align:center; color: var(--text-light); font-size: 0.85rem; font-style: italic; margin-top: 1.2rem;">Images are representative and for illustrative purposes only.</p>
+        </div>
+    </section>
+
     <section class="plan" id="units">
         <div class="container">
             <h2 class="section-title">Master Plan &amp; Unit Plans</h2>
@@ -1447,6 +1515,39 @@
         </div>
     </section>
 
+    <section class="emi-calculator" id="emi-calculator">
+        <div class="container">
+            <h2 class="section-title">Home Loan EMI Calculator</h2>
+            <p class="section-subtitle">Plan your home loan for Sattva Aangane with an indicative monthly EMI breakdown.</p>
+
+            <div class="emi-grid">
+                <div class="emi-card reveal">
+                    <div class="emi-field">
+                        <label for="emiLoanAmount">Loan Amount (₹)</label>
+                        <input type="number" id="emiLoanAmount" placeholder="e.g. 5000000" min="0" step="1000">
+                    </div>
+                    <div class="emi-field">
+                        <label for="emiInterestRate">Annual Interest Rate (%)</label>
+                        <input type="number" id="emiInterestRate" placeholder="e.g. 8.5" min="0" step="0.1">
+                    </div>
+                    <div class="emi-field">
+                        <label for="emiTenure">Loan Tenure (Years)</label>
+                        <input type="number" id="emiTenure" placeholder="e.g. 20" min="1" step="1">
+                    </div>
+                    <button type="button" class="emi-calc-btn" onclick="calculateSattvaAanganeEMI()">Calculate EMI</button>
+                </div>
+
+                <div class="emi-result-card reveal" style="transition-delay:120ms;">
+                    <h4>Your Estimated EMI</h4>
+                    <div class="emi-result-row"><span>Monthly EMI</span><span class="emi-highlight" id="emiMonthlyResult">N/A</span></div>
+                    <div class="emi-result-row"><span>Total Interest Payable</span><span id="emiInterestResult">N/A</span></div>
+                    <div class="emi-result-row"><span>Total Amount Payable</span><span id="emiTotalResult">N/A</span></div>
+                    <p class="emi-disclaimer">*EMI calculations are indicative only. Actual figures depend on the lender's terms and processing charges. This tool does not constitute a loan offer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="plan" id="location" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">Location Advantages &amp; Old Madras Road Connectivity</h2>
@@ -1476,6 +1577,69 @@
                     <div class="plan-note">
                         <strong>Exact Location</strong>
                         <span><a href="https://maps.app.goo.gl/QTmpvEMEtHMQcwUH6?g_st=ic" target="_blank" rel="noopener">View on Google Maps &rarr;</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="nearby">
+        <div class="container">
+            <h2 class="section-title">Schools, Hospitals &amp; Lifestyle Along Old Madras Road</h2>
+            <p class="section-subtitle">A snapshot of educational, healthcare and lifestyle destinations along the Old Madras Road / Budigere Cross corridor in East Bengaluru. Verify exact distances from the project's precise address before deciding.</p>
+
+            <div class="area-tables-grid">
+                <div class="area-table-block reveal">
+                    <h3>Schools</h3>
+                    <div class="highlights-table-wrap" role="region" aria-label="Nearby schools table">
+                        <table class="highlights-table" aria-label="Schools along Old Madras Road corridor">
+                            <thead>
+                                <tr><th>School</th><th>Board</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Orchids The International School, Budigere</strong></td><td>CBSE / International</td></tr>
+                                <tr><td><strong>Chrysalis High, Budigere Road</strong></td><td>CBSE</td></tr>
+                                <tr><td><strong>New Baldwin International School</strong></td><td>CBSE / ICSE</td></tr>
+                                <tr><td><strong>Delhi Public School, Whitefield</strong></td><td>CBSE</td></tr>
+                                <tr><td><strong>VIBGYOR High School, Whitefield</strong></td><td>ICSE / CBSE</td></tr>
+                                <tr><td><strong>Deens Academy, Whitefield</strong></td><td>ICSE</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="area-table-block reveal" style="transition-delay:100ms;">
+                    <h3>Hospitals</h3>
+                    <div class="highlights-table-wrap" role="region" aria-label="Nearby hospitals table">
+                        <table class="highlights-table" aria-label="Hospitals along Old Madras Road corridor">
+                            <thead>
+                                <tr><th>Hospital</th><th>Type</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>East Point Hospital</strong></td><td>Multi-Speciality</td></tr>
+                                <tr><td><strong>Manipal Hospital, Whitefield</strong></td><td>Multi-Speciality</td></tr>
+                                <tr><td><strong>Narayana Multispeciality Hospital, Whitefield</strong></td><td>Multi-Speciality</td></tr>
+                                <tr><td><strong>Vydehi Hospital, Whitefield</strong></td><td>Multi-Speciality</td></tr>
+                                <tr><td><strong>MVJ Medical College &amp; Hospital</strong></td><td>Teaching Hospital</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="area-table-block reveal" style="transition-delay:200ms;">
+                    <h3>Lifestyle &amp; Entertainment</h3>
+                    <div class="highlights-table-wrap" role="region" aria-label="Nearby lifestyle destinations table">
+                        <table class="highlights-table" aria-label="Lifestyle destinations along Old Madras Road corridor">
+                            <thead>
+                                <tr><th>Destination</th><th>Type</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Orion Uptown Mall</strong></td><td>Shopping &amp; Entertainment Mall</td></tr>
+                                <tr><td><strong>Forum Shantiniketan Mall</strong></td><td>Shopping &amp; Entertainment Mall</td></tr>
+                                <tr><td><strong>Phoenix Marketcity</strong></td><td>Premium Shopping Mall</td></tr>
+                                <tr><td><strong>Brookefield Mall</strong></td><td>Shopping &amp; Entertainment</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -1542,6 +1706,9 @@
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">
                     Sattva Group (Salarpuria Sattva) is one of Bengaluru's most established real estate developers, with a large residential and commercial portfolio across the city's key growth corridors. <strong>Sattva Aangane</strong>, currently marketed under the pre-launch codename "Courtyard," extends the group's presence on Old Madras Road, joining <strong><a href="/projects/sattva-songbird/">Sattva Songbird</a></strong> on the same East Bengaluru stretch.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Beyond Old Madras Road, Sattva Group's broader Bengaluru portfolio includes completed developments such as Sattva East Crest, Sattva Exotic, Sattva Gold Summit and Sattva Park Cubix, alongside newer launches including <a href="/projects/sattva-city/">Sattva City</a> in Doddajala and <a href="/projects/sattva-lumina/">Sattva Lumina</a> in Yelahanka. This track record of planned communities, open-space-led master plans and amenity-rich clubhouses across multiple Bengaluru corridors informs the design approach at Sattva Aangane.
                 </p>
                 <p style="margin-bottom: 1rem;">
                     This is a pre-launch project at the EOI (Expression of Interest) stage. RERA registration, final pricing and the possession timeline are still being finalised by the developer, and buyers should independently verify all three before booking.
@@ -1864,6 +2031,7 @@
                 <h5>Quick Links</h5>
                 <p><a href="#about">About</a></p>
                 <p><a href="#amenities">Amenities</a></p>
+                <p><a href="#gallery">Gallery</a></p>
                 <p><a href="#units">Master Plan</a></p>
                 <p><a href="#pricing">Pricing</a></p>
                 <p><a href="#location">Location</a></p>
@@ -1937,6 +2105,31 @@
                 navLinks.classList.remove('active');
             });
         });
+
+        function calculateSattvaAanganeEMI() {
+            const principal = parseFloat(document.getElementById('emiLoanAmount').value);
+            const annualRate = parseFloat(document.getElementById('emiInterestRate').value);
+            const years = parseFloat(document.getElementById('emiTenure').value);
+
+            if (!principal || !annualRate || !years || principal <= 0 || annualRate <= 0 || years <= 0) {
+                document.getElementById('emiMonthlyResult').textContent = 'N/A';
+                document.getElementById('emiInterestResult').textContent = 'N/A';
+                document.getElementById('emiTotalResult').textContent = 'N/A';
+                return;
+            }
+
+            const monthlyRate = annualRate / 12 / 100;
+            const months = years * 12;
+            const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+            const totalPayable = emi * months;
+            const totalInterest = totalPayable - principal;
+
+            const formatINR = (num) => '₹' + Math.round(num).toLocaleString('en-IN');
+
+            document.getElementById('emiMonthlyResult').textContent = formatINR(emi);
+            document.getElementById('emiInterestResult').textContent = formatINR(totalInterest);
+            document.getElementById('emiTotalResult').textContent = formatINR(totalPayable);
+        }
 
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
