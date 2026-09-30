@@ -2478,3 +2478,46 @@ main {
     padding: 1.25rem;
   }
 }
+
+/* --- Blog mobile bottom CTA (mirrors .mobile-bottom-cta on project pages) --- */
+.blog-mobile-cta { display: none; }
+
+@media (max-width: 768px) {
+  .blog-mobile-cta {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1200;
+    background: var(--bg-white);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .blog-mobile-cta-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--primary-forest);
+    border-right: 1px solid var(--border-light);
+  }
+  .blog-mobile-cta-btn:last-child { border-right: none; }
+  .blog-mobile-cta-btn svg { margin-bottom: 3px; }
+  .blog-mobile-cta-btn.btn-call { color: var(--accent-copper); }
+  .blog-mobile-cta-btn.btn-whatsapp { color: #128c4f; }
+  .blog-mobile-cta-btn.btn-project { background: var(--bg-cream); }
+  .blog-mobile-cta-btn.btn-enquire { background: var(--primary-forest); color: #fff; }
+
+  /* Keep the footer's last lines clear of the fixed bar */
+  body:has(.blog-mobile-cta) { padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
+
+  /* Push Zendesk up so the bar doesn't cover it */
+  body:has(.blog-mobile-cta) iframe#launcher,
+  body:has(.blog-mobile-cta) iframe#webWidget { bottom: 75px !important; }
+}

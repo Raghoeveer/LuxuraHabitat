@@ -230,6 +230,7 @@ function initBlogBrochurePopup() {
   };
 
   var accessKey, projectName, imageSrc, popupTitle, popupSubtitle, subjectPrefix;
+  var autoPopup = true;
 
   if (isGeneral) {
     accessKey = GENERAL_CONTACT_ACCESS_KEY;
@@ -246,7 +247,12 @@ function initBlogBrochurePopup() {
     var projectMatch = rawHref.match(/\/projects\/.*$/);
     var projectHref = projectMatch ? projectMatch[0] : rawHref;
     accessKey = PROJECT_ACCESS_KEYS[projectHref];
-    if (!accessKey) return;
+    if (!accessKey) {
+      // No project form key: the timed popup stays off, but the mobile CTA's
+      // Enquire button still opens a callback form routed to the general inbox.
+      accessKey = GENERAL_CONTACT_ACCESS_KEY;
+      autoPopup = false;
+    }
 
     var nameEl = propertyCard.querySelector('.sidebar-property-name');
     projectName = nameEl ? nameEl.textContent.trim() : 'This Project';
@@ -257,25 +263,42 @@ function initBlogBrochurePopup() {
     subjectPrefix = 'Callback Request: ' + projectName;
   }
 
-  try {
-    if (localStorage.getItem('lh_brochure_submitted') === 'true') return;
-    var lastShown = parseInt(localStorage.getItem('lh_brochure_last_shown') || '0', 10);
-    if (Date.now() - lastShown < 24 * 60 * 60 * 1000) return;
-  } catch (e) {}
+  var timer;
 
-  var visibleSeconds = 0;
-  var READ_THRESHOLD = 10;
-  var timer = setInterval(function () {
-    if (document.visibilityState === 'visible') {
-      visibleSeconds += 1;
-      if (visibleSeconds >= READ_THRESHOLD) {
-        clearInterval(timer);
-        showBrochurePopup();
+  // Mobile CTA "Enquire" opens the same popup on demand (the link falls back
+  // to /contact/ when this function bails out before reaching here).
+  document.querySelectorAll('[data-blog-enquire]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (timer) clearInterval(timer);
+      showBrochurePopup('Blog Mobile CTA');
+    });
+  });
+
+  if (autoPopup) {
+    try {
+      if (localStorage.getItem('lh_brochure_submitted') === 'true') autoPopup = false;
+      var lastShown = parseInt(localStorage.getItem('lh_brochure_last_shown') || '0', 10);
+      if (Date.now() - lastShown < 24 * 60 * 60 * 1000) autoPopup = false;
+    } catch (e) {}
+  }
+
+  if (autoPopup) {
+    var visibleSeconds = 0;
+    var READ_THRESHOLD = 10;
+    timer = setInterval(function () {
+      if (document.visibilityState === 'visible') {
+        visibleSeconds += 1;
+        if (visibleSeconds >= READ_THRESHOLD) {
+          clearInterval(timer);
+          showBrochurePopup();
+        }
       }
-    }
-  }, 1000);
+    }, 1000);
+  }
 
-  function showBrochurePopup() {
+  function showBrochurePopup(source) {
+    if (document.querySelector('.blog-brochure-overlay')) return;
     try { localStorage.setItem('lh_brochure_last_shown', String(Date.now())); } catch (e) {}
 
     var overlay = document.createElement('div');
@@ -285,7 +308,7 @@ function initBlogBrochurePopup() {
         '<button type="button" class="blog-brochure-popup-close" aria-label="Close">✕</button>' +
         (imageSrc ? '<img src="' + imageSrc + '" alt="' + projectName + '" class="blog-brochure-popup-image">' : '') +
         '<div class="blog-brochure-popup-body">' +
-          '<p class="blog-brochure-popup-eyebrow">Still Reading?</p>' +
+          '<p class="blog-brochure-popup-eyebrow">' + (source ? 'Talk to an Advisor' : 'Still Reading?') + '</p>' +
           '<h3 class="blog-brochure-popup-title">' + popupTitle + '</h3>' +
           '<p class="blog-brochure-popup-subtitle">' + popupSubtitle + '</p>' +
           '<form class="blog-brochure-popup-form">' +
@@ -337,8 +360,8 @@ function initBlogBrochurePopup() {
       formData.append('name', form.querySelector('[name="name"]').value);
       formData.append('phone', form.querySelector('[name="phone"]').value);
       formData.append('email', form.querySelector('[name="email"]').value);
-      formData.append('subject', subjectPrefix + ' (Blog Popup)');
-      formData.append('source', 'Blog 45s Popup: ' + window.location.pathname);
+      formData.append('subject', subjectPrefix + (source ? ' (' + source + ')' : ' (Blog Popup)'));
+      formData.append('source', (source || 'Blog 45s Popup') + ': ' + window.location.pathname);
 
       var messageDiv = form.querySelector('.blog-brochure-popup-message');
 
