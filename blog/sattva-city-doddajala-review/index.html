@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection; this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Sattva City Doddajala Review: Price, Floor Plans &amp; Verdict</title>
+  <meta name="description" content="Independent Sattva City review: 1 to 4 BHK floor plans, ₹1.82 to 3.50 Cr prices, real rate per sq ft, all-in cost, amenities, risks and 25 FAQs.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/sattva-city-doddajala-review/">
+  <meta property="og:title" content="Sattva City Doddajala Review: Price, Floor Plans &amp; Verdict">
+  <meta property="og:description" content="Floor plans, carpet areas, prices, the real rate per sq ft, amenities, possession and an honest buy-or-skip verdict for Sattva City in Doddajala, North Bangalore.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/projects/sattva-city/gallery-09.webp">
+  <meta property="og:url" content="https://luxurahabitat.com/blog/sattva-city-doddajala-review/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content, .faq-section { overflow-wrap: anywhere; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); scroll-margin-top: 110px; }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .table-wrap { overflow-x: auto; margin: var(--space-md) 0; }
+    .article-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 520px; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; vertical-align: top; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .article-content figure { margin: 0 0 24px; }
+    .article-content figure img { width: 100%; border-radius: 12px; display: block; background: #fff; }
+    .article-content figcaption { font-size: 0.85rem; color: #666; margin-top: 8px; line-height: 1.5; }
+    .plan-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; align-items: start; }
+    .plan-pair figure { margin: 0; border: 1px solid var(--border-light); border-radius: 12px; padding: 10px; background: #fff; }
+    .key-facts { background: #faf8f5; border: 1px solid var(--border-light); border-left: 5px solid var(--accent-copper); border-radius: 10px; padding: 18px 22px; margin: 0 0 var(--space-md); }
+    .key-facts h2 { margin-top: 0 !important; font-size: 1.3rem !important; }
+    .key-facts ul { margin-bottom: 0; }
+    .toc { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; padding: 18px 22px; margin: 0 0 var(--space-md); }
+    .toc strong { display: block; font-family: var(--font-heading); color: var(--primary-forest); font-size: 1.1rem; margin-bottom: 8px; }
+    .toc ol { margin: 0 0 0 20px; columns: 2; column-gap: 32px; font-size: 0.95rem; }
+    .toc a { color: var(--primary-forest); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .callout { background: #f1f7f3; border-radius: 10px; padding: 16px 20px; margin: 0 0 var(--space-md); font-size: 0.98rem; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .inline-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; background: var(--primary-forest); color: #fff; border-radius: 12px; padding: 18px 22px; margin: var(--space-md) 0; }
+    .inline-cta p { margin: 0 !important; color: #fff; font-size: 0.98rem; }
+    .inline-cta a { background: var(--accent-copper); color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.92rem; white-space: nowrap; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-section h2 { font-family: var(--font-heading); font-size: 1.75rem; color: var(--primary-forest); margin-bottom: 8px; }
+    .faq-group-title { font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-charcoal); margin: 28px 0 10px; }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 900px; padding: 0 1.3rem 1.1rem; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info { min-width: 0; }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; overflow-wrap: anywhere; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+      .toc ol { columns: 1; }
+      .plan-pair { grid-template-columns: 1fr; }
+    }
+    .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 var(--space-md); }
+    .pc-grid > div { border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 20px; background: #fff; }
+    .pc-grid h3 { margin-top: 0 !important; font-size: 1.1rem !important; }
+    .pc-grid ul { margin-bottom: 0 !important; }
+    @media (max-width: 640px) { .pc-grid { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/sattva-city-doddajala-review/"
+        },
+        "headline": "Sattva City Doddajala Review: Price, Floor Plans, Location and Our Verdict",
+        "description": "Independent Sattva City review: 1 to 4 BHK floor plans, ₹1.82 to 3.50 Cr prices, real rate per sq ft, all-in cost, amenities, risks and 25 FAQs.",
+        "image": [
+          "https://luxurahabitat.com/projects/sattva-city/gallery-09.webp",
+          "https://luxurahabitat.com/additional_websites/Sattva%20City/masterplan.webp",
+          "https://luxurahabitat.com/projects/sattva-city/gallery-07.webp"
+        ],
+        "datePublished": "2026-09-30",
+        "dateModified": "2026-09-30",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "about": {
+          "@type": "ApartmentComplex",
+          "name": "Sattva City",
+          "url": "https://luxurahabitat.com/projects/sattva-city/"
+        },
+        "url": "https://luxurahabitat.com/blog/sattva-city-doddajala-review/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://luxurahabitat.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://luxurahabitat.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Devanahalli Real Estate Guide",
+            "item": "https://luxurahabitat.com/areas/devanahalli/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Sattva City Doddajala Review",
+            "item": "https://luxurahabitat.com/blog/sattva-city-doddajala-review/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sattva City is a 50-acre apartment township by Sattva Group at Meenakunte Hosur, Doddajala, on Airport Road in North Bangalore. It has 3,460 homes in 13 high-rise towers, from 1 BHK to 4 BHK plus duplex penthouses, with about 84% open space, 4 clubhouses and 200+ amenities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the developer of Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sattva Group, the Bengaluru developer that began in 1986 as Salarpuria Sattva. It has delivered a large portfolio of homes and office parks across the city, but check the delivery record of its recent residential launches before you commit to a six-year build."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Sattva City the same as Sattva Hamlet City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Some portals and ads list the project as Sattva Hamlet City. It is the same Doddajala township with the same RERA number, PRM/KA/RERA/1251/472/PR/270226/008494."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many towers and floors does Sattva City have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There are 13 towers, marked Blocks 01 to 13 on the builder's key plan. Each has two basements, a ground floor and 16 to 21 residential floors (2B+G+16 to 2B+G+21)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much open space does Sattva City have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 84% of the site is open space, so only around 16% is built over. The master plan spreads the towers across separate parcels around a central green spine with a lake, water gardens and two large central parks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far is Sattva City from Bangalore Airport?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 8 km, or roughly 15 minutes off-peak along Airport Road. The site is about 1 km from the Sadahalli toll plaza."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far is Sattva City from Hebbal, MG Road and Yelahanka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yelahanka is about 20 km (around 30 minutes), Hebbal about 30 km (around 40 minutes) and MG Road about 40 km (50 to 60 minutes off-peak, longer at peak hours)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Sattva City a good location for IT professionals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if you work in North Bangalore, near the airport, or from home. The Aerospace SEZ is about 10 km away and Manyata Tech Park is reachable, but daily commutes to Whitefield, Koramangala, Outer Ring Road or Electronic City would be long."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are there schools and hospitals near Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some, but the area is still developing. Devanahalli town, about 5 km away, and Yelahanka, about 20 km away, cover most schools, hospitals and shopping today. Check the drive to your preferred school before you buy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What configurations are available at Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The builder's floor plans include a 1 BHK (1,161 sq ft), 2 BHK (1,710 sq ft), 2.5 BHK with study and garden (1,644 sq ft), 3 BHK (2,238 sq ft), 3.5 BHK with extended terrace (2,412 sq ft), 4 BHK with servant room (2,975 sq ft) and a 4 BHK duplex penthouse (6,266 sq ft). All are saleable areas, and other unit types exist."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the carpet area of Sattva City apartments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1 BHK 705 sq ft, 2 BHK 1,002 sq ft, 2.5 BHK 1,036 sq ft, 3 BHK 1,397 sq ft, 3.5 BHK 1,525 sq ft, 4 BHK 1,863 sq ft and penthouse 3,730 sq ft. Carpet area is about 59% to 63% of saleable area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the price of a 2 BHK in Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2 BHK homes start at about ₹1.82 Cr and go up to about ₹2.15 Cr depending on tower, floor and layout, before GST and registration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the price of 3 BHK and 4 BHK homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "3 BHK homes start at about ₹2.40 Cr. The 2,975 sq ft 4 BHK is quoted at about ₹3.00 to 3.50 Cr. Penthouse and 1 BHK prices are shared on request."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the price per sq ft at Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On the 2,975 sq ft 4 BHK, ₹3.00 to 3.50 Cr works out to about ₹10,100 to ₹11,800 per sq ft of saleable area, or about ₹16,100 to ₹18,800 per sq ft of carpet area. Always compare projects on carpet-area rates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the all-in cost of a Sattva City apartment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Add 5% GST, Karnataka stamp duty of 5% plus surcharge and cess, a 1% registration fee, parking if charged separately, a maintenance deposit and interiors. For a ₹3 Cr 4 BHK, expect roughly ₹3.6 to 3.85 Cr all-in once interiors are included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Sattva City RERA approved?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is registered with Karnataka RERA under PRM/KA/RERA/1251/472/PR/270226/008494. The registration lists the promoter, the approved plan and the committed completion date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When will Sattva City be ready?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "RERA possession is February 2032. The project launched on 27 February 2026, so it is a roughly six-year build. Your tower-specific date should be written into the agreement for sale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if Sattva City is delayed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under RERA, if the promoter misses the committed date without an approved extension, you can claim interest for the delay or withdraw with a refund and interest. Keep every receipt and your registered agreement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get a home loan for Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "RERA-registered projects from established developers are usually approved by major banks. Ask the sales team which lenders have already approved the project, and check whether a subvention or construction-linked plan is on offer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Sattva City a good investment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a reasonable long-term hold for buyers with an eight to twelve year horizon who believe in the airport corridor. It is weak for quick flips or rental yield: possession is in 2032, the area is still maturing, and expected gross rental yield is only about 2.6% to 3.6%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What rent can a Sattva City apartment earn?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After possession, a 2 BHK could plausibly rent for about ₹40,000 to ₹55,000 a month based on today's airport-area rents. That is roughly 2.6% to 3.6% gross on a ₹1.82 Cr purchase, before maintenance and vacancy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the biggest drawbacks of Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The distance from central Bangalore (about 40 km to MG Road), the long 2032 possession, limited social infrastructure around Doddajala today, the lack of any resale price history, and the challenge of managing a 3,460-home community well."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who should buy Sattva City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Airport, aviation and aerospace professionals, frequent flyers, remote workers, and families who want big-township living and are anchored to North Bangalore. Long-horizon investors who can wait six years without income from the asset can also consider it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Sattva City compare with Sattva Park Cubix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sattva City is much bigger (50 acres and 3,460 homes against 18 acres and 1,608), has larger homes up to penthouses, and has 4 clubhouses against 2. Park Cubix is further along in construction, so it carries less timeline risk. See our detailed comparison."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/devanahalli/">Devanahalli Hub</a><span>/</span><span>Sattva City Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Sattva City Doddajala Review: Price, Floor Plans, Location and Our Verdict</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh, Luxura Habitat</span><span>&bull;</span><span>Published September 30, 2026</span><span>&bull;</span><span>16 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+          <figure>
+            <img src="/projects/sattva-city/gallery-09.webp" alt="Sattva City grand entrance arch on Airport Road, Doddajala" width="887" height="499" loading="eager">
+            <figcaption>The planned entrance to Sattva City on Airport Road, Doddajala. Artist's impression.</figcaption>
+          </figure>
+
+          <p>Doddajala is not a name most Bangalore buyers know. It is a village on Airport Road, a few kilometres short of Kempegowda International Airport, that spent years in the shadow of Devanahalli, Yelahanka and the aerospace parks around it. Sattva City is the project most likely to change that. At 50 acres and 3,460 homes, it is one of the largest residential launches in North Bangalore this year, and it is betting that the airport will keep pulling jobs, roads and people north.</p>
+          <p>This review sets out what you actually get. We read the unit sizes and carpet areas straight off the builder's floor plans, work out the real per-square-foot rate and the all-in cost, go through the master plan and amenities, and are candid about the risks of buying into a six-year build about 40 km from MG Road. Whether you are looking for a home or an investment, the aim is to help you decide on the numbers.</p>
+
+          <div class="key-facts">
+            <h2>Sattva City at a glance</h2>
+            <ul>
+              <li><strong>Developer:</strong> Sattva Group (est. 1986, formerly Salarpuria Sattva)</li>
+              <li><strong>Location:</strong> Meenakunte Hosur, Doddajala, Airport Road, North Bangalore, opposite KRN Complex</li>
+              <li><strong>Land:</strong> 50 acres, about 84% open space</li>
+              <li><strong>Towers:</strong> 13, each 2 basements + ground + 16 to 21 floors</li>
+              <li><strong>Homes:</strong> 3,460 apartments: 1 BHK to 4 BHK plus duplex penthouses</li>
+              <li><strong>Sizes:</strong> 1,161 to 6,266 sq ft saleable (705 to 3,730 sq ft carpet)</li>
+              <li><strong>Price:</strong> about ₹1.82 Cr to ₹3.50 Cr (before GST and registration)</li>
+              <li><strong>Amenities:</strong> 200+, with 4 clubhouses</li>
+              <li><strong>RERA:</strong> PRM/KA/RERA/1251/472/PR/270226/008494</li>
+              <li><strong>Launch / possession:</strong> launched 27 February 2026; RERA possession February 2032</li>
+            </ul>
+          </div>
+
+          <nav class="toc" aria-label="Table of contents">
+            <strong>In this review</strong>
+            <ol>
+              <li><a href="#developer">The developer</a></li>
+              <li><a href="#location">Location: the Airport Road trade-off</a></li>
+              <li><a href="#master-plan">Master plan and towers</a></li>
+              <li><a href="#floor-plans">Floor plans and carpet areas</a></li>
+              <li><a href="#pricing">Price and the real rate</a></li>
+              <li><a href="#all-in-cost">What you will actually pay</a></li>
+              <li><a href="#amenities">Amenities: making sense of 200+</a></li>
+              <li><a href="#pros-cons">Pros and cons</a></li>
+              <li><a href="#investment">Investment view</a></li>
+              <li><a href="#who-should-buy">Who should buy, and who should skip</a></li>
+              <li><a href="#checklist">Due-diligence checklist</a></li>
+              <li><a href="#verdict">Our verdict</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="developer">1. The developer: Sattva Group</h2>
+          <p>Sattva Group started in 1986 as Salarpuria Sattva and is one of Bengaluru's larger developers, with homes, office parks and hospitality projects across the city. In North Bangalore alone it is building <a href="/projects/sattva-aeropolis/">Sattva Aeropolis</a>, <a href="/projects/park-cubix/">Sattva Park Cubix</a>, <a href="/projects/vasanta-skye/">Vasanta Skye</a> and <a href="/projects/sattva-lumina/">Sattva Lumina</a>, so Sattva City is part of a deliberate bet on the airport corridor rather than a one-off.</p>
+          <p>A known brand does not remove execution risk on a project this size. Funding 3,460 homes over six years takes serious capital, and the quality of the final product depends on the site team as much as the brand. Before you book:</p>
+          <ul>
+            <li><strong>Check recent deliveries:</strong> ask for a list of Sattva's last few residential handovers with promised and actual possession dates.</li>
+            <li><strong>Visit a finished project:</strong> talk to residents about build quality, snag handling and how maintenance was handed over.</li>
+            <li><strong>Search the Karnataka RERA portal:</strong> look for complaints or extensions on the developer's past projects.</li>
+          </ul>
+
+          <h2 id="location">2. Location: the Airport Road trade-off</h2>
+          <p>Sattva City sits at Meenakunte Hosur in Doddajala, opposite the KRN Complex and about 1 km from the Sadahalli toll plaza. That puts it inside the airport's orbit rather than Bangalore's urban core. It is the project's biggest strength and its biggest limitation, and which one matters more depends entirely on where you work.</p>
+          <h3>Key distances</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Destination</th><th>Distance</th><th>Off-peak drive</th><th>What it means</th></tr></thead>
+              <tbody>
+                <tr><td>Kempegowda International Airport</td><td>~8 km</td><td>15 min</td><td>Genuinely close, the strongest location card</td></tr>
+                <tr><td>Sadahalli Toll Plaza</td><td>~1 km</td><td>3 min</td><td>Direct access to Airport Road</td></tr>
+                <tr><td>Devanahalli town</td><td>~5 km</td><td>10 min</td><td>Nearest town for daily needs</td></tr>
+                <tr><td>Aerospace SEZ</td><td>~10 km</td><td>20 min</td><td>A key employer for likely residents</td></tr>
+                <tr><td>Yelahanka</td><td>~20 km</td><td>30 min</td><td>Nearest mature suburb</td></tr>
+                <tr><td>Hebbal</td><td>~30 km</td><td>40 min</td><td>City entry point, traffic-dependent</td></tr>
+                <tr><td>MG Road / CBD</td><td>~40 km</td><td>50 to 60 min</td><td>Add 30+ minutes at peak hours</td></tr>
+                <tr><td>Nandi Hills</td><td>~35 km</td><td>45 min</td><td>A weekend perk</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Who the location works for</h3>
+          <p>If you work at the airport, in the Aerospace SEZ or in the growing business zone around Devanahalli, an 8 km commute is rare in Bangalore. Frequent flyers swap a 90-minute cab ride from Whitefield or Sarjapur for a quarter of an hour. People who work from home get space, greenery and cleaner air at a price that would buy much less inside the city.</p>
+          <h3>Who it doesn't work for</h3>
+          <p>If your office is in the CBD, Koramangala, Indiranagar, on the Outer Ring Road or in Electronic City, a 40 km daily commute each way is not sustainable, and no clubhouse makes up for four hours in traffic. Doddajala's schools, hospitals and shops are also still thin, so for now you will lean on Devanahalli and Yelahanka. Our <a href="/areas/devanahalli/">Devanahalli area guide</a> and <a href="/blog/metro-blue-line-strr-impact-devanahalli/">metro and STRR explainer</a> cover the infrastructure pipeline. Bangalore's projects tend to arrive a few years later than announced, so treat them as upside, not a given.</p>
+
+          <div class="inline-cta"><p>Want the tower-wise availability and today's price sheet for Sattva City?</p><a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20Sattva%20City%20review%20and%20would%20like%20the%20latest%20price%20list%20and%20floor%20plans" target="_blank" rel="noopener">Get it on WhatsApp</a></div>
+
+          <h2 id="master-plan">3. Master plan and towers</h2>
+          <figure>
+            <img src="/additional_websites/Sattva%20City/masterplan.webp" alt="Sattva City master plan showing towers in parcels around a central green spine, lake and clubhouses" width="1000" height="706" loading="lazy">
+            <figcaption>Sattva City master plan. The legend lists 133 ground-level and 58 podium amenities, plus a main clubhouse, satellite clubhouses, a temple, shops and a visitor centre.</figcaption>
+          </figure>
+          <p>The master plan spreads 13 towers across separate parcels, split by an internal boulevard and joined by a green spine that runs through the middle of the site with a lake, stream gardens, floating walkways and a waterfront amphitheatre. Each tower is 2B+G+16 to 2B+G+21, so the buildings are high-rise but not extreme, and parking sits in two basements, leaving the ground free for landscaping. That is how the project reaches its 84% open-space figure.</p>
+          <p>Scale is the whole point here. Most North Bangalore launches are 5 to 15 acres with 500 to 1,500 homes. At 50 acres, Sattva City can support things a smaller project cannot pay for, such as four clubhouses, a full sports precinct and on-site retail. The trade-off is that you are buying into a small town of perhaps 10,000 residents, and how well it is governed after handover will decide how it feels in ten years.</p>
+          <figure>
+            <img src="/projects/sattva-city/gallery-07.webp" alt="Top-down view of the Sattva City lagoon pool with deck walkways and cabanas among towers" width="887" height="499" loading="lazy">
+            <figcaption>The lagoon-style pool with deck walkways between towers. Artist's impression.</figcaption>
+          </figure>
+
+          <h2 id="floor-plans">4. Floor plans and carpet areas</h2>
+          <p>Here we part ways with most listings. Portals quote Sattva City at anything from 1,306 to 2,975 sq ft in 2, 3 and 4 BHK formats. The builder's own floor plans show a wider spread, from a 1 BHK to a duplex penthouse. The table below is read directly off those plans. Sizes are saleable area, and the builder publishes carpet and balcony areas alongside.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Block</th><th>Saleable (sq ft)</th><th>Carpet (sq ft)</th><th>Balcony (sq ft)</th><th>Carpet share</th></tr></thead>
+              <tbody>
+                <tr><td>1 BHK + 1T (54A)</td><td>11</td><td>1,161</td><td>705</td><td>88</td><td>61%</td></tr>
+                <tr><td>2.5 BHK + 2T + garden (33A)</td><td>05</td><td>1,644</td><td>1,036</td><td>101 + 50 garden</td><td>63%</td></tr>
+                <tr><td>2 BHK + 2T (16F)</td><td>11</td><td>1,710</td><td>1,002</td><td>172</td><td>59%</td></tr>
+                <tr><td>3 BHK + 3T (8B)</td><td>04</td><td>2,238</td><td>1,397</td><td>163</td><td>62%</td></tr>
+                <tr><td>3.5 BHK + 3T + terrace (08C)</td><td>04</td><td>2,412</td><td>1,525</td><td>163 + 218 terrace</td><td>63%</td></tr>
+                <tr><td>4 BHK + 4T + servant (01)</td><td>01 to 04</td><td>2,975</td><td>1,863</td><td>209</td><td>63%</td></tr>
+                <tr><td>4 BHK duplex penthouse (P01)</td><td>04</td><td>6,266</td><td>3,730</td><td>616 + terrace</td><td>60%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Carpet area runs at about 59% to 63% of saleable area, which is normal for a high-rise township with big amenity areas. Treat these as sample layouts: a project of 3,460 homes has more types than this, so ask for the plan of the exact unit you are offered.</p>
+
+          <div class="plan-pair">
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-01.webp" alt="Sattva City 1 BHK floor plan type 54A, 1,161 sq ft saleable" loading="lazy"><figcaption>1 BHK (54A): 1,161 sq ft saleable, 705 sq ft carpet.</figcaption></figure>
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-02.webp" alt="Sattva City 2 BHK floor plan type 16F, 1,710 sq ft saleable" loading="lazy"><figcaption>2 BHK (16F): 1,710 sq ft saleable, 1,002 sq ft carpet.</figcaption></figure>
+          </div>
+          <h3>1 BHK: a rarity in a township this size</h3>
+          <p>The 1,161 sq ft 1 BHK has a 14'1" x 12'0" bedroom, a 12'0" x 22'6" living and dining room, a separate utility and a balcony. It is large for a one-bedroom, which suits a single professional or a couple working near the airport, but its 705 sq ft carpet means you are paying for a lot of common area.</p>
+          <h3>2 BHK and 2.5 BHK: the family entry point</h3>
+          <p>The 2 BHK (16F) has a 22'1" x 13'0" living and dining room, a master bedroom of roughly 14 ft by 13 ft, two bathrooms and two balconies. The 2.5 BHK (33A) is actually a little smaller in saleable area but has more carpet (1,036 sq ft): it adds an 11'0" x 8'1" study and a ground-level sit-out with a 50 sq ft private garden. If you work from home, the 2.5 BHK gives you a real room to work in for less money.</p>
+
+          <div class="plan-pair">
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-04.webp" alt="Sattva City 3 BHK floor plan type 8B, 2,238 sq ft saleable" loading="lazy"><figcaption>3 BHK (8B): 2,238 sq ft saleable, 1,397 sq ft carpet.</figcaption></figure>
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-05.webp" alt="Sattva City 3.5 BHK floor plan type 08C with extended terrace, 2,412 sq ft saleable" loading="lazy"><figcaption>3.5 BHK (08C): 2,412 sq ft saleable, 1,525 sq ft carpet, 218 sq ft terrace.</figcaption></figure>
+          </div>
+          <h3>3 BHK and 3.5 BHK: the volume homes</h3>
+          <p>The 3 BHK (8B) has a 34'8" x 13'0" living and dining room, three bedrooms and three toilets. The 3.5 BHK (08C) is the same plan with a 9'7" x 12'5" study and a 218 sq ft extended terrace, which turns the balcony into outdoor living space. For a family that wants a guest room or an office, the extra 174 sq ft is good value.</p>
+
+          <div class="plan-pair">
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-06.webp" alt="Sattva City 4 BHK floor plan type 01 with servant room, 2,975 sq ft saleable" loading="lazy"><figcaption>4 BHK (01): 2,975 sq ft saleable, 1,863 sq ft carpet.</figcaption></figure>
+            <figure><img src="/additional_websites/Sattva%20City/floorplan-07.webp" alt="Sattva City 4 BHK duplex penthouse floor plan type P01, 6,266 sq ft saleable" loading="lazy"><figcaption>Penthouse (P01): 6,266 sq ft saleable, 3,730 sq ft carpet.</figcaption></figure>
+          </div>
+          <h3>4 BHK and the duplex penthouse</h3>
+          <p>The 2,975 sq ft 4 BHK, in Blocks 01 to 04, has a 32'7" x 13'1" living and dining room, a 16'0" x 14'2" master bedroom with a walk-in wardrobe, four bathrooms, a puja room and a servant room. It is built for large or joint families. The P01 penthouse in Block 04 is a duplex with a family lounge, a home office and a large private open terrace above, aimed at buyers moving out of an independent house.</p>
+
+          <h2 id="pricing">5. Price and the real rate per sq ft</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Configuration</th><th>Indicative price</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>1 BHK</td><td>On request</td><td>Limited stock, 1,161 sq ft</td></tr>
+                <tr><td>2 BHK / 2.5 BHK</td><td>₹1.82 Cr to ₹2.15 Cr</td><td>1,644 to 1,710 sq ft</td></tr>
+                <tr><td>3 BHK / 3.5 BHK</td><td>From ₹2.40 Cr</td><td>2,238 to 2,412 sq ft</td></tr>
+                <tr><td>4 BHK</td><td>₹3.00 Cr to ₹3.50 Cr</td><td>2,975 sq ft</td></tr>
+                <tr><td>4 BHK duplex penthouse</td><td>On request</td><td>6,266 sq ft</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Prices are launch-stage figures before GST, stamp duty and registration, and vary by tower, floor and view. <a href="/projects/sattva-city/#pricing" class="money-link">Check the current price sheet</a> before you compare.</p>
+          <h3>What the numbers tell you</h3>
+          <p><strong>The 4 BHK is the value pick.</strong> At ₹3.00 to 3.50 Cr for 2,975 sq ft, it works out to about ₹10,100 to ₹11,800 per sq ft of saleable area, or roughly ₹16,100 to ₹18,800 per sq ft of carpet. Developers often price big units more keenly because they sell slower, and that seems to be happening here.</p>
+          <p><strong>The smaller units carry a premium for the township.</strong> Doddajala land is still cheaper than Bangalore's established corridors, and Sattva's pricing reflects what it expects the area to become, not what it is today. That is normal for a township launch, but it is also the risk: if the area develops more slowly than planned, early appreciation will be slower too.</p>
+          <p><strong>Launch pricing is usually the lowest.</strong> Builders typically raise prices in steps as construction progresses. If Sattva City fits your needs, buying early is cheaper. If you are unsure, waiting a year costs a little more but lets you watch the construction pace.</p>
+
+          <h2 id="all-in-cost">6. What you will actually pay</h2>
+          <p>The base price is only the start. For a ₹3.00 Cr 4 BHK, a realistic budget looks like this:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Typical rate</th><th>On ₹3.00 Cr</th></tr></thead>
+              <tbody>
+                <tr><td>GST (under construction)</td><td>5%</td><td>~₹15 Lakh</td></tr>
+                <tr><td>Stamp duty with surcharge and cess</td><td>~5.6%</td><td>~₹17 Lakh</td></tr>
+                <tr><td>Registration fee</td><td>1%</td><td>~₹3 Lakh</td></tr>
+                <tr><td>Parking, maintenance deposit, club and utility charges</td><td>Varies</td><td>~₹5 to 10 Lakh</td></tr>
+                <tr><td>Interiors</td><td>Your choice</td><td>~₹20 to 40 Lakh</td></tr>
+                <tr><td><strong>Approximate all-in</strong></td><td></td><td><strong>~₹3.6 to 3.85 Cr</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>On a ₹1.82 Cr 2 BHK, the same arithmetic gives an all-in figure of about ₹2.2 to 2.4 Cr with modest interiors. Ask for the stamped cost sheet, which should list every charge, before you pay a booking amount. Our <a href="/blog/rbi-repo-rate-2026-home-loan-emi-guide/">home loan EMI guide</a> covers the financing side.</p>
+
+          <h2 id="amenities">7. Amenities: making sense of 200+</h2>
+          <figure>
+            <img src="/projects/sattva-city/gallery-10.webp" alt="Sattva City clubhouse pool deck at night with lit towers behind" width="887" height="499" loading="lazy">
+            <figcaption>Clubhouse pool deck. Artist's impression.</figcaption>
+          </figure>
+          <p>"200+ amenities" is a marketing number, and you will also see 250+ on some portals. Counts like this include every garden, seat and path, so the number matters less than what is on the list and how it will be maintained. On Sattva City's master plan, the legend runs to 133 ground-level items and 58 podium items. The ones that matter:</p>
+          <ul>
+            <li><strong>Sports:</strong> tennis, badminton, pickleball, paddle tennis, futsal, kabaddi and beach volleyball courts, a net cricket pitch, a skate park, a golf putting green, an outdoor gym and jogging and cycling trails.</li>
+            <li><strong>Water:</strong> lap pools, a kids' pool, a lagoon-style pool with decks and a lake with a waterfront amphitheatre.</li>
+            <li><strong>Green space:</strong> two central parks, a Miyawaki forest, a kitchen garden and orchard, a butterfly garden, a farm garden and floating walkways.</li>
+            <li><strong>Community:</strong> 4 clubhouses (a main clubhouse plus satellite clubhouses), a temple, shops, food kiosks and a visitor centre.</li>
+            <li><strong>Family:</strong> kids' and toddlers' play areas, an adventure park, a pet park, senior gardens with reflexology paths and meditation lawns.</li>
+          </ul>
+          <div class="plan-pair">
+            <figure><img src="/projects/sattva-city/gallery-06.webp" alt="Sattva City water garden with stepping stones and palms" width="887" height="499" loading="lazy"><figcaption>Water garden along the green spine.</figcaption></figure>
+            <figure><img src="/projects/sattva-city/gallery-14.webp" alt="Aerial view of the Sattva City sculpture plaza and circular garden walk" width="887" height="499" loading="lazy"><figcaption>Sculpture plaza and garden walk.</figcaption></figure>
+          </div>
+          <p>Some third-party reviews also mention an Olympic-size pool, a creche and a health centre. We could not find these on the master plan legend, so if any of them matters to you, ask for it in writing.</p>
+          <p><strong>The question to ask:</strong> who will run all this after handover? For 3,460 homes, a professional facility-management company is far safer than leaving it to a new residents' association. A lagoon pool and four clubhouses are expensive to maintain, and that will show up in your monthly charges.</p>
+
+          <h2 id="pros-cons">8. Pros and cons</h2>
+          <div class="pc-grid">
+            <div>
+              <h3>What works</h3>
+              <ul>
+                <li>50-acre scale with 84% open space, rare in Bangalore</li>
+                <li>About 8 km from the airport, one of the shortest airport commutes of any large township</li>
+                <li>A genuine sports and green precinct, not just a pool and a gym</li>
+                <li>Wide range of homes, from a 1 BHK to a 6,266 sq ft penthouse</li>
+                <li>The 4 BHK is competitively priced per sq ft</li>
+                <li>RERA registered, with launch-stage pricing</li>
+              </ul>
+            </div>
+            <div>
+              <h3>What to weigh</h3>
+              <ul>
+                <li>About 40 km from MG Road, a real lifestyle constraint</li>
+                <li>Possession in February 2032, with capital locked in for six years</li>
+                <li>Doddajala's schools, hospitals and shopping are still limited</li>
+                <li>No resale history yet, so liquidity on exit is unproven</li>
+                <li>3,460 homes will need strong professional management</li>
+                <li>Smaller units are priced ahead of today's local market</li>
+              </ul>
+            </div>
+          </div>
+          <p>These points do not carry equal weight. Location comes first: if you do not work in North Bangalore or from home, stop here. The 2032 timeline comes second: you need the money and the patience to wait.</p>
+
+          <h2 id="investment">9. Investment view</h2>
+          <p>Doddajala is early in its growth. As an illustration, not a forecast, here is what a ₹1.82 Cr 2 BHK would be worth at possession in 2032 at different annual growth rates:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Scenario</th><th>Annual growth</th><th>Value in 2032</th><th>Total gain</th></tr></thead>
+              <tbody>
+                <tr><td>Conservative</td><td>6%</td><td>~₹2.58 Cr</td><td>~42%</td></tr>
+                <tr><td>Base case</td><td>8%</td><td>~₹2.89 Cr</td><td>~59%</td></tr>
+                <tr><td>Optimistic</td><td>10%</td><td>~₹3.22 Cr</td><td>~77%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>What could push it up:</strong> growing airport traffic, more jobs in the aerospace and airport business parks, limited competing township supply nearby, and road and metro upgrades along the corridor.</p>
+          <p><strong>What could hold it back:</strong> Doddajala has no price history to benchmark against, infrastructure could arrive late, other large launches could flood the corridor with supply, and a distant location narrows the pool of future buyers.</p>
+          <p><strong>Rental yield is modest.</strong> After possession, a 2 BHK might rent for ₹40,000 to ₹55,000 a month at today's airport-area rates, about 2.6% to 3.6% gross on the purchase price and less after maintenance and vacancy. Our <a href="/blog/devanahalli-roi-land-appreciation-vs-rental-yield/">Devanahalli ROI analysis</a> goes deeper on appreciation against rent.</p>
+          <p>For a pure investor, 6% to 8% a year with little liquidity for six years is not dramatically better than equity funds or REITs. The case gets much stronger if you will live in it, because the space and township lifestyle are real benefits a spreadsheet does not capture.</p>
+
+          <h2 id="who-should-buy">10. Who should buy, and who should skip</h2>
+          <h3>Good fit</h3>
+          <ul>
+            <li><strong>Airport and aerospace professionals:</strong> an 8 km commute and a self-contained township.</li>
+            <li><strong>Remote workers who want space:</strong> the study and garden layouts, the green spine and the quiet are worth more than city proximity.</li>
+            <li><strong>Families who like big-community living:</strong> kids' facilities, sports and a ready-made social circle at a scale no nearby project matches.</li>
+            <li><strong>Long-horizon investors:</strong> ten years or more, comfortable with a 2032 handover.</li>
+          </ul>
+          <h3>Probably not the right fit</h3>
+          <ul>
+            <li><strong>Daily commuters to central, east or south Bangalore:</strong> the drive will dominate your day.</li>
+            <li><strong>Anyone who needs to move in before 2032:</strong> look at ready or near-ready projects instead.</li>
+            <li><strong>Risk-averse buyers:</strong> a new launch in an untested micro-market, with a six-year build, is above-average risk.</li>
+            <li><strong>Those who need mature infrastructure today:</strong> top schools, multi-specialty hospitals and malls are not yet within 5 km.</li>
+          </ul>
+          <p>Weighing it against Sattva's other airport-corridor launches? Our <a href="/blog/sattva-park-cubix-vs-sattva-city-devanahalli/">Park Cubix vs Sattva City comparison</a> sets the two side by side, and <a href="/projects/sattva-aeropolis/">Sattva Aeropolis</a> and <a href="/projects/vasanta-skye/">Vasanta Skye</a> are closer to Devanahalli town.</p>
+
+          <h2 id="checklist">11. Due-diligence checklist before you pay</h2>
+          <ol>
+            <li>Verify the RERA registration, approved plan and committed completion date on the Karnataka RERA portal.</li>
+            <li>Get the floor plan for your exact unit, with saleable, carpet and balcony areas written down.</li>
+            <li>Ask for a stamped cost sheet that lists GST, parking, deposits and every other charge.</li>
+            <li>Confirm your tower's possession date and phase in the agreement for sale.</li>
+            <li>Ask which amenities come in your phase, and get anything important in writing.</li>
+            <li>Understand the maintenance model, and whether a professional facility manager will run the township.</li>
+            <li>Have your own lawyer check the title, encumbrance certificate and land conversion.</li>
+            <li>Drive your real commute at peak hour before you book.</li>
+          </ol>
+
+          <h2 id="verdict">Our verdict</h2>
+          <p>Sattva City is a good project in a location that is still becoming what the brochure promises. The 50 acres, 84% open space, sports precinct and airport proximity are real and hard to find elsewhere in Bangalore. The 4 BHK in particular is well priced for what you get. Against that, Doddajala is 40 km from the city centre, the neighbourhood is still thin, and a six-year build asks a lot of patience.</p>
+          <p>If your life is anchored to North Bangalore, the airport or a home office, and you can wait until 2032, it deserves a serious look, ideally at launch pricing. If your commute runs south of Hebbal or you need a home sooner, the amenities will not make up for the location, and you should move on without regret.</p>
+
+          <div class="inline-cta"><p>Want the price sheet, unit plans and a site visit slot for Sattva City?</p><a href="/projects/sattva-city/#form">Request Details</a></div>
+        </div>
+
+        <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+          <h2>Sattva City FAQs</h2>
+          <h3 class="faq-group-title">Project basics</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false"><span>What is Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Sattva City is a 50-acre apartment township by Sattva Group at Meenakunte Hosur, Doddajala, on Airport Road in North Bangalore. It has 3,460 homes in 13 high-rise towers, from 1 BHK to 4 BHK plus duplex penthouses, with about 84% open space, 4 clubhouses and 200+ amenities.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false"><span>Who is the developer of Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Sattva Group, the Bengaluru developer that began in 1986 as Salarpuria Sattva. It has delivered a large portfolio of homes and office parks across the city, but check the delivery record of its recent residential launches before you commit to a six-year build.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false"><span>Is Sattva City the same as Sattva Hamlet City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yes. Some portals and ads list the project as Sattva Hamlet City. It is the same Doddajala township with the same RERA number, PRM/KA/RERA/1251/472/PR/270226/008494.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false"><span>How many towers and floors does Sattva City have?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>There are 13 towers, marked Blocks 01 to 13 on the builder's key plan. Each has two basements, a ground floor and 16 to 21 residential floors (2B+G+16 to 2B+G+21).</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false"><span>How much open space does Sattva City have?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>About 84% of the site is open space, so only around 16% is built over. The master plan spreads the towers across separate parcels around a central green spine with a lake, water gardens and two large central parks.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Location</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false"><span>How far is Sattva City from Bangalore Airport?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>About 8 km, or roughly 15 minutes off-peak along Airport Road. The site is about 1 km from the Sadahalli toll plaza.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false"><span>How far is Sattva City from Hebbal, MG Road and Yelahanka?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yelahanka is about 20 km (around 30 minutes), Hebbal about 30 km (around 40 minutes) and MG Road about 40 km (50 to 60 minutes off-peak, longer at peak hours).</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false"><span>Is Sattva City a good location for IT professionals?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Only if you work in North Bangalore, near the airport, or from home. The Aerospace SEZ is about 10 km away and Manyata Tech Park is reachable, but daily commutes to Whitefield, Koramangala, Outer Ring Road or Electronic City would be long.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false"><span>Are there schools and hospitals near Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Some, but the area is still developing. Devanahalli town, about 5 km away, and Yelahanka, about 20 km away, cover most schools, hospitals and shopping today. Check the drive to your preferred school before you buy.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Floor plans and price</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false"><span>What configurations are available at Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>The builder's floor plans include a 1 BHK (1,161 sq ft), 2 BHK (1,710 sq ft), 2.5 BHK with study and garden (1,644 sq ft), 3 BHK (2,238 sq ft), 3.5 BHK with extended terrace (2,412 sq ft), 4 BHK with servant room (2,975 sq ft) and a 4 BHK duplex penthouse (6,266 sq ft). All are saleable areas, and other unit types exist.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false"><span>What is the carpet area of Sattva City apartments?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>1 BHK 705 sq ft, 2 BHK 1,002 sq ft, 2.5 BHK 1,036 sq ft, 3 BHK 1,397 sq ft, 3.5 BHK 1,525 sq ft, 4 BHK 1,863 sq ft and penthouse 3,730 sq ft. Carpet area is about 59% to 63% of saleable area.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false"><span>What is the price of a 2 BHK in Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>2 BHK homes start at about ₹1.82 Cr and go up to about ₹2.15 Cr depending on tower, floor and layout, before GST and registration.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false"><span>What is the price of 3 BHK and 4 BHK homes?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>3 BHK homes start at about ₹2.40 Cr. The 2,975 sq ft 4 BHK is quoted at about ₹3.00 to 3.50 Cr. Penthouse and 1 BHK prices are shared on request.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false"><span>What is the price per sq ft at Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>On the 2,975 sq ft 4 BHK, ₹3.00 to 3.50 Cr works out to about ₹10,100 to ₹11,800 per sq ft of saleable area, or about ₹16,100 to ₹18,800 per sq ft of carpet area. Always compare projects on carpet-area rates.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false"><span>What is the all-in cost of a Sattva City apartment?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Add 5% GST, Karnataka stamp duty of 5% plus surcharge and cess, a 1% registration fee, parking if charged separately, a maintenance deposit and interiors. For a ₹3 Cr 4 BHK, expect roughly ₹3.6 to 3.85 Cr all-in once interiors are included.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Possession and legal</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false"><span>Is Sattva City RERA approved?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yes. It is registered with Karnataka RERA under PRM/KA/RERA/1251/472/PR/270226/008494. The registration lists the promoter, the approved plan and the committed completion date.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false"><span>When will Sattva City be ready?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>RERA possession is February 2032. The project launched on 27 February 2026, so it is a roughly six-year build. Your tower-specific date should be written into the agreement for sale.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false"><span>What happens if Sattva City is delayed?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Under RERA, if the promoter misses the committed date without an approved extension, you can claim interest for the delay or withdraw with a refund and interest. Keep every receipt and your registered agreement.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false"><span>Can I get a home loan for Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>RERA-registered projects from established developers are usually approved by major banks. Ask the sales team which lenders have already approved the project, and check whether a subvention or construction-linked plan is on offer.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Buying decision</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false"><span>Is Sattva City a good investment?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>It is a reasonable long-term hold for buyers with an eight to twelve year horizon who believe in the airport corridor. It is weak for quick flips or rental yield: possession is in 2032, the area is still maturing, and expected gross rental yield is only about 2.6% to 3.6%.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false"><span>What rent can a Sattva City apartment earn?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>After possession, a 2 BHK could plausibly rent for about ₹40,000 to ₹55,000 a month based on today's airport-area rents. That is roughly 2.6% to 3.6% gross on a ₹1.82 Cr purchase, before maintenance and vacancy.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false"><span>What are the biggest drawbacks of Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>The distance from central Bangalore (about 40 km to MG Road), the long 2032 possession, limited social infrastructure around Doddajala today, the lack of any resale price history, and the challenge of managing a 3,460-home community well.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false"><span>Who should buy Sattva City?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Airport, aviation and aerospace professionals, frequent flyers, remote workers, and families who want big-township living and are anchored to North Bangalore. Long-horizon investors who can wait six years without income from the asset can also consider it.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q24" aria-expanded="false"><span>How does Sattva City compare with Sattva Park Cubix?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Sattva City is much bigger (50 acres and 3,460 homes against 18 acres and 1,608), has larger homes up to penthouses, and has 4 clubhouses against 2. Park Cubix is further along in construction, so it carries less timeline risk. See our <a href="/blog/sattva-park-cubix-vs-sattva-city-devanahalli/">detailed comparison</a>.</p></div></div>
+          </div>
+        </section>
+
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/sattva-city/" class="related-card">
+              <img src="/projects/sattva-city/gallery-04.webp" alt="Sattva City towers" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Sattva City</p>
+                <p class="related-card-detail">1 to 4 BHK · Doddajala, Airport Road</p>
+              </div>
+            </a>
+            <a href="/projects/park-cubix/" class="related-card">
+              <img src="/images/projects-thumbs/park-cubix-thumb.webp" alt="Sattva Park Cubix" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Project</p>
+                <p class="related-card-title">Sattva Park Cubix</p>
+                <p class="related-card-detail">1 to 3 BHK · Devanahalli</p>
+              </div>
+            </a>
+            <a href="/projects/vasanta-skye/" class="related-card">
+              <img src="/images/projects-thumbs/vasanta-skye-thumb.webp" alt="Sattva Vasanta Skye" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Project</p>
+                <p class="related-card-title">Sattva Vasanta Skye</p>
+                <p class="related-card-detail">Studio to 4 BHK · Devanahalli</p>
+              </div>
+            </a>
+            <a href="/blog/sattva-park-cubix-vs-sattva-city-devanahalli/" class="related-card">
+              <img src="/images/projects/park-cubix/park-cubix-master-plan.webp" alt="Park Cubix vs Sattva City" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Park Cubix vs Sattva City</p>
+                <p class="related-card-detail">Project Comparison · Devanahalli</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="/images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh, Luxura Habitat</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity. Karnataka RERA agent PRM/KA/RERA/1251/310/AG/170823/000045.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="/projects/sattva-city/gallery-10.webp" alt="Sattva City clubhouse pool" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Sattva City</p>
+            <ul class="sidebar-specs">
+              <li>1 to 4 BHK + penthouses · 3,460 homes</li>
+              <li>50 acres · 13 towers · 84% open space</li>
+              <li>₹1.82 Cr to ₹3.50 Cr</li>
+              <li>RERA possession: February 2032</li>
+              <li>Doddajala, Airport Road</li>
+            </ul>
+            <a href="/projects/sattva-city/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Want the stamped cost sheet and the current launch offer? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Devanahalli</h4>
+          <a href="/projects/sattva-city/">Sattva City</a>
+          <a href="/projects/park-cubix/">Sattva Park Cubix</a>
+          <a href="/areas/devanahalli/">Devanahalli Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+  <nav class="blog-mobile-cta" aria-label="Quick contact">
+    <a href="tel:+918438344093" class="blog-mobile-cta-btn btn-call"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
+    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20Sattva%20City%20review%20and%20would%20like%20the%20latest%20price%20list%20and%20floor%20plans" class="blog-mobile-cta-btn btn-whatsapp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+    <a href="/projects/sattva-city/" class="blog-mobile-cta-btn btn-project">View Project</a>
+    <a href="/contact/" class="blog-mobile-cta-btn btn-enquire" data-blog-enquire>Enquire</a>
+  </nav>
+</body>
+</html>
