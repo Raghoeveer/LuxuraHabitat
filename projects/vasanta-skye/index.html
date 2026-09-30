@@ -31,23 +31,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- High-Intent Meta Structure -->
-    <title>Sattva Vasanta Skye, Devanahalli — 1 to 4 BHK | RERA</title>
-    <meta name="description" content="Sattva Vasanta Skye, Devanahalli — 1 to 4 BHK homes from &#8377;63 Lakhs in a 16-acre township, 10 mins from Bangalore Airport. RERA approved. Price &amp; floor plans.">
-    <meta name="keywords" content="Sattva Vasanta Skye, Sattva Vasanta Skye Devanahalli, Sattva Vasanta Skye price, Sattva Vasanta Skye RERA, apartments on Bellary Road Devanahalli, 2 BHK Devanahalli, 3 BHK Devanahalli, Sattva Group Devanahalli, Sattva Vasanta Skye floor plan">
+    <title>Sattva Vasanta Skye Devanahalli | Studio to 4 BHK from &#8377;78L</title>
+    <meta name="description" content="Sattva Vasanta Skye, Devanahalli: Studio to 4 BHK homes from &#8377;78 Lakhs in a 16-acre Sattva township, 10 km from Bangalore Airport. RERA approved, possession May 2031.">
+    <meta name="keywords" content="Sattva Vasanta Skye, Sattva Vasanta Skye Devanahalli, Sattva Vasanta Skye price, Sattva Vasanta Skye floor plan, Sattva Vasanta Skye RERA, Sattva Vasanta Skye possession, Sattva Vasanta Skye studio apartment, Kannamangala Village apartments, apartments on Bellary Road Devanahalli, 2 BHK Devanahalli, 3 BHK Devanahalli, 4 BHK Devanahalli">
     <meta name="author" content="Luxura Habitat">
 
     <!-- Open Graph Social Protocol -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxurahabitat.com/projects/vasanta-skye/">
-    <meta property="og:title" content="Sattva Vasanta Skye, Devanahalli — 16-Acre Township, 1 to 4 BHK Homes">
-    <meta property="og:description" content="A 16-acre Sattva Group township off Bellary Road, Devanahalli — 1,077 homes, 80% open space, 10 mins from Bangalore Airport. RERA approved.">
+    <meta property="og:title" content="Sattva Vasanta Skye, Devanahalli | Studio to 4 BHK from &#8377;78 Lakhs">
+    <meta property="og:description" content="A 16-acre Sattva Group township on Bellary Road, Devanahalli: 1,077 Studio to 4 BHK homes, 80% open space, 50+ amenities, 10 km from Bangalore Airport. RERA approved, possession May 2031.">
     <meta property="og:image" content="https://luxurahabitat.com/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sattva Vasanta Skye, Devanahalli — 1 to 4 BHK Homes">
-    <meta name="twitter:description" content="1,077 homes across a 16-acre Sattva Group township off Bellary Road, Devanahalli. 10 mins from Bangalore Airport. RERA approved.">
+    <meta name="twitter:title" content="Sattva Vasanta Skye, Devanahalli | Studio to 4 BHK Homes">
+    <meta name="twitter:description" content="1,077 Studio to 4 BHK homes in a 16-acre Sattva Group township on Bellary Road, Devanahalli. From &#8377;78 Lakhs, possession May 2031, RERA approved.">
     <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp">
 
     <!-- Robots Instructions -->
@@ -850,108 +850,222 @@
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
+
+    /* ── CONFIGURATION CARDS (floor plan + size + price) ── */
+    .configurations { background: var(--bg-light); }
+    .config-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.4rem; }
+    .config-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(11,107,60,0.15); box-shadow: 0 10px 28px rgba(2,6,23,0.07); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .config-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(2,6,23,0.11); }
+    .config-plan { background: #fff; border-bottom: 1px solid var(--border-light); height: 250px; display: flex; align-items: center; justify-content: center; padding: 0.8rem; cursor: pointer; position: relative; }
+    .config-plan img { max-height: 100%; width: auto; max-width: 100%; object-fit: contain; }
+    .config-plan::after { content: 'Get this floor plan'; position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); background: rgba(11,107,60,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 999px; pointer-events: none; white-space: nowrap; }
+    .config-body { padding: 1.3rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.7rem; flex: 1; }
+    .config-tag { display: inline-block; width: fit-content; background: rgba(212,165,116,0.18); color: #8a5a2b; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.22rem 0.6rem; border-radius: 999px; }
+    .config-card h3 { font-size: 1.2rem; color: var(--primary-dark); font-weight: 800; }
+    .config-price { font-size: 1.2rem; font-weight: 800; color: var(--accent-green); line-height: 1.2; }
+    .config-price small { display: block; font-size: 0.72rem; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .config-specs { list-style: none; display: grid; gap: 0.3rem; border-top: 1px dashed var(--border-light); padding-top: 0.7rem; }
+    .config-specs li { display: flex; justify-content: space-between; gap: 0.8rem; font-size: 0.86rem; color: #374151; }
+    .config-specs li span:first-child { color: #6b7280; }
+    .config-specs li span:last-child { font-weight: 700; text-align: right; }
+    .config-card p { font-size: 0.87rem; color: var(--text-light); line-height: 1.65; flex: 1; }
+    .config-cta { width: 100%; min-height: 46px; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-family: inherit; font-weight: 800; font-size: 0.92rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+    .config-cta:hover { background: #075b31; transform: translateY(-1px); }
+    .config-note { margin-top: 1.8rem; background: #fff; border-left: 5px solid var(--accent-warm); border-radius: 12px; padding: 1.1rem 1.3rem; font-size: 0.88rem; color: var(--text-light); line-height: 1.7; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+    .price-banner { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem 2rem; background: #fff; border: 1px solid rgba(11,107,60,0.18); border-radius: 14px; padding: 1rem 1.4rem; max-width: 880px; margin: 0 auto; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+    .price-banner div { text-align: center; }
+    .price-banner strong { display: block; color: var(--accent-green); font-size: 1.25rem; font-weight: 900; }
+    .price-banner span { color: var(--text-light); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ── SPECIFICATIONS ── */
+    .specs { background: var(--bg-white); }
+    .spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.2rem; }
+    .spec-card { background: var(--bg-light); border: 1px solid var(--border-light); border-radius: 12px; padding: 1.2rem 1.3rem; }
+    .spec-card h3 { font-size: 1rem; color: var(--primary-dark); font-weight: 900; margin-bottom: 0.4rem; }
+    .spec-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; margin: 0; }
+
+    .plan-note span strong { display: inline; margin: 0; }
+    .about-grid > * { min-width: 0; }
+    .about-content p, .highlights-table td, .faq-answer p { overflow-wrap: anywhere; }
+
+    /* ── REVIEWS ── */
+    .review-summary { display: grid; grid-template-columns: minmax(180px, 0.35fr) 1fr; gap: 1.6rem; align-items: center; max-width: 900px; margin: 2rem auto 0; background: #fff; border-radius: 16px; padding: 1.6rem; border: 1px solid rgba(11,107,60,0.15); box-shadow: 0 10px 28px rgba(2,6,23,0.06); }
+    .review-score { text-align: center; }
+    .review-score strong { display: block; font-size: 3rem; line-height: 1; font-weight: 900; color: var(--accent-green); }
+    .review-score .stars { color: #e0a82e; font-size: 1.2rem; letter-spacing: 2px; margin: 0.4rem 0 0.2rem; }
+    .review-score span { font-size: 0.78rem; color: var(--text-light); font-weight: 600; }
+    .review-summary p { font-size: 0.95rem; color: var(--text-light); line-height: 1.75; margin-bottom: 0.6rem; }
+    .review-summary small { font-size: 0.76rem; color: #8a8d86; }
+
+    @media (max-width: 1024px) {
+        .config-grid, .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+        .config-grid, .spec-grid { grid-template-columns: 1fr; }
+        .review-summary { grid-template-columns: 1fr; }
+    }
     </style>
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateListing",
-        "name": "Sattva Vasanta Skye",
-        "description": "Sattva Vasanta Skye is a 16-acre, 1,077-home integrated township by Sattva Group off Bellary Road, Devanahalli, North Bengaluru, offering 1 to 4 BHK apartments near the KIADB Aerospace Park and Kempegowda International Airport.",
-        "url": "https://luxurahabitat.com/projects/vasanta-skye/"
+{
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": "Sattva Vasanta Skye",
+    "description": "Sattva Vasanta Skye is a 16-acre, 1,077-home township by Sattva Group in Kannamangala Village, Bellary Road, Devanahalli, North Bengaluru, offering Studio, 1, 2, 3 and 4 BHK apartments of 454 to 2,416 sq ft from Rs. 78 Lakhs onwards. RERA PRM/KA/RERA/1250/303/PR/080525/007730, possession May 2031.",
+    "url": "https://luxurahabitat.com/projects/vasanta-skye/",
+    "image": "https://luxurahabitat.com/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bellary Road, Kannamangala Village",
+        "addressLocality": "Devanahalli",
+        "addressRegion": "Karnataka",
+        "postalCode": "562110",
+        "addressCountry": "IN"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "7800000",
+        "availability": "https://schema.org/PreOrder"
     }
+}
     </script>
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is Sattva Vasanta Skye and who is the developer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye is a new-launch integrated township by Sattva Group, spread across 16 acres off Bellary Road in Devanahalli, North Bengaluru. The township comprises 1,077 apartments across multiple towers, with approximately 80% open space, 4 grand clubhouses and 200+ lifestyle amenities."
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sattva Vasanta Skye is a residential township by Sattva Group on Bellary Road in Kannamangala Village, Devanahalli, North Bengaluru. It covers 16 acres with 1,077 Studio, 1, 2, 3 and 4 BHK apartments in G+13 and G+14 towers, about 80% open space and 50+ amenities."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where exactly is Sattva Vasanta Skye located?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The project is on Bellary Road, Kannamangala Village, Devanahalli, Karnataka 562110, opposite the National Public School and close to NH-44 and SH-104. Kempegowda International Airport is about 10 km (around 15 minutes) away."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What configurations and sizes are available at Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Per the developer's Block and Wing floor plans, super built-up areas are: Studio 454-461 sq ft, 1 BHK 731-1,133 sq ft, 2 BHK 1,160-1,338 sq ft, 3 BHK + 2T 1,509-1,570 sq ft, 3 BHK + 3T 1,856-1,955 sq ft and 4 BHK 2,253-2,416 sq ft."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the price of Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prices at Sattva Vasanta Skye start at Rs. 78 Lakhs onwards. The exact price for each configuration depends on the wing, floor and facing, so request the current price sheet for the unit you are considering. Registration, stamp duty and GST are extra."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the carpet area of the homes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Carpet areas from the floor plans are about 291 sq ft for a Studio, 491-716 sq ft for a 1 BHK, 764-852 sq ft for a 2 BHK, 971-1,256 sq ft for a 3 BHK and 1,468-1,520 sq ft for a 4 BHK. Always confirm the carpet area written in your sale agreement."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is Sattva Vasanta Skye RERA approved?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Sattva Vasanta Skye is RERA approved under registration number PRM/KA/RERA/1250/303/PR/080525/007730. You can verify it on the Karnataka RERA website."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "When is the possession date of Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The expected possession date is May 2031. The project is ongoing and under construction."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How many towers and floors does Sattva Vasanta Skye have?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The township has 11 residential towers of G+13 and G+14 floors, laid out as 16 wings across Blocks A, B and C, with 1,077 apartments in total."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What amenities does Sattva Vasanta Skye offer?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The project offers 50+ amenities, including a premium clubhouse, a large swimming pool and kids' pool, gym, tennis, badminton and basketball courts, a running track and playfield, yoga lawn, meditation area, children's play area, gazebos and landscaped gardens."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the specifications at Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Listed specifications include an RCC framed structure, marble flooring in all apartments, laminated flush doors, PVC-insulated copper wiring, chrome-plated bathroom fittings and a ceiling hook in every balcony for a swing chair."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How far is Sattva Vasanta Skye from the airport and major tech parks?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kempegowda International Airport is about 10 km (around 15 minutes) away. Kirloskar Business Park is about 28 km and Manyata Tech Park about 30 km away, and Yelahanka Railway Station is about 25 km."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which schools and hospitals are near Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Leena Multispeciality Hospital is about 3 km away and Akash International School about 5 km away. Devanahalli town, with more schools and clinics, is around 5 minutes by road."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the reviews and ratings of Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Third-party listings report a rating of 4.1 out of 5 on Google reviews, with buyers mostly praising its location, price plan and amenities. As the project is under construction, visit the site and a completed Sattva project to judge build quality."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Who is the developer of Sattva Vasanta Skye?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The developer is Sattva Group (formerly Salarpuria Sattva Group), founded in 1986 and one of Bengaluru's most established developers. Its Devanahalli portfolio also includes Sattva Aeropolis, Sattva City and Sattva Vasanta Cove."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is Sattva Vasanta Skye the same project as Sattva Vasanta Cove?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. They are separate Sattva Group projects on the Bellary Road corridor with different RERA numbers. Vasanta Skye is a 16-acre, 1,077-home Studio to 4 BHK township, while Vasanta Cove is a much smaller Studio and 1 BHK development. Confirm which project any floor plan or price refers to."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I book a site visit or get the brochure?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use the enquiry form, WhatsApp or call button on this page to get the brochure, full floor plans and current price list, or to schedule a site visit."
+            }
         }
-      }, {
-        "@type": "Question",
-        "name": "Where exactly is Sattva Vasanta Skye located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye is located on Bellary Road, Devanahalli, North Bengaluru, directly opposite the National Public School (NPS) and adjacent to NH-44, approximately 10 minutes from Kempegowda International Airport."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What apartment configurations and sizes are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye offers 1, 2, 2.5, 3 and 4 BHK apartments. Based on the developer's own pricing, specification and stamped tower floor-plan data: 1 BHK is approximately 707 sq ft, 2 BHK ranges 1,177-1,270 sq ft, 2.5 BHK ranges approximately 1,186-1,213 sq ft, 3 BHK ranges 1,483-1,937 sq ft (with select duplex units up to approximately 2,395 sq ft), and 4 BHK ranges 2,100-2,623 sq ft. Note that some of the project's own marketing copy mentions only \"2, 3 & 4 BHK\" — this omits the verified 1 BHK and 2.5 BHK options that appear in the pricing table and stamped tower plans."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the price of Sattva Vasanta Skye apartments?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Approximate starting prices are: 1 BHK from Rs. 63 Lakhs, 2 BHK from Rs. 1.05 Cr, 3 BHK from Rs. 1.34 Cr, and 4 BHK from Rs. 1.99 Cr. Pricing for 2.5 BHK units is available on request. Prices are indicative and subject to change based on floor, unit type and phase — please enquire for the latest offer."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is Sattva Vasanta Skye RERA registered?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Sattva Vasanta Skye is registered under RERA number PRM/KA/RERA/1250/303/PR/080525/007730."
-        }
-      }, {
-        "@type": "Question",
-        "name": "When is the possession date for Sattva Vasanta Skye?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye is a new-launch project currently under construction in a single phase. An exact possession date was not published in the source material we reviewed — please enquire directly for the current construction schedule and RERA-mandated completion date."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What amenities does Sattva Vasanta Skye offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye offers 200+ amenities across 4 grand clubhouses, including a gymnasium, outdoor gym, tennis, badminton and basketball courts, jogging track, golf putting lawn, yoga lawn, meditation area, swimming pool, kids pool, amphitheatre, table tennis, billiards, indoor games, library, multipurpose hall, children's play area, playfield and 2 large central parks."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How far is Sattva Vasanta Skye from Kempegowda International Airport?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye is approximately 10 minutes from Kempegowda International Airport (KIAL) and sits directly adjacent to NH-44 (Airport Road)."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How many towers and homes does the township have?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Vasanta Skye is a 16-acre integrated township with 1,077 apartments across multiple towers, built around 2 large central parks and approximately 80% open, landscaped space."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Who is Sattva Group?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most established real estate developers, with a growing portfolio in the Devanahalli airport corridor that includes Sattva Aeropolis, Sattva City and Sattva Vasanta Cove."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is Sattva Vasanta Skye the same project as Sattva Vasanta Cove?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Sattva Vasanta Skye and Sattva Vasanta Cove are two separate Sattva Group projects on the Devanahalli/Bellary Road corridor with different RERA registrations, land parcels and unit mixes — Vasanta Skye is a larger 16-acre, 1 to 4 BHK township, while Vasanta Cove is a smaller 1.3-acre Studio and 1 BHK development. Always confirm which project's floor plan and RERA number you are being quoted."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I book a site visit or request the brochure?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page."
-        }
-      }]
-    }
+    ]
+}
     </script>
     <script type="application/ld+json">
 {
@@ -1017,7 +1131,7 @@
     </div>
 
     <nav>
-        <a href="#" class="project-brand" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <a href="#" class="project-brand" aria-label="Luxura Habitat, back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
             <span class="partner-caption">Real Estate Advisory</span>
@@ -1031,10 +1145,11 @@
             <li><a href="#hero">Overview</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#configurations">Price &amp; Plans</a></li>
+            <li><a href="#master-plan">Master Plan</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#units">Unit Plans</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#specifications">Specifications</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#form">Enquire</a></li>
         </ul>
@@ -1062,10 +1177,10 @@
                     <img src="/images/projects/vasanta-skye/vasanta-skye-logo.webp" alt="Sattva Vasanta Skye">
                 </a>
 
-                <div class="hero-badge">New Launch · Under Construction</div>
-                <h1>Sattva Vasanta Skye, Devanahalli — 1 to 4 BHK Homes in a 16-Acre Township</h1>
+                <div class="hero-badge">Ongoing · Possession May 2031</div>
+                <h1>Sattva Vasanta Skye, Devanahalli: Studio to 4 BHK Homes in a 16-Acre Township</h1>
                 <p class="hero-intro">
-                    A 16-acre integrated township by Sattva Group off Bellary Road, Devanahalli — 1,077 homes across multiple towers, with 80% open space, 4 grand clubhouses and 200+ lifestyle amenities, ~10 minutes from Kempegowda International Airport.
+                    A 16-acre Sattva Group township in Kannamangala Village on Bellary Road, Devanahalli. 1,077 Studio, 1, 2, 3 and 4 BHK homes in G+13 and G+14 towers, 80% open space and 50+ amenities, 10 km from Kempegowda International Airport.
                 </p>
 
                 <div class="hero-info-boxes">
@@ -1073,30 +1188,30 @@
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
-                                <div class="info-box-title">1 to 4 BHK</div>
-                                <div class="info-box-subtitle">1,077 Apartments</div>
+                                <div class="info-box-title">Studio to 4 BHK</div>
+                                <div class="info-box-subtitle">454 - 2,416 sq ft</div>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                             <div>
                                 <div class="info-box-title">Devanahalli</div>
-                                <div class="info-box-subtitle">North Bengaluru</div>
+                                <div class="info-box-subtitle">Bellary Road, North Bengaluru</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="info-box price-box">
                         <span class="price-copy">Starting From</span>
-                        <span class="price-line"><span class="new-price">₹63 Lakhs</span></span>
-                        <span class="offer-note">1 BHK · under construction</span>
+                        <span class="price-line"><span class="new-price">₹78 Lakhs Onwards</span></span>
+                        <span class="offer-note">RERA approved · possession May 2031</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-form-section reveal" style="transition-delay:120ms;">
                 <h3 class="hero-form-title">Get Exclusive Details</h3>
-                <span class="hero-form-subtitle">Pricing, floor plans &amp; site visit — all in one click.</span>
+                <span class="hero-form-subtitle">Price list, floor plans &amp; site visit, all in one click.</span>
 
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
                     <input type="hidden" name="access_key" value="aaab9e59-b216-46b6-bfcc-bd5835d8fc3e">
@@ -1114,27 +1229,28 @@
 
     <div class="trust-bar">
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 10 Mins to Bangalore Airport</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 10 km to Bangalore Airport</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80% Open Space</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Possession May 2031</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Sattva Group</div>
     </div>
 
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">Sattva Vasanta Skye Overview</h2>
-            <p class="section-subtitle">A landmark 16-acre township by Sattva Group on Devanahalli's Bellary Road growth corridor.</p>
+            <p class="section-subtitle">A 16-acre Sattva Group township in Kannamangala Village, on Devanahalli's Bellary Road growth corridor.</p>
 
             <div class="about-grid">
                 <div class="about-content reveal">
                     <h3>Premium Township Living on Bellary Road</h3>
                     <p>
-                        Sattva Vasanta Skye is a 16-acre integrated township developed by Sattva Group, positioned in Devanahalli, North Bengaluru — directly opposite the National Public School (NPS) and adjacent to NH-44, approximately 10 minutes from Kempegowda International Airport.
+                        Sattva Vasanta Skye is a new residential township by Sattva Group in Kannamangala Village, Devanahalli, on Bellary Road near Kempegowda International Airport. The project covers 16 acres and offers Studio, 1, 2, 3 and 4 BHK apartments, which makes it one of the few Devanahalli launches where a first-time buyer and a large family can choose from the same township.
                     </p>
                     <p>
-                        The township comprises 1,077 two-side-open apartments across multiple towers, with approximately 80% of the land kept as open, landscaped green space around 2 large central parks. Based on the developer's pricing sheet, specification table and stamped tower floor plans, verified configurations span 1 BHK (~707 sq ft), 2 BHK (1,177-1,270 sq ft), 2.5 BHK (~1,186-1,213 sq ft), 3 BHK (1,483-1,937 sq ft, with select duplex units up to ~2,395 sq ft) and 4 BHK (2,100-2,623 sq ft) — a broader mix than the "2, 3 & 4 BHK" line used in some of the developer's own marketing copy.
+                        The layout places 1,077 homes in G+13 and G+14 towers around a landscaped central court, with roughly 80% of the land kept open. Based on the developer's Block and Wing floor plans, super built-up areas run from 454 sq ft for a Studio to 2,416 sq ft for the largest 4 BHK. The project is RERA approved under PRM/KA/RERA/1250/303/PR/080525/007730, prices start at ₹78 Lakhs onwards, and the expected possession date is May 2031, which gives buyers time to plan their finances around a construction-linked schedule.
                     </p>
                     <p>
-                        Sattva Vasanta Skye is a new-launch project currently under construction in a single phase, offering an early-bird opportunity for homebuyers and investors on the Devanahalli airport corridor.
+                        Homes are planned for natural light, cross ventilation and efficient use of space, and the sample apartment interiors are shown in the gallery below.
                     </p>
 
                     <div class="features-list">
@@ -1142,28 +1258,28 @@
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                             <div>
                                 <h3>Airport Corridor Location</h3>
-                                <p>Opposite NPS, adjacent to NH-44, ~10 mins from the airport.</p>
+                                <p>10 km (about 15 min) from the airport, close to NH-44 and SH-104.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
                             <div>
                                 <h3>80% Open Greenery</h3>
-                                <p>2 large central parks and landscaped township spaces.</p>
+                                <p>Wide internal roads, gardens and a landscaped central court.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path></svg></div>
                             <div>
-                                <h3>4 Grand Clubhouses</h3>
-                                <p>200+ amenities across sports, wellness and recreation.</p>
+                                <h3>50+ Amenities</h3>
+                                <p>Premium clubhouse, swimming pool and sports courts.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
                             <div>
-                                <h3>Two-Side Open Homes</h3>
-                                <p>Cross-ventilated 1 to 4 BHK layouts across the township.</p>
+                                <h3>Studio to 4 BHK</h3>
+                                <p>454 to 2,416 sq ft, from compact rentals to large family homes.</p>
                             </div>
                         </div>
                     </div>
@@ -1179,7 +1295,7 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Project Highlights</h2>
-            <p class="section-subtitle">Key details for Sattva Vasanta Skye — ready for quick comparison and easy discovery.</p>
+            <p class="section-subtitle">Key details for Sattva Vasanta Skye at a glance.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
                 <table class="highlights-table" aria-label="Sattva Vasanta Skye project highlights">
@@ -1190,15 +1306,20 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr><td><strong>Project Type</strong></td><td>Apartments (integrated township)</td></tr>
                         <tr><td><strong>Developer</strong></td><td>Sattva Group</td></tr>
-                        <tr><td><strong>Location</strong></td><td>Bellary Road, Devanahalli, North Bengaluru (opposite National Public School)</td></tr>
-                        <tr><td><strong>Land Area</strong></td><td>16 Acres (integrated township)</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Kannamangala Village, Bellary Road, Devanahalli, North Bengaluru 562110</td></tr>
+                        <tr><td><strong>Total Land Area</strong></td><td>16 Acres</td></tr>
+                        <tr><td><strong>Towers &amp; Floors</strong></td><td>11 residential towers, G+13 and G+14 (laid out as 16 wings across Blocks A, B and C)</td></tr>
                         <tr><td><strong>Total Units</strong></td><td>1,077 Apartments</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>Studio, 1 BHK, 2 BHK, 3 BHK &amp; 4 BHK</td></tr>
+                        <tr><td><strong>Size Range</strong></td><td>454 sq ft to 2,416 sq ft (super built-up)</td></tr>
+                        <tr><td><strong>Price</strong></td><td>₹78 Lakhs onwards</td></tr>
                         <tr><td><strong>Open Space</strong></td><td>Approximately 80%</td></tr>
-                        <tr><td><strong>Configurations</strong></td><td>1, 2, 2.5, 3 &amp; 4 BHK — ~707 to 2,623 Sq.Ft (verified range)</td></tr>
-                        <tr><td><strong>Clubhouses</strong></td><td>4 Grand Clubhouses, 200+ Amenities</td></tr>
-                        <tr><td><strong>Project Status</strong></td><td>New Launch — Under Construction</td></tr>
-                        <tr><td><strong>Possession</strong></td><td>Not yet published — enquire for the current construction schedule</td></tr>
+                        <tr><td><strong>Amenities</strong></td><td>50+ amenities with a premium clubhouse</td></tr>
+                        <tr><td><strong>Project Status</strong></td><td>Ongoing (under construction)</td></tr>
+                        <tr><td><strong>Possession</strong></td><td>May 2031</td></tr>
+                        <tr><td><strong>Approvals</strong></td><td>RERA Approved</td></tr>
                         <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1250/303/PR/080525/007730</td></tr>
                     </tbody>
                 </table>
@@ -1206,10 +1327,194 @@
         </div>
     </section>
 
+    <section class="configurations" id="configurations">
+        <div class="container">
+            <span id="pricing"></span><span id="units"></span>
+            <h2 class="section-title">Sattva Vasanta Skye Price &amp; Floor Plans</h2>
+            <p class="section-subtitle">Five home types from a 454 sq ft Studio to a 2,416 sq ft 4 BHK. Sizes below are read from the developer's Block and Wing floor plans. Tap any plan to receive the full-size PDF and the current price sheet.</p>
+
+            <div class="price-banner reveal">
+                <div><strong>₹78 Lakhs</strong><span>Starting price</span></div>
+                <div><strong>454 - 2,416</strong><span>Sq ft super built-up</span></div>
+                <div><strong>May 2031</strong><span>Possession</span></div>
+            </div>
+
+            <div class="config-grid">
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Studio floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-17.webp" alt="Sattva Vasanta Skye Block C Wing 15 floor plan with Studio units of 454 and 461 sq ft" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Entry format</span>
+                        <h3>Studio</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>454 - 461 sq ft</span></li>
+                            <li><span>Carpet area</span><span>291 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>1</span></li>
+                            <li><span>Where</span><span>Block C, Wings 15 &amp; 16</span></li>
+                        </ul>
+                        <p>Compact, low-maintenance homes for rental income and young professionals working around the airport and aerospace belt.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get Studio Price</button>
+                    </div>
+                </article>
+
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 1 BHK floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-18.webp" alt="Sattva Vasanta Skye Block C Wing 16 floor plan with 1 BHK units of 731 sq ft" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Starter home</span>
+                        <h3>1 BHK</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>731 - 1,133 sq ft</span></li>
+                            <li><span>Carpet area</span><span>491 - 716 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>1</span></li>
+                            <li><span>Larger variants</span><span>Ground floor units</span></li>
+                        </ul>
+                        <p>Typical 1 BHKs are 731 to 740 sq ft. Select ground floor 1 BHKs in Blocks A and B go up to 1,133 sq ft.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get 1 BHK Price</button>
+                    </div>
+                </article>
+
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 2 BHK floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-10.webp" alt="Sattva Vasanta Skye Block A Wing 6 ground floor plan with 2 BHK of 1,160 sq ft and 3 BHK units" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Family entry</span>
+                        <h3>2 BHK</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>1,160 - 1,338 sq ft</span></li>
+                            <li><span>Carpet area</span><span>764 - 852 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>1 or 2</span></li>
+                        </ul>
+                        <p>Most 2 BHKs come with two bathrooms. The 1,160 sq ft layout in Wing 6 has one bathroom and a second bedroom planned as a kid's room or study.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get 2 BHK Price</button>
+                    </div>
+                </article>
+
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 3 BHK + 2T floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-16.webp" alt="Sattva Vasanta Skye Block B Wing 12 floor plan with 3 BHK plus 2 toilet units of 1,509 to 1,568 sq ft" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Family format</span>
+                        <h3>3 BHK + 2T</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>1,509 - 1,570 sq ft</span></li>
+                            <li><span>Carpet area</span><span>971 - 1,028 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>2</span></li>
+                        </ul>
+                        <p>The value 3 BHK: three bedrooms and two bathrooms in a compact footprint for growing families.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get 3 BHK Price</button>
+                    </div>
+                </article>
+
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 3 BHK + 3T floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-13.webp" alt="Sattva Vasanta Skye Blocks A and B Wings 7 to 11 typical floor plan with 3 BHK units of 1,521 to 1,922 sq ft" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Spacious family</span>
+                        <h3>3 BHK + 3T</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>1,856 - 1,955 sq ft</span></li>
+                            <li><span>Carpet area</span><span>1,168 - 1,256 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>3</span></li>
+                        </ul>
+                        <p>Larger 3 BHKs with an attached bath for every bedroom, a separate dining area and deeper balconies.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get 3 BHK Price</button>
+                    </div>
+                </article>
+
+                <article class="config-card reveal">
+                    <div class="config-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 4 BHK floor plan">
+                        <img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-02.webp" alt="Sattva Vasanta Skye Blocks A and B Wing 1 and 13 typical floor plan with 4 BHK units of 2,307 to 2,416 sq ft" loading="lazy">
+                    </div>
+                    <div class="config-body">
+                        <span class="config-tag">Largest homes</span>
+                        <h3>4 BHK + 4T</h3>
+                        <div class="config-price"><small>Price</small>On request</div>
+                        <ul class="config-specs">
+                            <li><span>Super built-up</span><span>2,253 - 2,416 sq ft</span></li>
+                            <li><span>Carpet area</span><span>1,468 - 1,520 sq ft</span></li>
+                            <li><span>Bathrooms</span><span>4</span></li>
+                            <li><span>Where</span><span>Wings 1, 13 &amp; 14</span></li>
+                        </ul>
+                        <p>Four bedrooms, four bathrooms and a dresser in the master suite, placed in the corner wings of the township.</p>
+                        <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get 4 BHK Price</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="config-note">
+                <strong>How to read these numbers:</strong> Prices at Sattva Vasanta Skye start at ₹78 Lakhs onwards, and the exact figure for each configuration depends on the wing, floor and facing. Super built-up area includes a share of common areas, so ask for the carpet area in your sale agreement; for example, a 454 sq ft Studio has a 291 sq ft carpet area. Prices exclude registration, stamp duty and GST and are subject to change without notice.
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="master-plan">
+        <div class="container">
+            <h2 class="section-title">Sattva Vasanta Skye Master Plan</h2>
+            <p class="section-subtitle">A 16-acre layout with wide internal roads, gardens and modern amenities, planned so every tower faces open, landscaped space.</p>
+
+            <div class="plan-grid" style="margin-top: 1.5rem;">
+                <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
+                    <img src="/images/projects/vasanta-skye/vasanta-skye-master-plan.webp" alt="Sattva Vasanta Skye master plan showing Blocks A, B and C around the central clubhouse, pool and landscaped court" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+                </div>
+
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>11 Towers, G+13 and G+14</strong>
+                        <span>1,077 homes in towers carefully placed for privacy, arranged as 16 wings across Blocks A, B and C along the edges of the site.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Clubhouse and Central Court</strong>
+                        <span>The clubhouse and swimming pool sit at the heart of the layout, surrounded by gardens, kids' play zones, a pond and walking paths.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Sports Along the Frontage</strong>
+                        <span>A running track with a playfield and multi-sport courts line the entrance side, keeping noise away from the residential wings.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Secure Entrances</strong>
+                        <span>Large entrance gates with full security, a drop-off plaza and fire driveways looping around every block.</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">All Block &amp; Wing Floor Plans</p>
+            <div class="gallery-grid" style="max-height: 420px;">
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-01.webp" alt="Sattva Vasanta Skye Wings 1, 13 and 14 ground floor plan with 3 BHK and 4 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-02.webp" alt="Sattva Vasanta Skye Wings 1 and 13 typical floor plan with 4 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-03.webp" alt="Sattva Vasanta Skye Block C Wing 14 typical floor plan with 4 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-04.webp" alt="Sattva Vasanta Skye Block A Wings 2 and 3 ground floor plan with 1 BHK and 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-05.webp" alt="Sattva Vasanta Skye Block A Wings 2 and 3 typical floor plan with 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-07.webp" alt="Sattva Vasanta Skye Block A Wing 4 typical floor plan with 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-08.webp" alt="Sattva Vasanta Skye Block A Wing 5 ground floor plan with 1 BHK and 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-09.webp" alt="Sattva Vasanta Skye Block A Wing 5 typical floor plan with 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-10.webp" alt="Sattva Vasanta Skye Block A Wing 6 ground floor plan with 2 BHK and 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-11.webp" alt="Sattva Vasanta Skye Block A Wing 6 typical floor plan with 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-12.webp" alt="Sattva Vasanta Skye Block B Wings 7, 9, 10 and 11 ground floor plan" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-13.webp" alt="Sattva Vasanta Skye Blocks A and B Wings 7 to 11 typical floor plan" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-14.webp" alt="Sattva Vasanta Skye Block A Wing 8 ground floor plan with 1 BHK and 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-15.webp" alt="Sattva Vasanta Skye Block B Wing 12 ground floor plan" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-16.webp" alt="Sattva Vasanta Skye Block B Wing 12 typical floor plan with 3 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-17.webp" alt="Sattva Vasanta Skye Block C Wing 15 typical floor plan with Studio, 1 BHK and 2 BHK units" loading="lazy"></div>
+                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-18.webp" alt="Sattva Vasanta Skye Block C Wing 16 typical floor plan with Studio, 1 BHK and 2 BHK units" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="amenities" id="amenities">
         <div class="container">
-            <h2 class="section-title">200+ Amenities Across 4 Clubhouses</h2>
-            <p class="section-subtitle">Curated lifestyle facilities across sports, wellness, recreation and family living.</p>
+            <h2 class="section-title">50+ Amenities at Sattva Vasanta Skye</h2>
+            <p class="section-subtitle">A premium clubhouse, a large swimming pool, sports courts and spaces for kids and adults, crafted for a happy and active lifestyle.</p>
 
             <div class="amenity-grid">
                 <div class="amenity-card reveal">
@@ -1218,51 +1523,51 @@
                         <li>Gymnasium &amp; outdoor gym</li>
                         <li>Tennis court</li>
                         <li>Badminton &amp; basketball courts</li>
-                        <li>Jogging track</li>
-                        <li>Golf putting lawn</li>
+                        <li>Running track &amp; playfield</li>
+                        <li>Jogging and walking paths</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:120ms;">
-                    <h3>Wellness &amp; Mindfulness</h3>
+                    <h3>Wellness &amp; Leisure</h3>
                     <ul class="amenity-list">
+                        <li>Large swimming pool</li>
                         <li>Yoga lawn</li>
                         <li>Meditation area</li>
-                        <li>Swimming pool &amp; kids' pool</li>
-                        <li>Landscaped gardens</li>
-                        <li>Senior citizen rest areas</li>
+                        <li>Lotus pond</li>
+                        <li>Senior citizen seating</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:180ms;">
-                    <h3>Recreation &amp; Social</h3>
+                    <h3>Clubhouse &amp; Social</h3>
                     <ul class="amenity-list">
-                        <li>Amphitheatre</li>
-                        <li>Table tennis &amp; billiards room</li>
-                        <li>Indoor games zone</li>
-                        <li>Library</li>
+                        <li>Premium clubhouse</li>
+                        <li>Indoor games</li>
                         <li>Multipurpose hall</li>
+                        <li>Gazebos &amp; pergolas</li>
+                        <li>Community gathering spaces</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:240ms;">
-                    <h3>Family &amp; Community</h3>
+                    <h3>Kids &amp; Family</h3>
                     <ul class="amenity-list">
-                        <li>Children's play area &amp; playfield</li>
-                        <li>2 large central parks</li>
-                        <li>Community gathering spaces</li>
-                        <li>Pergolas &amp; seating zones</li>
+                        <li>Children's play area</li>
+                        <li>Kids' pool</li>
+                        <li>Landscaped central court</li>
+                        <li>Gardens &amp; lawns</li>
                     </ul>
                 </div>
             </div>
 
             <div style="margin-top:3rem;" class="gallery-grid-wrapper">
                 <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-swimming-pool.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-swimming-pool.webp" alt="Sattva Vasanta Skye swimming pool amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-tennis.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-tennis.webp" alt="Sattva Vasanta Skye tennis court amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-yoga.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-yoga.webp" alt="Sattva Vasanta Skye yoga lawn amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-gazebo.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-gazebo.webp" alt="Sattva Vasanta Skye gazebo seating amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-lotus-pond.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-lotus-pond.webp" alt="Sattva Vasanta Skye lotus pond landscaped feature"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-swimming-pool.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-swimming-pool.webp" alt="Sattva Vasanta Skye swimming pool amenity" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-tennis.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-tennis.webp" alt="Sattva Vasanta Skye tennis court amenity" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-yoga.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-yoga.webp" alt="Sattva Vasanta Skye yoga lawn amenity" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-gazebo.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-gazebo.webp" alt="Sattva Vasanta Skye gazebo seating amenity" loading="lazy"></div>
+                    <div class="gallery-item" onclick="openLightboxFromSrc('vasanta-skye-amenities-lotus-pond.webp')"><img src="/images/projects/vasanta-skye/vasanta-skye-amenities-lotus-pond.webp" alt="Sattva Vasanta Skye lotus pond landscaped feature" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -1271,133 +1576,68 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Sattva Vasanta Skye Image Gallery</h2>
-            <p class="section-subtitle">Explore renders of the Vasanta Skye township, interiors and amenities.</p>
+            <p class="section-subtitle">Renders of the township, amenities and sample apartment interiors.</p>
 
             <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-1.webp" alt="Sattva Vasanta Skye Devanahalli aerial township view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-2.webp" alt="Sattva Vasanta Skye central park view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-3.webp" alt="Sattva Vasanta Skye lifestyle amenities render"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-4.webp" alt="Sattva Vasanta Skye apartment interior design"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-5.webp" alt="Sattva Vasanta Skye Devanahalli township render"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-6.webp" alt="Sattva Vasanta Skye Devanahalli project view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-7.webp" alt="Sattva Vasanta Skye Devanahalli project render"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-1.webp" alt="Sattva Vasanta Skye apartment interior view 1"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-2.webp" alt="Sattva Vasanta Skye apartment interior view 2"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-3.webp" alt="Sattva Vasanta Skye apartment interior view 3"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-4.webp" alt="Sattva Vasanta Skye apartment interior view 4"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-5.webp" alt="Sattva Vasanta Skye apartment interior view 5"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-1.webp" alt="Sattva Vasanta Skye Devanahalli aerial township view" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-2.webp" alt="Sattva Vasanta Skye central landscaped court view" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-3.webp" alt="Sattva Vasanta Skye lifestyle amenities render" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-4.webp" alt="Sattva Vasanta Skye apartment interior design" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-5.webp" alt="Sattva Vasanta Skye Devanahalli township render" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-6.webp" alt="Sattva Vasanta Skye Devanahalli project view" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-gallery-7.webp" alt="Sattva Vasanta Skye Devanahalli project render" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-1.webp" alt="Sattva Vasanta Skye sample apartment interior 1" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-2.webp" alt="Sattva Vasanta Skye sample apartment interior 2" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-3.webp" alt="Sattva Vasanta Skye sample apartment interior 3" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-4.webp" alt="Sattva Vasanta Skye sample apartment interior 4" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-5.webp" alt="Sattva Vasanta Skye sample apartment interior 5" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-6.webp" alt="Sattva Vasanta Skye sample apartment interior 6" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/vasanta-skye/vasanta-skye-interior-7.webp" alt="Sattva Vasanta Skye sample apartment interior 7" loading="lazy"></div>
             </div>
         </div>
     </section>
 
-    <section class="plan" id="units">
+    <section class="specs" id="specifications">
         <div class="container">
-            <h2 class="section-title">Unit Plans &amp; Master Plan</h2>
-            <p class="section-subtitle">Explore Sattva Vasanta Skye's master plan, tower unit schedules and floor plan layouts.</p>
+            <h2 class="section-title">Sattva Vasanta Skye Specifications</h2>
+            <p class="section-subtitle">The construction and finish materials listed for the project, from the structure to the fittings.</p>
 
-            <div class="plan-grid" style="margin-top: 1.5rem;">
-                <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto;">
-                    <img src="/images/projects/vasanta-skye/vasanta-skye-master-plan.webp" alt="Sattva Vasanta Skye master plan layout showing towers, clubhouses and central parks" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+            <div class="spec-grid">
+                <div class="spec-card reveal">
+                    <h3>Structure</h3>
+                    <p>Strong RCC framed structure built with top-quality materials.</p>
                 </div>
-
-                <div class="plan-notes reveal" style="transition-delay:160ms;">
-                    <div class="plan-note">
-                        <strong>1,077 Homes, 16-Acre Township</strong>
-                        <span>Multiple towers arranged around 2 large central parks and 4 clubhouses.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>1 to 4 BHK, Verified</strong>
-                        <span>Stamped tower plans confirm a genuine 1, 2, 2.5, 3 &amp; 4 BHK unit mix — broader than some of the project's own marketing copy suggests.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Part of Sattva's Devanahalli Portfolio</strong>
-                        <span>Joins Sattva Aeropolis, Sattva City and Sattva Vasanta Cove in the developer's airport-corridor footprint.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Enquire for Details</strong>
-                        <span>Get brochure, availability and the latest offer information instantly.</span>
-                    </div>
+                <div class="spec-card reveal" style="transition-delay:80ms;">
+                    <h3>Flooring</h3>
+                    <p>Good-quality marble flooring in all apartments.</p>
+                </div>
+                <div class="spec-card reveal" style="transition-delay:160ms;">
+                    <h3>Doors</h3>
+                    <p>Laminated flush doors.</p>
+                </div>
+                <div class="spec-card reveal">
+                    <h3>Electrical</h3>
+                    <p>PVC-insulated copper wiring throughout every apartment for safety.</p>
+                </div>
+                <div class="spec-card reveal" style="transition-delay:80ms;">
+                    <h3>Bathroom Fittings</h3>
+                    <p>Chrome-plated CP fittings.</p>
+                </div>
+                <div class="spec-card reveal" style="transition-delay:160ms;">
+                    <h3>Balconies</h3>
+                    <p>A ceiling hook in every balcony for a swing chair.</p>
                 </div>
             </div>
-
-            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">Tower Unit Schedules (Stamped Plans)</p>
-            <div class="gallery-grid" style="max-height: 420px;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-tower-plan-01.webp" alt="Sattva Vasanta Skye Tower 1 typical floor plan with 2.5 and 3 BHK unit schedule"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-tower-plan-02.webp" alt="Sattva Vasanta Skye Tower 2 typical floor plan with 2.5 and 3 BHK duplex unit schedule"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-tower-plan-03.webp" alt="Sattva Vasanta Skye tower typical floor plan and unit schedule"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-tower-plan-04.webp" alt="Sattva Vasanta Skye tower typical floor plan and unit schedule"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-tower-plan-05.webp" alt="Sattva Vasanta Skye tower typical floor plan and unit schedule"></div>
-            </div>
-
-            <p class="section-subtitle" style="margin-top: 3rem; margin-bottom: 1rem;">Individual Unit Floor Plans</p>
-            <div class="gallery-grid" style="max-height: 420px;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-01.webp" alt="Sattva Vasanta Skye 1 BHK floor plan layout, approx 707 sq ft"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-02.webp" alt="Sattva Vasanta Skye 2 BHK floor plan, 1,177 to 1,270 sq ft"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-04.webp" alt="Sattva Vasanta Skye 2.5 BHK floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-03.webp" alt="Sattva Vasanta Skye 3 BHK floor plan, 1,483 to 1,937 sq ft"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-05.webp" alt="Sattva Vasanta Skye 3 BHK standard floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-07.webp" alt="Sattva Vasanta Skye 1 BHK apartment layout option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-08.webp" alt="Sattva Vasanta Skye 2 BHK premium floor plan option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-09.webp" alt="Sattva Vasanta Skye 3 BHK premium floor plan option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-11.webp" alt="Sattva Vasanta Skye 2 BHK compact floor plan option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-12.webp" alt="Sattva Vasanta Skye 3 BHK spacious floor plan option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-14.webp" alt="Sattva Vasanta Skye 3 BHK premium floor plan option"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/vasanta-skye/vasanta-skye-floor-plan-15.webp" alt="Sattva Vasanta Skye 1 BHK smart layout floor plan"></div>
+            <div class="config-note" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                Specifications can change during construction. Ask for the specification annexure attached to your sale agreement, since that is the version the developer is bound to.
             </div>
         </div>
     </section>
 
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Sattva Vasanta Skye Price &amp; Configuration</h2>
-            <p class="section-subtitle">Approximate starting pricing based on the developer's own pricing table. Both ready and new-launch inventory available.</p>
-
-            <div class="pricing-table-wrap">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Apartment Type</th>
-                            <th>Area Range</th>
-                            <th>Starting Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1 BHK</td>
-                            <td>~707 sq. ft.</td>
-                            <td>₹63 Lakhs*</td>
-                        </tr>
-                        <tr>
-                            <td>2 BHK</td>
-                            <td>1,177 – 1,270 sq. ft.</td>
-                            <td>₹1.05 Cr*</td>
-                        </tr>
-                        <tr>
-                            <td>2.5 BHK</td>
-                            <td>~1,186 – 1,213 sq. ft.</td>
-                            <td>Price on Request</td>
-                        </tr>
-                        <tr>
-                            <td>3 BHK</td>
-                            <td>1,483 – 1,937 sq. ft.</td>
-                            <td>₹1.34 Cr*</td>
-                        </tr>
-                        <tr>
-                            <td>4 BHK</td>
-                            <td>2,100 – 2,623 sq. ft.</td>
-                            <td>₹1.99 Cr*</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pricing-footnote">*Approximate starting price for 1, 2, 3 &amp; 4 BHK per the developer's own pricing sheet. Prices are subject to change based on floor, unit type and phase. Contact us for the latest pricing on 2.5 BHK inventory.</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="plan" id="location">
+    <section class="plan" id="location" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">Location Advantages &amp; Connectivity</h2>
-            <p class="section-subtitle">Bellary Road, Devanahalli — opposite National Public School, minutes from the airport.</p>
+            <p class="section-subtitle">Kannamangala Village, Devanahalli, with easy access to Kempegowda International Airport, Yelahanka and Hebbal.</p>
 
             <div class="plan-grid">
                 <div class="plan-image reveal">
@@ -1405,21 +1645,41 @@
                 </div>
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
-                        <strong>Distance to Key Hubs</strong>
+                        <strong>Distance to Key Places</strong>
                         <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
-                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~10 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">NH-44 (Airport Road):</strong> Adjacent</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Devanahalli Town:</strong> ~5 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">KIAL Metro Station:</strong> ~15 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Aerospace SEZ:</strong> ~8 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">KIADB IT/ITES Park:</strong> ~10 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> ~25 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Ryan International School:</strong> ~5 mins</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Columbia Asia Hospital:</strong> ~15 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda International Airport:</strong> 10 km (about 15 min)</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">NH-44 and SH-104:</strong> Close by</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Leena Multispeciality Hospital:</strong> 3 km</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Akash International School:</strong> 5 km</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Devanahalli Town:</strong> about 5 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Aerospace SEZ:</strong> about 8 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Yelahanka Railway Station:</strong> 25 km (about 25 min)</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Kirloskar Business Park:</strong> 28 km</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> 30 km</li>
                         </ul>
                     </div>
-                    <div class="plan-note"><strong>Connected Living</strong><span>Direct NH-44 access keeps the airport, aerospace SEZ, IT parks and Devanahalli town centre within easy reach.</span></div>
-                    <div class="plan-note"><strong>Enquire for Details</strong><span>Get brochure + exact location details on request.</span></div>
+                    <div class="plan-note"><strong>Upcoming: Peripheral Ring Road</strong><span>The planned Peripheral Ring Road will further improve access to business hubs and the city centre, adding to NH-44's direct run into Hebbal.</span></div>
+                    <div class="plan-note"><strong>Everyday Needs Nearby</strong><span>The airport, upcoming IT parks, top schools and hospitals are all a short drive away.</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="reviews" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Sattva Vasanta Skye Reviews</h2>
+            <p class="section-subtitle">How buyers are rating the project so far.</p>
+
+            <div class="review-summary reveal">
+                <div class="review-score">
+                    <strong>4.1</strong>
+                    <div class="stars" aria-hidden="true">★★★★☆</div>
+                    <span>out of 5 on Google reviews</span>
+                </div>
+                <div>
+                    <p>Reviews of Sattva Vasanta Skye describe it as one of the better upcoming projects in North Bengaluru. Ratings mostly credit its location near the airport, the price plan and the range of amenities, and the Sattva Group's reputation has drawn positive feedback as well.</p>
+                    <p>Since the project is still under construction, early ratings reflect the launch offer rather than finished homes. Visiting the site and a completed Sattva project nearby is the best way to judge build quality.</p>
+                    <small>Rating as reported on third-party project listings; not independently verified by Luxura Habitat.</small>
                 </div>
             </div>
         </div>
@@ -1428,27 +1688,27 @@
     <section class="amenities" id="investment" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">The Investment Advantage</h2>
-            <p class="section-subtitle">Why Sattva Vasanta Skye is a compelling choice for home buyers and investors alike.</p>
+            <p class="section-subtitle">Why Sattva Vasanta Skye is worth a closer look for home buyers and investors alike.</p>
 
             <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Scale of a Full Township</strong>
                     <span>
-                        At 16 acres and 1,077 homes, <strong>Sattva Vasanta Skye</strong> is one of the larger Sattva Group launches on the Devanahalli corridor, giving buyers the amenity depth (4 clubhouses, 200+ facilities) and community scale that smaller, single-tower launches in the area can't match.
+                        At 16 acres and 1,077 homes, <strong>Sattva Vasanta Skye</strong> is one of the larger Sattva Group launches on the Devanahalli corridor, with 80% open space and 50+ amenities that smaller, single-tower launches in the area can't match.
                     </span>
                 </div>
 
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Broadest Unit Mix on the Corridor</strong>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Studio to 4 BHK in One Township</strong>
                     <span>
-                        With verified 1, 2, 2.5, 3 and 4 BHK configurations, <strong>Sattva Vasanta Skye</strong> caters to a wider range of buyers than most Devanahalli launches — from young professionals and first-time buyers to growing families needing a 4 BHK, all within one township.
+                        From 454 sq ft Studios suited to rental investors to 2,416 sq ft 4 BHKs for large families, <strong>Sattva Vasanta Skye</strong> covers a wider range of buyers than most Devanahalli launches.
                     </span>
                 </div>
 
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Early-Launch Entry Advantage</strong>
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Time to Plan Until May 2031</strong>
                     <span>
-                        As a new-launch project, <strong>Sattva Vasanta Skye</strong> offers early-bird pricing before construction-linked price escalations. Combined with direct NH-44 access and proximity to the Aerospace SEZ and KIADB IT/ITES Park, the location is well placed for both end-use and long-term rental demand.
+                        With possession expected in May 2031 and prices from ₹78 Lakhs onwards, buyers get a long construction-linked runway. Direct NH-44 access, the Aerospace SEZ and the upcoming Peripheral Ring Road support both end-use and long-term rental demand.
                     </span>
                 </div>
             </div>
@@ -1461,10 +1721,10 @@
             <p class="section-subtitle">One of Bengaluru's most established developers, with a growing Devanahalli portfolio.</p>
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">
-                    Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most trusted and established real estate developers, with a large portfolio of residential and commercial projects across the city. <strong>Sattva Vasanta Skye</strong> extends the developer's presence in the Devanahalli airport corridor, joining <strong>Sattva Aeropolis</strong>, <strong>Sattva City</strong> and <strong>Sattva Vasanta Cove</strong> as part of the group's growing footprint in North Bengaluru.
+                    Sattva Group (formerly Salarpuria Sattva Group), founded in 1986, is one of Bengaluru's most trusted real estate developers, with a large portfolio of residential and commercial projects across the city. <strong>Sattva Vasanta Skye</strong> extends the developer's presence in the Devanahalli airport corridor, joining <strong>Sattva Aeropolis</strong>, <strong>Sattva City</strong> and <strong>Sattva Vasanta Cove</strong> in North Bengaluru.
                 </p>
                 <p>
-                    At 16 acres and 1,077 homes, Vasanta Skye is the largest of the developer's Devanahalli launches by unit count, built around 4 clubhouses and 2 central parks with a full 1 to 4 BHK unit mix — distinct from the smaller, Studio/1 BHK-focused Sattva Vasanta Cove nearby on the same Bellary Road corridor. Buyers researching Sattva's Devanahalli projects should confirm which specific project — and which RERA number — applies to any floor plan or price quoted.
+                    At 16 acres and 1,077 homes, Vasanta Skye is the largest of these Devanahalli launches by unit count, with a full Studio to 4 BHK mix. Sattva Vasanta Cove, nearby on the same Bellary Road corridor, is a much smaller Studio and 1 BHK project with its own RERA number, so confirm which project any floor plan or price quote refers to.
                 </p>
             </div>
         </div>
@@ -1475,113 +1735,149 @@
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-subtitle">Common questions about Sattva Vasanta Skye, Devanahalli.</p>
 
-            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <div class="faq-list">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
-                        <span itemprop="name">What is Sattva Vasanta Skye and who is the developer?</span>
+                        <span>What is Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye is a new-launch integrated township by Sattva Group, spread across 16 acres off Bellary Road in Devanahalli, North Bengaluru. The township comprises 1,077 apartments across multiple towers, with approximately 80% open space, 4 grand clubhouses and 200+ lifestyle amenities.</p>
+                    <div class="faq-answer">
+                        <p>Sattva Vasanta Skye is a residential township by Sattva Group on Bellary Road in Kannamangala Village, Devanahalli, North Bengaluru. It covers 16 acres with 1,077 Studio, 1, 2, 3 and 4 BHK apartments in G+13 and G+14 towers, about 80% open space and 50+ amenities.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
-                        <span itemprop="name">Where exactly is Sattva Vasanta Skye located?</span>
+                        <span>Where exactly is Sattva Vasanta Skye located?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye is located on Bellary Road, Devanahalli, North Bengaluru, directly opposite the National Public School (NPS) and adjacent to NH-44, approximately 10 minutes from Kempegowda International Airport.</p>
+                    <div class="faq-answer">
+                        <p>The project is on Bellary Road, Kannamangala Village, Devanahalli, Karnataka 562110, opposite the National Public School and close to NH-44 and SH-104. Kempegowda International Airport is about 10 km (around 15 minutes) away.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
-                        <span itemprop="name">What apartment configurations and sizes are available?</span>
+                        <span>What configurations and sizes are available at Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye offers 1, 2, 2.5, 3 and 4 BHK apartments. Based on the developer's own pricing, specification and stamped tower floor-plan data: 1 BHK is approximately 707 sq ft, 2 BHK ranges 1,177-1,270 sq ft, 2.5 BHK ranges approximately 1,186-1,213 sq ft, 3 BHK ranges 1,483-1,937 sq ft (with select duplex units up to approximately 2,395 sq ft), and 4 BHK ranges 2,100-2,623 sq ft. Note that some of the project's own marketing copy mentions only "2, 3 & 4 BHK" — this omits the verified 1 BHK and 2.5 BHK options that appear in the pricing table and stamped tower plans.</p>
+                    <div class="faq-answer">
+                        <p>Per the developer's Block and Wing floor plans, super built-up areas are: Studio 454-461 sq ft, 1 BHK 731-1,133 sq ft, 2 BHK 1,160-1,338 sq ft, 3 BHK + 2T 1,509-1,570 sq ft, 3 BHK + 3T 1,856-1,955 sq ft and 4 BHK 2,253-2,416 sq ft.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
-                        <span itemprop="name">What is the price of Sattva Vasanta Skye apartments?</span>
+                        <span>What is the price of Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Approximate starting prices are: 1 BHK from Rs. 63 Lakhs, 2 BHK from Rs. 1.05 Cr, 3 BHK from Rs. 1.34 Cr, and 4 BHK from Rs. 1.99 Cr. Pricing for 2.5 BHK units is available on request. Prices are indicative and subject to change based on floor, unit type and phase — please enquire for the latest offer.</p>
+                    <div class="faq-answer">
+                        <p>Prices at Sattva Vasanta Skye start at Rs. 78 Lakhs onwards. The exact price for each configuration depends on the wing, floor and facing, so request the current price sheet for the unit you are considering. Registration, stamp duty and GST are extra.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
-                        <span itemprop="name">Is Sattva Vasanta Skye RERA registered?</span>
+                        <span>What is the carpet area of the homes?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes. Sattva Vasanta Skye is registered under RERA number PRM/KA/RERA/1250/303/PR/080525/007730.</p>
+                    <div class="faq-answer">
+                        <p>Carpet areas from the floor plans are about 291 sq ft for a Studio, 491-716 sq ft for a 1 BHK, 764-852 sq ft for a 2 BHK, 971-1,256 sq ft for a 3 BHK and 1,468-1,520 sq ft for a 4 BHK. Always confirm the carpet area written in your sale agreement.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
-                        <span itemprop="name">When is the possession date for Sattva Vasanta Skye?</span>
+                        <span>Is Sattva Vasanta Skye RERA approved?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye is a new-launch project currently under construction in a single phase. An exact possession date was not published in the source material we reviewed — please enquire directly for the current construction schedule and RERA-mandated completion date.</p>
+                    <div class="faq-answer">
+                        <p>Yes. Sattva Vasanta Skye is RERA approved under registration number PRM/KA/RERA/1250/303/PR/080525/007730. You can verify it on the Karnataka RERA website.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
-                        <span itemprop="name">What amenities does Sattva Vasanta Skye offer?</span>
+                        <span>When is the possession date of Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye offers 200+ amenities across 4 grand clubhouses, including a gymnasium, outdoor gym, tennis, badminton and basketball courts, jogging track, golf putting lawn, yoga lawn, meditation area, swimming pool, kids pool, amphitheatre, table tennis, billiards, indoor games, library, multipurpose hall, children's play area, playfield and 2 large central parks.</p>
+                    <div class="faq-answer">
+                        <p>The expected possession date is May 2031. The project is ongoing and under construction.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
-                        <span itemprop="name">How far is Sattva Vasanta Skye from Kempegowda International Airport?</span>
+                        <span>How many towers and floors does Sattva Vasanta Skye have?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye is approximately 10 minutes from Kempegowda International Airport (KIAL) and sits directly adjacent to NH-44 (Airport Road).</p>
+                    <div class="faq-answer">
+                        <p>The township has 11 residential towers of G+13 and G+14 floors, laid out as 16 wings across Blocks A, B and C, with 1,077 apartments in total.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
-                        <span itemprop="name">How many towers and homes does the township have?</span>
+                        <span>What amenities does Sattva Vasanta Skye offer?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Vasanta Skye is a 16-acre integrated township with 1,077 apartments across multiple towers, built around 2 large central parks and approximately 80% open, landscaped space.</p>
+                    <div class="faq-answer">
+                        <p>The project offers 50+ amenities, including a premium clubhouse, a large swimming pool and kids' pool, gym, tennis, badminton and basketball courts, a running track and playfield, yoga lawn, meditation area, children's play area, gazebos and landscaped gardens.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
-                        <span itemprop="name">Who is Sattva Group?</span>
+                        <span>What are the specifications at Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Group (formerly Salarpuria Sattva Group) is one of Bengaluru's most established real estate developers, with a growing portfolio in the Devanahalli airport corridor that includes Sattva Aeropolis, Sattva City and Sattva Vasanta Cove.</p>
+                    <div class="faq-answer">
+                        <p>Listed specifications include an RCC framed structure, marble flooring in all apartments, laminated flush doors, PVC-insulated copper wiring, chrome-plated bathroom fittings and a ceiling hook in every balcony for a swing chair.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
-                        <span itemprop="name">Is Sattva Vasanta Skye the same project as Sattva Vasanta Cove?</span>
+                        <span>How far is Sattva Vasanta Skye from the airport and major tech parks?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">No. Sattva Vasanta Skye and Sattva Vasanta Cove are two separate Sattva Group projects on the Devanahalli/Bellary Road corridor with different RERA registrations, land parcels and unit mixes — Vasanta Skye is a larger 16-acre, 1 to 4 BHK township, while Vasanta Cove is a smaller 1.3-acre Studio and 1 BHK development. Always confirm which project's floor plan and RERA number you are being quoted.</p>
+                    <div class="faq-answer">
+                        <p>Kempegowda International Airport is about 10 km (around 15 minutes) away. Kirloskar Business Park is about 28 km and Manyata Tech Park about 30 km away, and Yelahanka Railway Station is about 25 km.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
-                        <span itemprop="name">How do I book a site visit or request the brochure?</span>
+                        <span>Which schools and hospitals are near Sattva Vasanta Skye?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                    <div class="faq-answer">
+                        <p>Leena Multispeciality Hospital is about 3 km away and Akash International School about 5 km away. Devanahalli town, with more schools and clinics, is around 5 minutes by road.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span>What are the reviews and ratings of Sattva Vasanta Skye?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Third-party listings report a rating of 4.1 out of 5 on Google reviews, with buyers mostly praising its location, price plan and amenities. As the project is under construction, visit the site and a completed Sattva project to judge build quality.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span>Who is the developer of Sattva Vasanta Skye?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The developer is Sattva Group (formerly Salarpuria Sattva Group), founded in 1986 and one of Bengaluru's most established developers. Its Devanahalli portfolio also includes Sattva Aeropolis, Sattva City and Sattva Vasanta Cove.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span>Is Sattva Vasanta Skye the same project as Sattva Vasanta Cove?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. They are separate Sattva Group projects on the Bellary Road corridor with different RERA numbers. Vasanta Skye is a 16-acre, 1,077-home Studio to 4 BHK township, while Vasanta Cove is a much smaller Studio and 1 BHK development. Confirm which project any floor plan or price refers to.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span>How do I book a site visit or get the brochure?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Use the enquiry form, WhatsApp or call button on this page to get the brochure, full floor plans and current price list, or to schedule a site visit.</p>
                     </div>
                 </div>
             </div>
@@ -1597,7 +1893,7 @@
                 <div class="urgency-block">
                     <div class="urgency-title">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        New Launch — Limited Inventory
+                        Ongoing Project, Limited Inventory
                     </div>
                     <div class="urgency-text">Get Best Launch Pricing &middot; Book Site Visit Today</div>
                 </div>
@@ -1687,10 +1983,10 @@
         <p class="pfs-intro">Before you decide, read our independent research on the Devanahalli market.</p>
         <div class="insight-grid">
       <a href="/blog/sattva-vasanta-skye-devanahalli-price-layout-rera/" class="insight-card">
-        <img src="/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp" alt="Sattva Vasanta Skye: Price, Layout &amp; RERA Deep-Dive" loading="lazy">
+        <img src="/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp" alt="Sattva Vasanta Skye: Price, Floor Plans &amp; RERA Guide" loading="lazy">
         <div class="insight-card-body">
           <span class="insight-card-tag">Project Review · 8 Min</span>
-          <h4 class="insight-card-title">Sattva Vasanta Skye: Price, Layout &amp; RERA Deep-Dive</h4>
+          <h4 class="insight-card-title">Sattva Vasanta Skye: Price, Floor Plans &amp; RERA Guide</h4>
           <span class="insight-card-link">Read Article →</span>
         </div>
       </a>
@@ -1719,7 +2015,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h5>About Sattva Vasanta Skye</h5>
-                <p>A 16-acre, 1,077-home integrated township by Sattva Group off Bellary Road, Devanahalli — 1 to 4 BHK homes, 80% open space, 10 minutes from Bangalore Airport.</p>
+                <p>A 16-acre, 1,077-home township by Sattva Group on Bellary Road, Devanahalli: Studio to 4 BHK homes from ₹78 Lakhs, 80% open space, 10 km from Bangalore Airport. Possession May 2031.</p>
             </div>
 
             <div class="footer-section">
@@ -1735,7 +2031,7 @@
                 <p><a href="#about">About</a></p>
                 <p><a href="#amenities">Amenities</a></p>
                 <p><a href="#gallery">Gallery</a></p>
-                <p><a href="#units">Unit Plans</a></p>
+                <p><a href="#configurations">Price &amp; Floor Plans</a></p>
                 <p><a href="#location">Location</a></p>
                 <p><a href="/privacy.html">Privacy Policy</a></p>
             </div>
