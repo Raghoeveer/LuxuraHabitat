@@ -1306,6 +1306,219 @@ textarea.form-control {
   color: var(--accent-copper);
 }
 
+/* Google review cards (testimonials page) */
+.review-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  max-width: 880px;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-summary-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text-charcoal);
+}
+
+.review-summary-g {
+  width: 32px;
+  height: 32px;
+}
+
+.review-summary-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.review-summary-score {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-forest);
+}
+
+.review-summary-rating p {
+  margin: 2px 0 0;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.review-summary-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.review-summary-link {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--primary-forest);
+}
+
+.review-summary-link:hover {
+  color: var(--accent-copper);
+}
+
+.review-grid {
+  columns: 3 300px;
+  column-gap: var(--space-md);
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) var(--space-md) 1.25rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--accent-copper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.review-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.review-stars {
+  color: #F4B400;
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+}
+
+.review-stars--lg {
+  font-size: 1.4rem;
+}
+
+.review-g {
+  width: 20px;
+  height: 20px;
+}
+
+.review-quote {
+  position: relative;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  border: 0;
+}
+
+.review-quote p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-charcoal);
+}
+
+.review-quote p + p {
+  margin-top: var(--space-xs);
+}
+
+.review-translation {
+  padding-top: var(--space-xs);
+  border-top: 1px dashed var(--border-light);
+}
+
+.review-translation span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-light);
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.review-avatar--1 { background: var(--primary-forest); }
+.review-avatar--2 { background: var(--accent-copper); }
+.review-avatar--3 { background: #4F6F5B; }
+.review-avatar--4 { background: #8A6A4A; }
+
+.review-author-info cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fs-small);
+  color: var(--text-charcoal);
+}
+
+.review-date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.review-chip {
+  align-self: flex-start;
+  margin-top: var(--space-sm);
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(184, 115, 51, 0.1);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent-copper);
+}
+
+a.review-chip:hover {
+  background: var(--accent-copper);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .review-summary {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-md);
+  }
+
+  .review-summary-actions {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
 /* ============================================
    DEVELOPER CARDS
    ============================================ */

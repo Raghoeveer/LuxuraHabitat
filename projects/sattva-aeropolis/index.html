@@ -12,7 +12,7 @@
 
       // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
       // any per-button onclick can call stopPropagation and hide the click from
-      // GA4's own automatic outbound-click detection — this happened on the
+      // GA4's own automatic outbound-click detection, this happened on the
       // /projects/ card grid, where each WhatsApp button stops propagation so
       // it doesn't also trigger the parent card's own navigate-away handler).
       document.addEventListener('click', function (e) {
@@ -34,20 +34,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- High-Intent Meta Structure -->
-    <title>Sattva Aeropolis, Devanahalli: Studio &amp; 1 BHK | RERA</title>
-    <meta name="description" content="Explore Sattva Aeropolis Devanahalli near Bangalore Airport. Check latest price, floor plans, amenities, location advantages and exclusive offers.">
+    <title>Sattva Aeropolis Devanahalli: Studio, 1, 2 &amp; 3 BHK | RERA</title>
+    <meta name="description" content="Sattva Aeropolis near Bangalore Airport: 1, 2 &amp; 3 BHK (Phase 1) from ₹60 L and Studio/1 BHK (Phase 2) from ₹45.77 L. Sizes, RERA, possession, floor plans and 35 FAQs.">
     <meta name="author" content="Luxura Habitat">
 
     <!-- Open Graph Social Protocol -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxurahabitat.com/projects/sattva-aeropolis/">
-    <meta property="og:title" content="Sattva Aeropolis Devanahalli | Premium Airport-Corridor Living">
-    <meta property="og:description" content="Explore 1, 2 & 3 BHK smart apartments by Sattva Group near Kempegowda International Airport. Ready for site visits.">
+    <meta property="og:title" content="Sattva Aeropolis Devanahalli: Studio to 3 BHK Near Bangalore Airport">
+    <meta property="og:description" content="11-acre, 1,001-home Sattva township near Kempegowda Airport. Phase 1: 1-3 BHK from ₹60 L. Phase 2: Studio &amp; 1 BHK from ₹45.77 L. RERA registered.">
     <meta property="og:image" content="https://luxurahabitat.com/additional_websites/Aeropolis/imgi_8_cam.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sattva Aeropolis Phase 2 – Premium Residences & Amenities">
-    <meta name="twitter:description" content="Explore floor plans, master plan and gallery. Enquire now for offers on Sattva Aeropolis Phase 2.">
+    <meta name="twitter:title" content="Sattva Aeropolis Devanahalli: Studio to 3 BHK, RERA Registered">
+    <meta name="twitter:description" content="Configurations, sizes, prices, RERA numbers and possession for both phases of Sattva Aeropolis near Bangalore Airport.">
     <meta name="twitter:image" content="/additional_websites/Aeropolis/Aerial.webp">
 
     <!-- Robots Instructions -->
@@ -480,11 +480,21 @@
         .gallery-grid::-webkit-scrollbar { height: 10px; }
         .gallery-grid::-webkit-scrollbar-thumb { background: rgba(11,107,60,0.6); border-radius: 10px; }
         .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
-        .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; }
+        .gallery-item::after { content: 'Click to View'; pointer-events: none; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; }
         .gallery-item:hover { transform: scale(1.08); }
         .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
         .gallery-item:hover img { transform: scale(1.1); }
+
+        .gallery-item.is-plan::after { content: 'Get This Plan'; }
+        .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,107,60,0.9); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
+        .gallery-item.is-plan img { object-fit: contain; background: #fff; }
+        .config-phase { margin-top: 2.2rem; }
+        .config-phase h3 { color: var(--primary-dark); font-size: 1.2rem; font-weight: 900; margin-bottom: 0.3rem; }
+        .config-phase .phase-meta { color: var(--text-light); font-size: 0.9rem; font-weight: 600; }
+        .config-note { max-width: 900px; margin: 1.6rem auto 0; background: #fff; border-left: 5px solid var(--accent-warm); border-radius: 10px; padding: 1rem 1.2rem; color: var(--text-light); font-size: 0.92rem; line-height: 1.7; }
+        .tradeoff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        @media (max-width: 768px) { .tradeoff-grid { grid-template-columns: 1fr; } }
 
         .amenities { background: var(--bg-light); }
         .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
@@ -886,11 +896,12 @@
       "@context": "https://schema.org",
       "@type": "RealEstateListing",
       "name": "Sattva Aeropolis",
-      "description": "Studio, 1, 2 & 3 BHK smart apartments by Sattva Group near Kempegowda International Airport, Devanahalli, Bangalore.",
+      "description": "About 11-acre, 1,001-home apartment township by Salarpuria Sattva near Kempegowda International Airport, Devanahalli. Phase 1: 1, 2 & 3 BHK (666 to 1,012 sq ft) from ₹60 Lakh. Phase 2: Studio & 1 BHK (448 to 658 sq ft) from ₹45.77 Lakh.",
       "url": "https://luxurahabitat.com/projects/sattva-aeropolis/",
       "image": "https://luxurahabitat.com/images/projects-thumbs/sattva-aeropolis-thumb.webp",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Boovanahalli, Udayagiri, off NH-44 International Airport Road",
         "addressLocality": "Devanahalli",
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
@@ -898,7 +909,7 @@
       "about": {
         "@type": "HousingProject",
         "name": "Sattva Aeropolis",
-        "numberOfAccommodationUnits": "Studio, 1, 2 & 3 BHK Apartments",
+        "numberOfAccommodationUnits": 1001,
         "identifier": [
           {
             "@type": "PropertyValue",
@@ -919,9 +930,11 @@
         "email": "projectinfoindia@gmail.com"
       },
       "offers": {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         "priceCurrency": "INR",
-        "price": "4577000",
+        "lowPrice": "4577000",
+        "highPrice": "9000000",
+        "offerCount": "5",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://luxurahabitat.com/projects/sattva-aeropolis/"
@@ -930,130 +943,284 @@
     </script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is Sattva Aeropolis Devanahalli?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sattva Aeropolis is a premium high-rise residential project located in Devanahalli, near the Kempegowda International Airport."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where is the project located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It is strategically located on the Main NH-44 (International Airport Road) in Devanahalli, Bengaluru."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What types of apartments are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The project offers a variety of configurations, including Studio Apartments Devanahalli, 1 BHK, 2 BHK, and 3 BHK units."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is it a good investment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, investing in Apartments Near Bangalore Airport offers excellent capital appreciation and high rental yields due to rapid infrastructure development."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Who is the developer of this project?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The project is developed by the renowned Sattva Group, known for its high-quality residential and commercial developments."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Are there 1 BHK Apartments Devanahalli available in this project?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, there are well-designed 1 BHK Apartments Devanahalli perfect for young professionals and small families."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How can I check the Sattva Aeropolis Floor Plan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can view the detailed floor plans, including the Sattva Aeropolis Floor Plan for Studio and 1 BHK layouts, in the Unit Plans section of this website."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the starting Sattva Aeropolis Price?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The indicative starting Sattva Aeropolis Price for Studio apartments is ~₹45.77 Lakhs*. Please enquire for exact and updated pricing."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Are there New Launch Apartments Devanahalli in Phase 2?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Phase 2 features New Launch Apartments Devanahalli with modern amenities and lifestyle-focused design."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What amenities are provided?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Residents can enjoy a range of amenities including a swimming pool, gymnasium, kids' play area, multipurpose hall, and lush green landscaped gardens."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is the project RERA approved?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Phase 2 is RERA approved with Registration No: PRM/KA/RERA/1250/303/PR/250925/008119."
-        }
-      }, {
-        "@type": "Question",
-        "name": "When is the expected possession date?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The expected possession date for Phase 2 is October 2028, as per RERA guidelines."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Why should I buy Apartments Near Airport Road?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Living in Apartments Near Airport Road offers excellent connectivity to the rest of the city, proximity to employment hubs, and potential for high returns on investment."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Does the project have good connectivity?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Being on NH-44 ensures seamless connectivity to the airport, IT parks, and major parts of Bangalore."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I book a site visit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can easily book a site visit or request more details by filling out the enquiry form or contacting us directly via phone or WhatsApp."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Are there Studio Apartments Devanahalli available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Sattva Aeropolis features premium Studio Apartments Devanahalli ideal for investment and comfortable living."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the total land area of Phase 2?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Phase 2 covers approximately 1.72 to 2.4 acres within the larger 10.32-acre township."
-        }
-      }]
+      "@type": "Question",
+      "name": "What is Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sattva Aeropolis is an apartment township by Salarpuria Sattva (Sattva Group) at Boovanahalli, near Kempegowda International Airport in Devanahalli, North Bangalore. It spreads across about 11 acres with roughly 1,001 homes in 11 towers of ground plus 11 floors, and is being built in two RERA-registered phases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the developer of Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The project is developed by Salarpuria Sattva, now branded Sattva Group, one of Bengaluru's larger developers, active since 1986. The promoter entity on the RERA filing is Trinayani Realtors Pvt. Ltd."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big is Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full township covers about 11 acres and holds roughly 1,001 apartments across 11 towers, each ground plus 11 floors. Phase 2 alone accounts for 554 of those homes on about 1.72 to 2.4 acres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Phase 1 and Phase 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phase 1 (RERA PRM/KA/RERA/1250/303/PR/110522/004869) offers 1, 2 and 3 BHK homes from about ₹60 Lakh, built with MIVAN formwork, with a RERA completion date of 31 July 2026. Phase 2 (RERA PRM/KA/RERA/1250/303/PR/250925/008119) is the newer launch with Studio and 1 BHK homes from about ₹45.77 Lakh and a RERA possession date of October 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sattva Aeropolis a gated community with amenities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is a planned gated township with a clubhouse, swimming pool, gymnasium, outdoor gym, yoga zone, library, indoor games, multipurpose hall, kids' play area and sports courts shared across the community."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How dense is Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly 1,001 homes on about 11 acres works out to around 91 homes per acre. That is a busy, high-density community. It suits buyers who like an active, amenity-led environment more than those looking for low-density, boutique living."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What configurations are available at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phase 1 offers 1 BHK (666 to 672 sq ft), 2 BHK (906 to 943 sq ft) and 3 BHK (1,012 sq ft). Phase 2 offers Studio apartments (448 to 500 sq ft) and 1 BHK (550 to 658 sq ft)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the starting price at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indicative starting prices are about ₹45.77 Lakh for a Phase 2 Studio, ₹58.50 Lakh for a Phase 2 1 BHK, ₹60 Lakh for a Phase 1 1 BHK, ₹81 Lakh for a 2 BHK and ₹90 Lakh for a 3 BHK. Prices exclude GST, stamp duty, registration and other charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price of a 1 BHK at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Phase 1 1 BHK of 666 to 672 sq ft starts from about ₹60 Lakh. A smaller Phase 2 1 BHK of 550 to 658 sq ft starts from about ₹58.50 Lakh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price of a 2 BHK at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2 BHK homes are in Phase 1, sized 906 to 943 sq ft, from about ₹81 Lakh before taxes and charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price and size of the 3 BHK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Phase 1 3 BHK is 1,012 sq ft and starts from about ₹90 Lakh. The builder's floor plan shows three bedrooms (about 10'0\" x 11'0\", 11'0\" x 10'0\" and 9'0\" x 8'0\"), two toilets, a living room, a separate dining area, a kitchen and a balcony."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are studio apartments available at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in Phase 2. Studios range from about 448 to 500 sq ft and start at about ₹45.77 Lakh, which makes them the lowest-ticket way into a branded project on the airport corridor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price per sq ft at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On the stated Phase 1 sizes, the starting prices work out to roughly ₹8,600 to ₹9,000 per sq ft. Confirm whether the quoted area is carpet or super built-up, because that changes the real rate considerably on compact homes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What costs are added on top of the base price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Expect GST on the under-construction value, stamp duty with surcharge and cess (about 5.6% in Karnataka), a 1% registration fee, plus floor-rise premiums, car parking, clubhouse, infrastructure and maintenance deposits. Ask for a stamped, itemised cost sheet before paying a booking amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sattva Aeropolis RERA registered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Phase 1 is registered under PRM/KA/RERA/1250/303/PR/110522/004869 and Phase 2 under PRM/KA/RERA/1250/303/PR/250925/008119. Verify both on the Karnataka RERA portal before booking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is possession for Phase 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phase 1 carried a RERA completion date of 31 July 2026. That date has now passed, so ask for the current tower-wise handover schedule, the Occupancy Certificate status and whether any RERA extension has been filed before you commit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is possession for Phase 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phase 2 has a RERA possession date of October 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What construction technology is used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phase 1 is built with MIVAN aluminium formwork, which casts walls and slabs together in concrete. It gives consistent finishes and good carpet efficiency, but internal walls are structural, so you cannot easily move or remove them later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will all amenities be ready when I get possession?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. On a multi-tower, two-phase project, towers and shared amenities are often completed in sequence. Ask exactly which amenities will be operational at your handover and which come later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where exactly is Sattva Aeropolis located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sattva Aeropolis is at Boovanahalli, Udayagiri, off NH-44 (International Airport Road) in Devanahalli, next to the KIADB Aerospace Park belt in North Bangalore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Sattva Aeropolis from Bangalore airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is about 15 minutes by road from Kempegowda International Airport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is it from the KIADB Aerospace Park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The project sits beside the KIADB Aerospace Park belt, about 10 minutes from its main campuses. The park hosts major aerospace employers including Boeing and RTX, and a new Wistron plant is expected to add about 3,000 jobs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there metro connectivity near Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Namma Metro Blue Line to the airport is under construction along the Airport Road corridor. Check the nearest planned station and its expected opening date, since metro timelines in Bengaluru often slip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is the commute to Hebbal, Manyata Tech Park or Whitefield?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hebbal is roughly 30 minutes and Manyata Tech Park about 35 minutes off-peak. Whitefield, Outer Ring Road and Electronic City are long drives, so the project fits people working in the north far better than those commuting east or south."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What jobs are near Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around 50,000 professionals are estimated to work within about 10 km of the airport, across the aerospace park, airport operations, logistics, hardware parks and IT campuses at Devanahalli Business Park."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sattva Aeropolis a good investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It has a strong case for airport-corridor investors: an established developer, a sub-₹1 Cr entry and one of Bengaluru's fastest-growing employment belts. Land in the Devanahalli belt has moved from about ₹4,500 per sq ft in 2024 to roughly ₹7,000 to ₹9,600 in 2026. The trade-offs are high density and a far-north location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What rental yield can I expect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Airport-corridor apartments currently yield about 3.2% to 3.8% gross. On a ₹60 Lakh 1 BHK that implies roughly ₹16,000 to ₹19,000 a month, and on an ₹81 Lakh 2 BHK roughly ₹21,500 to ₹25,500 a month, before maintenance and vacancy. These are estimates, not quotes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Sattva Aeropolis pricing compare with other Devanahalli apartments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Newer Devanahalli apartment launches are quoting about ₹11,000 to ₹13,000 per sq ft, so Aeropolis Phase 1 at roughly ₹8,600 to ₹9,000 per sq ft on stated sizes is towards the value end of the market. Confirm the area basis before comparing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should buy at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Airport, aerospace and logistics professionals, first-time buyers who want a branded home under ₹1 Cr, and investors targeting the airport-corridor rental pool. Phase 1 suits those wanting a nearer-term home; Phase 2 suits buyers who want the lowest ticket size and can wait until 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should avoid Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buyers who want low-density, boutique living, or who commute daily to Whitefield, Outer Ring Road or Electronic City, are likely to be better served elsewhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What will monthly maintenance cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The developer has not published a maintenance rate. On a 1,001-home community, ask for the projected per-sq-ft charge, the facility management company and how the handover to the residents' association will work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I check before booking at Sattva Aeropolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verify both RERA numbers, confirm your specific tower's schedule and OC status, inspect MIVAN finish quality on a sample floor, get the carpet area against the built-up figure, check parking allocation, get a fully itemised cost sheet and test your commute at peak hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Sattva Aeropolis compare with Sattva Vasanta Cove?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are Sattva projects in the airport corridor. Aeropolis is larger, has a nearer possession and offers up to 3 BHK, while Vasanta Cove has larger Studio and 1 BHK sizes. See our detailed Vasanta Cove vs Aeropolis comparison for the numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book a site visit or get the price sheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fill in the enquiry form on this page or call or WhatsApp +91 84383 44093. We will share the latest price sheet, floor plans and available inventory and arrange a site visit."
+      }
     }
+  ]
+}
     </script>
     <script type="application/ld+json">
 {
@@ -1094,7 +1261,7 @@
         
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
             <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
-            <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2">
+            <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis">
             <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
             <input type="text" name="name" required placeholder="Full Name" />
@@ -1109,7 +1276,7 @@
             <h3>Direct Contact</h3>
             <div class="quick-contact">
                 <a href="tel:+918438344093"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> +91 8438 344 093</a>
-                <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20Phase%202%20and%20available%20offers"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
+                <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20and%20available%20offers"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
 <a href="mailto:projectinfoindia@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</a>
             </div>
         </div>
@@ -1120,7 +1287,7 @@
     </div>
 
     <nav>
-        <a href="#" class="project-brand" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <a href="#" class="project-brand" aria-label="Luxura Habitat, back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
             <span class="partner-caption">Real Estate Advisory</span>
@@ -1132,14 +1299,13 @@
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero">Overview</a></li>
-            <li><a href="#about">About Phase 2</a></li>
-            <li><a href="#highlights">Project Highlights</a></li>
-
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#pricing">Configurations &amp; Price</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#units">Unit Plans</a></li>
-            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
+            <li><a href="#faq">FAQs</a></li>
             <li><a href="#form">Enquire</a></li>
         </ul>
 
@@ -1148,7 +1314,7 @@
                 <div class="phone-number" style="font-size: 1rem;">Call: 8438344093</div>
             </a>
 
-            <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20Phase%202%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
+            <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20and%20available%20offers" class="whatsapp-btn" target="_blank" rel="noopener">
                 <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -1170,15 +1336,14 @@
         
         <div class="hero-container" style="position: relative; z-index: 2;">
             <div class="hero-content reveal">
-                <a href="#" class="hero-logo" aria-label="Sattva Aeropolis Phase 2 home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-<img src="/additional_websites/Aeropolis/Sattva%20Logo.png" alt="Sattva Aeropolis Phase 2">
+                <a href="#" class="hero-logo" aria-label="Sattva Aeropolis home" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+<img src="/additional_websites/Aeropolis/Sattva%20Logo.png" alt="Sattva Aeropolis by Sattva Group">
                 </a>
 
-                <div class="hero-badge">Phase 2</div>
-                <h1>Sattva Aeropolis, Devanahalli — Studio &amp; 1 BHK Smart Apartments Near the Airport</h1>
+                <div class="hero-badge">Phase 1 &amp; Phase 2 &middot; RERA Registered</div>
+                <h1>Sattva Aeropolis Devanahalli: Studio, 1, 2 &amp; 3 BHK Apartments Near Bangalore Airport</h1>
                 <p class="hero-intro">
-                    Discover premium flats for sale in Devanahalli with a lifestyle-first design. Explore the master plan, amenities, unit plans and gallery for these modern apartments near Bangalore International Airport.
-                    Enquire for availability and special offers.
+                    An 11-acre, 1,001-home Sattva township at Boovanahalli, about 15 minutes from Kempegowda International Airport and beside the KIADB Aerospace Park. Phase 1 offers 1, 2 &amp; 3 BHK homes built with MIVAN technology; Phase 2 adds compact Studio and 1 BHK homes.
                 </p>
 
                 <div class="hero-info-boxes">
@@ -1186,34 +1351,34 @@
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
-                                <div class="info-box-title">Modern Living</div>
-                                <div class="info-box-subtitle">Phase 2</div>
+                                <div class="info-box-title">11 Acres &middot; 1,001 Homes</div>
+                                <div class="info-box-subtitle">11 Towers, G+11</div>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
                             <div>
-                                <div class="info-box-title">Lifestyle Amenities</div>
-                                <div class="info-box-subtitle">Wellness & Fun</div>
+                                <div class="info-box-title">15 Min to Airport</div>
+                                <div class="info-box-subtitle">Next to KIADB Aerospace Park</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="info-box price-box">
-                        <span class="price-copy">Enquire for</span>
-<span class="price-line"><span class="new-price">Phase 1 Units : 1/2 BHK</span></span>
-                        <span class="offer-note">Subject to availability</span>
+                        <span class="price-copy">Starting from</span>
+<span class="price-line"><span class="new-price">₹45.77 L* Studio &middot; ₹60 L* 1 BHK &middot; ₹81 L* 2 BHK &middot; ₹90 L* 3 BHK</span></span>
+                        <span class="offer-note">*Indicative, excl. GST &amp; registration. Subject to availability</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-form-section reveal" style="transition-delay:120ms;">
-                <h3 class="hero-form-title">Get Phase 2 Details</h3>
+                <h3 class="hero-form-title">Get Price Sheet &amp; Floor Plans</h3>
                 <span class="hero-form-subtitle">Share your details and receive brochure + offers on WhatsApp.</span>
 
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
                     <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
-                    <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis">
                     <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
                     <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
                     <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
@@ -1230,7 +1395,7 @@
     <div class="trust-bar">
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Near Bangalore Airport</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Studio & 1 BHK Homes</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Studio to 3 BHK Homes</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Sattva Group</div>
     </div>
 
@@ -1242,43 +1407,41 @@
 
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <h3>Designed for a modern, elevated lifestyle</h3>
+                    <h3>A large, amenity-led township on the airport corridor</h3>
                     <p>
-                        Salarpuria Aeropolis Devanahalli brings together comfort, community, and wellness. 
-                        Developed by the renowned Sattva Group Devanahalli, these residences offer landscaped spaces, fitness zones, and lifestyle amenities—built to support your everyday routines.
+                        Sattva Aeropolis (also searched as Salarpuria Aeropolis) is an apartment township by Salarpuria Sattva at Boovanahalli, Udayagiri, off NH-44 in Devanahalli. It covers about 11 acres with roughly 1,001 homes in 11 towers of ground plus 11 floors, and sits beside the KIADB Aerospace Park, about 15 minutes from Kempegowda International Airport.
                     </p>
                     <p>
-                        Explore the master plan, unit plans, and gallery below to understand the layout and amenities available.
-                        Enquire to receive brochures and current offer details.
+                        The project is being delivered in two RERA-registered phases. <strong>Phase 1</strong> offers efficient 1 BHK (666 to 672 sq ft), 2 BHK (906 to 943 sq ft) and 3 BHK (1,012 sq ft) homes built with MIVAN formwork. <strong>Phase 2</strong>, with 554 homes, adds compact Studio (448 to 500 sq ft) and 1 BHK (550 to 658 sq ft) units for first-time buyers and rental investors. For an independent take on pricing, risks and fit, read our <a href="/blog/sattva-aeropolis-review/" style="color:var(--accent-green);font-weight:700;">Sattva Aeropolis review</a>.
                     </p>
 
                     <div class="features-list">
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
-                                <h3>Premium Residences</h3>
-                                <p>Phase 2 living with lifestyle-first design.</p>
+                                <h3>1,001 Homes, 11 Towers</h3>
+                                <p>G+11 towers across about 11 acres.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
                             <div>
-                                <h3>Green & Wellness</h3>
-                                <p>Spaces for calm, fitness, and recreation.</p>
+                                <h3>Studio to 3 BHK</h3>
+                                <p>448 to 1,012 sq ft across two phases.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
                             <div>
-                                <h3>Sports & Fun</h3>
-                                <p>Indoor & outdoor activity zones.</p>
+                                <h3>Airport in 15 Minutes</h3>
+                                <p>Beside the KIADB Aerospace Park.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
                             <div>
-                                <h3>Community Living</h3>
-                                <p>Planned amenities and community comfort.</p>
+                                <h3>MIVAN Construction</h3>
+                                <p>Phase 1 built with aluminium formwork.</p>
                             </div>
                         </div>
                     </div>
@@ -1294,10 +1457,10 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Project Highlights</h2>
-            <p class="section-subtitle">Key details for Phase 2—ready for quick comparison and easy discovery.</p>
+            <p class="section-subtitle">Key facts for both phases of Sattva Aeropolis, ready for quick comparison.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
-                <table class="highlights-table" aria-label="Sattva Aeropolis Phase 2 project highlights">
+                <table class="highlights-table" aria-label="Sattva Aeropolis project highlights">
                     <thead>
                         <tr>
                             <th>Attribute</th>
@@ -1305,200 +1468,167 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Developer</strong></td><td>Sattva Group (Promoter: Trinayani Realtors Pvt. Ltd.)</td></tr>
-                        <tr><td><strong>Location</strong></td><td>On Main NH-44 (International Airport Road), Boovanahalli, Devanahalli, Bengaluru</td></tr>
-                        <tr><td><strong>Phase 2 Land Area</strong></td><td>Approximately 1.72 to 2.4 Acres (within the larger 10.32-acre township)</td></tr>
-                        <tr><td><strong>Total Units (Phase 2)</strong></td><td>554 Apartments</td></tr>
-                        <tr><td><strong>Building Structure</strong></td><td>Basement + Ground + 11 Floors (G+11)</td></tr>
-                        <tr><td><strong>Project Status</strong></td><td>New Launch / Under Construction</td></tr>
-                        <tr><td><strong>Expected Possession</strong></td><td>October 2028 (As per RERA)</td></tr>
-                        <tr><td><strong>Phase 2 RERA Number</strong></td><td>PRM/KA/RERA/1250/303/PR/250925/008119</td></tr>
+                        <tr><td><strong>Developer</strong></td><td>Salarpuria Sattva / Sattva Group (Promoter: Trinayani Realtors Pvt. Ltd.)</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Boovanahalli, Udayagiri, off NH-44 (International Airport Road), Devanahalli, Bengaluru</td></tr>
+                        <tr><td><strong>Total Land Area</strong></td><td>About 11 acres</td></tr>
+                        <tr><td><strong>Total Homes</strong></td><td>About 1,001 apartments across both phases (Phase 2: 554 homes on about 1.72 to 2.4 acres)</td></tr>
+                        <tr><td><strong>Towers &amp; Structure</strong></td><td>11 towers, Basement + Ground + 11 floors (G+11)</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>Phase 1: 1, 2 &amp; 3 BHK &middot; Phase 2: Studio &amp; 1 BHK</td></tr>
+                        <tr><td><strong>Size Range</strong></td><td>448 sq ft (Studio) to 1,012 sq ft (3 BHK)</td></tr>
+                        <tr><td><strong>Price Range</strong></td><td>From about ₹45.77 Lakh (Studio) to ₹90 Lakh (3 BHK)*</td></tr>
+                        <tr><td><strong>Construction Technology</strong></td><td>MIVAN aluminium formwork (Phase 1)</td></tr>
+                        <tr><td><strong>Phase 1 RERA &amp; Completion</strong></td><td>PRM/KA/RERA/1250/303/PR/110522/004869 &middot; RERA completion date 31 July 2026 (confirm tower-wise handover status)</td></tr>
+                        <tr><td><strong>Phase 2 RERA &amp; Possession</strong></td><td>PRM/KA/RERA/1250/303/PR/250925/008119 &middot; October 2028</td></tr>
+                        <tr><td><strong>Density</strong></td><td>About 91 homes per acre</td></tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="pricing" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Sattva Aeropolis Configurations, Sizes &amp; Price</h2>
+            <p class="section-subtitle">Every configuration across both phases, with indicative starting prices. Click any floor plan in the gallery to receive the full plan set and price sheet.</p>
+
+            <div class="config-phase reveal">
+                <h3>Phase 1: 1, 2 &amp; 3 BHK</h3>
+                <div class="phase-meta">RERA PRM/KA/RERA/1250/303/PR/110522/004869 &middot; MIVAN construction &middot; RERA completion date 31 July 2026</div>
+                <div class="highlights-table-wrap" role="region" aria-label="Phase 1 configurations">
+                    <table class="highlights-table">
+                        <thead><tr><th>Configuration</th><th>Size (sq ft)</th><th>Starting Price*</th><th>Approx. Rate on Stated Size</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>1 BHK</strong></td><td>666 to 672</td><td>₹60 Lakh</td><td>~₹8,900 to 9,000 / sq ft</td></tr>
+                            <tr><td><strong>2 BHK</strong></td><td>906 to 943</td><td>₹81 Lakh</td><td>~₹8,600 to 8,950 / sq ft</td></tr>
+                            <tr><td><strong>3 BHK</strong> (2 toilets)</td><td>1,012</td><td>₹90 Lakh</td><td>~₹8,900 / sq ft</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="config-phase reveal">
+                <h3>Phase 2: Studio &amp; 1 BHK</h3>
+                <div class="phase-meta">RERA PRM/KA/RERA/1250/303/PR/250925/008119 &middot; 554 homes &middot; Possession October 2028</div>
+                <div class="highlights-table-wrap" role="region" aria-label="Phase 2 configurations">
+                    <table class="highlights-table">
+                        <thead><tr><th>Configuration</th><th>Size (sq ft)</th><th>Starting Price*</th><th>Approx. Rate on Stated Size</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Studio</strong></td><td>448 to 500</td><td>₹45.77 Lakh</td><td>~₹9,150 to 10,200 / sq ft</td></tr>
+                            <tr><td><strong>1 BHK</strong></td><td>550 to 658</td><td>₹58.50 Lakh</td><td>~₹8,900 to 10,600 / sq ft</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="config-note">
+                *Indicative starting prices, before GST, stamp duty (about 5.6% with surcharge and cess), 1% registration, floor-rise, parking, clubhouse and maintenance charges. Rates per sq ft are simple division on the stated sizes; confirm whether each size is carpet or super built-up area. Phase 1's RERA completion date of 31 July 2026 has passed, so ask for your tower's current handover and Occupancy Certificate status before booking.
+            </div>
+
+            <div class="plan-grid" style="margin-top: 2.5rem;">
+                <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto;">
+                    <img src="/additional_websites/Aeropolis/sattva-aeropolis-master-plan.webp" alt="Sattva Aeropolis master plan" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note"><strong>Two Phases, One Township</strong><span>About 1,001 homes in 11 G+11 towers sharing one clubhouse and amenity network across about 11 acres.</span></div>
+                    <div class="plan-note"><strong>Efficient, Compact Layouts</strong><span>MIVAN-built Phase 1 homes maximise carpet efficiency; walls are structural, so plan interiors around the given layout.</span></div>
+                    <div class="plan-note"><strong>3 BHK Under ₹1 Cr</strong><span>The 1,012 sq ft 3 BHK has three bedrooms, two toilets, separate dining and a balcony, from about ₹90 Lakh.</span></div>
+                    <div class="plan-note"><strong>Get the Full Plan Set</strong><span>Click the master plan to receive every unit plan, the tower-wise availability and the current price sheet.</span></div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="amenities" id="amenities">
         <div class="container">
-            <h2 class="section-title">World-Class Amenities & Clubhouse Specifications</h2>
-            <p class="section-subtitle">Key lifestyle amenities from the Phase 2 experience.</p>
+            <h2 class="section-title">Amenities &amp; Clubhouse</h2>
+            <p class="section-subtitle">Shared lifestyle amenities across the Sattva Aeropolis township.</p>
 
             <div class="amenity-grid">
                 <div class="amenity-card reveal">
-                    <h3>Leisure & Social</h3>
+                    <h3>Leisure &amp; Social</h3>
                     <ul class="amenity-list">
+                        <li>Clubhouse</li>
                         <li>Multipurpose Hall</li>
                         <li>Library</li>
                         <li>Indoor Games</li>
-                        <li>Yoga / Meditation</li>
                         <li>Community Spaces</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:120ms;">
-                    <h3>Kids & Play</h3>
+                    <h3>Kids &amp; Family</h3>
                     <ul class="amenity-list">
-                        <li>Kids Play Area</li>
+                        <li>Kids' Play Area</li>
                         <li>Safe Play Zones</li>
-                        <li>Outdoor Recreation</li>
-                        <li>Family-friendly Spaces</li>
-                        <li>Community Living</li>
+                        <li>Landscaped Walkways</li>
+                        <li>Nala Bridge Promenade</li>
+                        <li>Family Seating Areas</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:180ms;">
-                    <h3>Fitness & Wellness</h3>
+                    <h3>Fitness &amp; Wellness</h3>
                     <ul class="amenity-list">
-                        <li>Gymnasium</li>
-                        <li>Yoga / Wellness Zone</li>
-                        <li>Outdoor Gym</li>
-                        <li>Jogging / Fitness</li>
                         <li>Swimming Pool</li>
+                        <li>Gymnasium</li>
+                        <li>Outdoor Gym</li>
+                        <li>Yoga / Meditation Deck</li>
+                        <li>Jogging Track</li>
+                        <li>Foot Reflexology Path</li>
                     </ul>
                 </div>
 
                 <div class="amenity-card reveal" style="transition-delay:240ms;">
-                    <h3>Sporting Options</h3>
+                    <h3>Sports</h3>
                     <ul class="amenity-list">
-                        <li>Basketball</li>
+                        <li>Tennis Court</li>
+                        <li>Half Basketball Court</li>
                         <li>Cricket / Play Field</li>
-                        <li>Badminton / Indoor Games</li>
-                        <li>Sports Court</li>
-                        <li>Recreational Areas</li>
+                        <li>Badminton</li>
+                        <li>Multi-sport Court</li>
+                        <li>Recreational Lawns</li>
                     </ul>
                 </div>
             </div>
-
-            <div style="margin-top:3rem;" class="gallery-grid-wrapper">
-                <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('sattva-aeropolis-amenities.webp')"><img src="/additional_websites/Aeropolis/sattva-aeropolis-amenities.webp" alt="Sattva Aeropolis Amenities"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('Gymnasium-Aeropolis.webp')"><img src="/additional_websites/Aeropolis/Gymnasium-Aeropolis.webp" alt="Gymnasium"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('outdoor-gym-amenities.webp')"><img src="/additional_websites/Aeropolis/outdoor-gym-amenities.webp" alt="Outdoor gym amenities"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('yoga-amenities.webp')"><img src="/additional_websites/Aeropolis/yoga-amenities.webp" alt="Yoga amenities"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('08.Kids-Play-Area.webp')"><img src="/additional_websites/Aeropolis/08.Kids-Play-Area.webp" alt="Sattva Aeropolis children's play area amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('Multipurpose-Hall-Exotic.jpg')"><img src="/additional_websites/Aeropolis/Multipurpose-Hall-Exotic.jpg" alt="Multipurpose hall"></div>
-                </div>
-            </div>
+            <p class="config-note" style="text-align:center;">On a phased, multi-tower project, amenities are often completed in sequence. Ask which ones will be ready at your handover.</p>
         </div>
     </section>
 
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Gallery</h2>
-            <p class="section-subtitle">Explore the Aeropolis Phase 2 visuals.</p>
+            <p class="section-subtitle">Exterior renders, sample interiors, amenities and floor plans in one place. Click a render to enlarge it, or a floor plan to receive the full plan set.</p>
 
             <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Aerial.webp" alt="Sattva Aeropolis Devanahalli aerial view of towers"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/14.Aerial-Night-View_edited.webp" alt="Aerial night view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/09.Living.webp" alt="Living"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Tower-A.webp" alt="Tower A"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/03.Nala-Bridge.webp" alt="Nala bridge"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/sattva-aeropolis-amenities.webp" alt="Sattva Aeropolis Amenities"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Gymnasium-Aeropolis.webp" alt="Gymnasium"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/08.Kids-Play-Area.webp" alt="Sattva Aeropolis children's play area amenity"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Multipurpose-Hall-Exotic.jpg" alt="Multipurpose hall"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/10.GBR_.webp" alt="GBR"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/12.MBR_.webp" alt="MBR"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/outdoor-gym-amenities.webp" alt="Outdoor gym amenities"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Library_wm.webp" alt="Library"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Indoor-Games_WM_300dpi_a.webp" alt="Indoor games"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Gymnasium-Aeropolis.webp" alt="Gymnasium duplicate"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/building-gif.png" alt="Sattva Aeropolis building silhouette icon"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="plan" id="units">
-        <div class="container">
-            <h2 class="section-title">Unit Plans</h2>
-            <p class="section-subtitle">Explore Sattva Aeropolis Phase 2 Plans</p>
-
-            <div class="plan-grid" style="margin-top: 1.5rem;">
-                <div class="plan-image reveal" style="max-width: 520px; margin: 0 auto;">
-                    <img src="/additional_websites/Aeropolis/sattva-aeropolis-master-plan.webp" alt="Sattva Aeropolis Master Plan" onclick="openLightboxFromSrc('sattva-aeropolis-master-plan.webp')">
-                </div>
-
-                <div class="plan-notes reveal" style="transition-delay:160ms;">
-                    <div class="plan-note">
-                        <strong>Phase 2 Community</strong>
-                        <span>Designed for an integrated, lifestyle-focused living experience.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Planned Amenities</strong>
-                        <span>Fitness, recreation and social spaces curated for every age group.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Thoughtful Layout</strong>
-                        <span>Experience day-to-day convenience with an activity-ready environment.</span>
-                    </div>
-                    <div class="plan-note">
-                        <strong>Enquire for Details</strong>
-                        <span>Get brochure, availability and offer information instantly.</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-grid" style="max-height: 420px; margin-top: 1.8rem;">
-
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/sattva-aeropolis-master-plan.webp" alt="Sattva Aeropolis Master Plan"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/sattva-aeropolis-floor-plan.webp" alt="Sattva Aeropolis Floor Plan"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-2AEROPOLIS.webp" alt="Studio Type 2"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-3AEROPOLIS.webp" alt="Studio Type 3"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-4AEROPOLIS.webp" alt="Studio Type 4"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-5AEROPOLIS.webp" alt="Studio Type 5"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-6AEROPOLIS.webp" alt="Studio Type 6"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-7AEROPOLIS.webp" alt="Studio Type 7"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-8AEROPOLIS.webp" alt="Studio Type 8"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-9AEROPOLIS.webp" alt="Studio Type 9"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-10AEROPOLIS.webp" alt="Studio Type 10"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-11AEROPOLIS.webp" alt="Studio Type 11"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-1BHK-1T-AEROPOLIS.webp" alt="1BHK 1T"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-1BHK-1T-TYPE-2AEROPOLIS.webp" alt="1BHK Type 2"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-1BHK-1T-TYPE-3AEROPOLIS.webp" alt="1BHK Type 3"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/UNIT-PLAN-1BHK-1T-TYPE-4AEROPOLIS.webp" alt="1BHK Type 4"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Block-A-Typical-Plan.webp" alt="Block A typical"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Block-E-Typical.webp" alt="Block E typical"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Block-E-Typical_rotate.webp" alt="Block E rotated typical"></div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Sattva Aeropolis Devanahalli Pricing & Configuration Details</h2>
-            <p class="section-subtitle">Estimated pricing for key unit types (indicative). Actual prices subject to updates.</p>
-
-            <div class="pricing-table-wrap">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Apartment Type</th>
-                            <th>Area Range</th>
-                            <th>Starting Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Studio Apartments</td>
-                            <td>448 – 500 sq. ft.</td>
-                            <td>~₹45.77 Lakhs*</td>
-                        </tr>
-                        <tr>
-                            <td>1 BHK Apartments</td>
-                            <td>550 – 658 sq. ft.</td>
-                            <td>~₹58.50 Lakhs*</td>
-                        </tr>
-                        <tr>
-                            <td>3 BHK Apartments</td>
-                            <td>850 – 1004 sq. ft.</td>
-                            <td>~₹1.06 Crores*</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="pricing-footnote">*Indicative starting price range. Please enquire for the latest offer and availability.</div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-aerial-night-masterplan.webp" alt="Sattva Aeropolis township aerial night view with landscaped central spine" loading="lazy"><span class="gallery-tag">Township at Night</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Aerial.webp" alt="Sattva Aeropolis Devanahalli aerial view of the towers and landscaped podium" loading="lazy"><span class="gallery-tag">Aerial View</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/14.Aerial-Night-View_edited.webp" alt="Sattva Aeropolis aerial night view of the township" loading="lazy"><span class="gallery-tag">Night View</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-entrance-gate.webp" alt="Sattva Aeropolis main entrance gate with clock tower" loading="lazy"><span class="gallery-tag">Entrance Gate</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-entrance-driveway.webp" alt="Sattva Aeropolis tree-lined entrance driveway" loading="lazy"><span class="gallery-tag">Entrance Driveway</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Tower-A.webp" alt="Sattva Aeropolis Tower A G+11 elevation" loading="lazy"><span class="gallery-tag">Tower A</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/03.Nala-Bridge.webp" alt="Landscaped nala bridge walkway at Sattva Aeropolis" loading="lazy"><span class="gallery-tag">Landscape</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/09.Living.webp" alt="Sattva Aeropolis sample apartment living room interior" loading="lazy"><span class="gallery-tag">Living Room</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/12.MBR_.webp" alt="Sattva Aeropolis sample master bedroom interior" loading="lazy"><span class="gallery-tag">Master Bedroom</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/10.GBR_.webp" alt="Sattva Aeropolis sample guest bedroom interior" loading="lazy"><span class="gallery-tag">Guest Bedroom</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Swimming-Pool-Aeropolis.webp" alt="Sattva Aeropolis clubhouse with swimming pool at dusk" loading="lazy"><span class="gallery-tag">Clubhouse &amp; Pool</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/sattva-aeropolis-amenities.webp" alt="Sattva Aeropolis amenities overview" loading="lazy"><span class="gallery-tag">Amenities</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-clubhouse-gym.webp" alt="Sattva Aeropolis clubhouse gymnasium with equipment" loading="lazy"><span class="gallery-tag">Clubhouse Gym</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-tennis-court.webp" alt="Sattva Aeropolis tennis court between towers" loading="lazy"><span class="gallery-tag">Tennis Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-half-basketball-court.webp" alt="Sattva Aeropolis half basketball court" loading="lazy"><span class="gallery-tag">Half Basketball Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-kids-playground.webp" alt="Sattva Aeropolis kids playground with play structures" loading="lazy"><span class="gallery-tag">Kids Playground</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/projects/sattva-aeropolis/sattva-aeropolis-foot-reflexology-path.webp" alt="Sattva Aeropolis foot reflexology path through landscaped garden" loading="lazy"><span class="gallery-tag">Reflexology Path</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Gymnasium-Aeropolis.webp" alt="Sattva Aeropolis clubhouse gymnasium" loading="lazy"><span class="gallery-tag">Gymnasium</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/outdoor-gym-amenities.webp" alt="Sattva Aeropolis outdoor gym" loading="lazy"><span class="gallery-tag">Outdoor Gym</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/yoga-amenities.webp" alt="Sattva Aeropolis yoga and meditation deck" loading="lazy"><span class="gallery-tag">Yoga Deck</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/08.Kids-Play-Area.webp" alt="Sattva Aeropolis children&#x27;s play area" loading="lazy"><span class="gallery-tag">Kids' Play Area</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Multipurpose-Hall-Exotic.jpg" alt="Sattva Aeropolis multipurpose hall" loading="lazy"><span class="gallery-tag">Multipurpose Hall</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Library_wm.webp" alt="Sattva Aeropolis clubhouse library" loading="lazy"><span class="gallery-tag">Library</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/additional_websites/Aeropolis/Indoor-Games_WM_300dpi_a.webp" alt="Sattva Aeropolis indoor games room" loading="lazy"><span class="gallery-tag">Indoor Games</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 3 BHK · 1,012 sq ft floor plan"><img src="/additional_websites/Aeropolis/sattva-aeropolis-3bhk-1012-sqft-floor-plan.webp" alt="Sattva Aeropolis Phase 1 3 BHK 1012 sq ft floor plan" loading="lazy"><span class="gallery-tag">3 BHK &middot; 1,012 sq ft</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the 1 BHK Plan floor plan"><img src="/additional_websites/Aeropolis/UNIT-PLAN-1BHK-1T-AEROPOLIS.webp" alt="Sattva Aeropolis 1 BHK unit plan" loading="lazy"><span class="gallery-tag">1 BHK Plan</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Studio Plan floor plan"><img src="/additional_websites/Aeropolis/UNIT-PLAN-STUDIO-1T-TYPE-1AEROPOLIS.webp" alt="Sattva Aeropolis Phase 2 studio apartment unit plan" loading="lazy"><span class="gallery-tag">Studio Plan</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Block A Floor Plan floor plan"><img src="/additional_websites/Aeropolis/Block-A-Typical-Plan.webp" alt="Sattva Aeropolis Block A typical floor plan" loading="lazy"><span class="gallery-tag">Block A Floor Plan</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Block E Floor Plan floor plan"><img src="/additional_websites/Aeropolis/Block-E-Typical.webp" alt="Sattva Aeropolis Block E typical floor plan" loading="lazy"><span class="gallery-tag">Block E Floor Plan</span></div>
             </div>
         </div>
     </section>
@@ -1506,12 +1636,12 @@
     <section class="plan" id="location">
 
         <div class="container">
-            <h2 class="section-title">Strategic Location Advantage & Airport Connectivity</h2>
-            <p class="section-subtitle">Sattva Aeropolis Phase 2 offers convenient connectivity and an urban-friendly lifestyle.</p>
+            <h2 class="section-title">Location Advantage &amp; Airport Connectivity</h2>
+            <p class="section-subtitle">Sattva Aeropolis sits in Bangalore's airport-led growth corridor, beside the KIADB Aerospace Park.</p>
 
             <div class="plan-grid">
                 <div class="plan-image reveal">
-                    <img src="/additional_websites/Aeropolis/sattva-aeropolis-location-map.webp" alt="Sattva Aeropolis Location Map" onclick="openLightboxFromSrc('sattva-aeropolis-location-map.webp')">
+                    <img src="/additional_websites/Aeropolis/sattva-aeropolis-location-map.webp" alt="Sattva Aeropolis location map, Boovanahalli, Devanahalli" onclick="openLightboxFromSrc('sattva-aeropolis-location-map.webp')">
                 </div>
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
@@ -1526,8 +1656,9 @@
                             <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> ~35 mins</li>
                         </ul>
                     </div>
-                    <div class="plan-note"><strong>Connected Living</strong><span>Easy access to major tech parks, employment hubs, and the Bangalore Airport Corridor.</span></div>
-                    <div class="plan-note"><strong>Enquire for Details</strong><span>Get brochure + exact location details on request.</span></div>
+                    <div class="plan-note"><strong>Employment Magnet</strong><span>The aerospace park hosts Boeing and RTX, a new Wistron plant is expected to add about 3,000 jobs, and roughly 50,000 professionals work within about 10 km of the airport.</span></div>
+                    <div class="plan-note"><strong>Metro on the Way</strong><span>The Namma Metro Blue Line to the airport is under construction along the corridor. Check the nearest station and its expected opening date.</span></div>
+                    <div class="plan-note"><strong>The Honest Trade-off</strong><span>Airport access is excellent, but Whitefield, Outer Ring Road and Electronic City are long drives. Match the location to your daily commute.</span></div>
                 </div>
             </div>
         </div>
@@ -1535,32 +1666,25 @@
 
     <section class="amenities" id="investment" style="background: var(--bg-light);">
         <div class="container">
-            <h2 class="section-title">The Investment Advantage</h2>
-            <p class="section-subtitle">Why Sattva Aeropolis is the perfect choice for home buyers and investors alike.</p>
-            
-            <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
-                <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Why Invest In Devanahalli</strong>
-                    <span>
-                        Devanahalli has emerged as one of the most promising real estate hotspots in Bangalore. The rapid infrastructure development, spurred by the presence of the Kempegowda International Airport, has transformed this area into a thriving economic hub. Investing in <strong>Sattva Aeropolis Devanahalli</strong> means positioning yourself in a high-growth corridor with immense potential for property value appreciation. The upcoming business parks, IT hubs, and aerospace SEZs are attracting a massive workforce, thereby driving the demand for quality housing. <br><br>
-                        <strong>Apartments Near Bangalore Airport</strong> are highly sought after by professionals seeking a convenient commute and a serene lifestyle away from the city's congestion. The area boasts excellent connectivity, world-class educational institutions, and top-notch healthcare facilities, making it an ideal choice for families. Furthermore, the serene environment and ample green spaces provide a much-needed respite from the urban hustle. With a variety of housing options, from <strong>Studio Apartments Devanahalli</strong> to spacious family homes, the region caters to diverse preferences and budgets. The proactive government policies and continuous infrastructural upgrades ensure that Devanahalli remains a lucrative investment destination for years to come. <strong>Sattva Aeropolis Price</strong> offers a competitive entry point into this booming market, promising substantial returns in the long run.
-                    </span>
-                </div>
+            <h2 class="section-title">The Investment Case &amp; Trade-offs</h2>
+            <p class="section-subtitle">What supports Sattva Aeropolis as a home or an investment, and what to weigh before booking.</p>
 
+            <div class="tradeoff-grid reveal">
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Bangalore Airport Growth Corridor</strong>
-                    <span>
-                        The Bangalore Airport Growth Corridor is witnessing unprecedented development, making it a prime location for real estate investment. The corridor is not just a transit hub but a rapidly evolving micro-market with world-class infrastructure. The proposed metro line extension, suburban rail network, and the peripheral ring road are set to dramatically improve connectivity, making the daily commute a breeze. <strong>Apartments Near Airport Road</strong> offer the unique advantage of seamless travel combined with a tranquil living environment. <br><br>
-                        The area is attracting significant investments from multinational corporations, leading to the establishment of massive tech parks and business centers. This influx of commercial activity is driving the demand for residential properties, particularly <strong>New Launch Apartments Devanahalli</strong>. <strong>Sattva Aeropolis Bangalore</strong> is strategically located within this corridor, providing residents with easy access to employment hubs, entertainment zones, and commercial centers. The meticulous planning and robust infrastructure of the growth corridor ensure a high standard of living, with wide roads, reliable power supply, and advanced waste management systems. As the corridor continues to develop, properties here are expected to witness significant capital appreciation, making it a wise choice for discerning investors.
-                    </span>
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Why the corridor works</strong>
+                    <span>Land in the Devanahalli airport belt has moved from about ₹4,500 per sq ft in 2024 to roughly ₹7,000 to ₹9,600 in 2026, driven by the aerospace park, airport expansion, STRR and the upcoming Blue Line metro. New Devanahalli apartment launches are quoting about ₹11,000 to ₹13,000 per sq ft, so Aeropolis Phase 1 at roughly ₹8,600 to ₹9,000 per sq ft on stated sizes sits at the value end of the market.</span>
                 </div>
-
                 <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Rental Yield Potential</strong>
-                    <span>
-                        The rental yield potential in Devanahalli is highly attractive, driven by the steady influx of professionals working in the nearby IT parks, aerospace SEZs, and the international airport. The demand for well-designed, modern homes is consistently high, ensuring a steady stream of rental income for property owners. <strong>Sattva Aeropolis Devanahalli</strong>, with its premium amenities and strategic location, is perfectly poised to capitalize on this demand. <br><br>
-                        The project offers a range of configurations, including <strong>Studio Apartments Devanahalli</strong> and <strong>1 BHK Apartments Devanahalli</strong>, which are particularly popular among young professionals and frequent travelers. These compact yet luxurious units offer an excellent balance of comfort and affordability, ensuring high occupancy rates. Additionally, the comprehensive lifestyle amenities, such as the clubhouse, swimming pool, and fitness center, make Sattva Aeropolis a highly desirable rental destination. By investing in <strong>Sattva Aeropolis Bangalore</strong>, you can secure a reliable and lucrative source of passive income while benefiting from long-term capital appreciation.
-                    </span>
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Rental yield potential</strong>
+                    <span>Airport-corridor apartments currently yield about 3.2% to 3.8% gross. On a ₹60 Lakh 1 BHK that implies roughly ₹16,000 to ₹19,000 a month, and on an ₹81 Lakh 2 BHK roughly ₹21,500 to ₹25,500, before maintenance and vacancy. Compact Studio and 1 BHK homes suit the airport, aerospace and logistics workforce.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Trade-off 1: scale and density</strong>
+                    <span>About 1,001 homes on 11 acres means a busy community with heavy shared infrastructure. Long-term quality depends on the residents' association and facility manager, so ask for the projected maintenance rate per sq ft and how facility management will be staffed after handover.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Trade-off 2: timelines and location</strong>
+                    <span>Phase 1's RERA completion date of July 2026 has passed, so verify your specific tower's handover and OC status rather than relying on the project-level date. And while airport access is superb, the eastern and southern tech belts are a long commute.</span>
                 </div>
             </div>
         </div>
@@ -1590,7 +1714,7 @@
             </div>
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">
-                    Sattva Group is one of the leading real estate developers in India, known for delivering premium residential and commercial properties. With a legacy spanning over three decades, Sattva has consistently redefined urban living standards. <strong>Sattva Aeropolis Devanahalli</strong> is a testament to their commitment to quality, innovation, and customer satisfaction. The group has a strong presence across multiple cities, but their projects in Bangalore stand out for their strategic locations and world-class amenities. 
+                    Sattva Group, which began in 1986 as Salarpuria Sattva, is one of the leading real estate developers in India, known for delivering premium residential and commercial properties. With a legacy spanning over three decades, Sattva has consistently redefined urban living standards. <strong>Sattva Aeropolis Devanahalli</strong> is a testament to their commitment to quality, innovation, and customer satisfaction. The group has a strong presence across multiple cities, but their projects in Bangalore stand out for their strategic locations and world-class amenities. 
                 </p>
                 <p style="margin-bottom: 1rem;">
                     <strong>Sattva Aeropolis Bangalore</strong> brings this expertise to the rapidly developing North Bangalore corridor. The developer focuses on creating sustainable, smart, and community-centric living spaces. From meticulously planned layouts to top-tier construction quality, every aspect of a Sattva project is designed to enhance the residents' lifestyle. The group's transparent business practices and timely delivery have earned them immense trust among homebuyers and investors alike. 
@@ -1607,161 +1731,319 @@
 
     <section class="faq" id="faq" style="background: var(--bg-light);">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about Sattva Aeropolis Devanahalli.</p>
-            
-            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h2 class="section-title">Sattva Aeropolis FAQs</h2>
+            <p class="section-subtitle">Answers to the questions buyers ask most about Sattva Aeropolis: configurations, price, RERA, possession, location and investment.</p>
+
+            <div class="faq-list">
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Project basics</h3>
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
-                        <span itemprop="name">What is Sattva Aeropolis Devanahalli?</span>
+                        <span>What is Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Sattva Aeropolis is a premium high-rise residential project located in Devanahalli, near the Kempegowda International Airport.</p>
+                    <div class="faq-answer">
+                        <p>Sattva Aeropolis is an apartment township by Salarpuria Sattva (Sattva Group) at Boovanahalli, near Kempegowda International Airport in Devanahalli, North Bangalore. It spreads across about 11 acres with roughly 1,001 homes in 11 towers of ground plus 11 floors, and is being built in two RERA-registered phases.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
-                        <span itemprop="name">Where is the project located?</span>
+                        <span>Who is the developer of Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">It is strategically located on the Main NH-44 (International Airport Road) in Devanahalli, Bengaluru.</p>
+                    <div class="faq-answer">
+                        <p>The project is developed by Salarpuria Sattva, now branded Sattva Group, one of Bengaluru's larger developers, active since 1986. The promoter entity on the RERA filing is Trinayani Realtors Pvt. Ltd.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
-                        <span itemprop="name">What types of apartments are available?</span>
+                        <span>How big is Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project offers a variety of configurations, including <strong>Studio Apartments Devanahalli</strong>, 1 BHK, 2 BHK, and 3 BHK units.</p>
+                    <div class="faq-answer">
+                        <p>The full township covers about 11 acres and holds roughly 1,001 apartments across 11 towers, each ground plus 11 floors. Phase 2 alone accounts for 554 of those homes on about 1.72 to 2.4 acres.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
-                        <span itemprop="name">Is it a good investment?</span>
+                        <span>What is the difference between Phase 1 and Phase 2?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, investing in <strong>Apartments Near Bangalore Airport</strong> offers excellent capital appreciation and high rental yields due to rapid infrastructure development.</p>
+                    <div class="faq-answer">
+                        <p>Phase 1 (RERA PRM/KA/RERA/1250/303/PR/110522/004869) offers 1, 2 and 3 BHK homes from about ₹60 Lakh, built with MIVAN formwork, with a RERA completion date of 31 July 2026. Phase 2 (RERA PRM/KA/RERA/1250/303/PR/250925/008119) is the newer launch with Studio and 1 BHK homes from about ₹45.77 Lakh and a RERA possession date of October 2028.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
-                        <span itemprop="name">Who is the developer of this project?</span>
+                        <span>Is Sattva Aeropolis a gated community with amenities?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project is developed by the renowned Sattva Group, known for its high-quality residential and commercial developments.</p>
+                    <div class="faq-answer">
+                        <p>Yes. It is a planned gated township with a clubhouse, swimming pool, gymnasium, outdoor gym, yoga zone, library, indoor games, multipurpose hall, kids' play area and sports courts shared across the community.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
-                        <span itemprop="name">Are there 1 BHK Apartments Devanahalli available in this project?</span>
+                        <span>How dense is Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, there are well-designed <strong>1 BHK Apartments Devanahalli</strong> perfect for young professionals and small families.</p>
+                    <div class="faq-answer">
+                        <p>Roughly 1,001 homes on about 11 acres works out to around 91 homes per acre. That is a busy, high-density community. It suits buyers who like an active, amenity-led environment more than those looking for low-density, boutique living.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Configurations and price</h3>
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
-                        <span itemprop="name">How can I check the Sattva Aeropolis Floor Plan?</span>
+                        <span>What configurations are available at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">You can view the detailed floor plans, including the <strong>Sattva Aeropolis Floor Plan</strong> for Studio and 1 BHK layouts, in the "Unit Plans" section of this website.</p>
+                    <div class="faq-answer">
+                        <p>Phase 1 offers 1 BHK (666 to 672 sq ft), 2 BHK (906 to 943 sq ft) and 3 BHK (1,012 sq ft). Phase 2 offers Studio apartments (448 to 500 sq ft) and 1 BHK (550 to 658 sq ft).</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
-                        <span itemprop="name">What is the starting Sattva Aeropolis Price?</span>
+                        <span>What is the starting price at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The indicative starting <strong>Sattva Aeropolis Price</strong> for Studio apartments is ~₹45.77 Lakhs*. Please enquire for exact and updated pricing.</p>
+                    <div class="faq-answer">
+                        <p>Indicative starting prices are about ₹45.77 Lakh for a Phase 2 Studio, ₹58.50 Lakh for a Phase 2 1 BHK, ₹60 Lakh for a Phase 1 1 BHK, ₹81 Lakh for a 2 BHK and ₹90 Lakh for a 3 BHK. Prices exclude GST, stamp duty, registration and other charges.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
-                        <span itemprop="name">Are there New Launch Apartments Devanahalli in Phase 2?</span>
+                        <span>What is the price of a 1 BHK at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, Phase 2 features <strong>New Launch Apartments Devanahalli</strong> with modern amenities and lifestyle-focused design.</p>
+                    <div class="faq-answer">
+                        <p>A Phase 1 1 BHK of 666 to 672 sq ft starts from about ₹60 Lakh. A smaller Phase 2 1 BHK of 550 to 658 sq ft starts from about ₹58.50 Lakh.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
-                        <span itemprop="name">What amenities are provided?</span>
+                        <span>What is the price of a 2 BHK at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Residents can enjoy a range of amenities including a swimming pool, gymnasium, kids' play area, multipurpose hall, and lush green landscaped gardens.</p>
+                    <div class="faq-answer">
+                        <p>2 BHK homes are in Phase 1, sized 906 to 943 sq ft, from about ₹81 Lakh before taxes and charges.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
-                        <span itemprop="name">Is the project RERA approved?</span>
+                        <span>What is the price and size of the 3 BHK?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, Phase 2 is RERA approved with Registration No: PRM/KA/RERA/1250/303/PR/250925/008119.</p>
+                    <div class="faq-answer">
+                        <p>The Phase 1 3 BHK is 1,012 sq ft and starts from about ₹90 Lakh. The builder's floor plan shows three bedrooms (about 10'0" x 11'0", 11'0" x 10'0" and 9'0" x 8'0"), two toilets, a living room, a separate dining area, a kitchen and a balcony.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
-                        <span itemprop="name">When is the expected possession date?</span>
+                        <span>Are studio apartments available at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The expected possession date for Phase 2 is October 2028, as per RERA guidelines.</p>
+                    <div class="faq-answer">
+                        <p>Yes, in Phase 2. Studios range from about 448 to 500 sq ft and start at about ₹45.77 Lakh, which makes them the lowest-ticket way into a branded project on the airport corridor.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
-                        <span itemprop="name">Why should I buy Apartments Near Airport Road?</span>
+                        <span>What is the price per sq ft at Sattva Aeropolis?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Living in <strong>Apartments Near Airport Road</strong> offers excellent connectivity to the rest of the city, proximity to employment hubs, and potential for high returns on investment.</p>
+                    <div class="faq-answer">
+                        <p>On the stated Phase 1 sizes, the starting prices work out to roughly ₹8,600 to ₹9,000 per sq ft. Confirm whether the quoted area is carpet or super built-up, because that changes the real rate considerably on compact homes.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
-                        <span itemprop="name">Does the project have good connectivity?</span>
+                        <span>What costs are added on top of the base price?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Absolutely. Being on NH-44 ensures seamless connectivity to the airport, IT parks, and major parts of Bangalore.</p>
+                    <div class="faq-answer">
+                        <p>Expect GST on the under-construction value, stamp duty with surcharge and cess (about 5.6% in Karnataka), a 1% registration fee, plus floor-rise premiums, car parking, clubhouse, infrastructure and maintenance deposits. Ask for a stamped, itemised cost sheet before paying a booking amount.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">RERA, possession and construction</h3>
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
-                        <span itemprop="name">How do I book a site visit?</span>
+                        <span>Is Sattva Aeropolis RERA registered?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">You can easily book a site visit or request more details by filling out the enquiry form or contacting us directly via phone or WhatsApp.</p>
+                    <div class="faq-answer">
+                        <p>Yes. Phase 1 is registered under PRM/KA/RERA/1250/303/PR/110522/004869 and Phase 2 under PRM/KA/RERA/1250/303/PR/250925/008119. Verify both on the Karnataka RERA portal before booking.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
-                        <span itemprop="name">Are there Studio Apartments Devanahalli available?</span>
+                        <span>When is possession for Phase 1?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, Sattva Aeropolis features premium <strong>Studio Apartments Devanahalli</strong> ideal for investment and comfortable living.</p>
+                    <div class="faq-answer">
+                        <p>Phase 1 carried a RERA completion date of 31 July 2026. That date has now passed, so ask for the current tower-wise handover schedule, the Occupancy Certificate status and whether any RERA extension has been filed before you commit.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
-                        <span itemprop="name">What is the total land area of Phase 2?</span>
+                        <span>When is possession for Phase 2?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Phase 2 covers approximately 1.72 to 2.4 acres within the larger 10.32-acre township.</p>
+                    <div class="faq-answer">
+                        <p>Phase 2 has a RERA possession date of October 2028.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span>What construction technology is used?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Phase 1 is built with MIVAN aluminium formwork, which casts walls and slabs together in concrete. It gives consistent finishes and good carpet efficiency, but internal walls are structural, so you cannot easily move or remove them later.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span>Will all amenities be ready when I get possession?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not necessarily. On a multi-tower, two-phase project, towers and shared amenities are often completed in sequence. Ask exactly which amenities will be operational at your handover and which come later.</p>
+                    </div>
+                </div>
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Location and connectivity</h3>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span>Where exactly is Sattva Aeropolis located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sattva Aeropolis is at Boovanahalli, Udayagiri, off NH-44 (International Airport Road) in Devanahalli, next to the KIADB Aerospace Park belt in North Bangalore.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false">
+                        <span>How far is Sattva Aeropolis from Bangalore airport?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It is about 15 minutes by road from Kempegowda International Airport.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false">
+                        <span>How far is it from the KIADB Aerospace Park?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The project sits beside the KIADB Aerospace Park belt, about 10 minutes from its main campuses. The park hosts major aerospace employers including Boeing and RTX, and a new Wistron plant is expected to add about 3,000 jobs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false">
+                        <span>Is there metro connectivity near Sattva Aeropolis?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Namma Metro Blue Line to the airport is under construction along the Airport Road corridor. Check the nearest planned station and its expected opening date, since metro timelines in Bengaluru often slip.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q24" aria-expanded="false">
+                        <span>How long is the commute to Hebbal, Manyata Tech Park or Whitefield?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hebbal is roughly 30 minutes and Manyata Tech Park about 35 minutes off-peak. Whitefield, Outer Ring Road and Electronic City are long drives, so the project fits people working in the north far better than those commuting east or south.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q25" aria-expanded="false">
+                        <span>What jobs are near Sattva Aeropolis?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Around 50,000 professionals are estimated to work within about 10 km of the airport, across the aerospace park, airport operations, logistics, hardware parks and IT campuses at Devanahalli Business Park.</p>
+                    </div>
+                </div>
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Investment and buying decision</h3>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q26" aria-expanded="false">
+                        <span>Is Sattva Aeropolis a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It has a strong case for airport-corridor investors: an established developer, a sub-₹1 Cr entry and one of Bengaluru's fastest-growing employment belts. Land in the Devanahalli belt has moved from about ₹4,500 per sq ft in 2024 to roughly ₹7,000 to ₹9,600 in 2026. The trade-offs are high density and a far-north location.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q27" aria-expanded="false">
+                        <span>What rental yield can I expect?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Airport-corridor apartments currently yield about 3.2% to 3.8% gross. On a ₹60 Lakh 1 BHK that implies roughly ₹16,000 to ₹19,000 a month, and on an ₹81 Lakh 2 BHK roughly ₹21,500 to ₹25,500 a month, before maintenance and vacancy. These are estimates, not quotes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q28" aria-expanded="false">
+                        <span>How does Sattva Aeropolis pricing compare with other Devanahalli apartments?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Newer Devanahalli apartment launches are quoting about ₹11,000 to ₹13,000 per sq ft, so Aeropolis Phase 1 at roughly ₹8,600 to ₹9,000 per sq ft on stated sizes is towards the value end of the market. Confirm the area basis before comparing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q29" aria-expanded="false">
+                        <span>Who should buy at Sattva Aeropolis?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Airport, aerospace and logistics professionals, first-time buyers who want a branded home under ₹1 Cr, and investors targeting the airport-corridor rental pool. Phase 1 suits those wanting a nearer-term home; Phase 2 suits buyers who want the lowest ticket size and can wait until 2028.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q30" aria-expanded="false">
+                        <span>Who should avoid Sattva Aeropolis?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Buyers who want low-density, boutique living, or who commute daily to Whitefield, Outer Ring Road or Electronic City, are likely to be better served elsewhere.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q31" aria-expanded="false">
+                        <span>What will monthly maintenance cost?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The developer has not published a maintenance rate. On a 1,001-home community, ask for the projected per-sq-ft charge, the facility management company and how the handover to the residents' association will work.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q32" aria-expanded="false">
+                        <span>What should I check before booking at Sattva Aeropolis?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Verify both RERA numbers, confirm your specific tower's schedule and OC status, inspect MIVAN finish quality on a sample floor, get the carpet area against the built-up figure, check parking allocation, get a fully itemised cost sheet and test your commute at peak hour.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q33" aria-expanded="false">
+                        <span>How does Sattva Aeropolis compare with Sattva Vasanta Cove?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Both are Sattva projects in the airport corridor. Aeropolis is larger, has a nearer possession and offers up to 3 BHK, while Vasanta Cove has larger Studio and 1 BHK sizes. See our detailed <a href="/blog/sattva-vasanta-cove-vs-sattva-aeropolis-devanahalli/" style="color:var(--accent-green);font-weight:700;">Vasanta Cove vs Aeropolis comparison</a> for the numbers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q34" aria-expanded="false">
+                        <span>How can I book a site visit or get the price sheet?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Fill in the enquiry form on this page or call or WhatsApp +91 84383 44093. We will share the latest price sheet, floor plans and available inventory and arrange a site visit.</p>
                     </div>
                 </div>
             </div>
@@ -1771,7 +2053,7 @@
     <section class="lead-form-section" id="form">
         <div class="container">
             <h2 class="section-title">Enquire for Offers & Availability</h2>
-            <p class="section-subtitle">Schedule a call or request brochure for Sattva Aeropolis Phase 2.</p>
+            <p class="section-subtitle">Get the latest price sheet, floor plans and tower-wise availability for Sattva Aeropolis Phase 1 and Phase 2.</p>
 
             <div class="form-container">
                 <div class="urgency-block">
@@ -1783,7 +2065,7 @@
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="a41ede52-e0aa-4c13-aa7f-cfd3676bb911">
-                    <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis Phase 2 (Main Form)">
+                    <input type="hidden" name="subject" value="New Inquiry - Sattva Aeropolis (Main Form)">
                     <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
 
                     <input type="text" name="name" required placeholder="Enter your full name" />
@@ -1807,7 +2089,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call Now
         </a>
-        <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20Phase%202" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+        <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
             WhatsApp
         </a>
@@ -1955,6 +2237,14 @@
         <h2 class="pfs-title">Related Market Insights</h2>
         <p class="pfs-intro">Before you decide, read our independent research on the Devanahalli market.</p>
         <div class="insight-grid">
+      <a href="/blog/sattva-aeropolis-review/" class="insight-card">
+        <img src="/additional_websites/Aeropolis/Aerial.webp" alt="Sattva Aeropolis review: price, floor plans and verdict" loading="lazy">
+        <div class="insight-card-body">
+          <span class="insight-card-tag">Project Review &middot; 14 Min</span>
+          <h4 class="insight-card-title">Sattva Aeropolis Review: Price, Floor Plans, RERA &amp; Verdict</h4>
+          <span class="insight-card-link">Read Article &rarr;</span>
+        </div>
+      </a>
       <a href="/blog/prestige-parklane-devanahalli-price-floor-plans-rera-review/" class="insight-card">
         <img src="/images/projects/prestige-parklane/prestige-parklane-hero.webp" alt="Prestige Parklane: Price, Floor Plans and RERA Review" loading="lazy">
         <div class="insight-card-body">
@@ -2066,7 +2356,7 @@
                 </div>
                 <div class="footer-contact" style="margin-top:0.8rem;">
                     <strong>WhatsApp</strong>
-                    <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20Phase%202%20and%20available%20offers" target="_blank" rel="noopener">Chat with us</a>
+                    <a href="https://wa.me/918438344093?text=Hi%20I%20would%20like%20to%20know%20more%20about%20Sattva%20Aeropolis%20and%20available%20offers" target="_blank" rel="noopener">Chat with us</a>
                 </div>
                 <div class="footer-contact" style="margin-top:0.8rem;">
                     <strong>Email</strong>
