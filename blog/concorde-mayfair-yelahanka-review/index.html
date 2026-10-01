@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection; this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Concorde Mayfair Review: Price, Floor Plans and Our Honest Verdict</title>
+  <meta name="description" content="Independent Concorde Mayfair review: 2 and 3 BHK floor plans, ₹1.99 Cr to ₹2.28 Cr prices, real rate per sq ft, all-in cost, Evolve clubhouse, risks and 24 FAQs.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/concorde-mayfair-yelahanka-review/">
+  <meta property="og:title" content="Concorde Mayfair Review: Price, Floor Plans and Our Honest Verdict">
+  <meta property="og:description" content="Floor plans, carpet areas, prices, the real rate per sq ft, the Evolve clubhouse, location and an honest buy-or-skip verdict for Concorde Mayfair on Bellary Road, Yelahanka.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/concorde-mayfair/concorde-mayfair-hero.webp">
+  <meta property="og:url" content="https://luxurahabitat.com/blog/concorde-mayfair-yelahanka-review/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content, .faq-section { overflow-wrap: anywhere; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); scroll-margin-top: 110px; }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .table-wrap { overflow-x: auto; margin: var(--space-md) 0; }
+    .article-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 520px; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; vertical-align: top; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .article-content figure { margin: 0 0 24px; }
+    .article-content figure img { width: 100%; border-radius: 12px; display: block; background: #fff; }
+    .article-content figcaption { font-size: 0.85rem; color: #666; margin-top: 8px; line-height: 1.5; }
+    .plan-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; align-items: start; }
+    .plan-pair figure { margin: 0; border: 1px solid var(--border-light); border-radius: 12px; padding: 10px; background: #fff; }
+    .key-facts { background: #faf8f5; border: 1px solid var(--border-light); border-left: 5px solid var(--accent-copper); border-radius: 10px; padding: 18px 22px; margin: 0 0 var(--space-md); }
+    .key-facts h2 { margin-top: 0 !important; font-size: 1.3rem !important; }
+    .key-facts ul { margin-bottom: 0; }
+    .toc { background: #fff; border: 1px solid var(--border-light); border-radius: 10px; padding: 18px 22px; margin: 0 0 var(--space-md); }
+    .toc strong { display: block; font-family: var(--font-heading); color: var(--primary-forest); font-size: 1.1rem; margin-bottom: 8px; }
+    .toc ol { margin: 0 0 0 20px; columns: 2; column-gap: 32px; font-size: 0.95rem; }
+    .toc a { color: var(--primary-forest); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .callout { background: #f1f7f3; border-radius: 10px; padding: 16px 20px; margin: 0 0 var(--space-md); font-size: 0.98rem; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .inline-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; background: var(--primary-forest); color: #fff; border-radius: 12px; padding: 18px 22px; margin: var(--space-md) 0; }
+    .inline-cta p { margin: 0 !important; color: #fff; font-size: 0.98rem; }
+    .inline-cta a { background: var(--accent-copper); color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.92rem; white-space: nowrap; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-section h2 { font-family: var(--font-heading); font-size: 1.75rem; color: var(--primary-forest); margin-bottom: 8px; }
+    .faq-group-title { font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-charcoal); margin: 28px 0 10px; }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 900px; padding: 0 1.3rem 1.1rem; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info { min-width: 0; }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; overflow-wrap: anywhere; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "✓"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+      .toc ol { columns: 1; }
+      .plan-pair { grid-template-columns: 1fr; }
+    }
+    .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 var(--space-md); }
+    .pc-grid > div { border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 20px; background: #fff; }
+    .pc-grid h3 { margin-top: 0 !important; font-size: 1.1rem !important; }
+    .pc-grid ul { margin-bottom: 0 !important; }
+    @media (max-width: 640px) { .pc-grid { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luxurahabitat.com/blog/concorde-mayfair-yelahanka-review/"
+      },
+      "headline": "Concorde Mayfair Yelahanka Review: Price, Floor Plans, Location and Our Honest Verdict",
+      "description": "Independent Concorde Mayfair review: 2 and 3 BHK floor plans, ₹1.99 Cr to ₹2.28 Cr prices, real rate per sq ft, all-in cost, Evolve clubhouse, risks and 24 FAQs.",
+      "image": [
+        "https://luxurahabitat.com/images/projects/concorde-mayfair/concorde-mayfair-hero.webp",
+        "https://luxurahabitat.com/images/projects/concorde-mayfair/concorde-mayfair-master-plan.webp",
+        "https://luxurahabitat.com/images/projects/concorde-mayfair/concorde-mayfair-aerial-towers.webp"
+      ],
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "author": {
+        "@type": "Person",
+        "name": "Narayanan Rajesh",
+        "url": "https://luxurahabitat.com/about/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Luxura Habitat",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+        }
+      },
+      "about": {
+        "@type": "ApartmentComplex",
+        "name": "Concorde Mayfair",
+        "url": "https://luxurahabitat.com/projects/concorde-mayfair/"
+      },
+      "url": "https://luxurahabitat.com/blog/concorde-mayfair-yelahanka-review/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luxurahabitat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://luxurahabitat.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Yelahanka Real Estate Guide",
+          "item": "https://luxurahabitat.com/areas/yelahanka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Concorde Mayfair Review",
+          "item": "https://luxurahabitat.com/blog/concorde-mayfair-yelahanka-review/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concorde Mayfair is a 3.17-acre mixed-use project by Concorde Group on Bellary Road, Yelahanka. It has 217 apartments in 2 BHK and 3 BHK layouts across four 2B+G+14 towers, plus a commercial and high-street retail block. Possession is expected in November 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is building Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concorde Group, a Bengaluru developer founded in 1998 that has delivered about 18 million sq ft across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Concorde Mayfair 3.17 or 3.30 acres?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3.17 acres, with about 61% open space. Some older listings quote 3.30 acres. We use 3.17 acres, the figure in the detailed project disclosures, but you can confirm it against the approved plan on the RERA portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Concorde Mayfair a gated community if it has shops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes for the residential part. The commercial block faces Bellary Road and the four residential towers sit behind it with their own access. Ask the sales team to walk you through how resident and retail entries, parking and security are separated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sizes are Concorde Mayfair apartments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2 BHK homes are about 1,170 to 1,278 sq ft super built-up, and 3 BHK homes about 1,452 to 1,667 sq ft. The builder's sample plans are a 1,181 sq ft 2 BHK (787 sq ft carpet), a 1,457 sq ft 3 BHK 2T (987 sq ft carpet) and a 1,667 sq ft 3 BHK 3T (1,123 sq ft carpet)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the carpet area ratio at Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 67% of super built-up area across the sample plans. That is better than most new North Bangalore high-rises, which often deliver 60% to 65%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 BHK homes cost about ₹1.99 Cr (1,457 sq ft, 2 toilets) to ₹2.28 Cr (1,667 sq ft, 3 toilets) before GST and registration. 2 BHK prices are on request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the per sq ft rate at Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About ₹13,650 to ₹13,700 per sq ft of super built-up area, or about ₹20,150 to ₹20,300 per sq ft of carpet area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the all-in cost of a 3 BHK at Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For the ₹1.99 Cr 3 BHK, add about ₹10 lakh GST, ₹11 lakh stamp duty, ₹2 lakh registration and ₹3 to 7 lakh in parking, deposits and other charges. That gives roughly ₹2.25 to 2.29 Cr before interiors, or about ₹2.4 to 2.6 Cr fully furnished."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I choose the 3 BHK 2T or the 3 BHK 3T?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose the 3T if you want an attached bathroom for every bedroom and a noticeably larger living room (18'10\" against 16'1\" long). The 2T is about ₹29 lakh cheaper and works well for a nuclear family that is comfortable sharing one bathroom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are 2 BHK homes still available at Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concorde's current advertising only mentions 3 BHK homes, which suggests 2 BHK stock is limited. Ask for live availability before you plan around a 2 BHK."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How good is the Evolve clubhouse at Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is about 7,900 sq ft on the 14th floor, with terrace amenities above it, about 150 ft off the ground. That is generous for a 217-home project: roughly 36 sq ft of clubhouse per home. Membership and part ownership are included with every apartment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities does Concorde Mayfair have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "40+ amenities including an infinity pool, sky gym, sky bar with party deck, yoga lawn, party lawn, outdoor café, mini amphitheatre, mini basketball and futsal courts, a kids' play area, working and reading pods, a reflexology path and a barbecue nook."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What smart and green features are included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alexa-enabled homes with remote control of lights and appliances, digital door locks, four-level security, invisible grills, rainwater harvesting, STP water for flushing, aerated filters, smart water meters, 25+ native plant species and EV charging on request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the balconies at Concorde Mayfair big?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Each sample plan has a single sit-out of about 30 to 39 sq ft off the dining area. If you want a large balcony, this is the project's biggest compromise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to reach the airport from Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concorde quotes about 15 minutes via the elevated airport corridor beside the site. That holds off-peak. Plan for 25 to 35 minutes at busy times."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When will the Yelahanka metro station near Concorde Mayfair open?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Yelahanka station is on the Blue Line's Hebbal to Airport section, currently targeted for September 2027. Treat that date as a target, not a guarantee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Concorde Mayfair good for Manyata Tech Park employees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Manyata, Kirloskar Business Park and Brigade Magnum are the nearest large office hubs, reachable via Bellary Road and Hebbal. It is a poor fit if you work in Whitefield, the southern ORR or Electronic City."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will traffic noise from Bellary Road be a problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For units that face the highway, possibly. The commercial block buffers the towers and the windows are double glazed, but rear-facing units and higher floors will be quieter. Visit at peak hours before choosing a unit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Concorde Mayfair RERA registered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, under Karnataka RERA number PRM/KA/RERA/1251/309/PR/030524/006839, registered in May 2024. Possession is committed for November 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Concorde Mayfair a good investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a sound end-use buy and a reasonable medium-term hold, helped by the Bellary Road address, low unit count and efficient plans. Rental yield will be modest: a 3 BHK might rent for roughly ₹40,000 to ₹50,000 a month after handover, about 2.4% to 3% gross."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should buy Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Airport-linked professionals and frequent flyers, Manyata and Hebbal commuters, small families who value a quieter 217-home community, and buyers who like having shops and services on site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should skip Concorde Mayfair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buyers who want large balconies or private terraces, those who need a 4 BHK, people working in South or East Bangalore, and anyone who wants a big township with acres of ground-level greenery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Concorde Mayfair compare with other Yelahanka projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It sits mid-market for the area: above Century Kindle (from about ₹1.18 Cr) on price, close to Vajram Chrysanthemum (from about ₹1.96 Cr), and well below the luxury tier on Bellary Road such as Divyasree The Quiet Side. Its edge is the Bellary Road frontage and the on-site retail."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/yelahanka/">Yelahanka Hub</a><span>/</span><span>Concorde Mayfair Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Concorde Mayfair Yelahanka Review: Price, Floor Plans, Location and Our Honest Verdict</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh, Luxura Habitat</span><span>&bull;</span><span>Published October 1, 2026</span><span>&bull;</span><span>15 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+          <figure>
+            <img src="/images/projects/concorde-mayfair/concorde-mayfair-hero.webp" alt="Concorde Mayfair on Bellary Road, Yelahanka, with the commercial block in front of the residential towers" width="1920" height="1152" loading="eager">
+            <figcaption>Concorde Mayfair from Bellary Road: the commercial block in front, the four residential towers behind. Artist's impression.</figcaption>
+          </figure>
+
+          <p>Bellary Road is the spine of North Bangalore. It carries traffic from Hebbal to the airport, it is lined with the area's best-known schools and hospitals, and every new metro and road project in the north seems to touch it. Land with a frontage on this road rarely comes up for housing, which is why Concorde Mayfair is worth a close look. It is a compact, 3.17-acre mixed-use project in Yelahanka that puts 217 apartments, a retail block and a sky clubhouse on one site.</p>
+          <p>This review sets out what you actually get. We read the unit sizes, carpet areas and room dimensions straight off the builder's floor plans, work out the real per-square-foot rate and the all-in cost, look at the master plan and amenities, and are candid about the compromises. If you are deciding between Mayfair and other Yelahanka launches, the aim is to give you the numbers to decide with.</p>
+
+          <div class="key-facts">
+            <h2>Concorde Mayfair at a glance</h2>
+            <ul>
+              <li><strong>Developer:</strong> Concorde Group (est. 1998, 29 completed projects)</li>
+              <li><strong>Location:</strong> Bellary Road (NH 44), Yelahanka, North Bangalore</li>
+              <li><strong>Type:</strong> Mixed use: apartments, commercial space and high-street retail</li>
+              <li><strong>Land:</strong> 3.17 acres, about 61% open space</li>
+              <li><strong>Towers:</strong> 4 (A to D), each 2 basements + ground + 14 floors</li>
+              <li><strong>Homes:</strong> 217 apartments, 2 BHK and 3 BHK</li>
+              <li><strong>Sizes:</strong> 1,170 to 1,667 sq ft super built-up (787 to 1,123 sq ft carpet on sample plans)</li>
+              <li><strong>Price:</strong> 3 BHK about ₹1.99 Cr to ₹2.28 Cr; 2 BHK on request</li>
+              <li><strong>Clubhouse:</strong> Evolve, 7,900 sq ft on the 14th floor, 40+ amenities</li>
+              <li><strong>RERA:</strong> PRM/KA/RERA/1251/309/PR/030524/006839</li>
+              <li><strong>Possession:</strong> November 2028</li>
+            </ul>
+          </div>
+
+          <nav class="toc" aria-label="Table of contents">
+            <strong>In this review</strong>
+            <ol>
+              <li><a href="#developer">The developer</a></li>
+              <li><a href="#location">Location: why Bellary Road matters</a></li>
+              <li><a href="#master-plan">Master plan and the mixed-use question</a></li>
+              <li><a href="#floor-plans">Floor plans and carpet areas</a></li>
+              <li><a href="#pricing">Price and the real rate</a></li>
+              <li><a href="#all-in-cost">What you will actually pay</a></li>
+              <li><a href="#amenities">Evolve clubhouse and amenities</a></li>
+              <li><a href="#features">Smart home and build features</a></li>
+              <li><a href="#compare">How it compares</a></li>
+              <li><a href="#pros-cons">Pros and cons</a></li>
+              <li><a href="#investment">Investment view</a></li>
+              <li><a href="#who-should-buy">Who should buy, and who should skip</a></li>
+              <li><a href="#checklist">Due-diligence checklist</a></li>
+              <li><a href="#verdict">Our verdict</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="developer">1. The developer: Concorde Group</h2>
+          <p>Concorde Group was founded in Bengaluru in 1998. It has delivered about 18 million sq ft of homes across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber, and sits in the city's mid-tier band of developers: established and active, but not one of the listed giants. Its current North Bangalore pipeline includes <a href="/projects/concorde-sienna/">Concorde Sienna</a> on Hennur Main Road and Concorde Neo in Thanisandra, so Mayfair is part of a deliberate push into the north.</p>
+          <p>A mid-tier developer with a long track record is often a sweet spot: lower prices than the big brands, but a history you can check. Before you book:</p>
+          <ul>
+            <li><strong>Visit a finished Concorde project:</strong> Napa Valley or Manhattans will show you real build quality and how maintenance was handed over.</li>
+            <li><strong>Ask for delivery dates:</strong> request promised and actual handover dates for Concorde's last few projects.</li>
+            <li><strong>Search the Karnataka RERA portal:</strong> look for complaints or extensions on the developer's recent registrations.</li>
+          </ul>
+
+          <h2 id="location">2. Location: why Bellary Road matters</h2>
+          <p>Mayfair sits directly on Bellary Road in Yelahanka, between Yelahanka New Town and Jakkur on the builder's location map, beside the six-lane elevated corridor to Kempegowda International Airport. That gives it two things that are hard to get together in North Bangalore: a fast road to the airport and an established neighbourhood with schools, hospitals and malls already in place.</p>
+          <figure>
+            <img src="/images/projects/concorde-mayfair/concorde-mayfair-location-map.webp" alt="Concorde Mayfair location map showing Bellary Road between Hebbal, Jakkur and Yelahanka" width="1600" height="1131" loading="lazy">
+            <figcaption>Builder's location map. Mayfair sits on Bellary Road with Yelahanka to the north and Hebbal to the south.</figcaption>
+          </figure>
+          <h3>Connectivity, with honest timings</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Destination</th><th>Developer's claim</th><th>What to plan for</th></tr></thead>
+              <tbody>
+                <tr><td>Kempegowda International Airport</td><td>~15 min via the elevated corridor</td><td>15 to 20 min off-peak, 25 to 35 min at busy times</td></tr>
+                <tr><td>Yelahanka metro station (Blue Line)</td><td>~5 min</td><td>Station not open yet; the Hebbal to Airport section is targeted for September 2027</td></tr>
+                <tr><td>Schools, hospitals and malls</td><td>Within ~12 min</td><td>Fair for Yelahanka options; Hebbal-side malls take longer at peak</td></tr>
+                <tr><td>Manyata Tech Park</td><td>Within 30 km</td><td>The most practical major office commute from here</td></tr>
+                <tr><td>Whitefield / ITPL, Bagmane</td><td>Via the Outer Ring Road</td><td>A long daily drive; not a realistic everyday commute</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Social infrastructure already in place</h3>
+          <p><strong>Schools:</strong> Delhi Public School, Presidency School, Ryan International and Nitte International, plus BMS Institute of Technology and Srishti School of Art, Design and Technology. <strong>Hospitals:</strong> Columbia Asia, Aster CMI, Bangalore Baptist, Sparsh and Manipal. <strong>Malls:</strong> RMZ Galleria and Phoenix Mall of Asia are the closest, with Elements and Esteem towards Nagavara and Hebbal.</p>
+          <p>That is the real advantage over projects further up the airport road in Devanahalli: you are buying into a finished suburb, not waiting for one to grow. The planned Peripheral Ring Road and the Aerospace SEZ are upside on top, but we would not pay extra for them today. Our <a href="/blog/yelahanka-bellary-road-manyata-tech-park-connectivity-guide/">Bellary Road connectivity guide</a> covers commutes in more detail.</p>
+
+          <div class="inline-cta"><p>Want the tower-wise availability and today's price sheet for Concorde Mayfair?</p><a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20Concorde%20Mayfair%20review%20and%20would%20like%20the%20latest%20price%20list%20and%20floor%20plans" target="_blank" rel="noopener">Get it on WhatsApp</a></div>
+
+          <h2 id="master-plan">3. Master plan and the mixed-use question</h2>
+          <figure>
+            <img src="/images/projects/concorde-mayfair/concorde-mayfair-master-plan.webp" alt="Concorde Mayfair master plan with a commercial block on Bellary Road and four residential towers behind" width="1000" height="600" loading="lazy">
+            <figcaption>Concorde Mayfair master plan. The commercial block takes the Bellary Road frontage, with Towers A to D and the podium amenities behind.</figcaption>
+          </figure>
+          <p>The site is a wedge with its long side on Bellary Road. Concorde has put the commercial and retail building on that frontage and set the four residential towers at the back, staggered so that most homes look across courtyards rather than straight at a neighbour. Between the towers are the pool deck, courts and play areas, and the Evolve clubhouse sits on the 14th floor. Parking is in two basements, served by a driveway around the edge and separate entry and exit gates off the main road.</p>
+          <p><strong>Is mixed use a plus or a minus?</strong> Mostly a plus. Having shops, a café and services downstairs is a real convenience, and the commercial block acts as a buffer between the homes and the highway. The risks are visitor footfall and parking spill-over, and how the commercial owners and the residents' association share costs after handover. Ask how resident and retail entries are separated, whether residents and shoppers share basement levels, and how common-area maintenance will be split.</p>
+          <p><strong>Density:</strong> 217 homes on 3.17 acres works out to about 68 homes per acre, before counting the commercial block. That is moderate for a Bangalore high-rise and far below the 100+ per acre of many towers. With only around 54 homes per tower, lift waits and crowded amenities should not be a problem.</p>
+
+          <h2 id="floor-plans">4. Floor plans and carpet areas</h2>
+          <p>Portals list Mayfair's sizes as ranges: 1,170 to 1,278 sq ft for 2 BHK and 1,452 to 1,667 sq ft for 3 BHK. The builder's own unit plans give the exact figures for three typical layouts in Tower A (units A-201 to 1401, A-202 to 1402 and A-203 to 1403), and they are the best guide to what you will live in.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Super built-up (sq ft)</th><th>Carpet (sq ft)</th><th>Sit-out (sq ft)</th><th>Carpet share</th><th>Facing</th></tr></thead>
+              <tbody>
+                <tr><td>2 BHK 2T (Type 1)</td><td>1,181</td><td>787</td><td>29.5</td><td>67%</td><td>West</td></tr>
+                <tr><td>3 BHK 2T (Type 1)</td><td>1,457</td><td>987</td><td>29.7</td><td>68%</td><td>East</td></tr>
+                <tr><td>3 BHK 3T (Type 3)</td><td>1,667</td><td>1,123</td><td>39.1</td><td>67%</td><td>East</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>The headline is efficiency.</strong> Carpet area runs at 67% to 68% of super built-up. Many new North Bangalore high-rises sit at 60% to 65%, and large townships with big amenity areas often lower still. In practice, a 1,457 sq ft Mayfair 3 BHK has about as much usable floor as a 1,550 to 1,600 sq ft home elsewhere.</p>
+
+          <div class="plan-pair">
+            <figure><img src="/images/projects/concorde-mayfair/concorde-mayfair-2bhk-1181-sqft-floor-plan.webp" alt="Concorde Mayfair 2 BHK 2T floor plan, 1,181 sq ft super built-up" loading="lazy"><figcaption>2 BHK 2T: 1,181 sq ft SBA, 787 sq ft carpet.</figcaption></figure>
+            <figure><img src="/images/projects/concorde-mayfair/concorde-mayfair-3bhk-2t-1457-sqft-floor-plan.webp" alt="Concorde Mayfair 3 BHK 2T floor plan, 1,457 sq ft super built-up" loading="lazy"><figcaption>3 BHK 2T: 1,457 sq ft SBA, 987 sq ft carpet.</figcaption></figure>
+          </div>
+          <h3>2 BHK 2T: a compact, well-zoned plan</h3>
+          <p>The entrance opens into a 14'11" x 12'0" living room that runs into an 8'11" x 8'4" dining area, with the 7'1" x 3'11" sit-out off the dining. The kitchen and utility (8'0" x 12'0") are closed off from the living area. The two bedrooms measure 13'3" x 12'0" and 10'6" x 12'0", with one toilet next to the master bedroom and a second common toilet. It is a good layout for a couple or a small family, but there is no study corner.</p>
+          <h3>3 BHK 2T: the value layout</h3>
+          <p>This is the home Concorde advertises from ₹1.99 Cr. The living room is 16'1" x 11'11", the dining 9'0" x 9'6" and the kitchen with utility a generous 9'0" x 13'1". The master bedroom (12'0" x 12'11") has an attached toilet, and the two other bedrooms (10'6" x 13'1" and 10'6" x 11'10") share the second one. The third bedroom works well as a study or guest room.</p>
+
+          <figure style="max-width:620px;"><img src="/images/projects/concorde-mayfair/concorde-mayfair-3bhk-3t-1667-sqft-floor-plan.webp" alt="Concorde Mayfair 3 BHK 3T floor plan, 1,667 sq ft super built-up" loading="lazy"><figcaption>3 BHK 3T: 1,667 sq ft SBA, 1,123 sq ft carpet.</figcaption></figure>
+          <h3>3 BHK 3T: the family layout</h3>
+          <p>For about 210 sq ft more, the 3T fixes the 2T's main weakness: every bedroom gets its own toilet. It also gets the best living room in the project, 18'10" x 12'9", a bigger master bedroom (12'0" x 14'11"), an 11'0" x 12'9" third bedroom and a deeper 8'2" x 4'7" sit-out. For a family with teenagers or visiting parents, it is the one to buy.</p>
+          <div class="callout"><strong>The compromise:</strong> every sample plan has a single small sit-out, not a real balcony. If outdoor space at home matters to you, Mayfair will feel tight. The 9.7 ft ceilings and 7 ft windows help, but they do not replace a balcony.</div>
+
+          <h2 id="pricing">5. Price and the real rate per sq ft</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Configuration</th><th>Indicative price</th><th>Per sq ft (SBA)</th><th>Per sq ft (carpet)</th></tr></thead>
+              <tbody>
+                <tr><td>2 BHK 2T (1,170 to 1,278 sq ft)</td><td>On request</td><td>On request</td><td>On request</td></tr>
+                <tr><td>3 BHK 2T (1,457 sq ft)</td><td>₹1.99 Cr onwards</td><td>~₹13,650</td><td>~₹20,150</td></tr>
+                <tr><td>3 BHK 3T (1,667 sq ft)</td><td>₹2.28 Cr onwards</td><td>~₹13,680</td><td>~₹20,300</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Prices are before GST, stamp duty and registration, and vary by tower, floor and facing. <a href="/projects/concorde-mayfair/#pricing" class="money-link">Check the current price sheet</a> before you compare.</p>
+          <h3>What the numbers tell you</h3>
+          <p><strong>The two 3 BHKs are priced at the same rate.</strong> Both work out to about ₹13,650 to ₹13,700 per sq ft, so the 3T is not a premium product. You pay for the extra area and get the third bathroom at no rate penalty, which makes the 3T the better value if your budget stretches.</p>
+          <p><strong>Compare on carpet area.</strong> At about ₹20,150 per sq ft of carpet, Mayfair looks more expensive than its super built-up rate suggests. Because its carpet efficiency is high, though, a project quoting ₹12,500 per sq ft SBA at 60% efficiency costs about ₹20,800 per sq ft of carpet. On that basis Mayfair is fairly priced for a Bellary Road address.</p>
+          <p><strong>2 BHK pricing is not public.</strong> At the 3 BHK rate, a 1,181 sq ft 2 BHK would be roughly ₹1.6 Cr, but that is our estimate, not a quote. Concorde's current ads only feature 3 BHK homes, so ask early if you want a 2 BHK.</p>
+
+          <h2 id="all-in-cost">6. What you will actually pay</h2>
+          <p>The base price is only the start. For the ₹1.99 Cr 3 BHK 2T, a realistic budget looks like this:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Typical rate</th><th>On ₹1.99 Cr</th></tr></thead>
+              <tbody>
+                <tr><td>GST (under construction)</td><td>5%</td><td>~₹10 Lakh</td></tr>
+                <tr><td>Stamp duty with surcharge and cess</td><td>~5.6%</td><td>~₹11 Lakh</td></tr>
+                <tr><td>Registration fee</td><td>1%</td><td>~₹2 Lakh</td></tr>
+                <tr><td>Parking, maintenance deposit and utility charges (if billed separately)</td><td>Varies</td><td>~₹3 to 7 Lakh</td></tr>
+                <tr><td><strong>All-in before interiors</strong></td><td></td><td><strong>~₹2.25 to 2.29 Cr</strong></td></tr>
+                <tr><td>Interiors</td><td>Your choice</td><td>~₹15 to 30 Lakh</td></tr>
+                <tr><td><strong>Move-in ready</strong></td><td></td><td><strong>~₹2.4 to 2.6 Cr</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Club Evolve membership is included with the home, so check that the cost sheet does not add a separate club fee. See our <a href="/blog/home-loan-interest-rates-september-2026-bank-comparison/">home loan rate comparison</a> if you are financing the purchase.</p>
+
+          <h2 id="amenities">7. Evolve clubhouse and amenities</h2>
+          <figure>
+            <img src="/images/projects/concorde-mayfair/concorde-mayfair-aerial-towers.webp" alt="Aerial view of the Concorde Mayfair towers with rooftop terrace amenities" width="1600" height="900" loading="lazy">
+            <figcaption>The towers from above, with planted terraces on the upper levels. Artist's impression.</figcaption>
+          </figure>
+          <p>Evolve is Concorde's own clubhouse brand. At Mayfair it is about 7,900 sq ft on the 14th floor, with terrace amenities on the level above, roughly 150 ft off the ground. Every home comes with membership and a share of ownership of the club. For a 217-home project, that is about 36 sq ft of clubhouse per home, which is generous.</p>
+          <p>The amenity list runs to 40+. The ones that matter day to day:</p>
+          <ul>
+            <li><strong>Fitness:</strong> a sky gym, yoga lawn and reflexology path</li>
+            <li><strong>Leisure:</strong> an infinity pool, sky bar with party deck, outdoor café, party lawn, barbecue nook and pergola seating</li>
+            <li><strong>Children:</strong> a kids' play area, mini futsal with strike net, mini basketball dribble court and mini amphitheatre</li>
+            <li><strong>Work:</strong> working and reading pods for calls and focused work</li>
+          </ul>
+          <div class="plan-pair">
+            <figure><img src="/images/projects/concorde-mayfair/concorde-mayfair-swimming-pool.webp" alt="Concorde Mayfair swimming pool deck" loading="lazy"><figcaption>Pool deck. Artist's impression.</figcaption></figure>
+            <figure><img src="/images/projects/concorde-mayfair/concorde-mayfair-work-station-pods.webp" alt="Concorde Mayfair work station pods" loading="lazy"><figcaption>Working pods. Artist's impression.</figcaption></figure>
+          </div>
+          <p><strong>Our take:</strong> the amenities are urban, not resort-style. You will not find a jogging track through acres of parkland or a full-size sports precinct; 3.17 acres cannot hold them. What you get is a good-quality, well-used set of facilities with views, which suits working professionals more than families who want big open lawns. The sky-level clubhouse depends on lifts, so ask about the number of lifts serving it and whether there is a dedicated clubhouse lift.</p>
+
+          <h2 id="features">8. Smart home and build features</h2>
+          <ul>
+            <li><strong>Space:</strong> 9.7 ft ceilings, an 8 ft entrance door and 7 ft tall windows</li>
+            <li><strong>Glazing:</strong> double-glazed windows for noise reduction and insulation, which matters on Bellary Road</li>
+            <li><strong>Smart home:</strong> Alexa-enabled homes with remote control of lights and appliances, and digital door locks</li>
+            <li><strong>Security:</strong> four-level security and invisible grills</li>
+            <li><strong>Water:</strong> rainwater harvesting, STP water for flushing, aerated filters and smart water meters</li>
+            <li><strong>Green:</strong> 25+ native tree and plant species, and EV charging on request</li>
+            <li><strong>Access:</strong> ramps and railings for elderly and differently abled residents</li>
+          </ul>
+          <p>Concorde has not published a detailed material specification (flooring, sanitaryware and electrical brands). Ask for it in writing and attach it to your agreement for sale, so that the finishes you are shown at the sales office are the ones you receive.</p>
+
+          <h2 id="compare">9. How it compares with nearby projects</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Project</th><th>Location</th><th>Homes</th><th>Starting price</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Concorde Mayfair</strong></td><td>Bellary Road, Yelahanka</td><td>2 &amp; 3 BHK</td><td>₹1.99 Cr (3 BHK)</td></tr>
+                <tr><td><a href="/projects/century-kindle/">Century Kindle</a></td><td>Yelahanka New Town</td><td>2, 3 &amp; 4 BHK</td><td>~₹1.18 Cr</td></tr>
+                <tr><td><a href="/projects/vajram-chrysanthemum/">Vajram Chrysanthemum</a></td><td>Avalahalli, Yelahanka</td><td>3 &amp; 3.5 BHK</td><td>~₹1.96 Cr</td></tr>
+                <tr><td><a href="/projects/concorde-sienna/">Concorde Sienna</a></td><td>Hennur Main Road</td><td>2 &amp; 3 BHK</td><td>~₹1.26 Cr</td></tr>
+                <tr><td><a href="/projects/divyasree-quiet-side/">Divyasree The Quiet Side</a></td><td>Bellary Road, Yelahanka</td><td>3, 3.5 BHK &amp; penthouse</td><td>~₹15,000/sq ft</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Mayfair sits in the middle of the Yelahanka market. It costs more than Century Kindle in Yelahanka New Town, but you pay for the Bellary Road frontage. It is close to Vajram Chrysanthemum on ticket size and well below the luxury tier on the same road. Within Concorde's own portfolio, Sienna is cheaper and better placed for Manyata and the ORR, while Mayfair is the pick for airport access.</p>
+
+          <h2 id="pros-cons">10. Pros and cons</h2>
+          <div class="pc-grid">
+            <div><h3>Pros</h3><ul>
+              <li>Rare Bellary Road frontage beside the airport corridor</li>
+              <li>An upcoming Blue Line station about 5 minutes away</li>
+              <li>Only 217 homes, about 54 per tower</li>
+              <li>About 67% carpet efficiency, well above average</li>
+              <li>Retail and services on site</li>
+              <li>9.7 ft ceilings, double glazing and smart-home features as standard</li>
+              <li>Club Evolve membership and part ownership included</li>
+              <li>An established neighbourhood with schools and hospitals in place</li>
+            </ul></div>
+            <div><h3>Cons</h3><ul>
+              <li>Small sit-outs (about 30 to 39 sq ft), not real balconies</li>
+              <li>Highway noise for road-facing units</li>
+              <li>A shared site with retail footfall</li>
+              <li>Limited ground-level open space on a 3.17-acre plot</li>
+              <li>The clubhouse depends on lifts</li>
+              <li>No 4 BHK, and 2 BHK stock appears limited</li>
+              <li>A detailed material specification is not yet public</li>
+            </ul></div>
+          </div>
+
+          <h2 id="investment">11. Investment view</h2>
+          <p><strong>Capital growth.</strong> Bellary Road has been one of North Bangalore's steadier markets because demand from the airport, the Aerospace Park and Manyata keeps coming. The metro, once open, should help further. Mayfair's small size and on-site retail are both positives for resale, since buyers in this segment like quieter communities with conveniences close by.</p>
+          <p><strong>Rental income.</strong> Expect modest yields. A 3 BHK here might rent for roughly ₹40,000 to ₹50,000 a month after handover, based on current rents along the corridor. That is about 2.4% to 3% gross on ₹1.99 Cr, before maintenance and vacancy, which is typical for new Bangalore apartments.</p>
+          <p><strong>Timeline.</strong> With possession in November 2028, you are committing capital for about two more years with no income from it. That is a far shorter wait than the 2031 and 2032 handovers at several airport-road launches.</p>
+
+          <h2 id="who-should-buy">12. Who should buy, and who should skip</h2>
+          <p><strong>Good fit:</strong> airport and aviation professionals and frequent flyers; people who work at Manyata, Hebbal or the Aerospace Park; small families who want a quieter, low-density building; and buyers who like having shops and a café downstairs.</p>
+          <p><strong>Look elsewhere if:</strong> you want a large balcony or terrace; you need a 4 BHK; you work in Whitefield, Electronic City or on the southern ORR; or you want a big township with acres of ground-level greenery. Our <a href="/areas/yelahanka/">Yelahanka area guide</a> lists the alternatives.</p>
+
+          <h2 id="checklist">13. Due-diligence checklist before you pay</h2>
+          <ol>
+            <li>Check RERA PRM/KA/RERA/1251/309/PR/030524/006839 on the Karnataka RERA portal: approved plan, completion date and quarterly progress.</li>
+            <li>Confirm the land area (3.17 acres) and the unit count against the approved plan.</li>
+            <li>Get the floor plan of your exact unit, with carpet area, facing and floor, attached to the agreement.</li>
+            <li>Ask for the material specification sheet in writing.</li>
+            <li>Find out how residential and commercial access, parking and maintenance are separated.</li>
+            <li>Visit at peak hours to judge traffic noise from Bellary Road for your tower and floor.</li>
+            <li>Confirm that Club Evolve membership carries no separate fee on the cost sheet.</li>
+            <li>Get a stamped cost sheet listing every charge: parking, deposits and utilities.</li>
+            <li>Ask which banks have approved the project for home loans.</li>
+          </ol>
+
+          <h2 id="verdict">Our verdict</h2>
+          <p>Concorde Mayfair is a well-planned, efficient project on one of North Bangalore's best roads. You get more usable space per rupee than the headline rate suggests, a quieter community than the big towers, and a 2028 handover in an area where daily life already works. The compromises are real but specific: small sit-outs, highway frontage and a compact site. If those do not bother you and your work is north of Hebbal, the 3 BHK 3T is the pick. If outdoor space at home matters, look at a larger-site project instead.</p>
+          <p>To see availability or arrange a visit, go to the <a href="/projects/concorde-mayfair/" class="money-link">Concorde Mayfair project page</a> or message us on WhatsApp.</p>
+
+          <div class="inline-cta"><p>Get the stamped cost sheet and unit availability for Concorde Mayfair.</p><a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20Concorde%20Mayfair%20review%20and%20would%20like%20the%20latest%20price%20list%20and%20floor%20plans" target="_blank" rel="noopener">WhatsApp our advisor</a></div>
+        </div>
+
+        <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+          <h2>Concorde Mayfair FAQs</h2>
+          <h3 class="faq-group-title">Project basics</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false"><span>What is Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Concorde Mayfair is a 3.17-acre mixed-use project by Concorde Group on Bellary Road, Yelahanka. It has 217 apartments in 2 BHK and 3 BHK layouts across four 2B+G+14 towers, plus a commercial and high-street retail block. Possession is expected in November 2028.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false"><span>Who is building Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Concorde Group, a Bengaluru developer founded in 1998 that has delivered about 18 million sq ft across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false"><span>Is Concorde Mayfair 3.17 or 3.30 acres?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>3.17 acres, with about 61% open space. Some older listings quote 3.30 acres. We use 3.17 acres, the figure in the detailed project disclosures, but you can confirm it against the approved plan on the RERA portal.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false"><span>Is Concorde Mayfair a gated community if it has shops?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yes for the residential part. The commercial block faces Bellary Road and the four residential towers sit behind it with their own access. Ask the sales team to walk you through how resident and retail entries, parking and security are separated.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Floor plans and price</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false"><span>What sizes are Concorde Mayfair apartments?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>2 BHK homes are about 1,170 to 1,278 sq ft super built-up, and 3 BHK homes about 1,452 to 1,667 sq ft. The builder's sample plans are a 1,181 sq ft 2 BHK (787 sq ft carpet), a 1,457 sq ft 3 BHK 2T (987 sq ft carpet) and a 1,667 sq ft 3 BHK 3T (1,123 sq ft carpet).</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false"><span>What is the carpet area ratio at Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>About 67% of super built-up area across the sample plans. That is better than most new North Bangalore high-rises, which often deliver 60% to 65%.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false"><span>What is the price of Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>3 BHK homes cost about ₹1.99 Cr (1,457 sq ft, 2 toilets) to ₹2.28 Cr (1,667 sq ft, 3 toilets) before GST and registration. 2 BHK prices are on request.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false"><span>What is the per sq ft rate at Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>About ₹13,650 to ₹13,700 per sq ft of super built-up area, or about ₹20,150 to ₹20,300 per sq ft of carpet area.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false"><span>What is the all-in cost of a 3 BHK at Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>For the ₹1.99 Cr 3 BHK, add about ₹10 lakh GST, ₹11 lakh stamp duty, ₹2 lakh registration and ₹3 to 7 lakh in parking, deposits and other charges. That gives roughly ₹2.25 to 2.29 Cr before interiors, or about ₹2.4 to 2.6 Cr fully furnished.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false"><span>Should I choose the 3 BHK 2T or the 3 BHK 3T?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Choose the 3T if you want an attached bathroom for every bedroom and a noticeably larger living room (18'10" against 16'1" long). The 2T is about ₹29 lakh cheaper and works well for a nuclear family that is comfortable sharing one bathroom.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false"><span>Are 2 BHK homes still available at Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Concorde's current advertising only mentions 3 BHK homes, which suggests 2 BHK stock is limited. Ask for live availability before you plan around a 2 BHK.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Amenities and build</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false"><span>How good is the Evolve clubhouse at Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>It is about 7,900 sq ft on the 14th floor, with terrace amenities above it, about 150 ft off the ground. That is generous for a 217-home project: roughly 36 sq ft of clubhouse per home. Membership and part ownership are included with every apartment.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false"><span>What amenities does Concorde Mayfair have?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>40+ amenities including an infinity pool, sky gym, sky bar with party deck, yoga lawn, party lawn, outdoor café, mini amphitheatre, mini basketball and futsal courts, a kids' play area, working and reading pods, a reflexology path and a barbecue nook.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false"><span>What smart and green features are included?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Alexa-enabled homes with remote control of lights and appliances, digital door locks, four-level security, invisible grills, rainwater harvesting, STP water for flushing, aerated filters, smart water meters, 25+ native plant species and EV charging on request.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false"><span>Are the balconies at Concorde Mayfair big?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>No. Each sample plan has a single sit-out of about 30 to 39 sq ft off the dining area. If you want a large balcony, this is the project's biggest compromise.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">Location</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false"><span>How long does it take to reach the airport from Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Concorde quotes about 15 minutes via the elevated airport corridor beside the site. That holds off-peak. Plan for 25 to 35 minutes at busy times.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false"><span>When will the Yelahanka metro station near Concorde Mayfair open?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>The Yelahanka station is on the Blue Line's Hebbal to Airport section, currently targeted for September 2027. Treat that date as a target, not a guarantee.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false"><span>Is Concorde Mayfair good for Manyata Tech Park employees?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yes. Manyata, Kirloskar Business Park and Brigade Magnum are the nearest large office hubs, reachable via Bellary Road and Hebbal. It is a poor fit if you work in Whitefield, the southern ORR or Electronic City.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false"><span>Will traffic noise from Bellary Road be a problem?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>For units that face the highway, possibly. The commercial block buffers the towers and the windows are double glazed, but rear-facing units and higher floors will be quieter. Visit at peak hours before choosing a unit.</p></div></div>
+          </div>
+          <h3 class="faq-group-title">RERA and buying decision</h3>
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false"><span>Is Concorde Mayfair RERA registered?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Yes, under Karnataka RERA number PRM/KA/RERA/1251/309/PR/030524/006839, registered in May 2024. Possession is committed for November 2028.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false"><span>Is Concorde Mayfair a good investment?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>It is a sound end-use buy and a reasonable medium-term hold, helped by the Bellary Road address, low unit count and efficient plans. Rental yield will be modest: a 3 BHK might rent for roughly ₹40,000 to ₹50,000 a month after handover, about 2.4% to 3% gross.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false"><span>Who should buy Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Airport-linked professionals and frequent flyers, Manyata and Hebbal commuters, small families who value a quieter 217-home community, and buyers who like having shops and services on site.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false"><span>Who should skip Concorde Mayfair?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>Buyers who want large balconies or private terraces, those who need a 4 BHK, people working in South or East Bangalore, and anyone who wants a big township with acres of ground-level greenery.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)" id="faq-q24" aria-expanded="false"><span>How does Concorde Mayfair compare with other Yelahanka projects?</span><span class="faq-arrow">▼</span></button><div class="faq-answer"><p>It sits mid-market for the area: above Century Kindle (from about ₹1.18 Cr) on price, close to Vajram Chrysanthemum (from about ₹1.96 Cr), and well below the luxury tier on Bellary Road such as Divyasree The Quiet Side. Its edge is the Bellary Road frontage and the on-site retail.</p></div></div>
+          </div>
+        </section>
+
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/concorde-mayfair/" class="related-card">
+              <img src="/images/projects/concorde-mayfair/concorde-mayfair-bellary-road-dusk.webp" alt="Concorde Mayfair on Bellary Road at dusk" loading="lazy">
+              <div class="related-card-body"><p class="related-card-label">Featured Project</p><p class="related-card-title">Concorde Mayfair</p><p class="related-card-detail">2 &amp; 3 BHK · Bellary Road, Yelahanka</p></div>
+            </a>
+            <a href="/projects/concorde-sienna/" class="related-card">
+              <img src="/images/projects/concorde-sienna/concorde-sienna-banner.webp" alt="Concorde Sienna" loading="lazy">
+              <div class="related-card-body"><p class="related-card-label">Same Developer</p><p class="related-card-title">Concorde Sienna</p><p class="related-card-detail">2 &amp; 3 BHK · Hennur Main Road</p></div>
+            </a>
+            <a href="/projects/vajram-chrysanthemum/" class="related-card">
+              <img src="/images/projects-thumbs/vajram-chrysanthemum-thumb.webp" alt="Vajram Chrysanthemum" loading="lazy">
+              <div class="related-card-body"><p class="related-card-label">Related Project</p><p class="related-card-title">Vajram Chrysanthemum</p><p class="related-card-detail">3 &amp; 3.5 BHK · Avalahalli, Yelahanka</p></div>
+            </a>
+            <a href="/blog/top-upcoming-luxury-apartments-yelahanka-2026/" class="related-card">
+              <img src="/images/projects/concorde-mayfair/concorde-mayfair-living-dining-interior.webp" alt="Top luxury apartments in Yelahanka" loading="lazy">
+              <div class="related-card-body"><p class="related-card-label">Related Article</p><p class="related-card-title">Top Luxury Apartments in Yelahanka (2026)</p><p class="related-card-detail">Market Comparison · Yelahanka</p></div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="/images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh, Luxura Habitat</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity. Karnataka RERA agent PRM/KA/RERA/1251/310/AG/170823/000045.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="/images/projects/concorde-mayfair/concorde-mayfair-swimming-pool.webp" alt="Concorde Mayfair pool deck" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Concorde Mayfair</p>
+            <ul class="sidebar-specs">
+              <li>2 &amp; 3 BHK · 217 homes</li>
+              <li>3.17 acres · 4 towers · 61% open space</li>
+              <li>3 BHK ₹1.99 Cr to ₹2.28 Cr</li>
+              <li>Possession: November 2028</li>
+              <li>Bellary Road, Yelahanka</li>
+            </ul>
+            <a href="/projects/concorde-mayfair/" class="sidebar-cta">View Project Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Want the stamped cost sheet and the current offer? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Yelahanka</h4>
+          <a href="/projects/concorde-mayfair/">Concorde Mayfair</a>
+          <a href="/projects/concorde-sienna/">Concorde Sienna</a>
+          <a href="/areas/yelahanka/">Yelahanka Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+  <nav class="blog-mobile-cta" aria-label="Quick contact">
+    <a href="tel:+918438344093" class="blog-mobile-cta-btn btn-call"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
+    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20Concorde%20Mayfair%20review%20and%20would%20like%20the%20latest%20price%20list%20and%20floor%20plans" class="blog-mobile-cta-btn btn-whatsapp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+    <a href="/projects/concorde-mayfair/" class="blog-mobile-cta-btn btn-project">View Project</a>
+    <a href="/contact/" class="blog-mobile-cta-btn btn-enquire" data-blog-enquire>Enquire</a>
+  </nav>
+</body>
+</html>

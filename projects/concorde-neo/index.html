@@ -33,23 +33,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- High-Intent Meta Structure -->
-    <title>Concorde Neo, Thanisandra — 2 &amp; 3 BHK | Price &amp; RERA</title>
-    <meta name="description" content="Concorde Neo, Thanisandra Main Road — premium 2 &amp; 3 BHK apartments from &#8377;1.05 Cr. 6 towers, 424 units, ~78% open space, Sky Evolve Clubhouse. RERA approved.">
-    <meta name="keywords" content="Concorde Neo, Concorde Neo Thanisandra, Concorde Neo Thanisandra Main Road, Concorde Neo Bellahalli, Concorde Neo price, Concorde Neo floor plan, Concorde Neo RERA, Concorde Neo amenities, 2 BHK Thanisandra Main Road, 3 BHK apartments Thanisandra, apartments near Manyata Tech Park, Concorde Group Bengaluru">
+    <title>Concorde Neo Thanisandra: 2 &amp; 3 BHK Price, Floor Plans, RERA</title>
+    <meta name="description" content="Concorde Neo, Thanisandra Main Road: 424 homes in 6 towers. 2 BHK from &#8377;1.25 Cr*, 3 BHK from &#8377;1.53 Cr*. 7 floor plans with carpet areas, Evoolve clubhouse, RERA, possession 2028.">
+    <meta name="keywords" content="Concorde Neo, Concorde Neo Thanisandra, Concorde Neo price, Concorde Neo floor plan, Concorde Neo carpet area, Concorde Neo RERA, Concorde Neo possession, Concorde Neo review, Concorde Neo amenities, Evoolve clubhouse, 2 BHK Thanisandra Main Road, 3 BHK apartments Thanisandra, apartments near Manyata Tech Park, Concorde Group Bengaluru">
     <meta name="author" content="Luxura Habitat">
 
     <!-- Open Graph Social Protocol -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxurahabitat.com/projects/concorde-neo/">
-    <meta property="og:title" content="Concorde Neo, Thanisandra — Premium 2 &amp; 3 BHK Apartments">
-    <meta property="og:description" content="6 towers, 424 units on 4.02 acres with ~78% open space on Thanisandra Main Road. 2 &amp; 3 BHK from &#8377;1.05 Cr. RERA approved.">
+    <meta property="og:title" content="Concorde Neo, Thanisandra: 2 &amp; 3 BHK Apartments from &#8377;1.25 Cr*">
+    <meta property="og:description" content="424 homes in 6 towers on 4.02 acres with ~78% open space on Thanisandra Main Road. 7 floor plans, 1,125 to 1,539 sq ft. RERA registered, possession Oct to Dec 2028.">
     <meta property="og:image" content="https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-main-banner.webp">
-    <meta property="og:image:width" content="1100">
-    <meta property="og:image:height" content="493">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="860">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Concorde Neo, Thanisandra — 2 &amp; 3 BHK Apartments">
-    <meta name="twitter:description" content="6 towers, 424 units on 4.02 acres with ~78% open space on Thanisandra Main Road. From &#8377;1.05 Cr. RERA approved.">
+    <meta name="twitter:title" content="Concorde Neo, Thanisandra: 2 &amp; 3 BHK Price &amp; Floor Plans">
+    <meta name="twitter:description" content="6 towers, 424 homes, ~78% open space on Thanisandra Main Road. 2 BHK from &#8377;1.25 Cr*, 3 BHK from &#8377;1.53 Cr*. RERA registered.">
     <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-main-banner.webp">
 
     <!-- Robots Instructions -->
@@ -439,7 +439,7 @@
         }
 
         .faq-answer.open {
-            max-height: 400px;
+            max-height: 900px;
             padding: 0 1.3rem 1.1rem;
         }
         .gallery-grid {
@@ -864,138 +864,608 @@
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
+
+        /* Floor-plan based configuration cards */
+        .cfg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1.5rem; margin-top: 2.2rem; }
+        .cfg-card { background: #fff; border: 1px solid var(--border-light); border-top: 4px solid var(--accent-green); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 8px 22px rgba(2,6,23,.07); transition: transform .3s ease, box-shadow .3s ease; }
+        .cfg-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(2,6,23,.12); }
+        .cfg-plan { position: relative; display: block; width: 100%; background: #fff; border: none; border-bottom: 1px solid var(--border-light); padding: 12px; cursor: pointer; font-family: inherit; }
+        .cfg-plan img { width: 100%; height: 220px; object-fit: contain; display: block; }
+        .cfg-plan-cta { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); background: rgba(11,107,60,.92); color: #fff; font-size: .75rem; font-weight: 700; padding: .35rem .9rem; border-radius: 999px; white-space: nowrap; pointer-events: none; }
+        .cfg-body { padding: 1.3rem; display: flex; flex-direction: column; flex: 1; }
+        .cfg-tag { align-self: flex-start; background: rgba(212,165,116,.22); color: #7a5c2e; font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; padding: .25rem .7rem; border-radius: 999px; margin-bottom: .6rem; }
+        .cfg-body h3 { font-size: 1.45rem; font-weight: 900; color: var(--primary-dark); margin-bottom: .15rem; }
+        .cfg-range { color: var(--text-light); font-size: .88rem; margin-bottom: .9rem; }
+        .cfg-specs { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .7rem; margin-bottom: .9rem; }
+        .cfg-specs div { background: var(--bg-light); border-radius: 8px; padding: .45rem .6rem; }
+        .cfg-specs dt { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: #6b7280; }
+        .cfg-specs dd { font-weight: 800; color: var(--primary-dark); font-size: .92rem; }
+        .cfg-rooms { list-style: none; font-size: .84rem; color: var(--text-light); margin-bottom: 1rem; }
+        .cfg-rooms li { padding: .25rem 0 .25rem 1rem; position: relative; border-bottom: 1px dashed #ece8e1; }
+        .cfg-rooms li::before { content: '\2022'; position: absolute; left: .1rem; color: var(--accent-green); }
+        .cfg-price { margin-top: auto; margin-bottom: .9rem; }
+        .cfg-price strong { font-size: 1.6rem; color: var(--primary-dark); font-weight: 900; }
+        .cfg-price span { color: var(--text-light); font-size: .85rem; margin-left: .3rem; }
+        .cfg-actions { display: flex; gap: .6rem; }
+        .cfg-actions button, .cfg-actions a { flex: 1; text-align: center; border-radius: 999px; padding: .65rem .8rem; font-weight: 800; font-size: .85rem; text-decoration: none; border: none; cursor: pointer; font-family: inherit; }
+        .cfg-btn { background: var(--accent-green); color: #fff; }
+        .cfg-btn:hover { background: #075b31; }
+        .cfg-wa { background: #128c4f; color: #fff; }
+        .section-note { font-size: .85rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 1.4rem auto 0; line-height: 1.7; }
+
+        /* Clubhouse band, amenity legend and photo cards */
+        .club-band { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.4rem; align-items: center; margin: 2.2rem 0 2.6rem; }
+        .club-band img { width: 100%; border-radius: 12px; box-shadow: 0 14px 34px rgba(2,6,23,.1); cursor: pointer; background: #fff; }
+        .club-band h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--primary-dark); margin-bottom: .8rem; }
+        .club-band p { color: var(--text-light); margin-bottom: .9rem; }
+        .chip-list { display: flex; flex-wrap: wrap; gap: .5rem; }
+        .chip-list span { background: #fff; border: 1px solid rgba(11,107,60,.2); border-radius: 999px; padding: .35rem .8rem; font-size: .82rem; font-weight: 600; color: var(--primary-dark); }
+        .amenity-photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 1.2rem; margin-top: 2.4rem; }
+        .amenity-photo { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(2,6,23,.06); margin: 0; cursor: pointer; }
+        .amenity-photo img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; display: block; }
+        .amenity-photo figcaption { padding: .8rem 1rem; }
+        .amenity-photo strong { display: block; color: var(--primary-dark); font-size: .98rem; }
+        .amenity-photo span { font-size: .78rem; color: var(--text-light); }
+        .feature-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .feature-strip div { background: #fff; border-left: 4px solid var(--accent-warm); border-radius: 10px; padding: 1rem 1.1rem; box-shadow: 0 6px 18px rgba(2,6,23,.05); }
+        .feature-strip strong { display: block; color: var(--primary-dark); font-size: 1rem; margin-bottom: .2rem; }
+        .feature-strip span { color: var(--text-light); font-size: .85rem; }
+
+        /* Master plan legend */
+        .legend-list { columns: 2; column-gap: 1.6rem; list-style: none; counter-reset: lg; font-size: .86rem; color: var(--text-light); margin-top: .4rem; }
+        .legend-list li { counter-increment: lg; break-inside: avoid; padding: .2rem 0 .2rem 1.9rem; position: relative; }
+        .legend-list li::before { content: counter(lg); position: absolute; left: 0; top: .2rem; width: 1.45rem; height: 1.45rem; border-radius: 50%; background: rgba(11,107,60,.12); color: var(--accent-green); font-size: .7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+
+        /* Tabbed gallery */
+        .neo-tabs { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin: 1.6rem 0 1.6rem; }
+        .neo-tabs button { border: 1px solid var(--accent-green); background: #fff; color: var(--accent-green); border-radius: 999px; padding: .45rem 1.1rem; font-family: inherit; font-weight: 700; font-size: .85rem; cursor: pointer; }
+        .neo-tabs button.active { background: var(--accent-green); color: #fff; }
+        .neo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 1rem; }
+        .neo-gal-item { position: relative; margin: 0; border-radius: 12px; overflow: hidden; cursor: pointer; height: 240px; background: #f1efeb; box-shadow: 0 6px 18px rgba(2,6,23,.08); }
+        .neo-gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; display: block; }
+        .neo-gal-item.contain img { object-fit: contain; background: #fff; }
+        .neo-gal-item:hover img { transform: scale(1.06); }
+        .neo-gal-item figcaption { position: absolute; left: 10px; bottom: 10px; right: 10px; width: fit-content; max-width: calc(100% - 20px); background: rgba(0,0,0,.62); color: #fff; font-size: .75rem; padding: .25rem .7rem; border-radius: 999px; pointer-events: none; }
+        .neo-gal-item.hidden { display: none; }
+
+        /* Honest notes */
+        .honest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.2rem; margin-top: 2rem; }
+        .honest-card { background: #fff; border-radius: 12px; padding: 1.3rem 1.4rem; border: 1px solid var(--border-light); border-top: 4px solid var(--accent-warm); box-shadow: 0 6px 18px rgba(2,6,23,.05); }
+        .honest-card h3 { color: var(--primary-dark); font-size: 1.05rem; font-weight: 900; margin-bottom: .5rem; }
+        .honest-card p { color: var(--text-light); font-size: .9rem; line-height: 1.7; }
+        .honest-card a { color: var(--accent-green); font-weight: 700; }
+        .faq-group-title { font-family: 'Playfair Display', serif; color: var(--primary-dark); font-size: 1.2rem; max-width: 900px; margin: 2.2rem auto 0; }
+
+        @media (max-width: 900px) {
+            .club-band { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 540px) {
+            .legend-list { columns: 1; }
+            .cfg-specs { grid-template-columns: 1fr 1fr; }
+        }
     </style>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": "Concorde Neo",
+  "description": "Concorde Neo is a 6-tower, 424-home apartment project by Concorde Group on Thanisandra Main Road, North Bengaluru, with 2 BHK (1,125 to 1,241 sq ft) and 3 BHK (1,482 to 1,539 sq ft) homes, an Evoolve sky clubhouse and about 78% open space.",
+  "url": "https://luxurahabitat.com/projects/concorde-neo/",
+  "image": [
+    "https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-main-banner.webp",
+    "https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp",
+    "https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-site-layout-plan-amenity-legend.webp"
+  ],
+  "datePosted": "2026-08-07",
+  "dateModified": "2026-10-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Thanisandra Main Road, RK Hegde Nagar / Bellahalli",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.0827,
+    "longitude": 77.6291
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "INR",
+    "lowPrice": 12500000,
+    "offerCount": 7,
+    "availability": "https://schema.org/InStock"
+  },
+  "about": {
+    "@type": "ApartmentComplex",
+    "name": "Concorde Neo",
+    "numberOfAccommodationUnits": 424,
+    "petsAllowed": true,
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Evoolve sky clubhouse",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Swimming pool",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Gymnasium",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Cricket practice pitch",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Futsal court",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Pet park",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Jogging track",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Co-working business lounge",
+        "value": true
+      }
+    ],
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "Karnataka RERA Registration Number",
+      "value": "PRM/KA/RERA/1251/309/PR/270924/007088"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Thanisandra, North Bengaluru"
+    }
+  },
+  "agent": {
+    "@type": "RealEstateAgent",
+    "name": "Luxura Habitat",
+    "telephone": "+918438344093",
+    "email": "projectinfoindia@gmail.com"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "RealEstateListing",
-      "name": "Concorde Neo",
-      "description": "Concorde Neo, Thanisandra Main Road — premium 2 & 3 BHK apartments by Concorde Group in North Bengaluru.",
-      "url": "https://luxurahabitat.com/projects/concorde-neo/",
-      "image": "https://luxurahabitat.com/images/projects/concorde-neo/concorde-neo-main-banner.webp",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Thanisandra, North Bengaluru",
-        "addressRegion": "Karnataka",
-        "addressCountry": "IN"
-      },
-      "about": {
-        "@type": "HousingProject",
-        "name": "Concorde Neo",
-        "numberOfAccommodationUnits": "2 & 3 BHK Apartments",
-        "identifier": {
-          "@type": "PropertyValue",
-          "name": "Karnataka RERA Registration Number",
-          "value": "PRM/KA/RERA/1251/309/PR/270924/007088"
-        }
-      },
-      "agent": {
-        "@type": "RealEstateAgent",
-        "name": "Luxura Habitat",
-        "telephone": "+918438344093",
-        "email": "projectinfoindia@gmail.com"
+      "@type": "Question",
+      "name": "What is Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde Neo is a 6-tower high-rise apartment project by Concorde Group on Thanisandra Main Road, North Bengaluru. It has 424 homes in 2 BHK and 3 BHK layouts on about 4.02 acres, with each tower rising 2 basements + ground + 18 floors. It was RERA registered in September 2024, launched in October 2024, and possession is expected between October and December 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where exactly is Concorde Neo located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Thanisandra Main Road at RK Hegde Nagar / Bellahalli in North Bengaluru, between Jakkur and Hennur. Manyata Tech Park, Hebbal and the Bellary Road (NH 44) approach to the airport are all within reasonable reach, and REVA University is close by."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the developer of Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde Group, a Bengaluru developer founded in 1998 that has delivered about 18 million sq ft across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber. Its current North Bengaluru projects also include Concorde Sienna in Hennur and Concorde Mayfair in Yelahanka."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo 4.02 acres or 4.34 acres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most sources, including the project's own material, give 4.02 acres. One listing quotes 4.34 acres. The gap is small enough to be a rounding or setback-inclusion difference, but ask the sales team which figure is on the RERA filing and check the approved plan on the Karnataka RERA portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many towers and floors does Concorde Neo have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six towers, lettered A to F on the builder's key plan. Each is 2 basements + ground + 18 floors. On the floor plans, homes in Towers C, D and E run from the 2nd to the 18th floor, while Tower F homes run from the 2nd to the 16th floor, with the Evoolve clubhouse on the 17th and 18th floors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many apartments are there in Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "424 apartments in total, split between 2 BHK and 3 BHK homes across the six towers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo pre-launch or under construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is past the pre-launch stage. The project was RERA registered on 27 September 2024 and launched in October 2024, and it is now under construction with possession expected between October and December 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much open space does Concorde Neo have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde says about 78% of the 4.02-acre site is open space. Keeping the six towers in a compact central cluster frees up the edges of the plot for the pool, sports courts, play areas and gardens shown on the master plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What configurations are available at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2 BHK 2T homes from 1,125 to 1,241 sq ft super built-up (727 to 818 sq ft carpet), 3 BHK 2T homes of 1,482 to 1,486 sq ft (978 to 983 sq ft carpet) and a 3 BHK 3T of 1,539 sq ft (1,024 sq ft carpet). There are no 1 BHK, 4 BHK or villa units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 2 BHK sizes at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The builder's floor plans show five 2 BHK 2T variants: 1,125 sq ft (727 carpet, East, C-04 stack), 1,130 sq ft (733 carpet, East, C-03 stack), 1,134 sq ft (732 carpet, West, D-03 stack), 1,199 sq ft (784 carpet, West, D-02 stack) and 1,241 sq ft (818 carpet, West, C-01 stack)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 3 BHK sizes at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three 3 BHK plans: a 3 BHK 2T of 1,482 sq ft (978 sq ft carpet, East, E-04 stack), a 3 BHK 2T of 1,486 sq ft (983 sq ft carpet, West, F-01 stack) and a 3 BHK 3T of 1,539 sq ft (1,024 sq ft carpet, West, E-01 stack)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the carpet area of Concorde Neo apartments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet areas on the builder's floor plans range from 727 sq ft for the smallest 2 BHK to 1,024 sq ft for the 3 BHK 3T. Balconies are listed separately and add 47 to 57 sq ft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some listings show Concorde Neo sizes of 710 to 1,023 sq ft?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Those figures are carpet areas, not a data error or a smaller unit type. The floor plans show 727 to 1,024 sq ft of carpet for the same homes that are 1,125 to 1,539 sq ft super built-up. Always compare projects on the same measure, and get the carpet area of your specific unit in the agreement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the carpet-area efficiency at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 65% to 66.5% carpet to super built-up across all seven plans, or roughly 69% to 70% if you count the balcony. That is around average to slightly above average for a high-rise with a sky-level clubhouse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a 3 BHK with three bathrooms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The 3 BHK 3T is 1,539 sq ft super built-up with 1,024 sq ft carpet, a 14'10\" x 11'4\" master bedroom, a separate foyer and a 9'10\" x 5'1\" balcony. The floor plan shows it in the E-01 stack, West facing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Concorde Neo units are East facing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On the floor plans we have seen, the East-facing homes are the 1,125 and 1,130 sq ft 2 BHKs in Tower C and the 1,482 sq ft 3 BHK 2T in Tower E. The 1,134, 1,199 and 1,241 sq ft 2 BHKs, the 1,486 sq ft 3 BHK 2T and the 1,539 sq ft 3 BHK 3T are West facing. Confirm the facing of your exact unit on the allotment letter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big are the balconies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each home has one balcony of 47 to 57 sq ft. In the 2 BHKs it measures about 5'7\" x 7'10\" to 9'10\" x 4'11\", and in the 3 BHKs about 5'9\" x 9'3\" to 9'10\" x 5'1\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big are the bedrooms in the Concorde Neo 2 BHK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Master bedrooms run from 11'6\" x 11'4\" (in the 1,199 and 1,241 sq ft plans) to 11'9\" x 14'4\" (in the 1,125 to 1,134 sq ft plans). Second bedrooms are about 9'11\" x 10'11\" to 12'4\" x 9'10\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big is the master bedroom in the 3 BHK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "11'9\" x 17'0\" in the 1,482 sq ft 3 BHK 2T, which is long enough for a sitting area, and 14'10\" x 11'4\" in the 1,539 sq ft 3 BHK 3T."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Concorde Neo have 4 BHK apartments or villas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The project only has 2 BHK and 3 BHK apartments. If you need a 4 BHK in this corridor, look at Meenakshi High Life in Rachenahalli."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price of Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde's current advertising quotes 2 BHK homes from ₹1.25 Cr* and 3 BHK homes from ₹1.53 Cr*. Prices vary by tower, floor and facing, and exclude GST, stamp duty and registration, so ask for a written price sheet for the exact unit you are considering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price per sq ft at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At the advertised starting prices, the 2 BHK works out to about ₹11,100 per sq ft on super built-up area (about ₹17,200 per sq ft of carpet) and the 3 BHK to about ₹10,300 per sq ft (about ₹15,600 per sq ft of carpet). Launch-era listings in 2024 quoted ₹8,800 to ₹10,700 per sq ft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why have I seen Concorde Neo prices from ₹99 lakh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Those are launch-era listings from late 2024, when 2 BHK homes were quoted from about ₹99 lakh to ₹1.09 Cr. Prices have moved up since, and different portals also mix base prices with all-in prices. Rely on a written, unit-specific quote rather than the lowest figure you find online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the all-in cost of a Concorde Neo 2 BHK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a ₹1.25 Cr base price, add about ₹6.3 lakh GST (5%), about ₹7 lakh stamp duty with surcharge and cess, about ₹1.25 lakh registration and ₹3 to 6 lakh for parking, deposits and utility charges if billed separately. That comes to roughly ₹1.43 to 1.46 Cr before interiors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GST charged on Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As an under-construction project, Concorde Neo attracts 5% GST on the agreement value (without input tax credit). GST does not apply to resale or completed homes with an occupancy certificate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo mortgaged to a lender? Is that a red flag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The project is reported as financed by and mortgaged to Aditya Birla Housing Finance. That is standard practice for under-construction projects and not a red flag on its own, but ask your lawyer to check the mortgage details against the RERA filing and make sure the lender's NOC is issued for your unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which banks give home loans for Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask the sales team for the list of banks that have approved the project. Most major lenders fund RERA-registered projects from established developers, and the project's construction finance comes from Aditya Birla Housing Finance. Compare rates in our home loan rate comparison before you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the payment plan for Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde has not published a standard payment schedule. Ask for the construction-linked payment plan in writing, check that each instalment is tied to a verifiable construction milestone, and confirm the booking amount and the refund terms before paying."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo RERA approved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is registered with Karnataka RERA under PRM/KA/RERA/1251/309/PR/270924/007088. The number decodes to a registration date of 27 September 2024, which lines up with the October 2024 launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I verify Concorde Neo on the Karnataka RERA portal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to rera.karnataka.gov.in, open the project search, and enter the registration number PRM/KA/RERA/1251/309/PR/270924/007088. Check the approved plan, land area, unit count, the declared completion date and the quarterly progress updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is Concorde Neo possession?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Listings give possession as October 2028 or December 2028. Confirm the completion date declared on the RERA registration before booking, since that is the date the developer is legally bound to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Evoolve clubhouse at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evoolve is Concorde's clubhouse brand. At Neo it is a 7,000 sq ft, sky-level, multi-tier clubhouse on the 17th and 18th floors, about 169 ft above the ground, with indoor games, a gym, a yoga room, a dance and Zumba studio, a business lounge and a multipurpose hall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What amenities does Concorde Neo offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Over 40, including a swimming pool and kids' pool, gym, yoga room, indoor games, Zumba and dance studio, business lounge and work stations, multipurpose hall, virtual golf, billiards, table tennis, a cricket practice pitch, futsal court, mini tennis and basketball courts, skating rink, rock-climbing wall, jogging and cycle tracks, an amphitheatre, outdoor gym, pet park and reflexology pathway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Concorde Neo have a swimming pool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The master plan shows a swimming pool with a separate kids' pool, a pool deck, a cabana, change rooms and a party deck with a barbecue corner beside it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sports facilities are there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cricket practice pitch, a futsal court, a mini tennis court, a mini basketball court, a skating rink and a rock-climbing wall outdoors, plus virtual golf, table tennis and billiards indoors. A jogging track and a cycle track run along the internal driveway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo pet friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The master plan includes a dedicated pet park. Ask for the association's draft bye-laws on pets in lifts and common areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is there for children and senior citizens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For children: a kids' play zone, a sand pit, a nanny's corner and a kids' pool. For older residents: an elders' seating court, a reflexology pathway, a floral garden and a yoga deck and lawn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a co-working space at Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The clubhouse has a business lounge and work stations, which is useful for hybrid workers who want a quiet space outside the flat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What smart home and safety features does Concorde Neo have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concorde markets tech-integrated smart homes, four-level security and 7 ft tall windows. Ask for the detailed specification sheet, including flooring, sanitaryware, electrical brands and the smart-home kit, and attach it to your agreement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Manyata Tech Park from Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manyata Tech Park is a short drive south via Thanisandra Main Road and Nagavara. Thanisandra Main Road carries heavy peak-hour traffic, so judge the commute by drive time at rush hour, not by straight-line distance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Kempegowda International Airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 26 km, roughly 35 to 40 minutes off-peak via Bellary Road (NH 44)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is the nearest metro station?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nagawara, an upcoming metro interchange south of the project. Until it opens, the nearest rail link is Yelahanka Junction, about 9 km away."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which schools and hospitals are near Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "REVA University, EuroSchool North Campus and Manipal Global Education are nearby, along with Rainbow Hospital for Children in Jakkur and Manipal and Aster CMI hospitals along the Hebbal and ORR corridor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is traffic a problem on Thanisandra Main Road?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at peak hours. The road has seen a wave of new launches in the last two years, and construction traffic and social infrastructure such as schools and hospitals are still catching up with the pace of new towers. Visit at rush hour before you decide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Concorde Neo a good investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a reasonable mid-market buy for end users who work around Manyata, Hebbal or the airport corridor, with a 2028 handover. The heavy new supply on Thanisandra Main Road keeps prices competitive, which helps buyers but may slow short-term appreciation, so treat it as a medium-term hold rather than a quick flip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Concorde Neo vs Goyal Orchid Salisbury: which is better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are on Thanisandra Main Road with 2028 possession. Orchid Salisbury is larger (about 660 homes in 7 towers) with 2 BHKs from about ₹1.13 Cr and RERA possession in December 2028. Neo has 424 homes, a sky-level clubhouse and 3 BHK 3T options. Compare carpet area and the price of the exact unit, not the headline rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Concorde Neo vs Concorde Sienna: what is the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are by the same developer. Sienna is a single 92 m tower on Hennur Main Road with 2 and 3 BHK homes from about ₹1.26 Cr. Neo spreads 424 homes over six towers on Thanisandra Main Road, so it has more open space around the towers and a larger community."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which other projects should I compare with Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On the same corridor, Sobha Athena and TVS Emerald Auralis are recent launches worth cross-shopping on price per sq ft and possession dates. Goyal Orchid Salisbury and Meenakshi High Life (Rachenahalli) are nearby alternatives we cover in detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should buy Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buyers who work at Manyata Tech Park, Hebbal or along the airport corridor, small families who want a 2 BHK or 3 BHK with a full amenity set, and buyers who value a sky-level clubhouse and a lot of ground-level open space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should skip Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anyone who needs a 4 BHK, buyers who want possession before 2028, people working in South or East Bengaluru, and anyone who wants a quiet, low-traffic approach road."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I check before booking Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The RERA-registered floor plan and carpet area of your unit, a written price sheet for your exact tower and floor, the RERA completion date, the lender's NOC for the Aditya Birla Housing Finance mortgage, the specification sheet and the payment plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a site visit to Concorde Neo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the enquiry form, WhatsApp or call button on the Concorde Neo project page. We will share the latest price sheet and floor plans and arrange a visit to the sales office."
       }
     }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is Concorde Neo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Concorde Neo is a pre-launch high-rise residential project by Concorde Group — 6 towers with 2 basements plus ground/stilt plus 18 floors, offering premium 2 and 3 BHK apartments on Thanisandra Main Road, North Bengaluru."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where exactly is Concorde Neo located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The project is located on Thanisandra Main Road at RK Hegde Nagar / Bellahalli, North Bengaluru, close to Kogilu and Jakkur, with quick access to Manyata Tech Park, Bhartiya City and the Outer Ring Road."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What configurations and sizes are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Concorde Neo offers 2 BHK homes (1,107–1,241 sq ft) and 3 BHK homes (1,477–1,539 sq ft) across 6 towers, with a total of 424 units."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the starting price of Concorde Neo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Prices start from ₹1.05 Cr onwards for a 2 BHK, going up to around ₹1.68 Cr for the largest 3 BHK layout. Please enquire for the latest pre-launch price list."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is Concorde Neo RERA approved?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, the project is registered under Karnataka RERA with registration number PRM/KA/RERA/1251/309/PR/270924/007088."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How big is the project and how many units does it have?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Concorde Neo is spread across 4.02 acres with 424 units across 6 towers, leaving approximately 78% of the land as open space."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What amenities does Concorde Neo offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Amenities include the multi-level Sky Evolve Clubhouse (~7,000 sq ft on the 17th and 18th floors), a swimming pool, gymnasium, yoga and meditation deck, co-working space and business lounge, indoor and outdoor sports courts, a children's play area, an open-air amphitheatre and smart-home features."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How tall are the Concorde Neo towers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The project has 6 towers, each configured as 2 basements plus ground/stilt plus 18 floors."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is Concorde Neo a good investment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Thanisandra Main Road is a fast-growing North Bengaluru corridor with quick access to Manyata Tech Park, Bhartiya City, the Outer Ring Road and the airport, which supports both rental demand and long-term capital appreciation for early pre-launch buyers."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How far is Manyata Tech Park from Concorde Neo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Manyata Tech Park is a short drive away via Thanisandra Main Road and Nagavara, within North Bengaluru's established IT commute corridor."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Who is the developer of Concorde Neo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Concorde Neo is developed by Concorde Group, a Bangalore-based real estate developer with a growing North Bengaluru portfolio that also includes Concorde Sienna in Hennur and Concorde Mayfair in Yelahanka."
-        }
-      }, {
-        "@type": "Question",
-        "name": "When is possession expected?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Concorde Neo's expected possession window is December 2028 to October 2029, as per the project's early planning schedule — please confirm the RERA-registered date before booking."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I book a site visit or register early interest?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page."
-        }
-      }]
-    }
+  ]
+}
     </script>
     <script type="application/ld+json">
 {
@@ -1061,7 +1531,7 @@
     </div>
 
     <nav>
-        <a href="#" class="project-brand" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <a href="#" class="project-brand" aria-label="Luxura Habitat, back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
             <span class="partner-caption">Real Estate Advisory</span>
@@ -1073,13 +1543,14 @@
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero">Overview</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#configurations">Floor Plans</a></li>
             <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#units">Master Plan</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#units">Unit Plans</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#location">Location</a></li>
+            <li><a href="#faq">FAQs</a></li>
             <li><a href="#form">Enquire</a></li>
         </ul>
 
@@ -1107,10 +1578,10 @@
                     <span style="font-weight:700;font-size:1rem;letter-spacing:4px;color:var(--accent-green);margin-top:2px;">NEO</span>
                 </a>
 
-                <div class="hero-badge">Pre-Launch</div>
-                <h1>Concorde Neo, Thanisandra — Premium 2 &amp; 3 BHK Apartments on Thanisandra Main Road</h1>
+                <div class="hero-badge">RERA Registered &middot; Under Construction</div>
+                <h1>Concorde Neo, Thanisandra: 2 &amp; 3 BHK Apartments on Thanisandra Main Road</h1>
                 <p class="hero-intro">
-                    6 iconic towers on Thanisandra Main Road, Bellahalli — 2 &amp; 3 BHK residences across 4.02 acres with ~78% open space, a multi-level Sky Evolve Clubhouse and co-working space.
+                    424 homes in 6 towers on 4.02 acres with ~78% open space, a 7,000 sq ft Evoolve sky clubhouse and 7 floor plans from 1,125 to 1,539 sq ft. Possession October to December 2028.
                 </p>
 
                 <div class="hero-info-boxes">
@@ -1119,7 +1590,7 @@
                             <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
                                 <div class="info-box-title">2 &amp; 3 BHK</div>
-                                <div class="info-box-subtitle">424 Residences</div>
+                                <div class="info-box-subtitle">1,125 to 1,539 sq ft &middot; 424 homes</div>
                             </div>
                         </div>
                         <div class="info-row">
@@ -1133,17 +1604,17 @@
 
                     <div class="info-box price-box">
                         <span class="price-copy">Starting From</span>
-                        <span class="price-line"><span class="new-price">₹1.05 Cr</span></span>
-                        <span class="offer-note">2 BHK onwards · pre-launch pricing</span>
+                        <span class="price-line"><span class="new-price">₹1.25 Cr*</span></span>
+                        <span class="offer-note">2 BHK onwards &middot; 3 BHK from ₹1.53 Cr*</span>
                     </div>
                 </div>
 
-                <a href="#pricing" class="config-link" style="color:var(--accent-green);font-weight:800;font-size:0.92rem;text-decoration:none;margin-top:-0.4rem;">View Configurations &amp; Pricing &rarr;</a>
+                <a href="#configurations" class="config-link" style="color:var(--accent-green);font-weight:800;font-size:0.92rem;text-decoration:none;margin-top:-0.4rem;">View All 7 Floor Plans &amp; Prices &rarr;</a>
             </div>
 
             <div class="hero-form-section reveal" style="transition-delay:120ms;">
                 <h3 class="hero-form-title">Express Your Interest</h3>
-                <span class="hero-form-subtitle">Register now for exclusive pre-launch offers &amp; floor plans.</span>
+                <span class="hero-form-subtitle">Get the latest price sheet, floor plans &amp; availability.</span>
 
                 <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
                     <input type="hidden" name="access_key" value="c6eda406-8588-421e-af25-461743b3179e">
@@ -1160,61 +1631,61 @@
     </section>
 
     <div class="trust-bar">
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Approved</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 6 Towers · 424 Units</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> RERA Registered</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 6 Towers &middot; 424 Homes</div>
         <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ~78% Open Space</div>
-        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Trusted Concorde Group</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Possession Oct to Dec 2028</div>
     </div>
 
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">Concorde Neo Overview</h2>
-            <p class="section-subtitle">An iconic vertical masterpiece by Concorde Group on Thanisandra Main Road.</p>
+            <p class="section-subtitle">A 6-tower, 424-home community by Concorde Group on Thanisandra Main Road, North Bengaluru.</p>
 
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <h3>Iconic vertical living on Thanisandra Main Road</h3>
+                    <h3>Mid-market 2 &amp; 3 BHK homes on a fast-growing corridor</h3>
                     <p>
-                        Concorde Neo is a pre-launch residential project by Concorde Group on Thanisandra Main Road, RK Hegde Nagar / Bellahalli, North Bengaluru. Spread across 4.02 acres, it uses a 6-tower vertical format — each tower rising 2 basements plus ground/stilt plus 18 floors — to leave approximately 78% of the surface area open for landscaped greenery and active sports zones.
+                        Concorde Neo sits on Thanisandra Main Road at RK Hegde Nagar / Bellahalli, a corridor that has become one of North Bengaluru's busiest new-launch stretches over the last two years. Manyata Tech Park, Hebbal and the Bellary Road (NH 44) approach to the airport are all within reasonable reach, and REVA University is close by.
                     </p>
                     <p>
-                        The project offers exclusively 2 BHK and 3 BHK smart residences, with a total of 424 units. Layouts are optimised for privacy, natural light and cross-ventilation, backed by the multi-level Sky Evolve Clubhouse, a co-working space and business lounge for the new-age professional.
+                        The project places 424 homes in six towers (A to F), each 2 basements + ground + 18 floors, on about 4.02 acres. Keeping the towers in a compact central cluster leaves roughly 78% of the site open for a pool, sports courts, play areas and gardens. Homes are 2 BHK and 3 BHK only, in seven floor plans from 1,125 to 1,539 sq ft super built-up (727 to 1,024 sq ft carpet). The project was RERA registered in September 2024, launched in October 2024 and is due for possession between October and December 2028.
                     </p>
 
                     <div class="features-list">
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
                             <div>
-                                <h3>6 Majestic Towers</h3>
-                                <p>2 Basements + Ground/Stilt + 18 Floors, 424 units.</p>
+                                <h3>6 Towers, 424 Homes</h3>
+                                <p>Towers A to F, 2B + G + 18 floors each.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
                             <div>
                                 <h3>~78% Open Space</h3>
-                                <p>4.02 acres with landscaped greenery &amp; sports zones.</p>
+                                <p>33 landscaped and sports zones on 4.02 acres.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
                             <div>
-                                <h3>Sky Evolve Clubhouse</h3>
-                                <p>~7,000 sq ft on the 17th &amp; 18th floors.</p>
+                                <h3>Evoolve Sky Clubhouse</h3>
+                                <p>7,000 sq ft, 169 ft above ground.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
                             <div>
-                                <h3>Prime Thanisandra Location</h3>
-                                <p>Quick access to Bhartiya City &amp; Manyata Tech Park.</p>
+                                <h3>RERA Registered</h3>
+                                <p>Registered 27 September 2024.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal" style="transition-delay:160ms;">
-                    <img class="about-visual" src="/images/projects/concorde-neo/concorde-neo-clubhouse.webp" alt="Concorde Neo Sky Evolve Clubhouse interior view">
+                    <img class="about-visual" src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo aerial render showing the six towers, pool and sports courts" style="object-position:center 40%;">
                 </div>
             </div>
         </div>
@@ -1223,7 +1694,7 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Project Highlights</h2>
-            <p class="section-subtitle">Key details for Concorde Neo — ready for quick comparison and easy discovery.</p>
+            <p class="section-subtitle">Every key Concorde Neo fact in one place. Sizes are read from the builder's own floor plans.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
                 <table class="highlights-table" aria-label="Concorde Neo project highlights">
@@ -1234,193 +1705,361 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Developer</strong></td><td>Concorde Group</td></tr>
+                        <tr><td><strong>Developer</strong></td><td>Concorde Group (Bengaluru, est. 1998)</td></tr>
                         <tr><td><strong>Location</strong></td><td>Thanisandra Main Road, RK Hegde Nagar / Bellahalli, North Bengaluru</td></tr>
-                        <tr><td><strong>Land Area</strong></td><td>4.02 Acres</td></tr>
-                        <tr><td><strong>Total Units</strong></td><td>424 Apartments</td></tr>
-                        <tr><td><strong>Building Structure</strong></td><td>6 Towers — 2 Basements + Ground/Stilt + 18 Floors</td></tr>
-                        <tr><td><strong>Open Space</strong></td><td>Approximately 78% of the land parcel</td></tr>
-                        <tr><td><strong>Configurations</strong></td><td>2 BHK &amp; 3 BHK, 1,107 – 1,539 Sq.Ft</td></tr>
-                        <tr><td><strong>Project Status</strong></td><td>Pre-Launch</td></tr>
-                        <tr><td><strong>Expected Possession</strong></td><td>December 2028 – October 2029</td></tr>
-                        <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1251/309/PR/270924/007088</td></tr>
+                        <tr><td><strong>Land Area</strong></td><td>4.02 acres (one listing quotes 4.34 acres; confirm against the RERA filing)</td></tr>
+                        <tr><td><strong>Total Homes</strong></td><td>424 apartments</td></tr>
+                        <tr><td><strong>Towers</strong></td><td>6 towers (A to F), 2 basements + ground + 18 floors</td></tr>
+                        <tr><td><strong>Open Space</strong></td><td>About 78% of the site</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>2 BHK 2T, 3 BHK 2T and 3 BHK 3T (7 floor plans)</td></tr>
+                        <tr><td><strong>Super Built-up Area</strong></td><td>2 BHK 1,125 to 1,241 sq ft &middot; 3 BHK 1,482 to 1,539 sq ft</td></tr>
+                        <tr><td><strong>Carpet Area</strong></td><td>2 BHK 727 to 818 sq ft &middot; 3 BHK 978 to 1,024 sq ft</td></tr>
+                        <tr><td><strong>Carpet Efficiency</strong></td><td>About 65% to 66.5% (about 69% to 70% with balcony)</td></tr>
+                        <tr><td><strong>Starting Price</strong></td><td>2 BHK &#8377;1.25 Cr* &middot; 3 BHK &#8377;1.53 Cr*</td></tr>
+                        <tr><td><strong>Clubhouse</strong></td><td>Evoolve, 7,000 sq ft sky-level multi-tier clubhouse on the 17th and 18th floors</td></tr>
+                        <tr><td><strong>Amenities</strong></td><td>40+ indoor and outdoor amenities</td></tr>
+                        <tr><td><strong>Launch</strong></td><td>October 2024</td></tr>
+                        <tr><td><strong>Expected Possession</strong></td><td>October to December 2028 (confirm the RERA completion date)</td></tr>
+                        <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1251/309/PR/270924/007088 (registered 27 September 2024)</td></tr>
+                        <tr><td><strong>Project Finance</strong></td><td>Reported as financed by and mortgaged to Aditya Birla Housing Finance</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
 
+    <section class="pricing" id="configurations">
+        <div class="container">
+            <h2 class="section-title">Configurations &amp; Floor Plans</h2>
+            <p class="section-subtitle">All seven Concorde Neo layouts, with super built-up (SBA) and carpet areas listed separately so you can compare like for like. Room sizes are taken from the builder's unit plans.</p>
+
+            <div class="cfg-grid">
+                <article class="cfg-card reveal">
+                    <button type="button" class="cfg-plan" onclick="toggleDetailsPanel()" aria-label="Request the 2 BHK 2T 1,125 sq ft floor plan">
+                        <img src="/images/projects/concorde-neo/concorde-neo-2bhk-1130-sqft-733-carpet-east-floor-plan.webp" alt="Concorde Neo 2 BHK 2T floor plan, 1,130 sq ft super built-up, 733 sq ft carpet, East facing, Tower C" loading="lazy">
+                        <span class="cfg-plan-cta">Get full floor plan PDF</span>
+                    </button>
+                    <div class="cfg-body">
+                        <span class="cfg-tag">Compact 2 BHK</span>
+                        <h3>2 BHK 2T</h3>
+                        <p class="cfg-range">1,125 to 1,134 sq ft SBA &middot; 3 mirror variants</p>
+                        <dl class="cfg-specs"><div><dt>Super built-up</dt><dd>1,125 to 1,134 sq ft</dd></div><div><dt>Carpet area</dt><dd>727 to 733 sq ft</dd></div><div><dt>Balcony</dt><dd>47 to 48 sq ft</dd></div><div><dt>Toilets</dt><dd>2</dd></div><div><dt>Facing</dt><dd>East (C-03, C-04) / West (D-03)</dd></div><div><dt>Floors</dt><dd>2nd to 18th</dd></div></dl>
+                        <ul class="cfg-rooms"><li>Living + dining 11'9" x 18'4"</li><li>Master bedroom 11'9" x 14'4"</li><li>Bedroom 2: 12'4" x 9'10"</li><li>Kitchen + utility 11'1" x 7'11"</li><li>Balcony 5'7" x 7'10"</li></ul>
+                        <div class="cfg-price"><strong>&#8377;1.25 Cr*</strong><span>Onwards</span></div>
+                        <div class="cfg-actions">
+                            <button type="button" class="cfg-btn" onclick="toggleDetailsPanel()">Get Cost Sheet</button>
+                            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Concorde%20Neo%20Thanisandra" class="cfg-wa" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="cfg-card reveal">
+                    <button type="button" class="cfg-plan" onclick="toggleDetailsPanel()" aria-label="Request the 2 BHK 2T 1,199 sq ft floor plan">
+                        <img src="/images/projects/concorde-neo/concorde-neo-2bhk-1199-sqft-784-carpet-west-floor-plan.webp" alt="Concorde Neo 2 BHK 2T floor plan, 1,199 sq ft super built-up, 784 sq ft carpet, West facing, Tower D" loading="lazy">
+                        <span class="cfg-plan-cta">Get full floor plan PDF</span>
+                    </button>
+                    <div class="cfg-body">
+                        <span class="cfg-tag">Mid-size 2 BHK</span>
+                        <h3>2 BHK 2T</h3>
+                        <p class="cfg-range">1,199 sq ft SBA &middot; Tower D, 02 stack</p>
+                        <dl class="cfg-specs"><div><dt>Super built-up</dt><dd>1,199 sq ft</dd></div><div><dt>Carpet area</dt><dd>784 sq ft</dd></div><div><dt>Balcony</dt><dd>51 sq ft</dd></div><div><dt>Toilets</dt><dd>2</dd></div><div><dt>Facing</dt><dd>West (D-02)</dd></div><div><dt>Floors</dt><dd>2nd to 18th</dd></div></dl>
+                        <ul class="cfg-rooms"><li>Living 10'5" x 14'5" + separate dining 9'10" x 13'0"</li><li>Master bedroom 11'6" x 11'4"</li><li>Bedroom 2: 9'11" x 10'11"</li><li>Kitchen + utility 8'7" x 14'10"</li><li>Balcony 9'10" x 4'11"</li></ul>
+                        <div class="cfg-price"><strong>On request</strong><span>Ask for the price sheet</span></div>
+                        <div class="cfg-actions">
+                            <button type="button" class="cfg-btn" onclick="toggleDetailsPanel()">Get Cost Sheet</button>
+                            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Concorde%20Neo%20Thanisandra" class="cfg-wa" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="cfg-card reveal">
+                    <button type="button" class="cfg-plan" onclick="toggleDetailsPanel()" aria-label="Request the 2 BHK 2T 1,241 sq ft floor plan">
+                        <img src="/images/projects/concorde-neo/concorde-neo-2bhk-1241-sqft-818-carpet-west-floor-plan.webp" alt="Concorde Neo 2 BHK 2T floor plan, 1,241 sq ft super built-up, 818 sq ft carpet, West facing, Tower C" loading="lazy">
+                        <span class="cfg-plan-cta">Get full floor plan PDF</span>
+                    </button>
+                    <div class="cfg-body">
+                        <span class="cfg-tag">Largest 2 BHK</span>
+                        <h3>2 BHK 2T</h3>
+                        <p class="cfg-range">1,241 sq ft SBA &middot; Tower C, 01 stack</p>
+                        <dl class="cfg-specs"><div><dt>Super built-up</dt><dd>1,241 sq ft</dd></div><div><dt>Carpet area</dt><dd>818 sq ft</dd></div><div><dt>Balcony</dt><dd>49 sq ft</dd></div><div><dt>Toilets</dt><dd>2</dd></div><div><dt>Facing</dt><dd>West (C-01)</dd></div><div><dt>Floors</dt><dd>2nd to 18th</dd></div></dl>
+                        <ul class="cfg-rooms"><li>Living 10'5" x 14'5" + separate dining 9'10" x 13'0"</li><li>Master bedroom 11'6" x 11'4"</li><li>Bedroom 2: 10'7" x 14'6"</li><li>Kitchen + utility 9'11" x 10'11"</li><li>Balcony 9'10" x 4'11"</li></ul>
+                        <div class="cfg-price"><strong>On request</strong><span>Ask for the price sheet</span></div>
+                        <div class="cfg-actions">
+                            <button type="button" class="cfg-btn" onclick="toggleDetailsPanel()">Get Cost Sheet</button>
+                            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Concorde%20Neo%20Thanisandra" class="cfg-wa" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="cfg-card reveal">
+                    <button type="button" class="cfg-plan" onclick="toggleDetailsPanel()" aria-label="Request the 3 BHK 2T 1,482 sq ft floor plan">
+                        <img src="/images/projects/concorde-neo/concorde-neo-3bhk-2t-1482-sqft-978-carpet-east-floor-plan.webp" alt="Concorde Neo 3 BHK 2T floor plan, 1,482 sq ft super built-up, 978 sq ft carpet, East facing, Tower E" loading="lazy">
+                        <span class="cfg-plan-cta">Get full floor plan PDF</span>
+                    </button>
+                    <div class="cfg-body">
+                        <span class="cfg-tag">Most popular 3 BHK</span>
+                        <h3>3 BHK 2T</h3>
+                        <p class="cfg-range">1,482 to 1,486 sq ft SBA &middot; Towers E and F</p>
+                        <dl class="cfg-specs"><div><dt>Super built-up</dt><dd>1,482 to 1,486 sq ft</dd></div><div><dt>Carpet area</dt><dd>978 to 983 sq ft</dd></div><div><dt>Balcony</dt><dd>56 to 57 sq ft</dd></div><div><dt>Toilets</dt><dd>2</dd></div><div><dt>Facing</dt><dd>East (E-04) / West (F-01)</dd></div><div><dt>Floors</dt><dd>2nd to 18th / 16th</dd></div></dl>
+                        <ul class="cfg-rooms"><li>Living + dining 11'9" x 20'10"</li><li>Master bedroom 11'9" x 17'0"</li><li>Bedrooms 2 and 3: 12'8" x 10'9", 11'3" x 11'1"</li><li>Kitchen 9'6" x 7'10" + utility 3'8" x 5'11"</li><li>Balcony 5'9" x 9'3"</li></ul>
+                        <div class="cfg-price"><strong>&#8377;1.53 Cr*</strong><span>Onwards</span></div>
+                        <div class="cfg-actions">
+                            <button type="button" class="cfg-btn" onclick="toggleDetailsPanel()">Get Cost Sheet</button>
+                            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Concorde%20Neo%20Thanisandra" class="cfg-wa" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="cfg-card reveal">
+                    <button type="button" class="cfg-plan" onclick="toggleDetailsPanel()" aria-label="Request the 3 BHK 3T 1,539 sq ft floor plan">
+                        <img src="/images/projects/concorde-neo/concorde-neo-3bhk-3t-1539-sqft-1024-carpet-west-floor-plan.webp" alt="Concorde Neo 3 BHK 3T floor plan, 1,539 sq ft super built-up, 1,024 sq ft carpet, West facing, Tower E" loading="lazy">
+                        <span class="cfg-plan-cta">Get full floor plan PDF</span>
+                    </button>
+                    <div class="cfg-body">
+                        <span class="cfg-tag">Largest home</span>
+                        <h3>3 BHK 3T</h3>
+                        <p class="cfg-range">1,539 sq ft SBA &middot; Tower E, 01 stack</p>
+                        <dl class="cfg-specs"><div><dt>Super built-up</dt><dd>1,539 sq ft</dd></div><div><dt>Carpet area</dt><dd>1,024 sq ft</dd></div><div><dt>Balcony</dt><dd>52 sq ft</dd></div><div><dt>Toilets</dt><dd>3</dd></div><div><dt>Facing</dt><dd>West (E-01)</dd></div><div><dt>Floors</dt><dd>2nd to 18th</dd></div></dl>
+                        <ul class="cfg-rooms"><li>Living 10'5" x 11'1" + dining 10'0" x 13'10"</li><li>Master bedroom 14'10" x 11'4"</li><li>Bedrooms 2 and 3: 10'10" x 12'10", 9'11" x 10'7"</li><li>Kitchen + utility 8'6" x 14'7"</li><li>Foyer 7'9" x 3'9", balcony 9'10" x 5'1"</li></ul>
+                        <div class="cfg-price"><strong>On request</strong><span>Ask for the price sheet</span></div>
+                        <div class="cfg-actions">
+                            <button type="button" class="cfg-btn" onclick="toggleDetailsPanel()">Get Cost Sheet</button>
+                            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20to%20know%20more%20details%20on%20Concorde%20Neo%20Thanisandra" class="cfg-wa" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="section-note">*Starting prices from Concorde's current advertising, before GST, stamp duty and registration. Prices vary by tower, floor and facing. Some portals list Concorde Neo at 710 to 1,023 sq ft: those are carpet areas, not a smaller unit type. Get the RERA-registered plan and a written price sheet for your exact unit before booking.</p>
+        </div>
+    </section>
+
     <section class="amenities" id="amenities">
         <div class="container">
-            <h2 class="section-title">Amenities &amp; Specifications</h2>
-            <p class="section-subtitle">40+ world-class amenities designed for all age groups.</p>
+            <h2 class="section-title">Amenities &amp; Evoolve Clubhouse</h2>
+            <p class="section-subtitle">40+ amenities split between a sky-level clubhouse and 33 landscaped zones at ground level.</p>
+
+            <div class="club-band reveal">
+                <img src="/images/projects/concorde-neo/concorde-neo-clubhouse.webp" alt="Concorde Neo Evoolve clubhouse: 7,000 sq ft sky-level multi-tier clubhouse 169 ft above ground" onclick="openLightboxFromSrc('concorde-neo-clubhouse.webp')" loading="lazy">
+                <div>
+                    <h3>Evoolve: a clubhouse 169 ft up</h3>
+                    <p>Evoolve is Concorde's clubhouse brand. At Neo it is a 7,000 sq ft, multi-tier clubhouse on the 17th and 18th floors, about 169 ft above the ground, so residents get city views from the gym and lounges rather than a ground-floor box.</p>
+                    <p>Indoor facilities listed for the clubhouse:</p>
+                    <div class="chip-list">
+                        <span>Multipurpose hall</span><span>Business lounge</span><span>Work stations</span><span>Gymnasium</span><span>Yoga room</span><span>Zumba &amp; dance room</span><span>Indoor games</span><span>Virtual golf</span><span>Billiards</span><span>Table tennis</span><span>Health club / salon</span><span>Open-air theatre</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="amenity-grid">
                 <div class="amenity-card reveal">
-                    <h3>Sky Evolve Clubhouse</h3>
+                    <h3>Sports &amp; Fitness</h3>
                     <ul class="amenity-list">
-                        <li>Multi-level ~7,000 sq ft clubhouse</li>
-                        <li>Positioned on the 17th &amp; 18th floors</li>
-                        <li>Grand ballroom &amp; social lounge</li>
-                        <li>Indoor games &amp; media room</li>
+                        <li>Cricket practice pitch</li>
+                        <li>Futsal court</li>
+                        <li>Mini tennis &amp; mini basketball courts</li>
+                        <li>Skating rink</li>
+                        <li>Rock-climbing wall</li>
+                        <li>Outdoor gymnasium</li>
                     </ul>
                 </div>
-
-                <div class="amenity-card reveal" style="transition-delay:120ms;">
-                    <h3>Wellness &amp; Sports</h3>
+                <div class="amenity-card reveal" style="transition-delay:100ms;">
+                    <h3>Pool &amp; Leisure</h3>
                     <ul class="amenity-list">
-                        <li>Swimming pool &amp; gymnasium</li>
-                        <li>Yoga / meditation deck</li>
-                        <li>Jogging tracks</li>
-                        <li>Outdoor sports courts</li>
+                        <li>Swimming pool &amp; kids' pool</li>
+                        <li>Pool deck &amp; cabana</li>
+                        <li>Change rooms for pool</li>
+                        <li>Party deck &amp; barbecue corner</li>
+                        <li>Amphitheatre with stage</li>
                     </ul>
                 </div>
-
-                <div class="amenity-card reveal" style="transition-delay:180ms;">
-                    <h3>Active &amp; Family Zones</h3>
+                <div class="amenity-card reveal" style="transition-delay:160ms;">
+                    <h3>Kids, Elders &amp; Pets</h3>
                     <ul class="amenity-list">
-                        <li>Children's play area</li>
-                        <li>Open-air amphitheatre</li>
-                        <li>Landscaped green zones</li>
-                        <li>Community gathering spaces</li>
+                        <li>Kids' play zone &amp; sand pit</li>
+                        <li>Nanny's corner</li>
+                        <li>Elders' seating court</li>
+                        <li>Reflexology pathway court</li>
+                        <li>Pet park</li>
+                        <li>Hobby court</li>
                     </ul>
                 </div>
-
-                <div class="amenity-card reveal" style="transition-delay:240ms;">
-                    <h3>Work &amp; Smart Living</h3>
+                <div class="amenity-card reveal" style="transition-delay:220ms;">
+                    <h3>Green &amp; Wellness</h3>
                     <ul class="amenity-list">
-                        <li>Co-working space &amp; business lounge</li>
-                        <li>Smart locks &amp; digital features</li>
-                        <li>Eco-friendly building tech</li>
-                        <li>~70% efficiency planning</li>
+                        <li>Yoga deck &amp; lawn</li>
+                        <li>Floral garden</li>
+                        <li>Seating gallery</li>
+                        <li>Jogging track &amp; cycle track</li>
+                        <li>~78% open space</li>
                     </ul>
                 </div>
-
-                <div class="amenity-card reveal" style="transition-delay:300ms;">
-                    <h3>Convenience &amp; Safety</h3>
+                <div class="amenity-card reveal" style="transition-delay:280ms;">
+                    <h3>Arrival &amp; Safety</h3>
                     <ul class="amenity-list">
-                        <li>High-speed lifts</li>
-                        <li>Ample covered car parking</li>
-                        <li>100% power back-up</li>
-                        <li>Water storage &amp; waste disposal management</li>
+                        <li>Entry portal with security kiosk</li>
+                        <li>Arrival &amp; drop-off plazas</li>
+                        <li>Waiting bay &amp; bicycle bay</li>
+                        <li>4-level security</li>
                         <li>24x7 CCTV surveillance</li>
                     </ul>
                 </div>
             </div>
 
-            <div style="margin-top:3rem;" class="gallery-grid-wrapper">
-                <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('concorde-neo-swimming-pool.webp')"><img src="/images/projects/concorde-neo/concorde-neo-swimming-pool.webp" alt="Concorde Neo luxury swimming pool and amenities"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('concorde-neo-outdoor-view.webp')"><img src="/images/projects/concorde-neo/concorde-neo-outdoor-view.webp" alt="Concorde Neo scenic outdoor view and open spaces"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('concorde-neo-clubhouse.webp')"><img src="/images/projects/concorde-neo/concorde-neo-clubhouse.webp" alt="Concorde Neo Sky Evolve Clubhouse interior view"></div>
-                </div>
+            <div class="amenity-photo-grid">
+                <figure class="amenity-photo reveal" onclick="openLightboxFromSrc('concorde-neo-pool-deck-render.webp')"><img src="/images/projects/concorde-neo/concorde-neo-pool-deck-render.webp" alt="Concorde Neo pool deck render" loading="lazy"><figcaption><strong>Pool deck</strong><span>Artist's impression</span></figcaption></figure>
+                <figure class="amenity-photo reveal" onclick="openLightboxFromSrc('concorde-neo-gymnasium.webp')"><img src="/images/projects/concorde-neo/concorde-neo-gymnasium.webp" alt="Gymnasium, representative image" loading="lazy"><figcaption><strong>Gymnasium</strong><span>Representative image</span></figcaption></figure>
+                <figure class="amenity-photo reveal" onclick="openLightboxFromSrc('concorde-neo-yoga-lawn.webp')"><img src="/images/projects/concorde-neo/concorde-neo-yoga-lawn.webp" alt="Yoga deck and lawn, representative image" loading="lazy"><figcaption><strong>Yoga deck &amp; lawn</strong><span>Representative image</span></figcaption></figure>
+                <figure class="amenity-photo reveal" onclick="openLightboxFromSrc('concorde-neo-jogging-track.webp')"><img src="/images/projects/concorde-neo/concorde-neo-jogging-track.webp" alt="Jogging track, representative image" loading="lazy"><figcaption><strong>Jogging track</strong><span>Representative image</span></figcaption></figure>
+                <figure class="amenity-photo reveal" onclick="openLightboxFromSrc('concorde-neo-kids-play-area.webp')"><img src="/images/projects/concorde-neo/concorde-neo-kids-play-area.webp" alt="Kids' play zone, representative image" loading="lazy"><figcaption><strong>Kids' play zone</strong><span>Representative image</span></figcaption></figure>
             </div>
-        </div>
-    </section>
 
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Concorde Neo Image Gallery</h2>
-            <p class="section-subtitle">Experience the visual brilliance of Concorde Neo.</p>
-
-            <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo exterior building elevation Thanisandra Main Road"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-main-banner.webp" alt="Concorde Neo luxury high-rise apartments entrance view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-clubhouse.webp" alt="Concorde Neo Sky Evolve Clubhouse interior view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-swimming-pool.webp" alt="Concorde Neo luxury swimming pool and amenities"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-outdoor-view.webp" alt="Concorde Neo scenic outdoor view and open spaces"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/concorde-neo/concorde-neo-master-plan.webp" alt="Concorde Neo 4.02 acres master plan layout"></div>
+            <div class="feature-strip">
+                <div><strong>Tech-integrated homes</strong><span>Smart-home features marketed as standard.</span></div>
+                <div><strong>7 ft tall windows</strong><span>More daylight in living rooms and bedrooms.</span></div>
+                <div><strong>4-level security</strong><span>From the gate kiosk to the apartment door.</span></div>
+                <div><strong>~70% efficiency</strong><span>Carpet plus balcony as a share of SBA.</span></div>
             </div>
         </div>
     </section>
 
     <section class="plan" id="units">
         <div class="container">
-            <h2 class="section-title">Unit Plans &amp; Master Plan</h2>
-            <p class="section-subtitle">Explore Concorde Neo floor plans and master plan, designed for maximum space and modern living.</p>
+            <h2 class="section-title">Master Plan &amp; Site Layout</h2>
+            <p class="section-subtitle">Six towers in a central cluster, with 33 numbered amenity zones around the edge of the 4.02-acre plot.</p>
 
             <div class="plan-grid" style="margin-top: 1.5rem;">
-                <div class="plan-image reveal" style="max-width: 620px; margin: 0 auto;">
-                    <img src="/images/projects/concorde-neo/concorde-neo-master-plan.webp" alt="Concorde Neo master plan layout showing 6 towers, clubhouse and sports zones" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/concorde-neo/concorde-neo-site-layout-plan-amenity-legend.webp" alt="Concorde Neo site layout plan with 33-point amenity legend, six towers and proposed master plan road" onclick="toggleDetailsPanel()">
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
-                        <strong>6 Towers, One Community</strong>
-                        <span>424 homes spread across 6 towers on a 4.02-acre plot, leaving ~78% of the surface open for greenery and sport.</span>
+                        <strong>How the site works</strong>
+                        <span>The entry portal, arrival plaza and drop-off sit at the narrow end of the site, reached by an access road. A loop driveway with a built-in jogging and cycle track rings the six-tower cluster, and a proposed master plan road runs along the opposite boundary.</span>
                     </div>
                     <div class="plan-note">
-                        <strong>Sports &amp; Amphitheatre Zone</strong>
-                        <span>Cricket practice pitch, tennis and basketball courts, skating rink and an amphitheatre positioned along the northern edge of the site.</span>
+                        <strong>Sports along the master plan road</strong>
+                        <span>Mini tennis, mini basketball, the skating rink and the cricket practice pitch line the boundary along the proposed road, with the kids' zone, sand pit, pet park and rock-climbing wall along the adjoining side.</span>
                     </div>
                     <div class="plan-note">
-                        <strong>Pool &amp; Party Deck</strong>
-                        <span>A dedicated swimming pool, kid's pool, cabana and party deck cluster along the western edge of the layout.</span>
+                        <strong>Pool zone on the far side</strong>
+                        <span>The swimming pool, kids' pool, pool deck, cabana and party deck are grouped together on the opposite side of the tower cluster from the sports courts.</span>
                     </div>
                     <div class="plan-note">
-                        <strong>Enquire for Details</strong>
-                        <span>Get brochure, availability and pre-launch offer information instantly.</span>
+                        <strong>Get the full plan set</strong>
+                        <span>Tap the plan to request the high-resolution master plan, key plan and all floor plans.</span>
                     </div>
                 </div>
             </div>
 
-            <div class="gallery-grid" style="max-height: 420px; margin-top: 1.8rem;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-master-plan.webp" alt="Concorde Neo master plan layout showing 6 towers, clubhouse and sports zones"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-2bhk-1130-sqft.webp" alt="Concorde Neo 2 BHK 1130 sq ft floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-2bhk-1130-sqft-east.webp" alt="Concorde Neo 2 BHK 1130 sq ft East facing floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-2bhk-1241-sqft.webp" alt="Concorde Neo 2 BHK 1241 sq ft floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-3bhk-2t-1486-sqft.webp" alt="Concorde Neo 3 BHK 2 toilet 1486 sq ft floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-3bhk-1539-sqft.webp" alt="Concorde Neo 3 BHK 3 toilet 1539 sq ft East facing floor plan layout"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/concorde-neo/concorde-neo-floor-plan-3bhk-3t-1539-sqft.webp" alt="Concorde Neo 3 BHK 3 toilet 1539 sq ft West facing floor plan layout"></div>
+            <div class="plan-note reveal" style="margin-top:1.8rem;">
+                <strong>Master plan legend</strong>
+                <ol class="legend-list"><li>Entry portal with security kiosk</li><li>Arrival plaza</li><li>Waiting bay</li><li>Footpath (part of driveway)</li><li>Jogging track (part of driveway)</li><li>Cycle track (part of driveway)</li><li>Drop-off plaza</li><li>Bicycle bay</li><li>Amphitheatre with stage</li><li>Elders' seating court</li><li>Hobby court</li><li>Skating rink</li><li>Kids' play zone</li><li>Nanny's corner</li><li>Sand pit</li><li>Pet park</li><li>Cricket practice pitch</li><li>Seating gallery</li><li>Mini basketball court</li><li>Mini tennis court</li><li>Reflexology pathway court</li><li>Outdoor gymnasium</li><li>Yoga deck and lawn</li><li>Swimming pool</li><li>Kids' pool</li><li>Pool deck</li><li>Cabana</li><li>Change rooms for pool</li><li>Party deck</li><li>Barbecue corner</li><li>Floral garden</li><li>Rock-climbing wall</li><li>Futsal court</li></ol>
             </div>
         </div>
     </section>
 
-    <section class="pricing" id="pricing">
+    <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">Concorde Neo Price &amp; Configuration</h2>
-            <p class="section-subtitle">Transparent pre-launch pricing for your dream home.</p>
-
-            <div class="config-grid">
-                <div class="config-card reveal">
-                    <div class="config-badge">2 BHK</div>
-                    <div class="config-size">1,107 – 1,241 Sq.Ft</div>
-                    <div class="config-price">&#8377;1.05 Cr*</div>
-                    <p class="config-note">Onwards, pre-launch pricing</p>
-                    <a href="#units" class="config-link">View Floor Plan &rarr;</a>
-                </div>
-                <div class="config-card reveal" style="transition-delay:120ms;">
-                    <div class="config-badge">3 BHK</div>
-                    <div class="config-size">1,477 – 1,539 Sq.Ft</div>
-                    <div class="config-price">&#8377;1.44 Cr*</div>
-                    <p class="config-note">Onwards, pre-launch pricing</p>
-                    <a href="#units" class="config-link">View Floor Plan &rarr;</a>
-                </div>
+            <h2 class="section-title">Concorde Neo Gallery</h2>
+            <p class="section-subtitle">Renders, amenity images and the location map. Tap any image to enlarge.</p>
+            <div class="neo-tabs" role="tablist" aria-label="Gallery filter">
+                <button type="button" class="active" data-filter="all">All</button>
+                <button type="button" data-filter="Exterior">Exterior</button>
+                <button type="button" data-filter="Amenities">Amenities</button>
+                <button type="button" data-filter="Location">Location</button>
             </div>
+            <div class="neo-gallery">
+                <figure class="neo-gal-item " data-cat="Exterior" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo aerial render showing the towers, pool and sports courts on Thanisandra Main Road" loading="lazy">
+                    <figcaption>Aerial view</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Exterior" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-outdoor-view.webp" alt="Concorde Neo street-level render with the entrance block and towers" loading="lazy">
+                    <figcaption>Street view</figcaption>
+                </figure>
+                <figure class="neo-gal-item contain" data-cat="Exterior" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-main-banner.webp" alt="Concorde Neo launch banner with 2 BHK from 1.25 Cr and 3 BHK from 1.53 Cr" loading="lazy">
+                    <figcaption>Launch creative</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Exterior" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-tower-elevation-render.webp" alt="Concorde Neo tower elevation render from the main road" loading="lazy">
+                    <figcaption>Tower elevation</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-pool-deck-render.webp" alt="Concorde Neo swimming pool deck with loungers, artist's impression" loading="lazy">
+                    <figcaption>Pool deck</figcaption>
+                </figure>
+                <figure class="neo-gal-item contain" data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-clubhouse.webp" alt="Concorde Neo Evoolve 7,000 sq ft sky-level clubhouse highlights" loading="lazy">
+                    <figcaption>Evoolve clubhouse</figcaption>
+                </figure>
+                <figure class="neo-gal-item contain" data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-swimming-pool.webp" alt="Concorde Neo indoor amenities: multipurpose hall, business lounge, gym, virtual golf, billiards and more" loading="lazy">
+                    <figcaption>Indoor amenities</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-gymnasium.webp" alt="Gymnasium, representative image for Concorde Neo" loading="lazy">
+                    <figcaption>Gym (representative)</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-yoga-lawn.webp" alt="Yoga deck and lawn, representative image for Concorde Neo" loading="lazy">
+                    <figcaption>Yoga lawn (representative)</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-jogging-track.webp" alt="Jogging track, representative image for Concorde Neo" loading="lazy">
+                    <figcaption>Jogging track (representative)</figcaption>
+                </figure>
+                <figure class="neo-gal-item " data-cat="Amenities" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-kids-play-area.webp" alt="Kids' play zone, representative image for Concorde Neo" loading="lazy">
+                    <figcaption>Kids' play (representative)</figcaption>
+                </figure>
+                <figure class="neo-gal-item contain" data-cat="Location" onclick="openLightbox(this)">
+                    <img src="/images/projects/concorde-neo/concorde-neo-location-map.webp" alt="Concorde Neo location map showing Thanisandra Main Road, Hebbal, Jakkur, Yelahanka and the Outer Ring Road" loading="lazy">
+                    <figcaption>Location map</figcaption>
+                </figure>
+            </div>
+            <p class="section-note">Renders are artist's impressions. Images marked "representative" illustrate the amenity type and are not photos of Concorde Neo.</p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Concorde Neo Price List</h2>
+            <p class="section-subtitle">Starting prices from Concorde's current advertising, with the real rate per sq ft on both super built-up and carpet area.</p>
 
             <div class="pricing-table-wrap">
                 <table class="pricing-table">
                     <thead>
                         <tr>
-                            <th>Apartment Type</th>
-                            <th>Area Range</th>
-                            <th>Starting Price</th>
+                            <th>Unit type</th>
+                            <th>SBA / Carpet</th>
+                            <th>Starting price</th>
+                            <th>Rate (SBA / carpet)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>2 BHK</td>
-                            <td>1,107 – 1,241 sq. ft.</td>
-                            <td>₹1.05 Cr*</td>
-                        </tr>
-                        <tr>
-                            <td>3 BHK</td>
-                            <td>1,477 – 1,539 sq. ft.</td>
-                            <td>₹1.44 Cr*</td>
-                        </tr>
+                        <tr><td>2 BHK 2T Compact</td><td>1,125 to 1,134 / 727 to 733 sq ft</td><td>&#8377;1.25 Cr*</td><td>~&#8377;11,100 / ~&#8377;17,200 per sq ft</td></tr>
+                        <tr><td>2 BHK 2T</td><td>1,199 / 784 sq ft</td><td>On request</td><td>On request</td></tr>
+                        <tr><td>2 BHK 2T Large</td><td>1,241 / 818 sq ft</td><td>On request</td><td>On request</td></tr>
+                        <tr><td>3 BHK 2T</td><td>1,482 to 1,486 / 978 to 983 sq ft</td><td>&#8377;1.53 Cr*</td><td>~&#8377;10,300 / ~&#8377;15,600 per sq ft</td></tr>
+                        <tr><td>3 BHK 3T</td><td>1,539 / 1,024 sq ft</td><td>On request</td><td>On request</td></tr>
                     </tbody>
                 </table>
-                <div class="pricing-footnote">*Indicative pre-launch pricing (up to ₹1.29 Cr+ for 2 BHK, ₹1.68 Cr+ for 3 BHK). Please enquire for the latest offer and availability.</div>
+                <div class="pricing-footnote">*Base price before GST (5%), stamp duty (~5.6%), registration (1%), parking and deposits. Rates are worked out from the advertised starting price and the smallest unit of each type. Launch-era listings in late 2024 quoted 2 BHKs from about &#8377;99 lakh at &#8377;8,800 to &#8377;10,700 per sq ft, so older figures you see online are out of date.</div>
+            </div>
+
+            <div class="pricing-table-wrap">
+                <table class="pricing-table">
+                    <thead>
+                        <tr><th>All-in cost estimate (2 BHK at &#8377;1.25 Cr)</th><th>Typical rate</th><th>Amount</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Base price</td><td></td><td>&#8377;1.25 Cr</td></tr>
+                        <tr><td>GST (under construction)</td><td>5%</td><td>~&#8377;6.3 lakh</td></tr>
+                        <tr><td>Stamp duty with surcharge and cess</td><td>~5.6%</td><td>~&#8377;7 lakh</td></tr>
+                        <tr><td>Registration fee</td><td>1%</td><td>~&#8377;1.25 lakh</td></tr>
+                        <tr><td>Parking, deposits and utility charges (if billed separately)</td><td>Varies</td><td>~&#8377;3 to 6 lakh</td></tr>
+                        <tr><td><strong>All-in before interiors</strong></td><td></td><td><strong>~&#8377;1.43 to 1.46 Cr</strong></td></tr>
+                    </tbody>
+                </table>
+                <div class="pricing-footnote">Our estimate for budgeting only. Ask for a stamped cost sheet that lists every charge for your unit.</div>
             </div>
         </div>
     </section>
@@ -1428,7 +2067,7 @@
     <section class="plan" id="location">
         <div class="container">
             <h2 class="section-title">Location Advantages &amp; Connectivity</h2>
-            <p class="section-subtitle">Nestled in the high-growth corridor of Thanisandra Main Road, with effortless access to the city's landmarks.</p>
+            <p class="section-subtitle">Thanisandra Main Road links Hebbal and Manyata in the south with Jakkur, Yelahanka and the airport road to the north.</p>
 
             <div class="plan-grid">
                 <div class="plan-image reveal">
@@ -1438,196 +2077,589 @@
                     <div class="plan-note">
                         <strong>Distance to Key Hubs</strong>
                         <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
-                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> Short drive via Thanisandra Main Road</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Nagawara Metro Station:</strong> Upcoming, nearby</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> Short drive via Thanisandra Main Road and Nagavara</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Hebbal &amp; Outer Ring Road:</strong> Via Nagavara</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Nagawara Metro:</strong> Upcoming interchange to the south</li>
                             <li><strong style="display:inline; color:var(--text-dark);">Yelahanka Junction Railway Station:</strong> ~9 km</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Outer Ring Road (ORR):</strong> Quick access via Nagavara/Hebbal</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~26 km (35–40 min)</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~26 km (35 to 40 min off-peak via NH 44)</li>
                         </ul>
                     </div>
                     <div class="plan-note">
-                        <strong>Business &amp; Transport Hubs</strong>
-                        <span>Close to Manyata Tech Park, Hebbal, Bhartiya City / Bhartiya Mall of Bengaluru and the Outer Ring Road (ORR).</span>
+                        <strong>Commute reality check</strong>
+                        <span>Thanisandra Main Road carries heavy peak-hour traffic after two years of new launches. Judge your commute by rush-hour drive time, not straight-line distance.</span>
                     </div>
                     <div class="plan-note">
                         <strong>Education &amp; Healthcare</strong>
-                        <span>Near Reva University, EuroSchool North Campus and Rainbow Hospital for Children (Jakkur), with Manipal and Aster CMI hospitals along the ORR corridor.</span>
+                        <span>REVA University, EuroSchool North Campus and Manipal Global Education nearby, with Rainbow Hospital for Children (Jakkur) and Manipal and Aster CMI hospitals along the Hebbal and ORR corridor.</span>
                     </div>
                     <div class="plan-note">
                         <strong>Shopping &amp; Lifestyle</strong>
-                        <span>Bhartiya Mall of Bengaluru and Elements Mall are both a short drive away via Thanisandra Main Road.</span>
+                        <span>Bhartiya Mall of Bengaluru and Elements Mall are a short drive away via Thanisandra Main Road.</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="amenities" id="investment" style="background: var(--bg-light);">
+    <section class="amenities" id="review" style="background: var(--bg-light);">
         <div class="container">
-            <h2 class="section-title">The Investment Advantage</h2>
-            <p class="section-subtitle">Why Concorde Neo is a compelling choice for home buyers and investors alike.</p>
+            <h2 class="section-title">Our Honest Take on Concorde Neo</h2>
+            <p class="section-subtitle">What works, what to check, and how it stacks up against the corridor. Read the <a href="/blog/concorde-neo-thanisandra-price-layout-rera/" style="color:var(--accent-green);font-weight:700;">full Concorde Neo review</a>.</p>
+
+            <div class="honest-grid">
+                <div class="honest-card reveal">
+                    <h3>Listings disagree, so get it in writing</h3>
+                    <p>Unit sizes and prices vary across portals more than the usual base-vs-all-in gap. Much of it is carpet area being quoted as if it were SBA, plus launch-era prices that are now out of date. Ask for the RERA-registered floor plan and a written price sheet for your exact tower and floor before paying a booking amount.</p>
+                </div>
+                <div class="honest-card reveal" style="transition-delay:100ms;">
+                    <h3>Lots of new supply on the road</h3>
+                    <p>Thanisandra Main Road has seen a wave of launches in the last two years. That helps buyers on price competition, but construction traffic is heavy and social infrastructure such as schools and hospitals is still catching up with the pace of new towers.</p>
+                </div>
+                <div class="honest-card reveal" style="transition-delay:160ms;">
+                    <h3>Construction finance is standard</h3>
+                    <p>The project is reported as financed by and mortgaged to Aditya Birla Housing Finance. That is normal for under-construction projects and not a red flag on its own, but have your lawyer check it against the RERA filing and get the lender's NOC for your unit.</p>
+                </div>
+                <div class="honest-card reveal" style="transition-delay:220ms;">
+                    <h3>Shop the comparables</h3>
+                    <p>On the same corridor, Sobha Athena and TVS Emerald Auralis are recent launches worth cross-shopping on rate and possession date. Also compare <a href="/projects/orchid-salisbury/">Goyal Orchid Salisbury</a> (from &#8377;1.13 Cr, Dec 2028) and Concorde's own <a href="/projects/concorde-sienna/">Concorde Sienna</a> in Hennur (from &#8377;1.26 Cr).</p>
+                </div>
+            </div>
+
+            <div class="plan-note reveal" style="background: var(--bg-white); margin-top:1.6rem;">
+                <strong style="font-size: 1.15rem; margin-bottom: 0.5rem;">Verdict</strong>
+                <span>Concorde Neo is a sensible mid-market 2 and 3 BHK option for buyers who prioritise Thanisandra and Manyata Tech Park access over ultra-low density, with a strong amenity set and a 2028 handover. The 3 BHK 2T, with its 17 ft master bedroom and roughly 66% carpet efficiency, is the best-value layout. Run down the unit-specific size and price in writing, and compare it with the projects above before you decide.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="investment" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">The Investment View</h2>
+            <p class="section-subtitle">Why Concorde Neo appeals to end users, and what investors should expect.</p>
 
             <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
-                <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Why Invest On Thanisandra Main Road</strong>
-                    <span>
-                        Thanisandra Main Road has emerged as one of North Bengaluru's most closely watched apartment corridors, sitting between the established Hebbal/Manyata belt and the fast-developing Yelahanka-Bellary Road stretch. <strong>Concorde Neo</strong> is positioned right on this corridor at Bellahalli/RK Hegde Nagar, giving early pre-launch buyers a foothold in a locality with strong upside as surrounding infrastructure matures — the same road that is also home to Goyal Orchid Salisbury, underlining the corridor's pull for Tier-1 developers.
-                    </span>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Employment-led demand</strong>
+                    <span>Thanisandra Main Road sits between the established Hebbal and Manyata belt and the fast-growing Yelahanka and Bellary Road stretch. Manyata Tech Park, one of Bengaluru's largest IT employment clusters, is a short drive away, which keeps end-user and rental demand steady for well-planned 2 and 3 BHK homes like those at <strong>Concorde Neo</strong>.</span>
                 </div>
-
-                <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Connectivity to Employment Hubs</strong>
-                    <span>
-                        Thanisandra Main Road offers practical daily access to Manyata Tech Park — one of Bengaluru's largest IT employment clusters — as well as the Outer Ring Road and Hebbal interchange, both key arteries for commuting across North and Central Bengaluru. Kempegowda International Airport is roughly 26 km away, making <strong>Concorde Neo</strong> a realistic option for frequent flyers and IT professionals who want a shorter, more predictable commute.
-                    </span>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Competitive pricing, slower flips</strong>
+                    <span>Heavy new supply on the corridor keeps prices competitive, which favours buyers today. The flip side is that short-term appreciation may be slower than in supply-constrained areas, so treat Neo as a medium-term hold. Rental yields on new Bengaluru apartments typically run at about 3% gross.</span>
                 </div>
-
-                <div class="plan-note" style="background: var(--bg-white);">
-                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">Pre-Launch Entry Advantage</strong>
-                    <span>
-                        Buying at the pre-launch stage typically offers the most competitive per-square-foot pricing in a project's lifecycle, before prices step up at each subsequent construction milestone. With 6 towers, ~78% open space and a Sky Evolve Clubhouse positioned to appeal to both end-users and investors, <strong>Concorde Neo</strong> is well placed to see steady demand from professionals working along the Thanisandra-Manyata-Hebbal belt, supporting both rental income and long-term capital appreciation.
-                    </span>
+                <div class="plan-note" style="background: var(--bg-light);">
+                    <strong style="font-size: 1.25rem; margin-bottom: 0.75rem;">A 2028 timeline</strong>
+                    <span>With possession expected between October and December 2028, buyers commit capital for about two more years before they can move in or rent out. That is shorter than the 2029 to 2032 handovers at several newer North Bengaluru launches.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about" id="developer" style="background: var(--bg-white);">
+    <section class="about" id="developer" style="background: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">About Concorde Group</h2>
-            <p class="section-subtitle">"Experiences for life" — a Bangalore-based developer with a growing North Bengaluru portfolio.</p>
+            <p class="section-subtitle">"Experiences for life": a Bengaluru developer with a growing North Bengaluru portfolio.</p>
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">
-                    Concorde Group is a Bangalore-based real estate developer with residential projects across the city, built around the brand promise "Experiences for life." <strong>Concorde Neo</strong> extends the developer's presence in North Bengaluru, joining <strong>Concorde Sienna</strong> in Hennur and <strong>Concorde Mayfair</strong> in Yelahanka as part of the group's growing footprint along the Thanisandra-Hennur-Yelahanka-Bellary Road belt.
+                    Concorde Group was founded in Bengaluru in 1998 and has delivered about 18 million sq ft across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber. <strong>Concorde Neo</strong> extends its North Bengaluru presence alongside <a href="/projects/concorde-sienna/" style="color:var(--accent-green);font-weight:700;">Concorde Sienna</a> in Hennur and <a href="/projects/concorde-mayfair/" style="color:var(--accent-green);font-weight:700;">Concorde Mayfair</a> on Bellary Road, Yelahanka.
                 </p>
                 <p>
-                    With Concorde Neo, the developer has opted for a 6-tower vertical format designed to maximise open, green and amenity space on a 4.02-acre plot on Thanisandra Main Road. The Sky Evolve Clubhouse, co-working space and open-air amphitheatre reflect a positioning toward professionals and young families looking for a lifestyle-first home in a well-connected part of North Bengaluru.
+                    Neo uses the group's Evoolve clubhouse format, a sky-level club with work lounges and fitness spaces, placed on a six-tower plan that frees up most of the ground for landscaping and sport. Before booking, visit a completed Concorde project and ask for the promised and actual handover dates of its recent launches.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="faq" id="faq" style="background: var(--bg-light);">
+    <section class="faq" id="faq" style="background: var(--bg-white);">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about Concorde Neo, Thanisandra.</p>
+            <h2 class="section-title">Concorde Neo FAQs</h2>
+            <p class="section-subtitle">52 answers on floor plans, carpet areas, price, RERA, amenities, location and how Concorde Neo compares.</p>
 
-            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 class="faq-group-title">Project basics</h3>
+            <div class="faq-list">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
-                        <span itemprop="name">What is Concorde Neo?</span>
+                        <span>What is Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Concorde Neo is a pre-launch high-rise residential project by Concorde Group — 6 towers with 2 basements plus ground/stilt plus 18 floors, offering premium 2 and 3 BHK apartments on Thanisandra Main Road, North Bengaluru.</p>
+                    <div class="faq-answer">
+                        <p>Concorde Neo is a 6-tower high-rise apartment project by Concorde Group on Thanisandra Main Road, North Bengaluru. It has 424 homes in 2 BHK and 3 BHK layouts on about 4.02 acres, with each tower rising 2 basements + ground + 18 floors. It was RERA registered in September 2024, launched in October 2024, and possession is expected between October and December 2028.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
-                        <span itemprop="name">Where exactly is Concorde Neo located?</span>
+                        <span>Where exactly is Concorde Neo located?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project is located on Thanisandra Main Road at RK Hegde Nagar / Bellahalli, North Bengaluru, close to Kogilu and Jakkur, with quick access to Manyata Tech Park, Bhartiya City and the Outer Ring Road.</p>
+                    <div class="faq-answer">
+                        <p>On Thanisandra Main Road at RK Hegde Nagar / Bellahalli in North Bengaluru, between Jakkur and Hennur. Manyata Tech Park, Hebbal and the Bellary Road (NH 44) approach to the airport are all within reasonable reach, and REVA University is close by.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
-                        <span itemprop="name">What configurations and sizes are available?</span>
+                        <span>Who is the developer of Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Concorde Neo offers 2 BHK homes (1,107–1,241 sq ft) and 3 BHK homes (1,477–1,539 sq ft) across 6 towers, with a total of 424 units.</p>
+                    <div class="faq-answer">
+                        <p>Concorde Group, a Bengaluru developer founded in 1998 that has delivered about 18 million sq ft across 29 completed projects, including Concorde Napa Valley, Mist Valley, Manhattans and Amber. Its current North Bengaluru projects also include Concorde Sienna in Hennur and Concorde Mayfair in Yelahanka.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
-                        <span itemprop="name">What is the starting price of Concorde Neo?</span>
+                        <span>Is Concorde Neo 4.02 acres or 4.34 acres?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Prices start from ₹1.05 Cr onwards for a 2 BHK, going up to around ₹1.68 Cr for the largest 3 BHK layout. Please enquire for the latest pre-launch price list.</p>
+                    <div class="faq-answer">
+                        <p>Most sources, including the project's own material, give 4.02 acres. One listing quotes 4.34 acres. The gap is small enough to be a rounding or setback-inclusion difference, but ask the sales team which figure is on the RERA filing and check the approved plan on the Karnataka RERA portal.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
-                        <span itemprop="name">Is Concorde Neo RERA approved?</span>
+                        <span>How many towers and floors does Concorde Neo have?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes, the project is registered under Karnataka RERA with registration number PRM/KA/RERA/1251/309/PR/270924/007088.</p>
+                    <div class="faq-answer">
+                        <p>Six towers, lettered A to F on the builder's key plan. Each is 2 basements + ground + 18 floors. On the floor plans, homes in Towers C, D and E run from the 2nd to the 18th floor, while Tower F homes run from the 2nd to the 16th floor, with the Evoolve clubhouse on the 17th and 18th floors.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
-                        <span itemprop="name">How big is the project and how many units does it have?</span>
+                        <span>How many apartments are there in Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Concorde Neo is spread across 4.02 acres with 424 units across 6 towers, leaving approximately 78% of the land as open space.</p>
+                    <div class="faq-answer">
+                        <p>424 apartments in total, split between 2 BHK and 3 BHK homes across the six towers.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
-                        <span itemprop="name">What amenities does Concorde Neo offer?</span>
+                        <span>Is Concorde Neo pre-launch or under construction?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Amenities include the multi-level Sky Evolve Clubhouse (~7,000 sq ft on the 17th and 18th floors), a swimming pool, gymnasium, yoga and meditation deck, co-working space and business lounge, indoor and outdoor sports courts, a children's play area, an open-air amphitheatre and smart-home features.</p>
+                    <div class="faq-answer">
+                        <p>It is past the pre-launch stage. The project was RERA registered on 27 September 2024 and launched in October 2024, and it is now under construction with possession expected between October and December 2028.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
-                        <span itemprop="name">How tall are the Concorde Neo towers?</span>
+                        <span>How much open space does Concorde Neo have?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">The project has 6 towers, each configured as 2 basements plus ground/stilt plus 18 floors.</p>
+                    <div class="faq-answer">
+                        <p>Concorde says about 78% of the 4.02-acre site is open space. Keeping the six towers in a compact central cluster frees up the edges of the plot for the pool, sports courts, play areas and gardens shown on the master plan.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            </div>
+            <h3 class="faq-group-title">Floor plans and sizes</h3>
+            <div class="faq-list">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
-                        <span itemprop="name">Is Concorde Neo a good investment?</span>
+                        <span>What configurations are available at Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Thanisandra Main Road is a fast-growing North Bengaluru corridor with quick access to Manyata Tech Park, Bhartiya City, the Outer Ring Road and the airport, which supports both rental demand and long-term capital appreciation for early pre-launch buyers.</p>
+                    <div class="faq-answer">
+                        <p>2 BHK 2T homes from 1,125 to 1,241 sq ft super built-up (727 to 818 sq ft carpet), 3 BHK 2T homes of 1,482 to 1,486 sq ft (978 to 983 sq ft carpet) and a 3 BHK 3T of 1,539 sq ft (1,024 sq ft carpet). There are no 1 BHK, 4 BHK or villa units.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
-                        <span itemprop="name">How far is Manyata Tech Park from Concorde Neo?</span>
+                        <span>What are the 2 BHK sizes at Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Manyata Tech Park is a short drive away via Thanisandra Main Road and Nagavara, within North Bengaluru's established IT commute corridor.</p>
+                    <div class="faq-answer">
+                        <p>The builder's floor plans show five 2 BHK 2T variants: 1,125 sq ft (727 carpet, East, C-04 stack), 1,130 sq ft (733 carpet, East, C-03 stack), 1,134 sq ft (732 carpet, West, D-03 stack), 1,199 sq ft (784 carpet, West, D-02 stack) and 1,241 sq ft (818 carpet, West, C-01 stack).</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
-                        <span itemprop="name">Who is the developer of Concorde Neo?</span>
+                        <span>What are the 3 BHK sizes at Concorde Neo?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Concorde Neo is developed by Concorde Group, a Bangalore-based real estate developer with a growing North Bengaluru portfolio that also includes Concorde Sienna in Hennur and Concorde Mayfair in Yelahanka.</p>
+                    <div class="faq-answer">
+                        <p>Three 3 BHK plans: a 3 BHK 2T of 1,482 sq ft (978 sq ft carpet, East, E-04 stack), a 3 BHK 2T of 1,486 sq ft (983 sq ft carpet, West, F-01 stack) and a 3 BHK 3T of 1,539 sq ft (1,024 sq ft carpet, West, E-01 stack).</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
-                        <span itemprop="name">When is possession expected?</span>
+                        <span>What is the carpet area of Concorde Neo apartments?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Concorde Neo's expected possession window is December 2028 to October 2029, as per the project's early planning schedule — please confirm the RERA-registered date before booking.</p>
+                    <div class="faq-answer">
+                        <p>Carpet areas on the builder's floor plans range from 727 sq ft for the smallest 2 BHK to 1,024 sq ft for the 3 BHK 3T. Balconies are listed separately and add 47 to 57 sq ft.</p>
                     </div>
                 </div>
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
-                        <span itemprop="name">How do I book a site visit or register early interest?</span>
+                        <span>Why do some listings show Concorde Neo sizes of 710 to 1,023 sq ft?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">You can register your interest, request the brochure and latest price list, or book a site visit using the enquiry form, WhatsApp button or call button on this page.</p>
+                    <div class="faq-answer">
+                        <p>Those figures are carpet areas, not a data error or a smaller unit type. The floor plans show 727 to 1,024 sq ft of carpet for the same homes that are 1,125 to 1,539 sq ft super built-up. Always compare projects on the same measure, and get the carpet area of your specific unit in the agreement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span>What is the carpet-area efficiency at Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>About 65% to 66.5% carpet to super built-up across all seven plans, or roughly 69% to 70% if you count the balcony. That is around average to slightly above average for a high-rise with a sky-level clubhouse.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span>Is there a 3 BHK with three bathrooms?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The 3 BHK 3T is 1,539 sq ft super built-up with 1,024 sq ft carpet, a 14'10" x 11'4" master bedroom, a separate foyer and a 9'10" x 5'1" balcony. The floor plan shows it in the E-01 stack, West facing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span>Which Concorde Neo units are East facing?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>On the floor plans we have seen, the East-facing homes are the 1,125 and 1,130 sq ft 2 BHKs in Tower C and the 1,482 sq ft 3 BHK 2T in Tower E. The 1,134, 1,199 and 1,241 sq ft 2 BHKs, the 1,486 sq ft 3 BHK 2T and the 1,539 sq ft 3 BHK 3T are West facing. Confirm the facing of your exact unit on the allotment letter.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span>How big are the balconies?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each home has one balcony of 47 to 57 sq ft. In the 2 BHKs it measures about 5'7" x 7'10" to 9'10" x 4'11", and in the 3 BHKs about 5'9" x 9'3" to 9'10" x 5'1".</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span>How big are the bedrooms in the Concorde Neo 2 BHK?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Master bedrooms run from 11'6" x 11'4" (in the 1,199 and 1,241 sq ft plans) to 11'9" x 14'4" (in the 1,125 to 1,134 sq ft plans). Second bedrooms are about 9'11" x 10'11" to 12'4" x 9'10".</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span>How big is the master bedroom in the 3 BHK?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>11'9" x 17'0" in the 1,482 sq ft 3 BHK 2T, which is long enough for a sitting area, and 14'10" x 11'4" in the 1,539 sq ft 3 BHK 3T.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span>Does Concorde Neo have 4 BHK apartments or villas?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. The project only has 2 BHK and 3 BHK apartments. If you need a 4 BHK in this corridor, look at Meenakshi High Life in Rachenahalli.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="faq-group-title">Price and payments</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false">
+                        <span>What is the price of Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Concorde's current advertising quotes 2 BHK homes from ₹1.25 Cr* and 3 BHK homes from ₹1.53 Cr*. Prices vary by tower, floor and facing, and exclude GST, stamp duty and registration, so ask for a written price sheet for the exact unit you are considering.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false">
+                        <span>What is the price per sq ft at Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>At the advertised starting prices, the 2 BHK works out to about ₹11,100 per sq ft on super built-up area (about ₹17,200 per sq ft of carpet) and the 3 BHK to about ₹10,300 per sq ft (about ₹15,600 per sq ft of carpet). Launch-era listings in 2024 quoted ₹8,800 to ₹10,700 per sq ft.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false">
+                        <span>Why have I seen Concorde Neo prices from ₹99 lakh?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Those are launch-era listings from late 2024, when 2 BHK homes were quoted from about ₹99 lakh to ₹1.09 Cr. Prices have moved up since, and different portals also mix base prices with all-in prices. Rely on a written, unit-specific quote rather than the lowest figure you find online.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q24" aria-expanded="false">
+                        <span>What is the all-in cost of a Concorde Neo 2 BHK?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>On a ₹1.25 Cr base price, add about ₹6.3 lakh GST (5%), about ₹7 lakh stamp duty with surcharge and cess, about ₹1.25 lakh registration and ₹3 to 6 lakh for parking, deposits and utility charges if billed separately. That comes to roughly ₹1.43 to 1.46 Cr before interiors.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q25" aria-expanded="false">
+                        <span>Is GST charged on Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. As an under-construction project, Concorde Neo attracts 5% GST on the agreement value (without input tax credit). GST does not apply to resale or completed homes with an occupancy certificate.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q26" aria-expanded="false">
+                        <span>Is Concorde Neo mortgaged to a lender? Is that a red flag?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The project is reported as financed by and mortgaged to Aditya Birla Housing Finance. That is standard practice for under-construction projects and not a red flag on its own, but ask your lawyer to check the mortgage details against the RERA filing and make sure the lender's NOC is issued for your unit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q27" aria-expanded="false">
+                        <span>Which banks give home loans for Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ask the sales team for the list of banks that have approved the project. Most major lenders fund RERA-registered projects from established developers, and the project's construction finance comes from Aditya Birla Housing Finance. Compare rates in our home loan rate comparison before you choose.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q28" aria-expanded="false">
+                        <span>What is the payment plan for Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Concorde has not published a standard payment schedule. Ask for the construction-linked payment plan in writing, check that each instalment is tied to a verifiable construction milestone, and confirm the booking amount and the refund terms before paying.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="faq-group-title">RERA and possession</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q29" aria-expanded="false">
+                        <span>Is Concorde Neo RERA approved?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. It is registered with Karnataka RERA under PRM/KA/RERA/1251/309/PR/270924/007088. The number decodes to a registration date of 27 September 2024, which lines up with the October 2024 launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q30" aria-expanded="false">
+                        <span>How do I verify Concorde Neo on the Karnataka RERA portal?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Go to rera.karnataka.gov.in, open the project search, and enter the registration number PRM/KA/RERA/1251/309/PR/270924/007088. Check the approved plan, land area, unit count, the declared completion date and the quarterly progress updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q31" aria-expanded="false">
+                        <span>When is Concorde Neo possession?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Listings give possession as October 2028 or December 2028. Confirm the completion date declared on the RERA registration before booking, since that is the date the developer is legally bound to.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="faq-group-title">Amenities</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q32" aria-expanded="false">
+                        <span>What is the Evoolve clubhouse at Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evoolve is Concorde's clubhouse brand. At Neo it is a 7,000 sq ft, sky-level, multi-tier clubhouse on the 17th and 18th floors, about 169 ft above the ground, with indoor games, a gym, a yoga room, a dance and Zumba studio, a business lounge and a multipurpose hall.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q33" aria-expanded="false">
+                        <span>What amenities does Concorde Neo offer?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Over 40, including a swimming pool and kids' pool, gym, yoga room, indoor games, Zumba and dance studio, business lounge and work stations, multipurpose hall, virtual golf, billiards, table tennis, a cricket practice pitch, futsal court, mini tennis and basketball courts, skating rink, rock-climbing wall, jogging and cycle tracks, an amphitheatre, outdoor gym, pet park and reflexology pathway.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q34" aria-expanded="false">
+                        <span>Does Concorde Neo have a swimming pool?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The master plan shows a swimming pool with a separate kids' pool, a pool deck, a cabana, change rooms and a party deck with a barbecue corner beside it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q35" aria-expanded="false">
+                        <span>What sports facilities are there?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A cricket practice pitch, a futsal court, a mini tennis court, a mini basketball court, a skating rink and a rock-climbing wall outdoors, plus virtual golf, table tennis and billiards indoors. A jogging track and a cycle track run along the internal driveway.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q36" aria-expanded="false">
+                        <span>Is Concorde Neo pet friendly?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The master plan includes a dedicated pet park. Ask for the association's draft bye-laws on pets in lifts and common areas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q37" aria-expanded="false">
+                        <span>What is there for children and senior citizens?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For children: a kids' play zone, a sand pit, a nanny's corner and a kids' pool. For older residents: an elders' seating court, a reflexology pathway, a floral garden and a yoga deck and lawn.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q38" aria-expanded="false">
+                        <span>Is there a co-working space at Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The clubhouse has a business lounge and work stations, which is useful for hybrid workers who want a quiet space outside the flat.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q39" aria-expanded="false">
+                        <span>What smart home and safety features does Concorde Neo have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Concorde markets tech-integrated smart homes, four-level security and 7 ft tall windows. Ask for the detailed specification sheet, including flooring, sanitaryware, electrical brands and the smart-home kit, and attach it to your agreement.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="faq-group-title">Location and connectivity</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q40" aria-expanded="false">
+                        <span>How far is Manyata Tech Park from Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Manyata Tech Park is a short drive south via Thanisandra Main Road and Nagavara. Thanisandra Main Road carries heavy peak-hour traffic, so judge the commute by drive time at rush hour, not by straight-line distance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q41" aria-expanded="false">
+                        <span>How far is Kempegowda International Airport?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>About 26 km, roughly 35 to 40 minutes off-peak via Bellary Road (NH 44).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q42" aria-expanded="false">
+                        <span>Which is the nearest metro station?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nagawara, an upcoming metro interchange south of the project. Until it opens, the nearest rail link is Yelahanka Junction, about 9 km away.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q43" aria-expanded="false">
+                        <span>Which schools and hospitals are near Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>REVA University, EuroSchool North Campus and Manipal Global Education are nearby, along with Rainbow Hospital for Children in Jakkur and Manipal and Aster CMI hospitals along the Hebbal and ORR corridor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q44" aria-expanded="false">
+                        <span>Is traffic a problem on Thanisandra Main Road?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, at peak hours. The road has seen a wave of new launches in the last two years, and construction traffic and social infrastructure such as schools and hospitals are still catching up with the pace of new towers. Visit at rush hour before you decide.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="faq-group-title">Comparison and investment</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q45" aria-expanded="false">
+                        <span>Is Concorde Neo a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It is a reasonable mid-market buy for end users who work around Manyata, Hebbal or the airport corridor, with a 2028 handover. The heavy new supply on Thanisandra Main Road keeps prices competitive, which helps buyers but may slow short-term appreciation, so treat it as a medium-term hold rather than a quick flip.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q46" aria-expanded="false">
+                        <span>Concorde Neo vs Goyal Orchid Salisbury: which is better?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Both are on Thanisandra Main Road with 2028 possession. Orchid Salisbury is larger (about 660 homes in 7 towers) with 2 BHKs from about ₹1.13 Cr and RERA possession in December 2028. Neo has 424 homes, a sky-level clubhouse and 3 BHK 3T options. Compare carpet area and the price of the exact unit, not the headline rate.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q47" aria-expanded="false">
+                        <span>Concorde Neo vs Concorde Sienna: what is the difference?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>They are by the same developer. Sienna is a single 92 m tower on Hennur Main Road with 2 and 3 BHK homes from about ₹1.26 Cr. Neo spreads 424 homes over six towers on Thanisandra Main Road, so it has more open space around the towers and a larger community.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q48" aria-expanded="false">
+                        <span>Which other projects should I compare with Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>On the same corridor, Sobha Athena and TVS Emerald Auralis are recent launches worth cross-shopping on price per sq ft and possession dates. Goyal Orchid Salisbury and Meenakshi High Life (Rachenahalli) are nearby alternatives we cover in detail.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q49" aria-expanded="false">
+                        <span>Who should buy Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Buyers who work at Manyata Tech Park, Hebbal or along the airport corridor, small families who want a 2 BHK or 3 BHK with a full amenity set, and buyers who value a sky-level clubhouse and a lot of ground-level open space.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q50" aria-expanded="false">
+                        <span>Who should skip Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Anyone who needs a 4 BHK, buyers who want possession before 2028, people working in South or East Bengaluru, and anyone who wants a quiet, low-traffic approach road.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q51" aria-expanded="false">
+                        <span>What should I check before booking Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The RERA-registered floor plan and carpet area of your unit, a written price sheet for your exact tower and floor, the RERA completion date, the lender's NOC for the Aditya Birla Housing Finance mortgage, the specification sheet and the payment plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q52" aria-expanded="false">
+                        <span>How do I book a site visit to Concorde Neo?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Use the enquiry form, WhatsApp or call button on the Concorde Neo project page. We will share the latest price sheet and floor plans and arrange a visit to the sales office.</p>
                     </div>
                 </div>
             </div>
@@ -1636,16 +2668,16 @@
 
     <section class="lead-form-section" id="form">
         <div class="container">
-            <h2 class="section-title">Enquire for Pre-Launch Offers &amp; Availability</h2>
+            <h2 class="section-title">Enquire for Prices &amp; Availability</h2>
             <p class="section-subtitle">Schedule a call or request the brochure for Concorde Neo.</p>
 
             <div class="form-container">
                 <div class="urgency-block">
                     <div class="urgency-title">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        Pre-Launch — Limited Inventory
+                        Limited Inventory in Select Towers
                     </div>
-                    <div class="urgency-text">Get Best Pre-Launch Pricing &middot; Book Site Visit Today</div>
+                    <div class="urgency-text">Get the Latest Price Sheet &middot; Book a Site Visit Today</div>
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="c6eda406-8588-421e-af25-461743b3179e">
@@ -1763,10 +2795,10 @@
         </div>
       </a>
       <a href="/blog/concorde-neo-thanisandra-price-layout-rera/" class="insight-card">
-        <img src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo: Price, Layout &amp; RERA Deep-Dive" loading="lazy">
+        <img src="/images/projects/concorde-neo/concorde-neo-exterior-elevation.webp" alt="Concorde Neo Review" loading="lazy">
         <div class="insight-card-body">
-          <span class="insight-card-tag">Project Review · 8 Min</span>
-          <h4 class="insight-card-title">Concorde Neo: Price, Layout &amp; RERA Deep-Dive</h4>
+          <span class="insight-card-tag">Project Review · 16 Min</span>
+          <h4 class="insight-card-title">Concorde Neo Review: Price, Floor Plans &amp; Verdict</h4>
           <span class="insight-card-link">Read Article →</span>
         </div>
       </a>
@@ -1795,12 +2827,13 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h5>About Concorde Neo</h5>
-                <p>6 towers on Thanisandra Main Road with ~78% open space, a Sky Evolve Clubhouse and premium 2 &amp; 3 BHK residences.</p>
+                <p>424 homes in 6 towers on Thanisandra Main Road with ~78% open space, an Evoolve sky clubhouse and 2 &amp; 3 BHK homes from 1,125 to 1,539 sq ft.</p>
             </div>
 
             <div class="footer-section">
                 <h5>Our Projects</h5>
                 <p><a href="/projects/concorde-sienna/">Concorde Sienna, Hennur</a></p>
+                <p><a href="/projects/concorde-mayfair/">Concorde Mayfair, Yelahanka</a></p>
                 <p><a href="/areas/hennur/">Hennur-Thanisandra projects</a></p>
                 <p><a href="/areas/yelahanka/">Yelahanka projects</a></p>
                 <p><a href="/projects/">All verified projects</a></p>
@@ -1811,7 +2844,8 @@
                 <p><a href="#about">About</a></p>
                 <p><a href="#amenities">Amenities</a></p>
                 <p><a href="#gallery">Gallery</a></p>
-                <p><a href="#units">Unit Plans</a></p>
+                <p><a href="#configurations">Floor Plans</a></p>
+                <p><a href="#faq">FAQs</a></p>
                 <p><a href="#location">Location</a></p>
                 <p><a href="/privacy.html">Privacy Policy</a></p>
             </div>
@@ -1888,13 +2922,13 @@
         let allLightboxImages = [];
 
         function collectAllImages() {
-            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img');
+            const imgs = document.querySelectorAll('.neo-gal-item:not(.hidden) img, .amenity-photo img, .club-band img, .plan-image img');
             allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
         }
 
         function openLightbox(itemElement) {
             const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
-            if (!allLightboxImages.length) collectAllImages();
+            collectAllImages();
 
             const idx = allLightboxImages.findIndex(x => x.src === src);
             currentImageIndex = idx >= 0 ? idx : 0;
@@ -1911,7 +2945,7 @@
         }
 
         function openLightboxFromSrc(src) {
-            if (!allLightboxImages.length) collectAllImages();
+            collectAllImages();
             const idx = allLightboxImages.findIndex(x => x.src.endsWith(src) || x.src === src);
             currentImageIndex = idx >= 0 ? idx : 0;
 
@@ -1953,6 +2987,17 @@
                 if (e.key === 'ArrowRight') nextImage();
                 if (e.key === 'ArrowLeft') previousImage();
             }
+        });
+
+        document.querySelectorAll('.neo-tabs button').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.neo-tabs button').forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var f = btn.getAttribute('data-filter');
+                document.querySelectorAll('.neo-gal-item').forEach(function (item) {
+                    item.classList.toggle('hidden', f !== 'all' && item.getAttribute('data-cat') !== f);
+                });
+            });
         });
 
         document.addEventListener('DOMContentLoaded', function() {
