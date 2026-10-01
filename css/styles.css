@@ -807,6 +807,11 @@ section.hero--photo .btn--outline:hover {
   max-width: 780px;
 }
 
+/* Home hero has no badge above the h1, so give the heading room below the nav */
+@media (min-width: 769px) {
+  .hero--home .hero-content { padding-top: var(--space-lg); }
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
