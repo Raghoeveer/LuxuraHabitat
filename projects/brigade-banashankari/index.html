@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+
+    <link rel="canonical" href="https://luxurahabitat.com/projects/brigade-banashankari/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigade Banashankari: Price, Floor Plans, RERA &amp; Possession</title>
+    <meta name="description" content="Brigade Banashankari, a 7.5-acre Brigade high-rise in Banashankari 5th Stage: 2 BHK from ₹1.65 Cr, 3 BHK from ₹2.35 Cr, sizes, possession, RERA status, 20 FAQs.">
+    <meta name="keywords" content="brigade banashankari, brigade banashankari 5th stage, brigade banashankari price, brigade banashankari floor plan, brigade new launch banashankari, brigade project banashankari, brigade vishnuvardhan road, apartments in banashankari 5th stage, flats in banashankari, 2 bhk flats in banashankari, 3 bhk flats in banashankari, brigade south bangalore, brigade kanakapura road">
+    <meta name="author" content="Luxura Habitat">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurahabitat.com/projects/brigade-banashankari/">
+    <meta property="og:title" content="Brigade Banashankari: 2 &amp; 3 BHK High-Rise Homes in Banashankari 5th Stage">
+    <meta property="og:description" content="7.5 acres, 75% open space, towers of 20+ floors off Dr. Vishnuvardhan Road. 2 BHK 1,200-1,350 sq ft from ₹1.65 Cr, 3 BHK 1,700-2,000 sq ft from ₹2.35 Cr. Pre-launch.">
+    <meta property="og:image" content="https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-banner.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brigade Banashankari: 2 &amp; 3 BHK High-Rise Homes in Banashankari 5th Stage">
+    <meta name="twitter:description" content="7.5 acres, 75% open space, towers of 20+ floors off Dr. Vishnuvardhan Road. 2 BHK 1,200-1,350 sq ft from ₹1.65 Cr, 3 BHK 1,700-2,000 sq ft from ₹2.35 Cr. Pre-launch.">
+    <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-banner.webp">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/images/projects/brigade-banashankari/brigade-banashankari-banner.webp" fetchpriority="high">
+    <link rel="icon" href="/images/projects/brigade-banashankari/favicon.png" type="image/png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-dark: #0f172a;
+            --secondary-dark: #111827;
+            --accent-green: #0b6b3c;
+            --accent-warm: #d4a574;
+            --bg-light: #f5f3f0;
+            --bg-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #556070;
+            --border-light: #e6e2dc;
+            --success: #22c55e;
+        }
+
+        html { overflow-x: hidden; }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 0.8rem clamp(1rem, 4vw, 2rem);
+            box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(14px);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            gap: 6px;
+            z-index: 101;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #111827;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .logo { display: flex; align-items: center; cursor: pointer; transition: transform 0.3s ease; text-decoration: none; padding: 0; flex-shrink: 0; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 42px; width: auto; object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.6vw, 1.6rem);
+            list-style: none;
+            flex: 1;
+            flex-wrap: nowrap;
+        }
+.nav-links a { text-decoration: none; color: var(--primary-dark); font-size: clamp(0.7rem, 1vw, 0.82rem); font-weight: 600; transition: color 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { color: var(--accent-green); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        .nav-buttons { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(11, 107, 60, 0.08);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .phone-section:hover { background: rgba(11, 107, 60, 0.15); transform: translateY(-2px); }
+
+        .phone-label { font-size: clamp(0.6rem, 0.8vw, 0.75rem); color: #6b7280; font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase; }
+        .phone-number { font-size: clamp(0.75rem, 1vw, 0.95rem); color: var(--accent-green); font-weight: 800; white-space: nowrap; }
+
+        .whatsapp-btn {
+            background: #128c4f;
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: clamp(0.7rem, 0.9vw, 0.86rem);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover { background: #0f7a45; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+.whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.nav-call, .nav-cta { display: none; }
+
+        /* Hero */
+        .hero {
+            background: #05080f;
+            color: #e5e7eb;
+            min-height: calc(100vh - 68px);
+            padding: clamp(1rem, 2.2vw, 2rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: calc(100vh - 108px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 0.5fr);
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 4.5rem);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(1rem, 2vh, 1.45rem);
+            padding: clamp(1.5rem, 3.8vw, 3.1rem);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 7px solid var(--accent-warm);
+            border-radius: 10px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        .hero-logo { display: block; width: min(220px, 60%); margin: 0 0 0.35rem; }
+        .hero-logo img { display: block; width: 100%; height: auto; }
+
+        .hero-badge {
+            color: #ffffff;
+            background: var(--accent-green);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            width: fit-content;
+            padding: 0.45rem 1rem;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--accent-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin: 0.2rem 0;
+            max-width: 100%;
+        }
+
+        .hero-intro { color: #0b1220; font-size: clamp(0.95rem, 1.25vw, 1.15rem); line-height: 1.7; max-width: 620px; }
+
+        .hero-info-boxes { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+
+        .info-box {
+            border: 1px solid rgba(11, 107, 60, 0.16);
+            border-radius: 10px;
+            padding: clamp(0.9rem, 2vh, 1.2rem);
+            background: rgba(245, 243, 240, 0.78);
+        }
+
+        .info-box.primary-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .info-row { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 0.8rem; }
+
+        .info-box-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 900;
+        }
+
+        .info-box-title { color: #111827; font-size: clamp(1rem, 1.25vw, 1.25rem); font-weight: 900; }
+        .info-box-subtitle { color: #111827; font-size: clamp(0.82rem, 1vw, 0.98rem); font-weight: 600; }
+
+        .price-box { text-align: left; color: var(--accent-green); line-height: 1.25; }
+        .price-copy { display: block; font-weight: 700; font-size: 0.95rem; }
+        .price-line { display: block; color: #111827; font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 800; }
+        .new-price { color: #111827; font-weight: 900; }
+        .offer-note { color: #111827; display: block; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 0.2rem; }
+
+        .hero-media {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+            min-height: 100%;
+            background: #0b1220;
+            z-index: 0;
+        }
+        .hero-media img { width: 100%; height: 100%; min-height: 100%; display: block; object-fit: cover; object-position: 60% center; filter: saturate(1.02) contrast(1.02); }
+        .hero-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.18) 42%, rgba(2, 6, 23, 0.62)),
+                linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.08) 46%, rgba(2, 6, 23, 0.52));
+            pointer-events: none;
+        }
+
+        .artist-note {
+            position: absolute;
+            right: 2.4rem;
+            bottom: 1.25rem;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.72rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+            z-index: 2;
+        }
+
+        .hero-form-section {
+            position: relative;
+            justify-self: end;
+            width: min(390px, 100%);
+            background: rgba(255, 255, 255, 0.96);
+            border-top: 5px solid var(--accent-green);
+            border-radius: 10px;
+            padding: clamp(1rem, 2vw, 1.45rem);
+            box-shadow: 0 28px 74px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+            color: #111827;
+        }
+
+        .hero-form-title { color: #0b1220; font-size: 1.28rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.4rem; }
+        .hero-form-subtitle { display: block; color: #5b6776; font-size: 0.85rem; margin-bottom: 0.9rem; }
+
+        .hero-form { display: flex; flex-direction: column; gap: 0.75rem; }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            min-height: 50px;
+            padding: 0.9rem 1.1rem;
+            border: 2px solid rgba(11, 107, 60, 0.15);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.98rem;
+            background: #fff;
+            color: #0b1220;
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        form input:focus, form textarea:focus { 
+            outline: none; 
+            border-color: var(--accent-green); 
+            box-shadow: 0 0 0 4px rgba(11, 107, 60, 0.15); 
+            transform: translateY(-2px);
+        }
+        form input::placeholder, form textarea::placeholder { color: #6b7280; font-weight: 500; }
+        form textarea { resize: vertical; min-height: 120px; padding-top: 1rem; }
+
+        .hero-form-submit {
+            width: 100%;
+            min-height: 46px;
+            background: var(--accent-green);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 0.98rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-form-submit:hover { background: #075b31; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(11, 107, 60, 0.25); }
+
+        section { padding: 5rem 2rem; }
+        .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.25; font-weight: 900; color: var(--accent-green); margin-bottom: 1rem; text-align: center; font-family: 'Playfair Display', serif; letter-spacing: -0.5px; }
+
+        .section-subtitle { font-size: 1.08rem; color: var(--text-light); text-align: center; max-width: 880px; margin: 0 auto 3rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .about { background: var(--bg-light); padding: 4rem 2rem; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr); gap: 2rem; align-items: center; }
+        .about-content h3 { font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        .about-content p { font-size: 1rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+        .feature-item { display: flex; gap: 1rem; }
+        .feature-icon { width: 44px; height: 44px; background: var(--accent-green); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; flex-shrink: 0; }
+        .feature-item h3 { font-size: 0.98rem; margin-bottom: 0.3rem; font-weight: 900; }
+        .feature-item p { font-size: 0.86rem; color: var(--text-light); margin: 0; font-weight: 600; }
+
+        .about-visual { width: 100%; max-height: 460px; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 70%; border-radius: 12px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+        .gallery { background: var(--bg-white); }
+
+        .faq { background: var(--bg-white); }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.1rem 1.3rem;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(11, 107, 60, 0.05);
+        }
+
+        .faq-question.open {
+            color: var(--accent-green);
+        }
+
+        .faq-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-question.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 1.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer.open {
+            max-height: 1400px;
+            padding: 0 1.3rem 1.1rem;
+        }
+        .gallery-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, rgba(245, 243, 240, 0.8) 100%);
+            border: 2px solid rgba(11,107,60,0.35);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            max-height: 420px;
+            align-items: center;
+        }
+        .gallery-grid::-webkit-scrollbar { height: 10px; }
+        .gallery-grid::-webkit-scrollbar-thumb { background: rgba(11,107,60,0.6); border-radius: 10px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; min-width: 280px; width: 280px; height: 280px; cursor: pointer; flex-shrink: 0; scroll-snap-align: start; border: 3px solid #fff; background: #fff; box-shadow: 0 8px 20px rgba(2,6,23,0.14); }
+        .gallery-item::after { content: 'Click to View'; pointer-events: none; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .gallery-item.is-plan::after { content: 'Get This Plan'; }
+        .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,107,60,0.9); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
+        .gallery-item.is-plan img { object-fit: contain; background: #fff; }
+        .config-phase { margin-top: 2.2rem; }
+        .config-phase h3 { color: var(--primary-dark); font-size: 1.2rem; font-weight: 900; margin-bottom: 0.3rem; }
+        .config-phase .phase-meta { color: var(--text-light); font-size: 0.9rem; font-weight: 600; }
+        .config-note { max-width: 900px; margin: 1.6rem auto 0; background: #fff; border-left: 5px solid var(--accent-warm); border-radius: 10px; padding: 1rem 1.2rem; color: var(--text-light); font-size: 0.92rem; line-height: 1.7; }
+        .tradeoff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        @media (max-width: 768px) { .tradeoff-grid { grid-template-columns: 1fr; } }
+
+        .amenities { background: var(--bg-light); }
+        .amenity-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; }
+        .amenity-card { background: #fff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); border: 1px solid rgba(11,107,60,0.12); }
+        .amenity-card:hover { border-color: rgba(11,107,60,0.35); }
+        .amenity-card h3 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); font-weight: 900; }
+        .amenity-list { list-style: none; display: grid; gap: 0.45rem; }
+        .amenity-list li { color: var(--text-light); font-size: 0.88rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.6rem; align-items: start; font-weight: 600; }
+        .amenity-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); margin-top: 0.55rem; }
+
+        .plan { background: var(--bg-white); }
+        .plan-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr); gap: 2rem; align-items: center; margin-top: 2rem; }
+        .plan-image { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 14px 36px rgba(2,6,23,0.08); overflow: hidden; }
+        .plan-image img { width: 100%; display: block; border-radius: 12px; cursor: pointer; transition: transform 0.55s ease; }
+        .plan-image:hover img { transform: scale(1.02); }
+
+        .plan-notes { display: grid; gap: 0.9rem; }
+        .plan-note { background: #fff; border-left: 5px solid var(--accent-green); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+        .plan-note strong { display: block; margin-bottom: 0.25rem; font-weight: 1000; color: var(--primary-dark); }
+        .plan-note span { color: var(--text-light); font-weight: 700; font-size: 0.9rem; line-height: 1.6; }
+
+        .lead-form-section { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); color: #fff; padding: 5rem 2rem; }
+        .lead-form-section .section-title, .lead-form-section .section-subtitle { color: #fff; }
+        .form-container { max-width: 620px; margin: 2rem auto 0; }
+        .form-container form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 800; font-size: 0.95rem; }
+
+        .form-submit { width: 100%; padding: 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 900; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11,107,60,0.25); }
+
+        .form-message { text-align: center; margin-top: 0.8rem; padding: 0.9rem; border-radius: 10px; display: none; }
+        .form-message.success { display: block; background: rgba(34, 197, 94, 0.2); color: var(--success); border: 1px solid rgba(34,197,94,0.35); }
+
+        .footer { background: #0b1220; color: #fff; padding: 3rem 2rem 2.2rem; }
+
+        /* Project Highlights table */
+        .highlights { background: var(--bg-light); }
+        .highlights-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+            border: 1px solid rgba(11,107,60,0.18);
+            margin-top: 1.8rem;
+        }
+        table.highlights-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+        }
+        .highlights-table th,
+        .highlights-table td {
+            padding: 0.95rem 1rem;
+            border-bottom: 1px solid rgba(11,107,60,0.12);
+            vertical-align: top;
+            font-size: 0.98rem;
+        }
+        .highlights-table thead th {
+            background: rgba(11, 107, 60, 0.08);
+            color: var(--accent-green);
+            font-weight: 900;
+            text-align: left;
+        }
+        .highlights-table tbody tr:hover td { background: rgba(11,107,60,0.04); }
+        .highlights-table tbody tr:last-child td { border-bottom: none; }
+        .highlights-table td strong { color: var(--primary-dark); }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 2rem; }
+        .footer-section h5 { margin-bottom: 1rem; font-size: 1.05rem; color: #a7f3d0; }
+        .footer-section p, .footer-section a { font-size: 0.92rem; color: rgba(255,255,255,0.75); text-decoration: none; line-height: 1.8; transition: color 0.3s ease; }
+        .footer-section a:hover { color: #4ade80; }
+        .footer-contact strong { display: block; color: #fff; margin-bottom: 0.25rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+        /* Sidebar widget */
+        .sidebar-widget { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 0.6rem; }
+        .details-button {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-warm) 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 0.85rem;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 0.9rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transition: all 0.3s ease;
+            box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.6px;
+        }
+        .details-panel {
+            position: fixed;
+            right: -420px;
+            top: 0;
+            width: min(400px, 100vw);
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            z-index: 998;
+            transition: right 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+        .details-panel.active { right: 0; }
+
+        .panel-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 997; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .panel-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-light); }
+        .panel-header h3 { font-size: 1.5rem; color: var(--primary-dark); font-family: 'Playfair Display', serif; font-weight: 900; }
+        .close-button { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #6b7280; transition: color 0.3s ease; }
+        .close-button:hover { color: var(--accent-green); }
+
+        .panel-section { margin-bottom: 2rem; }
+        .panel-section h3 { color: var(--accent-green); font-size: 0.95rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .quick-contact { background: var(--bg-light); padding: 1rem; border-radius: 12px; }
+        .quick-contact a { display: block; margin: 0.6rem 0; color: var(--accent-green); text-decoration: none; font-weight: 800; }
+        .quick-contact a:hover { color: var(--accent-warm); }
+
+        .panel-cta { background: var(--accent-green); color: #fff; border: none; padding: 1rem; border-radius: 10px; width: 100%; font-weight: 900; cursor: pointer; font-size: 0.98rem; transition: all 0.3s ease; }
+        .panel-cta:hover { background: #075b31; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(11,107,60,0.25); }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { display: flex; opacity: 1; align-items: center; justify-content: center; }
+        .lightbox-content { position: relative; max-width: 94%; max-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.9); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; color: #fff; font-size: 2.2rem; cursor: pointer; background: none; border: none; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+        .lightbox-close:hover { transform: scale(1.15); color: #a7f3d0; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(11,107,60,0.85); color: #fff; border: 2px solid #fff; font-size: 2.5rem; padding: 1rem 1.5rem; cursor: pointer; border-radius: 10px; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .lightbox-nav:hover { background: var(--accent-green); transform: translateY(-50%) scale(1.08); }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); border: 1px solid rgba(11,107,60,0.6); color: #fff; border-radius: 999px; padding: 0.7rem 1.3rem; font-weight: 900; }
+
+        @media (max-width: 1650px) {
+            .nav-links { gap: clamp(0.3rem, 0.9vw, 0.9rem); }
+            .nav-links a { font-size: 0.7rem; }
+            .phone-section { padding: 0.35rem 0.55rem; }
+            .whatsapp-btn { padding: 0.45rem 0.65rem; font-size: 0.68rem; }
+            .whatsapp-icon { width: 16px; height: 16px; }
+        }
+
+@media (max-width: 1024px) {
+            .sidebar-widget { display: none; }
+            .phone-section { display: flex; }
+            .mobile-call-btn { display: none; }
+            .nav-cta { display: inline-flex; }
+
+            .mobile-call-icon { font-size: 1.05rem; }
+            .mobile-call-text { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.2px; }
+        
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .gallery-grid { max-height: 360px; }
+            .gallery-item { min-width: 270px; width: 270px; height: 270px; }
+
+            .sidebar-widget { right: auto; left: 0; top: auto; bottom: 0; transform: none; width: 100%; flex-direction: row; justify-content: space-around; padding: 0.5rem; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); }
+            .details-button { writing-mode: initial; text-orientation: initial; min-height: auto; padding: 0.7rem 0.9rem; border-radius: 10px; }
+
+            .hero-container { grid-template-columns: 1fr; min-height: auto; gap: 1.2rem; }
+            .hero-media { display: none; width: 100%; left: 0; right: 0; transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding-bottom: 0.5rem; }
+
+        
+
+            .hamburger-menu { display: flex; order: 3; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,255,255,0.98); flex-direction: column; gap: 0.2rem; padding: 1.2rem 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99; border-bottom: 1px solid var(--border-light); }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 0.85rem 0.5rem; border-bottom: 1px solid #f0f0f0; }
+            .nav-links a:last-child { border-bottom: none; }
+
+            /* Prevent header spillover on smaller screens */
+            .nav-buttons { gap: 0.5rem; flex: 1; justify-content: flex-end; min-width: 0; }
+            .phone-section { display: none; }
+            .whatsapp-btn { flex: 0 1 auto; max-width: 160px; overflow: hidden; }
+            .whatsapp-btn span { white-space: normal; line-height: 1.2; font-size: 0.78rem; }
+
+.nav-cta { display: none; }
+
+            .nav-call { display: inline-flex; }
+            .nav-call-text { font-size: 0.82rem; font-weight: 900; }
+            .nav-call-icon { font-size: 1.1rem; }
+            .nav-call { background: rgba(11,107,60,0.10); border: 1px solid rgba(11,107,60,0.25); color: var(--accent-green); padding: 0.55rem 0.7rem; border-radius: 999px; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 900; transition: all 0.2s ease; }
+            .nav-call:hover { background: rgba(11,107,60,0.16); transform: translateY(-1px); }
+
+            .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .info-box.primary-details { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .features-list { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.6rem; }
+            section { padding: 2.8rem 1rem; }
+
+            .lightbox-nav { width: 58px; height: 58px; font-size: 2.2rem; }
+            .lightbox-prev { left: 12px; }
+            .lightbox-next { right: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .features-list { grid-template-columns: 1fr; }
+            .amenity-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero h1 { font-size: clamp(1rem, 5.5vw, 1.4rem); line-height: 1.3; }
+            .gallery-item { min-width: 240px; width: 240px; height: 240px; }
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 5;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .trust-item svg { color: var(--success); }
+
+        /* Urgency Block */
+        .urgency-block {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.05));
+            border-left: 5px solid var(--accent-warm);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .urgency-title {
+            color: #fff;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .urgency-text { color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .trust-bar { gap: 1rem; padding: 0.8rem 1rem; }
+            .trust-item { font-size: 0.85rem; }
+            .mobile-bottom-cta {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                padding: 0;
+                background: #fff;
+                box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            }
+            .mobile-cta-btn {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.6rem 0.2rem calc(0.6rem + env(safe-area-inset-bottom));
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 0.75rem;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--border-light);
+            }
+            .mobile-cta-btn:last-child { border-right: none; }
+            .mobile-cta-btn svg { margin-bottom: 3px; }
+            .btn-whatsapp { color: #128c4f; }
+            .btn-call { color: var(--accent-green); }
+            .btn-price { background: var(--bg-light); }
+            .btn-visit { background: var(--accent-green); color: #fff; border: none; }
+            
+            /* Push Zendesk up so mobile CTA doesn't cover it */
+            iframe#launcher { bottom: 75px !important; }
+            iframe#webWidget { bottom: 75px !important; }
+        }
+    
+        /* Luxura Habitat Branding Styles */
+        .project-brand {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.32rem !important;
+            min-width: 205px !important;
+            text-decoration: none !important;
+            flex-shrink: 0 !important;
+        }
+
+        .project-brand img {
+            display: block !important;
+            height: 30px !important;
+            width: auto !important;
+        }
+
+        .partner-divider {
+            display: none !important;
+        }
+
+        .partner-caption {
+            display: block !important;
+            width: 112px !important;
+            color: #8a8d86 !important;
+            font-size: 0.56rem !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.09em !important;
+            text-transform: uppercase !important;
+            text-align: justify !important;
+            text-align-last: justify !important;
+            text-justify: inter-character !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 1180px) {
+            .project-brand {
+                min-width: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-brand {
+                min-width: 0 !important;
+                gap: 0.55rem !important;
+            }
+            .project-brand img {
+                height: 26px !important;
+            }
+            .partner-divider,
+            .partner-caption {
+                display: none !important;
+            }
+        }
+
+    /* ── SIMILAR PROJECTS + INSIGHTS STRIP ── */
+    .project-footer-strip { padding: 64px 24px; background: #faf8f5; }
+    .project-footer-strip .pfs-inner { max-width: 1140px; margin: 0 auto; }
+    .pfs-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4a574; margin-bottom: 10px; display: block; }
+    .pfs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #1e3a2f; margin-bottom: 8px; }
+    .pfs-intro { font-size: 0.97rem; color: #666; margin-bottom: 28px; max-width: 620px; }
+    .pfs-divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 52px 0; }
+
+    /* Similar projects grid */
+    .proj-compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .proj-compare-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .proj-compare-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .proj-compare-img-wrap { position: relative; height: 155px; overflow: hidden; }
+    .proj-compare-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-compare-badge { position: absolute; top: 10px; left: 10px; background: rgba(30,58,47,0.88); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 30px; }
+    .proj-compare-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .proj-compare-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a2f; margin-bottom: 4px; line-height: 1.3; }
+    .proj-compare-detail { font-size: 0.78rem; color: #888; margin-bottom: 10px; flex: 1; }
+    .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    /* Insight blog cards */
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .insight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 3px 14px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .insight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
+    .insight-card img { width: 100%; height: 160px; object-fit: cover; }
+    .insight-card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .insight-card-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #c4a574; margin-bottom: 6px; display: block; }
+    .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
+    .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
+
+    
+        /* Brigade Banashankari additions */
+        .sub-heading { color: var(--primary-dark); font-size: 1.25rem; font-weight: 900; margin: 3rem 0 0.4rem; text-align: center; }
+        .config-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; margin-top: 2.5rem; }
+        .config-card-simple { background: #fff; border: 1px solid rgba(11,107,60,0.15); border-radius: 14px; padding: 1rem; display: flex; flex-direction: column; gap: 0.55rem; box-shadow: 0 8px 22px rgba(2,6,23,0.06); }
+        .config-card-simple img { width: 100%; height: 230px; object-fit: contain; background: #faf8f5; border-radius: 10px; cursor: pointer; }
+        .config-card-simple h3 { color: var(--accent-green); font-size: 1.15rem; font-weight: 900; }
+        .config-size { color: var(--primary-dark); font-weight: 800; font-size: 0.92rem; }
+        .config-meta { list-style: none; display: grid; gap: 0.3rem; color: var(--text-light); font-size: 0.84rem; font-weight: 600; }
+        .config-price { color: var(--primary-dark); font-weight: 900; font-size: 1.05rem; margin-top: auto; }
+        .config-cta { display: inline-block; width: 100%; padding: 0.7rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.88rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .config-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .pricing-table .config-cta { width: auto; padding: 0.5rem 0.9rem; font-size: 0.8rem; white-space: nowrap; }
+        .pricing-table thead th { background: rgba(11, 107, 60, 0.08); color: var(--accent-green); }
+        .plan-image-cta { display: block; width: 100%; margin-top: 1rem; padding: 0.75rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .plan-image-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .hero-form-title { font-family: 'Poppins', sans-serif; }
+        .overview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+        .overview-caption { color: var(--text-light); font-size: 0.86rem; font-weight: 600; line-height: 1.6; margin-top: 0.8rem; }
+        @media (max-width: 768px) { .overview-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1024px) { .config-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 768px) { .plan-grid { grid-template-columns: 1fr; gap: 2rem; } }
+        @media (max-width: 560px) { .config-grid { grid-template-columns: 1fr; } }
+        .config-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        @media (max-width: 1024px) { .config-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 560px) { .config-grid.three { grid-template-columns: 1fr; } }
+        .config-card-simple .config-cta { margin-top: 0.4rem; }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://luxurahabitat.com/projects/brigade-banashankari/#listing",
+      "name": "Brigade Banashankari",
+      "description": "Pre-launch high-rise apartment project by Brigade Group on about 7.5 acres in Banashankari 5th Stage, South Bangalore, with 2 BHK (1,200-1,350 sq ft) and 3 BHK (1,700-2,000 sq ft) homes from about ₹1.65 crore and over 75% open space.",
+      "url": "https://luxurahabitat.com/projects/brigade-banashankari/",
+      "datePosted": "2026-10-03",
+      "image": [
+        "https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-banner.webp",
+        "https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-swimming-pool.webp",
+        "https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-master-plan.webp"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Off Dr. Vishnuvardhan Road, Banashankari 5th Stage",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "about": {
+        "@type": "ApartmentComplex",
+        "name": "Brigade Banashankari",
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Clubhouse with multipurpose hall",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Swimming pool with separate kids' pool",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Gymnasium",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Yoga and meditation deck",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Mini theatre",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Amphitheatre",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Jogging and cycling tracks",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Skating rink",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Children's play area",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Co-working and reading lounge",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "24/7 CCTV security",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Power backup",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Rainwater harvesting",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Sewage treatment plant",
+            "value": true
+          }
+        ],
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Banashankari 5th Stage, South Bangalore"
+        }
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "INR",
+        "lowPrice": "16500000",
+        "highPrice": "28500000",
+        "offerCount": "3",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://luxurahabitat.com/projects/brigade-banashankari/"
+      },
+      "provider": {
+        "@id": "https://luxurahabitat.com/#agent"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://luxurahabitat.com/projects/brigade-banashankari/#developer",
+      "name": "Brigade Group",
+      "alternateName": "Brigade Enterprises Ltd",
+      "foundingDate": "1986",
+      "founder": {
+        "@type": "Person",
+        "name": "M.R. Jaishankar"
+      },
+      "logo": "https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-group-logo.png"
+    },
+    {
+      "@type": [
+        "RealEstateAgent",
+        "LocalBusiness"
+      ],
+      "@id": "https://luxurahabitat.com/#agent",
+      "name": "Luxura Habitat",
+      "url": "https://luxurahabitat.com/",
+      "telephone": "+918438344093",
+      "email": "projectinfoindia@gmail.com",
+      "image": "https://luxurahabitat.com/images/logos/company_logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://luxurahabitat.com/images/projects/brigade-banashankari/brigade-banashankari-banner.webp",
+      "caption": "Brigade Banashankari high-rise residences off Dr. Vishnuvardhan Road (artist's impression)"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://luxurahabitat.com/projects/brigade-banashankari/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brigade Banashankari is an upcoming high-rise apartment project by Brigade Group in Banashankari 5th Stage, South Bangalore. Brigade announced the project on 24 September 2025 as a joint development on about 7.5 acres with an estimated gross development value of about ₹1,200 crore. It is in the pre-launch stage, with RERA registration in process and the official launch yet to be announced."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where exactly is Brigade Banashankari located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project is in Banashankari 5th Stage, South Bangalore. The brochure graphics place it off Dr. Vishnuvardhan Road, and one property portal lists the address as off 4th Cross Road, 5th Stage Banashankari. The developer's location map shows Doddakallasandra and Konanakunte Cross metro stations on the Green Line, DPS South and Rashtrotthana Vidya Kendra nearby, with Kanakapura Road, Bannerghatta Road and the Outer Ring Road close by."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How big is the project, and how many towers and homes are planned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brigade's own announcement and the main project brief both say about 7.5 acres. The tower count is not final: the project brief describes residential towers rising above twenty floors, a brochure-style master plan graphic shows 8 high-rise towers, and a portal listing shows 5 towers of 2 basements, ground and 25 floors. The total number of homes has not been published. Based on the ₹1,200 crore development value and the quoted prices, we estimate roughly 450 to 550 homes, but treat that as our estimate only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do different sources show different figures for Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the project is still pre-launch, the material in circulation was prepared at different stages and by different parties. The project brief quotes 2 and 3 BHK homes on 7.5 acres with 75% open space and December 2029 possession. A brochure-style graphic shows 3 BHK Premium, 4 BHK and penthouses on 9.5 acres with 70% open space. A portal listing shows 3, 3.5 and 4.5 BHK homes with December 2031 possession. Brigade's press release confirms only the 7.5 acres, the location and the ₹1,200 crore value. The binding figures will be the ones filed with Karnataka RERA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Banashankari a joint development project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Brigade Group announced in September 2025 that it had signed a joint development agreement (JDA) for this land in Banashankari 5th Stage. In a JDA the landowner contributes the land and the developer builds and sells the project, sharing the built area or revenue. For buyers, it is worth checking at launch whether the unit you choose falls in the developer's share or the landowner's share, because payment terms can differ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What configurations and sizes does Brigade Banashankari offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main project brief lists three home types: 2 BHK of 1,200 to 1,350 sq ft, 3 BHK with three toilets of 1,700 to 2,000 sq ft, and a 3 BHK Large of 1,800 to 2,000 sq ft. Other material in circulation shows larger homes too: a brochure graphic lists 3 BHK Premium, 4 BHK Luxury and penthouses of 1,800 to 2,200 sq ft, and a portal lists 3 BHK, 3.5 BHK and 4.5 BHK homes. The final unit mix will be confirmed at launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of Brigade Banashankari apartments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indicative starting prices from the project brief are about ₹1.65 crore for a 2 BHK, ₹2.35 to ₹2.85 crore for a 3 BHK with three toilets and about ₹2.60 crore for a 3 BHK Large. A portal listing quotes all-inclusive prices of about ₹2.42 crore for a 3 BHK, ₹2.75 crore for a 3.5 BHK and ₹3.50 crore for a 4.5 BHK. Official prices will be released only after RERA registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price per sq ft at Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the sizes and prices in the project brief, the rate works out to roughly ₹12,200 to ₹14,400 per sq ft of super built-up area. The portal's 3 BHK (1,710 sq ft built-up, ₹2.42 crore) works out to about ₹14,150 per sq ft. Measured on carpet area, the portal's prices come to about ₹21,700 to ₹22,000 per sq ft across all three home types."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the carpet area of the homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project brief gives super built-up sizes only. A portal listing quotes carpet areas of about 1,112 sq ft for the 3 BHK (1,710 sq ft built-up), 1,265 sq ft for the 3.5 BHK and 1,595 sq ft for the 4.5 BHK. That implies carpet area of roughly 65% of built-up area, which is typical for a high-rise with a large clubhouse. Confirm carpet areas from the RERA filing before you compare prices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there 4 BHK or penthouse homes at Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Possibly. The main project brief lists only 2 and 3 BHK homes, but the brochure-style master plan graphic shows 4 BHK Luxury and penthouse units, the banner mentions private terrace apartments, and a portal listing includes a 4.5 BHK of about 1,595 sq ft carpet area. If you want a larger home, register your interest early and ask for the final unit mix at launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What specifications and finishes are planned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project brief lists premium vitrified tiles in the living, dining and bedrooms; a modular kitchen setup with granite platform, stainless steel sink and provisions for a water purifier and exhaust fan; branded CP fittings, modern sanitary ware and anti-skid tiles in bathrooms; anti-skid balcony tiles with safety railings; laminated flush doors and UPVC sliding windows with mosquito mesh; and intercom, CCTV in common areas and fire-fighting systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What charges are payable on top of the base price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Expect 5% GST on an under-construction home, stamp duty of about 5.6% including surcharge and cess, and 1% registration fee, plus car parking, clubhouse membership, electricity and water deposits, legal charges, any floor-rise premium and advance maintenance. Ask for a complete cost sheet at launch and compare all-in prices, not base rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Banashankari RERA registered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. The project brief says RERA registration is in process, and a portal listing shows the RERA number as not available as of August 2026. Sign a sale agreement or pay a booking amount only after a Karnataka RERA number is issued and you have checked it on the Karnataka RERA portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is possession of Brigade Banashankari expected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project brief says December 2029. A portal listing shows December 2031 as both the target and the RERA possession date and reports construction at about 1% as of August 2026. For towers of more than twenty floors, December 2031 is the more conservative planning date. The binding date will be the completion date filed with Karnataka RERA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities will Brigade Banashankari have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Planned amenities include a clubhouse with a multipurpose hall, a swimming pool with a separate kids' pool, a gym with a yoga and meditation deck, a mini theatre, meditation pod, amphitheatre, cafeteria, skating rink, step garden, jogging and cycling tracks, indoor games, kids' play areas, senior citizen seating zones, a co-working and reading lounge and a convenience store. Services include 24/7 CCTV security, power backup for essential services, rainwater harvesting and a sewage treatment plant. The brochure graphic also shows a 15,000+ sq ft clubhouse, outdoor gym and senior citizens' corner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much open space will the project have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project brief says over 75% of the area is planned as open space, while the brochure-style graphic says 70%. Either way, most of the land is planned for landscaping, gardens and outdoor amenities rather than buildings, which is possible because the homes are stacked in high-rise towers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far is the nearest metro station from Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The nearest stations are on the Namma Metro Green Line along Kanakapura Road. A portal listing puts Doddakallasandra Metro about 3 km away, the developer's map shows Doddakallasandra roughly 10 minutes away with Konanakunte Cross close by, and the project brief puts Banashankari Metro about 5 km (10 minutes) away. The Green Line runs through Jayanagar and the city centre to Majestic and Nagasandra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which schools and hospitals are near Brigade Banashankari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project brief lists National Public School Banashankari (about 5 km), Delhi Public School South (about 6 km), Kumarans School (about 7 km), Jain College Jayanagar (about 8 km) and BGS International Residential School (about 9 km). Hospitals include Sagar Hospitals (about 5 km), Cloudnine (about 7 km), Apollo Jayanagar (about 8 km), BGS Global Hospital (about 10 km) and Fortis Bannerghatta Road (about 12 km). Dayananda Sagar University is about 2.5 km away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Banashankari a good investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It suits long-term end users more than short-term investors. In its favour: a Brigade-branded high-rise in an established south Bangalore neighbourhood, Green Line metro nearby and limited new branded supply in Banashankari 5th Stage. The caution: at roughly ₹12,200 to ₹14,400 per sq ft it is priced well above the area's resale rates, possession is several years away and there is no RERA number yet, so near-term gains are not assured."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I get the Brigade Banashankari brochure, price sheet or a site visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fill in the enquiry form on this page, or call or WhatsApp +91 84383 44093. We will share the brochure, the latest indicative price sheet and floor plans as they are released, explain the EOI terms and arrange a site visit once the developer opens the sales office."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="panel-overlay" id="panelOverlay" onclick="toggleDetailsPanel()"></div>
+
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Get Brigade Banashankari Details</h3>
+            <button class="close-button" type="button" onclick="toggleDetailsPanel()">✕</button>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+            <input type="hidden" name="access_key" value="80b578b2-eca2-43c6-a08c-755ed69c9562">
+            <input type="hidden" name="subject" value="New Inquiry - Brigade Banashankari | Side Panel">
+            <input type="hidden" name="project" value="Brigade Banashankari">
+            <input type="hidden" name="source_page" value="https://luxurahabitat.com/projects/brigade-banashankari/">
+            <input type="hidden" name="form_location" value="Brigade Banashankari project page - Side Panel">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+            <input type="text" name="name" required placeholder="Full Name" aria-label="Full name" />
+            <input type="email" name="email" required placeholder="Email Address" aria-label="Email address" />
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+            <textarea name="message" placeholder="Which configuration are you interested in? (Optional)" aria-label="Message"></textarea>
+            <button type="submit" class="panel-cta">Get Brochure &amp; Price Sheet</button>
+        </form>
+
+        <div class="panel-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border-light);">
+            <h3>Direct Contact</h3>
+            <div class="quick-contact">
+                <a href="tel:+918438344093"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> +91 8438 344 093</a>
+                <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20details%20of%20Brigade%20Banashankari%2C%20the%20brochure%20and%20launch%20prices"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Chat</a>
+                <a href="mailto:projectinfoindia@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-widget" id="sidebarWidget">
+        <button class="details-button" type="button" onclick="toggleDetailsPanel()">Request Brochure</button>
+    </div>
+
+    <nav>
+        <a href="#" class="project-brand" aria-label="Luxura Habitat, back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="partner-caption">Real Estate Advisory</span>
+        </a>
+
+        <button class="hamburger-menu" id="hamburgerMenu" type="button" onclick="toggleMobileMenu()" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#pricing">Price</a></li>
+            <li><a href="#units">Floor Plans</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#form">Enquire</a></li>
+        </ul>
+
+        <div class="nav-buttons" id="navButtons">
+            <a href="tel:+918438344093" class="phone-section" aria-label="Call: 8438344093">
+                <div class="phone-number" style="font-size: 1rem;">Call: 8438344093</div>
+            </a>
+
+            <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20details%20of%20Brigade%20Banashankari%2C%20the%20brochure%20and%20launch%20prices" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Get details now</span>
+            </a>
+
+            <a href="tel:+918438344093" class="nav-call" aria-label="Call us">
+                <span class="nav-call-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+                <span class="nav-call-text">Call</span>
+            </a>
+            <button type="button" class="nav-cta" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});">Request Brochure</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero" style="background-image: url('/images/projects/brigade-banashankari/brigade-banashankari-banner.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); z-index: 1;"></div>
+
+        <div class="hero-container" style="position: relative; z-index: 2;">
+            <div class="hero-content reveal">
+                <a href="#" class="hero-logo" style="width:96px;" aria-label="Brigade Banashankari by Brigade Group" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                    <img src="/images/projects/brigade-banashankari/brigade-group-logo.png" alt="Brigade Group logo, developer of Brigade Banashankari">
+                </a>
+
+                <div class="hero-badge">Pre-Launch &middot; Register Interest</div>
+                <h1>Brigade Banashankari: 2 &amp; 3 BHK High-Rise Apartments in Banashankari 5th Stage</h1>
+                <p class="hero-intro">
+                    A 7.5-acre Brigade Group joint development off Dr. Vishnuvardhan Road, South Bangalore, with over 70% open space, high-rise towers of 20+ floors, a large clubhouse and Green Line metro a short drive away. Announced in September 2025 with a ₹1,200 crore development value.
+                </p>
+
+                <div class="hero-info-boxes">
+                    <div class="info-box primary-details">
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
+                            <div>
+                                <div class="info-box-title">7.5 Acres &middot; 75% Open</div>
+                                <div class="info-box-subtitle">High-Rise, 20+ Floors</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-box-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                            <div>
+                                <div class="info-box-title">Possession Dec 2029*</div>
+                                <div class="info-box-subtitle">RERA: In process</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box price-box">
+                        <span class="price-copy">Indicative starting prices</span>
+                        <span class="price-line"><span class="new-price">₹1.65 Cr* 2 BHK &middot; ₹2.35 Cr* 3 BHK &middot; ₹2.60 Cr* 3 BHK Large</span></span>
+                        <span class="offer-note">*Pre-launch indicative, excl. GST &amp; registration. Some listings quote Dec 2031 possession. Final prices at RERA launch</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-form-section reveal" style="transition-delay:120ms;">
+                <h2 class="hero-form-title">Register Your Interest</h2>
+                <span class="hero-form-subtitle">Get the brochure, floor plans and launch price sheet on WhatsApp.</span>
+
+                <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:0.75rem;">
+            <input type="hidden" name="access_key" value="80b578b2-eca2-43c6-a08c-755ed69c9562">
+            <input type="hidden" name="subject" value="New Inquiry - Brigade Banashankari | Hero Form">
+            <input type="hidden" name="project" value="Brigade Banashankari">
+            <input type="hidden" name="source_page" value="https://luxurahabitat.com/projects/brigade-banashankari/">
+            <input type="hidden" name="form_location" value="Brigade Banashankari project page - Hero Form">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address"/>
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number" />
+                    <textarea name="message" placeholder="Message (Optional)" aria-label="Message"></textarea>
+                    <button type="submit" class="hero-form-submit">Get Brochure &amp; Price Sheet</button>
+                </form>
+            </div>
+        </div>
+        <span class="artist-note">Artist's impression</span>
+    </section>
+
+    <div class="trust-bar">
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Brigade Group, Since 1986</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ₹1,200 Cr Development Value</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 70-75% Open Space</div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Green Line Metro Nearby</div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Brigade Banashankari</h2>
+            <p class="section-subtitle">A large, high-rise Brigade community in one of South Bangalore's best-established residential neighbourhoods.</p>
+
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <h3>A rare large land parcel in Banashankari</h3>
+                    <p>
+                        Brigade Banashankari is an upcoming premium apartment project by <strong>Brigade Group</strong> in Banashankari 5th Stage, South Bangalore. On 24 September 2025 Brigade announced that it had signed a joint development agreement for about <strong>7.5 acres</strong> here, with an estimated gross development value of about <strong>₹1,200 crore</strong>. Brochure graphics place the site off Dr. Vishnuvardhan Road, between Kanakapura Road and the Outer Ring Road.
+                    </p>
+                    <p>
+                        Banashankari is one of Bangalore's original BDA-planned neighbourhoods, known for wide roads, temples, parks, good schools and long-settled families. Most homes here are independent houses and smaller apartment buildings, so a 7.5-acre gated high-rise community with resort-style amenities is genuinely scarce supply in this part of the city.
+                    </p>
+                    <p>
+                        The project brief describes residential towers rising above twenty floors, over 75% of the land kept as open space, landscaped green spaces across the community and a clubhouse with multiple lifestyle amenities. It lists <strong>2 BHK homes of 1,200 to 1,350 sq ft</strong>, <strong>3 BHK homes with three toilets of 1,700 to 2,000 sq ft</strong> and a <strong>3 BHK Large of 1,800 to 2,000 sq ft</strong>, with possession planned for December 2029. Other material in circulation shows larger 3.5, 4 and 4.5 BHK homes and a later possession date, which we set out side by side in the <a href="#sources" style="color:var(--accent-green);font-weight:700;">source comparison</a> below.
+                    </p>
+                    <p>
+                        For our independent view on price, risks and fit, read the <a href="/blog/brigade-banashankari-review/" style="color:var(--accent-green);font-weight:700;">Brigade Banashankari review</a>, and for the bigger picture on the neighbourhood see <a href="/blog/banashankari-5th-stage-flats-buyer-guide/" style="color:var(--accent-green);font-weight:700;">Is Banashankari 5th Stage a good place to buy a flat?</a> You can also compare the wider corridor on our <a href="/areas/kanakapura-road/" style="color:var(--accent-green);font-weight:700;">Kanakapura Road area guide</a>.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path></svg></div>
+                            <div>
+                                <h3>Towers of 20+ Floors</h3>
+                                <p>Open city views from upper floors.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+                            <div>
+                                <h3>70-75% Open Space</h3>
+                                <p>Landscaped gardens and trails.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></div>
+                            <div>
+                                <h3>2 &amp; 3 BHK</h3>
+                                <p>1,200 to 2,000 sq ft homes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
+                            <div>
+                                <h3>Green Line Metro</h3>
+                                <p>Doddakallasandra ~3 km.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay:160ms;">
+                    <img class="about-visual" src="/images/projects/brigade-banashankari/brigade-banashankari-swimming-pool.webp" alt="Brigade Banashankari swimming pool and sun deck beside the residential towers, artist's impression" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <h2 class="section-title">Brigade Banashankari Project Highlights</h2>
+            <p class="section-subtitle">Every key fact in one table, from the project brief and Brigade's own announcement. Pre-launch details can change at RERA registration.</p>
+
+            <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
+                <table class="highlights-table" aria-label="Brigade Banashankari project highlights">
+                    <thead>
+                        <tr><th>Attribute</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Project Name</strong></td><td>Brigade Banashankari (working name; final name to be announced at launch)</td></tr>
+                        <tr><td><strong>Developer</strong></td><td>Brigade Group (Brigade Enterprises Ltd), founded 1986</td></tr>
+                        <tr><td><strong>Deal Type</strong></td><td>Joint development agreement, announced 24 September 2025</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Banashankari 5th Stage, off Dr. Vishnuvardhan Road, South Bangalore</td></tr>
+                        <tr><td><strong>Total Land Area</strong></td><td>About 7.5 acres</td></tr>
+                        <tr><td><strong>Gross Development Value</strong></td><td>About ₹1,200 crore (Brigade press release)</td></tr>
+                        <tr><td><strong>Project Type</strong></td><td>Premium high-rise residential apartments</td></tr>
+                        <tr><td><strong>Towers</strong></td><td>Residential towers rising above 20 floors (final count to be confirmed)</td></tr>
+                        <tr><td><strong>Open Space</strong></td><td>Over 75% of the area planned as open space</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>2 BHK, 3 BHK + 3T and 3 BHK Large</td></tr>
+                        <tr><td><strong>Size Range</strong></td><td>About 1,200 sq ft (2 BHK) to 2,000 sq ft (3 BHK), super built-up</td></tr>
+                        <tr><td><strong>Price Range</strong></td><td>From about ₹1.65 Cr (2 BHK) to ₹2.85 Cr (3 BHK)*</td></tr>
+                        <tr><td><strong>Indicative Rate</strong></td><td>About ₹12,200 to ₹14,400 per sq ft (our calculation from quoted sizes and prices)*</td></tr>
+                        <tr><td><strong>Clubhouse</strong></td><td>Planned with multiple lifestyle amenities</td></tr>
+                        <tr><td><strong>Status</strong></td><td>Upcoming / pre-launch; launch date to be announced</td></tr>
+                        <tr><td><strong>Expected Possession</strong></td><td>December 2029 per the project brief (a portal listing shows December 2031)</td></tr>
+                        <tr><td><strong>RERA Number</strong></td><td>In process (to be advised)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="sources" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">What Each Source Says</h2>
+            <p class="section-subtitle">Brigade Banashankari is pre-launch, and the figures in circulation do not all agree. Rather than pick one silently, here they are side by side.</p>
+
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Source comparison table">
+                <table class="highlights-table">
+                    <thead><tr><th>Detail</th><th>Project brief</th><th>Brochure-style graphics</th><th>Portal listing (Aug 2026)</th><th>Brigade press release</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Land area</strong></td><td>7.5+ acres</td><td>9.5 acres landscape</td><td>About 7 acres</td><td>7.5 acres</td></tr>
+                        <tr><td><strong>Towers</strong></td><td>Towers above 20 floors</td><td>8 high-rise towers</td><td>5 towers, 2B + G + 25</td><td>Not stated</td></tr>
+                        <tr><td><strong>Open space</strong></td><td>Over 75%</td><td>70%</td><td>Not stated</td><td>Not stated</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>2 BHK, 3 BHK + 3T, 3 BHK Large</td><td>3 BHK Premium, 4 BHK Luxury, Penthouse</td><td>3 BHK, 3.5 BHK, 4.5 BHK</td><td>Not stated</td></tr>
+                        <tr><td><strong>Sizes</strong></td><td>1,200 to 2,000 sq ft</td><td>1,800 to 2,200 sq ft</td><td>Carpet 1,112 to 1,595 sq ft</td><td>Not stated</td></tr>
+                        <tr><td><strong>Prices</strong></td><td>₹1.65 Cr to ₹2.85 Cr</td><td>Not stated</td><td>₹2.42 Cr to ₹3.50 Cr (all-in)</td><td>₹1,200 Cr total value</td></tr>
+                        <tr><td><strong>Clubhouse</strong></td><td>Multiple lifestyle amenities</td><td>15,000+ sq ft</td><td>Clubhouse listed</td><td>Not stated</td></tr>
+                        <tr><td><strong>Possession</strong></td><td>December 2029</td><td>Not stated</td><td>December 2031</td><td>Not stated</td></tr>
+                        <tr><td><strong>RERA</strong></td><td>In process</td><td>Not stated</td><td>Not available</td><td>Not stated</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="config-note">
+                <strong>How to read this:</strong> Brigade's own press release confirms the location, the 7.5 acres and the ₹1,200 crore value, which matches the project brief, so this page leads with the brief's figures. The brochure-style master plan, banner and location map are stylised graphics (for example, two towers are labelled "Tower A" and two "Tower B"), so we show them as illustrative. The portal listing's carpet areas and possession date are useful cross-checks. None of this is binding until the project is registered with Karnataka RERA, and we will update this page as soon as the RERA filing is published.
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Brigade Banashankari Price List &amp; Configurations</h2>
+            <p class="section-subtitle">Indicative pre-launch starting prices from the project brief, with the rate per sq ft worked out on the quoted sizes.</p>
+
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Brigade Banashankari price table">
+                <table class="highlights-table pricing-table">
+                    <thead><tr><th>Configuration</th><th>Super Built-up (sq ft)</th><th>Starting Price*</th><th>Approx. Rate / sq ft</th><th>Floor Plan</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>2 BHK</strong></td><td>1,200 to 1,350</td><td>₹1.65 Cr onwards</td><td>₹12,200 to ₹13,750</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                        <tr><td><strong>3 BHK + 3T</strong></td><td>1,700 to 2,000</td><td>₹2.35 Cr to ₹2.85 Cr</td><td>₹13,800 to ₹14,250</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                        <tr><td><strong>3 BHK Large</strong></td><td>1,800 to 2,000</td><td>₹2.60 Cr onwards</td><td>₹13,000 to ₹14,450</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-heading">Larger homes listed elsewhere</h3>
+            <p class="section-subtitle" style="margin-bottom:1rem;">A property portal lists these all-inclusive prices and carpet areas. They are shown for comparison and are not confirmed by the developer.</p>
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Portal price comparison table">
+                <table class="highlights-table pricing-table">
+                    <thead><tr><th>Configuration</th><th>Built-up (sq ft)</th><th>Carpet (sq ft)</th><th>Price (all-in)</th><th>Approx. Rate / Carpet sq ft</th><th>Floor Plan</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>3 BHK</strong></td><td>1,710</td><td>1,112</td><td>₹2.42 Cr</td><td>₹21,750</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                        <tr><td><strong>3.5 BHK</strong></td><td>Not listed</td><td>1,265</td><td>₹2.75 Cr</td><td>₹21,750</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                        <tr><td><strong>4.5 BHK</strong></td><td>Not listed</td><td>1,595</td><td>₹3.50 Cr</td><td>₹21,950</td><td><button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="config-note">
+                *Indicative pre-launch prices. Rates per sq ft are our own arithmetic on the quoted sizes and prices, not developer figures. Base prices exclude GST (5% on under-construction homes), stamp duty (about 5.6%), 1% registration, car parking, clubhouse membership, deposits, floor-rise and advance maintenance. As a rough guide, a ₹1.65 Cr 2 BHK comes to about ₹1.84 Cr after GST, stamp duty and registration, and a ₹2.35 Cr 3 BHK to about ₹2.62 Cr. The source brief's FAQ also mentions estimates of ₹95 lakh and ₹1.25 crore "based on similar Brigade projects"; those do not match its own size-based price table and are not used here. Official pricing will be announced only after RERA registration.
+            </div>
+        </div>
+    </section>
+
+    <section class="plan" id="units">
+        <div class="container">
+            <h2 class="section-title">Master Plan &amp; Floor Plans</h2>
+            <p class="section-subtitle">The plans currently in circulation for Brigade Banashankari, clearly labelled. Tap any plan to receive the full plan set and price sheet as soon as it is released.</p>
+
+            <div class="plan-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/brigade-banashankari/brigade-banashankari-master-plan.webp" alt="Brigade Banashankari master plan graphic with high-rise towers, clubhouse, swimming pool, jogging track and kids' play areas off Dr. Vishnuvardhan Road" onclick="toggleDetailsPanel()" style="cursor:pointer;">
+                    <p class="overview-caption">Brochure-style master plan graphic. Illustrative only: its 9.5 acres, 8 towers and unit types differ from the project brief and Brigade's announced 7.5 acres.</p>
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note"><strong>Towers Around a Central Garden</strong><span>The graphic arranges the high-rise towers in an arc around a landscaped central podium, keeping the middle of the site free of buildings.</span></div>
+                    <div class="plan-note"><strong>Clubhouse and Pool at the Core</strong><span>A large curved clubhouse (marked at about 15,000 sq ft) sits beside the main swimming pool and kids' pool at the heart of the layout.</span></div>
+                    <div class="plan-note"><strong>Jogging Track and Ground-Level Play</strong><span>A jogging track loops the podium, while kids' play areas, an outdoor gym and a senior citizens' corner line the front of the site near the main entrance plaza.</span></div>
+                    <div class="plan-note"><strong>Entry off Dr. Vishnuvardhan Road</strong><span>The entrance plaza and visitor parking face Dr. Vishnuvardhan Road. Ask for the approach road width and the RERA-approved layout before booking.</span></div>
+                </div>
+            </div>
+
+            <div class="overview-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-site-layout.webp" alt="Brigade Banashankari sample site layout plan from the pre-launch source pack" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <p class="overview-caption">Sample site layout from the pre-launch source pack. It does not match the brochure graphic and is shown as an illustrative reference only.</p>
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
+                </div>
+                <div class="plan-image reveal" style="transition-delay:120ms;">
+                    <img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-2bhk-floor-plan.webp" alt="Brigade Banashankari sample 2 BHK floor plan with living and dining, kitchen, two bedrooms and balcony" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <p class="overview-caption">Sample 2 BHK layout from the source pack (living and dining 14'9" x 9'10", kitchen 6'11" x 8'2", bedrooms about 9' wide). Its rooms suggest a smaller home than the 1,200 to 1,350 sq ft quoted, so treat it as indicative of style only.</p>
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plans</button>
+                </div>
+            </div>
+
+            <div class="config-grid three">
+                <div class="config-card-simple reveal">
+                    <h3>2 BHK</h3>
+                    <p class="config-size">1,200 to 1,350 sq ft super built-up</p>
+                    <ul class="config-meta">
+                        <li>Two bedrooms, two toilets (typical)</li>
+                        <li>Private balcony with safety railing</li>
+                        <li>Modular kitchen setup, granite platform</li>
+                        <li>Approx. ₹12,200 to ₹13,750 per sq ft</li>
+                    </ul>
+                    <p class="config-price">From ₹1.65 Cr*</p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:80ms;">
+                    <h3>3 BHK + 3T</h3>
+                    <p class="config-size">1,700 to 2,000 sq ft super built-up</p>
+                    <ul class="config-meta">
+                        <li>Three bedrooms, three toilets</li>
+                        <li>Suits families needing a guest or parents' room</li>
+                        <li>Portal carpet cross-check: ~1,112 sq ft at 1,710</li>
+                        <li>Approx. ₹13,800 to ₹14,250 per sq ft</li>
+                    </ul>
+                    <p class="config-price">₹2.35 Cr to ₹2.85 Cr*</p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:160ms;">
+                    <h3>3 BHK Large</h3>
+                    <p class="config-size">1,800 to 2,000 sq ft super built-up</p>
+                    <ul class="config-meta">
+                        <li>Larger 3 BHK variant, higher minimum size</li>
+                        <li>Likely bigger living area and bedrooms</li>
+                        <li>Compare room sizes with the 3 BHK + 3T</li>
+                        <li>Approx. ₹13,000 to ₹14,450 per sq ft</li>
+                    </ul>
+                    <p class="config-price">From ₹2.60 Cr*</p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                </div>
+            </div>
+
+            <h3 class="sub-heading" id="specs">Specifications</h3>
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Specifications table">
+                <table class="highlights-table">
+                    <thead><tr><th>Area</th><th>Planned specification</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Flooring</strong></td><td>Premium vitrified tiles in the living room, dining area and bedrooms</td></tr>
+                        <tr><td><strong>Kitchen</strong></td><td>Modular kitchen setup with granite platform and stainless steel sink, with provisions for a water purifier and exhaust fan</td></tr>
+                        <tr><td><strong>Bathrooms</strong></td><td>Branded CP fittings, modern sanitary ware and anti-skid ceramic tiles</td></tr>
+                        <tr><td><strong>Balconies</strong></td><td>Private balconies with anti-skid tiles and safety railings</td></tr>
+                        <tr><td><strong>Doors &amp; Windows</strong></td><td>Laminated flush doors; UPVC sliding windows with mosquito mesh</td></tr>
+                        <tr><td><strong>Safety</strong></td><td>Intercom, CCTV surveillance in common areas and fire-fighting systems</td></tr>
+                        <tr><td><strong>Common Areas</strong></td><td>Double-height grand lobby and podium-level amenities (per the brochure banner)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <h2 class="section-title">Amenities &amp; Clubhouse</h2>
+            <p class="section-subtitle">A clubhouse with a mini theatre, a pool with a separate kids' pool, sports, wellness and green spaces across 70 to 75% of the land.</p>
+
+            <div class="amenity-grid">
+                <div class="amenity-card reveal">
+                    <h3>Clubhouse &amp; Social</h3>
+                    <ul class="amenity-list">
+                        <li>Clubhouse with multipurpose hall</li>
+                        <li>Mini theatre</li>
+                        <li>Cafeteria</li>
+                        <li>Amphitheatre for cultural events</li>
+                        <li>Co-working and reading lounge</li>
+                        <li>Indoor games: carrom, chess, table tennis</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <h3>Fitness &amp; Wellness</h3>
+                    <ul class="amenity-list">
+                        <li>Swimming pool with separate kids' pool</li>
+                        <li>Fully equipped gymnasium</li>
+                        <li>Yoga and meditation deck</li>
+                        <li>Meditation pod</li>
+                        <li>Jogging and cycling tracks</li>
+                        <li>Outdoor gym</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <h3>Outdoors &amp; Play</h3>
+                    <ul class="amenity-list">
+                        <li>Children's play areas</li>
+                        <li>Skating rink</li>
+                        <li>Sports court</li>
+                        <li>Step garden and landscaped gardens</li>
+                        <li>Open lawns with sit-out corners</li>
+                        <li>Senior citizen seating zones</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:240ms;">
+                    <h3>Safety &amp; Services</h3>
+                    <ul class="amenity-list">
+                        <li>24/7 security with CCTV</li>
+                        <li>Power backup for essential services</li>
+                        <li>Rainwater harvesting</li>
+                        <li>Sewage treatment plant</li>
+                        <li>Convenience retail store</li>
+                        <li>Visitor parking at the entrance plaza</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gallery-grid reveal" style="margin-top:2.5rem;">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-swimming-pool.webp" alt="Brigade Banashankari swimming pool with wooden sun deck, artist's impression" loading="lazy"><span class="gallery-tag">Swimming Pool</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-clubhouse-cafe.webp" alt="Brigade Banashankari clubhouse cafe and dining lounge with garden views, artist's impression" loading="lazy"><span class="gallery-tag">Clubhouse Cafe</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sports-court.webp" alt="Brigade Banashankari sports court and lawns between residential towers, artist's impression" loading="lazy"><span class="gallery-tag">Sports Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-outdoor-gym.webp" alt="Brigade Banashankari outdoor gym and landscaped walking path, artist's impression" loading="lazy"><span class="gallery-tag">Outdoor Gym</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-pet-park-garden.webp" alt="Brigade Banashankari landscaped garden with pet play area and walking trail, artist's impression" loading="lazy"><span class="gallery-tag">Gardens &amp; Pet Park</span></div>
+            </div>
+            <p class="config-note" style="text-align:center;">Amenity lists are from pre-launch material and the renders are artist's impressions. Confirm the final list, and which facilities will be ready at handover, once the RERA filing is available.</p>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Brigade Banashankari Gallery</h2>
+            <p class="section-subtitle">Renders, representative interiors, plans and the location map. Tap a photo to enlarge it, or a plan to receive the full plan set.</p>
+
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-banner.webp" alt="Brigade Banashankari high-rise residences off Dr. Vishnuvardhan Road, Bengaluru, artist's impression" loading="lazy"><span class="gallery-tag">Elevation</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-living-dining-interior.webp" alt="Brigade Banashankari living and dining room interior, artist's impression" loading="lazy"><span class="gallery-tag">Living &amp; Dining</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-swimming-pool.webp" alt="Brigade Banashankari resort-style swimming pool, artist's impression" loading="lazy"><span class="gallery-tag">Pool</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-clubhouse-cafe.webp" alt="Brigade Banashankari clubhouse cafe interior, artist's impression" loading="lazy"><span class="gallery-tag">Clubhouse</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sports-court.webp" alt="Brigade Banashankari sports court, artist's impression" loading="lazy"><span class="gallery-tag">Sports Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-outdoor-gym.webp" alt="Brigade Banashankari outdoor fitness area, artist's impression" loading="lazy"><span class="gallery-tag">Outdoor Gym</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-pet-park-garden.webp" alt="Brigade Banashankari garden and pet park, artist's impression" loading="lazy"><span class="gallery-tag">Gardens</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-location-map.webp" alt="Brigade Banashankari location map with Green Line metro, Dr. Vishnuvardhan Road, Kanakapura Road and Outer Ring Road" loading="lazy"><span class="gallery-tag">Location Map</span></div>
+                                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-1.webp" alt="Brigade Banashankari representative interior styling, open living room with garden-facing glass doors" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-2.webp" alt="Brigade Banashankari representative interior styling, living area with open kitchen and brick feature wall" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-3.webp" alt="Brigade Banashankari representative interior styling, living room with grey sofa and chandelier" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-4.webp" alt="Brigade Banashankari representative interior styling, formal living room with display shelving" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-5.webp" alt="Brigade Banashankari representative interior styling, living room with wood-panelled feature wall" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-6.webp" alt="Brigade Banashankari representative interior styling, minimal living room with blue sofa" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-7.webp" alt="Brigade Banashankari representative interior styling, reading corner with armchair and floor lamp" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-interior-8.webp" alt="Brigade Banashankari representative interior styling, bright living room with wooden furniture" loading="lazy"><span class="gallery-tag">Representative Interior</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Brigade Banashankari master plan"><img src="/images/projects/brigade-banashankari/brigade-banashankari-master-plan.webp" alt="Brigade Banashankari master plan graphic" loading="lazy"><span class="gallery-tag">Master Plan</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Brigade Banashankari site layout"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-site-layout.webp" alt="Brigade Banashankari sample site layout" loading="lazy"><span class="gallery-tag">Sample Site Layout</span></div>
+                <div class="gallery-item is-plan" onclick="toggleDetailsPanel()" role="button" tabindex="0" aria-label="Request the Brigade Banashankari 2 BHK floor plan"><img src="/images/projects/brigade-banashankari/brigade-banashankari-sample-2bhk-floor-plan.webp" alt="Brigade Banashankari sample 2 BHK floor plan" loading="lazy"><span class="gallery-tag">Sample 2 BHK Plan</span></div>
+            </div>
+            <p class="config-note" style="text-align:center;">Renders are artist's impressions. Photos tagged "Representative Interior" are generic interior styling from the pre-launch source pack, not photographs of this project.</p>
+        </div>
+    </section>
+
+    <section class="plan" id="location">
+        <div class="container">
+            <h2 class="section-title">Location Advantage &amp; Connectivity</h2>
+            <p class="section-subtitle">Banashankari 5th Stage, off Dr. Vishnuvardhan Road: an established South Bangalore neighbourhood between Kanakapura Road, the Outer Ring Road and NICE Road.</p>
+
+            <div class="plan-grid">
+                <div class="plan-image reveal">
+                    <img src="/images/projects/brigade-banashankari/brigade-banashankari-location-map.webp" alt="Brigade Banashankari location map, off Dr. Vishnuvardhan Road near Konanakunte Cross and Doddakallasandra metro" onclick="openLightboxFromSrc('brigade-banashankari-location-map.webp')">
+                    <p class="overview-caption">Developer-style location map (illustrative, not to scale). It marks Doddakallasandra and Konanakunte Cross metro stations, DPS South, Rashtrotthana Vidya Kendra, Forum Mall Konanakunte, Metro Cash &amp; Carry, Apollo and Fortis hospitals, Jayadeva flyover, NICE Road (about 5 minutes) and Electronic City (about 20 minutes).</p>
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>Key Roads &amp; City Hubs</strong>
+                        <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
+                            <li><strong style="display:inline; color:var(--text-dark);">Outer Ring Road:</strong> ~4 km, 10 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Kanakapura Road:</strong> ~5 km, 10 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">NICE Road junction:</strong> ~6 km, 12 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">JP Nagar:</strong> ~8 km, 18 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Jayanagar:</strong> ~9 km, 20 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Majestic (bus station &amp; metro):</strong> ~13 km, 30 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">MG Road:</strong> ~14 km, 30 mins</li>
+                        </ul>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Metro &amp; Transport</strong>
+                        <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
+                            <li><strong style="display:inline; color:var(--text-dark);">Doddakallasandra Metro (Green Line):</strong> ~3 km</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Banashankari Metro (Green Line):</strong> ~5 km, 10 mins</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Bus:</strong> well-connected BMTC routes to major hubs</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Highways:</strong> easy access towards Mysore, Kanakapura and Hosur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenity-grid" style="margin-top:2.5rem;">
+                <div class="amenity-card reveal">
+                    <h3>Schools &amp; Colleges</h3>
+                    <ul class="amenity-list">
+                        <li>National Public School, Banashankari: ~5 km</li>
+                        <li>Delhi Public School South: ~6 km</li>
+                        <li>Kumarans School: ~7 km</li>
+                        <li>Jain College, Jayanagar: ~8 km</li>
+                        <li>BGS International Residential School: ~9 km</li>
+                        <li>Dayananda Sagar University: ~2.5 km</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:120ms;">
+                    <h3>Hospitals</h3>
+                    <ul class="amenity-list">
+                        <li>Sagar Hospitals: ~5 km, 12 mins</li>
+                        <li>Cloudnine Hospital: ~7 km, 15 mins</li>
+                        <li>Apollo Hospital, Jayanagar: ~8 km, 20 mins</li>
+                        <li>BGS Global Hospital: ~10 km, 20 mins</li>
+                        <li>Fortis, Bannerghatta Road: ~12 km, 25 mins</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:180ms;">
+                    <h3>IT Parks &amp; Work</h3>
+                    <ul class="amenity-list">
+                        <li>Kalyani Magnum Tech Park, JP Nagar: ~8 km</li>
+                        <li>Global Village Tech Park: ~9 km, 20 mins</li>
+                        <li>Electronic City: ~19 km, 35 mins</li>
+                        <li>Manyata Tech Park (via NICE Road and ORR): ~26 km</li>
+                    </ul>
+                </div>
+                <div class="amenity-card reveal" style="transition-delay:240ms;">
+                    <h3>Shopping &amp; Leisure</h3>
+                    <ul class="amenity-list">
+                        <li>Forum Mall, Konanakunte (per location map)</li>
+                        <li>Metro Cash &amp; Carry, Konanakunte</li>
+                        <li>Vega City Mall: ~9 km, 20 mins</li>
+                        <li>Lalbagh Botanical Garden: ~10 km</li>
+                        <li>Forum Mall, Koramangala: ~14 km</li>
+                        <li>D Mart: ~3.3 km</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="config-note" style="text-align:center;">Distances and drive times are as quoted in pre-launch material and listings, measured off-peak. Peak-hour times on Kanakapura Road and the Outer Ring Road can be considerably longer, so drive your own commute before deciding.</p>
+        </div>
+    </section>
+
+    <section class="amenities" id="investment" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">The Investment Case &amp; Trade-offs</h2>
+            <p class="section-subtitle">What supports Brigade Banashankari as a home or an investment, and what to weigh before you register interest.</p>
+
+            <div class="tradeoff-grid reveal">
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Why the location works</strong>
+                    <span>Banashankari is a mature, BDA-planned neighbourhood with schools, hospitals, temples and markets already in place, close to JP Nagar and Jayanagar. Large land parcels are rare here, so a 7.5-acre branded gated community stands out against older, smaller apartment buildings.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Infrastructure already in place</strong>
+                    <span>The Green Line metro along Kanakapura Road is running, with Doddakallasandra about 3 km away, and the Outer Ring Road and NICE Road junction are within 4 to 6 km. Unlike many peripheral launches, you are not buying on the promise of future roads.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Trade-off 1: a premium over local resale</strong>
+                    <span>Resale listings put a Banashankari 5th Stage 2 BHK at about ₹55 to ₹90 lakh and a 3 BHK at about ₹90 lakh to ₹1.40 crore, and inner-south Bangalore at roughly ₹6,000 to ₹10,500 per sq ft. At about ₹12,200 to ₹14,400 per sq ft, you are paying for the brand, amenities and newness, so resale comparables will not support the price for some years.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.6rem;">Trade-off 2: pre-launch uncertainty</strong>
+                    <span>There is no RERA number yet, sources disagree on the unit mix and tower count, and possession is quoted anywhere from December 2029 to December 2031. Keep any expression of interest refundable and commit only after the RERA filing confirms approvals, sizes, completion date and the final cost sheet.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="developer" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">About Brigade Group</h2>
+            <p class="section-subtitle">The developer behind Brigade Banashankari.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0 3rem;" class="reveal">
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-green);">1986</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Founded</div>
+                </div>
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-green);">275+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Projects Completed</div>
+                </div>
+                <div style="text-align: center; background: var(--bg-light); padding: 1.5rem; border-radius: 12px; min-width: 180px; border: 1px solid var(--border-light);">
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--accent-green);">80M+</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark);">Sq Ft Developed</div>
+                </div>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
+                <p style="margin-bottom: 1rem;">
+                    Brigade Group was founded in 1986 by M.R. Jaishankar, its Founder and Chairman, and is headquartered in Bengaluru. Over nearly four decades it has completed more than 275 projects covering over 80 million sq ft across Bengaluru, Chennai, Hyderabad, Mysuru, Kochi and other cities, spanning apartments, villas, offices, malls, hotels and schools. Its best-known developments include Brigade Gateway, Brigade Exotica, Brigade Orchards, Orion Mall and the World Trade Center Bengaluru, and it partners with hotel brands such as Sheraton, Grand Mercure and Holiday Inn.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Announcing the Banashankari project, Brigade Enterprises Managing Director Pavitra Shankar said it aims to deliver thoughtfully designed homes that enhance urban living. The project is part of a residential pipeline of about 12.6 million sq ft across Bengaluru, Chennai and Hyderabad. On the same South Bangalore corridor, Brigade is also developing <a href="/projects/brigade-silvercrest/" style="color:var(--accent-green);font-weight:700;">Brigade Silvercrest</a> in Raghuvanahalli, off Kanakapura Road. For the company's latest results and launch plans, see our note on <a href="/blog/brigade-enterprises-fy27-results-launch-pipeline/" style="color:var(--accent-green);font-weight:700;">Brigade Enterprises' FY27 results and launch pipeline</a>.
+                </p>
+                <p>
+                    As with any developer, judge the specific project rather than the brand alone: once the RERA filing is live, check the promoter entity, the landowner arrangement under the JDA, approvals, the completion date and quarterly progress updates on the Karnataka RERA portal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Brigade Banashankari FAQs</h2>
+            <p class="section-subtitle">Twenty answers to the questions buyers ask most about Brigade Banashankari: size, price, RERA, possession, amenities, location and investment. For our opinion on whether it is worth buying, see the <a href="/blog/brigade-banashankari-review/" style="color:var(--accent-green);font-weight:700;">full review</a>, which answers 20 more.</p>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Project basics</h3>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                        <span itemprop="name">What is Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Brigade Banashankari is an upcoming high-rise apartment project by Brigade Group in Banashankari 5th Stage, South Bangalore. Brigade announced the project on 24 September 2025 as a joint development on about 7.5 acres with an estimated gross development value of about ₹1,200 crore. It is in the pre-launch stage, with RERA registration in process and the official launch yet to be announced.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                        <span itemprop="name">Where exactly is Brigade Banashankari located?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is in Banashankari 5th Stage, South Bangalore. The brochure graphics place it off Dr. Vishnuvardhan Road, and one property portal lists the address as off 4th Cross Road, 5th Stage Banashankari. The developer's location map shows Doddakallasandra and Konanakunte Cross metro stations on the Green Line, DPS South and Rashtrotthana Vidya Kendra nearby, with Kanakapura Road, Bannerghatta Road and the Outer Ring Road close by.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                        <span itemprop="name">How big is the project, and how many towers and homes are planned?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Brigade's own announcement and the main project brief both say about 7.5 acres. The tower count is not final: the project brief describes residential towers rising above twenty floors, a brochure-style master plan graphic shows 8 high-rise towers, and a portal listing shows 5 towers of 2 basements, ground and 25 floors. The total number of homes has not been published. Based on the ₹1,200 crore development value and the quoted prices, we estimate roughly 450 to 550 homes, but treat that as our estimate only.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                        <span itemprop="name">Why do different sources show different figures for Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Because the project is still pre-launch, the material in circulation was prepared at different stages and by different parties. The project brief quotes 2 and 3 BHK homes on 7.5 acres with 75% open space and December 2029 possession. A brochure-style graphic shows 3 BHK Premium, 4 BHK and penthouses on 9.5 acres with 70% open space. A portal listing shows 3, 3.5 and 4.5 BHK homes with December 2031 possession. Brigade's press release confirms only the 7.5 acres, the location and the ₹1,200 crore value. The binding figures will be the ones filed with Karnataka RERA.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                        <span itemprop="name">Is Brigade Banashankari a joint development project?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Brigade Group announced in September 2025 that it had signed a joint development agreement (JDA) for this land in Banashankari 5th Stage. In a JDA the landowner contributes the land and the developer builds and sells the project, sharing the built area or revenue. For buyers, it is worth checking at launch whether the unit you choose falls in the developer's share or the landowner's share, because payment terms can differ.</p>
+                    </div>
+                </div>
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Configurations, price and floor plans</h3>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                        <span itemprop="name">What configurations and sizes does Brigade Banashankari offer?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The main project brief lists three home types: 2 BHK of 1,200 to 1,350 sq ft, 3 BHK with three toilets of 1,700 to 2,000 sq ft, and a 3 BHK Large of 1,800 to 2,000 sq ft. Other material in circulation shows larger homes too: a brochure graphic lists 3 BHK Premium, 4 BHK Luxury and penthouses of 1,800 to 2,200 sq ft, and a portal lists 3 BHK, 3.5 BHK and 4.5 BHK homes. The final unit mix will be confirmed at launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                        <span itemprop="name">What is the price of Brigade Banashankari apartments?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Indicative starting prices from the project brief are about ₹1.65 crore for a 2 BHK, ₹2.35 to ₹2.85 crore for a 3 BHK with three toilets and about ₹2.60 crore for a 3 BHK Large. A portal listing quotes all-inclusive prices of about ₹2.42 crore for a 3 BHK, ₹2.75 crore for a 3.5 BHK and ₹3.50 crore for a 4.5 BHK. Official prices will be released only after RERA registration.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                        <span itemprop="name">What is the price per sq ft at Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">On the sizes and prices in the project brief, the rate works out to roughly ₹12,200 to ₹14,400 per sq ft of super built-up area. The portal's 3 BHK (1,710 sq ft built-up, ₹2.42 crore) works out to about ₹14,150 per sq ft. Measured on carpet area, the portal's prices come to about ₹21,700 to ₹22,000 per sq ft across all three home types.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                        <span itemprop="name">What is the carpet area of the homes?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project brief gives super built-up sizes only. A portal listing quotes carpet areas of about 1,112 sq ft for the 3 BHK (1,710 sq ft built-up), 1,265 sq ft for the 3.5 BHK and 1,595 sq ft for the 4.5 BHK. That implies carpet area of roughly 65% of built-up area, which is typical for a high-rise with a large clubhouse. Confirm carpet areas from the RERA filing before you compare prices.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                        <span itemprop="name">Are there 4 BHK or penthouse homes at Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Possibly. The main project brief lists only 2 and 3 BHK homes, but the brochure-style master plan graphic shows 4 BHK Luxury and penthouse units, the banner mentions private terrace apartments, and a portal listing includes a 4.5 BHK of about 1,595 sq ft carpet area. If you want a larger home, register your interest early and ask for the final unit mix at launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">What specifications and finishes are planned?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project brief lists premium vitrified tiles in the living, dining and bedrooms; a modular kitchen setup with granite platform, stainless steel sink and provisions for a water purifier and exhaust fan; branded CP fittings, modern sanitary ware and anti-skid tiles in bathrooms; anti-skid balcony tiles with safety railings; laminated flush doors and UPVC sliding windows with mosquito mesh; and intercom, CCTV in common areas and fire-fighting systems.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">What charges are payable on top of the base price?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Expect 5% GST on an under-construction home, stamp duty of about 5.6% including surcharge and cess, and 1% registration fee, plus car parking, clubhouse membership, electricity and water deposits, legal charges, any floor-rise premium and advance maintenance. Ask for a complete cost sheet at launch and compare all-in prices, not base rates.</p>
+                    </div>
+                </div>
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">RERA, possession and amenities</h3>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">Is Brigade Banashankari RERA registered?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Not yet. The project brief says RERA registration is in process, and a portal listing shows the RERA number as not available as of August 2026. Sign a sale agreement or pay a booking amount only after a Karnataka RERA number is issued and you have checked it on the Karnataka RERA portal.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">When is possession of Brigade Banashankari expected?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project brief says December 2029. A portal listing shows December 2031 as both the target and the RERA possession date and reports construction at about 1% as of August 2026. For towers of more than twenty floors, December 2031 is the more conservative planning date. The binding date will be the completion date filed with Karnataka RERA.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">What amenities will Brigade Banashankari have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Planned amenities include a clubhouse with a multipurpose hall, a swimming pool with a separate kids' pool, a gym with a yoga and meditation deck, a mini theatre, meditation pod, amphitheatre, cafeteria, skating rink, step garden, jogging and cycling tracks, indoor games, kids' play areas, senior citizen seating zones, a co-working and reading lounge and a convenience store. Services include 24/7 CCTV security, power backup for essential services, rainwater harvesting and a sewage treatment plant. The brochure graphic also shows a 15,000+ sq ft clubhouse, outdoor gym and senior citizens' corner.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">How much open space will the project have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project brief says over 75% of the area is planned as open space, while the brochure-style graphic says 70%. Either way, most of the land is planned for landscaping, gardens and outdoor amenities rather than buildings, which is possible because the homes are stacked in high-rise towers.</p>
+                    </div>
+                </div>
+                <h3 style="color:var(--primary-dark);font-size:1.1rem;font-weight:900;margin:1.4rem 0 0.2rem;">Location and investment</h3>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">How far is the nearest metro station from Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The nearest stations are on the Namma Metro Green Line along Kanakapura Road. A portal listing puts Doddakallasandra Metro about 3 km away, the developer's map shows Doddakallasandra roughly 10 minutes away with Konanakunte Cross close by, and the project brief puts Banashankari Metro about 5 km (10 minutes) away. The Green Line runs through Jayanagar and the city centre to Majestic and Nagasandra.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span itemprop="name">Which schools and hospitals are near Brigade Banashankari?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project brief lists National Public School Banashankari (about 5 km), Delhi Public School South (about 6 km), Kumarans School (about 7 km), Jain College Jayanagar (about 8 km) and BGS International Residential School (about 9 km). Hospitals include Sagar Hospitals (about 5 km), Cloudnine (about 7 km), Apollo Jayanagar (about 8 km), BGS Global Hospital (about 10 km) and Fortis Bannerghatta Road (about 12 km). Dayananda Sagar University is about 2.5 km away.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span itemprop="name">Is Brigade Banashankari a good investment?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">It suits long-term end users more than short-term investors. In its favour: a Brigade-branded high-rise in an established south Bangalore neighbourhood, Green Line metro nearby and limited new branded supply in Banashankari 5th Stage. The caution: at roughly ₹12,200 to ₹14,400 per sq ft it is priced well above the area's resale rates, possession is several years away and there is no RERA number yet, so near-term gains are not assured.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span itemprop="name">How can I get the Brigade Banashankari brochure, price sheet or a site visit?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Fill in the enquiry form on this page, or call or WhatsApp +91 84383 44093. We will share the brochure, the latest indicative price sheet and floor plans as they are released, explain the EOI terms and arrange a site visit once the developer opens the sales office.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Register Interest in Brigade Banashankari</h2>
+            <p class="section-subtitle">Get the brochure, floor plans, indicative price sheet and launch updates for Brigade Banashankari.</p>
+
+            <div class="form-container">
+                <div class="urgency-block">
+                    <div class="urgency-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Pre-Launch Registrations Open
+                    </div>
+                    <div class="urgency-text">Early registrants get floor plans first, launch pricing and the first choice of towers, floors and facings</div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="80b578b2-eca2-43c6-a08c-755ed69c9562">
+            <input type="hidden" name="subject" value="New Inquiry - Brigade Banashankari | Main Form">
+            <input type="hidden" name="project" value="Brigade Banashankari">
+            <input type="hidden" name="source_page" value="https://luxurahabitat.com/projects/brigade-banashankari/">
+            <input type="hidden" name="form_location" value="Brigade Banashankari project page - Main Form">
+            <input type="hidden" name="redirect" value="https://luxurahabitat.com/thank-you/">
+                    <input type="text" name="name" required placeholder="Enter your full name" aria-label="Full name" />
+                    <input type="email" name="email" required placeholder="your.email@example.com" aria-label="Email address" />
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" aria-label="Phone number">
+                    <textarea name="message" placeholder="Preferred configuration and budget (Optional)" aria-label="Message"></textarea>
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+
+                <div class="rera-notice" style="margin-top:1.8rem;background: rgba(212, 165, 116, 0.12); padding: 1.2rem 1.3rem; border-left: 6px solid var(--accent-warm); border-radius: 14px; color:#fefce8;">
+                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; margin-bottom: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Disclaimer:</strong> Luxura Habitat is a real estate marketing initiative owned and operated by Narayanan Rajesh, an independent RERA-registered real estate facilitator. We are not developers or builders.
+                    Images and information are for representation purpose. Pricing and availability are subject to change. Please enquire for the latest offer and unit availability details.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-bottom-cta" aria-hidden="true">
+        <a href="tel:+918438344093" class="mobile-cta-btn btn-call" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Now
+        </a>
+        <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20details%20of%20Brigade%20Banashankari%2C%20the%20brochure%20and%20launch%20prices" class="mobile-cta-btn btn-whatsapp" aria-label="WhatsApp us" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+        </a>
+        <button type="button" class="mobile-cta-btn btn-visit" onclick="toggleDetailsPanel()" aria-label="Get Brochure">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            Get Brochure
+        </button>
+    </div>
+
+    <section class="project-footer-strip">
+      <div class="pfs-inner">
+        <span class="pfs-label">Also in South Bangalore</span>
+        <h2 class="pfs-title">Similar Projects to Consider</h2>
+        <p class="pfs-intro">Compare other new launches around Banashankari and Kanakapura Road. <a href="/areas/kanakapura-road/" style="color:#c4a574;font-weight:600;text-decoration:underline;">Explore the Kanakapura Road area guide →</a></p>
+        <div class="proj-compare-grid">
+          <a href="/projects/brigade-silvercrest/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/brigade-silvercrest-thumb.webp" alt="Brigade Silvercrest apartments, Raghuvanahalli off Kanakapura Road" loading="lazy">
+              <span class="proj-compare-badge">Same Developer</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">Brigade Silvercrest</p>
+              <p class="proj-compare-detail">3 &amp; 4 BHK · Raghuvanahalli, Kanakapura Road</p>
+              <span class="proj-compare-link">View Project →</span>
+            </div>
+          </a>
+          <a href="/projects/purva-hallmark/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/purva-hallmark-thumb.webp" alt="Purva Hallmark, Vajarahalli" loading="lazy">
+              <span class="proj-compare-badge">Kanakapura Road</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">Purva Hallmark</p>
+              <p class="proj-compare-detail">3 BHK · Vajarahalli, near Thalaghattapura Metro</p>
+              <span class="proj-compare-link">View Project →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-forest-ridge/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/sattva-forest-ridge-thumb.webp" alt="Sattva Forest Ridge apartments, JP Nagar 9th Phase" loading="lazy">
+              <span class="proj-compare-badge">JP Nagar 9th Phase</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">Sattva Forest Ridge</p>
+              <p class="proj-compare-detail">1, 2 &amp; 3 BHK · near Kanakapura Road</p>
+              <span class="proj-compare-link">View Project →</span>
+            </div>
+          </a>
+          <a href="/projects/assetz-meru-meadows/" class="proj-compare-card">
+            <div class="proj-compare-img-wrap">
+              <img src="/images/projects-thumbs/assetz-meru-meadows-thumb.webp" alt="Assetz Meru and Meadows, Kanakapura Main Road" loading="lazy">
+              <span class="proj-compare-badge">Kanakapura Road</span>
+            </div>
+            <div class="proj-compare-body">
+              <p class="proj-compare-name">Assetz Meru &amp; Meadows</p>
+              <p class="proj-compare-detail">3 BHK · Kanakapura Main Road</p>
+              <span class="proj-compare-link">View Project →</span>
+            </div>
+          </a>
+        </div>
+
+        <hr class="pfs-divider">
+
+        <span class="pfs-label">Research &amp; Guides</span>
+        <h2 class="pfs-title">Related Market Insights</h2>
+        <p class="pfs-intro">Before you decide, read our independent research on Brigade Banashankari and South Bangalore.</p>
+        <div class="insight-grid">
+          <a href="/blog/brigade-banashankari-review/" class="insight-card">
+            <img src="/images/projects/brigade-banashankari/brigade-banashankari-banner.webp" alt="Brigade Banashankari review: price, plans and verdict" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Project Review · 17 Min</span>
+              <h3 class="insight-card-title">Brigade Banashankari Review: Price, Plans, RERA &amp; Verdict</h3>
+              <span class="insight-card-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/banashankari-5th-stage-flats-buyer-guide/" class="insight-card">
+            <img src="/images/projects/brigade-banashankari/brigade-banashankari-location-map.webp" alt="Is Banashankari 5th Stage a good place to buy a flat" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Locality Guide · 12 Min</span>
+              <h3 class="insight-card-title">Is Banashankari 5th Stage a Good Place to Buy a Flat in 2026?</h3>
+              <span class="insight-card-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/kanakapura-road-connectivity-nice-road-metro/" class="insight-card">
+            <img src="/images/projects-thumbs/purva-hallmark-thumb.webp" alt="Kanakapura Road connectivity: NICE Road and metro" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Connectivity Guide</span>
+              <h3 class="insight-card-title">NICE Road &amp; Metro: Kanakapura Road Connectivity</h3>
+              <span class="insight-card-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/kanakapura-road-real-estate-market-trends-2026/" class="insight-card">
+            <img src="/images/projects-thumbs/assetz-meru-meadows-thumb.webp" alt="Kanakapura Road real estate market trends 2026" loading="lazy">
+            <div class="insight-card-body">
+              <span class="insight-card-tag">Market Trends</span>
+              <h3 class="insight-card-title">Kanakapura Road Real Estate Market Trends 2026</h3>
+              <span class="insight-card-link">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>About Brigade Banashankari</h5>
+                <p>A pre-launch Brigade Group high-rise community on about 7.5 acres in Banashankari 5th Stage, South Bangalore, with 2 and 3 BHK homes.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Explore</h5>
+                <p><a href="/projects/">All projects</a></p>
+                <p><a href="/areas/kanakapura-road/">Kanakapura Road area guide</a></p>
+                <p><a href="/projects/brigade-silvercrest/">Brigade Silvercrest</a></p>
+                <p><a href="/blog/brigade-banashankari-review/">Brigade Banashankari review</a></p>
+                <p><a href="/blog/banashankari-5th-stage-flats-buyer-guide/">Banashankari 5th Stage buyer's guide</a></p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <p><a href="#about">About</a></p>
+                <p><a href="#pricing">Price List</a></p>
+                <p><a href="#units">Floor Plans</a></p>
+                <p><a href="#location">Location</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
+                <p><a href="/terms.html">Terms &amp; Conditions</a></p>
+            </div>
+            <div class="footer-section">
+                <h5>Contact</h5>
+                <div class="footer-contact" style="margin-top:0.4rem;">
+                    <strong>Phone</strong>
+                    <a href="tel:+918438344093">+91 8438 344 093</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20would%20like%20details%20of%20Brigade%20Banashankari%2C%20the%20brochure%20and%20launch%20prices" target="_blank" rel="noopener">Chat with us</a>
+                </div>
+                <div class="footer-contact" style="margin-top:0.8rem;">
+                    <strong>Email</strong>
+                    <a href="mailto:projectinfoindia@gmail.com">projectinfoindia@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div style="font-size: 0.85rem; line-height: 1.8; color: #666; margin-bottom: 1rem; text-align: center;">
+                <p style="margin-bottom: 0.5rem;"><a href="/privacy.html" style="color: #666; text-decoration: none;">Privacy Policy</a> | <a href="/terms.html" style="color: #666; text-decoration: none;">Terms &amp; Conditions</a> | <a href="/sitemap.xml" style="color: #666; text-decoration: none;">Sitemap</a></p>
+                <p style="margin-bottom: 0;">Disclaimer: This is an authorized channel partner marketing site intended strictly for informational and lead-generation objectives.</p>
+            </div>
+
+            <div style="margin-top:1.5rem; font-size:0.85rem; color: #555; background-color: #fef8f8; border: 1px solid #fca5a5; border-radius: 8px; padding: 1rem; max-width: 980px; margin-left:auto; margin-right:auto; line-height:1.6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <strong>Disclaimer &amp; Channel Partner Disclosure:</strong> This website is maintained by an <strong>Authorized Channel Partner / RERA Authorised Advertiser</strong> (Narayanan Rajesh | Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045) for marketing and lead generation purposes. It is <strong>NOT</strong> the official website of the developer. The content provided is for informational purposes only and does not constitute an official offer or guarantee. Please verify all details directly with the developer before making a purchase decision.
+                <br><br><strong>RERA Authorized Agent:</strong> Narayanan Rajesh, Tamilnadu: TN/Agent/0082/2024 | Karnataka: PRM/KA/RERA/1251/310/AG/170823/000045<br><strong>RERA Project Registration No:</strong> To be advised (pre-launch; registration in process)<br><strong>Site Address:</strong> Banashankari 5th Stage, off Dr. Vishnuvardhan Road, Bengaluru, Karnataka
+            </div>
+            <div style="margin-top:1rem; font-size:0.75rem; color: #999; text-align: center;">
+                &copy; Copyright 2026 Luxura Habitat. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()">✕</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded view">
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="previousImage()">❮</button>
+            <button class="lightbox-nav lightbox-next" type="button" onclick="nextImage()">❯</button>
+            <div class="lightbox-counter"><span id="imageCounter">1</span> / <span id="imageTotal">1</span></div>
+        </div>
+    </div>
+
+    <script src="/js/project-page.js"></script>
+    <script>
+        function toggleDetailsPanel() {
+            const panel = document.getElementById('detailsPanel');
+            const overlay = document.getElementById('panelOverlay');
+            panel.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.getElementById('hamburgerMenu');
+                const navLinks = document.getElementById('navLinks');
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox images collection
+        let currentImageIndex = 0;
+        let allLightboxImages = [];
+
+        function collectAllImages() {
+            const imgs = document.querySelectorAll('.gallery-item img, .plan-image img');
+            allLightboxImages = Array.from(imgs).map(img => ({ src: img.src, alt: img.alt }));
+        }
+
+        function openLightbox(itemElement) {
+            const src = itemElement.querySelector('img') ? itemElement.querySelector('img').src : itemElement.src;
+            if (!allLightboxImages.length) collectAllImages();
+
+            const idx = allLightboxImages.findIndex(x => x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function openLightboxFromSrc(src) {
+            if (!allLightboxImages.length) collectAllImages();
+            const idx = allLightboxImages.findIndex(x => x.src.endsWith(src) || x.src === src);
+            currentImageIndex = idx >= 0 ? idx : 0;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateLightboxImage() {
+            if (!allLightboxImages.length) return;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = allLightboxImages[currentImageIndex].src;
+            lightboxImage.alt = allLightboxImages[currentImageIndex].alt || 'Image';
+            document.getElementById('imageCounter').textContent = currentImageIndex + 1;
+            document.getElementById('imageTotal').textContent = allLightboxImages.length;
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allLightboxImages.length; updateLightboxImage(); }
+        function previousImage() { currentImageIndex = (currentImageIndex - 1 + allLightboxImages.length) % allLightboxImages.length; updateLightboxImage(); }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            collectAllImages();
+            initProjectPageScrollReveal('section .reveal');
+        });
+
+        // Forms
+        // Forms are submitted directly to Web3Forms (no custom submit handlers required).
+
+        initProjectPageSmoothScroll();
+        initProjectPageActiveNav();
+
+        // Zendesk
+        window.zESettings = {
+            webWidget: {
+                launcher: {
+                    chatLabel: { '*': 'Chat now' }
+                }
+            }
+        };
+        (function(){
+            var script = document.createElement('script');
+            script.id = 'ze-snippet';
+            script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+            script.async = true;
+            document.body.appendChild(script);
+        })();
+    </script>
+<script src="/js/seo.js"></script>
+</body>
+</html>
+
