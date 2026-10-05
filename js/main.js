@@ -190,7 +190,6 @@ function initBlogBrochurePopup() {
     '/projects/assetz-palmscape/': '96085fb1-ee18-4b8c-86a6-a274170bdc6f',
     '/projects/assetz-zen-sato/': '32c071b5-855b-4346-b783-55a84f00aca2',
     '/projects/brigade-eternia/': '66e56681-a1b1-4395-a293-d94094e999b1',
-    '/projects/brigade-jeevan-sandhya/': '80b578b2-eca2-43c6-a08c-755ed69c9562',
     '/projects/century-astoria/': 'a41ede52-e0aa-4c13-aa7f-cfd3676bb911',
     '/projects/century-kindle/': 'a41ede52-e0aa-4c13-aa7f-cfd3676bb911',
     '/projects/chennai/godrej-azure/': '7d8c2efc-a81b-4871-9d20-2407b772b4cc',
