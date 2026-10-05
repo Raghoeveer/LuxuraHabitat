@@ -68,3 +68,8 @@
 # or externally linked. Its dedicated review blog post was kept live, just
 # repointed internally to the surviving project page.
 /projects/chennai/shriram-guduvanchery/*                      /projects/chennai/shriram-shankari/                               301
+
+# Brigade Jeevan Sandhya (Raghuvanahalli, Kanakapura Road). Same project as
+# Brigade Silvercrest; the project page was removed 2026-10-05. Its review
+# blog post was kept live and repointed to the Silvercrest page.
+/projects/brigade-jeevan-sandhya/*                            /projects/brigade-silvercrest/                                   301
