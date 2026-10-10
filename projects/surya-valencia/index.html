@@ -463,6 +463,23 @@
         .gallery-item:hover { transform: scale(1.08); }
         .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+        .config-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; margin: 2.2rem 0 2rem; }
+        .config-card-simple { position: relative; background: #fff; border: 1px solid rgba(11,107,60,0.15); border-radius: 14px; padding: 1rem; display: flex; flex-direction: column; gap: 0.55rem; box-shadow: 0 8px 22px rgba(2,6,23,0.06); }
+        .config-card-simple img { width: 100%; height: 220px; object-fit: contain; background: #faf8f5; border-radius: 10px; cursor: pointer; }
+        .config-card-simple img.config-photo { object-fit: cover; }
+        .config-card-simple h3 { color: var(--accent-green); font-size: 1.1rem; font-weight: 900; line-height: 1.3; }
+        .config-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: var(--accent-green); color: #fff; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; }
+        .config-badge.sold { background: #9a5b28; }
+        .config-size { color: var(--primary-dark); font-weight: 800; font-size: 0.92rem; }
+        .config-meta { list-style: none; display: grid; gap: 0.3rem; color: var(--text-light); font-size: 0.84rem; font-weight: 600; }
+        .config-meta li::before { content: '\2713'; color: var(--accent-green); font-weight: 900; margin-right: 0.45rem; }
+        .config-price { color: var(--primary-dark); font-weight: 900; font-size: 1.05rem; margin-top: auto; }
+        .config-price small { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-light); }
+        .config-cta { display: inline-block; width: 100%; padding: 0.7rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.88rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .config-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .config-cta.alt { background: #9a5b28; }
+        @media (max-width: 1024px) { .config-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 560px) { .config-grid { grid-template-columns: 1fr; } }
         .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,107,60,0.9); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
         .phase-intro { max-width: 860px; margin: 0 auto 2rem; text-align: center; color: var(--text-light); line-height: 1.85; }
         .phase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
@@ -1509,6 +1526,65 @@
         <div class="container">
             <h2 class="section-title">Surya Valencia Price &amp; Configuration</h2>
             <p class="section-subtitle">Current launch pricing for the new townhouse phase, alongside the original villa prices.</p>
+
+            <div class="config-grid">
+                <div class="config-card-simple reveal">
+                    <span class="config-badge">New Phase</span>
+                    <img src="/images/projects/surya-valencia/callsign-valencia-2-duplex-floor-plan.webp" alt="CallSign Valencia 2 duplex townhouse floor plan, lower and upper deck" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>4 BHK Duplex Townhouse</h3>
+                    <p class="config-size">~2,700 sq ft saleable &middot; 2,623&ndash;2,648 sq ft SBUA on plans</p>
+                    <ul class="config-meta">
+                        <li>4 bedrooms + maid's room + study</li>
+                        <li>El Nido kids' den + 2 living spaces</li>
+                        <li>Private garden or terrace, 7 balconies</li>
+                        <li>2 basement car parks &middot; 80 homes</li>
+                    </ul>
+                    <p class="config-price">₹9,499/sq ft*<small>~₹2.49&ndash;2.56 Cr base, first 30 homes</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get Price Sheet</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:80ms;">
+                    <span class="config-badge">New Phase</span>
+                    <img src="/images/projects/surya-valencia/callsign-valencia-2-tower-floor-plan.webp" alt="CallSign Valencia 2 tower floor and terrace plan showing simplex penthouses with private terraces" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>Simplex Penthouse</h3>
+                    <p class="config-size">Size to be advised</p>
+                    <ul class="config-meta">
+                        <li>Top-floor single-level home</li>
+                        <li>Private terrace</li>
+                        <li>Next to Sky Park amenities</li>
+                        <li>Only 20 homes</li>
+                    </ul>
+                    <p class="config-price">Price on request<small>Not yet published by developer</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Details</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:160ms;">
+                    <span class="config-badge sold">Sold Out</span>
+                    <img class="config-photo" src="/images/projects/surya-valencia/surya-valencia-4bhk-elevation-night.webp" alt="Surya Valencia 4 BHK Estate Villa exterior" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>4 BHK Estate Villa</h3>
+                    <p class="config-size">3,345 sq ft</p>
+                    <ul class="config-meta">
+                        <li>Triple-height sky ceiling</li>
+                        <li>Private backyard 300&ndash;700 sq ft</li>
+                        <li>Space reserved for a lift</li>
+                        <li>Phases I &amp; II</li>
+                    </ul>
+                    <p class="config-price">Launched at ₹3.54 Cr<small>Sold out per developer</small></p>
+                    <button type="button" class="config-cta alt" onclick="toggleDetailsPanel()">Ask About Resale</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:240ms;">
+                    <span class="config-badge sold">Sold Out</span>
+                    <img class="config-photo" src="/images/projects/surya-valencia/surya-valencia-5bhk-elevation-night.webp" alt="Surya Valencia 5 BHK Regal Edition villa exterior" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>5 BHK Regal Edition Villa</h3>
+                    <p class="config-size">3,893 sq ft</p>
+                    <ul class="config-meta">
+                        <li>Private swimming pool</li>
+                        <li>Pre-fit lift &amp; home automation</li>
+                        <li>Sky pergola &amp; twin terrace</li>
+                        <li>Phases I &amp; II</li>
+                    </ul>
+                    <p class="config-price">Launched at ₹4.59 Cr<small>Sold out per developer</small></p>
+                    <button type="button" class="config-cta alt" onclick="toggleDetailsPanel()">Ask About Resale</button>
+                </div>
+            </div>
 
             <div class="pricing-table-wrap">
                 <table class="pricing-table">
