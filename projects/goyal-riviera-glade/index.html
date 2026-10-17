@@ -857,6 +857,25 @@
     .insight-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #1e3a2f; line-height: 1.35; margin-bottom: 10px; flex: 1; }
     .insight-card-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; }
 
+        .config-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; margin: 2.2rem 0 2rem; }
+        .config-card-simple { position: relative; background: #fff; border: 1px solid rgba(11,107,60,0.15); border-radius: 14px; padding: 1rem; display: flex; flex-direction: column; gap: 0.55rem; box-shadow: 0 8px 22px rgba(2,6,23,0.06); }
+        .config-card-simple img { width: 100%; height: 220px; object-fit: contain; background: #faf8f5; border-radius: 10px; cursor: pointer; }
+        .config-card-simple img.config-photo { object-fit: cover; }
+        .config-card-simple h3 { color: var(--accent-green); font-size: 1.1rem; font-weight: 900; line-height: 1.3; }
+        .config-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: var(--accent-green); color: #fff; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; }
+        .config-badge.sold { background: #9a5b28; }
+        .config-size { color: var(--primary-dark); font-weight: 800; font-size: 0.92rem; }
+        .config-meta { list-style: none; display: grid; gap: 0.3rem; color: var(--text-light); font-size: 0.84rem; font-weight: 600; }
+        .config-meta li::before { content: '\2713'; color: var(--accent-green); font-weight: 900; margin-right: 0.45rem; }
+        .config-price { color: var(--primary-dark); font-weight: 900; font-size: 1.05rem; margin-top: auto; }
+        .config-price small { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-light); }
+        .config-cta { display: inline-block; width: 100%; padding: 0.7rem 1rem; background: var(--accent-green); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.88rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+        .config-cta:hover { background: #075b31; transform: translateY(-1px); }
+        .config-cta.alt { background: #9a5b28; }
+        @media (max-width: 1024px) { .config-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 560px) { .config-grid { grid-template-columns: 1fr; } }
+        .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,107,60,0.9); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
+        .config-note { max-width: 900px; margin: 0 auto 1.6rem; text-align: center; color: var(--text-light); font-size: 0.86rem; line-height: 1.7; }
     </style>
 
     <script type="application/ld+json">
@@ -915,7 +934,7 @@
         "name": "What configurations and sizes are available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Riviera Glade offers exclusively 4 BHK triplex villas across four variants — Rose (~3,190 sq ft), Iris (~3,300 sq ft), Lotus (~3,475 sq ft) and Olive (~3,550 sq ft) — each with a private garden or backyard and no common walls."
+          "text": "Riviera Glade offers only 4 BHK triplex villas in four variants: Rose (3,190 sq ft, 6 villas), Iris (~3,300 sq ft, 6 villas), Lotus (3,475 sq ft) and Olive (3,550 sq ft, 49 villas). Sizes are super built-up areas from the builder's floor plans. Every villa has a private backyard and no common walls."
         }
       }, {
         "@type": "Question",
@@ -936,21 +955,21 @@
         "name": "How big is the project and how many villas does it have?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Goyal Riviera Glade is spread across 9.47 acres with 112 villas, working out to a low density of approximately 12 units per acre."
+          "text": "Goyal Riviera Glade is spread across 9.47 acres (about 9.5 acres) with 112 villas, a low density of roughly 12 villas per acre. The layout is approved by the BDA."
         }
       }, {
         "@type": "Question",
         "name": "What amenities does Goyal Riviera Glade offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Amenities include the Sylvan Forest Clubhouse (grand ballroom, indoor games, media room, social lounge and cafeteria), a swimming pool, gymnasium, squash and pickleball courts, half-basketball court, box cricket, yoga room, bloom park, literary garden, sand dunes, walking trails, a pet park and a celebration lawn."
+          "text": "The Sylvan Forest Clubhouse has a grand ballroom, mini theatre, social lounge, cafeteria, recreation zone, lifestyle arena, swimming pool, gymnasium, yoga room, badminton court and outdoor sitout. Outdoors there are sand dunes, a pickleball court, half-basketball court, box cricket, kids' play area, celebration lawn, community court, social square, bloom park, literary garden, walking trail and a paw park."
         }
       }, {
         "@type": "Question",
         "name": "What is the structure of each villa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Each villa is a Ground + 1 + Terrace triplex layout, with a private garden or backyard and no common walls with neighbouring villas."
+          "text": "Each villa is a Ground + 2 triplex: living, dining, kitchen, one bedroom and a covered car bay on the ground floor; three bedrooms on the first floor; and an open terrace with a toilet on the top level (Lotus and Olive also get a terrace pantry). Every villa has a private backyard and no common walls."
         }
       }, {
         "@type": "Question",
@@ -964,14 +983,14 @@
         "name": "How far is Kempegowda International Airport from Riviera Glade?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kempegowda International Airport is approximately 20–30 minutes' drive from the project via Bellary Road / Airport Road."
+          "text": "Kempegowda International Airport is about 18 km away, roughly a 25-minute drive via Bellary Road (Airport Road)."
         }
       }, {
         "@type": "Question",
         "name": "Who is the developer of Goyal Riviera Glade?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Goyal Riviera Glade is developed by Goyal & Co | Hariyana Group, a Bangalore-based real estate developer whose North Bengaluru portfolio also includes Goyal Orchid Salisbury on Thanisandra Main Road."
+          "text": "Goyal Riviera Glade is developed by Goyal & Co | Hariyana Group, which has delivered residential and commercial projects across Ahmedabad, Bengaluru and Mumbai. Its North Bengaluru portfolio also includes Goyal Orchid Salisbury on Thanisandra Main Road."
         }
       }, {
         "@type": "Question",
@@ -979,6 +998,34 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Goyal Riviera Glade's expected possession date is December 2030, as per the project's new-launch schedule — please confirm the RERA-registered date before booking."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How much parking does Goyal Riviera Glade have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Partner listings put open parking at 247 spaces. In addition, each villa's ground-floor plan includes its own 16'5\" x 18'1\" covered car bay."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which authority has approved the Riviera Glade layout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project is approved by the BDA (Bangalore Development Authority) and registered with Karnataka RERA under PRM/KA/RERA/1251/472/PR/040326/008503."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How far is Riviera Glade from Hebbal and Manyata Tech Park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hebbal is about 12 km (around 20 minutes) and Manyata Tech Park about 14 km (around 25 minutes). Yelahanka Railway Station is about 5 km away."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why do some websites list Riviera Glade villas as 3,300 to 3,700 sq ft?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some channel-partner sites quote a rounded 3,300 to 3,700 sq ft range. The builder's own floor-plan sheets show 3,190 sq ft (Rose), 3,475 sq ft (Lotus) and 3,550 sq ft (Olive), with Iris at about 3,300 sq ft. Confirm the exact area of your chosen villa in the sale agreement."
         }
       }, {
         "@type": "Question",
@@ -1166,10 +1213,10 @@
                 <div class="about-content reveal">
                     <h3>Exclusive triplex villas on MVIT Road, Yelahanka</h3>
                     <p>
-                        Goyal Riviera Glade is a new-launch gated community by Goyal &amp; Co | Hariyana Group on MVIT Road, Bettahalasur / Chikkajala, Yelahanka, North Bengaluru. Spread across 9.47 acres with just 112 villas, the layout works out to a low density of approximately 12 units per acre — among the more spacious villa-plot ratios in the corridor.
+                        Goyal Riviera Glade is a new-launch gated community by Goyal &amp; Co | Hariyana Group on MVIT Road, Bettahalasur / Chikkajala, Yelahanka, North Bengaluru. Spread across 9.47 acres (about 9.5 acres) with just 112 villas on a BDA-approved layout, the plan works out to a low density of approximately 12 units per acre — among the more spacious villa-plot ratios in the corridor.
                     </p>
                     <p>
-                        The development exclusively offers 4 BHK luxury triplex villas (Ground + 1 + Terrace) across four variants — Rose, Iris, Lotus and Olive — each with its own private garden or backyard and no common walls with neighbouring villas. The community is anchored by the Sylvan Forest Clubhouse and designed for HNIs, CXOs, entrepreneurs and business owners seeking a private, low-density address in North Bengaluru.
+                        The development exclusively offers 4 BHK luxury triplex villas (Ground + 2, with the top level laid out as an open terrace) across four variants: Rose, Iris, Lotus and Olive. Each villa comes with its own private garden or backyard and no common walls with neighbouring villas. The community is anchored by the Sylvan Forest Clubhouse and designed for HNIs, CXOs, entrepreneurs and business owners seeking a private, low-density address in North Bengaluru.
                     </p>
 
                     <div class="features-list">
@@ -1191,7 +1238,7 @@
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg></div>
                             <div>
                                 <h3>Sylvan Forest Clubhouse</h3>
-                                <p>Grand ballroom, indoor games, media room &amp; social lounge.</p>
+                                <p>Grand ballroom, mini theatre, cafeteria &amp; social lounge.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1229,8 +1276,10 @@
                         <tr><td><strong>Location</strong></td><td>MVIT Road, Bettahalasur / Chikkajala, Yelahanka, North Bengaluru</td></tr>
                         <tr><td><strong>Land Area</strong></td><td>9.47 Acres</td></tr>
                         <tr><td><strong>Total Units</strong></td><td>112 Exclusive Luxury Villas (~12 units/acre)</td></tr>
-                        <tr><td><strong>Villa Structure</strong></td><td>G + 1 + Terrace Triplex</td></tr>
-                        <tr><td><strong>Configurations</strong></td><td>4 BHK Only — Rose, Iris, Lotus &amp; Olive (~3,190 – 3,550 Sq.Ft)</td></tr>
+                        <tr><td><strong>Villa Structure</strong></td><td>G + 2 Triplex (top level is an open terrace)</td></tr>
+                        <tr><td><strong>Configurations</strong></td><td>4 BHK Only: Rose, Iris, Lotus &amp; Olive (3,190 to 3,550 Sq.Ft SBUA on builder floor plans)</td></tr>
+                        <tr><td><strong>Open Parking</strong></td><td>247 spaces (plus a covered car bay inside every villa)</td></tr>
+                        <tr><td><strong>Approving Authority</strong></td><td>BDA (Bangalore Development Authority)</td></tr>
                         <tr><td><strong>Project Status</strong></td><td>New Launch</td></tr>
                         <tr><td><strong>Expected Possession</strong></td><td>December 2030</td></tr>
                         <tr><td><strong>RERA Number</strong></td><td>PRM/KA/RERA/1251/472/PR/040326/008503</td></tr>
@@ -1249,10 +1298,10 @@
                 <div class="amenity-card reveal">
                     <h3>Sylvan Forest Clubhouse</h3>
                     <ul class="amenity-list">
-                        <li>Grand ballroom</li>
-                        <li>Indoor games &amp; media room</li>
+                        <li>Grand ballroom &amp; mini theatre</li>
                         <li>Social lounge &amp; cafeteria</li>
-                        <li>Mini theatre</li>
+                        <li>Recreation zone &amp; lifestyle arena</li>
+                        <li>Outdoor sitout</li>
                     </ul>
                 </div>
 
@@ -1260,9 +1309,9 @@
                     <h3>Sports &amp; Fitness</h3>
                     <ul class="amenity-list">
                         <li>Swimming pool &amp; gymnasium</li>
-                        <li>Squash &amp; pickleball courts</li>
-                        <li>Half-basketball court &amp; box cricket</li>
-                        <li>Yoga room</li>
+                        <li>Yoga room &amp; badminton court</li>
+                        <li>Pickleball &amp; half-basketball courts</li>
+                        <li>Box cricket &amp; community court</li>
                     </ul>
                 </div>
 
@@ -1270,9 +1319,9 @@
                     <h3>Outdoors &amp; Greenery</h3>
                     <ul class="amenity-list">
                         <li>Bloom park &amp; literary garden</li>
-                        <li>Sand dunes &amp; walking trails</li>
-                        <li>Paw park (pet zone)</li>
-                        <li>Celebration lawn</li>
+                        <li>Sand dunes &amp; walking trail</li>
+                        <li>Celebration lawn &amp; social square</li>
+                        <li>Kids' play area &amp; paw park</li>
                     </ul>
                 </div>
 
@@ -1282,17 +1331,8 @@
                         <li>100% power backup</li>
                         <li>Rainwater harvesting</li>
                         <li>Sewage treatment plant (STP)</li>
-                        <li>Pedestrian-first master planning</li>
+                        <li>Pedestrian-first plan with drop-off zone</li>
                     </ul>
-                </div>
-            </div>
-
-            <div style="margin-top:3rem;" class="gallery-grid-wrapper">
-                <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('goyal-riviera-glade-swimming-pool.webp')"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-swimming-pool.webp" alt="Goyal Riviera Glade swimming pool clubhouse amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('goyal-riviera-glade-gymnasium.webp')"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-gymnasium.webp" alt="Goyal Riviera Glade gymnasium fitness center"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('goyal-riviera-glade-indoor-games.webp')"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-indoor-games.webp" alt="Goyal Riviera Glade Sylvan Forest Clubhouse indoor games room"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('goyal-riviera-glade-sports-court.webp')"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-sports-court.webp" alt="Goyal Riviera Glade outdoor pickleball and sports court"></div>
                 </div>
             </div>
         </div>
@@ -1304,14 +1344,19 @@
             <p class="section-subtitle">Experience the visual brilliance of Riviera Glade.</p>
 
             <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-elevation.webp" alt="Goyal Riviera Glade villa row exterior elevation MVIT Road"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-hero.webp" alt="Goyal Riviera Glade triplex villa street view Yelahanka"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-clubhouse.webp" alt="Goyal Riviera Glade Sylvan Forest Clubhouse exterior view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-garden-path.webp" alt="Goyal Riviera Glade landscaped garden walking path"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-swimming-pool.webp" alt="Goyal Riviera Glade swimming pool clubhouse amenity"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-social-lounge.webp" alt="Goyal Riviera Glade clubhouse social lounge interior"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-indoor-games.webp" alt="Goyal Riviera Glade Sylvan Forest Clubhouse indoor games room"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-master-plan.webp" alt="Goyal Riviera Glade 9.47 acres master layout plan"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-elevation.webp" alt="Goyal Riviera Glade 4 BHK triplex villa row exterior elevation, MVIT Road Yelahanka" loading="lazy"><span class="gallery-tag">Villas: Elevation</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-hero.webp" alt="Goyal Riviera Glade twin triplex villas street view, Yelahanka" loading="lazy"><span class="gallery-tag">Villas: Streetscape</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-private-backyard.webp" alt="Goyal Riviera Glade villa private backyard garden with outdoor seating and dining, artist's impression" loading="lazy"><span class="gallery-tag">Villas: Private Backyard</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-villa-balcony.webp" alt="Goyal Riviera Glade villa first-floor sitout overlooking the landscaped lawn, artist's impression" loading="lazy"><span class="gallery-tag">Villas: Bedroom Sitout</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-terrace-lounge.webp" alt="Goyal Riviera Glade villa open terrace lounge on the top level, artist's impression" loading="lazy"><span class="gallery-tag">Villas: Terrace Lounge</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-clubhouse.webp" alt="Goyal Riviera Glade Sylvan Forest Clubhouse exterior and lawn" loading="lazy"><span class="gallery-tag">Clubhouse: Exterior</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-swimming-pool.webp" alt="Goyal Riviera Glade clubhouse swimming pool with kids' pool and sun loungers, artist's impression" loading="lazy"><span class="gallery-tag">Clubhouse: Swimming Pool</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-clubhouse-cafe.webp" alt="Goyal Riviera Glade clubhouse cafeteria and recreation zone with pool table, artist's impression" loading="lazy"><span class="gallery-tag">Clubhouse: Cafe &amp; Recreation</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-indoor-games.webp" alt="Goyal Riviera Glade Sylvan Forest Clubhouse indoor games room" loading="lazy"><span class="gallery-tag">Clubhouse: Indoor Games</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-social-lounge.webp" alt="Goyal Riviera Glade clubhouse multipurpose hall interior" loading="lazy"><span class="gallery-tag">Clubhouse: Multipurpose Hall</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-gymnasium.webp" alt="Goyal Riviera Glade clubhouse gymnasium" loading="lazy"><span class="gallery-tag">Clubhouse: Gymnasium</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-sports-court.webp" alt="Goyal Riviera Glade outdoor pickleball and sports court" loading="lazy"><span class="gallery-tag">Outdoors: Sports Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-garden-path.webp" alt="Goyal Riviera Glade landscaped garden walking trail between villas" loading="lazy"><span class="gallery-tag">Outdoors: Walking Trail</span></div>
             </div>
         </div>
     </section>
@@ -1323,17 +1368,17 @@
 
             <div class="plan-grid" style="margin-top: 1.5rem;">
                 <div class="plan-image reveal" style="max-width: 720px; margin: 0 auto;">
-                    <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-master-plan.webp" alt="Goyal Riviera Glade master layout plan showing Rose, Iris, Lotus and Olive villa blocks" style="cursor:pointer;" onclick="toggleDetailsPanel()">
+                    <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-master-plan.webp" alt="Goyal Riviera Glade colour-coded master layout showing Olive, Lotus, Iris and Rose villa rows with 13 site amenities and 11 club amenities" style="cursor:pointer;" onclick="toggleDetailsPanel()">
                 </div>
 
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
                         <strong>112 Villas, Four Variants</strong>
-                        <span>Rose, Iris, Lotus and Olive villa blocks arranged across a pedestrian-first, low-density 9.47-acre layout.</span>
+                        <span>Villas sit in lettered rows (A to T) across a pedestrian-first, low-density 9.47-acre layout. Olive and Lotus make up most of the community, with two small rows of Rose (D01 to D06) and Iris (E01 to E06).</span>
                     </div>
                     <div class="plan-note">
                         <strong>Clubhouse-Anchored Community</strong>
-                        <span>The Sylvan Forest Clubhouse, swimming pool and sports courts sit at the heart of the community, with sand dunes and walking trails threading through every cluster.</span>
+                        <span>The Sylvan Forest Clubhouse sits at the entrance on the west side, next to the sand dunes, pickleball and half-basketball courts, kids' play area and celebration lawn. A walking trail, bloom park, literary garden and paw park run along the edges of the villa rows.</span>
                     </div>
                     <div class="plan-note">
                         <strong>Enquire for Details</strong>
@@ -1342,12 +1387,6 @@
                 </div>
             </div>
 
-            <div class="gallery-grid" style="max-height: 420px; margin-top: 1.8rem;">
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-master-plan.webp" alt="Goyal Riviera Glade master layout plan showing Rose, Iris, Lotus and Olive villa blocks"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-rose-floor-plan.webp" alt="Goyal Riviera Glade Rose 4 BHK triplex villa 3190 sq ft floor plan"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-lotus-floor-plan.webp" alt="Goyal Riviera Glade Lotus 4 BHK triplex villa 3475 sq ft floor plan"></div>
-                <div class="gallery-item" onclick="toggleDetailsPanel()"><img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-olive-floor-plan.webp" alt="Goyal Riviera Glade Olive 4 BHK triplex villa 3550 sq ft floor plan"></div>
-            </div>
         </div>
     </section>
 
@@ -1355,6 +1394,66 @@
         <div class="container">
             <h2 class="section-title">Goyal Riviera Glade Price &amp; Configuration</h2>
             <p class="section-subtitle">Transparent new-launch pricing for your dream villa.</p>
+
+            <div class="config-grid">
+                <div class="config-card-simple reveal">
+                    <span class="config-badge">Entry Variant</span>
+                    <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-rose-floor-plan.webp" alt="Goyal Riviera Glade Rose 4 BHK triplex villa 3,190 sq ft ground, first and terrace floor plan" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>Rose &middot; 4 BHK Triplex</h3>
+                    <p class="config-size">3,190 sq ft SBUA</p>
+                    <ul class="config-meta">
+                        <li>6 villas: D01 to D06</li>
+                        <li>Ground bedroom + first-floor study</li>
+                        <li>3 first-floor sitouts</li>
+                        <li>27'10" &times; 43'5" terrace</li>
+                    </ul>
+                    <p class="config-price">₹6.36 Cr*<small>Starting price</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get Rose Price Sheet</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:80ms;">
+                    <span class="config-badge sold">Plan Awaited</span>
+                    <img class="config-photo" src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-elevation.webp" alt="Goyal Riviera Glade Iris 4 BHK triplex villa exterior" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>Iris &middot; 4 BHK Triplex</h3>
+                    <p class="config-size">~3,300 sq ft SBUA</p>
+                    <ul class="config-meta">
+                        <li>6 villas: E01 to E06 (master layout key)</li>
+                        <li>Private garden, no common walls</li>
+                        <li>Covered car bay inside the villa</li>
+                        <li>Floor plan on request</li>
+                    </ul>
+                    <p class="config-price">~₹6.58 Cr*<small>Estimate at the Rose per-sq-ft rate</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Request Iris Plan</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:160ms;">
+                    <span class="config-badge">Most Villas</span>
+                    <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-lotus-floor-plan.webp" alt="Goyal Riviera Glade Lotus 4 BHK triplex villa 3,475 sq ft ground, first and second floor plan" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>Lotus &middot; 4 BHK Triplex</h3>
+                    <p class="config-size">3,475 sq ft SBUA &middot; ~1,999 sq ft plot</p>
+                    <ul class="config-meta">
+                        <li>Rows B, F, G, J, L, N, R &amp; S</li>
+                        <li>First-floor family area + 3 sitouts</li>
+                        <li>Maid's toilet + separate utility</li>
+                        <li>Terrace with pantry, 27'10" &times; 48'7"</li>
+                    </ul>
+                    <p class="config-price">~₹6.93 Cr*<small>Estimate at the Rose per-sq-ft rate</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get Lotus Price Sheet</button>
+                </div>
+                <div class="config-card-simple reveal" style="transition-delay:240ms;">
+                    <span class="config-badge">Largest</span>
+                    <img src="/images/projects/goyal-riviera-glade/goyal-riviera-glade-olive-floor-plan.webp" alt="Goyal Riviera Glade Olive 4 BHK triplex villa 3,550 sq ft ground, first and second floor plan" onclick="toggleDetailsPanel()" loading="lazy">
+                    <h3>Olive &middot; 4 BHK Triplex</h3>
+                    <p class="config-size">3,550 sq ft SBUA</p>
+                    <ul class="config-meta">
+                        <li>49 villas: rows A, C, H, K, M, P, Q &amp; T</li>
+                        <li>14'1" &times; 17'3" master bedroom</li>
+                        <li>Maid's toilet + separate utility</li>
+                        <li>Terrace with pantry, 27'10" &times; 50'5"</li>
+                    </ul>
+                    <p class="config-price">₹7.11 Cr*<small>Top of the published range</small></p>
+                    <button type="button" class="config-cta" onclick="toggleDetailsPanel()">Get Olive Price Sheet</button>
+                </div>
+            </div>
+            <p class="config-note">Sizes and villa numbers are taken from the builder's floor-plan sheets and colour-coded master layout. Some channel-partner listings quote a wider 3,300 to 3,700 sq ft range; the builder plans we have show 3,190 to 3,550 sq ft. Every villa is 4 BHK with a private backyard (31'10" wide) and a 16'5" &times; 18'1" covered car bay.</p>
 
             <div class="pricing-table-wrap">
                 <table class="pricing-table">
@@ -1367,28 +1466,28 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Rose — 4 BHK Triplex</td>
-                            <td>~3,190 sq. ft.</td>
+                            <td>Rose: 4 BHK Triplex (6 villas)</td>
+                            <td>3,190 sq. ft.</td>
                             <td>₹6.36 Cr*</td>
                         </tr>
                         <tr>
-                            <td>Iris — 4 BHK Triplex</td>
+                            <td>Iris: 4 BHK Triplex (6 villas)</td>
                             <td>~3,300 sq. ft.</td>
-                            <td>₹6.58 Cr* (approx.)</td>
+                            <td>~₹6.58 Cr* (estimate)</td>
                         </tr>
                         <tr>
-                            <td>Lotus — 4 BHK Triplex (~1,999 sq ft plot)</td>
-                            <td>~3,475 sq. ft.</td>
-                            <td>₹6.93 Cr* (approx.)</td>
+                            <td>Lotus: 4 BHK Triplex (~1,999 sq ft plot)</td>
+                            <td>3,475 sq. ft.</td>
+                            <td>~₹6.93 Cr* (estimate)</td>
                         </tr>
                         <tr>
-                            <td>Olive — 4 BHK Triplex</td>
-                            <td>~3,550 sq. ft.</td>
+                            <td>Olive: 4 BHK Triplex (49 villas)</td>
+                            <td>3,550 sq. ft.</td>
                             <td>₹7.11 Cr*</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="pricing-footnote">*Indicative new-launch pricing, approx. ₹17,500–₹20,000 per sq. ft. — varies by villa size, plot area, corner location and private backyard size. Please enquire for the latest offer and availability.</div>
+                <div class="pricing-footnote">*Indicative new-launch pricing, approx. ₹17,500 to ₹20,000 per sq. ft. Only the ₹6.36 Cr (Rose) and ₹7.11 Cr (Olive) figures are published; Iris and Lotus are estimates at the same per-sq-ft rate. Final price varies by plot area, corner location and backyard size. Please enquire for the latest price list.</div>
             </div>
         </div>
     </section>
@@ -1406,10 +1505,10 @@
                     <div class="plan-note">
                         <strong>Distance to Key Hubs</strong>
                         <ul style="list-style: none; padding-top: 0.5rem; display: grid; gap: 0.4rem;">
-                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~20–30 min drive</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> ~20 min</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">KIADB Aerospace Park:</strong> ~20 min</li>
-                            <li><strong style="display:inline; color:var(--text-dark);">Outer Ring Road (ORR):</strong> ~20 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Kempegowda Int'l Airport:</strong> ~18 km, 25 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Yelahanka Railway Station:</strong> ~5 km, 10 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Hebbal:</strong> ~12 km, 20 min</li>
+                            <li><strong style="display:inline; color:var(--text-dark);">Manyata Tech Park:</strong> ~14 km, 25 min</li>
                         </ul>
                     </div>
                     <div class="plan-note">
@@ -1418,14 +1517,44 @@
                     </div>
                     <div class="plan-note">
                         <strong>Education &amp; Healthcare</strong>
-                        <span>Near Sir M. Visvesvaraya Institute of Technology (MVIT), Vidyashilp Academy and The North Bangalore Hospital.</span>
+                        <span>Near Sir M. Visvesvaraya Institute of Technology (MVIT), Nitte Meenakshi Institute of Technology (~6 km), Ryan International School (~6 km), Vidyashilp Academy (~8 km) and Aster CMI Hospital (~13 km).</span>
                     </div>
                     <div class="plan-note">
                         <strong>Shopping &amp; Lifestyle</strong>
-                        <span>RMZ Galleria Mall is a short drive away, with Yelahanka's established social infrastructure close by.</span>
+                        <span>RMZ Galleria Mall (~10 km) and Esteem Mall (~11 km) are within about 20 minutes, with Yelahanka's established social infrastructure close by.</span>
                     </div>
                 </div>
             </div>
+
+            <h3 style="text-align:center; margin:2.5rem 0 1rem; color:var(--text-dark);">Distances From Goyal Riviera Glade</h3>
+            <div class="highlights-table-wrap" role="region" aria-label="Distances from Goyal Riviera Glade">
+                <table class="highlights-table" aria-label="Goyal Riviera Glade distance and travel time to key landmarks">
+                    <thead>
+                        <tr><th>Landmark</th><th>Distance</th><th>Travel Time</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Kempegowda International Airport</strong></td><td>~18 km</td><td>~25 min</td></tr>
+                        <tr><td><strong>Devanahalli</strong></td><td>~19 km</td><td>~30 min</td></tr>
+                        <tr><td><strong>Devanahalli Business Park</strong></td><td>~20 km</td><td>~30 min</td></tr>
+                        <tr><td><strong>Yelahanka Railway Station</strong></td><td>~5 km</td><td>~10 min</td></tr>
+                        <tr><td><strong>Yelahanka Air Force Station</strong></td><td>~7 km</td><td>~15 min</td></tr>
+                        <tr><td><strong>Hebbal</strong></td><td>~12 km</td><td>~20 min</td></tr>
+                        <tr><td><strong>Manyata Tech Park</strong></td><td>~14 km</td><td>~25 min</td></tr>
+                        <tr><td><strong>MG Road</strong></td><td>~22 km</td><td>~40 min</td></tr>
+                        <tr><td><strong>Whitefield</strong></td><td>~32 km</td><td>~55 min</td></tr>
+                        <tr><td><strong>Electronic City</strong></td><td>~42 km</td><td>~70 min</td></tr>
+                        <tr><td><strong>Nitte Meenakshi Institute of Technology</strong></td><td>~6 km</td><td>~12 min</td></tr>
+                        <tr><td><strong>Ryan International School, Yelahanka</strong></td><td>~6 km</td><td>~12 min</td></tr>
+                        <tr><td><strong>Vidyashilp Academy</strong></td><td>~8 km</td><td>~15 min</td></tr>
+                        <tr><td><strong>Canadian International School</strong></td><td>~9 km</td><td>~17 min</td></tr>
+                        <tr><td><strong>RMZ Galleria Mall</strong></td><td>~10 km</td><td>~18 min</td></tr>
+                        <tr><td><strong>Esteem Mall</strong></td><td>~11 km</td><td>~20 min</td></tr>
+                        <tr><td><strong>Aster CMI Hospital</strong></td><td>~13 km</td><td>~22 min</td></tr>
+                        <tr><td><strong>Columbia Asia Hospital, Hebbal</strong></td><td>~13 km</td><td>~22 min</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="config-note" style="margin-top:1rem;">Approximate road distances and off-peak drive times from channel-partner data. Bellary Road traffic can add time at peak hours.</p>
         </div>
     </section>
 
@@ -1462,10 +1591,10 @@
     <section class="about" id="developer" style="background: var(--bg-white);">
         <div class="container">
             <h2 class="section-title">About Goyal &amp; Co | Hariyana Group</h2>
-            <p class="section-subtitle">A Bangalore-based developer with a growing North Bengaluru villa and apartment portfolio.</p>
+            <p class="section-subtitle">A developer with residential and commercial projects across Ahmedabad, Bengaluru and Mumbai.</p>
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light); font-size: 1rem;" class="reveal">
                 <p style="margin-bottom: 1rem;">
-                    Goyal &amp; Co | Hariyana Group is a Bangalore-based real estate developer with a growing presence across North Bengaluru. <strong>Goyal Riviera Glade</strong> extends the developer's footprint into the MVIT Road, Yelahanka corridor, joining <strong>Goyal Orchid Salisbury</strong> on Thanisandra Main Road as part of the group's wider "Orchid" and premium villa portfolio in the region.
+                    Goyal &amp; Co | Hariyana Group has spent decades delivering residential and commercial projects across Ahmedabad, Bengaluru and Mumbai, with a growing presence in North Bengaluru. <strong>Goyal Riviera Glade</strong> extends the developer's footprint into the MVIT Road, Yelahanka corridor, joining <strong>Goyal Orchid Salisbury</strong> on Thanisandra Main Road as part of the group's wider "Orchid" and premium villa portfolio in the region.
                 </p>
                 <p>
                     With Riviera Glade, the developer has opted for an exclusively 4 BHK triplex villa format — a deliberate move toward a low-density, HNI-focused product rather than a high-rise or mixed-configuration layout. The Sylvan Forest Clubhouse, private gardens and pedestrian-first master planning reflect a positioning toward business owners and senior professionals looking for a private, lifestyle-first address in North Bengaluru.
@@ -1504,7 +1633,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Riviera Glade offers exclusively 4 BHK triplex villas across four variants — Rose (~3,190 sq ft), Iris (~3,300 sq ft), Lotus (~3,475 sq ft) and Olive (~3,550 sq ft) — each with a private garden or backyard and no common walls.</p>
+                        <p itemprop="text">Riviera Glade offers only 4 BHK triplex villas in four variants: Rose (3,190 sq ft, 6 villas), Iris (~3,300 sq ft, 6 villas), Lotus (3,475 sq ft) and Olive (3,550 sq ft, 49 villas). Sizes are super built-up areas from the builder's floor plans. Every villa has a private backyard and no common walls.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1531,7 +1660,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Goyal Riviera Glade is spread across 9.47 acres with 112 villas, working out to a low density of approximately 12 units per acre.</p>
+                        <p itemprop="text">Goyal Riviera Glade is spread across 9.47 acres (about 9.5 acres) with 112 villas, a low density of roughly 12 villas per acre. The layout is approved by the BDA.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1540,7 +1669,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Amenities include the Sylvan Forest Clubhouse (grand ballroom, indoor games, media room, social lounge and cafeteria), a swimming pool, gymnasium, squash and pickleball courts, half-basketball court, box cricket, yoga room, bloom park, literary garden, sand dunes, walking trails, a pet park and a celebration lawn.</p>
+                        <p itemprop="text">The Sylvan Forest Clubhouse has a grand ballroom, mini theatre, social lounge, cafeteria, recreation zone, lifestyle arena, swimming pool, gymnasium, yoga room, badminton court and outdoor sitout. Outdoors there are sand dunes, a pickleball court, half-basketball court, box cricket, kids' play area, celebration lawn, community court, social square, bloom park, literary garden, walking trail and a paw park.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1549,7 +1678,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Each villa is a Ground + 1 + Terrace triplex layout, with a private garden or backyard and no common walls with neighbouring villas.</p>
+                        <p itemprop="text">Each villa is a Ground + 2 triplex: living, dining, kitchen, one bedroom and a covered car bay on the ground floor; three bedrooms on the first floor; and an open terrace with a toilet on the top level (Lotus and Olive also get a terrace pantry). Every villa has a private backyard and no common walls.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1567,7 +1696,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Kempegowda International Airport is approximately 20–30 minutes' drive from the project via Bellary Road / Airport Road.</p>
+                        <p itemprop="text">Kempegowda International Airport is about 18 km away, roughly a 25-minute drive via Bellary Road (Airport Road).</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1576,7 +1705,7 @@
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Goyal Riviera Glade is developed by Goyal &amp; Co | Hariyana Group, a Bangalore-based real estate developer whose North Bengaluru portfolio also includes Goyal Orchid Salisbury on Thanisandra Main Road.</p>
+                        <p itemprop="text">Goyal Riviera Glade is developed by Goyal &amp; Co | Hariyana Group, which has delivered residential and commercial projects across Ahmedabad, Bengaluru and Mumbai. Its North Bengaluru portfolio also includes Goyal Orchid Salisbury on Thanisandra Main Road.</p>
                     </div>
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1590,6 +1719,42 @@
                 </div>
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">How much parking does Goyal Riviera Glade have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Partner listings put open parking at 247 spaces. In addition, each villa's ground-floor plan includes its own 16'5" x 18'1" covered car bay.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">Which authority has approved the Riviera Glade layout?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The project is approved by the BDA (Bangalore Development Authority) and registered with Karnataka RERA under PRM/KA/RERA/1251/472/PR/040326/008503.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">How far is Riviera Glade from Hebbal and Manyata Tech Park?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Hebbal is about 12 km (around 20 minutes) and Manyata Tech Park about 14 km (around 25 minutes). Yelahanka Railway Station is about 5 km away.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">Why do some websites list Riviera Glade villas as 3,300 to 3,700 sq ft?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Some channel-partner sites quote a rounded 3,300 to 3,700 sq ft range. The builder's own floor-plan sheets show 3,190 sq ft (Rose), 3,475 sq ft (Lotus) and 3,550 sq ft (Olive), with Iris at about 3,300 sq ft. Confirm the exact area of your chosen villa in the sale agreement.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
                         <span itemprop="name">How do I book a site visit or register early interest?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
