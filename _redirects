@@ -26,7 +26,7 @@
 # Thippapura (same underlying project, different name framing). Removed
 # 2026-09-17 to reduce the site's duplicate-content footprint; redirected
 # instead of 404 in case either URL is indexed or externally linked.
-/projects/sattva-ekatra-doddaballapur-plots/*        /projects/sattva-thippapura/                              301
+/projects/sattva-ekatra-doddaballapur-plots/*        /projects/sattva-ekatra/                                  301
 /blog/sattva-ekatra-doddaballapur-price-plots-rera/*  /blog/sattva-thippapura-doddaballapur-price-plots-rera/   301
 
 # Sattva Sanio was superseded by Sattva Aangane (marketed under the pre-launch
@@ -73,3 +73,10 @@
 # Brigade Silvercrest; the project page was removed 2026-10-05. Its review
 # blog post was kept live and repointed to the Silvercrest page.
 /projects/brigade-jeevan-sandhya/*                            /projects/brigade-silvercrest/                                   301
+
+# Sattva Thippapura was the launch code name for Sattva Ekatra (same project).
+# The project page moved 2026-10-17 to the brand-name URL to rank for
+# "sattva ekatra"; the old URL redirects so its search equity carries over.
+# Images stay under /images/projects/sattva-thippapura/ and are unaffected.
+/projects/sattva-thippapura                                   /projects/sattva-ekatra/                                         301
+/projects/sattva-thippapura/*                                 /projects/sattva-ekatra/                                         301
