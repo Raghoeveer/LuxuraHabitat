@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Brigade Group Projects in Bangalore 2026 | Luxura Habitat</title>
+  <meta name="description" content="All Brigade Group projects we cover in Bangalore: Brigade KIADB Phase 2, Orchards Laurel &amp; Maple, Eternia, Silvercrest and Brigade Banashankari, with reviews.">
+  <link rel="canonical" href="https://luxurahabitat.com/developers/brigade/">
+  <meta property="og:title" content="Brigade Group Projects in Bangalore 2026 | Luxura Habitat">
+  <meta property="og:description" content="All Brigade Group projects we cover in Bangalore: Brigade KIADB Phase 2, Orchards Laurel &amp; Maple, Eternia, Silvercrest and Brigade Banashankari, with reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurahabitat.com/developers/brigade/">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/brigade-kiadb-phase-2/brigade-kiadb-phase-2-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    :root{--hub-green:#1e3a2f;--hub-copper:#c4a574;--hub-muted:#666;--hub-bg:#faf8f5;--hub-white:#fff;--hub-border:rgba(0,0,0,0.08);}
+    .hub-hero{position:relative;min-height:580px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(0,0,0,0.22) 0%,rgba(0,0,0,0.75) 100%),url('/images/projects/brigade-kiadb-phase-2/brigade-kiadb-phase-2-hero.webp') center/cover no-repeat;color:#fff;padding:80px 24px 60px;}
+    .hub-hero-inner{max-width:900px;margin:0 auto;width:100%;}
+    .breadcrumb-white{font-size:.85rem;margin-bottom:20px;color:rgba(255,255,255,.75);}
+    .breadcrumb-white a{color:#fff;text-decoration:none;}
+    .hub-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;margin-bottom:18px;font-weight:800;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6);}
+    .hub-hero p{font-size:1.1rem;line-height:1.7;max-width:700px;color:rgba(255,255,255,.9);margin-bottom:32px;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
+    .hero-stat{border-left:3px solid var(--hub-copper);padding-left:14px;}
+    .hero-stat strong{display:block;font-size:1.6rem;font-family:'Playfair Display',serif;color:var(--hub-copper);}
+    .hero-stat span{font-size:.85rem;color:rgba(255,255,255,.75);}
+    .hub-section{padding:80px 24px;}
+    .hub-section--alt{background:var(--hub-bg);}
+    .hub-container{max-width:1140px;margin:0 auto;}
+    .hub-section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--hub-copper);margin-bottom:10px;}
+    .hub-section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--hub-green);margin-bottom:16px;line-height:1.2;}
+    .hub-section-intro{font-size:1.05rem;color:var(--hub-muted);line-height:1.75;max-width:750px;margin-bottom:52px;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .pillar-card{background:var(--hub-white);border-radius:14px;padding:28px;border:1px solid var(--hub-border);box-shadow:0 2px 16px rgba(0,0,0,.04);}
+    .pillar-icon{font-size:2rem;margin-bottom:14px;display:block;}
+    .pillar-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hub-green);margin-bottom:10px;}
+    .pillar-card p{font-size:.95rem;color:var(--hub-muted);line-height:1.7;}
+    .prose-two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .prose-block p{font-size:1rem;color:#444;line-height:1.8;margin-bottom:18px;}
+    .prose-block h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--hub-green);margin-bottom:12px;}
+    .data-table{width:100%;border-collapse:collapse;font-size:.9rem;border-radius:10px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);}
+    .data-table th{background:var(--hub-green);color:#fff;padding:13px 16px;text-align:left;font-weight:600;}
+    .data-table td{padding:12px 16px;border-bottom:1px solid var(--hub-border);color:#444;}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:#f7f5f2;}
+    .price-up{color:#2e7d32;font-weight:700;}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
+    .project-hub-card{background:var(--hub-white);border-radius:16px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 4px 20px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .project-hub-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(0,0,0,.1);}
+    .project-hub-card img{width:100%;height:200px;object-fit:cover;}
+    .project-hub-card-body{padding:20px 24px;flex-grow:1;display:flex;flex-direction:column;}
+    .project-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--hub-copper);color:#fff;display:inline-block;padding:3px 8px;border-radius:4px;margin-bottom:8px;width:fit-content;}
+    .project-hub-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--hub-green);margin-bottom:4px;}
+    .project-hub-card .project-sub{font-size:.82rem;color:var(--hub-muted);margin-bottom:10px;}
+    .project-specs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+    .project-spec-item{font-size:.78rem;color:#555;background:var(--hub-bg);padding:4px 10px;border-radius:20px;border:1px solid var(--hub-border);}
+    .card-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--hub-copper);font-size:.9rem;text-decoration:none;}
+    .blogs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .blog-hub-card{background:var(--hub-white);border-radius:10px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 2px 10px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .blog-hub-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.09);}
+    .blog-hub-card-body{padding:18px;flex-grow:1;display:flex;flex-direction:column;}
+    .blog-hub-card-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--hub-copper);margin-bottom:6px;}
+    .blog-hub-card h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--hub-green);line-height:1.35;margin-bottom:8px;}
+    .blog-hub-card p{font-size:.82rem;color:var(--hub-muted);line-height:1.55;flex-grow:1;}
+    .read-link{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--hub-copper);text-decoration:none;display:inline-flex;align-items:center;gap:4px;}
+    .faq-list{max-width:760px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid var(--hub-border);padding:24px 0;}
+    .faq-item:first-child{border-top:1px solid var(--hub-border);}
+    .faq-question{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--hub-green);margin-bottom:10px;font-weight:700;}
+    .faq-answer{font-size:.95rem;color:#555;line-height:1.75;}
+    .faq-answer a{color:var(--hub-copper);font-weight:600;}
+    .cta-band{background:linear-gradient(135deg,var(--hub-green) 0%,#2d5240 100%);padding:72px 24px;text-align:center;color:#fff;}
+    .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:16px;color:#fff;}
+    .cta-band p{font-size:1.05rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;}
+    .cta-band a{display:inline-block;background:var(--hub-copper);color:#fff;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,opacity .2s;}
+    .cta-band a:hover{transform:translateY(-2px);opacity:.9;}
+    @media(max-width:900px){.pillars-grid,.blogs-grid{grid-template-columns:1fr 1fr;}.projects-grid{grid-template-columns:1fr;}.prose-two-col{grid-template-columns:1fr;gap:32px;}}
+    @media(max-width:600px){.pillars-grid,.blogs-grid{grid-template-columns:1fr;}.hero-stats{gap:20px;}}
+
+    /* ── EXPLORE CLUSTER SECTION ── */
+    .explore-cluster { padding: 64px 24px; background: #faf8f5; }
+    .explore-cluster .hub-container { max-width: 1100px; margin: 0 auto; }
+    .explore-cluster-header { text-align: center; margin-bottom: 48px; }
+    .explore-cluster-header .hub-section-label { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hub-copper, #c4a574); margin-bottom: 10px; }
+    .explore-cluster-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--hub-green, #1e3a2f); margin-bottom: 12px; }
+    .explore-cluster-header p { font-size: 1.05rem; color: var(--hub-muted, #666); max-width: 620px; margin: 0 auto; }
+
+    .explore-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 768px) { .explore-cols { grid-template-columns: 1fr; gap: 32px; } }
+
+    .explore-col-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hub-green, #1e3a2f); font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--hub-copper, #c4a574); }
+
+    .explore-article-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-article-item { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-article-item:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-article-icon { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-article-text { min-width: 0; }
+    .explore-article-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-article-title { font-size: 0.9rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.35; }
+
+    .explore-project-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-project-card { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-project-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-project-thumb { width: 72px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-project-body { min-width: 0; }
+    .explore-project-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-project-name { font-size: 0.92rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.3; margin-bottom: 2px; }
+    .explore-project-detail { font-size: 0.78rem; color: var(--hub-muted, #666); }
+
+    .explore-footer { margin-top: 36px; text-align: center; }
+    .explore-footer a { display: inline-flex; align-items: center; gap: 6px; background: var(--hub-green, #1e3a2f); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s ease; }
+    .explore-footer a:hover { opacity: 0.88; }
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hub-hero" aria-label="Brigade Group Projects in Bangalore">
+      <div class="hub-hero-inner">
+        <nav class="breadcrumb-white" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href="/developers/">Developers</a> / <span>Brigade Group</span>
+        </nav>
+        <h1>Brigade Group Projects in Bangalore:<br>Townships, Senior Living &amp; Apartments</h1>
+        <p>Brigade Group was founded in 1986 and is listed as Brigade Enterprises. These are the Brigade projects we cover, with our independent review of each.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>5</strong><span>Brigade projects covered</span></div>
+          <div class="hero-stat"><strong>1986</strong><span>Year founded</span></div>
+          <div class="hero-stat"><strong>Listed</strong><span>Brigade Enterprises</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="overview">
+      <div class="hub-container">
+        <p class="hub-section-label">Portfolio Overview</p>
+        <h2 class="hub-section-title" id="overview">Where Brigade Is Building</h2>
+        <p class="hub-section-intro">Our Brigade listings span three Bangalore corridors and three very different products.</p>
+        <div class="pillars-grid">
+          <div class="pillar-card"><span class="pillar-icon">✈️</span><h3>Devanahalli</h3><p>The 75-acre <a href="/projects/brigade-kiadb-phase-2/">Brigade KIADB Phase 2</a> township in the KIADB Aerospace Park, and senior-living homes at <a href="/projects/brigade-orchards-laurel-maple/">Brigade Orchards Laurel &amp; Maple</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🌳</span><h3>Yelahanka</h3><p><a href="/projects/brigade-eternia/">Brigade Eternia</a> offers premium 3 and 4 BHK lakeside apartments in North Bengaluru.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🚇</span><h3>South Bengaluru</h3><p><a href="/projects/brigade-silvercrest/">Brigade Silvercrest</a> near Raghuvanahalli Cross Metro on Kanakapura Road, and <a href="/projects/brigade-banashankari/">Brigade Banashankari</a> in Banashankari 5th Stage.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">📈</span><h3>Developer Outlook</h3><p>Read our notes on <a href="/blog/brigade-enterprises-fy27-results-launch-pipeline/">Brigade's Q1 FY27 results and launch plan</a> and its <a href="/blog/brigade-coimbatore-saravanampatti-600-crore-launch-2026/">entry into Coimbatore</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">👪</span><h3>Senior Living</h3><p>Brigade Orchards Laurel &amp; Maple is one of the few operated senior-living options we cover. See our <a href="/blog/senior-living-multigenerational-homes-devanahalli-primus/">senior living guide</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🔎</span><h3>Verify Before Booking</h3><p>Some Brigade launches here are pre-RERA or have RERA in process. Confirm the registration before paying any EOI.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="projects">
+      <div class="hub-container">
+        <p class="hub-section-label">Verified Projects</p>
+        <h2 class="hub-section-title" id="projects">Brigade Group Projects We Cover</h2>
+        <p class="hub-section-intro">Five Brigade communities across Devanahalli, Yelahanka and South Bengaluru.</p>
+        <div class="projects-grid">
+          <a href="/projects/brigade-kiadb-phase-2/" class="project-hub-card" aria-label="Brigade KIADB Phase 2">
+            <img src="/images/projects/brigade-kiadb-phase-2/brigade-kiadb-phase-2-hero.webp" alt="Brigade KIADB Phase 2" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Integrated Township</span>
+              <h3>Brigade KIADB Phase 2</h3>
+              <p class="project-sub">Devanahalli KIADB Aerospace Park &middot; Brigade Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">75.04 Acres</span>
+                <span class="project-spec-item">7,195 Homes</span>
+                <span class="project-spec-item">Pre-RERA</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">A 75.04-acre township with 7,195 homes, a hospital, a hotel and a WTC office campus.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/brigade-orchards-laurel-maple/" class="project-hub-card" aria-label="Brigade Orchards Laurel &amp; Maple">
+            <img src="/images/projects/brigade-orchards-laurel-maple/brigade-orchards-laurel-maple-hero.webp" alt="Brigade Orchards Laurel &amp; Maple" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Senior Living</span>
+              <h3>Brigade Orchards Laurel &amp; Maple</h3>
+              <p class="project-sub">Brigade Orchards, Devanahalli &middot; Brigade Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1, 2 &amp; 3 BHK</span>
+                <span class="project-spec-item">Operated by Primus</span>
+                <span class="project-spec-item">From ₹80 L*</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Senior-living 1, 2 and 3 BHK homes inside Brigade Orchards, operated by Primus.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/brigade-eternia/" class="project-hub-card" aria-label="Brigade Eternia">
+            <img src="/images/projects-thumbs/brigade-eternia-thumb.webp" alt="Brigade Eternia" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Lakeside Apartments</span>
+              <h3>Brigade Eternia</h3>
+              <p class="project-sub">Yelahanka &middot; Brigade Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK</span>
+                <span class="project-spec-item">From ₹2.47 Cr</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Premium 3 and 4 BHK lakeside apartments in Yelahanka, North Bengaluru.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/brigade-silvercrest/" class="project-hub-card" aria-label="Brigade Silvercrest">
+            <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg" alt="Brigade Silvercrest" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Premium Apartments</span>
+              <h3>Brigade Silvercrest</h3>
+              <p class="project-sub">Kanakapura Road &middot; Brigade Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK</span>
+                <span class="project-spec-item">3 BHK ₹3.09 Cr</span>
+                <span class="project-spec-item">4 BHK ₹4.26 Cr</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">3 and 4 BHK homes about 500 m from Raghuvanahalli Cross Metro Station on Kanakapura Road.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/brigade-banashankari/" class="project-hub-card" aria-label="Brigade Banashankari">
+            <img src="/images/projects/brigade-banashankari/brigade-banashankari-banner.webp" alt="Brigade Banashankari" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">High-Rise Apartments</span>
+              <h3>Brigade Banashankari</h3>
+              <p class="project-sub">Banashankari 5th Stage &middot; Brigade Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">2 &amp; 3 BHK</span>
+                <span class="project-spec-item">7.5 Acres</span>
+                <span class="project-spec-item">2 BHK from ₹1.65 Cr</span>
+                <span class="project-spec-item">3 BHK from ₹2.35 Cr</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">A 7.5-acre Brigade high-rise community in Banashankari 5th Stage, South Bengaluru.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="research">
+      <div class="hub-container">
+        <p class="hub-section-label">Research &amp; Reviews</p>
+        <h2 class="hub-section-title" id="research">Brigade Reviews &amp; News</h2>
+        <p class="hub-section-intro">Independent reviews of each Brigade project, comparisons and developer news, newest first.</p>
+        <div class="blogs-grid">
+          <a href="/blog/brigade-coimbatore-saravanampatti-600-crore-launch-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Brigade Enters Coimbatore: ₹600 Cr Saravanampatti Project Explained</h4>
+              <p>Brigade Group has signed a joint development agreement for a 5.4-acre residential project in Saravanampatti, Coimbatore, with a gross development...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/brigade-banashankari-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Brigade Banashankari Review 2026: Price, Plans &amp; Verdict</h4>
+              <p>Independent Brigade Banashankari review: conflicting figures compared, ₹12,200-14,400/sq ft price maths, all-in cost, EMI, RERA and possession risk...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/brigade-kiadb-devanahalli-review-75-acre-township/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Brigade KIADB Review: Devanahalli 75-Acre Township</h4>
+              <p>Our honest review of Brigade KIADB Phase 2, Devanahalli: EC-verified 75.04-acre township scale, configurations, pricing context, RERA status and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/brigade-enterprises-fy27-results-launch-pipeline/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Brigade Enterprises Q1 FY27: 37% Profit Growth &amp; 11.5 MSF Launch Plan</h4>
+              <p>Brigade Enterprises posted 37% profit growth in Q1 FY27 and is targeting 11.5-12 million sq ft of new launches across Bengaluru, Chennai and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/brigade-silvercrest-kanakapura-road-prelaunch-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Brigade Silvercrest: Pre-Launch Review</h4>
+              <p>Independent pre-launch review of Brigade Silvercrest, Kanakapura Main Road: pricing, towers, connectivity and what to verify before you commit.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/brigade-orchards-laurel-maple-devanahalli-price-rera-floor-plans/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Brigade Orchards Laurel &amp; Maple: Price &amp; RERA</h4>
+              <p>Independent review of Brigade Orchards Laurel &amp; Maple, Devanahalli: verified 1, 2 &amp; 3 BHK pricing, RERA status, floor plans and Primus senior-living...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/century-kindle-vs-brigade-eternia-yelahanka/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Century Kindle vs Brigade Eternia: Which Fits You?</h4>
+              <p>A detailed comparison of Century Kindle and Brigade Eternia in Yelahanka, North Bangalore. Pricing, configurations, RERA status, and our verdict on...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="faq">
+      <div class="hub-container">
+        <p class="hub-section-label">Common Questions</p>
+        <h2 class="hub-section-title" id="faq" style="text-align:center;">Brigade Group Projects: FAQ</h2>
+        <br>
+        <div class="faq-list">
+          <div class="faq-item">
+            <p class="faq-question">Which Brigade projects does Luxura Habitat cover?</p>
+            <p class="faq-answer"><a href="/projects/brigade-kiadb-phase-2/">Brigade KIADB Phase 2</a>, <a href="/projects/brigade-orchards-laurel-maple/">Brigade Orchards Laurel &amp; Maple</a>, <a href="/projects/brigade-eternia/">Brigade Eternia</a>, <a href="/projects/brigade-silvercrest/">Brigade Silvercrest</a> and <a href="/projects/brigade-banashankari/">Brigade Banashankari</a>.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Which Brigade projects are in Devanahalli?</p>
+            <p class="faq-answer"><a href="/projects/brigade-kiadb-phase-2/">Brigade KIADB Phase 2</a> in the KIADB Aerospace Park and <a href="/projects/brigade-orchards-laurel-maple/">Brigade Orchards Laurel &amp; Maple</a> inside Brigade Orchards.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Does Brigade have a senior-living project?</p>
+            <p class="faq-answer">Yes. <a href="/projects/brigade-orchards-laurel-maple/">Brigade Orchards Laurel &amp; Maple</a> offers senior-living 1, 2 and 3 BHK homes operated by Primus.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Which Brigade project is closest to a metro station?</p>
+            <p class="faq-answer"><a href="/projects/brigade-silvercrest/">Brigade Silvercrest</a> is about 500 m from Raghuvanahalli Cross Metro Station on Kanakapura Road.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Book consultation">
+      <h2>Comparing Brigade Projects?</h2>
+      <p>We will compare Brigade's township, senior-living and apartment options against your budget and timeline.</p>
+      <a href="/contact/">Book a Free Consultation</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a><a href="/projects/">Projects</a><a href="/developers/">Developers</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Brigade Projects</h4><a href="/projects/brigade-kiadb-phase-2/">Brigade KIADB Phase 2</a><a href="/projects/brigade-orchards-laurel-maple/">Brigade Orchards Laurel &amp; Maple</a><a href="/projects/brigade-eternia/">Brigade Eternia</a><a href="/projects/brigade-silvercrest/">Brigade Silvercrest</a><a href="/projects/brigade-banashankari/">Brigade Banashankari</a></div>
+        <div class="footer-col"><h4>Brigade Research</h4><a href="/blog/brigade-coimbatore-saravanampatti-600-crore-launch-2026/">Brigade Enters Coimbatore</a><a href="/blog/brigade-banashankari-review/">Brigade Banashankari Review 2026</a><a href="/blog/brigade-kiadb-devanahalli-review-75-acre-township/">Brigade KIADB Review</a><a href="/blog/brigade-enterprises-fy27-results-launch-pipeline/">Brigade Enterprises Q1 FY27</a><a href="/blog/brigade-silvercrest-kanakapura-road-prelaunch-review/">Brigade Silvercrest</a><a href="/blog/brigade-orchards-laurel-maple-devanahalli-price-rera-floor-plans/">Brigade Orchards Laurel &amp; Maple</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luxurahabitat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Developers",
+          "item": "https://luxurahabitat.com/developers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Brigade Group",
+          "item": "https://luxurahabitat.com/developers/brigade/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Brigade Group Projects in Bangalore",
+      "description": "All Brigade Group projects we cover in Bangalore: Brigade KIADB Phase 2, Orchards Laurel & Maple, Eternia, Silvercrest and Brigade Banashankari, with reviews.",
+      "url": "https://luxurahabitat.com/developers/brigade/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Luxura Habitat",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Brigade Group Projects We Cover",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Brigade KIADB Phase 2",
+          "url": "https://luxurahabitat.com/projects/brigade-kiadb-phase-2/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Brigade Orchards Laurel & Maple",
+          "url": "https://luxurahabitat.com/projects/brigade-orchards-laurel-maple/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Brigade Eternia",
+          "url": "https://luxurahabitat.com/projects/brigade-eternia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Brigade Silvercrest",
+          "url": "https://luxurahabitat.com/projects/brigade-silvercrest/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Brigade Banashankari",
+          "url": "https://luxurahabitat.com/projects/brigade-banashankari/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which Brigade projects does Luxura Habitat cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brigade KIADB Phase 2, Brigade Orchards Laurel & Maple, Brigade Eternia, Brigade Silvercrest and Brigade Banashankari."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Brigade projects are in Devanahalli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brigade KIADB Phase 2 in the KIADB Aerospace Park and Brigade Orchards Laurel & Maple inside Brigade Orchards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Brigade have a senior-living project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Brigade Orchards Laurel & Maple offers senior-living 1, 2 and 3 BHK homes operated by Primus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Brigade project is closest to a metro station?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brigade Silvercrest is about 500 m from Raghuvanahalli Cross Metro Station on Kanakapura Road."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</body>
+</html>
