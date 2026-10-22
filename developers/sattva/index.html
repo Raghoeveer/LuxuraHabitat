@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Sattva Group Projects in Bangalore 2026 | Luxura Habitat</title>
+  <meta name="description" content="All Sattva Group (Salarpuria Sattva) projects we cover: Aeropolis, Park Cubix, Sattva City, Vasanta Skye, Lumina, La Vita, Songbird, Ekatra plots and more, with reviews.">
+  <link rel="canonical" href="https://luxurahabitat.com/developers/sattva/">
+  <meta property="og:title" content="Sattva Group Projects in Bangalore 2026 | Luxura Habitat">
+  <meta property="og:description" content="All Sattva Group (Salarpuria Sattva) projects we cover: Aeropolis, Park Cubix, Sattva City, Vasanta Skye, Lumina, La Vita, Songbird, Ekatra plots and more, with reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurahabitat.com/developers/sattva/">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    :root{--hub-green:#1e3a2f;--hub-copper:#c4a574;--hub-muted:#666;--hub-bg:#faf8f5;--hub-white:#fff;--hub-border:rgba(0,0,0,0.08);}
+    .hub-hero{position:relative;min-height:580px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(0,0,0,0.22) 0%,rgba(0,0,0,0.75) 100%),url('/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp') center/cover no-repeat;color:#fff;padding:80px 24px 60px;}
+    .hub-hero-inner{max-width:900px;margin:0 auto;width:100%;}
+    .breadcrumb-white{font-size:.85rem;margin-bottom:20px;color:rgba(255,255,255,.75);}
+    .breadcrumb-white a{color:#fff;text-decoration:none;}
+    .hub-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;margin-bottom:18px;font-weight:800;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6);}
+    .hub-hero p{font-size:1.1rem;line-height:1.7;max-width:700px;color:rgba(255,255,255,.9);margin-bottom:32px;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
+    .hero-stat{border-left:3px solid var(--hub-copper);padding-left:14px;}
+    .hero-stat strong{display:block;font-size:1.6rem;font-family:'Playfair Display',serif;color:var(--hub-copper);}
+    .hero-stat span{font-size:.85rem;color:rgba(255,255,255,.75);}
+    .hub-section{padding:80px 24px;}
+    .hub-section--alt{background:var(--hub-bg);}
+    .hub-container{max-width:1140px;margin:0 auto;}
+    .hub-section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--hub-copper);margin-bottom:10px;}
+    .hub-section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--hub-green);margin-bottom:16px;line-height:1.2;}
+    .hub-section-intro{font-size:1.05rem;color:var(--hub-muted);line-height:1.75;max-width:750px;margin-bottom:52px;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .pillar-card{background:var(--hub-white);border-radius:14px;padding:28px;border:1px solid var(--hub-border);box-shadow:0 2px 16px rgba(0,0,0,.04);}
+    .pillar-icon{font-size:2rem;margin-bottom:14px;display:block;}
+    .pillar-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hub-green);margin-bottom:10px;}
+    .pillar-card p{font-size:.95rem;color:var(--hub-muted);line-height:1.7;}
+    .prose-two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .prose-block p{font-size:1rem;color:#444;line-height:1.8;margin-bottom:18px;}
+    .prose-block h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--hub-green);margin-bottom:12px;}
+    .data-table{width:100%;border-collapse:collapse;font-size:.9rem;border-radius:10px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);}
+    .data-table th{background:var(--hub-green);color:#fff;padding:13px 16px;text-align:left;font-weight:600;}
+    .data-table td{padding:12px 16px;border-bottom:1px solid var(--hub-border);color:#444;}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:#f7f5f2;}
+    .price-up{color:#2e7d32;font-weight:700;}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
+    .project-hub-card{background:var(--hub-white);border-radius:16px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 4px 20px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .project-hub-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(0,0,0,.1);}
+    .project-hub-card img{width:100%;height:200px;object-fit:cover;}
+    .project-hub-card-body{padding:20px 24px;flex-grow:1;display:flex;flex-direction:column;}
+    .project-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--hub-copper);color:#fff;display:inline-block;padding:3px 8px;border-radius:4px;margin-bottom:8px;width:fit-content;}
+    .project-hub-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--hub-green);margin-bottom:4px;}
+    .project-hub-card .project-sub{font-size:.82rem;color:var(--hub-muted);margin-bottom:10px;}
+    .project-specs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+    .project-spec-item{font-size:.78rem;color:#555;background:var(--hub-bg);padding:4px 10px;border-radius:20px;border:1px solid var(--hub-border);}
+    .card-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--hub-copper);font-size:.9rem;text-decoration:none;}
+    .blogs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .blog-hub-card{background:var(--hub-white);border-radius:10px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 2px 10px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .blog-hub-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.09);}
+    .blog-hub-card-body{padding:18px;flex-grow:1;display:flex;flex-direction:column;}
+    .blog-hub-card-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--hub-copper);margin-bottom:6px;}
+    .blog-hub-card h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--hub-green);line-height:1.35;margin-bottom:8px;}
+    .blog-hub-card p{font-size:.82rem;color:var(--hub-muted);line-height:1.55;flex-grow:1;}
+    .read-link{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--hub-copper);text-decoration:none;display:inline-flex;align-items:center;gap:4px;}
+    .faq-list{max-width:760px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid var(--hub-border);padding:24px 0;}
+    .faq-item:first-child{border-top:1px solid var(--hub-border);}
+    .faq-question{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--hub-green);margin-bottom:10px;font-weight:700;}
+    .faq-answer{font-size:.95rem;color:#555;line-height:1.75;}
+    .faq-answer a{color:var(--hub-copper);font-weight:600;}
+    .cta-band{background:linear-gradient(135deg,var(--hub-green) 0%,#2d5240 100%);padding:72px 24px;text-align:center;color:#fff;}
+    .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:16px;color:#fff;}
+    .cta-band p{font-size:1.05rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;}
+    .cta-band a{display:inline-block;background:var(--hub-copper);color:#fff;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,opacity .2s;}
+    .cta-band a:hover{transform:translateY(-2px);opacity:.9;}
+    @media(max-width:900px){.pillars-grid,.blogs-grid{grid-template-columns:1fr 1fr;}.projects-grid{grid-template-columns:1fr;}.prose-two-col{grid-template-columns:1fr;gap:32px;}}
+    @media(max-width:600px){.pillars-grid,.blogs-grid{grid-template-columns:1fr;}.hero-stats{gap:20px;}}
+
+    /* ── EXPLORE CLUSTER SECTION ── */
+    .explore-cluster { padding: 64px 24px; background: #faf8f5; }
+    .explore-cluster .hub-container { max-width: 1100px; margin: 0 auto; }
+    .explore-cluster-header { text-align: center; margin-bottom: 48px; }
+    .explore-cluster-header .hub-section-label { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hub-copper, #c4a574); margin-bottom: 10px; }
+    .explore-cluster-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--hub-green, #1e3a2f); margin-bottom: 12px; }
+    .explore-cluster-header p { font-size: 1.05rem; color: var(--hub-muted, #666); max-width: 620px; margin: 0 auto; }
+
+    .explore-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 768px) { .explore-cols { grid-template-columns: 1fr; gap: 32px; } }
+
+    .explore-col-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hub-green, #1e3a2f); font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--hub-copper, #c4a574); }
+
+    .explore-article-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-article-item { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-article-item:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-article-icon { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-article-text { min-width: 0; }
+    .explore-article-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-article-title { font-size: 0.9rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.35; }
+
+    .explore-project-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-project-card { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-project-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-project-thumb { width: 72px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-project-body { min-width: 0; }
+    .explore-project-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-project-name { font-size: 0.92rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.3; margin-bottom: 2px; }
+    .explore-project-detail { font-size: 0.78rem; color: var(--hub-muted, #666); }
+
+    .explore-footer { margin-top: 36px; text-align: center; }
+    .explore-footer a { display: inline-flex; align-items: center; gap: 6px; background: var(--hub-green, #1e3a2f); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s ease; }
+    .explore-footer a:hover { opacity: 0.88; }
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hub-hero" aria-label="Sattva Group Projects in Bangalore">
+      <div class="hub-hero-inner">
+        <nav class="breadcrumb-white" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href="/developers/">Developers</a> / <span>Sattva Group</span>
+        </nav>
+        <h1>Sattva Group Projects in Bangalore:<br>Apartments, Villas &amp; Plots</h1>
+        <p>Sattva Group began in 1986 as Salarpuria Sattva. These are the Sattva projects we cover, from airport-corridor apartments to plotted layouts, with our independent reviews.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>14</strong><span>Sattva projects covered</span></div>
+          <div class="hero-stat"><strong>1986</strong><span>Founded as Salarpuria Sattva</span></div>
+          <div class="hero-stat"><strong>From ₹38 L</strong><span>Lowest listed entry price</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="overview">
+      <div class="hub-container">
+        <p class="hub-section-label">Portfolio Overview</p>
+        <h2 class="hub-section-title" id="overview">Where Sattva Is Building</h2>
+        <p class="hub-section-intro">Sattva's current launches cluster in four places. Pick the corridor first, then compare the Sattva projects within it.</p>
+        <div class="pillars-grid">
+          <div class="pillar-card"><span class="pillar-icon">✈️</span><h3>Airport Corridor</h3><p><a href="/projects/sattva-aeropolis/">Sattva Aeropolis</a>, <a href="/projects/park-cubix/">Sattva Park Cubix</a>, <a href="/projects/sattva-city/">Sattva City</a>, <a href="/projects/vasanta-skye/">Sattva Vasanta Skye</a> and <a href="/projects/vasanta-cove/">Sattva Vasanta Cove</a> all sit around Devanahalli and Bangalore Airport.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🧭</span><h3>North Bangalore</h3><p><a href="/projects/sattva-lumina/">Sattva Lumina</a> in Yelahanka, the row villas at <a href="/projects/sattva-la-vita/">Sattva La Vita</a> off Hennur Road, and <a href="/projects/sattva-ekatra/">Sattva Ekatra</a> plots off Doddaballapur Main Road.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🌅</span><h3>East &amp; South</h3><p><a href="/projects/sattva-songbird/">Sattva Songbird</a> at Budigere Cross, <a href="/projects/sattva-aangane/">Sattva Aangane</a> on Old Madras Road, <a href="/projects/sattva-forest-ridge/">Sattva Forest Ridge</a> near Kanakapura Road and <a href="/projects/sattva-jigani/">Sattva Jigani (Amritya)</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">📐</span><h3>Plotted Layouts</h3><p><a href="/projects/sattva-ekatra/">Sattva Ekatra</a>, <a href="/projects/sattva-green-groves/">Sattva Green Groves</a> in Nelamangala and <a href="/projects/sattva-kaveri-siri/">Sattva Kaveri Siri</a> in Mandya.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">⚖️</span><h3>Compare Within Sattva</h3><p>See <a href="/blog/sattva-park-cubix-vs-sattva-city-devanahalli/">Park Cubix vs Sattva City</a>, <a href="/blog/sattva-vasanta-skye-vs-vasanta-cove-devanahalli/">Vasanta Skye vs Vasanta Cove</a> and <a href="/blog/sattva-aangane-vs-sattva-songbird-old-madras-road/">Aangane vs Songbird</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🔎</span><h3>Verify Before Booking</h3><p>Large Sattva townships are registered in phases. Check the RERA number, completion date and carpet area for the exact phase and tower you are buying in.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="projects">
+      <div class="hub-container">
+        <p class="hub-section-label">Verified Projects</p>
+        <h2 class="hub-section-title" id="projects">Sattva Group Projects We Cover</h2>
+        <p class="hub-section-intro">Fourteen Sattva communities across Bengaluru and Mandya. Each card links to the full project page with floor plans, pricing and RERA details.</p>
+        <div class="projects-grid">
+          <a href="/projects/sattva-aeropolis/" class="project-hub-card" aria-label="Sattva Aeropolis">
+            <img src="/additional_websites/Aeropolis/imgi_8_cam.webp" alt="Sattva Aeropolis" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Airport Corridor Apartments</span>
+              <h3>Sattva Aeropolis</h3>
+              <p class="project-sub">Devanahalli &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio to 3 BHK</span>
+                <span class="project-spec-item">Two Phases</span>
+                <span class="project-spec-item">From ₹45.77 L</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1, 2 &amp; 3 BHK homes in Phase 1 from ₹60 L and Studio and 1 BHK homes in Phase 2 from ₹45.77 L, close to Bangalore Airport.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/park-cubix/" class="project-hub-card" aria-label="Sattva Park Cubix">
+            <img src="/images/projects/park-cubix/park-cubix-entrance.webp" alt="Sattva Park Cubix" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Township Apartments</span>
+              <h3>Sattva Park Cubix</h3>
+              <p class="project-sub">Devanahalli &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio to 3 BHK</span>
+                <span class="project-spec-item">~1,620 Homes</span>
+                <span class="project-spec-item">18 Acres</span>
+                <span class="project-spec-item">Phase 2 from ₹91 L</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Phase 1 is ready, with resales from ₹34 L, and Phase 2 is selling from ₹91 L in this ~1,620-home community on 18 acres.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-city/" class="project-hub-card" aria-label="Sattva City">
+            <img src="/projects/sattva-city/gallery-09.webp" alt="Sattva City" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Large-Format Township</span>
+              <h3>Sattva City</h3>
+              <p class="project-sub">Doddajala, near Airport &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1 to 4 BHK</span>
+                <span class="project-spec-item">1,161-6,266 sq ft</span>
+                <span class="project-spec-item">₹1.82-3.67 Cr</span>
+                <span class="project-spec-item">200+ Amenities</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1 to 4 BHK homes near Bangalore Airport, from 1,161 sq ft to 6,266 sq ft, with a 200+ amenity programme.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/vasanta-skye/" class="project-hub-card" aria-label="Sattva Vasanta Skye">
+            <img src="/images/projects/vasanta-skye/vasanta-skye-hero-banner.webp" alt="Sattva Vasanta Skye" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Township Apartments</span>
+              <h3>Sattva Vasanta Skye</h3>
+              <p class="project-sub">Devanahalli &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio to 4 BHK</span>
+                <span class="project-spec-item">454-2,416 sq ft</span>
+                <span class="project-spec-item">From ₹78 L</span>
+                <span class="project-spec-item">Possession May 2031</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Studio to 4 BHK homes in a 16-acre Sattva township about 10 km from Bangalore Airport.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/vasanta-cove/" class="project-hub-card" aria-label="Sattva Vasanta Cove">
+            <img src="/images/projects/vasanta-cove/vasanta-cove-hero-banner.webp" alt="Sattva Vasanta Cove" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Compact Homes</span>
+              <h3>Sattva Vasanta Cove</h3>
+              <p class="project-sub">Devanahalli &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio &amp; 1 BHK</span>
+                <span class="project-spec-item">From ₹59 L</span>
+                <span class="project-spec-item">RERA Approved</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Studio and 1 BHK homes 5-10 minutes from Bangalore Airport, aimed at first-time buyers and rental investors.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-lumina/" class="project-hub-card" aria-label="Sattva Lumina">
+            <img src="/images/projects/sattva-lumina/sattva-lumina-aerial-towers.webp" alt="Sattva Lumina" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">High-Rise Apartments</span>
+              <h3>Sattva Lumina</h3>
+              <p class="project-sub">Rajankunte, Yelahanka &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio to 3 BHK</span>
+                <span class="project-spec-item">1,549 Homes</span>
+                <span class="project-spec-item">8 Towers</span>
+                <span class="project-spec-item">From ₹38 L</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1,549 Studio to 3 BHK apartments across 8 towers on 13 acres, on Doddaballapura Road in Yelahanka.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-la-vita/" class="project-hub-card" aria-label="Sattva La Vita">
+            <img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Luxury Row Villas</span>
+              <h3>Sattva La Vita</h3>
+              <p class="project-sub">Off Hennur Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">4 BHK Row Villas</span>
+                <span class="project-spec-item">Gated Community</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">An exclusive community of 4 BHK row house villas off Hennur Road in North Bangalore.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-songbird/" class="project-hub-card" aria-label="Sattva Songbird">
+            <img src="/images/projects/sattva-songbird/sattva-songbird-banner.webp" alt="Sattva Songbird" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Apartments</span>
+              <h3>Sattva Songbird</h3>
+              <p class="project-sub">Budigere Cross &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Studio to 3 BHK</span>
+                <span class="project-spec-item">From ₹1.56 Cr</span>
+                <span class="project-spec-item">84% Open Space</span>
+                <span class="project-spec-item">RERA Approved</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Phase 2 offers Studio to 3 BHK apartments with 84% open space and three clubhouses at Budigere Cross.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-aangane/" class="project-hub-card" aria-label="Sattva Aangane">
+            <img src="/images/projects/sattva-aangane/sattva-aangane-banner.webp" alt="Sattva Aangane" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Pre-Launch Apartments</span>
+              <h3>Sattva Aangane</h3>
+              <p class="project-sub">Old Madras Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK</span>
+                <span class="project-spec-item">10 Acres</span>
+                <span class="project-spec-item">EOI from ₹2.81 Cr</span>
+                <span class="project-spec-item">Pre-Launch</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Also known as Codename Courtyard: 3 and 4 BHK homes on 10 acres with 80% open space on Old Madras Road.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-forest-ridge/" class="project-hub-card" aria-label="Sattva Forest Ridge">
+            <img src="/images/projects/sattva-forest-ridge/Sattva-forestridge-main-banner.webp" alt="Sattva Forest Ridge" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Apartments</span>
+              <h3>Sattva Forest Ridge</h3>
+              <p class="project-sub">Anjanapura, Kanakapura Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1, 2 &amp; 3 BHK</span>
+                <span class="project-spec-item">JP Nagar 9th Phase</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1, 2 and 3 BHK homes at JP Nagar 9th Phase, close to Kanakapura Road in South Bengaluru.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-jigani/" class="project-hub-card" aria-label="Sattva Jigani (Amritya)">
+            <img src="/images/projects/sattva-jigani/sattva-jigani-aerial-view.webp" alt="Sattva Jigani (Amritya)" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">High-Rise Apartments</span>
+              <h3>Sattva Jigani (Amritya)</h3>
+              <p class="project-sub">Jigani Main Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1, 2, 2.5 &amp; 3 BHK</span>
+                <span class="project-spec-item">31-Floor Towers</span>
+                <span class="project-spec-item">From ₹71 L</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Also marketed as Sattva Amritya: 1 to 3 BHK homes in 31-floor towers on Jigani Main Road, South Bengaluru.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-ekatra/" class="project-hub-card" aria-label="Sattva Ekatra">
+            <img src="/images/projects/sattva-thippapura/sattva-thippapura-hero.webp" alt="Sattva Ekatra" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Plotted Development</span>
+              <h3>Sattva Ekatra</h3>
+              <p class="project-sub">Off Doddaballapur Main Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">500+ Plots</span>
+                <span class="project-spec-item">600-1,800 sq ft</span>
+                <span class="project-spec-item">From ₹48 L</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Also known as Sattva Thippapura: 500+ plots on 25 acres off Doddaballapur Main Road, RERA PR/180926/008945.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-green-groves/" class="project-hub-card" aria-label="Sattva Green Groves">
+            <img src="/images/projects/sattva-green-groves/sattva-green-groves-hero.webp" alt="Sattva Green Groves" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Plotted Development</span>
+              <h3>Sattva Green Groves</h3>
+              <p class="project-sub">Nelamangala, Tumkur Road &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">735 Plots</span>
+                <span class="project-spec-item">1,200-1,936 sq ft</span>
+                <span class="project-spec-item">45 Acres</span>
+                <span class="project-spec-item">From ₹75.6 L</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">735 RERA-registered plots across 45 acres on Tumkur Road at Nelamangala.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/sattva-kaveri-siri/" class="project-hub-card" aria-label="Sattva Kaveri Siri">
+            <img src="/images/projects-thumbs/sattva-kaveri-siri-thumb.webp" alt="Sattva Kaveri Siri" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Plotted Development</span>
+              <h3>Sattva Kaveri Siri</h3>
+              <p class="project-sub">Mandya &middot; Sattva Group</p>
+              <div class="project-specs">
+                <span class="project-spec-item">Residential Plots</span>
+                <span class="project-spec-item">600-3,600 sq ft</span>
+                <span class="project-spec-item">35 Acres</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">20x30, 30x40 and 40x60 residential plots spread over 35 acres in Mandya.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="research">
+      <div class="hub-container">
+        <p class="hub-section-label">Research &amp; Reviews</p>
+        <h2 class="hub-section-title" id="research">Sattva Reviews &amp; Comparisons</h2>
+        <p class="hub-section-intro">Independent reviews of each Sattva project, head-to-head comparisons and Sattva news, newest first.</p>
+        <div class="blogs-grid">
+          <a href="/blog/sattva-lumina-chatgpt-ai-search-property-discovery-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Sattva Lumina on ChatGPT Ads: What It Means for Yelahanka Buyers</h4>
+              <p>Sattva Group has piloted ChatGPT Ads for Sattva Lumina in Yelahanka, among the first real estate campaigns of its kind in India. Here&#x27;s what...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-jigani-amritya-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Jigani (Amritya) Review 2026: Price, Plans &amp; Verdict</h4>
+              <p>Independent Sattva Jigani (Sattva Amritya) review: real carpet areas, ₹10,800/sq ft price maths, all-in cost, rent, RERA and EOI risk, plus 20...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-aeropolis-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Aeropolis Review: Price, Floor Plans, RERA &amp; Verdict</h4>
+              <p>Independent Sattva Aeropolis review: Studio to 3 BHK sizes, ₹45.77 L to ₹90 L prices, real rate per sq ft, both RERA phases, risks, checklist and 30...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-park-cubix-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Park Cubix Review 2026: Price, Phase 2 &amp; Is It Worth Buying?</h4>
+              <p>Independent Sattva Park Cubix review: ₹6,890 to 8,050/sq ft resale, Phase 2 from ₹91 L, floor plans, rental yields, the water, power and seepage...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-city-doddajala-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva City Doddajala Review: Price, Floor Plans &amp; Verdict</h4>
+              <p>Independent Sattva City review: 1 to 4 BHK floor plans, ₹1.82 to 3.67 Cr prices, real rate per sq ft, payment plan, all-in cost, amenities, risks and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-aangane-vs-sattva-songbird-old-madras-road/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Sattva Aangane vs. Sattva Songbird: Which to Pick?</h4>
+              <p>Sattva Aangane vs Sattva Songbird: comparing two Sattva launches on Old Madras Road by stage, configuration, size, price and amenities to help you...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-aangane-old-madras-road-price-rera-courtyard/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Aangane: Price, RERA &amp; Codename Courtyard</h4>
+              <p>Sattva Aangane, Old Madras Road: what Codename Courtyard means, verified EOI pricing, floor plans, amenities and current RERA status, explained in...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-wish-list-campaign-sima-taparia-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Sattva&#x27;s &#x27;Wish List&#x27; Campaign With Sima Taparia: What Belongs on Your List</h4>
+              <p>Sattva Group&#x27;s new brand campaign with Sima Taparia compares homebuying to matchmaking. Here&#x27;s what the campaign gets right, and what should actually...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-lumina-rajankunte-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Lumina Yelahanka: Price, Floor Plans, RERA &amp; Buyer Guide</h4>
+              <p>Complete Sattva Lumina guide: Studio to 3 BHK+3T prices from ₹38 Lakh, room-by-room floor plans, master plan, RERA, possession, all-in costs and 30+...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-green-groves-vs-kns-samooha/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Sattva Green Groves vs KNS Samooha</h4>
+              <p>Sattva Green Groves vs KNS Samooha: two adjacent Tumkur Road plotted layouts compared on scale, pricing, amenities, green space and RERA status.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-thippapura-doddaballapur-price-plots-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Ekatra (Thippapura): Price, Plots &amp; RERA</h4>
+              <p>Independent review of Sattva Ekatra (Sattva Thippapura) in Doddaballapur: 500+ plots, size-wise pricing, RERA PR/180926/008945, connectivity and our...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-green-groves-nelamangala-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Green Groves: Price, Plots &amp; RERA</h4>
+              <p>Independent review of Sattva Green Groves, Nelamangala: plot sizes, verified pricing, the 17-park layout plan and RERA status, plus our honest...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-park-cubix-devanahalli-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Park Cubix Devanahalli: Price &amp; RERA</h4>
+              <p>Sattva Park Cubix in Devanahalli: full breakdown of pricing, 1/2/3 BHK layouts, RERA registration, amenities and our honest take on this Phase 1...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-park-cubix-vs-sattva-city-devanahalli/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Park Cubix vs Sattva City: Which Fits You?</h4>
+              <p>Sattva Park Cubix vs Sattva City, two Sattva Group townships in Devanahalli. Compare price, scale, phase status, RERA and amenities to find your fit.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-vasanta-cove-vs-sattva-aeropolis-devanahalli/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Vasanta Cove vs Sattva Aeropolis: Which Fits You?</h4>
+              <p>Sattva Vasanta Cove or Sattva Aeropolis? Compare price, unit mix, land area and location within Devanahalli&#x27;s airport corridor to find the right...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-songbird-budigere-cross-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Songbird: Price, Layout &amp; RERA</h4>
+              <p>Independent review of Sattva Songbird, Budigere Cross, verified floor plans, pricing by configuration, possession and RERA status. Our honest...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/concorde-sienna-vs-sattva-la-vita-hennur/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Concorde Sienna vs Sattva La Vita: Which Fits You?</h4>
+              <p>Concorde Sienna (2 &amp; 3 BHK tower) vs Sattva La Vita (4 BHK villas) in Hennur: pricing, format, buyer profile and our verdict on which fits you.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-vasanta-skye-devanahalli-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Vasanta Skye: Price, Floor Plans &amp; RERA Guide</h4>
+              <p>Sattva Vasanta Skye guide: Studio to 4 BHK from ₹78 Lakhs, carpet areas from the floor plans, master plan, specifications, RERA, May 2031 possession...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-vasanta-skye-vs-vasanta-cove-devanahalli/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Vasanta Skye vs Vasanta Cove: Which Fits You?</h4>
+              <p>Sattva Vasanta Skye and Sattva Vasanta Cove are two different Devanahalli projects with similar names. Compare RERA numbers, size, price and unit mix...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-vasanta-cove-devanahalli-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Vasanta Cove: Price, Layout &amp; RERA</h4>
+              <p>Independent review of Sattva Vasanta Cove, Devanahalli: verified Studio &amp; 1 BHK pricing, floor plans, possession and RERA status. Our honest...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/aparna-wonder-woods-vs-sattva-forest-ridge/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Aparna Wonder Woods vs Sattva Forest Ridge</h4>
+              <p>Aparna Wonder Woods vs Sattva Forest Ridge, comparing the Kanakapura Road corridor&#x27;s two flagship launches on scale, price, density and possession.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sattva-forest-ridge-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sattva Forest Ridge: Price, Layout &amp; RERA</h4>
+              <p>Independent review of Sattva Forest Ridge, Anjanapura, pricing by configuration, tower layout, possession timeline and RERA verification. Our honest...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Orchid Salisbury vs Sattva La Vita: Which Fits You?</h4>
+              <p>A detailed comparison of Goyal Orchid Salisbury (apartments) and Sattva La Vita (row villas) in the Hennur–Thanisandra belt. ROI, layout, buyer...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/assetz-palmscape-vs-sattva-aeropolis-devanahalli/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Assetz Palmscape vs Sattva Aeropolis: Which Fits You?</h4>
+              <p>A side-by-side comparison of Assetz Palmscape (villa plots) and Sattva Aeropolis (apartments) in Devanahalli. ROI, design, location and buyer profile...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="faq">
+      <div class="hub-container">
+        <p class="hub-section-label">Common Questions</p>
+        <h2 class="hub-section-title" id="faq" style="text-align:center;">Sattva Group Projects: FAQ</h2>
+        <br>
+        <div class="faq-list">
+          <div class="faq-item">
+            <p class="faq-question">Is Sattva Group the same as Salarpuria Sattva?</p>
+            <p class="faq-answer">Yes. Sattva Group is the current name of the Bengaluru developer that began in 1986 as Salarpuria Sattva.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Which Sattva projects are near Bangalore Airport?</p>
+            <p class="faq-answer"><a href="/projects/sattva-aeropolis/">Sattva Aeropolis</a>, <a href="/projects/park-cubix/">Sattva Park Cubix</a>, <a href="/projects/sattva-city/">Sattva City</a>, <a href="/projects/vasanta-skye/">Sattva Vasanta Skye</a> and <a href="/projects/vasanta-cove/">Sattva Vasanta Cove</a> are all on the Devanahalli airport corridor.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Which Sattva project has the lowest entry price?</p>
+            <p class="faq-answer">Among the projects we cover, <a href="/projects/sattva-lumina/">Sattva Lumina</a> in Yelahanka lists homes from ₹38 Lakh, and Phase 1 resales at <a href="/projects/park-cubix/">Sattva Park Cubix</a> start from about ₹34 Lakh.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Does Sattva sell plots?</p>
+            <p class="faq-answer">Yes. <a href="/projects/sattva-ekatra/">Sattva Ekatra</a> off Doddaballapur Main Road, <a href="/projects/sattva-green-groves/">Sattva Green Groves</a> in Nelamangala and <a href="/projects/sattva-kaveri-siri/">Sattva Kaveri Siri</a> in Mandya are plotted developments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Book consultation">
+      <h2>Comparing Sattva Projects?</h2>
+      <p>We can line up the Sattva options that fit your budget side by side, with RERA phase details checked for each one.</p>
+      <a href="/contact/">Book a Free Consultation</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a><a href="/projects/">Projects</a><a href="/developers/">Developers</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Sattva Projects</h4><a href="/projects/sattva-aeropolis/">Sattva Aeropolis</a><a href="/projects/park-cubix/">Sattva Park Cubix</a><a href="/projects/sattva-city/">Sattva City</a><a href="/projects/vasanta-skye/">Sattva Vasanta Skye</a><a href="/projects/vasanta-cove/">Sattva Vasanta Cove</a><a href="/projects/sattva-lumina/">Sattva Lumina</a><a href="/projects/sattva-la-vita/">Sattva La Vita</a></div>
+        <div class="footer-col"><h4>Sattva Research</h4><a href="/blog/sattva-lumina-chatgpt-ai-search-property-discovery-2026/">Sattva Lumina on ChatGPT Ads</a><a href="/blog/sattva-jigani-amritya-review/">Sattva Jigani (Amritya) Review 2026</a><a href="/blog/sattva-aeropolis-review/">Sattva Aeropolis Review</a><a href="/blog/sattva-park-cubix-review/">Sattva Park Cubix Review 2026</a><a href="/blog/sattva-city-doddajala-review/">Sattva City Doddajala Review</a><a href="/blog/sattva-aangane-vs-sattva-songbird-old-madras-road/">Sattva Aangane vs. Sattva Songbird</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luxurahabitat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Developers",
+          "item": "https://luxurahabitat.com/developers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sattva Group",
+          "item": "https://luxurahabitat.com/developers/sattva/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Sattva Group Projects in Bangalore",
+      "description": "All Sattva Group (Salarpuria Sattva) projects we cover: Aeropolis, Park Cubix, Sattva City, Vasanta Skye, Lumina, La Vita, Songbird, Ekatra plots and more, with reviews.",
+      "url": "https://luxurahabitat.com/developers/sattva/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Luxura Habitat",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Sattva Group Projects We Cover",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Sattva Aeropolis",
+          "url": "https://luxurahabitat.com/projects/sattva-aeropolis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sattva Park Cubix",
+          "url": "https://luxurahabitat.com/projects/park-cubix/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sattva City",
+          "url": "https://luxurahabitat.com/projects/sattva-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Sattva Vasanta Skye",
+          "url": "https://luxurahabitat.com/projects/vasanta-skye/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Sattva Vasanta Cove",
+          "url": "https://luxurahabitat.com/projects/vasanta-cove/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Sattva Lumina",
+          "url": "https://luxurahabitat.com/projects/sattva-lumina/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Sattva La Vita",
+          "url": "https://luxurahabitat.com/projects/sattva-la-vita/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Sattva Songbird",
+          "url": "https://luxurahabitat.com/projects/sattva-songbird/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Sattva Aangane",
+          "url": "https://luxurahabitat.com/projects/sattva-aangane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Sattva Forest Ridge",
+          "url": "https://luxurahabitat.com/projects/sattva-forest-ridge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Sattva Jigani (Amritya)",
+          "url": "https://luxurahabitat.com/projects/sattva-jigani/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Sattva Ekatra",
+          "url": "https://luxurahabitat.com/projects/sattva-ekatra/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Sattva Green Groves",
+          "url": "https://luxurahabitat.com/projects/sattva-green-groves/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Sattva Kaveri Siri",
+          "url": "https://luxurahabitat.com/projects/sattva-kaveri-siri/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Sattva Group the same as Salarpuria Sattva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sattva Group is the current name of the Bengaluru developer that began in 1986 as Salarpuria Sattva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Sattva projects are near Bangalore Airport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sattva Aeropolis, Sattva Park Cubix, Sattva City, Sattva Vasanta Skye and Sattva Vasanta Cove are all on the Devanahalli airport corridor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Sattva project has the lowest entry price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Among the projects we cover, Sattva Lumina in Yelahanka lists homes from ₹38 Lakh, and Phase 1 resales at Sattva Park Cubix start from about ₹34 Lakh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Sattva sell plots?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sattva Ekatra off Doddaballapur Main Road, Sattva Green Groves in Nelamangala and Sattva Kaveri Siri in Mandya are plotted developments."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</body>
+</html>

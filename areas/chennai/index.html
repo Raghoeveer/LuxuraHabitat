@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection — this happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Chennai Real Estate Guide 2026: OMR & West Chennai | Luxura Habitat</title>
+  <meta name="description" content="Verified Chennai projects on OMR, West Chennai and GST Road: Godrej Azure, Sobha Wisteria, Radiance Edgewood, Shriram launches and plots, with RERA notes and research.">
+  <link rel="canonical" href="https://luxurahabitat.com/areas/chennai/">
+  <meta property="og:title" content="Chennai Real Estate Guide 2026: OMR &amp; West Chennai | Luxura Habitat">
+  <meta property="og:description" content="Verified Chennai projects on OMR, West Chennai and GST Road: Godrej Azure, Sobha Wisteria, Radiance Edgewood, Shriram launches and plots, with RERA notes and research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurahabitat.com/areas/chennai/">
+  <meta property="og:image" content="https://luxurahabitat.com/images/projects/godrej-azure/godrej-azure-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    :root{--hub-green:#1e3a2f;--hub-copper:#c4a574;--hub-muted:#666;--hub-bg:#faf8f5;--hub-white:#fff;--hub-border:rgba(0,0,0,0.08);}
+    .hub-hero{position:relative;min-height:580px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(0,0,0,0.22) 0%,rgba(0,0,0,0.75) 100%),url('/images/projects/godrej-azure/godrej-azure-hero.webp') center/cover no-repeat;color:#fff;padding:80px 24px 60px;}
+    .hub-hero-inner{max-width:900px;margin:0 auto;width:100%;}
+    .breadcrumb-white{font-size:.85rem;margin-bottom:20px;color:rgba(255,255,255,.75);}
+    .breadcrumb-white a{color:#fff;text-decoration:none;}
+    .hub-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;margin-bottom:18px;font-weight:800;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6);}
+    .hub-hero p{font-size:1.1rem;line-height:1.7;max-width:700px;color:rgba(255,255,255,.9);margin-bottom:32px;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
+    .hero-stat{border-left:3px solid var(--hub-copper);padding-left:14px;}
+    .hero-stat strong{display:block;font-size:1.6rem;font-family:'Playfair Display',serif;color:var(--hub-copper);}
+    .hero-stat span{font-size:.85rem;color:rgba(255,255,255,.75);}
+    .hub-section{padding:80px 24px;}
+    .hub-section--alt{background:var(--hub-bg);}
+    .hub-container{max-width:1140px;margin:0 auto;}
+    .hub-section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--hub-copper);margin-bottom:10px;}
+    .hub-section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--hub-green);margin-bottom:16px;line-height:1.2;}
+    .hub-section-intro{font-size:1.05rem;color:var(--hub-muted);line-height:1.75;max-width:750px;margin-bottom:52px;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .pillar-card{background:var(--hub-white);border-radius:14px;padding:28px;border:1px solid var(--hub-border);box-shadow:0 2px 16px rgba(0,0,0,.04);}
+    .pillar-icon{font-size:2rem;margin-bottom:14px;display:block;}
+    .pillar-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hub-green);margin-bottom:10px;}
+    .pillar-card p{font-size:.95rem;color:var(--hub-muted);line-height:1.7;}
+    .prose-two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .prose-block p{font-size:1rem;color:#444;line-height:1.8;margin-bottom:18px;}
+    .prose-block h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--hub-green);margin-bottom:12px;}
+    .data-table{width:100%;border-collapse:collapse;font-size:.9rem;border-radius:10px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);}
+    .data-table th{background:var(--hub-green);color:#fff;padding:13px 16px;text-align:left;font-weight:600;}
+    .data-table td{padding:12px 16px;border-bottom:1px solid var(--hub-border);color:#444;}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:#f7f5f2;}
+    .price-up{color:#2e7d32;font-weight:700;}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
+    .project-hub-card{background:var(--hub-white);border-radius:16px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 4px 20px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .project-hub-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(0,0,0,.1);}
+    .project-hub-card img{width:100%;height:200px;object-fit:cover;}
+    .project-hub-card-body{padding:20px 24px;flex-grow:1;display:flex;flex-direction:column;}
+    .project-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--hub-copper);color:#fff;display:inline-block;padding:3px 8px;border-radius:4px;margin-bottom:8px;width:fit-content;}
+    .project-hub-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--hub-green);margin-bottom:4px;}
+    .project-hub-card .project-sub{font-size:.82rem;color:var(--hub-muted);margin-bottom:10px;}
+    .project-specs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+    .project-spec-item{font-size:.78rem;color:#555;background:var(--hub-bg);padding:4px 10px;border-radius:20px;border:1px solid var(--hub-border);}
+    .card-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--hub-copper);font-size:.9rem;text-decoration:none;}
+    .blogs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .blog-hub-card{background:var(--hub-white);border-radius:10px;overflow:hidden;border:1px solid var(--hub-border);box-shadow:0 2px 10px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+    .blog-hub-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.09);}
+    .blog-hub-card-body{padding:18px;flex-grow:1;display:flex;flex-direction:column;}
+    .blog-hub-card-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--hub-copper);margin-bottom:6px;}
+    .blog-hub-card h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--hub-green);line-height:1.35;margin-bottom:8px;}
+    .blog-hub-card p{font-size:.82rem;color:var(--hub-muted);line-height:1.55;flex-grow:1;}
+    .read-link{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--hub-copper);text-decoration:none;display:inline-flex;align-items:center;gap:4px;}
+    .faq-list{max-width:760px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid var(--hub-border);padding:24px 0;}
+    .faq-item:first-child{border-top:1px solid var(--hub-border);}
+    .faq-question{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--hub-green);margin-bottom:10px;font-weight:700;}
+    .faq-answer{font-size:.95rem;color:#555;line-height:1.75;}
+    .faq-answer a{color:var(--hub-copper);font-weight:600;}
+    .cta-band{background:linear-gradient(135deg,var(--hub-green) 0%,#2d5240 100%);padding:72px 24px;text-align:center;color:#fff;}
+    .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:16px;color:#fff;}
+    .cta-band p{font-size:1.05rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;}
+    .cta-band a{display:inline-block;background:var(--hub-copper);color:#fff;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,opacity .2s;}
+    .cta-band a:hover{transform:translateY(-2px);opacity:.9;}
+    @media(max-width:900px){.pillars-grid,.blogs-grid{grid-template-columns:1fr 1fr;}.projects-grid{grid-template-columns:1fr;}.prose-two-col{grid-template-columns:1fr;gap:32px;}}
+    @media(max-width:600px){.pillars-grid,.blogs-grid{grid-template-columns:1fr;}.hero-stats{gap:20px;}}
+
+    /* ── EXPLORE CLUSTER SECTION ── */
+    .explore-cluster { padding: 64px 24px; background: #faf8f5; }
+    .explore-cluster .hub-container { max-width: 1100px; margin: 0 auto; }
+    .explore-cluster-header { text-align: center; margin-bottom: 48px; }
+    .explore-cluster-header .hub-section-label { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hub-copper, #c4a574); margin-bottom: 10px; }
+    .explore-cluster-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--hub-green, #1e3a2f); margin-bottom: 12px; }
+    .explore-cluster-header p { font-size: 1.05rem; color: var(--hub-muted, #666); max-width: 620px; margin: 0 auto; }
+
+    .explore-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 768px) { .explore-cols { grid-template-columns: 1fr; gap: 32px; } }
+
+    .explore-col-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hub-green, #1e3a2f); font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--hub-copper, #c4a574); }
+
+    .explore-article-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-article-item { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-article-item:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-article-icon { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-article-text { min-width: 0; }
+    .explore-article-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-article-title { font-size: 0.9rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.35; }
+
+    .explore-project-list { display: flex; flex-direction: column; gap: 14px; }
+    .explore-project-card { display: flex; gap: 14px; text-decoration: none; color: inherit; background: #fff; border-radius: 10px; padding: 14px; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .explore-project-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.09); }
+    .explore-project-thumb { width: 72px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .explore-project-body { min-width: 0; }
+    .explore-project-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hub-copper, #c4a574); margin-bottom: 3px; display: block; }
+    .explore-project-name { font-size: 0.92rem; font-weight: 700; color: var(--hub-green, #1e3a2f); line-height: 1.3; margin-bottom: 2px; }
+    .explore-project-detail { font-size: 0.78rem; color: var(--hub-muted, #666); }
+
+    .explore-footer { margin-top: 36px; text-align: center; }
+    .explore-footer a { display: inline-flex; align-items: center; gap: 6px; background: var(--hub-green, #1e3a2f); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s ease; }
+    .explore-footer a:hover { opacity: 0.88; }
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hub-hero" aria-label="Chennai Real Estate Guide 2026">
+      <div class="hub-hero-inner">
+        <nav class="breadcrumb-white" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href="/areas/">Areas</a> / <span>Chennai</span>
+        </nav>
+        <h1>Chennai Real Estate Guide 2026:<br>OMR, West Chennai &amp; GST Road</h1>
+        <p>Every Chennai project we represent, grouped by corridor, with the RERA status, pricing and research for each one in a single place.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>9</strong><span>Verified Chennai projects</span></div>
+          <div class="hero-stat"><strong>3</strong><span>Corridors covered</span></div>
+          <div class="hero-stat"><strong>Plots to Villas</strong><span>Product range</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="overview">
+      <div class="hub-container">
+        <p class="hub-section-label">Where We Work</p>
+        <h2 class="hub-section-title" id="overview">Chennai's Three Buying Corridors</h2>
+        <p class="hub-section-intro">Our Chennai listings fall into three distinct markets. Each one suits a different buyer, so it helps to pick the corridor first and the project second.</p>
+        <div class="pillars-grid">
+          <div class="pillar-card"><span class="pillar-icon">🌊</span><h3>OMR (IT Corridor)</h3><p>Sea-view apartments at <a href="/projects/chennai/godrej-azure/">Godrej Azure</a> in Padur, the pre-launch <a href="/projects/chennai/sobha-wisteria/">Sobha Wisteria</a> in Egattur, gated villas at <a href="/projects/chennai/radiance-edgewood/">Radiance Edgewood</a> in Navalur, and <a href="/projects/chennai/godrej-thiruporur/">Godrej Plots Thiruporur</a> next to Wonderla.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🏙️</span><h3>West Chennai</h3><p><a href="/projects/chennai/shriram-codename-pudhiya-chennai/">Shriram Codename Pudhiya Chennai</a> in Kuthambakkam, <a href="/projects/chennai/shriram-122-west/">Shriram 122 West</a> in Mangadu, <a href="/projects/chennai/shriram-kinglife-koyambedu/">Shriram Kinglife</a> in Koyambedu, and DTCP villa plots at <a href="/projects/chennai/shriram-codename-10x/">Shriram Codename 10X</a> off the Chennai-Bengaluru Highway.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🛤️</span><h3>South Chennai (GST Road)</h3><p><a href="/projects/chennai/shriram-shankari/">Shriram Shankari</a> offers 1 and 2 BHK apartments in Guduvanchery, one of the most affordable entry points among our Chennai listings.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">📜</span><h3>Check TNRERA Yourself</h3><p>RERA registration does not settle title. Read our notes on the <a href="/blog/madras-hc-tnrera-title-dispute-jurisdiction-2026/">Madras High Court TNRERA ruling</a> and <a href="/blog/tnrera-advertising-penalty-rules-2026-chennai-homebuyers/">TNRERA ad penalty rules</a> before you book.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🚇</span><h3>Metro Phase 2</h3><p>Chennai Metro Phase 2 is reshaping West Chennai access. See our coverage of the <a href="/blog/chennai-metro-phase-2-poonamallee-vadapalani-launch/">Poonamallee-Vadapalani opening</a>.</p></div>
+          <div class="pillar-card"><span class="pillar-icon">🗺️</span><h3>Planning Changes</h3><p>CMDA's approval powers and master plan scope are both changing. See <a href="/blog/chennai-cmda-high-rise-approval-power-2026/">CMDA's new high-rise power</a> and the <a href="/blog/chennai-third-master-plan-cma-area-debate-2026/">Third Master Plan debate</a>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="projects">
+      <div class="hub-container">
+        <p class="hub-section-label">Verified Projects</p>
+        <h2 class="hub-section-title" id="projects">Verified Projects in Chennai</h2>
+        <p class="hub-section-intro">Apartments, villas and plots from Godrej, Sobha, Shriram and Radiance. Prices marked * are developer or launch prices and should be confirmed on a current cost sheet.</p>
+        <div class="projects-grid">
+          <a href="/projects/chennai/godrej-azure/" class="project-hub-card" aria-label="Godrej Azure">
+            <img src="/images/projects/godrej-azure/godrej-azure-hero.webp" alt="Godrej Azure" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Sea-View Apartments</span>
+              <h3>Godrej Azure</h3>
+              <p class="project-sub">Padur, OMR &middot; Godrej Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">2, 3 &amp; 4 BHK</span>
+                <span class="project-spec-item">8.8 Acres</span>
+                <span class="project-spec-item">From ₹78.49 L*</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Sea-view 2, 3 and 4 BHK apartments on 8.8 acres with 60%+ open space, TNRERA/35/BLG/0354/2025.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/sobha-wisteria/" class="project-hub-card" aria-label="Sobha Wisteria">
+            <img src="/images/projects/sobha-wisteria/sobha-wisteria-hero.webp" alt="Sobha Wisteria" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Pre-Launch Apartments</span>
+              <h3>Sobha Wisteria</h3>
+              <p class="project-sub">Egattur, OMR &middot; Sobha</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK</span>
+                <span class="project-spec-item">From ₹1.69 Cr*</span>
+                <span class="project-spec-item">Possession Dec 2029</span>
+                <span class="project-spec-item">RERA Pending</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Also called Sobha OMR: pre-launch 3 and 4 BHK homes in Egattur on the OMR corridor.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/radiance-edgewood/" class="project-hub-card" aria-label="Radiance Edgewood">
+            <img src="/images/projects/radiance-edgewood/radiance-edgewood-elevation-1.webp" alt="Radiance Edgewood" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Gated Villas</span>
+              <h3>Radiance Edgewood</h3>
+              <p class="project-sub">Navalur, OMR &middot; Radiance Realty</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK Villas</span>
+                <span class="project-spec-item">83 Villas</span>
+                <span class="project-spec-item">From ₹2.27 Cr</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">83 gated villas on Thalambur Road, Navalur, close to SIPCOT Siruseri.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/godrej-thiruporur/" class="project-hub-card" aria-label="Godrej Plots Thiruporur">
+            <img src="/images/projects/godrej-thiruporur/godrej-thiruporur-hero.webp" alt="Godrej Plots Thiruporur" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Plotted Development</span>
+              <h3>Godrej Plots Thiruporur</h3>
+              <p class="project-sub">Thiruporur, next to Wonderla &middot; Godrej Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">950+ Plots</span>
+                <span class="project-spec-item">750-2,400 sq ft</span>
+                <span class="project-spec-item">47 Acres</span>
+                <span class="project-spec-item">From ₹36.99 L</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">950+ plots on 47 acres next to Wonderla, off OMR. Pre-launch, with EOI opening soon.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/shriram-codename-pudhiya-chennai/" class="project-hub-card" aria-label="Shriram Codename Pudhiya Chennai">
+            <img src="/images/projects/shriram-codename-pudhiya-chennai/shriram-codename-pudhiya-chennai-hero.webp" alt="Shriram Codename Pudhiya Chennai" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Township Apartments</span>
+              <h3>Shriram Codename Pudhiya Chennai</h3>
+              <p class="project-sub">Kuthambakkam, West Chennai &middot; Shriram Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1-3 BHK</span>
+                <span class="project-spec-item">1,053 Homes</span>
+                <span class="project-spec-item">From ₹38 L*</span>
+                <span class="project-spec-item">Possession July 2028</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1,053 homes across 7 towers on 8.9 acres, TNRERA TN/02/Building/0319/2023.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/shriram-122-west/" class="project-hub-card" aria-label="Shriram 122 West">
+            <img src="/images/projects/shriram-122-west/shriram-122-west-hero.webp" alt="Shriram 122 West" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Apartments</span>
+              <h3>Shriram 122 West</h3>
+              <p class="project-sub">Mangadu, West Chennai &middot; Shriram Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">2, 2.5 &amp; 3 BHK</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">2, 2.5 and 3 BHK apartments in West Chennai, TNRERA TN/29/BUILDING/0459/2023.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/shriram-kinglife-koyambedu/" class="project-hub-card" aria-label="Shriram Kinglife">
+            <img src="/images/projects/shriram-kinglife-koyambedu/shriram-kinglife-koyambedu-hero.webp" alt="Shriram Kinglife" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Premium Apartments</span>
+              <h3>Shriram Kinglife</h3>
+              <p class="project-sub">Koyambedu &middot; Shriram Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">3 &amp; 4 BHK</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">Premium 3 and 4 BHK apartments off Poonamallee High Road in Koyambedu.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/shriram-codename-10x/" class="project-hub-card" aria-label="Shriram Codename 10X">
+            <img src="/images/projects/shriram-codename-10x/shriram-codename-10x-banner.webp" alt="Shriram Codename 10X" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Villa Plots</span>
+              <h3>Shriram Codename 10X</h3>
+              <p class="project-sub">Valarpuram &middot; Shriram Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">DTCP-Approved Plots</span>
+                <span class="project-spec-item">Off Chennai-Bengaluru Highway</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">DTCP-approved villa plots at Valarpuram, off the Chennai-Bengaluru Highway.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+          <a href="/projects/chennai/shriram-shankari/" class="project-hub-card" aria-label="Shriram Shankari">
+            <img src="/images/projects/shriram-shankari/shriram-shankari-hero.webp" alt="Shriram Shankari" loading="lazy">
+            <div class="project-hub-card-body">
+              <span class="project-tag">Apartments</span>
+              <h3>Shriram Shankari</h3>
+              <p class="project-sub">Guduvanchery, South Chennai &middot; Shriram Properties</p>
+              <div class="project-specs">
+                <span class="project-spec-item">1 &amp; 2 BHK</span>
+                <span class="project-spec-item">RERA Registered</span>
+              </div>
+              <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:16px;">1 and 2 BHK apartments in South Chennai, TNRERA TN/01/BUILDING/0418/2021.</p>
+              <span class="card-cta">View Full Details →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="research">
+      <div class="hub-container">
+        <p class="hub-section-label">Research &amp; Reviews</p>
+        <h2 class="hub-section-title" id="research">Chennai Research, Reviews &amp; News</h2>
+        <p class="hub-section-intro">Project reviews, locality guides and the policy news that affects Chennai buyers, newest first.</p>
+        <div class="blogs-grid">
+          <a href="/blog/sobha-wisteria-q2-fy27-presales-record-egattur/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Sobha&#x27;s H1 FY27 Presales Hit an All-Time High: What It Means for Sobha Wisteria Buyers</h4>
+              <p>Sobha Limited&#x27;s H1 FY27 presales touched an all-time high of Rs 5,860 crore, up 47% year on year, with Q2 FY27 presales of Rs 2,210 crore. What the...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-third-master-plan-cma-area-debate-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai&#x27;s Third Master Plan: Why the 1,189 vs 5,904 Sq Km Debate Matters</h4>
+              <p>Reports from October 10, 2026 say CMDA&#x27;s Third Master Plan may continue covering only Chennai&#x27;s original 1,189 sq km core, leaving the 5,904 sq km...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tnrera-layout-registration-scrutiny-2026-plot-buyers/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>TNRERA Tightens Layout Scrutiny: What Plot Buyers Must Check</h4>
+              <p>TNRERA is tightening scrutiny of layout-registration applications in Tamil Nadu, requiring geo-tagged photos and drone images of completed...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/pallikaranai-marsh-buffer-zone-chennai-omr-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Pallikaranai Marsh Buffer Zone Proposal: What It Means for OMR Buyers</h4>
+              <p>Tamil Nadu&#x27;s State Wetlands Authority has proposed shrinking the Pallikaranai Marsh buffer zone by about 96%, a proposal now before the Madras High...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-corporation-property-tax-collection-record-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai Corporation&#x27;s Record ₹1,436 Cr Tax Haul, and the 6% Hike Ahead</h4>
+              <p>Greater Chennai Corporation collected a record ₹1,436.75 crore in property and professional tax in the first half of FY 2026-27. Here&#x27;s what drove...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/egattur-omr-chennai-flats-buying-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Is Egattur, OMR a Good Place to Buy a Flat?</h4>
+              <p>Egattur, OMR buying guide: SIPCOT commute, metro plans, schools, hospitals, flat prices, rental demand, flooding and the downsides to check before...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sobha-wisteria-egattur-omr-price-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Sobha Wisteria Review: Price, Sizes &amp; RERA Status</h4>
+              <p>Sobha Wisteria (Sobha OMR), Egattur review: 3 &amp; 4 BHK prices from ₹1.69 Cr, price per sq ft, RERA status, possession and where listings disagree.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-cmda-high-rise-approval-power-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>CMDA&#x27;s New High-Rise Power: 17 Towers Cleared in a Month</h4>
+              <p>A June 2026 government order let CMDA directly approve Chennai high-rise buildings without ministerial clearance. It has already cleared around 17...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/godrej-wonderla-plots-thiruporur-price-plot-sizes-review/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Godrej Wonderla Plots Thiruporur: Price, Sizes &amp; EOI</h4>
+              <p>Independent review of Godrej Wonderla plots, Thiruporur: 950+ plots on 47 acres next to Wonderla, prices from ₹36.99 Lakh, plot sizes, EOI, RERA and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/plots-in-thiruporur-near-wonderla-omr-investment-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Plots in Thiruporur Near Wonderla: OMR Investment Guide</h4>
+              <p>Is Thiruporur, OMR a good place to buy a plot in 2026? Land prices, Wonderla&#x27;s impact, metro and road plans, branded vs unbranded plots and a buying...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-metro-phase-2-fares-tbm-kilpauk-breakthrough-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai Metro Phase 2: Fares Fixed at Rs 10-40, Line 3 Hits Kilpauk Milestone</h4>
+              <p>Chennai Metro has fixed fares between Rs 10 and 40 for the Poonamallee-Vadapalani stretch ahead of its October 11 launch, while TBM Kaveri has broken...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tamil-nadu-cmda-speed-single-window-clearance-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Tamil Nadu&#x27;s New CMDA &#x27;SPEED&#x27; System: Faster Approvals for Chennai Housing</h4>
+              <p>Tamil Nadu has unveiled CMDA&#x27;s AI-powered SPEED clearance system, cutting multi-storey building approval time from 3+ months to about 45 days. What...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/bengaluru-chennai-housing-sales-q3-2026-propequity/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Q3 2026 Housing Sales: Bengaluru Holds, Chennai Slips 17%</h4>
+              <p>PropEquity&#x27;s Q3 2026 data shows India&#x27;s top 9 cities&#x27; housing sales fell 6%, but Bengaluru edged up 1% while Chennai sales dropped 17%. What the...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-metro-phase-2-poonamallee-vadapalani-launch/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai Metro Phase 2: Poonamallee-Vadapalani Opens Oct 11</h4>
+              <p>PM Modi is set to inaugurate Chennai Metro Phase 2&#x27;s first corridor, Poonamallee to Vadapalani, on 11 October 2026. What this means for property...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-corporation-property-tax-dues-september-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai Property Tax: GCC&#x27;s Sept 30, 2026 Deadline</h4>
+              <p>Greater Chennai Corporation says 6.03 lakh property owners must clear Rs 847.80 crore in current and pending property tax by September 30, 2026....</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/madras-hc-tnrera-title-dispute-jurisdiction-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Madras HC: TNRERA Can&#x27;t Rule on Title Disputes. What Chennai Buyers Must Know</h4>
+              <p>The Madras High Court has ruled TNRERA cannot adjudicate disputed questions of land title while registering a project. Here&#x27;s what that means for...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tvs-emerald-luxor-rera-address-lesson-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>TVS Emerald Luxor&#x27;s RERA Address Mismatch: A Lesson for Chennai Buyers</h4>
+              <p>TNRERA has flagged an address discrepancy between TVS Emerald Luxor&#x27;s marketing (Anna Nagar) and its RERA filing (Padi). Here&#x27;s why this matters and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-bengaluru-expressway-delay-2028-property-impact/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai-Bengaluru Expressway Pushed to 2028: What the Delay Means</h4>
+              <p>NHAI has floated a fresh Rs 633 crore tender for the stalled Kanchipuram-Arakkonam stretch, pushing the Chennai-Bengaluru Expressway&#x27;s full opening...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tnrera-advertising-penalty-rules-2026-chennai-homebuyers/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>TNRERA&#x27;s New Ad Penalty Rules: What Chennai Homebuyers Should Verify</h4>
+              <p>TNRERA&#x27;s circular effective July 1, 2026 introduces penalties up to Rs 5 lakh for misleading real estate ads, banning vague disclaimers and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tamil-nadu-star-3-0-paperless-mortgage-registration-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Tamil Nadu STAR 3.0: Paperless Mortgage Registration From Sept 2026</h4>
+              <p>Tamil Nadu&#x27;s STAR 3.0 system moves bank and NBFC home loan mortgage deeds to presence-less digital registration from September 15, 2026. Here&#x27;s what...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/tnrera-project-completion-extension-2026-what-it-means-for-buyers/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>TNRERA&#x27;s 4-Month Project Extension 2026: What It Means for Buyers</h4>
+              <p>TNRERA has granted registered Tamil Nadu projects a 4-month completion extension citing West Asia conflict-related disruption. Here&#x27;s what it means...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-apartment-sales-jll-2026-omr-growth-report/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Chennai Apartment Sales Up 27% in H1 2026: What&#x27;s Driving It</h4>
+              <p>Chennai apartment sales rose 27% YoY to 8,587 units in H1 2026, per JLL data, with prices up 13%. Here&#x27;s what&#x27;s behind the growth and what it means...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/prestige-estates-nomura-fy27-launch-pipeline-bengaluru-chennai/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Developer News</p>
+              <h4>Prestige Estates&#x27; ₹5,000 Cr Q2 FY27 Launch Pipeline: What It Signals</h4>
+              <p>Nomura expects Prestige Estates to launch around Rs 5,000 crore worth of projects in Q2 FY27 across Bengaluru and Chennai. Here&#x27;s what a top...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/chennai-property-registration-valuation-rules-2026/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">News &amp; Policy</p>
+              <h4>Tamil Nadu&#x27;s New Property Valuation Rules 2026: Chennai Buyer&#x27;s Guide</h4>
+              <p>Tamil Nadu&#x27;s Registration Department has tiered new valuation and field-inspection rules for land-cum-building registrations by value. Here&#x27;s what...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/padur-omr-sea-view-apartments-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Padur OMR: Sea-View Apartments Buying Guide</h4>
+              <p>A buyer&#x27;s guide to Padur, OMR: connectivity, IT-corridor employment, sea-view apartment considerations and how this stretch compares to the rest of...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/godrej-azure-padur-omr-price-rera-floor-plans/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Godrej Azure Padur: Price &amp; RERA Review</h4>
+              <p>Independent review of Godrej Azure, Padur OMR: verified 2, 3 &amp; 4 BHK sea-view pricing, RERA status, floor plans and possession timeline.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-codename-pudhiya-chennai-kuthambakkam-price-rera-floor-plans/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Shriram Codename Pudhiya Chennai: Price &amp; RERA Review</h4>
+              <p>Independent review of Shriram Codename Pudhiya Chennai, Kuthambakkam: verified 1, 2 &amp; 3 BHK pricing, RERA status, floor plans and possession timeline.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/kuthambakkam-tirumazhisai-chennai-real-estate-investment-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Kuthambakkam &amp; Tirumazhisai: Chennai Investment Guide</h4>
+              <p>Is Kuthambakkam or Tirumazhisai, West Chennai a good place to invest? Parandur airport timeline, industrial corridor growth, pricing and who this...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/koyambedu-chennai-real-estate-investment-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Koyambedu, Chennai: Real Estate Investment Guide</h4>
+              <p>Is Koyambedu, Chennai a good place to invest in an apartment? Metro connectivity, wholesale market proximity, pricing trends and who this...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-kinglife-koyambedu-price-rera-floor-plans/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Shriram Kinglife Koyambedu: Price &amp; RERA</h4>
+              <p>Independent review of Shriram Kinglife Koyambedu: verified 3 &amp; 4 BHK pricing, RERA status, the floor plan situation, possession timeline and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/sriperumbudur-oragadam-plot-investment-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Sriperumbudur &amp; Oragadam Plot Investment Guide</h4>
+              <p>Why land near the Sriperumbudur and Oragadam industrial corridor holds value: the manufacturing base, NH4 connectivity, and what to check before...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-shankari-guduvanchery-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Shriram Shankari, Kilambakkam-Guduvanchery: Price &amp; RERA</h4>
+              <p>Independent review of Shriram Shankari, near Kilambakkam Bus Terminus, Guduvanchery: verified 1 &amp; 2 BHK pricing, RERA status and possession timeline.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-122-west-mangadu-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Shriram 122 West: Price, Layout &amp; RERA</h4>
+              <p>Independent review of Shriram 122 West, Mangadu: verified 2, 2.5 &amp; 3 BHK pricing, RERA status, the real floor plan situation, possession timeline and...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-shankari-phase-1-vs-phase-2-rera-price/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Comparison</p>
+              <h4>Shriram Shankari Phase 1 vs Phase 2 | RERA &amp; Price</h4>
+              <p>Shriram Shankari Phase 1 vs Phase 2 (Codename: The View) compared: two separate RERA numbers, configurations, pricing, and which one to research.</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/radiance-edgewood-navalur-price-layout-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Radiance Edgewood Navalur: Price, Layout &amp; RERA</h4>
+              <p>Radiance Edgewood Navalur: full breakdown of pricing, 3 &amp; 4 BHK villa layouts, TNRERA registration and amenities for this 83-villa OMR gated...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/omr-chennai-villa-investment-guide-rental-yield/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>OMR Chennai Villa Investment Guide &amp; Rental Yield</h4>
+              <p>Villas vs apartments on OMR Chennai: an investment guide covering rental yield, resale scarcity and holding periods, with Radiance Edgewood as a case...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/villas-in-navalur-omr-siruseri-commute-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Navalur to Siruseri Distance (5 Min) | OMR Villa Guide</h4>
+              <p>Navalur to Siruseri SIPCOT IT Park and TCS Siruseri is about 5 minutes. Commute guide with schools, hospitals and connectivity for villa buyers near...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/mangadu-porur-chennai-real-estate-investment-guide/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Area Guide</p>
+              <h4>Mangadu &amp; Porur, Chennai Investment Guide</h4>
+              <p>Mangadu &amp; Porur, West Chennai: connectivity, upcoming Metro access, employment hubs, schools and hospitals, and the investment case for this growing...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+          <a href="/blog/shriram-codename-10x-chennai-price-plot-sizes-rera/" class="blog-hub-card">
+            <div class="blog-hub-card-body">
+              <p class="blog-hub-card-cat">Project Review</p>
+              <h4>Shriram Codename 10X: Price, Plot Sizes &amp; RERA</h4>
+              <p>Shriram Codename 10X, Valarpuram: verified plot sizes, indicative pricing by tier, TNRERA and DTCP approval status, and what buying a plot really...</p>
+              <span class="read-link">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-section hub-section--alt" aria-labelledby="faq">
+      <div class="hub-container">
+        <p class="hub-section-label">Common Questions</p>
+        <h2 class="hub-section-title" id="faq" style="text-align:center;">Chennai Real Estate: FAQ</h2>
+        <br>
+        <div class="faq-list">
+          <div class="faq-item">
+            <p class="faq-question">Which Chennai projects does Luxura Habitat cover?</p>
+            <p class="faq-answer">We currently represent <a href="/projects/chennai/godrej-azure/">Godrej Azure</a>, <a href="/projects/chennai/sobha-wisteria/">Sobha Wisteria</a>, <a href="/projects/chennai/radiance-edgewood/">Radiance Edgewood</a>, <a href="/projects/chennai/godrej-thiruporur/">Godrej Plots Thiruporur</a>, <a href="/projects/chennai/shriram-codename-pudhiya-chennai/">Shriram Codename Pudhiya Chennai</a>, <a href="/projects/chennai/shriram-122-west/">Shriram 122 West</a>, <a href="/projects/chennai/shriram-kinglife-koyambedu/">Shriram Kinglife</a>, <a href="/projects/chennai/shriram-codename-10x/">Shriram Codename 10X</a> and <a href="/projects/chennai/shriram-shankari/">Shriram Shankari</a>.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Which Chennai projects are on OMR?</p>
+            <p class="faq-answer"><a href="/projects/chennai/godrej-azure/">Godrej Azure</a> (Padur), <a href="/projects/chennai/sobha-wisteria/">Sobha Wisteria</a> (Egattur), <a href="/projects/chennai/radiance-edgewood/">Radiance Edgewood</a> (Navalur) and <a href="/projects/chennai/godrej-thiruporur/">Godrej Plots Thiruporur</a> (Thiruporur, next to Wonderla).</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Are there plots among your Chennai listings?</p>
+            <p class="faq-answer">Yes. <a href="/projects/chennai/godrej-thiruporur/">Godrej Plots Thiruporur</a> has 950+ plots of 750-2,400 sq ft, and <a href="/projects/chennai/shriram-codename-10x/">Shriram Codename 10X</a> offers DTCP-approved villa plots at Valarpuram.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Does TNRERA registration guarantee clear title?</p>
+            <p class="faq-answer">No. The Madras High Court has ruled that TNRERA cannot decide disputed questions of land title, so an independent title check is still needed. See our <a href="/blog/madras-hc-tnrera-title-dispute-jurisdiction-2026/">explainer on the ruling</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Book consultation">
+      <h2>Buying in Chennai?</h2>
+      <p>Tell us your budget and commute, and we will shortlist the Chennai projects that actually fit, with the RERA paperwork checked.</p>
+      <a href="/contact/">Book a Free Consultation</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a><a href="/projects/">Projects</a><a href="/developers/">Developers</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Chennai Projects</h4><a href="/projects/chennai/godrej-azure/">Godrej Azure</a><a href="/projects/chennai/sobha-wisteria/">Sobha Wisteria</a><a href="/projects/chennai/radiance-edgewood/">Radiance Edgewood</a><a href="/projects/chennai/godrej-thiruporur/">Godrej Plots Thiruporur</a><a href="/projects/chennai/shriram-codename-pudhiya-chennai/">Shriram Codename Pudhiya Chennai</a><a href="/projects/chennai/shriram-122-west/">Shriram 122 West</a><a href="/projects/chennai/shriram-kinglife-koyambedu/">Shriram Kinglife</a></div>
+        <div class="footer-col"><h4>Chennai Research</h4><a href="/blog/sobha-wisteria-q2-fy27-presales-record-egattur/">Sobha&#x27;s H1 FY27 Presales Hit an All-Time High</a><a href="/blog/chennai-third-master-plan-cma-area-debate-2026/">Chennai&#x27;s Third Master Plan</a><a href="/blog/tnrera-layout-registration-scrutiny-2026-plot-buyers/">TNRERA Tightens Layout Scrutiny</a><a href="/blog/pallikaranai-marsh-buffer-zone-chennai-omr-2026/">Pallikaranai Marsh Buffer Zone Proposal</a><a href="/blog/chennai-corporation-property-tax-collection-record-2026/">Chennai Corporation&#x27;s Record ₹1,436 Cr Tax Haul, and the 6% Hike Ahead</a><a href="/blog/egattur-omr-chennai-flats-buying-guide/">Is Egattur, OMR a Good Place to Buy a Flat?</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luxurahabitat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas",
+          "item": "https://luxurahabitat.com/areas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Chennai",
+          "item": "https://luxurahabitat.com/areas/chennai/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Chennai Real Estate Guide 2026",
+      "description": "Verified Chennai projects on OMR, West Chennai and GST Road: Godrej Azure, Sobha Wisteria, Radiance Edgewood, Shriram launches and plots, with RERA notes and research.",
+      "url": "https://luxurahabitat.com/areas/chennai/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Luxura Habitat",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Verified Projects in Chennai",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Godrej Azure",
+          "url": "https://luxurahabitat.com/projects/chennai/godrej-azure/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sobha Wisteria",
+          "url": "https://luxurahabitat.com/projects/chennai/sobha-wisteria/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Radiance Edgewood",
+          "url": "https://luxurahabitat.com/projects/chennai/radiance-edgewood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Godrej Plots Thiruporur",
+          "url": "https://luxurahabitat.com/projects/chennai/godrej-thiruporur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Shriram Codename Pudhiya Chennai",
+          "url": "https://luxurahabitat.com/projects/chennai/shriram-codename-pudhiya-chennai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Shriram 122 West",
+          "url": "https://luxurahabitat.com/projects/chennai/shriram-122-west/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Shriram Kinglife",
+          "url": "https://luxurahabitat.com/projects/chennai/shriram-kinglife-koyambedu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Shriram Codename 10X",
+          "url": "https://luxurahabitat.com/projects/chennai/shriram-codename-10x/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Shriram Shankari",
+          "url": "https://luxurahabitat.com/projects/chennai/shriram-shankari/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which Chennai projects does Luxura Habitat cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We currently represent Godrej Azure, Sobha Wisteria, Radiance Edgewood, Godrej Plots Thiruporur, Shriram Codename Pudhiya Chennai, Shriram 122 West, Shriram Kinglife, Shriram Codename 10X and Shriram Shankari."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Chennai projects are on OMR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Godrej Azure (Padur), Sobha Wisteria (Egattur), Radiance Edgewood (Navalur) and Godrej Plots Thiruporur (Thiruporur, next to Wonderla)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there plots among your Chennai listings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Godrej Plots Thiruporur has 950+ plots of 750-2,400 sq ft, and Shriram Codename 10X offers DTCP-approved villa plots at Valarpuram."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TNRERA registration guarantee clear title?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Madras High Court has ruled that TNRERA cannot decide disputed questions of land title, so an independent title check is still needed. See our explainer on the ruling."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</body>
+</html>
