@@ -31,12 +31,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. EOI amounts, all-in cost sheet, stage-wise payment plan, EMI, site plan and specs.">
+    <meta name="description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. All-in cost, EOI, payment plan, EMI, site plan and launch status.">
     <meta name="keywords" content="Brigade Silvercrest, Brigade Silvercrest price, Brigade Silvercrest Kanakapura Road, Brigade Silvercrest price list, Brigade Silvercrest floor plan, Brigade Silvercrest cost sheet, Brigade Silvercrest payment plan, Brigade Silvercrest EMI, Brigade Silvercrest price per sq ft, Brigade Silvercrest RERA, Brigade Jeevan Sandhya, Brigade Jeevan Sandhya price, Brigade Jeevan Sandhya Kanakapura Road, Brigade Jeevan Sandhya Raghuvanahalli">
     <meta name="author" content="Luxura Habitat">
 
     <meta property="og:title" content="Brigade Silvercrest Price List, Cost Sheet &amp; Site Plan">
-    <meta property="og:description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. EOI amounts, all-in cost sheet, stage-wise payment plan, EMI, site plan and specs.">
+    <meta property="og:description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. All-in cost, EOI, payment plan, EMI, site plan and launch status.">
     <meta property="og:image" content="https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxurahabitat.com/projects/brigade-silvercrest/">
@@ -44,7 +44,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Brigade Silvercrest Price List, Cost Sheet &amp; Site Plan">
-    <meta name="twitter:description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. EOI amounts, all-in cost sheet, stage-wise payment plan, EMI, site plan and specs.">
+    <meta name="twitter:description" content="Brigade Silvercrest price list: 3 BHK &#8377;3.09 Cr, 3 BHK Premium &#8377;3.23 Cr, 4 BHK &#8377;4.26 Cr. All-in cost, EOI, payment plan, EMI, site plan and launch status.">
     <meta name="twitter:image" content="https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg">
 
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -664,6 +664,13 @@
         .proj-compare-link { font-size: 0.82rem; font-weight: 700; color: var(--accent-warm); }
 
         .prelaunch-notice { background: rgba(184, 137, 74, 0.12); border-left: 5px solid var(--accent-warm); border-radius: 10px; padding: 1rem 1.2rem; margin-top: 1.8rem; font-size: 0.92rem; color: var(--text-dark); line-height: 1.7; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+        .gallery-item { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 6px 18px rgba(2,6,23,0.1); aspect-ratio: 4 / 3; background: #fff; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,30,60,0.85); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
+        @media (max-width: 1024px) { .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         .amenity-photo-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; margin-bottom: 2.4rem; }
         .amenity-photo-card { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 6px 18px rgba(2,6,23,0.1); aspect-ratio: 3 / 4; }
         .amenity-photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
@@ -695,84 +702,282 @@
         @media (max-width: 640px) { .amenity-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .config-grid, .floor-grid { grid-template-columns: 1fr; } }
     </style>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "RealEstateListing",
+      "name": "Brigade Silvercrest",
+      "alternateName": "Brigade Jeevan Sandhya",
+      "description": "Brigade Silvercrest, a pre-launch Brigade Group project at Raghuvanahalli, Kanakapura Road: 3 BHK, 3 BHK Premium and 4 BHK homes of 2,010 to 2,685 Sq.Ft priced from ₹3.09 Cr to ₹4.26 Cr, RERA registration in process, indicative possession October 2031.",
+      "url": "https://luxurahabitat.com/projects/brigade-silvercrest/",
+      "image": "https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg"
+    },
+    {
+      "@type": "Residence",
+      "name": "Brigade Silvercrest",
+      "alternateName": "Brigade Jeevan Sandhya",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560062",
+        "addressCountry": "IN"
+      },
+      "accommodationCategory": "Residential Apartment"
+    },
+    {
+      "@type": "Organization",
+      "name": "Brigade Group",
+      "url": "https://www.brigadegroup.com/",
+      "logo": "https://luxurahabitat.com/images/projects/brigade-group-logo-png_seeklogo-22461.png",
+      "foundingDate": "1986"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "RealEstateListing",
-          "name": "Brigade Silvercrest",
-          "alternateName": "Brigade Jeevan Sandhya",
-          "description": "Brigade Silvercrest, a pre-launch Brigade Group project at Raghuvanahalli, Kanakapura Road: 3 BHK, 3 BHK Premium and 4 BHK homes of 2,010 to 2,685 Sq.Ft priced from ₹3.09 Cr to ₹4.26 Cr, RERA registration in process, indicative possession October 2031.",
-          "url": "https://luxurahabitat.com/projects/brigade-silvercrest/",
-          "image": "https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg"
+          "@type": "Question",
+          "name": "What is the Brigade Silvercrest price list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The indicative pre-launch price list is ₹3.09 Cr for the 2,010 Sq.Ft 3 BHK, ₹3.23 Cr for the 2,158 Sq.Ft 3 BHK Premium and ₹4.26 Cr for the 2,685 Sq.Ft 4 BHK. These are base prices before GST, stamp duty, registration and other charges, and may change at formal launch."
+          }
         },
         {
-          "@type": "Residence",
-          "name": "Brigade Silvercrest",
-          "alternateName": "Brigade Jeevan Sandhya",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli",
-            "addressLocality": "Bengaluru",
-            "addressRegion": "Karnataka",
-            "postalCode": "560062",
-            "addressCountry": "IN"
-          },
-          "accommodationCategory": "Residential Apartment"
+          "@type": "Question",
+          "name": "What is the price per sq.ft at Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the indicative base prices, the rate works out to about ₹15,370 per Sq.Ft for the 3 BHK, ₹14,970 for the 3 BHK Premium and ₹15,870 for the 4 BHK. Ask whether these are based on super built-up or carpet area, as the effective rate per usable Sq.Ft will be higher on carpet area."
+          }
         },
         {
-          "@type": "Organization",
-          "name": "Brigade Group",
-          "url": "https://luxurahabitat.com/projects/brigade-silvercrest/",
-          "logo": "https://luxurahabitat.com/images/projects/brigade-group-logo-png_seeklogo-22461.png"
+          "@type": "Question",
+          "name": "What is the all-inclusive cost of a 3 BHK at Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adding GST at 5%, stamp duty at about 5% and registration at 1% to the ₹3.09 Cr base price gives an estimated ₹3.43 Cr. Floor rise, car parking, clubhouse membership, maintenance deposit and legal fees come on top, so get a written all-inclusive cost sheet before booking."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {"@type": "Question", "name": "What is the Brigade Silvercrest price list?", "acceptedAnswer": {"@type": "Answer", "text": "The indicative pre-launch price list is ₹3.09 Cr for the 2,010 Sq.Ft 3 BHK, ₹3.23 Cr for the 2,158 Sq.Ft 3 BHK Premium and ₹4.26 Cr for the 2,685 Sq.Ft 4 BHK. These are base prices before GST, stamp duty, registration and other charges, and may change at formal launch."}},
-            {"@type": "Question", "name": "What is the price per sq.ft at Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "On the indicative base prices, the rate works out to about ₹15,370 per Sq.Ft for the 3 BHK, ₹14,970 for the 3 BHK Premium and ₹15,870 for the 4 BHK. Ask whether these are based on super built-up or carpet area, as the effective rate per usable Sq.Ft will be higher on carpet area."}},
-            {"@type": "Question", "name": "What is the all-inclusive cost of a 3 BHK at Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "Adding GST at 5%, stamp duty at about 5% and registration at 1% to the ₹3.09 Cr base price gives an estimated ₹3.43 Cr. Floor rise, car parking, clubhouse membership, maintenance deposit and legal fees come on top, so get a written all-inclusive cost sheet before booking."}},
-            {"@type": "Question", "name": "Which Brigade Silvercrest configuration offers the best value?", "acceptedAnswer": {"@type": "Answer", "text": "The 3 BHK Premium has the lowest rate per Sq.Ft, about ₹14,970. Upgrading from the 3 BHK adds about 148 Sq.Ft for roughly ₹14 lakh, a marginal cost near ₹9,500 per Sq.Ft, while moving up to the 4 BHK costs about ₹19,500 per extra Sq.Ft."}},
-            {"@type": "Question", "name": "What would the EMI be for a Brigade Silvercrest apartment?", "acceptedAnswer": {"@type": "Answer", "text": "As an illustration, an 80% loan at 8.5% over 20 years works out to about ₹2.15 lakh a month for the 3 BHK, ₹2.24 lakh for the 3 BHK Premium and ₹2.96 lakh for the 4 BHK. During construction you would typically pay only pre-EMI interest on the disbursed amount."}},
-            {"@type": "Question", "name": "How much do I need to pay at booking for Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "Listings quote an EOI token of ₹5 lakh for the 3 BHK, ₹6 lakh for the 3 BHK Premium and ₹7 lakh for the 4 BHK. The indicative plan then asks for 10% on booking (including the EOI) and 10% on agreement, roughly ₹30.9 lakh each for the 3 BHK, ₹32.3 lakh for the 3 BHK Premium and ₹42.6 lakh for the 4 BHK, though some listings quote 20% at agreement. Pay nothing beyond a refundable EOI until RERA registration is confirmed."}},
-            {"@type": "Question", "name": "How many towers and floors does Brigade Silvercrest have?", "acceptedAnswer": {"@type": "Answer", "text": "Three versions are in circulation. The developer's latest site plan shows a single building of 2 basements, ground and 5 floors (2B+G+5) with two connected wings; earlier material referred to two towers, T-01 and T-02; and channel-partner listings describe one G+28 tower with about 133 to 135 homes. The final building and unit count will be fixed in the RERA registration."}},
-            {"@type": "Question", "name": "Is there a power line near Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The site plan marks an overhead high-tension (HT) line and its buffer zone just outside the eastern boundary, with the building placed outside the buffer. Ask the developer for the statutory clearance distances and consider the effect on east-facing units."}},
-            {"@type": "Question", "name": "Are Brigade Silvercrest floor plans available?", "acceptedAnswer": {"@type": "Answer", "text": "Only sample layouts so far. Two fit the price sheet: a 3-bedroom plan that listings call the 3 BHK, and a 3-bedroom-plus-study plan they call the 3.5 BHK (3 BHK Premium). A third, 2-bedroom sample doesn't match the price list, and no genuine 4 BHK plan has been published. Ask for the RERA-approved plan for your exact unit before booking."}},
-            {"@type": "Question", "name": "Is Brigade Silvercrest the same as Brigade Jeevan Sandhya?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both names are used for the same Brigade Group development at Doddakalsandra Village, Raghuvanahalli, on Kanakapura Road, with the same price list and configurations. Jeevan Sandhya, roughly 'evening of life', is the name Brigade uses for the project's inter-generational, every-stage-of-life positioning. This page covers both names, and our older Jeevan Sandhya page now redirects here."}},
-            {"@type": "Question", "name": "Is Brigade Silvercrest RERA approved, and when is possession?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. RERA registration is in process and no number has been issued, even though listings had scheduled the launch for 15 September 2026. Indicative completion is September 2031 and possession October 2031, although other listings quote anything from December 2028 to March 2031; the binding date will be the one in the RERA registration and your agreement."}},
-            {"@type": "Question", "name": "Is Brigade Silvercrest a good investment?", "acceptedAnswer": {"@type": "Answer", "text": "Its strengths are walk-to-metro access on the Green Line, NICE Road about 2.5 km away, a listed Tier-1 developer and large homes on a small site. The risks are a premium rate above ₹15,000 per Sq.Ft, a long possession timeline, plan details that have changed between versions and an adjacent high-tension line. It suits patient buyers who complete the due-diligence checklist first."}},
-            {"@type": "Question", "name": "Will Brigade Silvercrest prices go up after launch?", "acceptedAnswer": {"@type": "Answer", "text": "Channel-partner listings say the ₹15,370 per Sq.Ft pre-launch rate will rise to ₹17,500 once construction starts. At that rate the 3 BHK would cost about ₹3.52 Cr, the 3 BHK Premium about ₹3.78 Cr and the 4 BHK about ₹4.70 Cr. Treat this as a sales claim until the developer publishes a launch price sheet."}},
-            {"@type": "Question", "name": "How many apartments are there in Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "The developer hasn't disclosed a unit count. Channel-partner listings quote about 133 to 135 homes, 5 per floor with 5 lifts, in one G+28 tower, but that conflicts with the developer's 2B+G+5 site plan. The RERA filing will confirm the number."}},
-            {"@type": "Question", "name": "What will maintenance cost at Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "Listings estimate ₹3.50 to ₹5.00 per Sq.Ft a month, which is roughly ₹7,000 to ₹10,000 for the 2,010 Sq.Ft 3 BHK and ₹9,400 to ₹13,400 for the 2,685 Sq.Ft 4 BHK. Expect 18% GST on bills above ₹7,500 a month and 1 to 2 years collected in advance at possession."}},
-            {"@type": "Question", "name": "Which schools and hospitals are near Brigade Silvercrest?", "acceptedAnswer": {"@type": "Answer", "text": "Asian International Public School (1 km), Sophia English School (1.2 km) and Hillside Public School (1.2 km) are the closest schools. DHEE Hospitals (800 m), Cloudnine Hospital on Kanakapura Road (850 m) and Mathru Hospital (1.3 km) are the closest hospitals, with Manipal Hospital about 2.9 km away."}},
-            {"@type": "Question", "name": "What specifications does Brigade Silvercrest offer?", "acceptedAnswer": {"@type": "Answer", "text": "Channel-partner listings describe an 8 ft teak main door, UPVC windows, wood-finish flooring in the master bedroom, vitrified tiles elsewhere, a shower panel in the master bathroom, gas leak sensors, EV charging and 100% home power backup at extra cost. Brigade hasn't published its own specification sheet, so rely on the annexure to your agreement."}},
-            {"@type": "Question", "name": "Why do some Brigade Jeevan Sandhya listings show 135 units and ₹3 Cr?", "acceptedAnswer": {"@type": "Answer", "text": "Those figures come from Brigade's earlier marketing for the project under the Jeevan Sandhya name: a single 20-floor tower of about 135 homes, 2,100 to 2,600 Sq.Ft, from ₹3 Cr, with December 2030 possession. The developer's later material, which this page follows, lists 2,010 to 2,685 Sq.Ft homes from ₹3.09 Cr and October 2031 possession. Neither version binds the developer until the RERA registration is issued, so compare any listing against that filing."}},
-          {"@type": "Question", "name": "What rent can a Brigade Silvercrest apartment earn?", "acceptedAnswer": {"@type": "Answer", "text": "Listings estimate ₹55,000 to ₹70,000 a month for the 3 BHK and ₹90,000 to ₹1.2 lakh for the 4 BHK after possession. On today's base prices that is a gross yield of about 2.1 to 3.4%, so the project suits end use or long-term capital growth better than rental income."}}
-          ]
+          "@type": "Question",
+          "name": "Which Brigade Silvercrest configuration offers the best value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 3 BHK Premium has the lowest rate per Sq.Ft, about ₹14,970. Upgrading from the 3 BHK adds about 148 Sq.Ft for roughly ₹14 lakh, a marginal cost near ₹9,500 per Sq.Ft, while moving up to the 4 BHK costs about ₹19,500 per extra Sq.Ft."
+          }
         },
         {
-          "@type": "LocalBusiness",
-          "name": "Brigade Silvercrest Authorized Partner",
-          "image": "https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Doddakalsandra Village, Kanakapura Main Road, Raghuvanahalli, Uttarahalli Hobli",
-            "addressLocality": "Bengaluru",
-            "addressRegion": "Karnataka",
-            "postalCode": "560062",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-8438344093",
-          "url": "https://luxurahabitat.com/projects/brigade-silvercrest/"
+          "@type": "Question",
+          "name": "What would the EMI be for a Brigade Silvercrest apartment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As an illustration, an 80% loan at 8.5% over 20 years works out to about ₹2.15 lakh a month for the 3 BHK, ₹2.24 lakh for the 3 BHK Premium and ₹2.96 lakh for the 4 BHK. During construction you would typically pay only pre-EMI interest on the disbursed amount."
+          }
         },
         {
-          "@type": "ImageObject",
-          "contentUrl": "https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg",
-          "description": "Brigade Silvercrest, Kanakapura Road",
-          "name": "Brigade Silvercrest Banner"
+          "@type": "Question",
+          "name": "How much do I need to pay at booking for Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Listings quote an EOI token of ₹5 lakh for the 3 BHK, ₹6 lakh for the 3 BHK Premium and ₹7 lakh for the 4 BHK. The indicative plan then asks for 10% on booking (including the EOI) and 10% on agreement, roughly ₹30.9 lakh each for the 3 BHK, ₹32.3 lakh for the 3 BHK Premium and ₹42.6 lakh for the 4 BHK, though some listings quote 20% at agreement. Pay nothing beyond a refundable EOI until RERA registration is confirmed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many towers and floors does Brigade Silvercrest have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three versions are in circulation. The developer's latest site plan shows a single building of 2 basements, ground and 5 floors (2B+G+5) with two connected wings; earlier material referred to two towers, T-01 and T-02; and channel-partner listings describe one G+28 tower with about 133 to 135 homes. The final building and unit count will be fixed in the RERA registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a power line near Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The site plan marks an overhead high-tension (HT) line and its buffer zone just outside the eastern boundary, with the building placed outside the buffer. Ask the developer for the statutory clearance distances and consider the effect on east-facing units."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Brigade Silvercrest floor plans available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only sample layouts so far. Two fit the price sheet: a 3-bedroom plan that listings call the 3 BHK, and a 3-bedroom-plus-study plan they call the 3.5 BHK (3 BHK Premium). A third, 2-bedroom sample doesn't match the price list, and no genuine 4 BHK plan has been published. Ask for the RERA-approved plan for your exact unit before booking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Silvercrest the same as Brigade Jeevan Sandhya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Both names are used for the same Brigade Group development at Doddakalsandra Village, Raghuvanahalli, on Kanakapura Road, with the same price list and configurations. Jeevan Sandhya, roughly 'evening of life', is the name Brigade uses for the project's inter-generational, every-stage-of-life positioning. This page covers both names, and our older Jeevan Sandhya page now redirects here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Silvercrest RERA approved, and when is possession?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. RERA registration is in process and no number has been issued, even though listings had scheduled the launch for 15 September 2026. Indicative completion is September 2031 and possession October 2031, although other listings quote anything from December 2028 to March 2031; the binding date will be the one in the RERA registration and your agreement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Silvercrest a good investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Its strengths are walk-to-metro access on the Green Line, NICE Road about 2.5 km away, a listed Tier-1 developer and large homes on a small site. The risks are a premium rate above ₹15,000 per Sq.Ft, a long possession timeline, plan details that have changed between versions and an adjacent high-tension line. It suits patient buyers who complete the due-diligence checklist first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Brigade Silvercrest prices go up after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Channel-partner listings say the ₹15,370 per Sq.Ft pre-launch rate will rise to ₹17,500 once construction starts. At that rate the 3 BHK would cost about ₹3.52 Cr, the 3 BHK Premium about ₹3.78 Cr and the 4 BHK about ₹4.70 Cr. Treat this as a sales claim until the developer publishes a launch price sheet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many apartments are there in Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The developer hasn't disclosed a unit count. Channel-partner listings quote about 133 to 135 homes, 5 per floor with 5 lifts, in one G+28 tower, but that conflicts with the developer's 2B+G+5 site plan. The RERA filing will confirm the number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What will maintenance cost at Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Listings estimate ₹3.50 to ₹5.00 per Sq.Ft a month, which is roughly ₹7,000 to ₹10,000 for the 2,010 Sq.Ft 3 BHK and ₹9,400 to ₹13,400 for the 2,685 Sq.Ft 4 BHK. Expect 18% GST on bills above ₹7,500 a month and 1 to 2 years collected in advance at possession."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which schools and hospitals are near Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Asian International Public School (1 km), Sophia English School (1.2 km) and Hillside Public School (1.2 km) are the closest schools. DHEE Hospitals (800 m), Cloudnine Hospital on Kanakapura Road (850 m) and Mathru Hospital (1.3 km) are the closest hospitals, with Manipal Hospital about 2.9 km away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What specifications does Brigade Silvercrest offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Channel-partner listings describe an 8 ft teak main door, UPVC windows, wood-finish flooring in the master bedroom, vitrified tiles elsewhere, a shower panel in the master bathroom, gas leak sensors, EV charging and 100% home power backup at extra cost. Brigade hasn't published its own specification sheet, so rely on the annexure to your agreement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What rent can a Brigade Silvercrest apartment earn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Listings estimate ₹55,000 to ₹70,000 a month for the 3 BHK and ₹90,000 to ₹1.2 lakh for the 4 BHK after possession. On today's base prices that is a gross yield of about 2.1 to 3.4%, so the project suits end use or long-term capital growth better than rental income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some Brigade Jeevan Sandhya listings show 135 units and ₹3 Cr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Those figures come from Brigade's earlier marketing for the project under the Jeevan Sandhya name: a single 20-floor tower of about 135 homes, 2,100 to 2,600 Sq.Ft, from ₹3 Cr, with December 2030 possession. The developer's later material, which this page follows, lists 2,010 to 2,685 Sq.Ft homes from ₹3.09 Cr and October 2031 possession. Neither version binds the developer until the RERA registration is issued, so compare any listing against that filing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Has Brigade Silvercrest launched yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not formally, as of 22 November 2026. A channel-partner site gave 15 September 2026 as the launch date, which has passed, and no project RERA number has been issued yet. Listings still describe the project as pre-launch with EOIs open."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I visit a model apartment at Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One microsite says 3 BHK and 4 BHK model homes will open at the site after launch. Another portal said in August 2026 that no sample flat was ready. Ask the sales team for the current status before planning a visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can NRIs buy at Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A portal says NRIs can buy under FEMA rules and pay through NRE or NRO accounts. This is general guidance. Confirm the payment route, tax treatment and loan options with your bank and a tax adviser, and give a Power of Attorney only after legal advice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there any litigation against Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One portal reports no pending litigation and says the Commencement Certificate and Legal Title Report are available for review. Treat that as a claim to verify: ask for the title report and run your own court-records check before paying more than the EOI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a 90% home loan for Brigade Silvercrest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A portal says the slab-wise plan allows a loan of up to 90%. The actual loan-to-value depends on your lender and profile, so ask your bank for its sanction terms for this project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Brigade Silvercrest have co-working space or senior-citizen zones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A channel-partner page lists a G+5 clubhouse with a multipurpose hall, co-working spaces and senior-citizen zones alongside the pool, gym and indoor games. Brigade has not published its own amenity list, so confirm these in the developer's brochure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Silvercrest too dense for a 2-acre site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A buyer on a property forum worried that a 28-floor building on 2 acres feels dense. Another poster replied that with only about 133 homes it is a limited development, not a large community. Since the building is still unconfirmed, ask for the sanctioned plan and open-space percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Brigade Silvercrest next to a busy junction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A forum commenter described the site as a small plot next to a busy traffic junction and surrounded by commercial outlets, and called that not ideal. This is one buyer's opinion, so visit at peak hours to judge noise, dust and entry and exit traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the ₹15,000+ per sq ft rate compare with nearby resale prices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A forum poster says resale deals at nearby Falcon City are around ₹17,000 to ₹18,000 per sq ft, so a new Brigade launch at ₹15,000+ may not be out of line. This is an unverified forum claim. Compare registered sale deeds and carpet-area rates before deciding."
+          }
         }
       ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://luxurahabitat.com/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg",
+      "description": "Brigade Silvercrest, Kanakapura Road",
+      "name": "Brigade Silvercrest Banner"
+    },
+    {
+      "@type": "RealEstateAgent",
+      "name": "Luxura Habitat",
+      "url": "https://luxurahabitat.com/",
+      "telephone": "+91-8438344093",
+      "email": "projectinfoindia@gmail.com"
     }
+  ]
+}
     </script>
     <script type="application/ld+json">
 {
@@ -845,7 +1050,7 @@
     </div>
 
     <nav>
-        <a href="#" class="logo" aria-label="Luxura Habitat — back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <a href="#" class="logo" aria-label="Luxura Habitat, back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
             <img src="/images/logos/company_logo.png" alt="Luxura Habitat">
             <span class="partner-divider" aria-hidden="true"></span>
             <span class="partner-caption">Real Estate Advisory</span>
@@ -890,6 +1095,7 @@
                 <p class="hero-intro">
                     A numbers-first guide to Brigade Group&rsquo;s pre-launch at Raghuvanahalli, Kanakapura Road, also marketed as Brigade Jeevan Sandhya: base prices from &#8377;3.09 Cr to &#8377;4.26 Cr, estimated all-in cost, payment schedule, EMI, and an honest reading of the latest site plan.
                 </p>
+                <p class="hero-intro" style="font-size:0.92rem;opacity:0.92;margin-top:-0.4rem;"><strong>Updated 22 November 2026:</strong> the 15 September 2026 launch date given by a channel-partner site has passed, and no project RERA number has been issued yet.</p>
 
                 <div class="hero-info-boxes">
                     <div class="info-box primary-details">
@@ -897,7 +1103,7 @@
                             <div class="info-box-icon" aria-hidden="true">&check;</div>
                             <div>
                                 <div class="info-box-title">~&#8377;15,000 / Sq.Ft</div>
-                                <div class="info-box-subtitle">3, 3.5 &amp; 4 BHK, 2,010 to 2,685 Sq.Ft</div>
+                                <div class="info-box-subtitle">3 BHK, 3 BHK Premium &amp; 4 BHK, 2,010 to 2,685 Sq.Ft</div>
                             </div>
                         </div>
                         <div class="info-row">
@@ -1016,10 +1222,10 @@
                         <tr><td><strong>Rate Band</strong></td><td>~&#8377;14,970 to &#8377;15,870 per Sq.Ft*; listings quote &#8377;15,370 pre-launch, rising to &#8377;17,500 after launch</td></tr>
                         <tr><td><strong>EOI Token</strong></td><td>&#8377;5 L (3 BHK), &#8377;6 L (3 BHK Premium), &#8377;7 L (4 BHK), per channel-partner listings</td></tr>
                         <tr><td><strong>Payment Plan</strong></td><td>10% booking, 10% agreement, 80% construction-linked (indicative); some listings quote 20% at agreement, then 10% at foundation and 5% per slab</td></tr>
-                        <tr><td><strong>Lenders</strong></td><td>In-principle approvals indicated from SBI, HDFC, Kotak Mahindra, ICICI and Axis Bank</td></tr>
-                        <tr><td><strong>Key Dates</strong></td><td>Pre-launch from August 2026; launch was scheduled for 15 September 2026; completion September 2031 (all indicative)</td></tr>
+                        <tr><td><strong>Lenders</strong></td><td>In-principle approvals indicated from SBI, HDFC, Kotak Mahindra, ICICI and Axis Bank; a property portal also lists Central Bank of India, Union Bank of India, Bank of India, Bank of Baroda and Citi Bank</td></tr>
+                        <tr><td><strong>Key Dates</strong></td><td>Pre-launch from August 2026; a channel-partner site gave 15 September 2026 as the launch date, which has passed; completion September 2031 (all indicative). A property portal reported construction 1% complete as of 6 August 2026</td></tr>
                         <tr><td><strong>Possession</strong></td><td>October 2031 (indicative); other listings quote anything from December 2028 to March 2031</td></tr>
-                        <tr><td><strong>RERA</strong></td><td>Application in process; no registration number issued. As of October 2026, listings still describe the project as pre-launch</td></tr>
+                        <tr><td><strong>RERA</strong></td><td>Application in process; no project registration number issued. As of 22 November 2026, none of the top 10 search results shows one, and listings still describe the project as pre-launch. A property portal says the Commencement Certificate is available (not verified)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1065,7 +1271,7 @@
                 </div>
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">&#8377;15,370 Now, &#8377;17,500 Later?</strong>
-                    <span>Channel-partner listings quote a pre-launch rate of &#8377;15,370 per Sq.Ft, valid until the September 2026 launch, and say it will rise to &#8377;17,500 per Sq.Ft once construction starts. &#8377;15,370 matches the 3 BHK price exactly. At &#8377;17,500, the same three homes would cost about &#8377;3.52 Cr, &#8377;3.78 Cr and &#8377;4.70 Cr, which is &#8377;43 lakh to &#8377;55 lakh more (10 to 17%). Treat the higher rate as a sales claim until the developer publishes a launch price sheet. The September launch date has passed and no RERA number has been issued yet.</span>
+                    <span>Channel-partner listings quote a pre-launch rate of &#8377;15,370 per Sq.Ft, described as valid until the 15 September 2026 launch date (which has passed with no RERA number issued), and say it will rise to &#8377;17,500 per Sq.Ft once construction starts. &#8377;15,370 matches the 3 BHK price exactly. At &#8377;17,500, the same three homes would cost about &#8377;3.52 Cr, &#8377;3.78 Cr and &#8377;4.70 Cr, which is &#8377;43 lakh to &#8377;55 lakh more (10 to 17%). Treat the higher rate as a sales claim until the developer publishes a launch price sheet. The September launch date has passed and no RERA number has been issued yet.</span>
                 </div>
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">A Fourth Variant on One Listing</strong>
@@ -1120,7 +1326,7 @@
                         <tr><td>Illustrative EMI on 80% loan*</td><td>~&#8377;2.15 L / month</td><td>~&#8377;2.24 L / month</td><td>~&#8377;2.96 L / month</td></tr>
                     </tbody>
                 </table>
-                <div class="pricing-footnote">*EMI assumes a loan of 80% of the base price at 8.5% a year over 20 years, for illustration only. Actual rates, eligibility and loan-to-value depend on your lender and profile. The first 20% (about &#8377;62 L to &#8377;85 L) plus stamp duty and registration normally comes from your own funds.</div>
+                <div class="pricing-footnote">*EMI assumes a loan of 80% of the base price at 8.5% a year over 20 years, for illustration only. Actual rates, eligibility and loan-to-value depend on your lender and profile; a property portal says loans of up to 90% are possible on the slab-wise plan. The first 20% (about &#8377;62 L to &#8377;85 L) plus stamp duty and registration normally comes from your own funds.</div>
             </div>
             <p style="max-width: 860px; margin: 1.8rem auto 0; line-height: 1.8;">With a construction-linked plan, the bank releases the loan in stages as the building rises, so during construction you usually pay only interest on the amount disbursed (pre-EMI), and full EMIs start after the final disbursement or possession. With an indicative October 2031 possession, that construction window is about five years, so budget for pre-EMI and, if you already rent, for paying rent alongside it.</p>
 
@@ -1300,37 +1506,14 @@
             <h2 class="section-title">Amenities, Weighed as Running Costs</h2>
             <p class="section-subtitle">What's planned, and what it means for maintenance on a small, low-rise site.</p>
 
-            <div class="amenity-photo-grid">
-                <div class="amenity-photo-card reveal" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-gym.webp" alt="Brigade Silvercrest fitness centre" loading="lazy">
-                    <span>Fitness Centre</span>
-                </div>
-                <div class="amenity-photo-card reveal" style="transition-delay:60ms;" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-clubhouse-lounge.webp" alt="Brigade Silvercrest residents' lounge and pool deck" loading="lazy">
-                    <span>Residents' Lounge</span>
-                </div>
-                <div class="amenity-photo-card reveal" style="transition-delay:120ms;" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-kids-play-area.webp" alt="Brigade Silvercrest children's play zone" loading="lazy">
-                    <span>Children's Zone</span>
-                </div>
-                <div class="amenity-photo-card reveal" style="transition-delay:180ms;" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-sports-court.webp" alt="Brigade Silvercrest outdoor sports court" loading="lazy">
-                    <span>Outdoor Court</span>
-                </div>
-                <div class="amenity-photo-card reveal" style="transition-delay:240ms;" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-jogging-track.webp" alt="Brigade Silvercrest landscaped walking track" loading="lazy">
-                    <span>Walking Track</span>
-                </div>
-                <div class="amenity-photo-card reveal" style="transition-delay:300ms;" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-security.webp" alt="Brigade Silvercrest gated entry and CCTV security" loading="lazy">
-                    <span>Gated Security</span>
-                </div>
-            </div>
-
             <div class="plan-notes reveal" style="display: grid; gap: 1.5rem; margin-top: 1rem;">
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">What's on the List</strong>
                     <span>Developer material names a clubhouse, swimming pool, gym, yoga and meditation spaces, a mini theater, indoor games, a tennis and multi-sport court, a skating rink, an amphitheatre, landscaped gardens, a children's zone, CCTV and a gated entry, and describes the full program as 40+ amenities. Some third-party listings add items such as an infinity pool or fine-dining restaurant; treat anything not in the developer's own brochure as unconfirmed.</span>
+                </div>
+                <div class="plan-note" style="background: var(--bg-white);">
+                    <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Also Listed by Channel Partners</strong>
+                    <span>A channel-partner page describes a G+5 clubhouse with a multipurpose hall, co-working spaces and senior citizen zones alongside the pool, gym and indoor games, and other partner pages add a party lawn, a dance and music room, a cafeteria and three-tier security. The senior citizen zones fit the project's Jeevan Sandhya positioning, but Brigade hasn't published its own amenity list, so confirm each item in the developer's brochure.</span>
                 </div>
                 <div class="plan-note" style="background: var(--bg-white);">
                     <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">Claims We Haven't Verified</strong>
@@ -1340,6 +1523,28 @@
                     <strong style="font-size: 1.15rem; margin-bottom: 0.75rem;">The Maintenance Question</strong>
                     <span>A pool, clubhouse and staffed security cost roughly the same to run whether 100 or 1,000 families share them. On a small, low-rise site, those fixed costs are divided among fewer homes, so monthly maintenance per Sq.Ft can be higher than in a large township. Listings estimate &#8377;3.50 to &#8377;5.00 per Sq.Ft a month, which on these sizes is roughly &#8377;7,000 to &#8377;10,000 for the 3 BHK, &#8377;7,550 to &#8377;10,800 for the 3 BHK Premium and &#8377;9,400 to &#8377;13,400 for the 4 BHK. Above &#8377;7,500 a month, 18% GST usually applies to the bill, and 1 to 2 years are normally collected in advance at possession. Ask for the estimated rate and the corpus deposit at booking, and add them to your cost sheet.</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery" id="gallery" style="background: var(--bg-light); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Renders and amenity visuals from developer and channel-partner material. Tap any image to enlarge.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-hero.jpg" alt="Brigade Silvercrest Kanakapura Road elevation render" loading="lazy"><span class="gallery-tag">Elevation</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-collage.jpg" alt="Brigade Silvercrest elevation and site collage" loading="lazy"><span class="gallery-tag">Collage</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-gym.webp" alt="Brigade Silvercrest fitness centre" loading="lazy"><span class="gallery-tag">Fitness Centre</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-clubhouse-lounge.webp" alt="Brigade Silvercrest residents' lounge and pool deck" loading="lazy"><span class="gallery-tag">Residents' Lounge</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-kids-play-area.webp" alt="Brigade Silvercrest children's play zone" loading="lazy"><span class="gallery-tag">Children's Zone</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-sports-court.webp" alt="Brigade Silvercrest outdoor sports court" loading="lazy"><span class="gallery-tag">Outdoor Court</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-jogging-track.webp" alt="Brigade Silvercrest landscaped walking track" loading="lazy"><span class="gallery-tag">Walking Track</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-amenity-security.webp" alt="Brigade Silvercrest gated entry and CCTV security" loading="lazy"><span class="gallery-tag">Gated Security</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-entrance-render.webp" alt="Representative Brigade Silvercrest entrance render from a channel-partner site; the building shown is not confirmed" loading="lazy"><span class="gallery-tag">Entrance (representative)</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-clubhouse-lounge-render.webp" alt="Representative clubhouse lounge interior render for Brigade Silvercrest" loading="lazy"><span class="gallery-tag">Lounge (representative)</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-living-dining-representative.webp" alt="Representative luxury living and dining interior, not Brigade Silvercrest specific" loading="lazy"><span class="gallery-tag">Living &amp; dining (representative)</span></div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="/images/projects/brigade-silvercrest/brigade-silvercrest-living-room-representative.webp" alt="Representative living room interior, not Brigade Silvercrest specific" loading="lazy"><span class="gallery-tag">Living room (representative)</span></div>
             </div>
         </div>
     </section>
@@ -1356,7 +1561,7 @@
                 <div class="plan-notes reveal" style="transition-delay:160ms;">
                     <div class="plan-note">
                         <strong>On Foot</strong>
-                        <span>Nearest Green Line metro: about 500 to 600 m, 2 to 3 minutes (developer material names Raghuvanahalli Cross; Brigade's location brief names Doddakallasandra station; listings variously quote 300 m to 650 m)<br>Gubbalala BMTC bus stop: about 500 m<br>Raghuvanahalli bus stop: about 800 m</span>
+                        <span>Nearest Green Line metro: about 500 to 600 m, 2 to 3 minutes (developer material names Raghuvanahalli Cross; Brigade's location brief names Doddakallasandra station; listings variously quote 300 m to 800 m, and a buyer on a public forum says about 750 m)<br>Gubbalala BMTC bus stop: about 500 m<br>Raghuvanahalli bus stop: about 800 m</span>
                     </div>
                     <div class="plan-note">
                         <strong>By Metro</strong>
@@ -1465,6 +1670,8 @@
                         <li>Building and unit data still inconsistent across versions</li>
                         <li>Adjacent high-tension line may weigh on some units' resale</li>
                         <li>Higher maintenance per home on a small site</li>
+                        <li>Site next to a busy traffic junction with commercial outlets around it, a concern raised by a buyer on a public forum</li>
+                        <li>Density worries if the listings' 28-floor, roughly 133-home version is built on about 2 acres</li>
                     </ul>
                 </div>
                 <div class="amenity-card reveal" style="transition-delay:180ms;">
@@ -1516,7 +1723,7 @@
 
             <div class="about-content reveal" style="max-width: 860px; margin: 0 auto;">
                 <p>Brigade Enterprises Limited has been listed on the NSE and BSE since 2013 (ticker: BRIGADE). For a pre-launch buyer, that listing is the most useful fact about the developer: quarterly results, debt levels, sales bookings and the project pipeline are all publicly disclosed, so you can check the company's financial health yourself rather than relying on a sales pitch.</p>
-                <p>The operating record is long. Founded in Bengaluru in 1986 by M. R. Jaishankar, Brigade built the city's first private high-rise, Brigade Towers, in 1989, and has since completed over 300 buildings and more than 100 million Sq.Ft across South India, spanning apartments, villas, integrated enclaves, senior living, offices, retail, hotels and schools. That breadth includes senior-friendly housing, which is relevant to how this project is positioned.</p>
+                <p>The operating record is long. Founded in Bengaluru in 1986 by M. R. Jaishankar, Brigade built the city's first private high-rise, Brigade Towers, in 1989, and, by its own count, has delivered 200+ buildings and 80+ million Sq.Ft across 9 cities, with 14.8 million Sq.Ft of its portfolio green certified, spanning apartments, villas, integrated enclaves, senior living, offices, retail, hotels and schools. That breadth includes senior-friendly housing, which is relevant to how this project is positioned.</p>
                 <p>Leadership is still family-led: founder M. R. Jaishankar is Executive Chairman, Pavitra Shankar is Managing Director and Nirupa Shankar is Joint Managing Director. Brigade was the first developer in South India to earn ISO 9001 certification, in 1996, and several of its projects carry IGBC Gold or Platinum green ratings.</p>
                 <p>None of this removes pre-launch risk. Plans at this stage have already changed between versions, as the tower count and floor plans show. But a listed developer with a long delivery record is the strongest mitigation available before RERA registration.</p>
             </div>
@@ -1753,6 +1960,87 @@
                         <p itemprop="text">Those figures come from Brigade's earlier marketing for the project under the Jeevan Sandhya name: a single 20-floor tower of about 135 homes, 2,100 to 2,600 Sq.Ft, from ₹3 Cr, with December 2030 possession. The developer's later material, which this page follows, lists 2,010 to 2,685 Sq.Ft homes from ₹3.09 Cr and October 2031 possession. Neither version binds the developer until the RERA registration is issued, so compare any listing against that filing.</p>
                     </div>
                 </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span itemprop="name">Has Brigade Silvercrest launched yet?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Not formally, as of 22 November 2026. A channel-partner site gave 15 September 2026 as the launch date, which has passed, and no project RERA number has been issued yet. Listings still describe the project as pre-launch with EOIs open.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false">
+                        <span itemprop="name">Can I visit a model apartment at Brigade Silvercrest?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">One microsite says 3 BHK and 4 BHK model homes will open at the site after launch. Another portal said in August 2026 that no sample flat was ready. Ask the sales team for the current status before planning a visit.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false">
+                        <span itemprop="name">Can NRIs buy at Brigade Silvercrest?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A portal says NRIs can buy under FEMA rules and pay through NRE or NRO accounts. This is general guidance. Confirm the payment route, tax treatment and loan options with your bank and a tax adviser, and give a Power of Attorney only after legal advice.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false">
+                        <span itemprop="name">Is there any litigation against Brigade Silvercrest?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">One portal reports no pending litigation and says the Commencement Certificate and Legal Title Report are available for review. Treat that as a claim to verify: ask for the title report and run your own court-records check before paying more than the EOI.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q24" aria-expanded="false">
+                        <span itemprop="name">Can I get a 90% home loan for Brigade Silvercrest?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A portal says the slab-wise plan allows a loan of up to 90%. The actual loan-to-value depends on your lender and profile, so ask your bank for its sanction terms for this project.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q25" aria-expanded="false">
+                        <span itemprop="name">Does Brigade Silvercrest have co-working space or senior-citizen zones?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A channel-partner page lists a G+5 clubhouse with a multipurpose hall, co-working spaces and senior-citizen zones alongside the pool, gym and indoor games. Brigade has not published its own amenity list, so confirm these in the developer's brochure.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q26" aria-expanded="false">
+                        <span itemprop="name">Is Brigade Silvercrest too dense for a 2-acre site?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A buyer on a property forum worried that a 28-floor building on 2 acres feels dense. Another poster replied that with only about 133 homes it is a limited development, not a large community. Since the building is still unconfirmed, ask for the sanctioned plan and open-space percentage.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q27" aria-expanded="false">
+                        <span itemprop="name">Is Brigade Silvercrest next to a busy junction?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A forum commenter described the site as a small plot next to a busy traffic junction and surrounded by commercial outlets, and called that not ideal. This is one buyer's opinion, so visit at peak hours to judge noise, dust and entry and exit traffic.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q28" aria-expanded="false">
+                        <span itemprop="name">How does the ₹15,000+ per sq ft rate compare with nearby resale prices?</span>
+                        <span class="faq-arrow">&#9660;</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A forum poster says resale deals at nearby Falcon City are around ₹17,000 to ₹18,000 per sq ft, so a new Brigade launch at ₹15,000+ may not be out of line. This is an unverified forum claim. Compare registered sale deeds and carpet-area rates before deciding.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1855,7 +2143,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h5>About Brigade Silvercrest</h5>
-                <p>Pre-launch ultra-luxury 3, 3.5 &amp; 4 BHK apartments by Brigade Group on Kanakapura Main Road, Raghuvanahalli, South Bengaluru. Price list, all-in cost sheet, payment plan and site plan analysis for buyers and investors.</p>
+                <p>Pre-launch ultra-luxury 3 BHK, 3 BHK Premium &amp; 4 BHK apartments by Brigade Group on Kanakapura Main Road, Raghuvanahalli, South Bengaluru. Price list, all-in cost sheet, payment plan and site plan analysis for buyers and investors.</p>
             </div>
 
             <div class="footer-section">
@@ -1888,7 +2176,7 @@
                 <h5>Legal</h5>
                 <p><strong>Developer:</strong> Brigade Group</p>
                 <p><strong>Location:</strong> Kanakapura Main Road, Raghuvanahalli, Bengaluru, Karnataka 560062</p>
-                <p><strong>RERA:</strong> Application in process (pre-launch), not yet registered, approval expected in 2026</p>
+                <p><strong>RERA:</strong> Application in process (pre-launch); no registration number issued as of 22 November 2026</p>
             </div>
         </div>
 
