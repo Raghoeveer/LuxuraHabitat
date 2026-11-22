@@ -242,6 +242,158 @@
     </div>
   </section>
 
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section class="section section--cream" id="featured-projects">
+    <style>
+      .home-projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-md);margin-top:var(--space-lg);}
+      .home-project-card{display:flex;flex-direction:column;background:var(--bg-white);border:1px solid var(--border-light);border-radius:var(--radius-md);overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform var(--transition-base),box-shadow var(--transition-base);}
+      .home-project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+      .home-project-card__img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg-cream);}
+      .home-project-card__img img{width:100%;height:100%;object-fit:cover;display:block;}
+      .home-project-card__img span{position:absolute;top:10px;left:10px;background:var(--primary-forest);color:#fff;font-size:var(--fs-xs);font-weight:600;padding:4px 10px;border-radius:var(--radius-sm);}
+      .home-project-card__body{padding:var(--space-sm) var(--space-md) var(--space-md);}
+      .home-project-card__dev{font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent-copper);margin:0 0 4px;font-weight:600;}
+      .home-project-card h3{font-family:var(--font-heading);font-size:1.25rem;color:var(--primary-forest);margin:0 0 6px;line-height:1.25;}
+      .home-project-card__loc{font-size:var(--fs-small);color:var(--text-muted);margin:0 0 8px;}
+      .home-project-card__specs{font-size:var(--fs-small);font-weight:600;color:var(--text-charcoal);margin:0;}
+      .home-hub-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:var(--space-lg);}
+      .home-hub-links a{padding:8px 16px;border:1px solid var(--border-copper);border-radius:999px;font-size:var(--fs-small);font-weight:600;color:var(--primary-forest);text-decoration:none;background:var(--bg-white);}
+      .home-hub-links a:hover{background:var(--primary-forest);color:#fff;}
+      a.builder-card{text-decoration:none;color:inherit;}
+    </style>
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Verified Projects</h2>
+        <p>A selection of the RERA-checked launches our advisors are currently helping buyers with in Bengaluru, Chennai and Coimbatore.</p>
+      </div>
+      <div class="home-projects-grid">
+        <a href="/projects/sattva-aeropolis/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/sattva-aeropolis-thumb.webp" alt="Sattva Aeropolis studio to 3 BHK apartments near Bangalore Airport, Devanahalli" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Sattva Group</p>
+            <h3>Sattva Aeropolis</h3>
+            <p class="home-project-card__loc">Devanahalli, North Bengaluru</p>
+            <p class="home-project-card__specs">Studio to 3 BHK &middot; ₹45.77 L+</p>
+          </div>
+        </a>
+        <a href="/projects/sattva-city/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/sattva-city-thumb.webp" alt="Sattva City Doddajala 1 to 4 BHK apartments near Bangalore airport" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Sattva Group</p>
+            <h3>Sattva City</h3>
+            <p class="home-project-card__loc">Doddajala, North Bengaluru</p>
+            <p class="home-project-card__specs">1 to 4 BHK &middot; 50 Acres</p>
+          </div>
+        </a>
+        <a href="/projects/sattva-forest-ridge/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/sattva-forest-ridge-thumb.webp" alt="Sattva Forest Ridge Anjanapura 1 2 3 BHK apartments JP Nagar South Bangalore" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Sattva Group</p>
+            <h3>Sattva Forest Ridge</h3>
+            <p class="home-project-card__loc">Anjanapura, South Bengaluru</p>
+            <p class="home-project-card__specs">1, 2 &amp; 3 BHK &middot; ~4.1 Acres</p>
+          </div>
+        </a>
+        <a href="/projects/sattva-la-vita/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita 4 BHK row house villas Hennur Road Bangalore" loading="lazy" width="400" height="260"><span>Ready to Move</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Sattva Group</p>
+            <h3>Sattva La Vita</h3>
+            <p class="home-project-card__loc">Hennur Road, North Bengaluru</p>
+            <p class="home-project-card__specs">4 BHK &middot; Row Houses</p>
+          </div>
+        </a>
+        <a href="/projects/kns-samooha/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/kns-samooha-thumb.webp" alt="KNS Samooha premium plots Nelamangala Tumkur Road" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">KNS Group</p>
+            <h3>KNS Samooha</h3>
+            <p class="home-project-card__loc">Nelamangala, Tumkur Road</p>
+            <p class="home-project-card__specs">600-2,400 Sq.Ft &middot; &#8377;46 L+</p>
+          </div>
+        </a>
+        <a href="/projects/kns-sampada/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/kns-sampada-thumb.webp" alt="KNS Sampada premium plots Hejjala Toll Mysore Road" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">KNS Group</p>
+            <h3>KNS Sampada</h3>
+            <p class="home-project-card__loc">Hejjala Toll, Mysore Road</p>
+            <p class="home-project-card__specs">1,200-2,400 Sq.Ft &middot; &#8377;80 L+</p>
+          </div>
+        </a>
+        <a href="/projects/concorde-sienna/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/concorde-sienna-thumb.webp" alt="Concorde Sienna single tower apartments Hennur Main Road Bangalore" loading="lazy" width="400" height="260"><span>Pre-Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Concorde Group</p>
+            <h3>Concorde Sienna</h3>
+            <p class="home-project-card__loc">Hennur Main Road, Kannuru, Bengaluru</p>
+            <p class="home-project-card__specs">2 &amp; 3 BHK &middot; &#8377;1.26 Cr+</p>
+          </div>
+        </a>
+        <a href="/projects/purva-hallmark/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/purva-hallmark-thumb.webp" alt="Purva Hallmark 3 3.5 4 BHK apartments Vajarahalli Kanakapura Road" loading="lazy" width="400" height="260"><span>Pre-Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Puravankara Limited</p>
+            <h3>Purva Hallmark</h3>
+            <p class="home-project-card__loc">Vajarahalli, Kanakapura Road</p>
+            <p class="home-project-card__specs">3 &amp; 3.5/4 BHK &middot; &#8377;2.76 Cr+</p>
+          </div>
+        </a>
+        <a href="/projects/chennai/godrej-azure/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/godrej-azure-thumb.webp" alt="Godrej Azure sea-view apartments Padur OMR Chennai" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Godrej Properties</p>
+            <h3>Godrej Azure</h3>
+            <p class="home-project-card__loc">Padur, OMR, Chennai</p>
+            <p class="home-project-card__specs">2, 3 &amp; 4 BHK &middot; &#8377;78.49 L+</p>
+          </div>
+        </a>
+        <a href="/projects/chennai/shriram-kinglife-koyambedu/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/shriram-kinglife-koyambedu-thumb.webp" alt="Shriram Kinglife Koyambedu apartments Chennai" loading="lazy" width="400" height="260"><span>New Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Shriram Properties</p>
+            <h3>Shriram Kinglife Koyambedu</h3>
+            <p class="home-project-card__loc">Koyambedu, Chennai</p>
+            <p class="home-project-card__specs">3 &amp; 4 BHK &middot; &#8377;2.36 Cr+</p>
+          </div>
+        </a>
+        <a href="/projects/chennai/sobha-wisteria/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/sobha-wisteria-thumb.webp" alt="Sobha Wisteria (Sobha OMR) 1 to 4 BHK apartments Egattur OMR Chennai, representative image" loading="lazy" width="400" height="260"><span>Pre-Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Sobha Limited</p>
+            <h3>Sobha Wisteria</h3>
+            <p class="home-project-card__loc">Egattur, OMR, Chennai</p>
+            <p class="home-project-card__specs">1-4 BHK &middot; &#8377;86 L+</p>
+          </div>
+        </a>
+        <a href="/projects/coimbatore/godrej-plots-coimbatore/" class="home-project-card">
+          <div class="home-project-card__img"><img src="/images/projects-thumbs/godrej-plots-coimbatore-thumb.webp" alt="Godrej Plots Coimbatore plotted development Chettipalayam South Coimbatore" loading="lazy" width="400" height="260"><span>Pre-Launch</span></div>
+          <div class="home-project-card__body">
+            <p class="home-project-card__dev">Godrej Properties</p>
+            <h3>Godrej Plots Coimbatore</h3>
+            <p class="home-project-card__loc">Chettipalayam, South Coimbatore</p>
+            <p class="home-project-card__specs">700+ Plots &middot; &#8377;37.99 L+</p>
+          </div>
+        </a>
+      </div>
+      <p style="text-align:center;margin-top:var(--space-lg);font-weight:600;">Browse projects by area or developer</p>
+      <nav class="home-hub-links" aria-label="Project hubs">
+        <a href="/areas/devanahalli/">Devanahalli</a>
+        <a href="/areas/yelahanka/">Yelahanka</a>
+        <a href="/areas/hennur/">Hennur &amp; Thanisandra</a>
+        <a href="/areas/kanakapura-road/">Kanakapura Road</a>
+        <a href="/areas/chennai/">Chennai</a>
+        <a href="/areas/coimbatore/">Coimbatore</a>
+        <a href="/developers/sattva/">Sattva Group projects</a>
+        <a href="/developers/brigade/">Brigade projects</a>
+        <a href="/developers/shriram/">Shriram projects</a>
+      </nav>
+      <div style="text-align:center;margin-top:var(--space-lg);">
+        <a href="/projects/" class="btn btn--primary">View All Verified Projects</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== DEVELOPER PARTNERS SHOWCASE ===== -->
   <section class="section" id="active-projects">
     <div class="container">
@@ -261,10 +413,10 @@
         <!-- Set 1 -->
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Prestige_Group.png" alt="Prestige Group"></div><span class="builder-name">Prestige Group</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/sobha.svg" alt="Sobha Limited"></div><span class="builder-name">Sobha Limited</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/brigade-group-logo-png_seeklogo-22461.png" alt="Brigade Group"></div><span class="builder-name">Brigade Group</span></div>
+        <a href="/developers/brigade/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/brigade-group-logo-png_seeklogo-22461.png" alt="Brigade Group"></div><span class="builder-name">Brigade Group</span></a>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Godrej%20Properties%20Symbol%20PNG.png" alt="Godrej Properties"></div><span class="builder-name">Godrej Properties</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/purvankara-logo.svg" alt="Puravankara"></div><span class="builder-name">Puravankara</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/salarpuria.svg" alt="Salarpuria Sattva"></div><span class="builder-name">Salarpuria Sattva</span></div>
+        <a href="/developers/sattva/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/salarpuria.svg" alt="Salarpuria Sattva"></div><span class="builder-name">Salarpuria Sattva</span></a>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/assetz.svg" alt="Assetz Property"></div><span class="builder-name">Assetz Property</span></div>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/total_env.svg" alt="Total Environment"></div><span class="builder-name">Total Environment</span></div>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/EmbassyGroup_Logo.svg" alt="Embassy Group"></div><span class="builder-name">Embassy Group</span></div>
@@ -275,7 +427,7 @@
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Bhartiya_Urban2021081212115120210812124626-210x210.jpg" alt="Bharatiya Urban City"></div><span class="builder-name">Bharatiya Urban City</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/tvs_emerald.png" alt="TVS Emerald"></div><span class="builder-name">TVS Emerald</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/mantri_developers.png" alt="Mantri Developers"></div><span class="builder-name">Mantri Developers</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/shriram.png" alt="Shriram Properties"></div><span class="builder-name">Shriram Properties</span></div>
+        <a href="/developers/shriram/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/shriram.png" alt="Shriram Properties"></div><span class="builder-name">Shriram Properties</span></a>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/vaishnavi_logo_5568b13158.png" alt="Vaishnavi Developers"></div><span class="builder-name">Vaishnavi Developers</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/goyal-co-hariyana-group-logo-1.png" alt="Goyal &amp; Co."></div><span class="builder-name">Goyal &amp; Co.</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/VAJRAM CRAFTING LANDMARKS LOGO BOLD-01.webp" alt="Vajram"></div><span class="builder-name">Vajram</span></div>
@@ -283,10 +435,10 @@
         <!-- Set 2 (duplicate for seamless loop) -->
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Prestige_Group.png" alt="Prestige Group"></div><span class="builder-name">Prestige Group</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/sobha.svg" alt="Sobha Limited"></div><span class="builder-name">Sobha Limited</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/brigade-group-logo-png_seeklogo-22461.png" alt="Brigade Group"></div><span class="builder-name">Brigade Group</span></div>
+        <a href="/developers/brigade/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/brigade-group-logo-png_seeklogo-22461.png" alt="Brigade Group"></div><span class="builder-name">Brigade Group</span></a>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Godrej%20Properties%20Symbol%20PNG.png" alt="Godrej Properties"></div><span class="builder-name">Godrej Properties</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/purvankara-logo.svg" alt="Puravankara"></div><span class="builder-name">Puravankara</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/salarpuria.svg" alt="Salarpuria Sattva"></div><span class="builder-name">Salarpuria Sattva</span></div>
+        <a href="/developers/sattva/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/salarpuria.svg" alt="Salarpuria Sattva"></div><span class="builder-name">Salarpuria Sattva</span></a>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/assetz.svg" alt="Assetz Property"></div><span class="builder-name">Assetz Property</span></div>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/total_env.svg" alt="Total Environment"></div><span class="builder-name">Total Environment</span></div>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/EmbassyGroup_Logo.svg" alt="Embassy Group"></div><span class="builder-name">Embassy Group</span></div>
@@ -297,7 +449,7 @@
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/Bhartiya_Urban2021081212115120210812124626-210x210.jpg" alt="Bharatiya Urban City"></div><span class="builder-name">Bharatiya Urban City</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/tvs_emerald.png" alt="TVS Emerald"></div><span class="builder-name">TVS Emerald</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/mantri_developers.png" alt="Mantri Developers"></div><span class="builder-name">Mantri Developers</span></div>
-        <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/shriram.png" alt="Shriram Properties"></div><span class="builder-name">Shriram Properties</span></div>
+        <a href="/developers/shriram/" class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/shriram.png" alt="Shriram Properties"></div><span class="builder-name">Shriram Properties</span></a>
         <div class="builder-card builder-card--dark"><div class="builder-logo-wrap"><img src="/images/projects/vaishnavi_logo_5568b13158.png" alt="Vaishnavi Developers"></div><span class="builder-name">Vaishnavi Developers</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/goyal-co-hariyana-group-logo-1.png" alt="Goyal &amp; Co."></div><span class="builder-name">Goyal &amp; Co.</span></div>
         <div class="builder-card"><div class="builder-logo-wrap"><img src="/images/projects/VAJRAM CRAFTING LANDMARKS LOGO BOLD-01.webp" alt="Vajram"></div><span class="builder-name">Vajram</span></div>
