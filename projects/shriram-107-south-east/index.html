@@ -467,6 +467,7 @@
         .gallery-item::after { content: 'Click to View'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0); color: #fff; font-size: 0.9rem; font-weight: 800; opacity: 0; transition: all 0.3s ease; pointer-events: none; }
         .gallery-item:hover { transform: scale(1.08); }
         .gallery-item:hover::after { opacity: 1; background: rgba(0,0,0,0.55); }
+        .gallery-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; background: rgba(11,107,60,0.92); color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4px; padding: 0.3rem 0.65rem; border-radius: 999px; pointer-events: none; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
         .gallery-item:hover img { transform: scale(1.1); }
 
@@ -892,6 +893,16 @@
     .explore-more-card p { font-size: 0.85rem; color: #777; }
     .explore-more-link { font-size: 0.82rem; font-weight: 700; color: #c4a574; margin-top: auto; }
 
+        .lh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+        .lh-card { background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 1.2rem 1.3rem; min-width: 0; }
+        .lh-card h3 { font-size: 1.05rem; color: var(--primary-dark); margin: 0 0 0.6rem; }
+        .lh-card ul, .lh-card ol { margin: 0; padding-left: 1.1rem; color: var(--text-light); font-size: 0.92rem; display: grid; gap: 0.35rem; }
+        .lh-note { max-width: 900px; margin: 1.8rem auto 0; background: #fff; border-left: 5px solid var(--accent-warm); border-radius: 12px; padding: 1rem 1.2rem; color: var(--text-light); font-size: 0.92rem; }
+        .lh-note h3 { font-size: 1.05rem; color: var(--primary-dark); margin: 0 0 0.5rem; }
+        .lh-note ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+        .lh-src { font-size: 0.82rem; color: var(--text-light); text-align: center; margin-top: 1rem; }
+        .lh-sub { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary-dark); margin-top: 3rem; }
+        .rera-no { word-break: break-all; }
     </style>
 
     <script type="application/ld+json">
@@ -911,7 +922,6 @@
       "about": {
         "@type": "HousingProject",
         "name": "Shriram 107 SouthEast",
-        "numberOfAccommodationUnits": "2 & 3 BHK Apartments",
         "identifier": [
           {
             "@type": "PropertyValue",
@@ -937,13 +947,15 @@
         "email": "projectinfoindia@gmail.com"
       },
       "offers": {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         "priceCurrency": "INR",
-        "price": "6500000",
-        "priceValidUntil": "2026-12-31",
+        "lowPrice": "6500000",
+        "highPrice": "8000000",
+        "offerCount": "2",
         "availability": "https://schema.org/InStock",
         "url": "https://luxurahabitat.com/projects/shriram-107-south-east/"
-      }
+      },
+      "dateModified": "2026-11-22"
     }
     </script>
 
@@ -1020,6 +1032,97 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "You can request a site visit or brochure by filling out the enquiry form on this page or contacting us directly via phone or WhatsApp."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which bank is financing Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The developer brochure says the project is financed by State Bank of India. That does not replace your own loan approval, so check eligibility with your bank before you pay a booking amount."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are there south-facing apartments at Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The developer brochure states there are no south-facing units in the project."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How many unit plans are there at Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The brochure shows six unit plans: 2 BHK Types 1, 1A, 2 and 2A, and 3 BHK Types 3 and 3A. RERA carpet areas are 460.214 sq ft (Type 1A), 498.362 sq ft (Types 1, 2 and 2A) and 613.295 sq ft (Types 3 and 3A)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the difference between carpet area and the quoted sizes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The quoted sizes of 698 to 752 sq ft for 2 BHK and about 914 sq ft for 3 BHK are super built-up, which includes a share of common areas. The RERA carpet area, the usable floor inside your walls, is 460 to 498 sq ft for 2 BHK and 613 sq ft for 3 BHK per the brochure plans."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What construction technology is used at Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The towers use MIVAN technology, an aluminium formwork system that gives smooth walls and more predictable build timelines. Ask for the structural and finishing specifications in writing."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the flat specifications (windows, doors, kitchen, flooring)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per the developer brochure: UPVC sliding windows, engineered laminated wooden doors, a 30 mm granite kitchen counter with stainless steel sink, large tiles in living areas and bedrooms, anti-skid bathroom tiles, branded sanitary and CP fittings, and modular switches."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What sustainability and utility features does the community have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The brochure lists a sewage treatment plant, rainwater harvesting, an organic waste converter, a water softening plant where required, and DG power backup for lifts and common-area lighting."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What do the clubhouse and daily-convenience facilities include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property portal listings describe the 18,000 sq ft clubhouse with indoor games, a fitness centre, party halls and co-working space. The developer brochure adds a convenience store, creche, salon, cafe and sports corner on site."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which metro and road projects will improve access to Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Existing access is via Hosur Road, NICE Road and Sarjapur Road. The developer lists the Peripheral Ring Road, STRR and the proposed Neo metro as upcoming, and mentions Bommasandra metro. All are planned, so timelines may shift."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What schools, colleges and hospitals are near Shriram 107 SouthEast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The brochure names Alliance University, PES University, IFIM, DPS, NPS and XIME B School, plus Narayana Hrudayalaya, Vimalalaya Hospital and Oxford Medical College and Hospital."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are buyer reviews of Shriram 107 SouthEast like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Forum opinion on a public review site is mostly negative and focuses on delays and after-sales service, including a Phase 2 buyer from 2019 whose 3-year handover stretched to 5. Reviews are few, unverified and some concern other projects. Visit the delivered phases and speak to residents before deciding."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is the community very crowded given its size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A property portal notes that common areas such as the pool and clubhouse can be busy at peak hours in a community this large. The 78% open-space layout and multiple amenity zones help spread the load."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Has the project won any awards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The developer lists awards for the project, including Budget Housing Project of the Year and Brand of the Year in affordable housing. These are self-reported on the developer's site."
         }
       }]
     }
@@ -1234,7 +1337,7 @@
     <section class="highlights" id="highlights">
         <div class="container">
             <h2 class="section-title">Project Highlights</h2>
-            <p class="section-subtitle">Key details for Phase 3, currently under construction and open for booking.</p>
+            <p class="section-subtitle">Key details for Phase 3, currently under construction and open for booking. Last updated 22 November 2026.</p>
 
             <div class="highlights-table-wrap" role="region" aria-label="Project highlights table">
                 <table class="highlights-table" aria-label="Shriram 107 SouthEast project highlights">
@@ -1260,9 +1363,29 @@
                         <tr><td><strong>RERA Number (Phase 3, Currently Selling)</strong></td><td>PRM/KA/RERA/1251/308/PR/140222/004708</td></tr>
                         <tr><td><strong>RERA Number (Phase 1, OC Received)</strong></td><td>PRM/KA/RERA/1251/308/PR/181122/002156</td></tr>
                         <tr><td><strong>RERA Number (Phase 2, OC Received)</strong></td><td>PRM/KA/RERA/1251/308/PR/190715/002689</td></tr>
+                        <tr><td><strong>Unit Plans</strong></td><td>6 plans: 2 BHK Types 1, 1A, 2 &amp; 2A and 3 BHK Types 3 &amp; 3A (developer brochure)</td></tr>
+                        <tr><td><strong>RERA Carpet Areas</strong></td><td>2 BHK 460.214 sq.ft (Type 1A) and 498.362 sq.ft (Types 1, 2 &amp; 2A); 3 BHK 613.295 sq.ft (Types 3 &amp; 3A). Balconies 16.684 sq.ft (2 BHK) and 22.012 sq.ft (3 BHK), per the brochure plans</td></tr>
+                        <tr><td><strong>Orientation</strong></td><td>No south-facing units (developer brochure)</td></tr>
+                        <tr><td><strong>Construction Technology</strong></td><td>MIVAN aluminium formwork (developer brochure)</td></tr>
+                        <tr><td><strong>Project Financier</strong></td><td>State Bank of India (developer brochure)</td></tr>
+                        <tr><td><strong>Phase 3 Launch</strong></td><td>January 2022 (property portal)</td></tr>
+                        <tr><td><strong>Awards (developer-reported)</strong></td><td>Budget Housing Project of the Year; Brand of the Year, Affordable Housing Project; Housing Project of the Year, Residential (Regional); plus two marketing-campaign awards for Phase 1</td></tr>
                     </tbody>
                 </table>
             </div>
+
+            <h3 class="lh-sub" id="phases">Phase-wise Status &amp; RERA</h3>
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Phase-wise RERA and status table">
+                <table class="highlights-table">
+                    <thead><tr><th>Phase</th><th>Codename</th><th>K-RERA Number</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Phase 1</strong></td><td>Dil Chahta Hai</td><td><span class="rera-no">PRM/KA/RERA/1251/308/PR/181122/002156</span></td><td>OC received, ready to move in</td></tr>
+                        <tr><td><strong>Phase 2</strong></td><td>Dil Chahta Hai Dobara</td><td><span class="rera-no">PRM/KA/RERA/1251/308/PR/190715/002689</span></td><td>OC received, ready to move in</td></tr>
+                        <tr><td><strong>Phase 3</strong></td><td>Shriram 107 SouthEast</td><td><span class="rera-no">PRM/KA/RERA/1251/308/PR/140222/004708</span></td><td>Under construction, handover expected January 2027</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="lh-src">Phase-to-RERA mapping as listed on the developer's own project page. The project brochure in circulation carries the Phase 1 number, so ask whether Phase 3 uses the same unit plans and specifications. Some listings attach a different phase's number to Phase 3 units; check the number on your agreement.</p>
         </div>
     </section>
 
@@ -1283,6 +1406,8 @@
                         <li>Second amphitheatre</li>
                         <li>Party lawn</li>
                         <li>Barbeque counter</li>
+                        <li>Cafe &amp; sports corner (developer brochure)</li>
+                        <li>Party halls, fitness centre, indoor games &amp; co-working space in the clubhouse (portal-listed)</li>
                     </ul>
                 </div>
 
@@ -1297,6 +1422,9 @@
                         <li>Giant chess park</li>
                         <li>Hopscotch court</li>
                         <li>Snakes &amp; ladders court</li>
+                        <li>Cricket pitch &amp; football ground (developer brochure)</li>
+                        <li>Skating rink (developer website)</li>
+                        <li>Jogging track &amp; reflexology path (broker site)</li>
                     </ul>
                 </div>
 
@@ -1309,6 +1437,7 @@
                         <li>Toddlers' play area</li>
                         <li>Elder's park</li>
                         <li>Seating plaza</li>
+                        <li>Creche (developer brochure)</li>
                     </ul>
                 </div>
 
@@ -1325,6 +1454,7 @@
                         <li>Hammock garden</li>
                         <li>Dense peripheral planting</li>
                         <li>Pet park</li>
+                        <li>Entrance water feature &amp; tree court plaza (portal-listed)</li>
                     </ul>
                 </div>
 
@@ -1333,15 +1463,13 @@
                     <ul class="amenity-list">
                         <li>Surface car parking</li>
                         <li>Designated pedestrian pathway &amp; bicycle track</li>
+                        <li>Convenience store &amp; salon (developer brochure)</li>
+                        <li>Sewage treatment plant, organic waste converter &amp; rainwater harvesting (developer brochure)</li>
+                        <li>Water softening plant if required (developer brochure)</li>
+                        <li>100% DG backup for lifts &amp; common-area lighting (developer brochure)</li>
+                        <li>Piped gas, fire driveway &amp; firefighting system, visitor parking (portal-listed)</li>
+                        <li>CCTV &amp; 24x7 security (broker site)</li>
                     </ul>
-                </div>
-            </div>
-
-            <div style="margin-top:3rem;" class="gallery-grid-wrapper">
-                <div class="gallery-grid" id="amenitiesGalleryStrip">
-                    <div class="gallery-item" onclick="openLightboxFromSrc('shriram-107-south-east-garden.webp')"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-garden.webp" alt="Shriram 107 SouthEast Attibele landscaped central garden walkway"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('shriram-107-south-east-volleyball-court.webp')"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-volleyball-court.webp" alt="Shriram 107 SouthEast sand volleyball court amenity"></div>
-                    <div class="gallery-item" onclick="openLightboxFromSrc('shriram-107-south-east-pool.webp')"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-pool.webp" alt="Shriram 107 SouthEast swimming pool deck with loungers"></div>
                 </div>
             </div>
         </div>
@@ -1353,12 +1481,16 @@
             <p class="section-subtitle">Explore Shriram 107 SouthEast, Attibele: towers, interiors and amenities.</p>
 
             <div class="gallery-grid reveal">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-back-shot.webp" alt="Shriram 107 SouthEast Attibele exterior elevation dusk view"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-night-view.webp" alt="Shriram 107 SouthEast illuminated towers and amenity zone at night"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-interior-bedroom.webp" alt="Shriram 107 SouthEast show-flat master bedroom interior"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-garden.webp" alt="Shriram 107 SouthEast Attibele landscaped central garden walkway"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-volleyball-court.webp" alt="Shriram 107 SouthEast sand volleyball court amenity"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-pool.webp" alt="Shriram 107 SouthEast swimming pool deck with loungers"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-back-shot.webp" alt="Shriram 107 SouthEast Attibele exterior elevation dusk view" loading="lazy"><span class="gallery-tag">Elevation</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-night-view.webp" alt="Shriram 107 SouthEast illuminated towers and amenity zone at night" loading="lazy"><span class="gallery-tag">Night View</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-interior-bedroom.webp" alt="Shriram 107 SouthEast show-flat master bedroom interior" loading="lazy"><span class="gallery-tag">Master Bedroom</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-garden.webp" alt="Shriram 107 SouthEast Attibele landscaped central garden walkway" loading="lazy"><span class="gallery-tag">Central Garden</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-volleyball-court.webp" alt="Shriram 107 SouthEast sand volleyball court amenity" loading="lazy"><span class="gallery-tag">Sand Volleyball</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-pool.webp" alt="Shriram 107 SouthEast swimming pool deck with loungers" loading="lazy"><span class="gallery-tag">Swimming Pool</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-entrance-gate.webp" alt="Shriram 107 SouthEast entrance gate with pergola canopy, security cabin and project sign, Attibele" loading="lazy"><span class="gallery-tag">Entrance Gate</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-tower-row.webp" alt="Shriram 107 SouthEast tower row and landscaped approach road, artistic impression from the developer brochure" loading="lazy"><span class="gallery-tag">Tower Row</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-football-field.webp" alt="Shriram 107 SouthEast mini football field beside the towers, artistic impression from the developer brochure" loading="lazy"><span class="gallery-tag">Football Field</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="/images/projects/shriram-107-south-east/shriram-107-south-east-brochure-location-map.webp" alt="Shriram 107 SouthEast location map from the developer brochure showing Attibele Junction, Chandapura, Hosur and Electronic City" loading="lazy"><span class="gallery-tag">Location Map</span></div>
             </div>
         </div>
     </section>
@@ -1396,6 +1528,23 @@
 
             <div class="plan-grid" style="margin-top: 2.5rem;">
                 <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-master-plan-full-site.webp" alt="Official full-site master plan of Shriram 107 SouthEast, Attibele, 19 acres with numbered amenity legend" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Master Plan</button>
+                </div>
+                <div class="plan-notes reveal" style="transition-delay:160ms;">
+                    <div class="plan-note">
+                        <strong>Full-Site Layout (Developer Brochure)</strong>
+                        <span>The brochure master plan shows every tower block across the 19 acres with a 43-item amenity legend, the lake-side garden and the STRR along the site edge.</span>
+                    </div>
+                    <div class="plan-note">
+                        <strong>Earlier Layout Above</strong>
+                        <span>The first plan dates from the Phase 1 and 2 sales period and marks part of the site as future development; this one shows the later full layout.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-grid" style="margin-top: 2.5rem;">
+                <div class="plan-image reveal" style="max-width: 560px; margin: 0 auto;">
                     <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-cluster-plan.webp" alt="Shriram 107 SouthEast typical floor cluster plan showing unit arrangement around the core" onclick="toggleDetailsPanel()" style="cursor:pointer;">
                     <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                 </div>
@@ -1406,12 +1555,12 @@
                     </div>
                     <div class="plan-note">
                         <strong>Additional Unit Variants</strong>
-                        <span>The project's cluster plan also shows additional 2 BHK Type-2 and 3 BHK Type-3 layout variants; enquire for full details of every available layout.</span>
+                        <span>All six brochure plans (2 BHK Types 1, 1A, 2 and 2A; 3 BHK Types 3 and 3A) are shown below with their RERA carpet areas.</span>
                     </div>
                 </div>
             </div>
 
-            <h3 style="text-align:center; font-family:'Playfair Display', serif; font-size:1.4rem; color:var(--primary-dark); margin-top:3rem;">Representative Unit Plans</h3>
+            <h3 style="text-align:center; font-family:'Playfair Display', serif; font-size:1.4rem; color:var(--primary-dark); margin-top:3rem;">Unit Plans</h3>
             <p class="section-subtitle" style="margin-top:0.5rem;">RERA carpet-area figures below: smaller than, and distinct from, the super built-up marketing figures used in pricing.</p>
 
             <div class="unit-plan-grid">
@@ -1421,7 +1570,7 @@
                         <h4>2 Bedroom Type 1A Unit Plan</h4>
                         <p><strong>RERA Carpet Area:</strong> 42.755 sq.m (460.214 sq.ft)</p>
                         <p><strong>Balcony:</strong> 1.550 sq.m (16.684 sq.ft)</p>
-                        <p>A representative 2 BHK layout; the cluster plan also shows a separate 2 BHK Type-2 variant not pictured here.</p>
+                        <p>A representative 2 BHK layout. The brochure's Types 1, 2 and 2A are larger, at 46.299 sq.m (498.362 sq.ft) RERA carpet with the same balcony.</p>
                         <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
@@ -1431,11 +1580,91 @@
                         <h4>3 BHK Unit Plan</h4>
                         <p><strong>RERA Carpet Area:</strong> 56.977 sq.m (613.295 sq.ft)</p>
                         <p><strong>Balcony:</strong> 2.045 sq.m (22.012 sq.ft)</p>
-                        <p>A representative 3 BHK layout; the cluster plan also shows a separate 3 BHK Type-3 variant not pictured here.</p>
+                        <p>A representative 3 BHK layout. The brochure shows Types 3 and 3A, both at 613.295 sq.ft RERA carpet.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                    </div>
+                </div>
+                <div class="unit-plan-card reveal">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-2bhk-type-1-floor-plan.webp" alt="Official 2 BHK Type 1 unit plan of Shriram 107 SouthEast, Attibele, RERA carpet area 498.362 sq.ft" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <div class="unit-plan-body">
+                        <h4>2 BHK Type 1 Unit Plan</h4>
+                        <p><strong>RERA Carpet Area:</strong> 46.299 sq.m (498.362 sq.ft)</p>
+                        <p><strong>Balcony:</strong> 1.550 sq.m (16.684 sq.ft)</p>
+                        <p>From the developer brochure.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                    </div>
+                </div>
+                <div class="unit-plan-card reveal">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-2bhk-type-2-floor-plan.webp" alt="Official 2 BHK Type 2 unit plan of Shriram 107 SouthEast, Attibele, RERA carpet area 498.362 sq.ft" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <div class="unit-plan-body">
+                        <h4>2 BHK Type 2 Unit Plan</h4>
+                        <p><strong>RERA Carpet Area:</strong> 46.299 sq.m (498.362 sq.ft)</p>
+                        <p><strong>Balcony:</strong> 1.550 sq.m (16.684 sq.ft)</p>
+                        <p>From the developer brochure.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                    </div>
+                </div>
+                <div class="unit-plan-card reveal">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-2bhk-type-2a-floor-plan.webp" alt="Official 2 BHK Type 2A unit plan of Shriram 107 SouthEast, Attibele, RERA carpet area 498.362 sq.ft" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <div class="unit-plan-body">
+                        <h4>2 BHK Type 2A Unit Plan</h4>
+                        <p><strong>RERA Carpet Area:</strong> 46.299 sq.m (498.362 sq.ft)</p>
+                        <p><strong>Balcony:</strong> 1.550 sq.m (16.684 sq.ft)</p>
+                        <p>From the developer brochure.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                    </div>
+                </div>
+                <div class="unit-plan-card reveal">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-3bhk-type-3-floor-plan.webp" alt="Official 3 BHK Type 3 unit plan of Shriram 107 SouthEast, Attibele, RERA carpet area 613.295 sq.ft" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <div class="unit-plan-body">
+                        <h4>3 BHK Type 3 Unit Plan</h4>
+                        <p><strong>RERA Carpet Area:</strong> 56.977 sq.m (613.295 sq.ft)</p>
+                        <p><strong>Balcony:</strong> 2.045 sq.m (22.012 sq.ft)</p>
+                        <p>From the developer brochure.</p>
+                        <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
+                    </div>
+                </div>
+                <div class="unit-plan-card reveal">
+                    <img src="/images/projects/shriram-107-south-east/shriram-107-south-east-3bhk-type-3a-floor-plan.webp" alt="Official 3 BHK Type 3A unit plan of Shriram 107 SouthEast, Attibele, RERA carpet area 613.295 sq.ft" onclick="toggleDetailsPanel()" style="cursor:pointer;" loading="lazy">
+                    <div class="unit-plan-body">
+                        <h4>3 BHK Type 3A Unit Plan</h4>
+                        <p><strong>RERA Carpet Area:</strong> 56.977 sq.m (613.295 sq.ft)</p>
+                        <p><strong>Balcony:</strong> 2.045 sq.m (22.012 sq.ft)</p>
+                        <p>From the developer brochure.</p>
                         <button type="button" class="plan-image-cta" onclick="toggleDetailsPanel()">Request Floor Plan</button>
                     </div>
                 </div>
             </div>
+
+            <h3 class="lh-sub" id="plan-areas">All Six Unit Plans by RERA Carpet Area</h3>
+            <div class="highlights-table-wrap reveal" role="region" aria-label="Unit plan carpet areas table">
+                <table class="highlights-table">
+                    <thead><tr><th>Plan</th><th>RERA Carpet Area</th><th>Balcony</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>2 BHK Type 1</strong></td><td>46.299 sq.m (498.362 sq.ft)</td><td>16.684 sq.ft</td></tr>
+                        <tr><td><strong>2 BHK Type 1A</strong></td><td>42.755 sq.m (460.214 sq.ft)</td><td>16.684 sq.ft</td></tr>
+                        <tr><td><strong>2 BHK Type 2</strong></td><td>46.299 sq.m (498.362 sq.ft)</td><td>16.684 sq.ft</td></tr>
+                        <tr><td><strong>2 BHK Type 2A</strong></td><td>46.299 sq.m (498.362 sq.ft)</td><td>16.684 sq.ft</td></tr>
+                        <tr><td><strong>3 BHK Type 3</strong></td><td>56.977 sq.m (613.295 sq.ft)</td><td>22.012 sq.ft</td></tr>
+                        <tr><td><strong>3 BHK Type 3A</strong></td><td>56.977 sq.m (613.295 sq.ft)</td><td>22.012 sq.ft</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="lh-src">Read from the unit plans in the developer brochure. Marketing sizes (698 to 752 sq.ft for 2 BHK, about 914 sq.ft for 3 BHK) are super built-up and include common-area share, so compare projects on carpet area.</p>
+        </div>
+    </section>
+
+    <section class="about" id="specifications" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Specifications</h2>
+            <p class="section-subtitle">What the developer brochure promises inside each home and across the towers.</p>
+            <div class="lh-grid">
+                <div class="lh-card reveal"><h3>Structure &amp; Lifts</h3><ul><li>MIVAN aluminium formwork construction for smoother walls and more predictable timelines</li><li>Lifts from a reputed brand with 100% DG power backup</li><li>Vitrified tile flooring in all tower lobbies</li></ul></div>
+                <div class="lh-card reveal"><h3>Doors &amp; Windows</h3><ul><li>Engineered wooden laminated doors</li><li>UPVC windows with sliding doors</li><li>Modular switches and sockets</li></ul></div>
+                <div class="lh-card reveal"><h3>Kitchen &amp; Bathrooms</h3><ul><li>30 mm granite counter with stainless steel sink</li><li>Tile dado up to 2 ft above the counter</li><li>Anti-skid bathroom flooring, branded sanitary and CP fittings</li></ul></div>
+                <div class="lh-card reveal"><h3>Flooring &amp; Utilities</h3><ul><li>Large tiles in foyer, kitchen, living, dining and bedrooms</li><li>Sewage treatment plant, organic waste converter and rainwater harvesting</li><li>Water softening plant if required; 100% DG backup for common-area lighting</li></ul></div>
+            </div>
+            <p class="lh-src">Source: Shriram 107 SouthEast developer brochure. Confirm the specification annexed to your sale agreement.</p>
         </div>
     </section>
 
@@ -1470,7 +1699,7 @@
                     </tbody>
                 </table>
 
-                <div class="pricing-footnote">*Indicative starting price for Phase 3, super built-up area. Please enquire for the latest offer and availability.</div>
+                <div class="pricing-footnote">*Indicative starting price for Phase 3, super built-up area. 2 BHK homes carry 460 to 498 sq.ft and 3 BHK homes 613 sq.ft of RERA carpet area per the brochure plans. GST, registration and other charges may be extra. The project is financed by State Bank of India, per the developer brochure. Please enquire for the latest offer and availability. Last checked 22 November 2026.</div>
             </div>
         </div>
     </section>
@@ -1502,6 +1731,32 @@
                         <span>D Mart, Decathlon, Chandapura Market, Ramee Guestline Hotels &amp; Resorts &middot; Axis Bank &amp; Syndicate Bank ATMs &middot; Silk Board via E-City flyover, Hosur via Hosur Road</span>
                     </div>
                 </div>
+            </div>
+            <div class="lh-grid">
+                <div class="lh-card reveal"><h3>What the developer highlights</h3><ul><li>15 minutes from Electronic City Phase 2 (measured from Phase 2, not the E-City entrance)</li><li>Bommasandra metro station; Sarjapur, Chandapura, Jigani, Bommasandra and Hosur</li><li>6-lane Hosur Road and NICE Road</li><li>Upcoming Peripheral Ring Road (PRR) and STRR, plus the proposed Neo metro (planned, timelines unconfirmed)</li></ul></div>
+                <div class="lh-card reveal"><h3>Employers named in the brochure</h3><ul><li>Electronic City tech companies such as Wipro and TCS</li><li>Manufacturers such as TVS Motors and Ashok Leyland</li><li>HCL campus on the brochure location map</li></ul></div>
+                <div class="lh-card reveal"><h3>Schools &amp; hospitals in the brochure</h3><ul><li>Alliance University, PES University, IFIM, DPS, NPS and XIME B School</li><li>Narayana Hrudayalaya, Mazumdar Shaw Medical Centre, Vimalalaya Hospital and Oxford Medical College and Hospital</li></ul></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="booking" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Before You Book: Pros, Cons &amp; Checks</h2>
+            <p class="section-subtitle">A balanced view from the developer's documents, property listings and buyer reviews.</p>
+            <div class="lh-grid">
+                <div class="lh-card reveal"><h3>Pros</h3><ul><li>Phases 1 and 2 already have their Occupancy Certificate, so you can inspect delivered towers on the same site</li><li>MIVAN construction and no south-facing units (developer brochure)</li><li>78% open space, 40+ amenities and an 18,000 sq.ft clubhouse</li><li>Financed by State Bank of India (developer brochure)</li></ul></div>
+                <div class="lh-card reveal"><h3>Cons</h3><ul><li>Forum opinion: a Phase 2 buyer reports the promised 3-year handover stretched to 5 years</li><li>Forum opinion: buyers on no-EMI-till-possession offers still paid bank interest during the delay</li><li>Compact carpet areas: 460 to 613 sq.ft against 698 to 914 sq.ft super built-up</li><li>A large, occupied community can feel busy at amenities at peak hours, and clubhouse or sports use may carry extra fees (property portal)</li><li>Metro, PRR and STRR links are still planned</li></ul></div>
+                <div class="lh-card reveal"><h3>Questions to ask before you pay</h3><ol><li>What is the per sq.ft rate for your tower, floor and facing?</li><li>How many towers and homes are in Phase 3, and how many are unsold?</li><li>What completion date does the Phase 3 RERA record show, and what is the delay penalty?</li><li>What is the payment plan, and what are the exact terms of any pre-EMI or no-EMI scheme?</li><li>What are the maintenance rate, corpus deposit and clubhouse fees?</li><li>How many car parks come with your home, and are they covered?</li><li>What is the water source in summer?</li><li>Which banks besides SBI have approved Phase 3 for loans?</li></ol></div>
+            </div>
+            <div class="lh-note reveal" id="what-we-checked">
+                <h3>What we checked</h3>
+                <ul>
+                    <li>On 22 November 2026 we read the developer's project page (RERA numbers by phase, awards, location highlights) and its 36-page brochure (unit plans, carpet areas, specifications, amenities).</li>
+                    <li>We also read the pages that rank for the project name and a public buyer-review site. Review comments are few, unverified and partly about other phases.</li>
+                    <li>Property listings quote different unit counts, tower counts, land areas, prices and possession dates. We only show headline figures from developer or RERA documents.</li>
+                    <li>Not yet verified by us: the Phase 3 tower and unit count, the current price sheet and the Phase 3 completion date on the K-RERA portal.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1572,6 +1827,9 @@
                 </p>
                 <p>
                     For a buyer weighing an under-construction purchase, that combination, a JV between a listed developer and Garden City Realty, plus two already-delivered phases on the exact same site, is a meaningfully lower-risk starting point than a first-of-its-kind launch with no completed precedent to inspect.
+                </p>
+                <p>
+                    Shriram Properties is a member of The Shriram Group. Its project brochure cites 44 completed projects, 28,000+ customers, 24.4 million sq.ft of saleable area delivered and a presence in 6 cities. The developer's site also lists awards for this project, including Budget Housing Project of the Year and Brand of the Year in affordable housing; these are developer-reported.
                 </p>
             </div>
         </div>
@@ -1671,6 +1929,123 @@
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p itemprop="text">You can request a site visit or brochure by filling out the enquiry form on this page or contacting us directly via phone or WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                        <span itemprop="name">Which bank is financing Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer brochure says the project is financed by State Bank of India. That does not replace your own loan approval, so check eligibility with your bank before you pay a booking amount.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                        <span itemprop="name">Are there south-facing apartments at Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">No. The developer brochure states there are no south-facing units in the project.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q13" aria-expanded="false">
+                        <span itemprop="name">How many unit plans are there at Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The brochure shows six unit plans: 2 BHK Types 1, 1A, 2 and 2A, and 3 BHK Types 3 and 3A. RERA carpet areas are 460.214 sq ft (Type 1A), 498.362 sq ft (Types 1, 2 and 2A) and 613.295 sq ft (Types 3 and 3A).</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q14" aria-expanded="false">
+                        <span itemprop="name">What is the difference between carpet area and the quoted sizes?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The quoted sizes of 698 to 752 sq ft for 2 BHK and about 914 sq ft for 3 BHK are super built-up, which includes a share of common areas. The RERA carpet area, the usable floor inside your walls, is 460 to 498 sq ft for 2 BHK and 613 sq ft for 3 BHK per the brochure plans.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q15" aria-expanded="false">
+                        <span itemprop="name">What construction technology is used at Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The towers use MIVAN technology, an aluminium formwork system that gives smooth walls and more predictable build timelines. Ask for the structural and finishing specifications in writing.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q16" aria-expanded="false">
+                        <span itemprop="name">What are the flat specifications (windows, doors, kitchen, flooring)?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Per the developer brochure: UPVC sliding windows, engineered laminated wooden doors, a 30 mm granite kitchen counter with stainless steel sink, large tiles in living areas and bedrooms, anti-skid bathroom tiles, branded sanitary and CP fittings, and modular switches.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q17" aria-expanded="false">
+                        <span itemprop="name">What sustainability and utility features does the community have?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The brochure lists a sewage treatment plant, rainwater harvesting, an organic waste converter, a water softening plant where required, and DG power backup for lifts and common-area lighting.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q18" aria-expanded="false">
+                        <span itemprop="name">What do the clubhouse and daily-convenience facilities include?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Property portal listings describe the 18,000 sq ft clubhouse with indoor games, a fitness centre, party halls and co-working space. The developer brochure adds a convenience store, creche, salon, cafe and sports corner on site.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q19" aria-expanded="false">
+                        <span itemprop="name">Which metro and road projects will improve access to Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Existing access is via Hosur Road, NICE Road and Sarjapur Road. The developer lists the Peripheral Ring Road, STRR and the proposed Neo metro as upcoming, and mentions Bommasandra metro. All are planned, so timelines may shift.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q20" aria-expanded="false">
+                        <span itemprop="name">What schools, colleges and hospitals are near Shriram 107 SouthEast?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The brochure names Alliance University, PES University, IFIM, DPS, NPS and XIME B School, plus Narayana Hrudayalaya, Vimalalaya Hospital and Oxford Medical College and Hospital.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q21" aria-expanded="false">
+                        <span itemprop="name">What are buyer reviews of Shriram 107 SouthEast like?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Forum opinion on a public review site is mostly negative and focuses on delays and after-sales service, including a Phase 2 buyer from 2019 whose 3-year handover stretched to 5. Reviews are few, unverified and some concern other projects. Visit the delivered phases and speak to residents before deciding.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q22" aria-expanded="false">
+                        <span itemprop="name">Is the community very crowded given its size?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A property portal notes that common areas such as the pool and clubhouse can be busy at peak hours in a community this large. The 78% open-space layout and multiple amenity zones help spread the load.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q23" aria-expanded="false">
+                        <span itemprop="name">Has the project won any awards?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The developer lists awards for the project, including Budget Housing Project of the Year and Brand of the Year in affordable housing. These are self-reported on the developer's site.</p>
                     </div>
                 </div>
             </div>
