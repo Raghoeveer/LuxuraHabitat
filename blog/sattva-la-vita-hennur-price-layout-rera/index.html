@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VD9RSVKTV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4VD9RSVKTV');
+      gtag('config', 'AW-16631805949');
+
+      // Track tel:/mailto:/WhatsApp clicks explicitly, in the capture phase (before
+      // any per-button onclick can call stopPropagation and hide the click from
+      // GA4's own automatic outbound-click detection, which happened on the
+      // /projects/ card grid, where each WhatsApp button stops propagation so
+      // it doesn't also trigger the parent card's own navigate-away handler).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var evt = href.indexOf('tel:') === 0 ? 'phone_click' : (href.indexOf('mailto:') === 0 ? 'email_click' : 'whatsapp_click');
+        gtag('event', evt, { link_url: href });
+        if (evt === 'phone_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/e8YwCPyeouQcEP3v1Po9' });
+        } else if (evt === 'whatsapp_click') {
+          gtag('event', 'conversion', { send_to: 'AW-16631805949/6XT7CP-eouQcEP3v1Po9' });
+        }
+      }, true);
+    </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="16x16">
+  <link rel="icon" href="/images/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/images/favicon/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Sattva La Vita Review: Price, Layout &amp; RERA</title>
+  <meta name="description" content="Independent review of Sattva La Vita, Hennur: 63 4 BHK row houses on 3 acres, 3,260 sq ft G+2 plans, amenities, RERA status, possession and what to check.">
+  <link rel="canonical" href="https://luxurahabitat.com/blog/sattva-la-vita-hennur-price-layout-rera/">
+  <meta property="og:title" content="Sattva La Vita: Price, Layout &amp; RERA Review | Luxura Habitat">
+  <meta property="og:description" content="Independent review of Sattva La Vita, Hennur: 4 BHK row houses, floor plans, amenities, RERA status and our buyer checklist.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://luxurahabitat.com/additional_websites/La%20Vita/Lavita-001.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sattva La Vita Review: Price, Layout &amp; RERA">
+  <meta name="twitter:description" content="Independent review of Sattva La Vita, Hennur: 4 BHK row houses, floor plans, amenities, RERA status and our buyer checklist.">
+  <meta name="twitter:image" content="https://luxurahabitat.com/additional_websites/La%20Vita/Lavita-001.webp">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .blog-page-wrapper {
+      max-width: 1140px; margin: 0 auto;
+      padding: var(--space-lg) var(--space-sm);
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+    .article-main { min-width: 0; }
+    .article-header { margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); color: var(--primary-forest); }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.3rem; margin: var(--space-md) 0 var(--space-xs); color: var(--text-charcoal); }
+    .article-content p { margin-bottom: var(--space-md); }
+    .article-content ul, .article-content ol { margin: 0 0 var(--space-md) var(--space-md); }
+    .article-content li { margin-bottom: var(--space-xs); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: 0.95rem; }
+    .article-content th, .article-content td { border: 1px solid var(--border-light); padding: 12px; text-align: left; }
+    .article-content th { background: var(--primary-forest); color: #fff; font-weight: 600; }
+    .article-content tr:nth-child(even) td { background: #f9f7f4; }
+    .money-link { color: var(--accent-copper); font-weight: 600; text-decoration: underline; }
+    .money-link:hover { opacity: 0.8; }
+    .article-footer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .author-card { display: flex; align-items: center; gap: var(--space-md); background: #fff; padding: var(--space-md); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); }
+    .author-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-info h5 { font-size: 1.1rem; margin-bottom: 4px; color: var(--primary-forest); }
+    .author-info p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5; }
+    .related-projects { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .related-projects h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary-forest); margin-bottom: var(--space-md); }
+    .related-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; display: block; color: inherit; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; }
+    .related-card-body { padding: 14px 16px; }
+    .related-card-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 4px; }
+    .related-card-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--primary-forest); line-height: 1.3; margin-bottom: 6px; }
+    .related-card-detail { font-size: 0.8rem; color: var(--text-muted); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-property-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .sidebar-property-card img { width: 100%; height: 180px; object-fit: cover; }
+    .sidebar-property-body { padding: 18px; }
+    .sidebar-property-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-copper); margin-bottom: 6px; }
+    .sidebar-property-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-forest); line-height: 1.2; margin-bottom: 12px; }
+    .sidebar-specs { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-specs li { font-size: 0.82rem; color: #444; display: flex; align-items: flex-start; gap: 8px; }
+    .sidebar-specs li::before { content: "\2713"; color: var(--accent-copper); font-weight: 700; flex-shrink: 0; }
+    .sidebar-cta { display: block; width: 100%; background: var(--primary-forest); color: #fff; text-align: center; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .sidebar-cta:hover { background: var(--accent-copper); transform: translateY(-1px); }
+    .sidebar-consult { background: #faf8f5; border-radius: 14px; padding: 18px; border: 1px solid rgba(0,0,0,0.06); }
+    .sidebar-consult p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 12px; }
+    .sidebar-consult a { display: block; text-align: center; background: var(--accent-copper); color: #fff; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .faq-section { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-light); }
+    .faq-list { max-width: 900px; margin: var(--space-sm) 0 0; display: grid; gap: 0.8rem; }
+    .faq-item { background: #faf8f5; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 1.3rem; font-family: inherit; font-size: 0.97rem; font-weight: 600; color: var(--primary-forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(184,115,51,0.06); }
+    .faq-question.open { color: var(--accent-copper); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.3rem; color: #555; font-size: 0.95rem; line-height: 1.75; }
+    .faq-answer.open { max-height: 600px; padding: 0 1.3rem 1.1rem; }
+    @media (max-width: 900px) {
+      .blog-page-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .article-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+      .related-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://luxurahabitat.com/blog/sattva-la-vita-hennur-price-layout-rera/"
+        },
+        "headline": "Sattva La Vita Review: Price, Layout & RERA",
+        "description": "Independent review of Sattva La Vita, Hennur: 63 4 BHK row houses on 3 acres, 3,260 sq ft G+2 plans, amenities, RERA status, possession and what to check.",
+        "image": "https://luxurahabitat.com/additional_websites/La%20Vita/Lavita-001.webp",
+        "datePublished": "2026-11-22",
+        "dateModified": "2026-11-22",
+        "author": {
+          "@type": "Person",
+          "name": "Narayanan Rajesh",
+          "url": "https://luxurahabitat.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Luxura Habitat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://luxurahabitat.com/images/logos/company_logo.png"
+          }
+        },
+        "about": {
+          "@type": "Place",
+          "name": "Sattva La Vita",
+          "address": { "@type": "PostalAddress", "addressLocality": "Byrathi Village, Hennur", "addressRegion": "Karnataka", "addressCountry": "IN" }
+        },
+        "url": "https://luxurahabitat.com/blog/sattva-la-vita-hennur-price-layout-rera/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxurahabitat.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://luxurahabitat.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "Sattva La Vita Review", "item": "https://luxurahabitat.com/blog/sattva-la-vita-hennur-price-layout-rera/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Sattva La Vita and who is the developer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sattva La Vita is a gated community of 63 four-bedroom row houses on about 3 acres in Byrathi Village, off Hennur Main Road in North Bengaluru. It is developed by Sattva Group, a Bengaluru developer that began in 1986 as Salarpuria Sattva." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the price of Sattva La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sattva Group shows \"Request price\" on its own La Vita page and publishes no figure. Prices change with facing, position and current offers, so ask for a written cost sheet that lists every charge." }
+          },
+          {
+            "@type": "Question",
+            "name": "How big is a Sattva La Vita row house?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sattva Group lists a built-up area of 3,260 sq ft for each G+2 row house with a basement. Ask for the carpet area of your specific unit, level by level, before booking." }
+          },
+          {
+            "@type": "Question",
+            "name": "What rooms does each La Vita home have?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Each home has 4 bedrooms, a gym, an entertainment room, a family lounge and a domestic help room, spread over a basement, a ground floor and two upper floors, with a private backyard over 10 feet deep and an open terrace." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do the row houses share walls?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Sattva Group says each house has independent walls, so there are no shared walls with neighbours." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RERA number of Sattva La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The K-RERA registration number is PRM/KA/RERA/1251/446/PR/041223/006446. Check the current completion date for this number on the Karnataka RERA portal before you pay a booking amount." }
+          },
+          {
+            "@type": "Question",
+            "name": "When is possession of Sattva La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Handover is targeted from late 2028 onwards. Sattva Group's own page gives no date and still tags the project \"Pre Launch\", while posting monthly construction updates, the latest for October 2026. Ask for the RERA completion date in writing." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which facings are available at La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Floor plans are published for east, north and west facing row houses. Ask which facings are still available and whether a facing or corner premium applies." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does each La Vita villa have a private lift?",
+            "acceptedAnswer": { "@type": "Answer", "text": "One portal says each villa has an internal lift, but the developer page and the specification list do not mention one. Treat it as unconfirmed until you see it in the approved plan or sale agreement." }
+          },
+          {
+            "@type": "Question",
+            "name": "How far is Sattva La Vita from the airport and Hebbal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sattva Group gives drive times of about 30 minutes to Kempegowda International Airport and about 25 minutes to Hebbal on the Outer Ring Road. Peak-hour traffic on Hennur Main Road can add time." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a metro station near Sattva La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not yet. The nearest line is the Blue Line (airport line), which is under construction about 5.5 km away." }
+          },
+          {
+            "@type": "Question",
+            "name": "What costs extra at Sattva La Vita?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Gas piping and solar panels are offered at extra cost. A channel-partner site says preferred location charges, stamp duty and registration are also outside its all-inclusive figure, so get each item listed on the cost sheet." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-text">South India RERA-Registered Property Advisory</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:+918438344093" class="top-bar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8438 344 093
+          </a>
+          <a href="https://wa.me/918438344093?text=Hi" class="top-bar-link wa-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-wrapper" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="Luxura Habitat Home">
+        <img src="/images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/areas/">Areas</a>
+        <a href="/projects/">Projects</a>
+        <a href="/developers/">Developers</a>
+        <a href="/testimonials/">Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/" class="nav-cta">Book Consultation</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-page-wrapper">
+      <article class="article-main">
+        <div class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:var(--space-sm);">
+          <a href="/">Home</a><span>/</span><a href="/areas/hennur/">Hennur&ndash;Thanisandra Hub</a><span>/</span><span>Sattva La Vita Review</span>
+        </div>
+        <header class="article-header">
+          <h1 style="font-family:var(--font-heading);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;color:var(--primary-forest);margin-bottom:12px;">Sattva La Vita Review: Price, Layout &amp; RERA</h1>
+          <div class="article-meta">
+            <span>By Narayanan Rajesh</span><span>&bull;</span><span>Published November 22, 2026</span><span>&bull;</span><span>10 Min Read</span>
+          </div>
+        </header>
+        <div class="article-content">
+        <img src="/additional_websites/La%20Vita/Lavita-001.webp" alt="Sattva La Vita row houses off Hennur Main Road" style="width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="eager">
+
+          <p>Row houses are a small share of new supply on the Hennur corridor, which is why Sattva La Vita gets attention: 63 four-bedroom homes on about 3 acres, each with its own walls, basement parking, backyard and terrace. This review covers the developer, the location, what each home contains, the master plan and amenities, specifications, pricing, RERA status and possession, plus the questions we would ask before paying a booking amount.</p>
+
+          <h2>Sattva La Vita at a Glance</h2>
+          <table>
+            <tr><th>Item</th><th>Detail</th></tr>
+            <tr><td>Developer</td><td>Sattva Group</td></tr>
+            <tr><td>Location</td><td>Byrathi Village, off Hennur Main Road, North Bengaluru</td></tr>
+            <tr><td>Land area</td><td>About 3 acres</td></tr>
+            <tr><td>Homes</td><td>63 row houses</td></tr>
+            <tr><td>Configuration</td><td>4 BHK row house, G+2 with basement and open terrace</td></tr>
+            <tr><td>Built-up area</td><td>3,260 sq ft (developer figure)</td></tr>
+            <tr><td>Parking</td><td>2 car parks per home, in the basement</td></tr>
+            <tr><td>Clubhouse</td><td>9,700 sq ft, with swimming pool</td></tr>
+            <tr><td>Facings</td><td>East, north and west</td></tr>
+            <tr><td>RERA</td><td>PRM/KA/RERA/1251/446/PR/041223/006446</td></tr>
+            <tr><td>Price</td><td>On request*</td></tr>
+            <tr><td>Possession</td><td>Targeted from late 2028 onwards; no date on the developer's page</td></tr>
+          </table>
+          <p style="font-size:0.9rem;color:var(--text-muted);">*Sattva Group publishes no price for La Vita. Figures here come from Sattva Group's own project page unless marked otherwise. Full details are on the <a href="/projects/sattva-la-vita/" class="money-link">Sattva La Vita project page</a>.</p>
+
+          <h2>1. The Developer: Sattva Group</h2>
+          <p>Sattva Group is headquartered in Bengaluru and began in 1986 as Salarpuria Sattva (the group's own site dates its current journey to 1993). It builds commercial, residential, hospitality and education projects across several Indian cities. The group describes itself as CRISIL 'AA' Stable and ICRA 'AA' Stable rated, ISO 9001, 14001 and 18001 certified, and a founding member of the Indian Green Building Council.</p>
+          <p>Most of Sattva's residential work is apartments, so La Vita is one of its few row-house projects. That matters for due diligence: ask to see a completed Sattva low-rise or villa project, not only its towers, when you judge build quality. You can see the group's other launches on our <a href="/developers/sattva/" class="money-link">Sattva Group projects page</a>.</p>
+
+          <h2>2. Location: Byrathi, off Hennur Main Road</h2>
+          <p>La Vita sits in Byrathi Village, just off Hennur Main Road. Hennur Main Road branches off the Outer Ring Road and runs north towards the airport, which puts the project between the Manyata and Hebbal job belt and the airport side of North Bengaluru. Read our <a href="/blog/hennur-connectivity-orr-hebbal-metro-nagavara/" class="money-link">Hennur connectivity guide</a> for how the corridor's roads and metro plans fit together.</p>
+          <table>
+            <tr><th>Landmark</th><th>Drive time (developer figure)</th></tr>
+            <tr><td>United International School and Degree College</td><td>1 min</td></tr>
+            <tr><td>Poorna Prajna Education Center</td><td>3 min</td></tr>
+            <tr><td>Mall of Bengaluru</td><td>5 min</td></tr>
+            <tr><td>Manipal Academy of Higher Education</td><td>7 min</td></tr>
+            <tr><td>KNS Institute of Technology</td><td>9 min</td></tr>
+            <tr><td>Manipal Hospital / Aster CMI Hospital</td><td>20 min</td></tr>
+            <tr><td>Hebbal Outer Ring Road</td><td>25 min</td></tr>
+            <tr><td>Kempegowda International Airport</td><td>30 min</td></tr>
+            <tr><td>Phoenix Market City</td><td>30 min</td></tr>
+            <tr><td>MG Road / Whitefield</td><td>40 min</td></tr>
+          </table>
+          <p>These are Sattva Group's drive times and peak-hour traffic can add to them, especially at the ORR and Hennur Main Road junction. The nearest metro line, the Blue Line (airport line), is under construction about 5.5 km away. Bhartiya City is about 1.1 km and Manyata Tech Park about 4.5 km in a straight line; by road Manyata is roughly 8.8 km, which can take 25 to 40 minutes in traffic.</p>
+
+          <h2>3. The Homes: 4 BHK G+2 Row Houses</h2>
+          <img src="/additional_websites/La%20Vita/Ground-Floor-East.webp" alt="Sattva La Vita east facing row house ground floor plan" style="width:100%; border-radius:12px; margin:8px 0 24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="lazy">
+          <p>Every home at La Vita is the same basic type: a 4 BHK row house with a basement, a ground floor and two upper floors, and an open terrace on top. Sattva Group lists the built-up area as 3,260 sq ft. Inside, each house has:</p>
+          <ul>
+            <li>4 bedrooms</li>
+            <li>A home gym, an entertainment room and a family lounge</li>
+            <li>A domestic help room</li>
+            <li>A basement with 2 car parks</li>
+            <li>A private backyard over 10 feet deep and an open terrace</li>
+            <li>Independent walls, with no shared walls with neighbours</li>
+          </ul>
+          <p>Plans are published separately for east, north and west facing homes, each with basement, ground, first and second floor layouts. You can view all twelve plans in the <a href="/projects/sattva-la-vita/#units" class="money-link">floor plans section</a> of the project page. Since there is only one home type, the real choice is facing and position, so ask which units are still available and whether any premium applies.</p>
+
+          <h2>4. Master Plan and Amenities</h2>
+          <img src="/additional_websites/La%20Vita/Master-Paln-001.webp" alt="Sattva La Vita master plan with 63 row houses and clubhouse" style="width:100%; border-radius:12px; margin:8px 0 24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="lazy">
+          <p>The master plan places 63 row houses around a 9,700 sq ft clubhouse, with themed gardens and walkways kept free of vehicle movement. Sattva Group lists these amenities:</p>
+          <ul>
+            <li><strong>Clubhouse and leisure:</strong> indoor party area, reading lounge, indoor games, table tennis room</li>
+            <li><strong>Fitness:</strong> swimming pool, gym, outdoor gym, meditation pavilion</li>
+            <li><strong>Sports and play:</strong> multi-purpose court, cricket practice net, kids' play area</li>
+            <li><strong>Landscape and safety:</strong> theme gardens, vehicle-free walkways, gated community</li>
+          </ul>
+          <img src="/additional_websites/La%20Vita/lavita-amenities-OutdoorGym-001.webp" alt="Sattva La Vita outdoor gym render" style="width:100%; border-radius:12px; margin:8px 0 24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="lazy">
+          <p>For a community of 63 homes, this is a generous amenity list. The flip side is that maintenance for a pool and clubhouse is shared across few households, so ask for the expected monthly maintenance charge and the corpus amount early.</p>
+
+          <h2>5. Specifications</h2>
+          <p>Sattva Group's page does not publish a specification sheet. The list below comes from a channel-partner site and a property portal, so check each line against the specification annexure in your sale agreement.</p>
+          <ul>
+            <li><strong>Structure:</strong> Seismic Zone II compliant RCC framed structure</li>
+            <li><strong>Flooring:</strong> vitrified tiles in living areas; laminated wooden flooring in the bedrooms</li>
+            <li><strong>Main door:</strong> wooden frame with teak finish, 8 ft high</li>
+            <li><strong>Toilets:</strong> tile dado up to 8 ft, EWC, hot and cold mixers, shower partition</li>
+            <li><strong>Power:</strong> 10 KVA three-phase supply per home with 3 KVA backup; full backup for common areas</li>
+            <li><strong>Kitchen:</strong> the specification list says no granite counter and sink are provided, while a portal amenity list mentions a granite platform</li>
+            <li><strong>Extra cost:</strong> gas piping and solar panels</li>
+            <li><strong>Private lift:</strong> one portal claims each villa has an internal lift; the developer and the specification list do not mention one</li>
+          </ul>
+
+          <h2>6. Price and What a Quote Should Cover</h2>
+          <p>Sattva Group shows "Request price" on its La Vita page and publishes no figure, and we do not quote unofficial prices. The price you are offered will depend on facing, position and current offers. A channel-partner site says its all-inclusive figure covers land cost, construction cost, 2 car parks, development charges, GST, legal charges, corpus fund and advance maintenance, with preferred location charges, stamp duty and registration on top.</p>
+          <p>A property portal lists a construction-linked payment plan. Ask for the milestone schedule and the list of banks that have approved the project. For the current cost sheet, use the <a href="/projects/sattva-la-vita/#pricing" class="money-link">pricing section</a> on the project page.</p>
+
+          <h2>7. RERA, Status and Possession</h2>
+          <img src="/images/projects/sattva-la-vita/sattva-la-vita-construction-jun-2026-1.webp" alt="Sattva La Vita construction progress, June 2026" style="width:100%; border-radius:12px; margin:8px 0 24px; box-shadow:0 4px 15px rgba(0,0,0,0.06);" loading="lazy">
+          <ul>
+            <li><strong>K-RERA number:</strong> PRM/KA/RERA/1251/446/PR/041223/006446</li>
+            <li><strong>Launch:</strong> December 2023, as listed on a property portal, the same month as the RERA number's date code</li>
+            <li><strong>Status:</strong> Sattva Group's page still tags La Vita "Pre Launch", yet it posts monthly construction updates from January 2025 to October 2026. The photo above is from June 2026</li>
+            <li><strong>Possession:</strong> handover is targeted from late 2028 onwards. The developer's page gives no date, so ask for the RERA completion date in writing</li>
+          </ul>
+          <p>The "Pre Launch" tag alongside nearly two years of construction updates is likely a label that was never changed, but it is worth asking about. What counts for a buyer is the completion date registered against the RERA number and the construction stage of your own row house.</p>
+
+          <h2>8. Pros and Cons</h2>
+          <h3>Pros</h3>
+          <ul>
+            <li>Only 63 homes on 3 acres, so the community stays low density</li>
+            <li>Independent walls, a private backyard and an open terrace in every home</li>
+            <li>Basement parking for 2 cars and vehicle-free walkways</li>
+            <li>A 9,700 sq ft clubhouse with swimming pool</li>
+            <li>About 30 minutes to the airport and 25 minutes to Hebbal ORR, per the developer</li>
+          </ul>
+          <h3>Cons</h3>
+          <ul>
+            <li>Peak-hour traffic at the ORR and Hennur Main Road junction</li>
+            <li>No metro yet: the Blue Line is under construction about 5.5 km away</li>
+            <li>No published price, and possession dates differ across listings</li>
+            <li>Gas piping and solar panels cost extra; the private lift is unconfirmed</li>
+          </ul>
+
+          <h2>9. Who La Vita Suits</h2>
+          <p>La Vita suits a family that wants the space and privacy of an independent house but not the upkeep of a standalone plot: four bedrooms plus a gym, an entertainment room and staff quarters, inside a gated community with a pool. It works well for households with one earner in the Manyata, Hebbal or airport belt, and for buyers who prefer a small community over a large township.</p>
+          <p>It is a weaker fit if you need to move in before late 2028, if you want a metro station within walking distance, or if you need lift access to every floor without confirming it first. Buyers weighing an apartment instead can compare it in our <a href="/blog/concorde-sienna-vs-sattva-la-vita-hennur/" class="money-link">Concorde Sienna vs Sattva La Vita</a> and <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/" class="money-link">Orchid Salisbury vs Sattva La Vita</a> comparisons.</p>
+
+          <h2>10. Questions to Ask Before You Pay</h2>
+          <ol>
+            <li>The RERA completion date currently on the K-RERA portal for PRM/KA/RERA/1251/446/PR/041223/006446</li>
+            <li>The construction stage of your specific row house, and when the occupancy certificate will be applied for</li>
+            <li>Exact built-up and carpet area of your unit, level by level</li>
+            <li>Price difference between east, north and west facing homes, and any corner or park-facing charge</li>
+            <li>Monthly maintenance charge and the corpus amount</li>
+            <li>Whether a private lift is included, optional or not offered</li>
+            <li>Title documents, khata type and the approved building plan</li>
+            <li>Water source and sewage treatment arrangements</li>
+          </ol>
+          <p>The same checklist is on the project page's <a href="/projects/sattva-la-vita/#booking" class="money-link">status and booking section</a>.</p>
+
+          <h2>Our Assessment</h2>
+          <p>Sattva La Vita offers something the Hennur corridor has little of: a small, gated row-house community with independent walls, private outdoor space and a proper clubhouse. The product itself is clear and well defined, with one home type, three facings and a published layout.</p>
+          <p>The gaps are on price and timing. There is no published price, the developer's page still says "Pre Launch" while showing construction progress, and the late 2028 handover target is not on the developer's page. None of these is unusual for a project at this stage, but each needs a written answer. Get the cost sheet, check the RERA completion date, and visit the site to see the row house you would be buying before you commit. For the wider market context, see our <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="money-link">Hennur-Thanisandra market guide</a>.</p>
+        </div>
+        <section class="faq-section" aria-label="Frequently asked questions">
+          <h2 style="font-family:var(--font-heading);font-size:1.75rem;color:var(--primary-forest);margin-bottom:8px;">Frequently Asked Questions</h2>
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q1" aria-expanded="false">
+                <span itemprop="name">What is Sattva La Vita and who is the developer?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva La Vita is a gated community of 63 four-bedroom row houses on about 3 acres in Byrathi Village, off Hennur Main Road in North Bengaluru. It is developed by Sattva Group, a Bengaluru developer that began in 1986 as Salarpuria Sattva.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q2" aria-expanded="false">
+                <span itemprop="name">What is the price of Sattva La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva Group shows "Request price" on its own La Vita page and publishes no figure. Prices change with facing, position and current offers, so ask for a written cost sheet that lists every charge.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q3" aria-expanded="false">
+                <span itemprop="name">How big is a Sattva La Vita row house?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva Group lists a built-up area of 3,260 sq ft for each G+2 row house with a basement. Ask for the carpet area of your specific unit, level by level, before booking.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q4" aria-expanded="false">
+                <span itemprop="name">What rooms does each La Vita home have?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Each home has 4 bedrooms, a gym, an entertainment room, a family lounge and a domestic help room, spread over a basement, a ground floor and two upper floors, with a private backyard over 10 feet deep and an open terrace.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q5" aria-expanded="false">
+                <span itemprop="name">Do the row houses share walls?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No. Sattva Group says each house has independent walls, so there are no shared walls with neighbours.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q6" aria-expanded="false">
+                <span itemprop="name">What is the RERA number of Sattva La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The K-RERA registration number is PRM/KA/RERA/1251/446/PR/041223/006446. Check the current completion date for this number on the Karnataka RERA portal before you pay a booking amount.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q7" aria-expanded="false">
+                <span itemprop="name">When is possession of Sattva La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Handover is targeted from late 2028 onwards. Sattva Group's own page gives no date and still tags the project "Pre Launch", while posting monthly construction updates, the latest for October 2026. Ask for the RERA completion date in writing.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q8" aria-expanded="false">
+                <span itemprop="name">Which facings are available at La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Floor plans are published for east, north and west facing row houses. Ask which facings are still available and whether a facing or corner premium applies.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q9" aria-expanded="false">
+                <span itemprop="name">Does each La Vita villa have a private lift?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">One portal says each villa has an internal lift, but the developer page and the specification list do not mention one. Treat it as unconfirmed until you see it in the approved plan or sale agreement.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q10" aria-expanded="false">
+                <span itemprop="name">How far is Sattva La Vita from the airport and Hebbal?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Sattva Group gives drive times of about 30 minutes to Kempegowda International Airport and about 25 minutes to Hebbal on the Outer Ring Road. Peak-hour traffic on Hennur Main Road can add time.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q11" aria-expanded="false">
+                <span itemprop="name">Is there a metro station near Sattva La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Not yet. The nearest line is the Blue Line (airport line), which is under construction about 5.5 km away.</p>
+              </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" onclick="toggleFAQ(this)" id="faq-q12" aria-expanded="false">
+                <span itemprop="name">What costs extra at Sattva La Vita?</span>
+                <span class="faq-arrow">▼</span>
+              </button>
+              <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Gas piping and solar panels are offered at extra cost. A channel-partner site says preferred location charges, stamp duty and registration are also outside its all-inclusive figure, so get each item listed on the cost sheet.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related-projects" aria-label="Related content">
+          <h3>You May Also Be Interested In</h3>
+          <div class="related-cards-grid">
+            <a href="/projects/sattva-la-vita/" class="related-card">
+              <img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Featured Project</p>
+                <p class="related-card-title">Sattva La Vita</p>
+                <p class="related-card-detail">4 BHK Row Houses &middot; Hennur</p>
+              </div>
+            </a>
+            <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/" class="related-card">
+              <img src="/additional_websites/Salisbury/Salisbury-website-Gallery-images-1-4.jpg" alt="Orchid Salisbury vs Sattva La Vita" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Orchid Salisbury vs Sattva La Vita</p>
+                <p class="related-card-detail">9 Min Read &middot; Comparison</p>
+              </div>
+            </a>
+            <a href="/blog/concorde-sienna-vs-sattva-la-vita-hennur/" class="related-card">
+              <img src="/images/projects/concorde-sienna/concorde-sienna-elevation-3.webp" alt="Concorde Sienna vs Sattva La Vita" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Concorde Sienna vs Sattva La Vita</p>
+                <p class="related-card-detail">7 Min Read &middot; Comparison</p>
+              </div>
+            </a>
+            <a href="/blog/hennur-thanisandra-real-estate-market-2026/" class="related-card">
+              <img src="/additional_websites/La%20Vita/Lavita-slide-003.webp" alt="Hennur-Thanisandra market guide" loading="lazy">
+              <div class="related-card-body">
+                <p class="related-card-label">Related Article</p>
+                <p class="related-card-title">Hennur-Thanisandra Market 2026</p>
+                <p class="related-card-detail">8 Min Read &middot; Locality Guide</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <footer class="article-footer">
+          <div class="author-card">
+            <img src="../../images/about/about_us_advisor.png" alt="Narayanan Rajesh" class="author-avatar">
+            <div class="author-info">
+              <h5>Written by Narayanan Rajesh</h5>
+              <p>Principal Advisor at Luxura Habitat with 12+ years of experience navigating Bangalore's premium real estate corridors with absolute legal clarity.</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+      <aside class="article-sidebar" aria-label="Featured property">
+        <div class="sidebar-property-card">
+          <img src="/images/projects-thumbs/sattva-la-vita-thumb.webp" alt="Sattva La Vita" loading="lazy">
+          <div class="sidebar-property-body">
+            <p class="sidebar-property-label">Featured in this Article</p>
+            <p class="sidebar-property-name">Sattva La Vita</p>
+            <ul class="sidebar-specs">
+              <li>4 BHK Row Houses &middot; 63 Homes &middot; 3 Acres</li>
+              <li>3,260 Sq.Ft &middot; G+2 with Basement</li>
+              <li>Price on request</li>
+              <li>Byrathi, off Hennur Main Road</li>
+            </ul>
+            <a href="/projects/sattva-la-vita/" class="sidebar-cta">View Sattva La Vita Details &rarr;</a>
+          </div>
+        </div>
+        <div class="sidebar-consult">
+          <p>Have questions? Book a free, no-pressure consultation with our advisor.</p>
+          <a href="/contact/">Talk to an Advisor</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="../../images/logos/company_logo.png" alt="Luxura Habitat Logo" class="logo-img"></a>
+          <p>An independent real estate consultancy connecting discerning buyers with verified tier-one developer properties across South India.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4>
+          <a href="/">Home</a><a href="/about/">About Us</a><a href="/areas/">Areas</a>
+          <a href="/projects/">Projects</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col"><h4>Sattva La Vita</h4>
+          <a href="/projects/sattva-la-vita/">Project Overview</a>
+          <a href="/blog/orchid-salisbury-vs-sattva-la-vita-hennur/">Orchid Salisbury vs La Vita</a>
+          <a href="/blog/hennur-thanisandra-real-estate-market-2026/">Hennur Market Guide</a>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <p style="font-size:0.9rem;color:#aaa;">Narayanan Rajesh<br>Luxura Habitat<br>Bengaluru, Karnataka</p>
+          <a href="tel:+918438344093" style="color:#aaa;font-size:0.9rem;">+91 84383 44093</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Luxura Habitat. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a></p></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script>
+    // Zendesk
+    (function(){
+        var script = document.createElement('script');
+        script.id = 'ze-snippet';
+        script.src = 'https://static.zdassets.com/ekr/snippet.js?key=86305e35-2ef4-45f7-a9e8-2aba11189ef9';
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+  </script>
+  <nav class="blog-mobile-cta" aria-label="Quick contact">
+    <a href="tel:+918438344093" class="blog-mobile-cta-btn btn-call"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
+    <a href="https://wa.me/918438344093?text=Hi%2C%20I%20read%20your%20article%20on%20Sattva%20La%20Vita%20and%20would%20like%20to%20know%20more%20about%20pricing%20and%20availability" class="blog-mobile-cta-btn btn-whatsapp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+    <a href="/projects/sattva-la-vita/" class="blog-mobile-cta-btn btn-project">View Project</a>
+    <a href="/contact/" class="blog-mobile-cta-btn btn-enquire" data-blog-enquire>Enquire</a>
+  </nav>
+</body>
+</html>
